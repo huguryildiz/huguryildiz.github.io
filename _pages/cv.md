@@ -1,64 +1,30 @@
 ---
-layout: archive
+layout: single
 title: "CV"
 permalink: /cv/
 author_profile: true
-redirect_from:
-  - /resume
 ---
 
-{% include base_path %}
+## Professional Experience
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+- **Department Chair**, Department of Electrical and Electronics Engineering, TED University, Ankara, Turkey (07/2021 – 07/2024)
+- **Associate Professor**, Department of Electrical and Electronics Engineering, TED University, Ankara, Turkey (03/2021 – Present)
+- **Assistant Professor**, Department of Electrical and Electronics Engineering, TED University, Ankara, Turkey (09/2016 – 03/2021)
+- **Avionics Design Engineer**, Turkish Aerospace Industries (TAI), Ankara, Turkey (12/2015 – 08/2016)
+- **Senior Network Engineer**, Turk Telekom, Ankara, Turkey (10/2010 – 11/2015)
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+## Education
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+- **Ph.D.**, Electrical and Electronics Engineering, TOBB University of Economics and Technology, Ankara, Turkey (01/2014 – 04/2016)
+- **M.S.**, Electrical and Electronics Engineering, TOBB University of Economics and Technology, Ankara, Turkey (09/2011 – 08/2013)
+- **B.S.**, Electrical and Electronics Engineering, Bilkent University, Ankara, Turkey (08/2005 – 08/2009)
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+## Theses
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+- **Ph.D. Dissertation:** Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks (Advisor: Prof. Bulent Tavli)
+- **M.S. Thesis:** Communication/Computation Trade-offs in Wireless Sensor Networks: Comparing Network-Level and Node-Level Strategies (Advisor: Prof. Bulent Tavli; Co-advisor: Prof. Kemal Bicakci)
+
+## Seminars / Given Talks (Selected)
+
+- Prolonging the Lifetime of Underwater Sensor Networks Under Sinkhole Attacks, Georgia Institute of Technology (2019)
+- Maximization of Underwater Sensor Networks Lifetime via Fountain Codes, SIU Special Session (2019)
