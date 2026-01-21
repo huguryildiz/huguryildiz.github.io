@@ -5,38 +5,49 @@ title: "Huseyin Ugur Yildiz"
 description: "Operations Research | Network Optimization | Wireless & Underwater Networks"
 locale: en-US
 
-# IMPORTANT:
-# - For USER/ORG GitHub Pages (huguryildiz.github.io): baseurl must be ""
-# - For PROJECT GitHub Pages (huguryildiz.github.io/<repo>): baseurl must be "/<repo>"
+# USER PAGE (huguryildiz.github.io) için DOĞRU ayar
 url: "https://huguryildiz.github.io"
 baseurl: ""
 
 repository: "huguryildiz/huguryildiz.github.io"
 
 # =========================
-# Theme (Minimal Mistakes)
+# Theme (Minimal Mistakes / AcademicPages)
 # =========================
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "dark"
 
+# =========================
+# Plugins (GitHub Pages uyumlu)
+# =========================
 plugins:
+  - jekyll-remote-theme
   - jekyll-include-cache
   - jekyll-feed
   - jekyll-sitemap
 
 # =========================
-# Markdown / Permalinks
+# IMPORTANT: Include _pages
+# =========================
+include:
+  - _pages
+
+# =========================
+# Markdown & Permalinks
 # =========================
 markdown: kramdown
+highlighter: rouge
+
+# Sayfa permalinkleri front-matter ile kontrol edilecek
 permalink: /:categories/:title/
 
 # =========================
-# Navigation data file
+# Navigation
 # =========================
 data_dir: _data
 
 # =========================
-# Defaults (so pages use the right layout)
+# Defaults (AcademicPages standard)
 # =========================
 defaults:
   - scope:
@@ -45,23 +56,42 @@ defaults:
     values:
       layout: single
       author_profile: true
+      read_time: false
+      comments: false
+      share: false
+      related: false
 
 # =========================
-# Your Author block (keep yours)
+# Author Profile
 # =========================
 author:
-  avatar           : "profile.png"
   name             : "Huseyin Ugur Yildiz"
-  pronouns         : "he/him"
-  bio              : "Associate Professor | IEEE Senior Member | Network Optimization & Wireless Communications"
+  avatar           : "profile.png"
+  bio              : "Senior Operations Research Scientist | Network Optimization | MILP & Routing"
   location         : "Ankara, Turkey"
   employer         : "TED University"
-  uri              : "https://www.huguryildiz.com"
+  uri              : "https://huguryildiz.github.io"
   email            : "hugur.yildiz@tedu.edu.tr"
 
-  googlescholar    : "https://scholar.google.com/citations?user=[YOUR_SCHOLAR_ID]"
+  googlescholar    : "https://scholar.google.com/citations?user=XXXX"
   orcid            : "https://orcid.org/0000-0002-1556-2634"
   researchgate     : "https://www.researchgate.net/profile/Huseyin-Yildiz"
 
   github           : "huguryildiz"
   linkedin         : "huguryildiz"
+
+# =========================
+# Build / Performance
+# =========================
+future: true
+timezone: Europe/Istanbul
+
+# =========================
+# Excludes (temizlik)
+# =========================
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
