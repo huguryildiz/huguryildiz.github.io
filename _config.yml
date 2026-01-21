@@ -1,22 +1,67 @@
-# Site Author
+# =========================
+# Site Settings
+# =========================
+title: "Huseyin Ugur Yildiz"
+description: "Operations Research | Network Optimization | Wireless & Underwater Networks"
+locale: en-US
+
+# IMPORTANT:
+# - For USER/ORG GitHub Pages (huguryildiz.github.io): baseurl must be ""
+# - For PROJECT GitHub Pages (huguryildiz.github.io/<repo>): baseurl must be "/<repo>"
+url: "https://huguryildiz.github.io"
+baseurl: ""
+
+repository: "huguryildiz/huguryildiz.github.io"
+
+# =========================
+# Theme (Minimal Mistakes)
+# =========================
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "dark"
+
+plugins:
+  - jekyll-include-cache
+  - jekyll-feed
+  - jekyll-sitemap
+
+# =========================
+# Markdown / Permalinks
+# =========================
+markdown: kramdown
+permalink: /:categories/:title/
+
+# =========================
+# Navigation data file
+# =========================
+data_dir: _data
+
+# =========================
+# Defaults (so pages use the right layout)
+# =========================
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+# =========================
+# Your Author block (keep yours)
+# =========================
 author:
-  # Biographic information
   avatar           : "profile.png"
   name             : "Huseyin Ugur Yildiz"
-  pronouns         : "he/him"  
+  pronouns         : "he/him"
   bio              : "Associate Professor | IEEE Senior Member | Network Optimization & Wireless Communications"
   location         : "Ankara, Turkey"
   employer         : "TED University"
   uri              : "https://www.huguryildiz.com"
-  email            : "hugur.yildiz@tedu.edu.tr" 
+  email            : "hugur.yildiz@tedu.edu.tr"
 
-  # Academic websites
   googlescholar    : "https://scholar.google.com/citations?user=[YOUR_SCHOLAR_ID]"
   orcid            : "https://orcid.org/0000-0002-1556-2634"
   researchgate     : "https://www.researchgate.net/profile/Huseyin-Yildiz"
 
-  # Repositories
   github           : "huguryildiz"
-  
-  # Social media
   linkedin         : "huguryildiz"
