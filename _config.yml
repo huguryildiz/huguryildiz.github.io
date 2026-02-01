@@ -2,10 +2,9 @@
 # Site Settings
 # =========================
 title: "Huseyin Ugur Yildiz"
-description: "Operations Research | Network Optimization | Wireless & Underwater Networks"
+description: "Associate Professor of Electrical Engineering, IEEE Senior Member"
 locale: en-US
 
-# USER PAGE (huguryildiz.github.io) için DOĞRU ayar
 url: "https://huguryildiz.github.io"
 baseurl: ""
 
@@ -67,13 +66,13 @@ defaults:
 author:
   name             : "Huseyin Ugur Yildiz"
   avatar           : "profile.png"
-  bio              : "Senior Operations Research Scientist | Network Optimization | MILP & Routing"
+  bio              : "Associate Professor of Electrical Engineering"
   location         : "Ankara, Turkey"
   employer         : "TED University"
   uri              : "https://huguryildiz.github.io"
   email            : "hugur.yildiz@tedu.edu.tr"
 
-  googlescholar    : "https://scholar.google.com/citations?user=XXXX"
+  googlescholar    : "https://scholar.google.com/citations?user=nQwHS1gAAAAJ"
   orcid            : "https://orcid.org/0000-0002-1556-2634"
   researchgate     : "https://www.researchgate.net/profile/Huseyin-Yildiz"
 
