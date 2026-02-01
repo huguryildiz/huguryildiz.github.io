@@ -24,3 +24,6 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
 
 - **Hybrid Optimization and Learning-Based Network Control:**  
   Integration of mathematical optimization frameworks with machine learning and reinforcement learning techniques to enable adaptive, data-driven, and scalable control of complex networked systems. Recent work explores hybrid optimization–learning methodologies for parameter prediction, dynamic decision-making, and emerging paradigms such as quantum network routing and hybrid classical–quantum architectures.
+
+
+![Overview](/images/uwsn.png)
