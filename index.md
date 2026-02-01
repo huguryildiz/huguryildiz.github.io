@@ -26,5 +26,5 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
 ### Overview
 
 <p align="center">
-  <img src="/images/uwsn.png" alt="Overview" width="900">
+  <img src="/images/uwsn.png" alt="" width="900">
 </p>
