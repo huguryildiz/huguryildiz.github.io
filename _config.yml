@@ -13,8 +13,8 @@ repository: "huguryildiz/huguryildiz.github.io"
 # =========================
 # Theme (Minimal Mistakes / AcademicPages)
 # =========================
-remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "dark"
+remote_theme: "alshedivat/al-folio"
+theme_color: "light"  
 
 # =========================
 # Plugins (GitHub Pages uyumlu)
@@ -69,7 +69,7 @@ author:
   bio              : "Associate Professor of Electrical Engineering"
   location         : "Ankara, Turkey"
   employer         : "TED University"
-  uri              : "https://huguryildiz.github.io"
+  uri              : "https://www.tedu.edu.tr/en/huseyin-ugur-yildiz"
   email            : "hugur.yildiz@tedu.edu.tr"
 
   googlescholar    : "https://scholar.google.com/citations?user=nQwHS1gAAAAJ"
@@ -86,7 +86,7 @@ future: true
 timezone: Europe/Istanbul
 
 # =========================
-# Excludes (temizlik)
+# Excludes
 # =========================
 exclude:
   - README.md
