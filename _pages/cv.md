@@ -5,13 +5,6 @@ permalink: /cv/
 author_profile: true
 ---
 
----
-layout: single
-title: "Curriculum Vitae"
-permalink: /cv/
-author_profile: true
----
-
 ## Professional Experience
 
 **Department Chair**  
@@ -32,7 +25,7 @@ Dec 2015 – Aug 2016
 
 **Senior Network Engineer**  
 Turk Telekom, Ankara, Turkey  
-Oct 2010 – Nov 2015
+Dec 2010 – Nov 2015
 
 ---
 
@@ -139,14 +132,24 @@ Co-advisor: Prof. Kemal Biçakçı
 
 ### Reviewer (Selected Journals and Conferences)
 
-Ad Hoc Networks; Computer Communications; Computer Networks; IEEE Access;  
-IEEE Communications Letters; IEEE Communications Surveys and Tutorials;  
-IEEE Internet of Things Journal; IEEE Sensors Journal; IEEE Systems Journal;  
-IEEE Transactions on Cybernetics; IEEE Transactions on Green Communications and Networking;  
-IEEE Transactions on Industrial Electronics; IEEE Transactions on Industrial Informatics;  
-IEEE Transactions on Mobile Computing; IEEE Transactions on Network and Service Management;  
-IEEE Wireless Communications Letters; Optical Switching and Networking; Physical Communication;  
-IEEE ICC; IEEE WCNC; IEEE PIMRC; IEEE WiMob; IEEE SENSORS; IEEE SAS; IEEE Wireless Days.
+- Ad Hoc Networks  
+- Computer Networks  
+- IEEE Access  
+- IEEE Communications Letters  
+- IEEE Communications Surveys and Tutorials  
+- IEEE International Conference on Communications (ICC)  
+- IEEE Internet of Things Journal  
+- IEEE International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob 2016)  
+- IEEE International Symposium on Personal, Indoor, and Mobile Radio Communications (PIMRC 2017)  
+- IEEE Sensors Journal  
+- IEEE Systems Journal  
+- IEEE Transactions on Cybernetics  
+- IEEE Transactions on Industrial Electronics  
+- IEEE Transactions on Industrial Informatics  
+- IEEE Transactions on Mobile Computing  
+- IEEE Wireless Communications and Networking Conference (WCNC 2018–2024)  
+- IEEE Wireless Communications Letters  
+- Internet of Things (Guest Editor)  
 
 ---
 
