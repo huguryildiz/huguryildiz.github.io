@@ -13,8 +13,8 @@ repository: "huguryildiz/huguryildiz.github.io"
 # =========================
 # Theme (Minimal Mistakes / AcademicPages)
 # =========================
-remote_theme: "alshedivat/al-folio"
-theme_color: "light"  
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "auto"
 
 # =========================
 # Plugins (GitHub Pages uyumlu)
