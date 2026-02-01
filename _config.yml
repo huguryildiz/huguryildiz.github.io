@@ -10,9 +10,6 @@ baseurl: ""
 
 repository: "huguryildiz/huguryildiz.github.io"
 
-custom_css:
-  - /assets/css/custom.css
-
 # =========================
 # Theme (Minimal Mistakes / AcademicPages)
 # =========================
