@@ -1,3 +1,5 @@
-.page__content p {
-  text-align: justify;
+.page__content,
+.page__content p,
+.page__content li {
+  text-align: justify !important;
 }
