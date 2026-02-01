@@ -12,8 +12,6 @@ His research focuses on routing, resource allocation, and energy efficiency chal
 
 He has authored over 20 peer-reviewed journal articles with more than 1,000 citations, received the IEEE Middle East and North Africa Communications Conference (IEEE MENACOMM) 2019 Best Paper Award, and was elevated to IEEE Senior Member in 2021.
 
----
-
 ### Research Interests
 
 - **Operations Research and Mathematical Optimization for Networked Systems:**  
@@ -25,5 +23,8 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
 - **Hybrid Optimization and Learning-Based Network Control:**  
   Integration of mathematical optimization frameworks with machine learning and reinforcement learning techniques to enable adaptive, data-driven, and scalable control of complex networked systems. Recent work explores hybrid optimization–learning methodologies for parameter prediction, dynamic decision-making, and emerging paradigms such as quantum network routing and hybrid classical–quantum architectures.
 
+### Overview
 
-![Overview](/images/uwsn.png)
+<p align="center">
+  <img src="/images/uwsn.png" alt="Overview" width="900">
+</p>
