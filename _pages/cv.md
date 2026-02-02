@@ -189,7 +189,7 @@ Co-advisor: Prof. Kemal Bicakci <br>
 
 ### Ph.D. Studentss
 
-- **C. Tantur Karagul** (2025). *Network Lifetime Optimization in Underwater Wireless Sensor Networks with Variable k-Connectivity*.  
+- **C. tTantur Karagul** (2025). *Network Lifetime Optimization in Underwater Wireless Sensor Networks with Variable k-Connectivity*.  
   Co-advisor, Ph.D. dissertation, TOBB University of Economics and Technology. <br>
   [<i class="fas fa-link" style="color: inherit;"></i> YÖK Thesis]()
 
