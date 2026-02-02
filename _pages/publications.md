@@ -1,7 +1,6 @@
 ---
 layout: single
-title: ""
-seo_title: "Huseyin Ugur Yildiz | Publications"
+title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
