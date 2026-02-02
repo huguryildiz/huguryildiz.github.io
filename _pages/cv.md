@@ -169,7 +169,7 @@ Co-advisor: Prof. Kemal Bicakci <br>
 
 - **Best Paper Award (Third Place)**,  
   *Utilization of Multi-Sink Architectures for Lifetime Maximization in Underwater Sensor Networks*,  
-  IEEE Middle East and North Africa Communications Conference (MENACOMM) 2019, Manama, Kingdom of Bahrain
+  IEEE Middle East and North Africa Communications Conference (MENACOMM) 2019, Manama, Kingdom of Bahrain <br>
   [<i class="fas fa-link" style="color: inherit;"></i> Best Paper Award Certificate](https://drive.google.com/file/d/1QbpfuRXmyoTQCFJAFh_H-exv3v3Q8L-t/view)
 
 
@@ -190,11 +190,11 @@ Co-advisor: Prof. Kemal Bicakci <br>
 ### Ph.D. Students
 
 - **C. Tantur Karagul** (2025). *Network Lifetime Optimization in Underwater Wireless Sensor Networks with Variable k-Connectivity*.  
-  Co-advisor, Ph.D. dissertation, TOBB University of Economics and Technology.
+  Co-advisor, Ph.D. dissertation, TOBB University of Economics and Technology. <br>
   [<i class="fas fa-link" style="color: inherit;"></i> YÖK Thesis]()
 
 - **M. Cobanlar** (2022). *Examination of the Relationship Between k-Connectivity and Network Lifetime in Underwater Acoustic Sensor Networks*.  
-  Co-advisor, Ph.D. dissertation, TOBB University of Economics and Technology.
+  Co-advisor, Ph.D. dissertation, TOBB University of Economics and Technology. <br>
   [<i class="fas fa-link" style="color: inherit;"></i> YÖK Thesis](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=G_oJ1rKE4SgJUkomyAKpR_b66BRHX6Iu8I5xytFXfpv7OVxvt9gxQhlL5X5kvF6X)
 
 ### M.Sc. Students
