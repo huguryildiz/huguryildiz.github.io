@@ -49,14 +49,14 @@ Aug 2005 – Aug 2009
 
 **Ph.D. Dissertation**  
 *Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks*  
-Advisor: Prof. Bülent Tavlı
-[PDF](files/paper1.pdf)
+Advisor: Prof. Bulent Tavli
+[<i class="far fa-file-pdf"></i> paper](files/paper1.pdf)
 
 **M.Sc. Thesis**  
 *Communication/Computation Trade-offs in Wireless Sensor Networks:  
 Comparing Network-Level and Node-Level Strategies*  
-Advisor: Prof. Bülent Tavlı  
-Co-advisor: Prof. Kemal Biçakçı
+Advisor: Prof. Bulent Tavli  
+Co-advisor: Prof. Kemal Bicakci
 
 ---
 
