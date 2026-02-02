@@ -13,7 +13,7 @@ author_profile: true
   **Computer Standards & Interfaces**, 92, 103941.
 
 - Gultekin, B., Nurcan-Atceken, D., Altin-Kayhan, A., **Yildiz, H. U.**, & Tavli, B. (2023).  
-  *Exploring the Tradeoff Between Energy Dissipation, Delay, and the Number of Backbones for Broadcasting in Wireless Sensor Networks Through Goal Programming*.  
+  *Exploring the Tradeoff Between Energy Dissipation, Delay, and the Number of Backbones for Broadcasting in Wireless Sensor Networks Through Goal Programming*.
   **Ad Hoc Networks**, 149, 103223.
 
 - **Yildiz, H. U.** (2023).  
