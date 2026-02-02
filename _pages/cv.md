@@ -1,9 +1,12 @@
 ---
 layout: single
-title: "CV"
+title: "Huseyin Ugur Yildiz | CV"
 permalink: /cv/
 author_profile: true
+header:
+  overlay: false
 ---
+
 
 ## Professional Experience
 
@@ -50,7 +53,8 @@ Aug 2005 – Aug 2009
 **Ph.D. Dissertation**  
 *Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks*  
 Advisor: Prof. Bulent Tavli <br> 
-[<i class="far fa-file-pdf" style="color: inherit;"></i> PDF](/files/paper1.pdf)
+[<i class="far fa-file-pdf" style="color: inherit;"></i> PDF](/files/thesis.pdf) ·
+[<i class="fas fa-link" style="color: inherit;"></i> YÖK Thesis](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=Br_XTptK8CZ70f0JGX9xEjZCixd1XEodCqaT6dDVvnmfvltgkE09YEFFWmk5LBx2)
 
 **M.Sc. Thesis**  
 *Communication/Computation Trade-offs in Wireless Sensor Networks:  
