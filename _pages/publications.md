@@ -11,7 +11,7 @@ author_profile: true
 - Karagul, C. T., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025).  
   *Mitigating Energy Cost of Connection Reliability in UWSNs Through Non-Uniform k-Connectivity*.  
   **IEEE Internet of Things Journal**, 12(22), 47817–47826.  <br> 
-  [<i class="fas fa-link" style="color: inherit;"></i> Paper](https://doi.org/10.1109/JIOT.2025.3603829) 8
+  [<i class="fas fa-link" style="color: inherit;"></i> Paper](https://doi.org/10.1109/JIOT.2025.3603829)
 
 - Asci, M., Akusta Dagdeviren, Z., Khalilpour Akram, V., **Yildiz, H. U.**, Dagdeviren, O., & Tavli, B. (2025).  
   *Enhancing Drone Network Resilience: Investigating Strategies for k-Connectivity Restoration*.  
