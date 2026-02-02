@@ -4,6 +4,8 @@ author_profile: true
 permalink: /
 ---
 
+### About
+ 
 Huseyin Ugur Yildiz received the B.Sc. degree in Electrical and Electronics Engineering from [Bilkent University](https://w3.bilkent.edu.tr/bilkent/), Ankara, Turkey, in 2009, and the M.Sc. and Ph.D. degrees from [TOBB University of Economics and Technology](https://www.etu.edu.tr/en), Ankara, in 2013 and 2016, respectively.
 
 Between 2010 and 2015, he worked at [Turk Telekom](https://www.turktelekom.com.tr/), where he contributed to the design and operation of the Safer Internet Service, a nationwide platform used by more than five million subscribers. From 2015 to 2016, he was with [Turkish Aerospace Industries (TAI)](https://www.tusas.com/), working on communication and network architectures for ANKA unmanned aerial vehicle (UAV) systems. He joined the Department of Electrical and Electronics Engineering at [TED University](https://www.tedu.edu.tr/) in 2016, where he has been serving as an Associate Professor since 2021 and held the position of Department Chair from 2021 to 2024.
