@@ -9,7 +9,7 @@ author_profile: true
 ## Journal Papers
 
 - Karagul, C. T., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025).  
-  *Mitigating Energy Cost of Connection Reliability in UWSNs Through Non-Uniform k-Connectivity*.  k
+  *Mitigating Energy Cost of Connection Reliability in UWSNs Through Non-Uniform k-Connectivity*.
   **IEEE Internet of Things Journal**, 12(22), 47817–47826.  <br> 
   [<i class="fas fa-link" style="color: inherit;"></i> Paper](https://doi.org/10.1109/JIOT.2025.3603829)
 
@@ -164,7 +164,7 @@ author_profile: true
   *Communication/Computation Trade–offs in Wireless Sensor Networks: Comparing Network–Level and Node–Level Strategies*.  
   In **2014 IEEE Topical Conference on Wireless Sensors and Sensor Networks (WiSNet)**, pp. 49–51. IEEE.
 
-  ## Conference Papers (in Turkish)
+## Conference Papers (in Turkish)
 
 - **Yildiz, H. U.** (2019).  
   *Improvement of Underwater Acoustic Sensor Networks Performance with Fountain Codes*.  
