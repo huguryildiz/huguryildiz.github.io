@@ -56,8 +56,7 @@ Advisor: Prof. Bulent Tavli <br>
 [<i class="fas fa-link" style="color: inherit;"></i> YÖK Thesis](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=Br_XTptK8CZ70f0JGX9xEjZCixd1XEodCqaT6dDVvnmfvltgkE09YEFFWmk5LBx2)
 
 **M.Sc. Thesis**  
-*Communication/Computation Trade-offs in Wireless Sensor Networks:  
-Comparing Network-Level and Node-Level Strategies*  
+*Communication/Computation Trade-offs in Wireless Sensor Networks: Comparing Network-Level and Node-Level Strategies*  
 Advisor: Prof. Bulent Tavli  
 Co-advisor: Prof. Kemal Bicakci <br>
 [<i class="far fa-file-pdf" style="color: inherit;"></i> PDF](/files/Yildiz_HuseyinUgur_MSc_Thesis.pdf) ·
@@ -71,44 +70,48 @@ Co-advisor: Prof. Kemal Bicakci <br>
 
 - **Prolonging the Lifetime of Underwater Sensor Networks Under Sinkhole Attacks**,  
   Georgia Institute of Technology, Atlanta, GA, USA, Oct 24, 2019.  
-  Host: Prof. Ian F. Akyildiz
+  Host: Prof. Ian F. Akyildiz <br>
   [<i class="far fa-file-powerpoint" style="color: inherit;"></i> Slides](https://drive.google.com/file/d/14jmfAauo_CHZHZSjCTbuMjjVQVsGz1sm/view)
-  
+
 - **Maximization of Underwater Sensor Networks Lifetime via Fountain Codes**,  
   SIU 2019 – Special Session on Next Generation Communication Techniques,  
-  Sivas, Turkey, Apr 25, 2019
-
+  Sivas, Turkey, Apr 25, 2019 <br>
+  [<i class="far fa-file-powerpoint" style="color: inherit;"></i> Slides](https://drive.google.com/file/d/14bzsN_kmMONXaJet98dZsrgdQwOrFmCU/view?usp=sharing)
+ 
 - **Maximization of Underwater Sensor Networks Lifetime via Fountain Codes**,  
   ASELSAN Information and Communication Technologies Workshop,  
-  Ankara, Turkey, Feb 19, 2019
-
+  Ankara, Turkey, Feb 19, 2019 <br>
+  [<i class="far fa-file-powerpoint" style="color: inherit;"></i> Slides](https://drive.google.com/file/d/14a3OSEhRvUTd9m0eJsiT_AUh9vqzGqZW/view?usp=sharing)
+  
 - **Optimal Transmission Power Level Sets for Lifetime Maximization in Wireless Sensor Networks**,  
   ASELSAN Information and Communication Technologies Workshop,  
-  Ankara, Turkey, Nov 14, 2016
+  Ankara, Turkey, Nov 14, 2016 <br>
+  [<i class="far fa-file-powerpoint" style="color: inherit;"></i> Slides](https://drive.google.com/file/d/16Cm8oSdQejoQQtKTkOmlRXNUYzaQfKZK/view?usp=sharing)
 
 - **The Impact of Random Power Assignment in Handshaking on Wireless Sensor Network Lifetime**,  
   University of Texas at Dallas, Dallas, TX, USA, Dec 3, 2014.  
-  Host: Prof. Murat Torlak
+  Host: Prof. Murat Torlak <br>
+  [<i class="far fa-file-powerpoint" style="color: inherit;"></i> Slides](https://drive.google.com/file/d/14injrfacnqRUnJb9IiNEHQdvhcTARxuy/view?usp=sharing)
 
 - **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks**,  
   University of Rochester, Rochester, NY, USA, Feb 11, 2014.  
-  Host: Prof. Wendi Heinzelman
+  Host: Prof. Wendi Heinzelman <br>
 
 - **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks**,  
   University at Buffalo, Buffalo, NY, USA, Feb 7, 2014.  
-  Host: Prof. Tommaso Melodia
+  Host: Prof. Tommaso Melodia <br>
 
 - **Wireless Sensor Networks, Network Optimization, and Mathematical Programming**,  
   Carleton University, Ottawa, ON, Canada, Feb 5, 2014.  
-  Host: Prof. Halim Yanikomeroglu
+  Host: Prof. Halim Yanikomeroglu <br>
 
 - **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks**,  
   University of Southern California, Los Angeles, CA, USA, Jan 23, 2014.  
-  Host: Prof. Bhaskar Krishnamachari
+  Host: Prof. Bhaskar Krishnamachari <br>
 
 - **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks**,  
   University of California, Irvine, CA, USA, Jan 22, 2014.  
-  Host: Prof. Ender Ayanoglu
+  Host: Prof. Ender Ayanoglu <br>
 
 ---
 
@@ -124,16 +127,18 @@ Co-advisor: Prof. Kemal Bicakci <br>
 
 ### Technical Program Committee Memberships
 
-- BalkanCom (2023–2025)  
-- IEEE ICC (2018–2022)  
-- IEEE WCNC (2019, 2021–2025)  
-- 3ICT (2019, 2020)  
-- IEEE CNSM (2020, 2021)  
-- IEEE MENACOMM 2019  
-- ACM WUWNet (2019–2024)  
-- IEEE VTC2018-Spring  
-- IEEE INFOCOM 2018 Workshop on Extreme Environments  
-- IEEE SENSORS 2017
+**(1) Technical Program Committee Member:**
+
+- 2018 IEEE 87th Vehicular Technology Conference (VTC2018-Spring),
+- 2nd IEEE Middle East and North Africa Communications Conference (MENACOMM’19),
+- IEEE International Conference on Communications (ICC 2018–2022),
+- IEEE SENSORS 2017,
+- IEEE Wireless Communications and Networking Conference (WCNC 2019, WCNC 2021–Present),
+- Int. Conf. on Innovation and Intelligence for Information, Computation, and Technology (3ICT’19, 3ICT’20),
+- Int. Conference on Network and Service Management (CNSM 2020, CNSM 2021),
+- International Balkan Conference on Communications and Networking (BalkanCom 2023–Present),
+- International Conference on Underwater Networks & Systems (WUWNet 2019–Present),
+- IEEE INFOCOM’18 Workshop on Wirel. Commun. and Netw. in Extreme Environ.
 
 ---
 
@@ -164,7 +169,9 @@ Co-advisor: Prof. Kemal Bicakci <br>
 
 - **Best Paper Award (Third Place)**,  
   *Utilization of Multi-Sink Architectures for Lifetime Maximization in Underwater Sensor Networks*,  
-  IEEE MENACOMM 2019, Manama, Kingdom of Bahrain
+  IEEE Middle East and North Africa Communications Conference (MENACOMM) 2019, Manama, Kingdom of Bahrain
+  [<i class="fas fa-link" style="color: inherit;"></i> Best Paper Award Certificate](https://drive.google.com/file/d/1QbpfuRXmyoTQCFJAFh_H-exv3v3Q8L-t/view)
+
 
 ---
 
@@ -182,15 +189,32 @@ Co-advisor: Prof. Kemal Bicakci <br>
 
 ### Ph.D. Students
 
+- **C. Tantur Karagul** (2025). *Network Lifetime Optimization in Underwater Wireless Sensor Networks with Variable k-Connectivity*.  
+  Co-advisor, Ph.D. dissertation, TOBB University of Economics and Technology.
+  [<i class="fas fa-link" style="color: inherit;"></i> YÖK Thesis]()
+
 - **M. Cobanlar** (2022). *Examination of the Relationship Between k-Connectivity and Network Lifetime in Underwater Acoustic Sensor Networks*.  
   Co-advisor, Ph.D. dissertation, TOBB University of Economics and Technology.
+  [<i class="fas fa-link" style="color: inherit;"></i> YÖK Thesis](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=G_oJ1rKE4SgJUkomyAKpR_b66BRHX6Iu8I5xytFXfpv7OVxvt9gxQhlL5X5kvF6X)
 
 ### M.Sc. Students
 
-- **B. E. Un** (2022). *Critical Node Effects on Underwater Acoustic Sensor Network Lifetime Using Private Key Encryption*.  
-- **C. Aydin** (2021). *Network Lifetime Maximization Based on Depleted Node Count in Underwater WSNs*.  
-- **A. Ozmen** (2021). *Eavesdropping Risk Minimization and Network Lifetime Trade-offs via MIP*.  
-- **Y. Karakurt** (2018). *Eavesdropping Potential and Lifetime Recovery in WSNs*.  
-- **C. Tantur** (2017). *Optimal Transmission Power Level Sets for Lifetime Maximization in WSNs*.  
+- **B. E. Un** (2021). *Investigation of the Effects of Critical Nodes on the Lifetime of Underwater Acoustic Sensor Networks Using Private Key Encryption via a Unique Optimization Framework*.  
+  Co-Advisor, M.Sc. thesis, TOBB University of Economics and Technology.  
+  [<i class="fas fa-link" style="color: inherit;"></i> YÖK Thesis](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=qVqOZFj2DwNmvdf1oGFYiPA6aYtotmnOK4EXJfFCxlc2mg4JGwOzN8dwilUNajg1)
 
-(Co-advisor, Master’s theses, TOBB University of Economics and Technology)
+- **C. Aydin** (2021). *Number of Depleted Nodes Based Network Lifetime Maximization in Underwater Wireless Sensor Networks*.  
+  Co-Advisor, M.Sc. thesis, TOBB University of Economics and Technology.  
+  [<i class="fas fa-link" style="color: inherit;"></i> YÖK Thesis]()
+
+- **A. Ozmen** (2021). *Modeling and Exploring Eavesdropping Risk Minimization and Network Lifetime Maximization Trade-offs in Underwater Acoustic Sensor Networks Using a Mixed Integer Programming Approach*.  
+  Co-Advisor, M.Sc. thesis, TOBB University of Economics and Technology.  
+  [<i class="fas fa-link" style="color: inherit;"></i> YÖK Thesis](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=v7BkNnnepTnbhn8rNR77LXvYfssCwLtFHwO6QyeDzoiU-4og5S68KqSwbXXeeT31)
+
+- **Y. Karakurt** (2018). *Eavesdropping Potential in Wireless Sensor Networks and Modeling and Analysis of Network Lifetime Recovery*.  
+  Co-Advisor, M.Sc. thesis, TOBB University of Economics and Technology.  
+  [<i class="fas fa-link" style="color: inherit;"></i> YÖK Thesis](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=vbVkXe1KChYWNElr1MuLZk7iD5LqiauQM_0h3VZ7ultdWdGKzp4EHgQC9HFbDZh7)
+
+- **C. Tantur** (2017). *Optimal Transmission Power Level Sets for Lifetime Maximization in Wireless Sensor Networks*.  
+  Co-Advisor, M.Sc. thesis, TOBB University of Economics and Technology.  
+  [<i class="fas fa-link" style="color: inherit;"></i> YÖK Thesis](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=7lOJX8w_8PRQU1mSHU6-jsVenDOUCZCo0clBp85eRPM90kEZ3qTRNVKtZESSi3wO)
