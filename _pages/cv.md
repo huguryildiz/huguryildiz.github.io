@@ -53,7 +53,7 @@ Aug 2005 – Aug 2009
 **Ph.D. Dissertation**  
 *Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks*  
 Advisor: Prof. Bulent Tavli <br> 
-[<i class="far fa-file-pdf" style="color: inherit;"></i> PDF](/files/thesis.pdf) ·
+[<i class="far fa-file-pdf" style="color: inherit;"></i> PDF](/files/Yildiz_HuseyinUgur_PhD_Dissertation.pdf) ·
 [<i class="fas fa-link" style="color: inherit;"></i> YÖK Thesis](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=Br_XTptK8CZ70f0JGX9xEjZCixd1XEodCqaT6dDVvnmfvltgkE09YEFFWmk5LBx2)
 
 **M.Sc. Thesis**  
@@ -61,6 +61,8 @@ Advisor: Prof. Bulent Tavli <br>
 Comparing Network-Level and Node-Level Strategies*  
 Advisor: Prof. Bulent Tavli  
 Co-advisor: Prof. Kemal Bicakci <br>
+[<i class="far fa-file-pdf" style="color: inherit;"></i> PDF](/files/Yildiz_HuseyinUgur_MSc_Thesis.pdf) ·
+[<i class="fas fa-link" style="color: inherit;"></i> YÖK Thesis](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=iTkOhwevEenJZ3onUvs52nzi419Y-02Qu4K0DuUcM1T12y2xRhF2YLzHmis2Ng60)
 
 ---
 
@@ -71,7 +73,8 @@ Co-advisor: Prof. Kemal Bicakci <br>
 - **Prolonging the Lifetime of Underwater Sensor Networks Under Sinkhole Attacks**,  
   Georgia Institute of Technology, Atlanta, GA, USA, Oct 24, 2019.  
   Host: Prof. Ian F. Akyildiz
-
+  [<i class="far fa-file-powerpoint" style="color: inherit;"></i> Slides](https://drive.google.com/file/d/14jmfAauo_CHZHZSjCTbuMjjVQVsGz1sm/view)
+  
 - **Maximization of Underwater Sensor Networks Lifetime via Fountain Codes**,  
   SIU 2019 – Special Session on Next Generation Communication Techniques,  
   Sivas, Turkey, Apr 25, 2019
