@@ -8,13 +8,20 @@ author_profile: true
 
 ## Journal Papers
 
+- Karagul, C. T., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025).  
+  *Mitigating Energy Cost of Connection Reliability in UWSNs Through Non-Uniform k-Connectivity*.  
+  **IEEE Internet of Things Journal**, 12(22), 47817–47826.  <br> 
+  [<i class="fas fa-link" style="color: inherit;"></i> Paper](https://doi.org/10.1109/JIOT.2025.3603829)
+
 - Asci, M., Akusta Dagdeviren, Z., Khalilpour Akram, V., **Yildiz, H. U.**, Dagdeviren, O., & Tavli, B. (2025).  
   *Enhancing Drone Network Resilience: Investigating Strategies for k-Connectivity Restoration*.  
-  **Computer Standards & Interfaces**, 92, 103941.
-
+  **Computer Standards & Interfaces**, 92, 103941.  <br> 
+  [<i class="fas fa-link" style="color: inherit;"></i> Paper](https://doi.org/10.1016/j.csi.2024.103941)
+  
 - Gultekin, B., Nurcan-Atceken, D., Altin-Kayhan, A., **Yildiz, H. U.**, & Tavli, B. (2023).  
   *Exploring the Tradeoff Between Energy Dissipation, Delay, and the Number of Backbones for Broadcasting in Wireless Sensor Networks Through Goal Programming*.
-  **Ad Hoc Networks**, 149, 103223.
+  **Ad Hoc Networks**, 149, 103223.  <br> 
+  [<i class="fas fa-link" style="color: inherit;"></i> Paper](https://doi.org/10.1016/j.adhoc.2023.103223)
 
 - **Yildiz, H. U.** (2023).  
   *Joint Effects of Void Region Size and Sink Architecture on Underwater WSNs Lifetime*.  
