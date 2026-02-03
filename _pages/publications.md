@@ -7,8 +7,6 @@ author_profile: true
 
 ### Metrics
 
-### Metrics
-
 <p align="left">
   <a href="https://scholar.google.com.tr/citations?user=nQwHS1gAAAAJ">
     <img src="https://img.shields.io/badge/Citations-1175-blue?style=flat-square&logo=google-scholar" alt="Citations">
