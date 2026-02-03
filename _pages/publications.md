@@ -5,6 +5,111 @@ permalink: /publications/
 author_profile: true
 ---
 
+<!-- =========================
+     SCImago (SJR) Quartiles
+     ========================= -->
+
+<h2>Journal Stats According to SCImago (SJR) Quartiles</h2>
+
+<style>
+  .sjr-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:14px;
+    align-items:start;
+    margin-top:10px;
+  }
+  .sjr-card{
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:12px;
+    padding:10px;
+  }
+  .sjr-card a{ text-decoration:none; }
+  .sjr-card img{
+    width:100%;
+    height:auto;
+    display:block;
+    border:0;
+  }
+</style>
+
+<div class="sjr-grid">
+
+  <div class="sjr-card">
+    <a href="https://www.scimagojr.com/journalsearch.php?q=144912&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank" target="_blank" rel="noopener">
+      <img src="https://www.scimagojr.com/journal_img.php?id=144912" alt="SCImago Journal &amp; Country Rank" />
+    </a>
+  </div>
+
+  <div class="sjr-card">
+    <a href="https://www.scimagojr.com/journalsearch.php?q=26053&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank" target="_blank" rel="noopener">
+      <img src="https://www.scimagojr.com/journal_img.php?id=26053" alt="SCImago Journal &amp; Country Rank" />
+    </a>
+  </div>
+
+  <div class="sjr-card">
+    <a href="https://www.scimagojr.com/journalsearch.php?q=11300153734&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank" target="_blank" rel="noopener">
+      <img src="https://www.scimagojr.com/journal_img.php?id=11300153734" alt="SCImago Journal &amp; Country Rank" />
+    </a>
+  </div>
+
+  <div class="sjr-card">
+    <a href="https://www.scimagojr.com/journalsearch.php?q=15047&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank" target="_blank" rel="noopener">
+      <img src="https://www.scimagojr.com/journal_img.php?id=15047" alt="SCImago Journal &amp; Country Rank" />
+    </a>
+  </div>
+
+  <div class="sjr-card">
+    <a href="https://www.scimagojr.com/journalsearch.php?q=26811&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank" target="_blank" rel="noopener">
+      <img src="https://www.scimagojr.com/journal_img.php?id=26811" alt="SCImago Journal &amp; Country Rank" />
+    </a>
+  </div>
+
+  <div class="sjr-card">
+    <a href="https://www.scimagojr.com/journalsearch.php?q=26799&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank" target="_blank" rel="noopener">
+      <img src="https://www.scimagojr.com/journal_img.php?id=26799" alt="SCImago Journal &amp; Country Rank" />
+    </a>
+  </div>
+
+  <div class="sjr-card">
+    <a href="https://www.scimagojr.com/journalsearch.php?q=21100203111&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank" target="_blank" rel="noopener">
+      <img src="https://www.scimagojr.com/journal_img.php?id=21100203111" alt="SCImago Journal &amp; Country Rank" />
+    </a>
+  </div>
+
+  <div class="sjr-card">
+    <a href="https://www.scimagojr.com/journalsearch.php?q=18896&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank" target="_blank" rel="noopener">
+      <img src="https://www.scimagojr.com/journal_img.php?id=18896" alt="SCImago Journal &amp; Country Rank" />
+    </a>
+  </div>
+
+  <div class="sjr-card">
+    <a href="https://www.scimagojr.com/journalsearch.php?q=24303&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank" target="_blank" rel="noopener">
+      <img src="https://www.scimagojr.com/journal_img.php?id=24303" alt="SCImago Journal &amp; Country Rank" />
+    </a>
+  </div>
+
+  <div class="sjr-card">
+    <a href="https://www.scimagojr.com/journalsearch.php?q=17569&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank" target="_blank" rel="noopener">
+      <img src="https://www.scimagojr.com/journal_img.php?id=17569" alt="SCImago Journal &amp; Country Rank" />
+    </a>
+  </div>
+
+  <div class="sjr-card">
+    <a href="https://www.scimagojr.com/journalsearch.php?q=17964&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank" target="_blank" rel="noopener">
+      <img src="https://www.scimagojr.com/journal_img.php?id=17964" alt="SCImago Journal &amp; Country Rank" />
+    </a>
+  </div>
+
+  <div class="sjr-card">
+    <a href="https://www.scimagojr.com/journalsearch.php?q=22933&amp;tip=sid&amp;exact=no" title="SCImago Journal &amp; Country Rank" target="_blank" rel="noopener">
+      <img src="https://www.scimagojr.com/journal_img.php?id=22933" alt="SCImago Journal &amp; Country Rank" />
+    </a>
+  </div>
+
+</div>
+
 ## Journal Papers
 
 - Karagul, C. T., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025). *Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity*. *IEEE Internet of Things Journal, 12*(22), 47817–47826. 
@@ -100,7 +205,7 @@ author_profile: true
 
 - **Yildiz, H. U.** (2019, November). *Utilization of multi-sink architectures for lifetime maximization in underwater sensor networks*. In *2019 2nd IEEE Middle East and North Africa Communications Conference (MENACOMM)* (pp. 1–5). IEEE.  
 [🏆 **Best Paper Award (3rd Place)**](/files/Yildiz_HuseyinUgur_BestPaperAward_MENACOMM_2019)  
-[<i class="fas fa-link" style="color: inherit;"></i> Paper](https://doi.org/10.1109/MENACOMM46666.2019.8988521) ·
+[<i class="fas fa-link" style="color: inherit;"></i> Paper](https://doi.org/10.1109/MENACOMM46666.2019.8988521)
 [<i class="far fa-file-powerpoint" style="color: inherit;"></i> Slides](https://drive.google.com/file/d/16TwAEo1W8lqqKywIF9zQy7G5-Z-S53_T/view?usp=sharing)
 
 - **Yildiz, H. U.** (2019, October). *Prolonging the lifetime of underwater sensor networks under sinkhole attacks*. In *The 14th International Conference on Underwater Networks & Systems (WUWNet)* (pp. 1–5). ACM.
