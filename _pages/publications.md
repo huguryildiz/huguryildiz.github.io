@@ -8,19 +8,18 @@ author_profile: true
 ### Metrics
 
 <p align="left">
-  <a href="https://scholar.google.com/citations?user=nQwHS1gAAAAJ">
-    <img src="https://img.shields.io/badge/Google_Scholar-Citations-blue?style=flat-square&logo=google-scholar" alt="Citations">
+  <a href="https://scholar.google.com.tr/citations?user=nQwHS1gAAAAJ">
+    <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fscholar-badges.herokuapp.com%2Fcitations%2FnQwHS1gAAAAJ&style=flat-square&logo=google-scholar&color=blue&label=Citations" alt="Citations">
   </a>
-  <a href="https://scholar.google.com/citations?user=SnQwHS1gAAAAJ">
-    <img src="https://img.shields.io/badge/h--index-YAZ_BURAYA-orange?style=flat-square" alt="h-index">
+  <a href="https://scholar.google.com.tr/citations?user=nQwHS1gAAAAJ">
+    <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fscholar-badges.herokuapp.com%2Fhindex%2FnQwHS1gAAAAJ&style=flat-square&color=orange&label=h-index" alt="h-index">
   </a>
-  <a href="https://scholar.google.com/citations?user=SnQwHS1gAAAAJ">
-    <img src="https://img.shields.io/badge/i10--index-YAZ_BURAYA-green?style=flat-square" alt="i10-index">
+  <a href="https://scholar.google.com.tr/citations?user=nQwHS1gAAAAJ">
+    <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fscholar-badges.herokuapp.com%2Fi10index%2FnQwHS1gAAAAJ&style=flat-square&color=success&label=i10-index" alt="i10-index">
   </a>
 </p>
 
-
-**Access:** [Journal Papers](#journal-papers) | [Editorials](#editorials) | [Conference Papers (Int)](#conference-papers-international) | [Conference Papers (Nat)](#conference-papers-national---in-turkish)
+**Quick Links:** [Journal Papers](#journal-papers) \| [Editorials](#editorials) \| [Conference Papers (Int)](#conference-papers-international) \| [Conference Papers (Nat)](#conference-papers-national---in-turkish)
 
 ---
 
