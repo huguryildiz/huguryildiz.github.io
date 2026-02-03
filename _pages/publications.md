@@ -7,15 +7,17 @@ author_profile: true
 
 ### Metrics
 
+### Metrics
+
 <p align="left">
   <a href="https://scholar.google.com.tr/citations?user=nQwHS1gAAAAJ">
-    <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fscholar-badges.herokuapp.com%2Fcitations%2FnQwHS1gAAAAJ&style=flat-square&logo=google-scholar&color=blue&label=Citations" alt="Citations">
+    <img src="https://img.shields.io/badge/Citations-1175-blue?style=flat-square&logo=google-scholar" alt="Citations">
   </a>
   <a href="https://scholar.google.com.tr/citations?user=nQwHS1gAAAAJ">
-    <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fscholar-badges.herokuapp.com%2Fhindex%2FnQwHS1gAAAAJ&style=flat-square&color=orange&label=h-index" alt="h-index">
+    <img src="https://img.shields.io/badge/h--index-18-orange?style=flat-square" alt="h-index">
   </a>
   <a href="https://scholar.google.com.tr/citations?user=nQwHS1gAAAAJ">
-    <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fscholar-badges.herokuapp.com%2Fi10index%2FnQwHS1gAAAAJ&style=flat-square&color=success&label=i10-index" alt="i10-index">
+    <img src="https://img.shields.io/badge/i10--index-28-success?style=flat-square" alt="i10-index">
   </a>
 </p>
 
@@ -110,55 +112,42 @@ author_profile: true
 
 - Karagul, C. T., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025, November). *Non-uniform k-connectivity for energy-efficient and reliable underwater wireless sensor networks*. In *2025 33rd Telecommunications Forum (TELFOR)* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/TELFOR67910.2025.11314281) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://docs.google.com/presentation/d/1K3TCWFDIhZuGReBDxBZDdtoVcevGus7G/)  
-[<i class="far fa-file-powerpoint"></i> Slides](https://docs.google.com/presentation/d/1K3TCWFDIhZuGReBDxBZDdtoVcevGus7G/)
 
 - Un, B. E., **Yildiz, H. U.**, & Tavli, B. (2021, May). *Impact of critical node failures on lifetime of UWSNs with incomplete secure connectivity*. In *2021 IEEE BlackSeaCom* (pp. 1–6). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/BlackSeaCom52164.2021.9527803) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16p42o7-s9xBWWV8gUx-3SyKFfAXsvwHR/view?usp=sharing)  
-[<i class="far fa-file-powerpoint"></i> Slides](https://drive.google.com/file/d/16p42o7-s9xBWWV8gUx-3SyKFfAXsvwHR/view?usp=sharing)
 
 - Ozmen, A., **Yildiz, H. U.**, & Tavli, B. (2020, November). *Impact of minimizing the eavesdropping risks on lifetime of underwater acoustic sensor networks*. In *2020 28th TELFOR* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/TELFOR51502.2020.9306557) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/15alVG_AJGp1eepousobHjpCpnDDz3W47/view?usp=sharing)  
-[<i class="far fa-file-powerpoint"></i> Slides](https://drive.google.com/file/d/15alVG_AJGp1eepousobHjpCpnDDz3W47/view?usp=sharing)
 
 - **Yildiz, H. U.** (2019, November). *Utilization of multi-sink architectures for lifetime maximization in underwater sensor networks*. In *2019 2nd IEEE MENACOMM*.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) ![Award](https://img.shields.io/badge/Award-Best_Paper_(3rd)-ffcc00?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/MENACOMM46666.2019.8988521) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16TwAEo1W8lqqKywIF9zQy7G5-Z-S53_T/view?usp=sharing)  
-[🏆 **Best Paper Award (3rd Place)**](/files/Yildiz_HuseyinUgur_BestPaperAward_MENACOMM_2019)  
-[<i class="far fa-file-powerpoint"></i> Slides](https://drive.google.com/file/d/16TwAEo1W8lqqKywIF9zQy7G5-Z-S53_T/view?usp=sharing)
 
 - **Yildiz, H. U.** (2019, October). *Prolonging the lifetime of underwater sensor networks under sinkhole attacks*. In *WUWNet '19* (pp. 1–5). ACM.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1145/3366486.3366516) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16U6NPkWhqjBHdUU8XTomkTP_EdsL-GH9/view?usp=sharing)  
-[<i class="far fa-file-powerpoint"></i> Slides](https://drive.google.com/file/d/16U6NPkWhqjBHdUU8XTomkTP_EdsL-GH9/view?usp=sharing)
 
 - **Yildiz, H. U.**, Gungor, V. C., & Tavli, B. (2018, June). *A hybrid energy harvesting framework for energy efficiency in wireless sensor networks based smart grid applications*. In *2018 Med-Hoc-Net* (pp. 1–6). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/23919/MedHocNet.2018.8407079) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/15SpGmcGRTPhGcBFtYmh1zJ0bOJWgXrSx/view?usp=sharing)  
-[<i class="far fa-file-powerpoint"></i> Slides](https://drive.google.com/file/d/15SpGmcGRTPhGcBFtYmh1zJ0bOJWgXrSx/view?usp=sharing)
 
 - Dagdeviren, O., Akram, V. K., Tavli, B., **Yildiz, H. U.**, & Atilgan, C. (2016, October). *Distributed detection of critical nodes in wireless sensor networks using connected dominating set*. In *2016 IEEE SENSORS* (pp. 1–3). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/ICSENS.2016.7808815) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/15n6Oy9vLKkgJMUIEfWhdoGB-PG4lCLRl/view?usp=sharing)  
-[<i class="far fa-file-powerpoint"></i> Slides](https://drive.google.com/file/d/15n6Oy9vLKkgJMUIEfWhdoGB-PG4lCLRl/view?usp=sharing)
 
 - Tantur, C., **Yildiz, H. U.**, Kurt, S., & Tavli, B. (2016, October). *Optimal transmission power level sets for lifetime maximization in wireless sensor networks*. In *2016 IEEE SENSORS* (pp. 1–3). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/ICSENS.2016.7808888) [![Poster](https://img.shields.io/badge/Resource-Poster-orange?style=flat-square)](https://drive.google.com/file/d/15V0CTjMZu6wiDMg9AyxNaJQCpaUhOcxD/view?usp=sharing)  
-[<i class="far fa-file-powerpoint"></i> Poster](https://drive.google.com/file/d/15V0CTjMZu6wiDMg9AyxNaJQCpaUhOcxD/view?usp=sharing)
 
 - **Yildiz, H. U.**, & Tavli, B. (2015, December). *Prolonging wireless sensor network lifetime by optimal utilization of compressive sensing*. In *2015 IEEE Globecom Workshops (ONIoE)* (pp. 1–6). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/GLOCOMW.2015.7414049) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16r6UKYnylhsZX8nenBAxjtg5uCnpTa52/view?usp=sharing)  
-[<i class="far fa-file-powerpoint"></i> Slides](https://drive.google.com/file/d/16r6UKYnylhsZX8nenBAxjtg5uCnpTa52/view?usp=sharing)
 
 - **Yildiz, H. U.**, & Tavli, B. (2014, December). *The impact of random power assignment in handshaking on wireless sensor network lifetime*. In *2014 IEEE Globecom Workshops (MENS)* (pp. 201–206). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/GLOCOMW.2014.7063431) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16Y3ol-umGpcveJLMhc_pZTuqigtw8fEP/view?usp=sharing)  
-[<i class="far fa-file-powerpoint"></i> Slides](https://drive.google.com/file/d/16Y3ol-umGpcveJLMhc_pZTuqigtw8fEP/view?usp=sharing)
 
 - **Yildiz, H. U.**, Kurt, S., & Tavli, B. (2014, October). *The impact of near-ground path loss modeling on wireless sensor network lifetime*. In *2014 IEEE MILCOM* (pp. 1114–1119). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/MILCOM.2014.188) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/15jZn25CaLQMSngx2aH00yvzvtiD3oSy9/view?usp=sharing)  
-[<i class="far fa-file-powerpoint"></i> Slides](https://drive.google.com/file/d/15jZn25CaLQMSngx2aH00yvzvtiD3oSy9/view?usp=sharing)
 
 - Akbas, A., **Yildiz, H. U.**, & Tavli, B. (2014, May). *Data packet length optimization for wireless sensor network lifetime maximization*. In *2014 10th COMM* (pp. 1–6). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/ICComm.2014.6866706)
 
 - **Yildiz, H. U.**, Bicakci, K., & Tavli, B. (2014, January). *Communication/computation trade-offs in wireless sensor networks: Comparing network-level and node-level strategies*. In *2014 IEEE WiSNet* (pp. 49–51). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/WiSNet.2014.6825515) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16xQgqR0IGGUlx-9fmwTTnk1srKBS-9_w/view?usp=sharing)  
-[<i class="far fa-file-powerpoint"></i> Slides](https://drive.google.com/file/d/16xQgqR0IGGUlx-9fmwTTnk1srKBS-9_w/view?usp=sharing)
 
 ---
 
@@ -166,20 +155,15 @@ author_profile: true
 
 - **Yildiz, H. U.** (2019, April). *Improvement of underwater acoustic sensor networks performance with fountain codes*. In *2019 27th SIU* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2019.8806401) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16P_YL9_5u1bCfNzGJOZQnYrHXdjoNtZO/view?usp=sharing)  
-[<i class="far fa-file-powerpoint"></i> Slides](https://drive.google.com/file/d/16P_YL9_5u1bCfNzGJOZQnYrHXdjoNtZO/view?usp=sharing)
 
 - **Yildiz, H. U.** (2018, November). *Minimum delay and maximum lifetime trade-off in underwater sensor networks*. In *2018 ELECO* (pp. 80–83). EMO.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![PDF](https://img.shields.io/badge/PDF-Download-red?style=flat-square)](https://www.researchgate.net/publication/335083692) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16gkg1Tg8ATAHJFZv6DyxnuvCxmDf6R1k/view?usp=sharing)  
-[<i class="far fa-file-powerpoint"></i> Slides](https://drive.google.com/file/d/16gkg1Tg8ATAHJFZv6DyxnuvCxmDf6R1k/view?usp=sharing)
 
 - Karakurt, Y., **Yildiz, H. U.**, & Tavli, B. (2018, May). *The impact of mitigation of eavesdropping on wireless sensor networks lifetime*. In *2018 26th SIU* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2018.8404252) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16XhbRpe_H93KSsPHMIKzp2IgwA8Nz4b8/view?usp=sharing)  
-[<i class="far fa-file-powerpoint"></i> Slides](https://drive.google.com/file/d/16XhbRpe_H93KSsPHMIKzp2IgwA8Nz4b8/view?usp=sharing)
 
 - **Yildiz, H. U.** (2018, May). *The impact of data fragmentation on network lifetime in underwater acoustic sensor networks*. In *2018 26th SIU* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2018.8404333) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16RrXq5rQ0TfTveU8T2c0VZO_YbVGIhDx/view?usp=sharing)  
-[<i class="far fa-file-powerpoint"></i> Slides](https://drive.google.com/file/d/16RrXq5rQ0TfTveU8T2c0VZO_YbVGIhDx/view?usp=sharing)
 
 - **Yildiz, H. U.**, Tavli, B., & Kahjogh, B. O. (2017, May). *Assessment of wireless sensor network lifetime reduction due to elimination of critical node sets*. In *2017 25th SIU* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2017.7960228) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/15euPq5RHnGhSFm788StYStlpDJEYPMBA/view?usp=sharing)  
-[<i class="far fa-file-powerpoint"></i> Slides](https://drive.google.com/file/d/15euPq5RHnGhSFm788StYStlpDJEYPMBA/view?usp=sharing)
