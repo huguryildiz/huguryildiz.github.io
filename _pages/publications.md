@@ -9,61 +9,84 @@ author_profile: true
 
 ## Journal Papers
 
-- Karagul, C. T., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025). *Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity*. *IEEE Internet of Things Journal*.  
-![Q1](https://img.shields.io/badge/2025_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link" style="color: inherit;"></i> Paper](https://doi.org/10.1109/JIOT.2025.3603829)
+## Journal Papers
 
-- Asci, M., Akusta Dagdeviren, Z., Khalilpour Akram, V., **Yildiz, H. U.**, & Tavli, B. (2025). *Enhancing drone network resilience*. *Computer Standards & Interfaces*.  
-![Q1](https://img.shields.io/badge/2025_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link" style="color: inherit;"></i> Paper](https://doi.org/10.1016/j.csi.2024.103941)
+- Karagul, C. T., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025). *Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity*. *IEEE Internet of Things Journal, 12*(22), 47817–47826.  
+![Q1](https://img.shields.io/badge/2025_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link"></i> Paper](https://doi.org/10.1109/JIOT.2025.3603829)
 
-- Gultekin, B., et al. (2023). *Exploring the tradeoff between energy dissipation, delay...* *Ad Hoc Networks*.  
-![Q1](https://img.shields.io/badge/2023_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link" style="color: inherit;"></i> Paper](https://doi.org/10.1016/j.adhoc.2023.103223)
+- Asci, M., Akusta Dagdeviren, Z., Khalilpour Akram, V., **Yildiz, H. U.**, Dagdeviren, O., & Tavli, B. (2025). *Enhancing drone network resilience: Investigating strategies for k-connectivity restoration*. *Computer Standards & Interfaces, 92*, 103941.  
+![Q1](https://img.shields.io/badge/2025_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link"></i> Paper](https://doi.org/10.1016/j.csi.2024.103941)
 
-- **Yildiz, H. U.** (2023). *Joint effects of void region size...* *IEEE Sensors Journal*.  
-![Q1](https://img.shields.io/badge/2023_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link" style="color: inherit;"></i> Paper](https://doi.org/10.1109/JSEN.2023.3264159)
+- Gultekin, B., Nurcan-Atceken, D., Altin-Kayhan, A., **Yildiz, H. U.**, & Tavli, B. (2023). *Exploring the tradeoff between energy dissipation, delay, and the number of backbones for broadcasting in wireless sensor networks through goal programming*. *Ad Hoc Networks, 149*, 103223.  
+![Q1](https://img.shields.io/badge/2023_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link"></i> Paper](https://doi.org/10.1016/j.adhoc.2023.103223)
 
-- Cobanlar, M., et al. (2022). *On the trade-off between network lifetime...* *IEEE Internet of Things Journal*.  
-![Q1](https://img.shields.io/badge/2022_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link" style="color: inherit;"></i> Paper](https://doi.org/10.1109/JIOT.2022.3188558)
+- **Yildiz, H. U.** (2023). *Joint effects of void region size and sink architecture on underwater WSNs lifetime*. *IEEE Sensors Journal, 23*(10), 11046–11056.  
+![Q1](https://img.shields.io/badge/2023_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link"></i> Paper](https://doi.org/10.1109/JSEN.2023.3264159)
 
-- Carsancakli, M. F., et al. (2022). *Reliability of linear WSNs...* *Ad Hoc Networks*.  
-![Q1](https://img.shields.io/badge/2022_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link" style="color: inherit;"></i> Paper](https://doi.org/10.1016/j.adhoc.2022.102839)
+- Cobanlar, M., **Yildiz, H. U.**, Akram, V. K., Dagdeviren, O., & Tavli, B. (2022). *On the trade-off between network lifetime and k-connectivity-based reliability in UWSNs*. *IEEE Internet of Things Journal, 9*(23), 24444–24452.  
+![Q1](https://img.shields.io/badge/2022_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link"></i> Paper](https://doi.org/10.1109/JIOT.2022.3188558)
 
-- Tekin, N., **Yildiz, H. U.**, & Gungor, V. C. (2021). *Node-level error control...* *IEEE Sensors Journal*.  
-![Q1](https://img.shields.io/badge/2021_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link" style="color: inherit;"></i> Paper](https://doi.org/10.1109/JSEN.2021.3073889)
+- Carsancakli, M. F., Al Imran, M. A., **Yildiz, H. U.**, Kara, A., & Tavli, B. (2022). *Reliability of linear WSNs: A complementary overview and analysis of impact of cascaded failures on network lifetime*. *Ad Hoc Networks, 131*, 102839.  
+![Q1](https://img.shields.io/badge/2022_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link"></i> Paper](https://doi.org/10.1016/j.adhoc.2022.102839)
 
-- **Yildiz, H. U.**, et al. (2019). *Maximization of UWSN lifetime via fountain codes*. *IEEE Trans. Ind. Informatics*.  
-![Q1](https://img.shields.io/badge/2019_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link" style="color: inherit;"></i> Paper](https://doi.org/10.1109/TII.2019.2892866)
+- Tekin, N., **Yildiz, H. U.**, & Gungor, V. C. (2021). *Node-level error control strategies for prolonging the lifetime of wireless sensor networks*. *IEEE Sensors Journal, 21*(13), 15386–15397.  
+![Q1](https://img.shields.io/badge/2021_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link"></i> Paper](https://doi.org/10.1109/JSEN.2021.3073889)
 
-- Akbas, A., et al. (2019). *Neural network–based parameter prediction...* *Wireless Networks*.  
-![Q2](https://img.shields.io/badge/2019_Rank-Q2-silver?style=flat-square) [<i class="fas fa-link" style="color: inherit;"></i> Paper](https://doi.org/10.1007/s11276-018-1808-y)
+- **Yildiz, H. U.**, Kurt, S., & Tavli, B. (2019). *Comparative analysis of transmission power level and packet size optimization strategies for wireless sensor networks in smart grid applications*. *IEEE Systems Journal, 13*(3), 2264–2274.  
+![Q1](https://img.shields.io/badge/2019_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link"></i> Paper](https://doi.org/10.1109/JSYST.2018.2864941)
 
-- Sayit, M., et al. (2019). *DASH–QoS: Scalable network architecture...* *Computer Networks*.  
-![Q1](https://img.shields.io/badge/2019_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link" style="color: inherit;"></i> Paper](https://doi.org/10.1016/j.comnet.2019.02.015)
+- **Yildiz, H. U.** (2019). *Maximization of underwater sensor networks lifetime via fountain codes*. *IEEE Transactions on Industrial Informatics, 15*(8), 4602–4613.  
+![Q1](https://img.shields.io/badge/2019_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link"></i> Paper](https://doi.org/10.1109/TII.2019.2892866)
 
-- **Yildiz, H. U.** (2019). *Investigation of network lifetime and delay...* *Int. J. of Communication Systems*.  
-![Q2](https://img.shields.io/badge/2019_Rank-Q2-silver?style=flat-square) [<i class="fas fa-link" style="color: inherit;"></i> Paper](https://doi.org/10.1002/dac.3924)
+- Akbas, A., **Yildiz, H. U.**, Ozbayoglu, A. M., & Tavli, B. (2019). *Neural network–based instant parameter prediction for wireless sensor network optimization models*. *Wireless Networks, 25*(6), 3405–3418.  
+![Q2](https://img.shields.io/badge/2019_Rank-Q2-silver?style=flat-square) [<i class="fas fa-link"></i> Paper](https://doi.org/10.1007/s11276-018-1808-y)
 
-- **Yildiz, H. U.** (2018). *Transmission power levels set size...* *Turkish J. of Elec. Eng. & Comp. Sci.* ![Q3](https://img.shields.io/badge/2018_Rank-Q3-orange?style=flat-square) [<i class="fas fa-link" style="color: inherit;"></i> Paper](https://journals.tubitak.gov.tr/elektrik/...)
+- Erdem, H. E., **Yildiz, H. U.**, & Gungor, V. C. (2019). *On the lifetime of compressive sensing–based energy harvesting in underwater sensor networks*. *IEEE Sensors Journal, 19*(12), 4680–4687.  
+![Q1](https://img.shields.io/badge/2019_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link"></i> Paper](https://doi.org/10.1109/JSEN.2019.2900427)
 
-- Kurt, S., et al. (2017). *Packet size optimization in WSNs...* *IEEE Trans. on Industrial Electronics*.  
-![Q1](https://img.shields.io/badge/2017_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link" style="color: inherit;"></i> Paper](https://doi.org/10.1109/TIE.2016.2619319)
+- Sayit, M., Cetinkaya, C., **Yildiz, H. U.**, & Tavli, B. (2019). *DASH–QoS: A scalable network layer service differentiation architecture for DASH over SDN*. *Computer Networks, 154*, 12–25.  
+![Q1](https://img.shields.io/badge/2019_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link"></i> Paper](https://doi.org/10.1016/j.comnet.2019.02.015)
 
-- **Yildiz, H. U.**, et al. (2017). *Incapacitation of multiple critical sensor nodes...* *IEEE Wireless Comm. Letters*.  
-![Q1](https://img.shields.io/badge/2017_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link" style="color: inherit;"></i> Paper](https://doi.org/10.1109/LWC.2017.2679744)
+- **Yildiz, H. U.** (2019). *Investigation of network lifetime and delay trade-off in underwater acoustic sensor networks*. *International Journal of Communication Systems, 32*(7), e3924.  
+![Q2](https://img.shields.io/badge/2019_Rank-Q2-silver?style=flat-square) [<i class="fas fa-link"></i> Paper](https://doi.org/10.1002/dac.3924)
 
-- **Yildiz, H. U.**, et al. (2016). *Maximizing WSN lifetime...* *Ad Hoc Networks*.  
-![Q1](https://img.shields.io/badge/2016_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link" style="color: inherit;"></i> Paper](https://doi.org/10.1016/j.adhoc.2015.08.026)
+- **Yildiz, H. U.**, Gungor, V. C., & Tavli, B. (2019). *Packet size optimization for lifetime maximization in underwater acoustic sensor networks*. *IEEE Transactions on Industrial Informatics, 15*(2), 719–729.  
+![Q1](https://img.shields.io/badge/2019_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link"></i> Paper](https://doi.org/10.1109/TII.2018.2841830)
 
-- **Yildiz, H. U.**, et al. (2015). *Impact of limiting hop count...* *IEEE Communications Letters*.  
-![Q1](https://img.shields.io/badge/2015_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link" style="color: inherit;"></i> Paper](https://doi.org/10.1109/LCOMM.2015.2398411)
+- **Yildiz, H. U.** (2018). *The impact of transmission power levels set size on lifetime of wireless sensor networks in smart grids*. *Turkish Journal of Electrical Engineering & Computer Sciences, 26*(6), 3057–3071.  
+![Q3](https://img.shields.io/badge/2018_Rank-Q3-orange?style=flat-square) [<i class="fas fa-link"></i> Paper](https://journals.tubitak.gov.tr/elektrik/issues/elk-18-26-6/elk-26-6-23-1803-189.pdf)
 
-- Batmaz, A. U., **Yildiz, H. U.**, & Tavli, B. (2014). *Role of unidirectionality...* *IEEE Sensors Journal*.  
-![Q1](https://img.shields.io/badge/2014_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link" style="color: inherit;"></i> Paper](https://doi.org/10.1109/JSEN.2014.2359156)
+- Yigit, M., **Yildiz, H. U.**, Kurt, S., Tavli, B., & Gungor, V. C. (2018). *A survey on packet size optimization for terrestrial, underwater, underground, and body area sensor networks*. *International Journal of Communication Systems, 31*(11), e3572.  
+![Q2](https://img.shields.io/badge/2018_Rank-Q2-silver?style=flat-square) [<i class="fas fa-link"></i> Paper](https://doi.org/10.1002/dac.3572)
+
+- **Yildiz, H. U.**, Ciftler, B. S., Tavli, B., Bicakci, K., & Incebacak, D. (2018). *The impact of incomplete secure connectivity on the lifetime of wireless sensor networks*. *IEEE Systems Journal, 12*(1), 1042–1046.  
+![Q1](https://img.shields.io/badge/2018_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link"></i> Paper](https://doi.org/10.1109/JSYST.2016.2527744)
+
+- **Yildiz, H. U.**, Tavli, B., Kahjogh, B., & Dogdu, E. (2017). *The impact of incapacitation of multiple critical sensor nodes on wireless sensor network lifetime*. *IEEE Wireless Communications Letters, 6*(3), 306–309.  
+![Q1](https://img.shields.io/badge/2017_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link"></i> Paper](https://doi.org/10.1109/LWC.2017.2679744)
+
+- Kurt, S., **Yildiz, H. U.**, Yigit, M., Tavli, B., & Gungor, V. C. (2017). *Packet size optimization in wireless sensor networks for smart grid applications*. *IEEE Transactions on Industrial Electronics, 64*(3), 2392–2401.  
+![Q1](https://img.shields.io/badge/2017_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link"></i> Paper](https://doi.org/10.1109/TIE.2016.2619319)
+
+- Akbas, A., **Yildiz, H. U.**, Tavli, B., & Uludag, S. (2016). *Joint optimization of transmission power level and packet size for WSN lifetime maximization*. *IEEE Sensors Journal, 16*(12), 5084–5094.  
+![Q1](https://img.shields.io/badge/2016_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link"></i> Paper](https://doi.org/10.1109/JSEN.2016.2548661)
+
+- **Yildiz, H. U.**, Bicakci, K., Tavli, B., Gultekin, H., & Incebacak, D. (2016). *Maximizing wireless sensor network lifetime by communication/computation energy optimization: Node level versus network level strategies*. *Ad Hoc Networks, 37*(2), 301–323.  
+![Q1](https://img.shields.io/badge/2016_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link"></i> Paper](https://doi.org/10.1016/j.adhoc.2015.08.026)
+
+- **Yildiz, H. U.**, Tavli, B., & Yanikomeroglu, H. (2016). *Transmission power control for link–level handshaking in wireless sensor networks*. *IEEE Sensors Journal, 16*(2), 561–576.  
+![Q1](https://img.shields.io/badge/2016_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link"></i> Paper](https://doi.org/10.1109/JSEN.2015.2486960)
+
+- **Yildiz, H. U.**, Temiz, M., & Tavli, B. (2015). *Impact of limiting hop count on the lifetime of wireless sensor networks*. *IEEE Communications Letters, 19*(4), 569–572.  
+![Q1](https://img.shields.io/badge/2015_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link"></i> Paper](https://doi.org/10.1109/LCOMM.2015.2398411)
+
+- Batmaz, A. U., **Yildiz, H. U.**, & Tavli, B. (2014). *Role of unidirectionality and reverse path length on wireless sensor network lifetime*. *IEEE Sensors Journal, 14*(11), 3971–3982.  
+![Q1](https://img.shields.io/badge/2014_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link"></i> Paper](https://doi.org/10.1109/JSEN.2014.2359156)
 
 ## Editorials
 
 - Haytaoglu, E., Arslan, S. S., Dagdeviren, O., **Yildiz, H. U.**, & Ozturk, Y. (2025). *Editorial brief for special issue: Mass connectivity and/or communication paradigms for the internet of things*. *Internet of Things, 32*, 101625.  
-![Q1](https://img.shields.io/badge/SJR_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link" style="color: inherit;"></i> Link](https://doi.org/10.1016/j.iot.2025.101625)
-
+![Q1](https://img.shields.io/badge/2025_Rank-Q1-gold?style=flat-square) [<i class="fas fa-link"></i> Link](https://doi.org/10.1016/j.iot.2025.101625)
 ## Conference Papers
 
 - Karagul, C. T., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025, November). *Non-uniform k-connectivity for energy-efficient and reliable underwater wireless sensor networks*. In *2025 33rd Telecommunications Forum (TELFOR)* (pp. 1–4). IEEE.
