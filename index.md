@@ -9,7 +9,7 @@ permalink: /
  
 Huseyin Ugur Yildiz received the B.Sc. degree in Electrical and Electronics Engineering from [Bilkent University](https://w3.bilkent.edu.tr/bilkent/), Ankara, Turkey, in 2009, and the M.Sc. and Ph.D. degrees from [TOBB University of Economics and Technology](https://www.etu.edu.tr/en), Ankara, in 2013 and 2016, respectively.
 
-Between 2010 and 2015, he worked at [Turk Telekom](https://www.turktelekom.com.tr/), where he contributed to the design and operation of the Safer Internet Service, a nationwide platform used by more than five million subscribers. From 2015 to 2016, he was with [Turkish Aerospace Industries (TAI)](https://www.tusas.com/), working on communication and network architectures for ANKA unmanned aerial vehicle (UAV) systems. He joined the Department of Electrical and Electronics Engineering at [TED University](https://www.tedu.edu.tr/) in 2016, where he has been serving as an Associate Professor since 2021 and held the position of Department Chair from 2021 to 2024.
+Between 2010 and 2015, he worked at [Turk Telekom](https://www.turktelekom.com.tr/), where he contributed to the design and operation of the [Safer Internet Service](https://www.guvenlinet.org.tr/), a nationwide platform used by more than five million subscribers. From 2015 to 2016, he was with [Turkish Aerospace Industries (TAI)](https://www.tusas.com/), working on communication and network architectures for [ANKA](https://www.tusas.com/en/products/uav/operative-strategic-uav-systems/anka)unmanned aerial vehicle systems. He joined the Department of Electrical and Electronics Engineering at [TED University](https://www.tedu.edu.tr/) in 2016, where he has been serving as an Associate Professor since 2021 and held the position of Department Chair from 2021 to 2024.
 
 His research focuses on routing, resource allocation, and energy efficiency challenges in wireless ad hoc networks and underwater acoustic sensor networks, primarily through the development of optimization-based models. Recently, he has been advancing this framework by integrating mathematical optimization with reinforcement learning techniques. He is particularly interested in applying these hybrid optimization–learning methodologies to emerging paradigms such as quantum network routing, with an emphasis on hybrid classical–quantum architectures and the impact of physical constraints, including entanglement lifetime and network reliability, on routing and control decisions.
 
@@ -41,7 +41,6 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
          style="max-width:700px; width:100%; height:auto;">
   </a>
 </p>
-<p align="center"><small>Click to enlarge.</small></p>
 
 ---
 
