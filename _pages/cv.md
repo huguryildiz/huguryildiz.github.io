@@ -9,23 +9,23 @@ author_profile: true
 
 ## Professional Experience
 
-**Department Chair**
+- **Department Chair**
 Department of Electrical and Electronics Engineering, TED University, Ankara, Turkey
 Jul 2021 – Jul 2024
 
-**Associate Professor**
+- **Associate Professor**
 Department of Electrical and Electronics Engineering, TED University, Ankara, Turkey
 Mar 2021 – Present
 
-**Assistant Professor**
+- **Assistant Professor**
 Department of Electrical and Electronics Engineering, TED University, Ankara, Turkey
 Sep 2016 – Mar 2021
 
-**Avionics Design Engineer**
+- **Avionics Design Engineer**
 Turkish Aerospace Industries (TAI), Ankara, Turkey
 Dec 2015 – Aug 2016
 
-**Senior Network Engineer**
+- **Senior Network Engineer**
 Turk Telekom, Ankara, Turkey
 Dec 2010 – Nov 2015
 
@@ -33,15 +33,15 @@ Dec 2010 – Nov 2015
 
 ## Education
 
-**Ph.D. in Electrical and Electronics Engineering**
+- **Ph.D. in Electrical and Electronics Engineering**
 TOBB University of Economics and Technology, Ankara, Turkey
 Jan 2014 – Apr 2016
 
-**M.Sc. in Electrical and Electronics Engineering**
+- **M.Sc. in Electrical and Electronics Engineering**
 TOBB University of Economics and Technology, Ankara, Turkey
 Sep 2011 – Aug 2013
 
-**B.Sc. in Electrical and Electronics Engineering**
+- **B.Sc. in Electrical and Electronics Engineering**
 Bilkent University, Ankara, Turkey
 Aug 2005 – Aug 2009
 
@@ -49,13 +49,13 @@ Aug 2005 – Aug 2009
 
 ## Theses
 
-**Ph.D. Dissertation**
+- **Ph.D. Dissertation**
 *Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks*
 Advisor: Prof. Bulent Tavli <br>
 [![PDF](https://img.shields.io/badge/Resource-PDF-red?style=flat-square)](/files/Yildiz_HuseyinUgur_PhD_Dissertation.pdf)
 [![Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=Br_XTptK8CZ70f0JGX9xEjZCixd1XEodCqaT6dDVvnmfvltgkE09YEFFWmk5LBx2)
 
-**M.Sc. Thesis**
+- **M.Sc. Thesis**
 *Communication/Computation Trade-offs in Wireless Sensor Networks: Comparing Network-Level and Node-Level Strategies*
 Advisor: Prof. Bulent Tavli
 Co-advisor: Prof. Kemal Bicakci <br>
