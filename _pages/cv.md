@@ -201,7 +201,7 @@ Co-advisor: Prof. Kemal Bicakci <br>
 - **C. Aydin** (2021). *Number of Depleted Nodes Based Network Lifetime Maximization in Underwater Wireless Sensor Networks*. TOBB University of Economics and Technology. ![MSc Co-advisor](https://img.shields.io/badge/MSc-Co--advisor-6f42c1?style=flat-square)   
   [![YÖK Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)]()
 
-- !**A. Ozmen** (2021). *Modeling and Exploring Eavesdropping Risk Minimization and Network Lifetime Maximization Trade-offs in Underwater Acoustic Sensor Networks Using a Mixed Integer Programming Approach*. TOBB University of Economics and Technology. [MSc Co-advisor](https://img.shields.io/badge/MSc-Co--advisor-6f42c1?style=flat-square)   
+- **A. Ozmen** (2021). *Modeling and Exploring Eavesdropping Risk Minimization and Network Lifetime Maximization Trade-offs in Underwater Acoustic Sensor Networks Using a Mixed Integer Programming Approach*. TOBB University of Economics and Technology. ![MSc Co-advisor](https://img.shields.io/badge/MSc-Co--advisor-6f42c1?style=flat-square)   
   [![YÖK Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=v7BkNnnepTnbhn8rNR77LXvYfssCwLtFHwO6QyeDzoiU-4og5S68KqSwbXXeeT31)
 
 - **Y. Karakurt** (2018). *Eavesdropping Potential in Wireless Sensor Networks and Modeling and Analysis of Network Lifetime Recovery*. TOBB University of Economics and Technology. ![MSc Co-advisor](https://img.shields.io/badge/MSc-Co--advisor-6f42c1?style=flat-square)  
