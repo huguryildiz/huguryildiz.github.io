@@ -26,17 +26,17 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
   Integration of mathematical optimization frameworks with machine learning and reinforcement learning techniques to enable adaptive, data-driven, and scalable control of complex networked systems. Recent work explores hybrid optimization–learning methodologies for parameter prediction, dynamic decision-making, and emerging paradigms such as quantum network routing and hybrid classical–quantum architectures.
 
 ### Technical Toolbox
-[![My Skills](https://skillicons.dev/icons?i=py,matlab,latex,git,github)](https://skillicons.dev)
+![My Skills](https://skillicons.dev/icons?i=py,matlab,latex,git,github&perline=5)
 
 
 <p align="center">
   <img src="/images/uwsn.png" alt="" width="900">
 </p>
 
-### Visitors
+## 🌍 Visitors
 
-<p align="center">
-  <a href="https://clustrmaps.com/site/1c2x3" title="Visit tracker">
-    <img src="//www.clustrmaps.com/map_v2.png?d=Sizin_Ozel_Kodunuz&cl=ffffff" alt="Visitor Map" width="400">
-  </a>
-</p>
+<div align="center" style="max-width:380px; margin:auto;">
+  <script type="text/javascript" id="clstr_globe"
+    src="//clustrmaps.com/globe.js?d=Ff5N5seCdUggOy-cQ08tNCYmISlt6bFGtSiHyvOpvNA">
+  </script>
+</div>
