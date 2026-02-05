@@ -1,7 +1,7 @@
 ---
 layout: single
 title: ""
-permalink: /services/
+permalink: /service/
 author_profile: true
 ---
 
