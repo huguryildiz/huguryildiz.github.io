@@ -13,11 +13,13 @@ repository: "huguryildiz/huguryildiz.github.io"
 header:
   overlay: false
 
+enable_darkmode: false
+
 # =========================
 # Theme (Minimal Mistakes / AcademicPages)
 # =========================
 remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "auto"
+minimal_mistakes_skin: "air"
 
 # =========================
 # Plugins (GitHub Pages uyumlu)
