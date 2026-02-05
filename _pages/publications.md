@@ -9,13 +9,13 @@ author_profile: true
 
 <p align="left">
   <a href="https://scholar.google.com.tr/citations?user=nQwHS1gAAAAJ">
-    <img src="https://img.shields.io/badge/Citations-1175-blue?style=flat-square&logo=google-scholar" alt="Citations">
+    <img src="https://img.shields.io/badge/Citations-1043-blue?style=flat-square&logo=google-scholar" alt="Citations">
   </a>
   <a href="https://scholar.google.com.tr/citations?user=nQwHS1gAAAAJ">
-    <img src="https://img.shields.io/badge/h--index-18-orange?style=flat-square" alt="h-index">
+    <img src="https://img.shields.io/badge/h--index-15-orange?style=flat-square" alt="h-index">
   </a>
   <a href="https://scholar.google.com.tr/citations?user=nQwHS1gAAAAJ">
-    <img src="https://img.shields.io/badge/i10--index-28-success?style=flat-square" alt="i10-index">
+    <img src="https://img.shields.io/badge/i10--index-23-success?style=flat-square" alt="i10-index">
   </a>
 </p>
 
@@ -149,7 +149,7 @@ author_profile: true
 
 ---
 
-## Conference Papers (National - in Turkish)
+## Conference Papers (National — in Turkish)
 
 - **Yildiz, H. U.** (2019, April). *Improvement of underwater acoustic sensor networks performance with fountain codes*. In *2019 27th SIU* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2019.8806401) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16P_YL9_5u1bCfNzGJOZQnYrHXdjoNtZO/view?usp=sharing)  
