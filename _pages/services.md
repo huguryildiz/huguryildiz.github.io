@@ -1,13 +1,12 @@
 ---
 layout: single
-title: "Services | "
-seo_title: "Services"
+title: ""
 permalink: /services/
 author_profile: true
 ---
 
 
-### Seminars and Invited Talks
+## Seminars and Invited Talks
 
 - **Prolonging the Lifetime of Underwater Sensor Networks Under Sinkhole Attacks**, <br>
   Georgia Institute of Technology, Atlanta, GA, USA, Oct 24, 2019. <br>
@@ -56,7 +55,7 @@ author_profile: true
 
 ---
 
-### Session Chairing
+## Session Chairing
 
 - *PHY-II: Physical Layer Communications-II*, IEEE BlackSeaCom 2021
 - *Underwater Networking*, ACM WUWNet 2019
@@ -66,7 +65,7 @@ author_profile: true
 
 ---
 
-### Technical Program Committee Memberships
+## Technical Program Committee Memberships
 
 - 2018 IEEE 87th Vehicular Technology Conference (VTC2018-Spring),
 - 2nd IEEE Middle East and North Africa Communications Conference (MENACOMM’19),
@@ -81,7 +80,7 @@ author_profile: true
 
 ---
 
-### Reviewer (Selected Journals and Conferences)
+## Reviewer
 
 - Ad Hoc Networks
 - Computer Networks

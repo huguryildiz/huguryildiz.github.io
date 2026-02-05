@@ -2,14 +2,17 @@ main:
   - title: "Home"
     url: /
 
-  - title: "CV"
-    url: /cv/
+  - title: "Experience"
+    url: /experience/
 
   - title: "Publications"
     url: /publications/
 
   - title: "Research"
     url: /research/
+
+  - title: "Students"
+    url: /students/
 
   - title: "Services"
     url: /services/
