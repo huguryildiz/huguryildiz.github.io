@@ -25,6 +25,14 @@ h1, h2, h3, h4, h5, h6,
   letter-spacing: -0.02em;
 }
 
+.btn--info {
+  background-color: #7a1f2b;
+  border-color: #7a1f2b;
+}
+.btn--info:hover {
+  background-color: #5c1620;
+}
+
 /* Navigation bar */
 .masthead,
 .masthead__menu-item {
