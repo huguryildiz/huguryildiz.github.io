@@ -5,7 +5,7 @@ author_profile: true
 permalink: /
 ---
 
-### About
+## About
  
 Huseyin Ugur Yildiz received the B.Sc. degree in Electrical and Electronics Engineering from [Bilkent University](https://w3.bilkent.edu.tr/bilkent/), Ankara, Turkey, in 2009, and the M.Sc. and Ph.D. degrees from [TOBB University of Economics and Technology](https://www.etu.edu.tr/en), Ankara, in 2013 and 2016, respectively.
 
@@ -17,7 +17,7 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
 
 ---
 
-### Research Interests
+## Research Interests
 
 - **Operations Research and Mathematical Optimization for Networked Systems:**  
   Development of linear, integer, and mixed-integer programming (MILP) models, including network flow–based formulations, for complex optimization problems arising in communication networks. Primary focus areas include network lifetime maximization, energy efficiency, resource allocation, energy–delay–reliability trade-offs, and resilience under physical, topological, and security constraints.
@@ -30,7 +30,7 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
 
 ---
 
-### Technical Toolbox
+## Technical Toolbox
 ![My Skills](https://skillicons.dev/icons?i=py,matlab,latex,git,github&perline=5)
 
 ---
