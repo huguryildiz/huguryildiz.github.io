@@ -20,10 +20,10 @@ author_profile: true
 </p>
 
 **Quick Links:**  
-[Journal Papers](#journal-papers){:.btn .btn--light-outline}
-[Editorials](#editorials){:.btn .btn--light-outline}
-[Conf. Papers (Int.)](#conference-papers-international){:.btn .btn--light-outline}
-[Conf. Papers (Nat.)](#conference-papers-national---in-turkish){:.btn .btn--light-outline}
+[Journal Papers](#journal-papers){:.btn .btn--primary .btn--small}
+[Editorials](#editorials){:.btn .btn--primary .btn--small}
+[Conf. Papers (Int.)](#conference-papers-international){:.btn .btn--primary .btn--small}
+[Conf. Papers (Nat.)](#conference-papers-national---in-turkish){:.btn .btn--primary .btn--small}
 ---
 
 ## Journal Papers
