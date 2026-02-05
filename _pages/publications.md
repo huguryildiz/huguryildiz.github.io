@@ -1,11 +1,11 @@
 ---
 layout: single
-title: "Publications"
+title: ""
 permalink: /publications/
 author_profile: true
 ---
 
-### Metrics
+## Metrics
 
 <p align="left">
   <a href="https://scholar.google.com.tr/citations?user=nQwHS1gAAAAJ">
