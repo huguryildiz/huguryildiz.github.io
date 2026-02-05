@@ -80,12 +80,19 @@ author:
   linkedin         : "huguryildiz"
   dblp             : "https://dblp.org/pid/160/4924.html"
 
-
   links:
     - label: "DBLP"
       icon: "ai ai-dblp"
       url: "https://dblp.org/pid/160/4924.html"
-      
+
+    - label: "Web of Science"
+      icon: "ai ai-wos"
+      url: "https://www.webofscience.com/wos/author/record/S-6587-2016"
+
+    - label: "Scopus"
+      icon: "ai ai-scopus"
+      url: "https://www.scopus.com/authid/detail.uri?authorId=56242674200"  
+
 # =========================
 # Build / Performance
 # =========================
