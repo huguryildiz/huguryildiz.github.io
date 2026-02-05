@@ -62,7 +62,10 @@ defaults:
 
 stylesheets:
   - /assets/css/custom.css
-  
+
+search: true
+search_full_content: true  
+
 # =========================
 # Author Profile
 # =========================
