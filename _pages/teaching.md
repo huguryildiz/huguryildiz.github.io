@@ -35,3 +35,19 @@ I integrate active learning strategies to enhance student engagement across all 
 ## Useful Teaching Resources
 
 - [TEDU LMS](https://lmstedu.edu.tr/) - Course materials, textbooks, notes, videos
+
+<table>
+  <tr>
+    <td width="30%" valign="top">
+      <img src="/images/uwsn.png" alt="MotionFix" style="width:100%; border-radius:4px; border: 1px solid #ddd;">
+    </td>
+    <td width="70%" valign="top" style="padding-left: 15px;">
+      <strong>test</strong><br>
+      test<br>
+      <<br><br>
+      <a href="#"><img src="https://img.shields.io/badge/pdf-98c1a3?style=flat-square"></a>
+      <a href="#"><img src="https://img.shields.io/badge/project_page-98c1a3?style=flat-square"></a>
+      <a href="#"><img src="https://img.shields.io/badge/code-98c1a3?style=flat-square"></a>
+    </td>
+  </tr>
+</table>
