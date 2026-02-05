@@ -10,23 +10,26 @@ author_profile: true
 ## Professional Experience
 
 - **Department Chair** <br>
-Department of Electrical and Electronics Engineering, TED University, Ankara, Turkey
+Department of Electrical and Electronics Engineering <br>
+TED University, Ankara, Turkey <br>
 Jul 2021 – Jul 2024
 
 - **Associate Professor** <br>
-Department of Electrical and Electronics Engineering, TED University, Ankara, Turkey
+Department of Electrical and Electronics Engineering <br>
+TED University, Ankara, Turkey <br>
 Mar 2021 – Present
 
 - **Assistant Professor** <br>
-Department of Electrical and Electronics Engineering, TED University, Ankara, Turkey
+Department of Electrical and Electronics Engineering <br>
+TED University, Ankara, Turkey <br>
 Sep 2016 – Mar 2021
 
 - **Avionics Design Engineer** <br>
-Turkish Aerospace Industries (TAI), Ankara, Turkey
+Turkish Aerospace Industries (TAI), Ankara, Turkey <br>
 Dec 2015 – Aug 2016
 
 - **Senior Network Engineer** <br>
-Turk Telekom, Ankara, Turkey
+Turk Telekom, Ankara, Turkey <br>
 Dec 2010 – Nov 2015
 
 ---
@@ -34,15 +37,15 @@ Dec 2010 – Nov 2015
 ## Education
 
 - **Ph.D. in Electrical and Electronics Engineering** <br>
-TOBB University of Economics and Technology, Ankara, Turkey
+TOBB University of Economics and Technology, Ankara, Turkey <br>
 Jan 2014 – Apr 2016
 
 - **M.Sc. in Electrical and Electronics Engineering** <br>
-TOBB University of Economics and Technology, Ankara, Turkey
+TOBB University of Economics and Technology, Ankara, Turkey <br>
 Sep 2011 – Aug 2013
 
 - **B.Sc. in Electrical and Electronics Engineering** <br>
-Bilkent University, Ankara, Turkey
+Bilkent University, Ankara, Turkey <br>
 Aug 2005 – Aug 2009
 
 ---
@@ -68,50 +71,50 @@ Co-advisor: Prof. Kemal Bicakci <br>
 
 ### Seminars and Invited Talks
 
-- **Prolonging the Lifetime of Underwater Sensor Networks Under Sinkhole Attacks**,
-  Georgia Institute of Technology, Atlanta, GA, USA, Oct 24, 2019.
-  Host: Prof. Ian F. Akyildiz <br>
+- **Prolonging the Lifetime of Underwater Sensor Networks Under Sinkhole Attacks**, <br>
+  Georgia Institute of Technology, Atlanta, GA, USA, Oct 24, 2019. <br>
+  Host: Prof. Ian F. Akyildiz
   [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/14jmfAauo_CHZHZSjCTbuMjjVQVsGz1sm/view)
 
-- **Maximization of Underwater Sensor Networks Lifetime via Fountain Codes**,
-  SIU 2019 – Special Session on Next Generation Communication Techniques,
-  Sivas, Turkey, Apr 25, 2019 <br>
+- **Maximization of Underwater Sensor Networks Lifetime via Fountain Codes**, <br>
+  SIU 2019 – Special Session on Next Generation Communication Techniques, <br>
+  Sivas, Turkey, Apr 25, 2019 <br> 
   [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/14bzsN_kmMONXaJet98dZsrgdQwOrFmCU/view?usp=sharing)
 
-- **Maximization of Underwater Sensor Networks Lifetime via Fountain Codes**,
-  ASELSAN Information and Communication Technologies Workshop,
+- **Maximization of Underwater Sensor Networks Lifetime via Fountain Codes**, <br>
+  ASELSAN Information and Communication Technologies Workshop, <br>
   Ankara, Turkey, Feb 19, 2019 <br>
   [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/14a3OSEhRvUTd9m0eJsiT_AUh9vqzGqZW/view?usp=sharing)
 
-- **Optimal Transmission Power Level Sets for Lifetime Maximization in Wireless Sensor Networks**,
-  ASELSAN Information and Communication Technologies Workshop,
+- **Optimal Transmission Power Level Sets for Lifetime Maximization in Wireless Sensor Networks**, <br>
+  ASELSAN Information and Communication Technologies Workshop, <br> 
   Ankara, Turkey, Nov 14, 2016 <br>
   [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/16Cm8oSdQejoQQtKTkOmlRXNUYzaQfKZK/view?usp=sharing)
 
-- **The Impact of Random Power Assignment in Handshaking on Wireless Sensor Network Lifetime**,
-  University of Texas at Dallas, Dallas, TX, USA, Dec 3, 2014.
-  Host: Prof. Murat Torlak <br>
+- **The Impact of Random Power Assignment in Handshaking on Wireless Sensor Network Lifetime**, <br>
+  University of Texas at Dallas, Dallas, TX, USA, Dec 3, 2014. <br>
+  Host: Prof. Murat Torlak
   [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/14injrfacnqRUnJb9IiNEHQdvhcTARxuy/view?usp=sharing)
 
-- **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks**,
-  University of Rochester, Rochester, NY, USA, Feb 11, 2014.
-  Host: Prof. Wendi Heinzelman <br>
+- **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks**, <br>
+  University of Rochester, Rochester, NY, USA, Feb 11, 2014. <br>
+  Host: Prof. Wendi Heinzelman
 
-- **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks**,
-  University at Buffalo, Buffalo, NY, USA, Feb 7, 2014.
-  Host: Prof. Tommaso Melodia <br>
+- **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks**, <br>
+  University at Buffalo, Buffalo, NY, USA, Feb 7, 2014. <br>
+  Host: Prof. Tommaso Melodia
 
-- **Wireless Sensor Networks, Network Optimization, and Mathematical Programming**,
-  Carleton University, Ottawa, ON, Canada, Feb 5, 2014.
-  Host: Prof. Halim Yanikomeroglu <br>
+- **Wireless Sensor Networks, Network Optimization, and Mathematical Programming**, <br>
+  Carleton University, Ottawa, ON, Canada, Feb 5, 2014. <br>
+  Host: Prof. Halim Yanikomeroglu
 
-- **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks**,
-  University of Southern California, Los Angeles, CA, USA, Jan 23, 2014.
-  Host: Prof. Bhaskar Krishnamachari <br>
+- **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks**, <br>
+  University of Southern California, Los Angeles, CA, USA, Jan 23, 2014. <br>
+  Host: Prof. Bhaskar Krishnamachari
 
-- **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks**,
-  University of California, Irvine, CA, USA, Jan 22, 2014.
-  Host: Prof. Ender Ayanoglu <br>
+- **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks**, <br>
+  University of California, Irvine, CA, USA, Jan 22, 2014. <br>
+  Host: Prof. Ender Ayanoglu
 
 ---
 
