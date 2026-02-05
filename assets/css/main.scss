@@ -55,6 +55,14 @@
 /* ==========================
    Global Typography Override
    ========================== */
+   
+/* Body text (serif) */
+body {
+  font-family: "Lora", Georgia, serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #1a1a1a;
+}
 
 /* Navigation */
 .masthead,
