@@ -36,15 +36,16 @@ I integrate active learning strategies to enhance student engagement across all 
 
 - [TEDU LMS](https://lmstedu.edu.tr/) - Course materials, textbooks, notes, videos
 
-<table>
+<table style="border:none; border-collapse:collapse; background:transparent; margin-bottom:20px;">
   <tr>
-    <td width="30%" valign="top">
-      <img src="/images/uwsn.png" alt="MotionFix" style="width:100%; border-radius:4px; border: 1px solid #ddd;">
+    <td width="30%" valign="top" style="border:none;">
+      <img src="/images/test.jpg"
+           style="width:100%; border-radius:6px; border:none;">
     </td>
-    <td width="70%" valign="top" style="padding-left: 15px;">
-      <strong>test</strong><br>
-      test<br>
-      <<br><br>
+    <td width="70%" valign="top" style="padding-left:15px; border:none; line-height:1.45;">
+      <strong>Title</strong><br>
+      Authors<br>
+      <em>Venue</em><br><br>
       <a href="#"><img src="https://img.shields.io/badge/pdf-98c1a3?style=flat-square"></a>
       <a href="#"><img src="https://img.shields.io/badge/project_page-98c1a3?style=flat-square"></a>
       <a href="#"><img src="https://img.shields.io/badge/code-98c1a3?style=flat-square"></a>
