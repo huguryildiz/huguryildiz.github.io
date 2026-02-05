@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Teaching"
+title: ""
 permalink: /teaching/
 author_profile: true
 ---
