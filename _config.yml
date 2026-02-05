@@ -19,7 +19,7 @@ enable_darkmode: false
 # Theme (Minimal Mistakes / AcademicPages)
 # =========================
 remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "air"
+minimal_mistakes_skin: "aqua"
 
 # =========================
 # Plugins (GitHub Pages uyumlu)
