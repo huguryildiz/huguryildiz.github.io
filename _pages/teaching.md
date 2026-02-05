@@ -10,6 +10,7 @@ author_profile: true
 - **EE 304 – Probability and Random Processes** (Spring 2017 – Present)
 - **EE 311 – Signals and Systems** (Fall 2016 – Present)
 - **EE 413 – Communication Systems II** (Fall 2016 – Present)
+- **EE 512 – Optimization for Communication Networks** (Spring 2026)
 
 ## Past Courses
 
@@ -27,12 +28,10 @@ I integrate active learning strategies to enhance student engagement across all 
 
 ## Student Supervision
 
-- **Graduate Theses Supervised:** 6
+- **Graduate Theses Supervised:** 7
 - **Undergraduate Senior Projects:** 25+
 - **Recommendation Letters Written:** 50+
 
 ## Useful Teaching Resources
 
-- [TEDU Moodle](https://moodle.tedu.edu.tr/) - Course materials, textbooks, notes, videos
-- [Dr. Adam Panagos YouTube Channel](https://www.youtube.com/@adampanagos) - Signals & Systems, Communication Systems
-- [GaussianWaves](https://www.gaussianwaves.com/) - Signal processing blog
+- [TEDU LMS](https://lmstedu.edu.tr/) - Course materials, textbooks, notes, videos

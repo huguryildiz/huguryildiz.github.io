@@ -10,6 +10,9 @@ baseurl: ""
 
 repository: "huguryildiz/huguryildiz.github.io"
 
+header:
+  overlay: false
+
 # =========================
 # Theme (Minimal Mistakes / AcademicPages)
 # =========================
@@ -63,9 +66,6 @@ defaults:
 stylesheets:
   - /assets/css/custom.css
 
-search: true
-search_full_content: true  
-
 # =========================
 # Author Profile
 # =========================
@@ -104,6 +104,10 @@ author:
 # =========================
 future: false
 timezone: Europe/Istanbul
+
+search: true
+search_full_content: true
+search_provider: lunr
 
 # =========================
 # Excludes
