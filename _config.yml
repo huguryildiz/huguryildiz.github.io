@@ -79,6 +79,13 @@ author:
   github           : "huguryildiz"
   linkedin         : "huguryildiz"
   dblp             : "https://dblp.org/pid/160/4924.html"
+
+
+  links:
+    - label: "DBLP"
+      icon: "ai ai-dblp"
+      url: "https://dblp.org/pid/160/4924.html"
+      
 # =========================
 # Build / Performance
 # =========================
