@@ -1,7 +1,7 @@
 ---
 layout: single
 title: ""
-seo_title: "Huseyin Ugur Yildiz | CV"
+seo_title: "CV |"
 permalink: /cv/
 author_profile: true
 ---
