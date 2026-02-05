@@ -53,33 +53,27 @@
 }
 
 /* ==========================
-   Global Typography Override
+   Global Typography: ALL LORA
    ========================== */
 
-/* Body text (serif) */
+/* Base */
 body {
-  font-family: "Lora", Georgia, serif;
+  font-family: "Lora", Georgia, serif !important;
   font-size: 17px;
   line-height: 1.7;
   color: #1a1a1a;
 }
 
-/* Headings (clean modern) */
+/* Headings */
 h1, h2, h3, h4, h5, h6,
 .page__title,
 .archive__item-title {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-}
-
-/* Navigation */
-.masthead,
-.masthead__menu-item {
   font-family: "Lora", Georgia, serif !important;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
-/* Navbar */
+/* Navbar / Header */
 .masthead,
 .masthead__inner-wrap,
 .masthead__menu,
@@ -91,7 +85,7 @@ h1, h2, h3, h4, h5, h6,
   font-weight: 500;
 }
 
-/* Sidebar */
+/* Sidebar / Profile */
 .sidebar,
 .author__content,
 .author__bio,
@@ -99,6 +93,11 @@ h1, h2, h3, h4, h5, h6,
 .author__urls-wrapper,
 .author__urls li,
 .author__urls a {
+  font-family: "Lora", Georgia, serif !important;
+}
+
+/* Buttons (optional – academic look) */
+.btn {
   font-family: "Lora", Georgia, serif !important;
 }
 
@@ -147,4 +146,11 @@ h1, h2, h3, h4, h5, h6,
 .layout--dark .author__urls a {
   font-family: "Inter", sans-serif !important;
   color: rgba(255,255,255,0.88) !important;
+}
+
+/* Disable theme toggle (gear icon) completely */
+.theme-toggle,
+.greedy-nav__toggle,
+button.theme-toggle {
+  display: none !important;
 }
