@@ -101,3 +101,34 @@ h1, h2, h3, h4, h5, h6,
 .author__urls a {
   font-family: "Lora", Georgia, serif !important;
 }
+
+/* =========================
+   Dark mode typography fix
+   ========================= */
+
+/* Minimal Mistakes dark skin: html has .layout--dark on body */
+.layout--dark body,
+.layout--dark .page__content,
+.layout--dark .page__content p,
+.layout--dark .page__content li {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Dark mode text contrast */
+.layout--dark .page__content,
+.layout--dark .page__content p,
+.layout--dark .page__content li,
+.layout--dark .archive__item-excerpt {
+  color: rgba(255,255,255,0.88) !important;
+}
+
+/* Headings stay crisp */
+.layout--dark h1, .layout--dark h2, .layout--dark h3,
+.layout--dark h4, .layout--dark h5, .layout--dark h6,
+.layout--dark .page__title,
+.layout--dark .archive__item-title {
+  color: rgba(255,255,255,0.95) !important;
+}
