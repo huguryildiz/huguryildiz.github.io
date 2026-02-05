@@ -60,6 +60,9 @@ defaults:
       share: false
       related: false
 
+stylesheets:
+  - /assets/css/custom.css
+  
 # =========================
 # Author Profile
 # =========================
