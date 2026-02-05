@@ -19,8 +19,11 @@ author_profile: true
   </a>
 </p>
 
-**Quick Links:** [Journal Papers](#journal-papers) \| [Editorials](#editorials) \| [Conference Papers (Int)](#conference-papers-international) \| [Conference Papers (Nat)](#conference-papers-national---in-turkish)
-
+**Quick Links:**  
+[Journal Papers](#journal-papers){:.btn .btn--light-outline}
+[Editorials](#editorials){:.btn .btn--light-outline}
+[Conf. Papers (Int.)](#conference-papers-international){:.btn .btn--light-outline}
+[Conf. Papers (Nat.)](#conference-papers-national---in-turkish){:.btn .btn--light-outline}
 ---
 
 ## Journal Papers

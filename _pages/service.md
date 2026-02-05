@@ -5,6 +5,53 @@ permalink: /service/
 author_profile: true
 ---
 
+## Technical Program Committee Memberships
+
+- 2018 IEEE 87th Vehicular Technology Conference (VTC2018-Spring),
+- 2nd IEEE Middle East and North Africa Communications Conference (MENACOMM’19),
+- IEEE International Conference on Communications (ICC 2018–2022),
+- IEEE SENSORS 2017,
+- IEEE Wireless Communications and Networking Conference (WCNC 2019, WCNC 2021–Present),
+- Int. Conf. on Innovation and Intelligence for Information, Computation, and Technology (3ICT’19, 3ICT’20),
+- Int. Conference on Network and Service Management (CNSM 2020, CNSM 2021),
+- International Balkan Conference on Communications and Networking (BalkanCom 2023–Present),
+- International Conference on Underwater Networks & Systems (WUWNet 2019–Present),
+- IEEE INFOCOM’18 Workshop on Wirel. Commun. and Netw. in Extreme Environ.
+
+---
+
+## Session Chairing
+
+- *PHY-II: Physical Layer Communications-II*, IEEE BlackSeaCom 2021
+- *Underwater Networking*, ACM WUWNet 2019
+- *Communication Networks II*, SIU 2018
+- *Sensor Network, Method and Evaluation*, IEEE SENSORS 2016
+- *Management of Emerging Networks*, IEEE GLOBECOM 2014 Workshop
+
+---
+
+## Reviewer
+
+- Ad Hoc Networks
+- Computer Networks
+- IEEE Access
+- IEEE Communications Letters
+- IEEE Communications Surveys and Tutorials
+- IEEE International Conference on Communications (ICC)
+- IEEE Internet of Things Journal
+- IEEE International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob 2016)
+- IEEE International Symposium on Personal, Indoor, and Mobile Radio Communications (PIMRC 2017)
+- IEEE Sensors Journal
+- IEEE Systems Journal
+- IEEE Transactions on Cybernetics
+- IEEE Transactions on Industrial Electronics
+- IEEE Transactions on Industrial Informatics
+- IEEE Transactions on Mobile Computing
+- IEEE Wireless Communications and Networking Conference (WCNC 2018–2024)
+- IEEE Wireless Communications Letters
+- Internet of Things (Guest Editor)
+
+---
 
 ## Seminars and Invited Talks
 
@@ -52,51 +99,3 @@ author_profile: true
 - **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks**, <br>
   University of California, Irvine, CA, USA, Jan 22, 2014. <br>
   Host: Prof. Ender Ayanoglu
-
----
-
-## Session Chairing
-
-- *PHY-II: Physical Layer Communications-II*, IEEE BlackSeaCom 2021
-- *Underwater Networking*, ACM WUWNet 2019
-- *Communication Networks II*, SIU 2018
-- *Sensor Network, Method and Evaluation*, IEEE SENSORS 2016
-- *Management of Emerging Networks*, IEEE GLOBECOM 2014 Workshop
-
----
-
-## Technical Program Committee Memberships
-
-- 2018 IEEE 87th Vehicular Technology Conference (VTC2018-Spring),
-- 2nd IEEE Middle East and North Africa Communications Conference (MENACOMM’19),
-- IEEE International Conference on Communications (ICC 2018–2022),
-- IEEE SENSORS 2017,
-- IEEE Wireless Communications and Networking Conference (WCNC 2019, WCNC 2021–Present),
-- Int. Conf. on Innovation and Intelligence for Information, Computation, and Technology (3ICT’19, 3ICT’20),
-- Int. Conference on Network and Service Management (CNSM 2020, CNSM 2021),
-- International Balkan Conference on Communications and Networking (BalkanCom 2023–Present),
-- International Conference on Underwater Networks & Systems (WUWNet 2019–Present),
-- IEEE INFOCOM’18 Workshop on Wirel. Commun. and Netw. in Extreme Environ.
-
----
-
-## Reviewer
-
-- Ad Hoc Networks
-- Computer Networks
-- IEEE Access
-- IEEE Communications Letters
-- IEEE Communications Surveys and Tutorials
-- IEEE International Conference on Communications (ICC)
-- IEEE Internet of Things Journal
-- IEEE International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob 2016)
-- IEEE International Symposium on Personal, Indoor, and Mobile Radio Communications (PIMRC 2017)
-- IEEE Sensors Journal
-- IEEE Systems Journal
-- IEEE Transactions on Cybernetics
-- IEEE Transactions on Industrial Electronics
-- IEEE Transactions on Industrial Informatics
-- IEEE Transactions on Mobile Computing
-- IEEE Wireless Communications and Networking Conference (WCNC 2018–2024)
-- IEEE Wireless Communications Letters
-- Internet of Things (Guest Editor)
