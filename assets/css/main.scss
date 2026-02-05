@@ -55,13 +55,22 @@
 /* ==========================
    Global Typography Override
    ========================== */
-   
+
 /* Body text (serif) */
 body {
   font-family: "Lora", Georgia, serif;
   font-size: 17px;
   line-height: 1.7;
   color: #1a1a1a;
+}
+
+/* Headings (clean modern) */
+h1, h2, h3, h4, h5, h6,
+.page__title,
+.archive__item-title {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 /* Navigation */
