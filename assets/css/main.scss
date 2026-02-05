@@ -103,32 +103,48 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* =========================
-   Dark mode typography fix
+   Dark Mode Typography + Color
    ========================= */
 
-/* Minimal Mistakes dark skin: html has .layout--dark on body */
 .layout--dark body,
 .layout--dark .page__content,
 .layout--dark .page__content p,
 .layout--dark .page__content li {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  color: rgba(255,255,255,0.85) !important;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
-/* Dark mode text contrast */
-.layout--dark .page__content,
-.layout--dark .page__content p,
-.layout--dark .page__content li,
-.layout--dark .archive__item-excerpt {
-  color: rgba(255,255,255,0.88) !important;
-}
-
-/* Headings stay crisp */
+/* Headings */
 .layout--dark h1, .layout--dark h2, .layout--dark h3,
 .layout--dark h4, .layout--dark h5, .layout--dark h6,
 .layout--dark .page__title,
 .layout--dark .archive__item-title {
   color: rgba(255,255,255,0.95) !important;
+}
+
+/* Secondary / metadata */
+.layout--dark .archive__item-excerpt,
+.layout--dark small,
+.layout--dark .page__meta {
+  color: rgba(255,255,255,0.70) !important;
+}
+
+/* Links */
+.layout--dark a {
+  color: #7fc7ff;
+}
+.layout--dark a:hover {
+  color: #a9dcff;
+}
+
+/* Sidebar & navbar */
+.layout--dark .masthead,
+.layout--dark .greedy-nav a,
+.layout--dark .author__content,
+.layout--dark .author__bio,
+.layout--dark .author__urls a {
+  font-family: "Inter", sans-serif !important;
+  color: rgba(255,255,255,0.88) !important;
 }
