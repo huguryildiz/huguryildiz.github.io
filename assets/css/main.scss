@@ -154,3 +154,9 @@ h1, h2, h3, h4, h5, h6,
 button.theme-toggle {
   display: none !important;
 }
+
+/* Normalize strong text in lists (Teaching / CV pages) */
+.page__content li strong {
+  font-weight: 600;
+  font-size: inherit;
+}
