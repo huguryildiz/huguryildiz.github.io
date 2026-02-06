@@ -7,7 +7,7 @@ author_profile: true
 
 ## Current Courses (TED University)
 
-- **EE 304 – Probability and Random Processes** (Spring 2017 – Present)
+- **EE 304 – Probability and Random Variables** (Spring 2017 – Present)
 - <img src="/images/ee311.png"
        width="60"
        style="vertical-align:middle; margin-right:8px;">
@@ -49,7 +49,7 @@ I integrate active learning strategies to enhance student engagement across all 
         EE 311 – Signals and Systems
       </div>
       <div style="margin-top:10px; font-family:'Lora', Georgia, serif; font-size:18px;">
-        A third-year undergraduate core course that develops mathematical representations of continuous-time and discrete-time signals and linear time-invariant systems, covering convolution, Fourier series and Fourier transforms in both continuous and discrete domains, and the sampling theorem, with an emphasis on frequency-domain analysis and avoiding aliasing in signal processing applications.
+A third-year undergraduate core course that develops mathematical representations of continuous-time and discrete-time signals and linear time-invariant systems, covering convolution, Fourier series and Fourier transforms in both continuous and discrete domains, and the sampling theorem, with an emphasis on frequency-domain analysis and avoiding aliasing in signal processing applications.
       </div>
       <div style="margin-top:14px;">
         <a href="https://www.tedu.edu.tr/ee-311" target="_blank" rel="noopener">
