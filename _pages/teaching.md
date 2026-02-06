@@ -8,6 +8,8 @@ author_profile: true
 ## Current Courses (TED University)
 
 - **EE 304 – Probability and Random Processes** (Spring 2017 – Present)
+- <img src="/images/ee311.png" width="20" style="vertical-align:middle;">  
+  **EE 304 – Probability and Random Processes** (Spring 2017 – Present)
 - **EE 311 – Signals and Systems** (Fall 2016 – Present)
 - **EE 413 – Communication Systems II** (Fall 2016 – Present)
 - **EE 512 – Optimization for Communication Networks** (Spring 2026)
