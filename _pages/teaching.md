@@ -32,23 +32,22 @@ I integrate active learning strategies to enhance student engagement across all 
 - **Undergraduate Senior Projects:** 25+
 - **Recommendation Letters Written:** 50+
 
-## Useful Teaching Resources
-
 - [TEDU LMS](https://lmstedu.edu.tr/) - Course materials, textbooks, notes, videos
 
 <table style="border:none; border-collapse:collapse; background:transparent; margin-bottom:20px;">
   <tr>
     <td width="30%" valign="top" style="border:none;">
-      <img src="/images/test.jpg"
+      <img src="/images/ee311.jpg"
            style="width:100%; border-radius:6px; border:none;">
     </td>
     <td width="70%" valign="top" style="padding-left:15px; border:none; line-height:1.45;">
-      <strong>Title</strong><br>
-      Authors<br>
-      <em>Venue</em><br><br>
-      <a href="#"><img src="https://img.shields.io/badge/pdf-98c1a3?style=flat-square"></a>
-      <a href="#"><img src="https://img.shields.io/badge/project_page-98c1a3?style=flat-square"></a>
-      <a href="#"><img src="https://img.shields.io/badge/code-98c1a3?style=flat-square"></a>
+      <strong>
+        A third-year undergraduate core course that develops mathematical representations of continuous-time and discrete-time signals and linear time-invariant systems, covering convolution, Fourier series and Fourier transforms in both continuous and discrete domains, and the sampling theorem, with an emphasis on frequency-domain analysis and avoiding aliasing in signal processing applications.
+      </strong>
+      <br><br>
+      <a href="https://www.tedu.edu.tr/ee-311" target="_blank" rel="noopener">
+        <img src="https://img.shields.io/badge/course_page-1f77b4?style=flat-square">
+      </a>
     </td>
   </tr>
 </table>
