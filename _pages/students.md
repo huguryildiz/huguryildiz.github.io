@@ -5,6 +5,14 @@ permalink: /students/
 author_profile: true
 ---
 
+## Student Supervision
+
+- **Graduate Theses Supervised:** 7
+- **Undergraduate Senior Projects:** 25+
+- **Recommendation Letters Written:** 50+
+
+---
+
 ## Ph.D. Students
 
 - **C. Tantur Karagul** (2025). *Network Lifetime Optimization in Underwater Wireless Sensor Networks with Variable k-Connectivity*. TOBB University of Economics and Technology. ![PhD Co-advisor](https://img.shields.io/badge/PhD-Co--advisor-6f42c1?style=flat-square) 
