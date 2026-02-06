@@ -67,11 +67,7 @@ My teaching philosophy integrates **theory, practice, and active learning** to f
 
 My goal is to create an engaging and supportive learning environment that helps students develop strong analytical and problem-solving skills.
 
-## Student Supervision
-
-- **Graduate Theses Supervised:** 7
-- **Undergraduate Senior Projects:** 25+
-- **Recommendation Letters Written:** 50+
+---
 
 <div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
 
