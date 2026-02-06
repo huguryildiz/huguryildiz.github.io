@@ -66,6 +66,7 @@ html, body {
   font-family: "Lora", Georgia, serif !important;
 }
 
-.theme-toggle {
+/* Hide ONLY the theme toggle button in header */
+.masthead__inner-wrap .theme-toggle {
   display: none !important;
 }
