@@ -69,6 +69,10 @@ My goal is to create an engaging and supportive learning environment that helps 
 
 ---
 
+<!------------>
+<!-- EE 304 -->
+<!------------>
+
 <div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
 
   <div style="flex:1; min-width:150px;">
@@ -82,12 +86,19 @@ My goal is to create an engaging and supportive learning environment that helps 
       An undergraduate core course introducing probability models, discrete and continuous random variables, joint and conditional distributions, expectation, and variance, with engineering applications in communications and signal processing.
     </p>
 
-    <a href="https://www.tedu.edu.tr/ee-304" target="_blank" rel="noopener">
+    <a href="https://www.tedu.edu.tr/ee-304" target="_blank" rel="noopener" style="margin-right:6px;">
       <img src="https://img.shields.io/badge/course_page-1f77b4?style=flat-square" alt="Course page">
     </a>
+
+    <img src="https://img.shields.io/badge/Spring_2017--Present-8bc34a?style=flat-square" alt="Spring 2017–Present">
+
   </div>
 
 </div>
+
+<!------------>
+<!-- EE 311 -->
+<!------------>
 
 <div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
 
@@ -109,46 +120,86 @@ My goal is to create an engaging and supportive learning environment that helps 
 
 </div>
 
+<!------------>
+<!-- EE 413 -->
+<!------------>
+
 <div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
 
   <div style="flex:1; min-width:150px;">
-    <img src="/images/ee311.png" style="width:100%; border-radius:6px;">
+    <img src="/images/ee413.png" style="width:100%; border-radius:6px;">
   </div>
 
   <div style="flex:3;">
-    <h3 style="margin:0 0 8px 0;">EE 311 – Signals and Systems</h3>
+    <h3 style="margin:0 0 8px 0;">EE 413 – Communication Systems II</h3>
 
     <p style="margin:0 0 12px 0;">
-      A third-year undergraduate core course on continuous- and discrete-time signals, LTI systems, Fourier analysis, and the sampling theorem.
+      A senior-level undergraduate course on digital communication systems, covering sampling, quantization, modulation, detection, noise and error analysis, intersymbol interference, and an introduction to information theory, with MATLAB-based laboratory experiments.
     </p>
 
-    <a href="https://www.tedu.edu.tr/ee-311" target="_blank" rel="noopener">
+    <a href="https://www.tedu.edu.tr/ee-413" target="_blank" rel="noopener">
       <img src="https://img.shields.io/badge/course_page-1f77b4?style=flat-square" alt="Course page">
     </a>
   </div>
 
 </div>
 
+<!------------>
+<!-- EE 491 -->
+<!------------>
+
 <div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
 
   <div style="flex:1; min-width:150px;">
-    <img src="/images/ee491.png" style="width:100%; border-radius:6px;">
+    <img src="/images/ee491-492.png" style="width:100%; border-radius:6px;">
   </div>
 
   <div style="flex:3;">
-    <h3 style="margin:0 0 8px 0;">EE 491/492 – Senior Design Project I/II</h3>
+    <h3 style="margin:0 0 8px 0;">EE 491 / EE 492 – Senior Design Project I & II</h3>
 
     <p style="margin:0 0 12px 0;">
-      A two-semester capstone course on system design and implementation, with a strong emphasis on engineering analysis, technical reporting, and teamwork.
+      A two-semester capstone sequence focused on the design and implementation of an electrical and electronics engineering system, emphasizing engineering analysis, technical reporting, and teamwork.
     </p>
 
-    <a href="https://www.tedu.edu.tr/ee-491" target="_blank" rel="noopener" style="margin-right:8px;">
+    <a href="https://www.tedu.edu.tr/ee-491" target="_blank" rel="noopener" style="margin-right:6px;">
       <img src="https://img.shields.io/badge/EE_491_course_page-1f77b4?style=flat-square" alt="EE 491 course page">
     </a>
 
-    <a href="https://www.tedu.edu.tr/ee-492" target="_blank" rel="noopener">
+    <a href="https://www.tedu.edu.tr/ee-492" target="_blank" rel="noopener" style="margin-right:6px;">
       <img src="https://img.shields.io/badge/EE_492_course_page-1f77b4?style=flat-square" alt="EE 492 course page">
     </a>
+
+    <img src="https://img.shields.io/badge/Capstone_Project-8bc34a?style=flat-square" alt="Capstone Project">
+
+  </div>
+
+</div>
+
+<!------------>
+<!-- EE 512 -->
+<!------------>
+
+<div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
+
+  <div style="flex:1; min-width:150px;">
+    <img src="/images/ee512.png" style="width:100%; border-radius:6px;">
+  </div>
+
+  <div style="flex:3;">
+    <h3 style="margin:0 0 8px 0;">EE 512 – Optimization for Communication Networks</h3>
+
+    <p style="margin:0 0 12px 0;">
+      A graduate-level elective course introducing optimization techniques for communication networks, including linear and integer programming, mixed-integer models, simplex methods, and network flow problems, with applications to wireless communication systems.
+    </p>
+
+    <a href="https://www.tedu.edu.tr/ee-512" target="_blank" rel="noopener" style="margin-right:6px;">
+      <img src="https://img.shields.io/badge/course_page-1f77b4?style=flat-square" alt="Course page">
+    </a>
+
+    <img src="https://img.shields.io/badge/MS_Elective-e91e63?style=flat-square" alt="MS Elective">
+
+    <img src="https://img.shields.io/badge/Spring-e91e63?style=flat-square" alt="Spring">
+
   </div>
 
 </div>
