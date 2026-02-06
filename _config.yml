@@ -101,6 +101,8 @@ author:
       icon: "ai ai-scopus"
       url: "https://www.scopus.com/authid/detail.uri?authorId=56242674200"  
 
+minimal_mistakes_skin: "default"
+
 # =========================
 # Build / Performance
 # =========================
