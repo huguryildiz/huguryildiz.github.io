@@ -11,12 +11,13 @@ Course materials, including lecture notes and supplementary resources, are avail
 
 ### Undergraduate
 
-- **EE 304 – Probability and Random Variables** (Spring 2017 – Present)
-- **EE 311 – Signals and Systems** (Fall 2016 – Present)
-- **EE 413 – Communication Systems II** (Fall 2016 – Present)
-- **EE 491 – Senior Project I** (Fall 2016 – Present)
-- **EE 492 – Senior Project II** (Spring 2017 – Present)
+- **EE 304 – Probability and Random Variables** (Spring 2017–Present)
 
+- **EE 311 – Signals and Systems** (Fall 2016–Present) <br>
+[![Course Catalog](https://img.shields.io/badge/Catalog-EE_311-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-311)
+- **EE 413 – Communication Systems II** (Fall 2016–Present)
+- **EE 491 – Senior Project I** (Fall 2016–Present)
+- **EE 492 – Senior Project II** (Spring 2017–Present)
 
 ### Graduate
 
