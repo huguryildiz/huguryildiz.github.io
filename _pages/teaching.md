@@ -41,21 +41,34 @@ I integrate active learning strategies to enhance student engagement across all 
 <table style="border:none; border-collapse:collapse; background:transparent; margin-bottom:20px;">
   <tr>
     <td width="30%" valign="top" style="border:none;">
-      <img src="/images/ee311.png" style="width:100%; border-radius:6px; border:none;">
+      <img src="/images/ee311.png"
+           style="width:100%; border-radius:6px; border:none;">
     </td>
+
     <td width="70%" valign="top"
-        style="padding-left:15px; border:none; line-height:1.6; font-family:'Lora', Georgia, serif; font-size:18px; color:inherit;">     
-      <div style="font-family:'Lora', Georgia, serif; font-size:22px; font-weight:700; margin:0;">
+        style="padding-left:15px; border:none; line-height:1.6;">
+
+      <!-- Title (inherits heading font rules) -->
+      <div style="font-weight:700; font-size:1.3em; margin:0;">
         EE 311 – Signals and Systems
       </div>
-      <div style="margin-top:10px; font-family:'Lora', Georgia, serif; font-size:18px;">
-A third-year undergraduate core course that develops mathematical representations of continuous-time and discrete-time signals and linear time-invariant systems, covering convolution, Fourier series and Fourier transforms in both continuous and discrete domains, and the sampling theorem, with an emphasis on frequency-domain analysis and avoiding aliasing in signal processing applications.
+
+      <!-- Description (inherits body font + size) -->
+      <div style="margin-top:10px;">
+        A third-year undergraduate core course that develops mathematical representations
+        of continuous-time and discrete-time signals and linear time-invariant systems,
+        covering convolution, Fourier series and Fourier transforms, and the sampling
+        theorem, with an emphasis on frequency-domain analysis and avoiding aliasing in
+        signal processing applications.
       </div>
+
       <div style="margin-top:14px;">
         <a href="https://www.tedu.edu.tr/ee-311" target="_blank" rel="noopener">
-          <img src="https://img.shields.io/badge/course_page-1f77b4?style=flat-square" alt="Course page">
+          <img src="https://img.shields.io/badge/course_page-1f77b4?style=flat-square"
+               alt="Course page">
         </a>
       </div>
+
     </td>
   </tr>
 </table>
