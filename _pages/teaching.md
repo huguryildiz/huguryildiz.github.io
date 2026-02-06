@@ -8,10 +8,6 @@ author_profile: true
 ## Current Courses (TED University)
 
 - **EE 304 – Probability and Random Variables** (Spring 2017 – Present)
-- <img src="/images/ee311.png"
-       width="60"
-       style="vertical-align:middle; margin-right:8px;">
-  <strong>EE 304 – Probability and Random Processes</strong> (Spring 2017 – Present)
 - **EE 311 – Signals and Systems** (Fall 2016 – Present)
 - **EE 413 – Communication Systems II** (Fall 2016 – Present)
 - **EE 512 – Optimization for Communication Networks** (Spring 2026)
@@ -45,11 +41,17 @@ I integrate active learning strategies to enhance student engagement across all 
   </div>
 
   <div style="flex:3;">
-    <h3 style="margin:0 0 8px 0;">EE 311 – Signals and Systems</h3>
+    <h3 style="margin:0 0 6px 0;">EE 311 – Signals and Systems</h3>
+
+    <!-- Academic period badge -->
+    <div style="margin-bottom:10px;">
+      <img src="https://img.shields.io/badge/Period-Spring_2017--Present-1f77b4?style=flat-square"
+           alt="Spring 2017 – Present">
+    </div>
 
     <p style="margin:0 0 12px 0;">
-      A core course on continuous- and discrete-time signals and LTI systems, covering Fourier
-      analysis, convolution, and the sampling theorem with emphasis on frequency-domain processing.
+      A third-year undergraduate core course on continuous- and discrete-time signals,
+      LTI systems, Fourier analysis, and the sampling theorem.
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-311" target="_blank" rel="noopener">
