@@ -8,7 +8,7 @@ author_profile: true
 ## Current Courses (TED University)
 
 - **EE 304 – Probability and Random Processes** (Spring 2017 – Present)
-- <img src="/images/ee304.png"
+- <img src="/images/ee311.png"
        width="60"
        style="vertical-align:middle; margin-right:8px;">
   <strong>EE 304 – Probability and Random Processes</strong> (Spring 2017 – Present)
