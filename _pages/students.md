@@ -7,7 +7,7 @@ author_profile: true
 
 ## Ph.D. Students
 
-- **C. Tantur Karagul** (2025). *Network Lifetime Optimization in Underwater Wireless Sensor Networks with Variable k-Connectivity*. TOBB University of Economics and Technology. ![PhD Co-advisor](https://img.shields.io/badge/PhD-Co--advisor-6f42c1?style=flat-square)  
+- **C. Tantur Karagul** (2025). *Network Lifetime Optimization in Underwater Wireless Sensor Networks with Variable k-Connectivity*. TOBB University of Economics and Technology. ![PhD Co-advisor](https://img.shields.io/badge/PhD-Co--advisor-6f42c1?style=flat-square) 
   [![YÖK Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)]()
 
 - **M. Cobanlar** (2022). *Examination of the Relationship Between k-Connectivity and Network Lifetime in Underwater Acoustic Sensor Networks*. TOBB University of Economics and Technology. ![PhD Co-advisor](https://img.shields.io/badge/PhD-Co--advisor-6f42c1?style=flat-square) 

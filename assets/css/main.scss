@@ -52,3 +52,20 @@
   text-align: justify !important;
 }
 
+/* 
+==========================
+GLOBAL FONT OVERRIDE
+==========================
+
+Force Lora everywhere
+
+html, body {
+  font-family: "Lora", Georgia, serif !important;
+}
+
+Catch everything else
+
+* {
+  font-family: "Lora", Georgia, serif !important;
+}
+*/
