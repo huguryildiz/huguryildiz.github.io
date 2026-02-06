@@ -11,37 +11,35 @@ Course materials, including lecture notes and supplementary resources, are avail
 
 ### Undergraduate
 
-- **EE 304 – Probability and Random Variables** (Spring 2017–Present) <br>
+- **EE 304 – Probability and Random Variables** (Spring 2017–Present)
 [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-304)
 
-- **EE 311 – Signals and Systems** (Fall 2016–Present) <br>
+- **EE 311 – Signals and Systems** (Fall 2016–Present)
 [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-311)
-
-- **EE 413 – Communication Systems II** (Fall 2016–Present) <br>
 [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-413)
 
-- **EE 491 – Senior Project I** (Fall 2016–Present) <br>
+- **EE 491 – Senior Project I** (Fall 2016–Present)
 [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-491)
 
-- **EE 492 – Senior Project II** (Spring 2017–Present) <br>
+- **EE 492 – Senior Project II** (Spring 2017–Present)
 [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-492)
 
 ### Graduate
 
-- **EE 512 – Optimization for Communication Networks** (Spring 2026) <br>
+- **EE 512 – Optimization for Communication Networks** (Spring 2026) 
 [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-512)
 
 ## Past Courses
 
 ### Undergraduate
 
-- **EE 205 – Software Tools for Electrical Engineering** (Fall 2016) <br>
+- **EE 205 – Software Tools for Electrical Engineering** (Fall 2016)
 [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-205)
 
-- **EE 312 – Communication Systems I** (Spring 2017, Spring 2018) <br>
+- **EE 312 – Communication Systems I** (Spring 2017, Spring 2018)
 [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-312)
 
-- **EE 462 – Power System Analysis** (Spring 2017) <br>
+- **EE 462 – Power System Analysis** (Spring 2017)
 [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-462)
 
 ## Teaching Philosophy
