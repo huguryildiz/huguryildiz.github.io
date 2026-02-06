@@ -48,7 +48,7 @@ Course materials, including lecture notes and supplementary resources, are avail
   [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-205)
 
 - **EE 312 – Communication Systems I**  
-  ![Term](https://img.shields.io/badge/Spring_2017--2018-lightgrey?style=flat-square)
+  ![Term](https://img.shields.io/badge/Spring_2017,_2018-lightgrey?style=flat-square)
   [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-312)
 
 - **EE 462 – Power System Analysis**  
@@ -76,7 +76,7 @@ My goal is to create an engaging and supportive learning environment that helps 
 <div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
 
   <div style="flex:1; min-width:150px;">
-    <img src="/images/ee304.png" style="width:100%; border-radius:6px;">
+    <img src="/images/courses/ee304.png" style="width:100%; border-radius:6px;">
   </div>
 
   <div style="flex:3;">
@@ -103,7 +103,7 @@ My goal is to create an engaging and supportive learning environment that helps 
 <div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
 
   <div style="flex:1; min-width:150px;">
-    <img src="/images/ee311.png" style="width:100%; border-radius:6px;">
+    <img src="/images/courses/ee311.png" style="width:100%; border-radius:6px;">
   </div>
 
   <div style="flex:3;">
@@ -127,7 +127,7 @@ My goal is to create an engaging and supportive learning environment that helps 
 <div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
 
   <div style="flex:1; min-width:150px;">
-    <img src="/images/ee413.png" style="width:100%; border-radius:6px;">
+    <img src="/images/courses/ee413.png" style="width:100%; border-radius:6px;">
   </div>
 
   <div style="flex:3;">
@@ -151,7 +151,7 @@ My goal is to create an engaging and supportive learning environment that helps 
 <div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
 
   <div style="flex:1; min-width:150px;">
-    <img src="/images/ee491-492.png" style="width:100%; border-radius:6px;">
+    <img src="/images/courses/ee491.png" style="width:100%; border-radius:6px;">
   </div>
 
   <div style="flex:3;">
@@ -182,7 +182,7 @@ My goal is to create an engaging and supportive learning environment that helps 
 <div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
 
   <div style="flex:1; min-width:150px;">
-    <img src="/images/ee512.png" style="width:100%; border-radius:6px;">
+    <img src="/images/courses/ee512.png" style="width:100%; border-radius:6px;">
   </div>
 
   <div style="flex:3;">
@@ -197,6 +197,94 @@ My goal is to create an engaging and supportive learning environment that helps 
     </a>
 
     <img src="https://img.shields.io/badge/MS_Elective-e91e63?style=flat-square" alt="MS Elective">
+
+    <img src="https://img.shields.io/badge/Spring-e91e63?style=flat-square" alt="Spring">
+
+  </div>
+
+</div>
+
+<!------------>
+<!-- EE 205 -->
+<!------------>
+
+<div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
+
+  <div style="flex:1; min-width:150px;">
+    <img src="/images/courses/ee205.png" style="width:100%; border-radius:6px;">
+  </div>
+
+  <div style="flex:3;">
+    <h3 style="margin:0 0 8px 0;">EE 205 – Software Tools for Electrical Engineering</h3>
+
+    <p style="margin:0 0 12px 0;">
+      A compulsory undergraduate course introducing MATLAB-based software tools and computational methods for electrical engineering applications.
+    </p>
+
+    <a href="https://www.tedu.edu.tr/ee-205" target="_blank" rel="noopener" style="margin-right:6px;">
+      <img src="https://img.shields.io/badge/course_page-1f77b4?style=flat-square" alt="Course page">
+    </a>
+
+    <img src="https://img.shields.io/badge/BS_Compulsory-e91e63?style=flat-square" alt="BS Compulsory">
+
+    <img src="https://img.shields.io/badge/Fall-e91e63?style=flat-square" alt="Fall">
+
+  </div>
+
+</div>
+
+
+<!------------>
+<!-- EE 312 -->
+<!------------>
+
+ <div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
+
+  <div style="flex:1; min-width:150px;">
+    <img src="/images/courses/ee312.png" style="width:100%; border-radius:6px;">
+  </div>
+
+  <div style="flex:3;">
+    <h3 style="margin:0 0 8px 0;">EE 312 – Communication Systems I</h3>
+
+    <p style="margin:0 0 12px 0;">
+      A compulsory undergraduate course covering communication systems, modulation techniques, noise analysis, and Fourier-based signal representations.
+    </p>
+
+    <a href="https://www.tedu.edu.tr/ee-312" target="_blank" rel="noopener" style="margin-right:6px;">
+      <img src="https://img.shields.io/badge/course_page-1f77b4?style=flat-square" alt="Course page">
+    </a>
+
+    <img src="https://img.shields.io/badge/BS_Compulsory-e91e63?style=flat-square" alt="BS Compulsory">
+
+    <img src="https://img.shields.io/badge/Spring-e91e63?style=flat-square" alt="Spring">
+
+  </div>
+
+</div>
+
+<!------------>
+<!-- EE 462 -->
+<!------------>
+
+<div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
+
+  <div style="flex:1; min-width:150px;">
+    <img src="/images/courses/ee462.png" style="width:100%; border-radius:6px;">
+  </div>
+
+  <div style="flex:3;">
+    <h3 style="margin:0 0 8px 0;">EE 462 – Power System Analysis</h3>
+
+    <p style="margin:0 0 12px 0;">
+      An undergraduate elective covering power system modeling, load flow, fault analysis, smart grids, and renewables.
+    </p>
+
+    <a href="https://www.tedu.edu.tr/ee-462" target="_blank" rel="noopener" style="margin-right:6px;">
+      <img src="https://img.shields.io/badge/course_page-1f77b4?style=flat-square" alt="Course page">
+    </a>
+
+    <img src="https://img.shields.io/badge/BS_Elective-e91e63?style=flat-square" alt="BS Elective">
 
     <img src="https://img.shields.io/badge/Spring-e91e63?style=flat-square" alt="Spring">
 
