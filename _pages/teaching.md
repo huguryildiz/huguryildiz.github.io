@@ -72,6 +72,26 @@ My goal is to create an engaging and supportive learning environment that helps 
 <div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
 
   <div style="flex:1; min-width:150px;">
+    <img src="/images/ee304.png" style="width:100%; border-radius:6px;">
+  </div>
+
+  <div style="flex:3;">
+    <h3 style="margin:0 0 8px 0;">EE 304 – Probability and Random Variables</h3>
+
+    <p style="margin:0 0 12px 0;">
+      An undergraduate core course introducing probability models, discrete and continuous random variables, joint and conditional distributions, expectation, and variance, with engineering applications in communications and signal processing.
+    </p>
+
+    <a href="https://www.tedu.edu.tr/ee-304" target="_blank" rel="noopener">
+      <img src="https://img.shields.io/badge/course_page-1f77b4?style=flat-square" alt="Course page">
+    </a>
+  </div>
+
+</div>
+
+<div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
+
+  <div style="flex:1; min-width:150px;">
     <img src="/images/ee311.png" style="width:100%; border-radius:6px;">
   </div>
 
@@ -84,6 +104,50 @@ My goal is to create an engaging and supportive learning environment that helps 
 
     <a href="https://www.tedu.edu.tr/ee-311" target="_blank" rel="noopener">
       <img src="https://img.shields.io/badge/course_page-1f77b4?style=flat-square" alt="Course page">
+    </a>
+  </div>
+
+</div>
+
+<div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
+
+  <div style="flex:1; min-width:150px;">
+    <img src="/images/ee311.png" style="width:100%; border-radius:6px;">
+  </div>
+
+  <div style="flex:3;">
+    <h3 style="margin:0 0 8px 0;">EE 311 – Signals and Systems</h3>
+
+    <p style="margin:0 0 12px 0;">
+      A third-year undergraduate core course on continuous- and discrete-time signals, LTI systems, Fourier analysis, and the sampling theorem.
+    </p>
+
+    <a href="https://www.tedu.edu.tr/ee-311" target="_blank" rel="noopener">
+      <img src="https://img.shields.io/badge/course_page-1f77b4?style=flat-square" alt="Course page">
+    </a>
+  </div>
+
+</div>
+
+<div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
+
+  <div style="flex:1; min-width:150px;">
+    <img src="/images/ee491.png" style="width:100%; border-radius:6px;">
+  </div>
+
+  <div style="flex:3;">
+    <h3 style="margin:0 0 8px 0;">EE 491/492 – Senior Design Project I/II</h3>
+
+    <p style="margin:0 0 12px 0;">
+      A two-semester capstone course on system design and implementation, with a strong emphasis on engineering analysis, technical reporting, and teamwork.
+    </p>
+
+    <a href="https://www.tedu.edu.tr/ee-491" target="_blank" rel="noopener" style="margin-right:8px;">
+      <img src="https://img.shields.io/badge/EE_491_course_page-1f77b4?style=flat-square" alt="EE 491 course page">
+    </a>
+
+    <a href="https://www.tedu.edu.tr/ee-492" target="_blank" rel="noopener">
+      <img src="https://img.shields.io/badge/EE_492_course_page-1f77b4?style=flat-square" alt="EE 492 course page">
     </a>
   </div>
 
