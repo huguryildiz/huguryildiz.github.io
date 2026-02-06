@@ -52,21 +52,3 @@
   text-align: justify !important;
 }
 
-/* ==========================
-   GLOBAL FONT OVERRIDE
-   ========================== */
-
-/* Force Lora everywhere */
-html, body {
-  font-family: "Lora", Georgia, serif !important;
-}
-
-/* Catch everything else */
-* {
-  font-family: "Lora", Georgia, serif !important;
-}
-
-/* Hide ONLY the theme toggle button in header */
-.masthead__inner-wrap .theme-toggle {
-  display: none !important;
-}
