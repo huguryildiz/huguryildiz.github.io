@@ -38,37 +38,23 @@ I integrate active learning strategies to enhance student engagement across all 
 
 - [TEDU LMS](https://lmstedu.edu.tr/) - Course materials, textbooks, notes, videos
 
-<table style="border:none; border-collapse:collapse; background:transparent; margin-bottom:20px;">
-  <tr>
-    <td width="30%" valign="top" style="border:none;">
-      <img src="/images/ee311.png"
-           style="width:100%; border-radius:6px; border:none;">
-    </td>
+<div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
 
-    <td width="70%" valign="top"
-        style="padding-left:15px; border:none; line-height:1.6;">
+  <div style="flex:1; min-width:150px;">
+    <img src="/images/ee311.png" style="width:100%; border-radius:6px;">
+  </div>
 
-      <!-- Title (inherits heading font rules) -->
-      <div style="font-weight:700; font-size:1.3em; margin:0;">
-        EE 311 – Signals and Systems
-      </div>
+  <div style="flex:3;">
+    <h3 style="margin:0 0 8px 0;">EE 311 – Signals and Systems</h3>
 
-      <!-- Description (inherits body font + size) -->
-      <div style="margin-top:10px;">
-        A third-year undergraduate core course that develops mathematical representations
-        of continuous-time and discrete-time signals and linear time-invariant systems,
-        covering convolution, Fourier series and Fourier transforms, and the sampling
-        theorem, with an emphasis on frequency-domain analysis and avoiding aliasing in
-        signal processing applications.
-      </div>
+    <p style="margin:0 0 12px 0;">
+      A core course on continuous- and discrete-time signals and LTI systems, covering Fourier
+      analysis, convolution, and the sampling theorem with emphasis on frequency-domain processing.
+    </p>
 
-      <div style="margin-top:14px;">
-        <a href="https://www.tedu.edu.tr/ee-311" target="_blank" rel="noopener">
-          <img src="https://img.shields.io/badge/course_page-1f77b4?style=flat-square"
-               alt="Course page">
-        </a>
-      </div>
+    <a href="https://www.tedu.edu.tr/ee-311" target="_blank" rel="noopener">
+      <img src="https://img.shields.io/badge/course_page-1f77b4?style=flat-square">
+    </a>
+  </div>
 
-    </td>
-  </tr>
-</table>
+</div>
