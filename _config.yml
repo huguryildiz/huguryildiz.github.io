@@ -16,10 +16,17 @@ header:
 enable_darkmode: false
 
 # =========================
-# Theme (Minimal Mistakes / AcademicPages)
+# Theme (Minimal Mistakes)
 # =========================
 remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "aqua"
+minimal_mistakes_skin: "default"   # "aqua" da olur
+
+# =========================
+# UI Simplification
+# =========================
+search: false
+breadcrumbs: false
+enable_copy_code_button: false
 
 # =========================
 # Plugins (GitHub Pages uyumlu)
