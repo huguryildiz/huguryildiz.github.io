@@ -27,9 +27,9 @@ Course materials, including lecture notes and supplementary resources, are avail
 
 ### Undergraduate
 
-- **EE 205 – Software Tools for Electrical Engineering** ![Term](https://img.shields.io/badge/Fall_2016-grey?style=flat-square) [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-205)
-- **EE 312 – Communication Systems I** ![Term](https://img.shields.io/badge/Spring_2017--2018-grey?style=flat-square) [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-312)
-- **EE 462 – Power System Analysis** ![Term](https://img.shields.io/badge/Spring_2017-grey?style=flat-square) [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-462)
+- **EE 205 – Software Tools for Electrical Engineering** ![Term](https://img.shields.io/badge/Fall_2016-lightgrey?style=flat-square) [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-205)
+- **EE 312 – Communication Systems I** ![Term](https://img.shields.io/badge/Spring_2017--2018-lightgrey?style=flat-square) [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-312)
+- **EE 462 – Power System Analysis** ![Term](https://img.shields.io/badge/Spring_2017-lightgrey?style=flat-square) [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-462)
 
 ## Teaching Philosophy
 
