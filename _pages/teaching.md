@@ -83,11 +83,11 @@ My goal is to create an engaging and supportive learning environment that helps 
     <h3 style="margin:0 0 8px 0;">EE 304 – Probability and Random Variables</h3>
 
     <p style="margin:0 0 12px 0;">
-      An undergraduate core course introducing probability models, discrete and continuous random variables, joint and conditional distributions, expectation, and variance, with engineering applications in communications and signal processing.
+      A third-year undergraduate core course covering probability theory, random variables, distributions, expectation, variance, with engineering applications communications.
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-304" target="_blank" rel="noopener" style="margin-right:6px;">
-      <img src="https://img.shields.io/badge/course_page-1f77b4?style=flat-square" alt="Course page">
+      <img src="https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square" alt="Course page">
     </a>
 
     <img src="https://img.shields.io/badge/Spring_2017--Present-8bc34a?style=flat-square" alt="Spring 2017–Present">
@@ -114,8 +114,10 @@ My goal is to create an engaging and supportive learning environment that helps 
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-311" target="_blank" rel="noopener">
-      <img src="https://img.shields.io/badge/course_page-1f77b4?style=flat-square" alt="Course page">
+      <img src="https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square" alt="Course page">
     </a>
+
+    <img src="https://img.shields.io/badge/Fall_2016--Present-8bc34a?style=flat-square" alt="Fall_2016–Present">
   </div>
 
 </div>
@@ -134,12 +136,14 @@ My goal is to create an engaging and supportive learning environment that helps 
     <h3 style="margin:0 0 8px 0;">EE 413 – Communication Systems II</h3>
 
     <p style="margin:0 0 12px 0;">
-      A senior-level undergraduate course on digital communication systems, covering sampling, quantization, modulation, detection, noise and error analysis, intersymbol interference, and an introduction to information theory, with MATLAB-based laboratory experiments.
+      A senior-level undergraduate course on digital communication systems, covering quantization, baseband and bandpass modulation, and an introduction to information theory.
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-413" target="_blank" rel="noopener">
-      <img src="https://img.shields.io/badge/course_page-1f77b4?style=flat-square" alt="Course page">
+      <img src="https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square" alt="Course page">
     </a>
+
+    <img src="https://img.shields.io/badge/Fall_2016--Present-8bc34a?style=flat-square" alt="Fall_2016–Present">
   </div>
 
 </div>
@@ -162,15 +166,15 @@ My goal is to create an engaging and supportive learning environment that helps 
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-491" target="_blank" rel="noopener" style="margin-right:6px;">
-      <img src="https://img.shields.io/badge/EE_491_course_page-1f77b4?style=flat-square" alt="EE 491 course page">
+      <img src="https://img.shields.io/badge/EE_491_Course_Catalog-1f77b4?style=flat-square" alt="EE 491 Catalog">
     </a>
 
     <a href="https://www.tedu.edu.tr/ee-492" target="_blank" rel="noopener" style="margin-right:6px;">
-      <img src="https://img.shields.io/badge/EE_492_course_page-1f77b4?style=flat-square" alt="EE 492 course page">
+      <img src="https://img.shields.io/badge/EE_492_Course_Catalog-1f77b4?style=flat-square" alt="EE 492 Catalog">
     </a>
 
-    <img src="https://img.shields.io/badge/Capstone_Project-8bc34a?style=flat-square" alt="Capstone Project">
-
+    <img src="https://img.shields.io/badge/Fall_2016--Present-8bc34a?style=flat-square" alt="Fall 2016–Present">
+    <img src="https://img.shields.io/badge/Spring_2017--Present-8bc34a?style=flat-square" alt="Spring 2017–Present">
   </div>
 
 </div>
@@ -189,16 +193,14 @@ My goal is to create an engaging and supportive learning environment that helps 
     <h3 style="margin:0 0 8px 0;">EE 512 – Optimization for Communication Networks</h3>
 
     <p style="margin:0 0 12px 0;">
-      A graduate-level elective course introducing optimization techniques for communication networks, including linear and integer programming, mixed-integer models, simplex methods, and network flow problems, with applications to wireless communication systems.
+      Graduate-level elective covering optimization techniques for communication networks, including linear, integer, mixed-integer programming, simplex methods, network flows, and wireless network applications.
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-512" target="_blank" rel="noopener" style="margin-right:6px;">
-      <img src="https://img.shields.io/badge/course_page-1f77b4?style=flat-square" alt="Course page">
+      <img src="https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square" alt="Course page">
     </a>
 
-    <img src="https://img.shields.io/badge/MS_Elective-e91e63?style=flat-square" alt="MS Elective">
-
-    <img src="https://img.shields.io/badge/Spring-e91e63?style=flat-square" alt="Spring">
+    <img src="https://img.shields.io/badge/Spring_2026-8bc34a?style=flat-square" alt="Spring 2026">
 
   </div>
 
@@ -222,12 +224,10 @@ My goal is to create an engaging and supportive learning environment that helps 
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-205" target="_blank" rel="noopener" style="margin-right:6px;">
-      <img src="https://img.shields.io/badge/course_page-1f77b4?style=flat-square" alt="Course page">
+      <img src="https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square" alt="Course page">
     </a>
 
-    <img src="https://img.shields.io/badge/BS_Compulsory-e91e63?style=flat-square" alt="BS Compulsory">
-
-    <img src="https://img.shields.io/badge/Fall-e91e63?style=flat-square" alt="Fall">
+    <img src="https://img.shields.io/badge/Fall_2016-lightgrey?style=flat-square" alt="Fall">
 
   </div>
 
@@ -252,12 +252,11 @@ My goal is to create an engaging and supportive learning environment that helps 
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-312" target="_blank" rel="noopener" style="margin-right:6px;">
-      <img src="https://img.shields.io/badge/course_page-1f77b4?style=flat-square" alt="Course page">
+      <img src="https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square" alt="Course page">
     </a>
 
-    <img src="https://img.shields.io/badge/BS_Compulsory-e91e63?style=flat-square" alt="BS Compulsory">
 
-    <img src="https://img.shields.io/badge/Spring-e91e63?style=flat-square" alt="Spring">
+    <img src="https://img.shields.io/badge/Spring_2017,_2018-lightgrey?style=flat-square" alt="Spring">
 
   </div>
 
@@ -281,12 +280,10 @@ My goal is to create an engaging and supportive learning environment that helps 
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-462" target="_blank" rel="noopener" style="margin-right:6px;">
-      <img src="https://img.shields.io/badge/course_page-1f77b4?style=flat-square" alt="Course page">
+      <img src="https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square" alt="Course page">
     </a>
 
-    <img src="https://img.shields.io/badge/BS_Elective-e91e63?style=flat-square" alt="BS Elective">
-
-    <img src="https://img.shields.io/badge/Spring-e91e63?style=flat-square" alt="Spring">
+    <img src="https://img.shields.io/badge/Spring--2017-lightgrey?style=flat-square" alt="Spring 2017">
 
   </div>
 
