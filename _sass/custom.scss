@@ -77,12 +77,9 @@ a:hover {
   100% { opacity: 1; }
 }
 
+/* FORCE animation (overrides everything) */
 .news-badge.pulse{
-  animation: badgeBlink 1.6s ease-in-out infinite;
-}
-
-.news-badge.pulse{
-  animation: badgePulse 2.2s ease-out infinite;
+  animation: badgeBlink 1.2s ease-in-out infinite !important;
 }
 
 /* Dark mode tuning (fixes “washed out” look) */
