@@ -50,63 +50,36 @@ author_profile: true
 ## Seminars and Invited Talks
 
 - **Prolonging the Lifetime of Underwater Sensor Networks Under Sinkhole Attacks** <br>
-  <i class="fa fa-university"></i> Georgia Institute of Technology <br>
-  <i class="fa fa-map-marker"></i> Atlanta, GA, USA <br>
-  <i class="fa fa-calendar"></i> Oct 24, 2019 <br>
-  <i class="fa fa-user"></i> Host: Prof. Ian F. Akyildiz <br>
-  [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](...)
+  Georgia Institute of Technology, Atlanta, GA, USA, Oct 24, 2019, Host: Prof. Ian F. Akyildiz
+  [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/14jmfAauo_CHZHZSjCTbuMjjVQVsGz1sm/view)
 
 - **Maximization of Underwater Sensor Networks Lifetime via Fountain Codes** <br>
-  SIU 2019 – Special Session on Next Generation Communication Techniques <br>
-  Sivas, Turkey <br>
-  Apr 25, 2019 <br> 
+  SIU 2019 – Special Session on Next Generation Communication Techniques, Sivas, Turkey , Apr 25, 2019
   [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/14bzsN_kmMONXaJet98dZsrgdQwOrFmCU/view?usp=sharing)
 
 - **Maximization of Underwater Sensor Networks Lifetime via Fountain Codes** <br>
-  ASELSAN Information and Communication Technologies Workshop <br>
-  Ankara, Turkey <br>
-  Feb 19, 2019 <br>
+  ASELSAN Information and Communication Technologies Workshop, Ankara, Turkey, Feb 19, 2019
   [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/14a3OSEhRvUTd9m0eJsiT_AUh9vqzGqZW/view?usp=sharing)
 
 - **Optimal Transmission Power Level Sets for Lifetime Maximization in Wireless Sensor Networks** <br>
-  ASELSAN Information and Communication Technologies Workshop <br> 
-  Ankara, Turkey <br>
-  Nov 14, 2016 <br>
+  ASELSAN Information and Communication Technologies Workshop, Ankara, Turkey, Nov 14, 2016 ,
   [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/16Cm8oSdQejoQQtKTkOmlRXNUYzaQfKZK/view?usp=sharing)
 
 - **The Impact of Random Power Assignment in Handshaking on Wireless Sensor Network Lifetime** <br>
-  University of Texas at Dallas <br>
-  Dallas, TX, USA <br>
-  Dec 3, 2014 <br>
-  Host: Prof. Murat Torlak <br>
+  University of Texas at Dallas, Dallas, TX, USA, Dec 3, 2014, Host: Prof. Murat Torlak
   [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/14injrfacnqRUnJb9IiNEHQdvhcTARxuy/view?usp=sharing)
 
 - **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks** <br>
-  University of Rochester <br>
-  Rochester, NY, USA <br>
-  Feb 11, 2014 <br>
-  Host: Prof. Wendi Heinzelman
+  University of Rochester, Rochester, NY, USA, Feb 11, 2014, Host: Prof. Wendi Heinzelman
 
 - **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks** <br>
-  University at Buffalo <br>
-  Buffalo, NY, USA <br>
-  Feb 7, 2014 <br>
-  Host: Prof. Tommaso Melodia
+  University at Buffalo, Buffalo, NY, USA, Feb 7, 2014, Host: Prof. Tommaso Melodia
 
 - **Wireless Sensor Networks, Network Optimization, and Mathematical Programming** <br>
-  Carleton University <br>
-  Ottawa, ON, Canada <br>
-  Feb 5, 2014 <br>
-  Host: Prof. Halim Yanikomeroglu
+  Carleton University, Ottawa, ON, Canada, Feb 5, 2014, Host: Prof. Halim Yanikomeroglu
 
 - **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks** <br>
-  University of Southern California <br>
-  Los Angeles, CA, USA <br>
-  Jan 23, 2014 <br>
-  Host: Prof. Bhaskar Krishnamachari
+  University of Southern California, Los Angeles, CA, USA, Jan 23, 2014, Host: Prof. Bhaskar Krishnamachari
 
 - **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks** <br>
-  University of California <br>
-  Irvine, CA, USA <br>
-  Jan 22, 2014 <br>
-  Host: Prof. Ender Ayanoglu
+  University of California, Irvine, CA, USA, Jan 22, 2014, Host: Prof. Ender Ayanoglu
