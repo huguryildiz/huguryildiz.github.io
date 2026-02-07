@@ -164,7 +164,7 @@ author_profile: true
     <a href="https://www.tedu.edu.tr/ee-492" target="_blank" rel="noopener" style="margin-right:6px; text-decoration: none;">
       <img src="https://img.shields.io/badge/EE_492%3A_Catalog_Page-1f77b4?style=flat-square" alt="EE 492 Course Catalog Page">
     </a>
-    <img src="https://img.shields.io/badge/EE_492%3A_pring_2017_%E2%80%94_Present-8bc34a?style=flat-square" alt="Spring 2017–Present">
+    <img src="https://img.shields.io/badge/EE_492%3A_Spring_2017_%E2%80%94_Present-8bc34a?style=flat-square" alt="Spring 2017–Present">
   </div>
 
 </div>

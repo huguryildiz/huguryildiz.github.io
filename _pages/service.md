@@ -55,47 +55,54 @@ author_profile: true
 
 ## Seminars and Invited Talks
 
-- **Prolonging the Lifetime of Underwater Sensor Networks Under Sinkhole Attacks**, <br>
-  Georgia Institute of Technology, Atlanta, GA, USA, Oct 24, 2019. <br>
+- **Prolonging the Lifetime of Underwater Sensor Networks Under Sinkhole Attacks** <br>
+  Georgia Institute of Technology <br>
+  Atlanta, GA, USA, Oct 24, 2019 <br>
   Host: Prof. Ian F. Akyildiz
   [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/14jmfAauo_CHZHZSjCTbuMjjVQVsGz1sm/view)
 
-- **Maximization of Underwater Sensor Networks Lifetime via Fountain Codes**, <br>
-  SIU 2019 – Special Session on Next Generation Communication Techniques, <br>
+- **Maximization of Underwater Sensor Networks Lifetime via Fountain Codes** <br>
+  SIU 2019 – Special Session on Next Generation Communication Techniques <br>
   Sivas, Turkey, Apr 25, 2019 <br> 
   [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/14bzsN_kmMONXaJet98dZsrgdQwOrFmCU/view?usp=sharing)
 
-- **Maximization of Underwater Sensor Networks Lifetime via Fountain Codes**, <br>
-  ASELSAN Information and Communication Technologies Workshop, <br>
+- **Maximization of Underwater Sensor Networks Lifetime via Fountain Codes** <br>
+  ASELSAN Information and Communication Technologies Workshop <br>
   Ankara, Turkey, Feb 19, 2019 <br>
   [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/14a3OSEhRvUTd9m0eJsiT_AUh9vqzGqZW/view?usp=sharing)
 
-- **Optimal Transmission Power Level Sets for Lifetime Maximization in Wireless Sensor Networks**, <br>
-  ASELSAN Information and Communication Technologies Workshop, <br> 
+- **Optimal Transmission Power Level Sets for Lifetime Maximization in Wireless Sensor Networks** <br>
+  ASELSAN Information and Communication Technologies Workshop <br> 
   Ankara, Turkey, Nov 14, 2016 <br>
   [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/16Cm8oSdQejoQQtKTkOmlRXNUYzaQfKZK/view?usp=sharing)
 
-- **The Impact of Random Power Assignment in Handshaking on Wireless Sensor Network Lifetime**, <br>
-  University of Texas at Dallas, Dallas, TX, USA, Dec 3, 2014. <br>
+- **The Impact of Random Power Assignment in Handshaking on Wireless Sensor Network Lifetime** <br>
+  University of Texas at Dallas br>
+  Dallas, TX, USA, Dec 3, 2014 <br>
   Host: Prof. Murat Torlak
   [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/14injrfacnqRUnJb9IiNEHQdvhcTARxuy/view?usp=sharing)
 
-- **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks**, <br>
-  University of Rochester, Rochester, NY, USA, Feb 11, 2014. <br>
+- **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks** <br>
+  University of Rochester <br>
+  Rochester, NY, USA, Feb 11, 2014 <br>
   Host: Prof. Wendi Heinzelman
 
-- **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks**, <br>
-  University at Buffalo, Buffalo, NY, USA, Feb 7, 2014. <br>
+- **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks** <br>
+  University at Buffalo <br>
+  Buffalo, NY, USA, Feb 7, 2014 <br>
   Host: Prof. Tommaso Melodia
 
-- **Wireless Sensor Networks, Network Optimization, and Mathematical Programming**, <br>
-  Carleton University, Ottawa, ON, Canada, Feb 5, 2014. <br>
+- **Wireless Sensor Networks, Network Optimization, and Mathematical Programming** <br>
+  Carleton University <br>
+  Ottawa, ON, Canada, Feb 5, 2014 <br>
   Host: Prof. Halim Yanikomeroglu
 
-- **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks**, <br>
-  University of Southern California, Los Angeles, CA, USA, Jan 23, 2014. <br>
+- **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks** <br>
+  University of Southern California <br>
+  Los Angeles, CA, USA, Jan 23, 2014 <br>
   Host: Prof. Bhaskar Krishnamachari
 
-- **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks**, <br>
-  University of California, Irvine, CA, USA, Jan 22, 2014. <br>
+- **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks** <br>
+  University of California <br>
+  Irvine, CA, USA, Jan 22, 2014 <br>
   Host: Prof. Ender Ayanoglu
