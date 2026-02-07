@@ -7,6 +7,7 @@ author_profile: true
 
 Course materials, including lecture notes and supplementary resources, are available through the [TEDU LMS](https://lms.tedu.edu.tr/).
 
+<!--
 ## Current Courses at TED University
 
 ### Undergraduate
@@ -54,6 +55,7 @@ Course materials, including lecture notes and supplementary resources, are avail
 - **EE 462 – Power System Analysis**  
   ![Term](https://img.shields.io/badge/Spring_2017-lightgrey?style=flat-square)
   [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-462)
+-->
 
 ## Teaching Philosophy
 
@@ -68,6 +70,10 @@ My teaching philosophy integrates **theory, practice, and active learning** to f
 My goal is to create an engaging and supportive learning environment that helps students develop strong analytical and problem-solving skills.
 
 ---
+
+## Current Courses at TED University
+
+### Undergraduate
 
 <!------------>
 <!-- EE 304 -->
@@ -179,6 +185,8 @@ My goal is to create an engaging and supportive learning environment that helps 
 
 </div>
 
+### Graduate
+
 <!------------>
 <!-- EE 512 -->
 <!------------>
@@ -205,6 +213,12 @@ My goal is to create an engaging and supportive learning environment that helps 
   </div>
 
 </div>
+
+---
+
+## Past Courses
+
+### Undergraduate
 
 <!------------>
 <!-- EE 205 -->
