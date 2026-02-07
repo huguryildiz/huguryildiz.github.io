@@ -64,6 +64,79 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
   </div>
 </div>
 
+<style>
+.ra-container{
+  margin-top:20px
+}
+.ra-section{
+  margin-bottom:24px
+}
+.ra-title{
+  font-size:16px;
+  font-weight:700;
+  margin-bottom:12px;
+  color:#374151
+}
+.ra-wrap{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px
+}
+.ra-chip{
+  padding:8px 16px;
+  border-radius:999px;
+  font-weight:600;
+  line-height:1;
+  font-size:14px;
+  transition:all 0.2s ease;
+  cursor:default
+}
+.ra-chip:hover{
+  transform:translateY(-2px);
+  box-shadow:0 4px 12px rgba(0,0,0,0.1)
+}
+
+/* Network Technologies - Mavi tonlar */
+.ra-network{
+  background:#dbeafe;
+  border:1px solid #93c5fd;
+  color:#1e40af
+}
+.ra-network:hover{
+  background:#bfdbfe
+}
+
+/* Optimization - Turuncu tonlar */
+.ra-opt{
+  background:#fed7aa;
+  border:1px solid #fdba74;
+  color:#c2410c
+}
+.ra-opt:hover{
+  background:#fdc97f
+}
+
+/* AI/ML - Yeşil tonlar */
+.ra-ai{
+  background:#d1fae5;
+  border:1px solid #6ee7b7;
+  color:#065f46
+}
+.ra-ai:hover{
+  background:#a7f3d0
+}
+
+/* Quantum - Mor tonlar */
+.ra-quantum{
+  background:#e9d5ff;
+  border:1px solid #c084fc;
+  color:#6b21a8
+}
+.ra-quantum:hover{
+  background:#d8b4fe
+}
+</style>
+
 
 ---
 
@@ -72,23 +145,36 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
 
 ## Latest on LinkedIn
 
-<div class="linkedin-embed">
-  <iframe
-    src="https://www.linkedin.com/embed/feed/update/urn:li:share:7417308257074999296"
-    frameborder="0"
-    allowfullscreen
-    title="Embedded LinkedIn post">
-  </iframe>
+<div class="linkedin-grid">
+  <div class="linkedin-card">
+    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7417308257074999296"></iframe>
+  </div>
+  <div class="linkedin-card">
+    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:URN_2"></iframe>
+  </div>
+  <div class="linkedin-card">
+    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:URN_3"></iframe>
+  </div>
 </div>
 
 <style>
-.linkedin-embed {
-  max-width: 520px;
-  margin: 1.5rem auto;
+.linkedin-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0;
 }
-.linkedin-embed iframe {
+
+.linkedin-card{
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.linkedin-card iframe{
   width: 100%;
-  height: 820px;
+  height: 360px;
   border: none;
 }
 </style>
