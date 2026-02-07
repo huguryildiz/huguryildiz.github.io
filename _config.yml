@@ -28,10 +28,6 @@ search: false
 breadcrumbs: false
 enable_copy_code_button: false
 
-collections:
-  talks:
-    output: true
-
 # =========================
 # Plugins (GitHub Pages uyumlu)
 # =========================

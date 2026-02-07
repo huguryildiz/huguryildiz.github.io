@@ -144,14 +144,28 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
 
 ---
 
+## News
+
+- <span class="news-badge pulse">Oct 2024</span> 📄 New journal paper accepted in *IEEE Sensors Journal*.
+- <span class="news-badge">Jul 2024</span> 🎤 Invited talk at Georgia Institute of Technology.
+- <span class="news-badge">May 2024</span> 🎓 Started supervising two MSc theses.
+
+<details>
+<summary><strong>Older news</strong></summary>
+
+- <span class="news-badge">Dec 2023</span> 📄 Journal paper published in *Ad Hoc Networks*.
+- <span class="news-badge">Sep 2023</span> 🎤 Seminar at Carleton University.
+- <span class="news-badge">Jun 2023</span> 🧑‍🏫 IEEE reviewer service.
+
+</details>
+
+---
+
 ## Latest on LinkedIn
 
 <div class="linkedin-grid">
   <div class="linkedin-card">
     <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7417308257074999296"></iframe>
-  </div>
-  <div class="linkedin-card">
-    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6864285108807983104"></iframe>
   </div>
 </div>
 
