@@ -7,7 +7,7 @@ author_profile: true
 
 ## Metrics
 
-<p align="left">
+<p class="metrics-badges">
   <a href="https://scholar.google.com.tr/citations?user=nQwHS1gAAAAJ">
     <img src="https://img.shields.io/badge/Citations-1043-blue?style=flat-square&logo=google-scholar" alt="Citations">
   </a>
