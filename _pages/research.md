@@ -9,17 +9,6 @@ author_profile: true
 
 My research focuses on the applications of optimization techniques (e.g., linear programming, mixed-integer programming, heuristics) for modeling and analyzing research problems in wireless communications and networks.
 
-### Research Areas
-
-- **Ad Hoc Networks**
-- **Wireless Sensor Networks**
-- **Underwater Acoustic Sensor Networks**
-- **Internet of Things**
-- **Smart Grids**
-- **Operations Research**
-- **Meta-Heuristics**
-- **Reinforcement Learning**
-
 ## Key Research Topics
 
 ### Maximization of Wireless Sensor Networks Lifetime via Linear Programming
@@ -36,6 +25,15 @@ I have extensively researched lifetime maximization in underwater acoustic senso
 - Void regions and connectivity issues
 - Multi-sink architectures
 - Security and reliability constraints
+
+- **Operations Research and Mathematical Optimization for Networked Systems:**  
+  Development of linear, integer, and mixed-integer programming (MILP) models, including network flow–based formulations, for complex optimization problems arising in communication networks. Primary focus areas include network lifetime maximization, energy efficiency, resource allocation, energy–delay–reliability trade-offs, and resilience under physical, topological, and security constraints.
+
+- **Wireless Ad Hoc and Underwater Sensor Networks:**  
+  Design and optimization of energy-efficient routing, topology control, and communication strategies for terrestrial wireless ad hoc networks and underwater acoustic sensor networks. Research topics span network lifetime and energy-efficiency analysis, k-connectivity–based reliability, multi-sink architectures, void regions, adversarial effects (e.g., eavesdropping and sinkhole attacks), and operation under harsh and resource-constrained environments.
+
+- **Hybrid Optimization and Learning-Based Network Control:**  
+  Integration of mathematical optimization frameworks with machine learning and reinforcement learning techniques to enable adaptive, data-driven, and scalable control of complex networked systems. Recent work explores hybrid optimization–learning methodologies for parameter prediction, dynamic decision-making, and emerging paradigms such as quantum network routing and hybrid classical–quantum architectures.
 
 ### Recent Research Directions
 
