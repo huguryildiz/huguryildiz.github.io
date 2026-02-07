@@ -59,7 +59,20 @@
 /* Containers */
 .ra-container { margin-top: 1.25rem; }
 .ra-section   { margin-bottom: 1.5rem; }
-.ra-title     { margin-bottom: .75rem; font-weight: 700; }
+
+/* Title: inherit theme colors (fix dark mode) */
+.ra-title{
+  margin-bottom: .75rem;
+  font-weight: 700;
+  color: inherit;          /* <-- key fix */
+}
+
+/* If you use h2/h3 in the section, force same behavior */
+.ra-section h2,
+.ra-section h3,
+.ra-section h4{
+  color: inherit;          /* <-- key fix */
+}
 
 /* Chip wrapper */
 .ra-wrap{
@@ -68,7 +81,7 @@
   gap: .6rem;
 }
 
-/* Base chip (inherits font, size, color) */
+/* Base chip */
 .ra-chip{
   padding: .45rem 1rem;
   border-radius: 999px;
@@ -91,34 +104,10 @@
 /* =========================
    Color Variants
    ========================= */
-
-/* Network */
-.ra-network{
-  --ra-bg: #dbeafe;
-  --ra-bd: #93c5fd;
-  --ra-fg: #1e40af;
-}
-
-/* Optimization */
-.ra-opt{
-  --ra-bg: #fed7aa;
-  --ra-bd: #fdba74;
-  --ra-fg: #c2410c;
-}
-
-/* AI / ML */
-.ra-ai{
-  --ra-bg: #d1fae5;
-  --ra-bd: #6ee7b7;
-  --ra-fg: #065f46;
-}
-
-/* Quantum */
-.ra-quantum{
-  --ra-bg: #e9d5ff;
-  --ra-bd: #c084fc;
-  --ra-fg: #6b21a8;
-}
+.ra-network{ --ra-bg:#dbeafe; --ra-bd:#93c5fd; --ra-fg:#1e40af; }
+.ra-opt    { --ra-bg:#fed7aa; --ra-bd:#fdba74; --ra-fg:#c2410c; }
+.ra-ai     { --ra-bg:#d1fae5; --ra-bd:#6ee7b7; --ra-fg:#065f46; }
+.ra-quantum{ --ra-bg:#e9d5ff; --ra-bd:#c084fc; --ra-fg:#6b21a8; }
 
 /* 
 ==========================
