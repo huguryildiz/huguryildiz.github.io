@@ -81,7 +81,7 @@ author_profile: true
       <img src="https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square" alt="Course Catalog Page">
     </a>
 
-    <img src="https://img.shields.io/badge/Spring_2017--Present-8bc34a?style=flat-square" alt="Spring 2017–Present">
+    <img src="https://img.shields.io/badge/Spring_2017_%E2%80%94_Present-8bc34a?style=flat-square" alt="Spring 2017–Present">
 
   </div>
 
@@ -108,7 +108,7 @@ author_profile: true
       <img src="https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square" alt="Course Catalog Page">
     </a>
 
-    <img src="https://img.shields.io/badge/Fall_2016--Present-8bc34a?style=flat-square" alt="Fall 2016–Present">
+    <img src="https://img.shields.io/badge/Fall_2016_%E2%80%94_Present-8bc34a?style=flat-square" alt="Fall 2016–Present">
   </div>
 
 </div>
@@ -134,7 +134,7 @@ author_profile: true
       <img src="https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square" alt="Course Catalog Page">
     </a>
 
-    <img src="https://img.shields.io/badge/Fall_2016--Present-8bc34a?style=flat-square" alt="Fall 2016–Present">
+    <img src="https://img.shields.io/badge/Fall_2016_%E2%80%94_Present-8bc34a?style=flat-square" alt="Fall 2016–Present">
   </div>
 
 </div>
@@ -164,8 +164,8 @@ author_profile: true
       <img src="https://img.shields.io/badge/EE_492_Catalog_Page-1f77b4?style=flat-square" alt="EE 492 Course Catalog Page">
     </a>
 
-    <img src="https://img.shields.io/badge/Fall_2016--Present-8bc34a?style=flat-square" alt="Fall 2016–Present">
-    <img src="https://img.shields.io/badge/Spring_2017--Present-8bc34a?style=flat-square" alt="Spring 2017–Present">
+    <img src="https://img.shields.io/badge/EE_491%3A_Fall_2016_%E2%80%94_Present-8bc34a?style=flat-square" alt="Fall 2016–Present">
+    <img src="https://img.shields.io/badge/EE_492%3A_pring_2017_%E2%80%94_Present-8bc34a?style=flat-square" alt="Spring 2017–Present">
   </div>
 
 </div>
@@ -280,7 +280,7 @@ author_profile: true
       <img src="https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square" alt="Course Catalog Page">
     </a>
 
-    <img src="https://img.shields.io/badge/Spring--2017-lightgrey?style=flat-square" alt="Spring 2017">
+    <img src="https://img.shields.io/badge/Spring_2017-lightgrey?style=flat-square" alt="Spring 2017">
 
   </div>
 
