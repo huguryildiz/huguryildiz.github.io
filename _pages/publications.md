@@ -19,7 +19,6 @@ author_profile: true
   </a>
 </p>
 
-
 <p align="left">
   <img src="https://img.shields.io/badge/Q1-10b981?style=flat-square" alt="Q1">
   <img src="https://img.shields.io/badge/Q2-3b82f6?style=flat-square" alt="Q2">
@@ -33,7 +32,7 @@ author_profile: true
 [Conf. Papers (Int.)](#conference-papers-international){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
 [Conf. Papers (Nat.)](#conference-papers-national---in-turkish){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
 
-test
+
 ---
 
 ## Journal Papers
