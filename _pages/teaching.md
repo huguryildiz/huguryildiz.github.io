@@ -201,7 +201,7 @@ My goal is to create an engaging and supportive learning environment that helps 
     <h3 style="margin:0 0 8px 0;">EE 512 – Optimization for Communication Networks</h3>
 
     <p style="margin:0 0 12px 0;">
-      Graduate-level elective covering optimization techniques for communication networks, including linear, integer, mixed-integer programming, simplex methods, network flows, and wireless network applications.
+      Graduate-level elective covering optimization techniques for communication networks, including linear, integer, mixed-integer programming, network flows, and wireless network applications.
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-512" target="_blank" rel="noopener" style="margin-right:6px;">
