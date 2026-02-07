@@ -13,29 +13,29 @@ author_profile: true
 
 - **EE 304 – Probability and Random Variables**  
   ![Term](https://img.shields.io/badge/Spring_2017--Present-8bc34a?style=flat-square)
-  [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-304)
+  [![Course Catalog](https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-304)
 
 - **EE 311 – Signals and Systems**  
   ![Term](https://img.shields.io/badge/Fall_2016--Present-8bc34a?style=flat-square)
-  [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-311)
+  [![Course Catalog](https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-311)
 
 - **EE 413 – Communication Systems II**  
   ![Term](https://img.shields.io/badge/Fall_2016--Present-8bc34a?style=flat-square)
-  [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-413)
+  [![Course Catalog](https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-413)
 
 - **EE 491 – Senior Project I**  
   ![Term](https://img.shields.io/badge/Fall_2016--Present-8bc34a?style=flat-square)
-  [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-491)
+  [![Course Catalog](https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-491)
 
 - **EE 492 – Senior Project II**  
   ![Term](https://img.shields.io/badge/Spring_2017--Present-8bc34a?style=flat-square)
-  [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-492)
+  [![Course Catalog](https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-492)
 
 ### Graduate
 
 - **EE 512 – Optimization for Communication Networks**  
   ![Term](https://img.shields.io/badge/Spring_2026-e91e63?style=flat-square)
-  [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-512)
+  [![Course Catalog](https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-512)
 
 ---
 
@@ -45,15 +45,15 @@ author_profile: true
 
 - **EE 205 – Software Tools for Electrical Engineering**  
   ![Term](https://img.shields.io/badge/Fall_2016-lightgrey?style=flat-square)
-  [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-205)
+  [![Course Catalog](https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-205)
 
 - **EE 312 – Communication Systems I**  
   ![Term](https://img.shields.io/badge/Spring_2017,_2018-lightgrey?style=flat-square)
-  [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-312)
+  [![Course Catalog](https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-312)
 
 - **EE 462 – Power System Analysis**  
   ![Term](https://img.shields.io/badge/Spring_2017-lightgrey?style=flat-square)
-  [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-462)
+  [![Course Catalog](https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-462)
 -->
 
 ## Current Courses at TED University
@@ -78,7 +78,7 @@ author_profile: true
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-304" target="_blank" rel="noopener" style="margin-right:6px;">
-      <img src="https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square" alt="Course page">
+      <img src="https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square" alt="Course page">
     </a>
 
     <img src="https://img.shields.io/badge/Spring_2017--Present-8bc34a?style=flat-square" alt="Spring 2017–Present">
@@ -105,7 +105,7 @@ author_profile: true
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-311" target="_blank" rel="noopener">
-      <img src="https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square" alt="Course page">
+      <img src="https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square" alt="Course page">
     </a>
 
     <img src="https://img.shields.io/badge/Fall_2016--Present-8bc34a?style=flat-square" alt="Fall_2016–Present">
@@ -132,7 +132,7 @@ author_profile: true
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-413" target="_blank" rel="noopener">
-      <img src="https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square" alt="Course page">
+      <img src="https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square" alt="Course page">
     </a>
 
     <img src="https://img.shields.io/badge/Fall_2016--Present-8bc34a?style=flat-square" alt="Fall_2016–Present">
@@ -158,11 +158,11 @@ author_profile: true
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-491" target="_blank" rel="noopener" style="margin-right:6px;">
-      <img src="https://img.shields.io/badge/EE_491_Course_Catalog-1f77b4?style=flat-square" alt="EE 491 Catalog">
+      <img src="https://img.shields.io/badge/EE_491_Course_Catalog_Page-1f77b4?style=flat-square" alt="EE 491 Catalog">
     </a>
 
     <a href="https://www.tedu.edu.tr/ee-492" target="_blank" rel="noopener" style="margin-right:6px;">
-      <img src="https://img.shields.io/badge/EE_492_Course_Catalog-1f77b4?style=flat-square" alt="EE 492 Catalog">
+      <img src="https://img.shields.io/badge/EE_492_Course_Catalog_Page-1f77b4?style=flat-square" alt="EE 492 Catalog">
     </a>
 
     <img src="https://img.shields.io/badge/Fall_2016--Present-8bc34a?style=flat-square" alt="Fall 2016–Present">
@@ -191,7 +191,7 @@ author_profile: true
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-512" target="_blank" rel="noopener" style="margin-right:6px;">
-      <img src="https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square" alt="Course page">
+      <img src="https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square" alt="Course page">
     </a>
 
     <img src="https://img.shields.io/badge/Spring_2026-8bc34a?style=flat-square" alt="Spring 2026">
@@ -224,7 +224,7 @@ author_profile: true
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-205" target="_blank" rel="noopener" style="margin-right:6px;">
-      <img src="https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square" alt="Course page">
+      <img src="https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square" alt="Course page">
     </a>
 
     <img src="https://img.shields.io/badge/Fall_2016-lightgrey?style=flat-square" alt="Fall">
@@ -252,7 +252,7 @@ author_profile: true
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-312" target="_blank" rel="noopener" style="margin-right:6px;">
-      <img src="https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square" alt="Course page">
+      <img src="https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square" alt="Course page">
     </a>
 
 
@@ -280,7 +280,7 @@ author_profile: true
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-462" target="_blank" rel="noopener" style="margin-right:6px;">
-      <img src="https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square" alt="Course page">
+      <img src="https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square" alt="Course page">
     </a>
 
     <img src="https://img.shields.io/badge/Spring--2017-lightgrey?style=flat-square" alt="Spring 2017">
