@@ -35,7 +35,7 @@ author_profile: true
 
 ---
 
-## Journal Paperss
+## Journal Papers
 
 - Karagul, C. T., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025). *Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity*. *IEEE Internet of Things Journal, 12*(22), 47817–47826.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2025_Rank-Q1-10b981?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JIOT.2025.3603829)
@@ -131,11 +131,10 @@ author_profile: true
 
 - **Yildiz, H. U.** (2019, November). *Utilization of multi-sink architectures for lifetime maximization in underwater sensor networks*.  
   In *2019 2nd IEEE MENACOMM*.
-
-  ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square)
-  [![Award](https://img.shields.io/badge/Award-Best_Paper_%283rd%29-ffcc00?style=flat-square)](https://drive.google.com/file/d/1QbpfuRXmyoTQCFJAFh_H-exv3v3Q8L-t/view)
-  [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/MENACOMM46666.2019.8988521)
-  [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16TwAEo1W8lqqKywIF9zQy7G5-Z-S53_T/view?usp=sharing)
+![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square)
+[![Award](https://img.shields.io/badge/Award-Best_Paper_%283rd%29-ffcc00?style=flat-square)](https://drive.google.com/file/d/1QbpfuRXmyoTQCFJAFh_H-exv3v3Q8L-t/view)
+[![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/MENACOMM46666.2019.8988521)
+[![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16TwAEo1W8lqqKywIF9zQy7G5-Z-S53_T/view?usp=sharing)
 
 - **Yildiz, H. U.** (2019, October). *Prolonging the lifetime of underwater sensor networks under sinkhole attacks*. In *WUWNet '19* (pp. 1–5). ACM.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1145/3366486.3366516) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16U6NPkWhqjBHdUU8XTomkTP_EdsL-GH9/view?usp=sharing)  
