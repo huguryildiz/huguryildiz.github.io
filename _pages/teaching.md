@@ -78,7 +78,7 @@ author_profile: true
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-304" target="_blank" rel="noopener" style="margin-right:6px;">
-      <img src="https://img.shields.io/badge/Course%20Catalog-Page-1f77b4?style=flat-square" alt="Course Catalog Page">
+      <img src="https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square" alt="Course Catalog Page">
     </a>
 
     <img src="https://img.shields.io/badge/Spring_2017--Present-8bc34a?style=flat-square" alt="Spring 2017–Present">
@@ -105,7 +105,7 @@ author_profile: true
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-311" target="_blank" rel="noopener" style="margin-right:6px;">
-      <img src="https://img.shields.io/badge/Course%20Catalog-Page-1f77b4?style=flat-square" alt="Course Catalog Page">
+      <img src="https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square" alt="Course Catalog Page">
     </a>
 
     <img src="https://img.shields.io/badge/Fall_2016--Present-8bc34a?style=flat-square" alt="Fall 2016–Present">
@@ -131,7 +131,7 @@ author_profile: true
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-413" target="_blank" rel="noopener" style="margin-right:6px;">
-      <img src="https://img.shields.io/badge/Course%20Catalog-Page-1f77b4?style=flat-square" alt="Course Catalog Page">
+      <img src="https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square" alt="Course Catalog Page">
     </a>
 
     <img src="https://img.shields.io/badge/Fall_2016--Present-8bc34a?style=flat-square" alt="Fall 2016–Present">
@@ -190,7 +190,7 @@ author_profile: true
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-512" target="_blank" rel="noopener" style="margin-right:6px;">
-      <img src="https://img.shields.io/badge/Course%20Catalog-Page-1f77b4?style=flat-square" alt="Course Catalog Page">
+      <img src="https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square" alt="Course Catalog Page">
     </a>
 
     <img src="https://img.shields.io/badge/Spring_2026-8bc34a?style=flat-square" alt="Spring 2026">
@@ -223,7 +223,7 @@ author_profile: true
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-205" target="_blank" rel="noopener" style="margin-right:6px;">
-      <img src="https://img.shields.io/badge/Course%20Catalog-Page-1f77b4?style=flat-square" alt="Course Catalog Page">
+      <img src="https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square" alt="Course Catalog Page">
     </a>
 
     <img src="https://img.shields.io/badge/Fall_2016-lightgrey?style=flat-square" alt="Fall 2016">
@@ -250,7 +250,7 @@ author_profile: true
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-312" target="_blank" rel="noopener" style="margin-right:6px;">
-      <img src="https://img.shields.io/badge/Course%20Catalog-Page-1f77b4?style=flat-square" alt="Course Catalog Page">
+      <img src="https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square" alt="Course Catalog Page">
     </a>
 
     <img src="https://img.shields.io/badge/Spring%202017%2C%202018-lightgrey?style=flat-square" alt="Spring 2017, 2018">
@@ -277,7 +277,7 @@ author_profile: true
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-462" target="_blank" rel="noopener" style="margin-right:6px;">
-      <img src="https://img.shields.io/badge/Course%20Catalog-Page-1f77b4?style=flat-square" alt="Course Catalog Page">
+      <img src="https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square" alt="Course Catalog Page">
     </a>
 
     <img src="https://img.shields.io/badge/Spring--2017-lightgrey?style=flat-square" alt="Spring 2017">
