@@ -43,6 +43,13 @@ plugins:
 include:
   - _pages
 
+# BU SATIR ÇOK KRİTİK
+defaults:
+  - scope:
+      path: ""
+    values:
+      classes: wide  
+
 # =========================
 # Markdown & Permalinks
 # =========================
