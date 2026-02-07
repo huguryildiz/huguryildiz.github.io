@@ -77,7 +77,7 @@ author_profile: true
       A third-year undergraduate core course covering probability models, discrete and continuous random variables, joint and conditional distributions, correlation, covariance, and expectation.
     </p>
 
-    <a href="https://www.tedu.edu.tr/ee-304" target="_blank" rel="noopener" style="margin-right:6px;">
+    <a href="https://www.tedu.edu.tr/ee-304" target="_blank" rel="noopener" style="margin-right:6px; text-decoration: none;">
       <img src="https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square" alt="Course Catalog Page">
     </a>
 
@@ -104,7 +104,7 @@ author_profile: true
       A third-year undergraduate core course covering continuous-time and discrete-time signals, linear systems, Fourier analysis, and sampling theory.
     </p>
 
-    <a href="https://www.tedu.edu.tr/ee-311" target="_blank" rel="noopener" style="margin-right:6px;">
+    <a href="https://www.tedu.edu.tr/ee-311" target="_blank" rel="noopener" style="margin-right:6px; text-decoration: none;">
       <img src="https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square" alt="Course Catalog Page">
     </a>
 
@@ -130,7 +130,7 @@ author_profile: true
       A senior-level undergraduate course covering digital communication systems, sampling, quantization, digital modulation, receiver design, noise effects, and introductory information theory concepts.
     </p>
 
-    <a href="https://www.tedu.edu.tr/ee-413" target="_blank" rel="noopener" style="margin-right:6px;">
+    <a href="https://www.tedu.edu.tr/ee-413" target="_blank" rel="noopener" style="margin-right:6px; text-decoration: none;">
       <img src="https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square" alt="Course Catalog Page">
     </a>
 
@@ -156,12 +156,12 @@ author_profile: true
       A two-semester capstone sequence focused on the design and implementation of an electrical and electronics engineering system, emphasizing engineering analysis, technical reporting, and teamwork.
     </p>
 
-    <a href="https://www.tedu.edu.tr/ee-491" target="_blank" rel="noopener" style="margin-right:6px;">
-      <img src="https://img.shields.io/badge/EE%20491%20Catalog-Page-1f77b4?style=flat-square" alt="EE 491 Course Catalog Page">
+    <a href="https://www.tedu.edu.tr/ee-491" target="_blank" rel="noopener" style="margin-right:6px; text-decoration: none;">
+      <img src="https://img.shields.io/badge/EE_491_Catalog_Page-1f77b4?style=flat-square" alt="EE 491 Course Catalog Page">
     </a>
 
-    <a href="https://www.tedu.edu.tr/ee-492" target="_blank" rel="noopener" style="margin-right:6px;">
-      <img src="https://img.shields.io/badge/EE%20492%20Catalog-Page-1f77b4?style=flat-square" alt="EE 492 Course Catalog Page">
+    <a href="https://www.tedu.edu.tr/ee-492" target="_blank" rel="noopener" style="margin-right:6px; text-decoration: none;">
+      <img src="https://img.shields.io/badge/EE_492_Catalog_Page-1f77b4?style=flat-square" alt="EE 492 Course Catalog Page">
     </a>
 
     <img src="https://img.shields.io/badge/Fall_2016--Present-8bc34a?style=flat-square" alt="Fall 2016–Present">
@@ -189,7 +189,7 @@ author_profile: true
       Graduate-level course covering optimization techniques for communication networks, including linear, integer, mixed-integer programming, network flows, and wireless network applications.
     </p>
 
-    <a href="https://www.tedu.edu.tr/ee-512" target="_blank" rel="noopener" style="margin-right:6px;">
+    <a href="https://www.tedu.edu.tr/ee-512" target="_blank" rel="noopener" style="margin-right:6px; text-decoration: none;">
       <img src="https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square" alt="Course Catalog Page">
     </a>
 
@@ -222,7 +222,7 @@ author_profile: true
       A compulsory undergraduate course introducing MATLAB-based software tools and computational methods for electrical engineering applications.
     </p>
 
-    <a href="https://www.tedu.edu.tr/ee-205" target="_blank" rel="noopener" style="margin-right:6px;">
+    <a href="https://www.tedu.edu.tr/ee-205" target="_blank" rel="noopener" style="margin-right:6px; text-decoration: none;">
       <img src="https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square" alt="Course Catalog Page">
     </a>
 
@@ -249,7 +249,7 @@ author_profile: true
       A compulsory undergraduate course covering communication systems, modulation techniques, and noise analysis.
     </p>
 
-    <a href="https://www.tedu.edu.tr/ee-312" target="_blank" rel="noopener" style="margin-right:6px;">
+    <a href="https://www.tedu.edu.tr/ee-312" target="_blank" rel="noopener" style="margin-right:6px; text-decoration: none;">
       <img src="https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square" alt="Course Catalog Page">
     </a>
 
@@ -276,7 +276,7 @@ author_profile: true
       An undergraduate elective covering power system modeling, load flow, fault analysis, smart grids, and renewables.
     </p>
 
-    <a href="https://www.tedu.edu.tr/ee-462" target="_blank" rel="noopener" style="margin-right:6px;">
+    <a href="https://www.tedu.edu.tr/ee-462" target="_blank" rel="noopener" style="margin-right:6px; text-decoration: none;">
       <img src="https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square" alt="Course Catalog Page">
     </a>
 
