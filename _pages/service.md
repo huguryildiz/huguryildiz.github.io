@@ -81,8 +81,9 @@ author_profile: true
   [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/16Cm8oSdQejoQQtKTkOmlRXNUYzaQfKZK/view?usp=sharing)
 
 - **The Impact of Random Power Assignment in Handshaking on Wireless Sensor Network Lifetime** <br>
-  University of Texas at Dallas br>
-  Dallas, TX, USA, Dec 3, 2014 <br>
+  University of Texas at Dallas <br>
+  Dallas, TX, USA <br>
+  Dec 3, 2014 <br>
   Host: Prof. Murat Torlak <br>
   [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/14injrfacnqRUnJb9IiNEHQdvhcTARxuy/view?usp=sharing)
 
