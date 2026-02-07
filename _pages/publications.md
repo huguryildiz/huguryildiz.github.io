@@ -21,7 +21,7 @@ author_profile: true
 
 <p align="left">
   <img src="https://img.shields.io/badge/Q1-10b981?style=flat-square" alt="Q1">
-  <img src="https://img.shields.io/badge/Q2-3b82f6?style=flat-square" alt="Q2">
+  <img src="https://img.shields.io/badge/Q2-14b8a6?style=flat-square" alt="Q2">
   <img src="https://img.shields.io/badge/Q3-f59e0b?style=flat-square" alt="Q3">
   <img src="https://img.shields.io/badge/Q4-6b7280?style=flat-square" alt="Q4">
 </p>
@@ -31,6 +31,8 @@ author_profile: true
 [Editorials](#editorials){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
 [Conf. Papers (Int.)](#conference-papers-international){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
 [Conf. Papers (Nat.)](#conference-papers-national---in-turkish){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
+
+---
 
 ## Journal Papers
 
@@ -62,7 +64,7 @@ author_profile: true
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2019_Rank-Q1-10b981?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/TII.2019.2892866)
 
 - Akbas, A., **Yildiz, H. U.**, Ozbayoglu, A. M., & Tavli, B. (2019). *Neural network–based instant parameter prediction for wireless sensor network optimization models*. *Wireless Networks, 25*(6), 3405–3418.  
-![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q2](https://img.shields.io/badge/2019_Rank-Q2-3b82f6?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1007/s11276-018-1808-y)
+![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q2](https://img.shields.io/badge/2019_Rank-Q2-14b8a6?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1007/s11276-018-1808-y)
 
 - Erdem, H. E., **Yildiz, H. U.**, & Gungor, V. C. (2019). *On the lifetime of compressive sensing–based energy harvesting in underwater sensor networks*. *IEEE Sensors Journal, 19*(12), 4680–4687.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2019_Rank-Q1-10b981?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JSEN.2019.2900427)
@@ -71,7 +73,7 @@ author_profile: true
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2019_Rank-Q1-10b981?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1016/j.comnet.2019.02.015)
 
 - **Yildiz, H. U.** (2019). *Investigation of network lifetime and delay trade-off in underwater acoustic sensor networks*. *International Journal of Communication Systems, 32*(7), e3924.  
-![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q2](https://img.shields.io/badge/2019_Rank-Q2-3b82f6?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1002/dac.3924)
+![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q2](https://img.shields.io/badge/2019_Rank-Q2-14b8a6?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1002/dac.3924)
 
 - **Yildiz, H. U.**, Gungor, V. C., & Tavli, B. (2019). *Packet size optimization for lifetime maximization in underwater acoustic sensor networks*. *IEEE Transactions on Industrial Informatics, 15*(2), 719–729.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2019_Rank-Q1-10b981?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/TII.2018.2841830)
@@ -80,7 +82,7 @@ author_profile: true
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q3](https://img.shields.io/badge/2018_Rank-Q3-f59e0b?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://journals.tubitak.gov.tr/elektrik/issues/elk-18-26-6/elk-26-6-23-1803-189.pdf)
 
 - Yigit, M., **Yildiz, H. U.**, Kurt, S., Tavli, B., & Gungor, V. C. (2018). *A survey on packet size optimization for terrestrial, underwater, underground, and body area sensor networks*. *International Journal of Communication Systems, 31*(11), e3572.  
-![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q2](https://img.shields.io/badge/2018_Rank-Q2-3b82f6?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1002/dac.3572)
+![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q2](https://img.shields.io/badge/2018_Rank-Q2-14b8a6?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1002/dac.3572)
 
 - **Yildiz, H. U.**, Ciftler, B. S., Tavli, B., Bicakci, K., & Incebacak, D. (2018). *The impact of incomplete secure connectivity on the lifetime of wireless sensor networks*. *IEEE Systems Journal, 12*(1), 1042–1046.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2018_Rank-Q1-10b981?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JSYST.2016.2527744)
