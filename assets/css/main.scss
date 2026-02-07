@@ -52,6 +52,37 @@
   text-align: justify !important;
 }
 
+/* Containers */
+.ra-container { margin-top: 1.25rem; }
+.ra-section   { margin-bottom: 1.5rem; }
+.ra-title     { margin-bottom: .75rem; font-weight: 700; }
+
+/* Chips */
+.ra-wrap { display:flex; flex-wrap:wrap; gap:.6rem; }
+
+.ra-chip{
+  padding: .45rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  line-height: 1;
+  transition: transform .2s ease, box-shadow .2s ease;
+  cursor: default;
+  background: var(--bg);
+  border: 1px solid var(--bd);
+  color: var(--fg);
+}
+
+.ra-chip:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+}
+
+/* Color themes */
+.ra-network { --bg:#dbeafe; --bd:#93c5fd; --fg:#1e40af; }
+.ra-opt     { --bg:#fed7aa; --bd:#fdba74; --fg:#c2410c; }
+.ra-ai      { --bg:#d1fae5; --bd:#6ee7b7; --fg:#065f46; }
+.ra-quantum { --bg:#e9d5ff; --bd:#c084fc; --fg:#6b21a8; }
+
 /* 
 ==========================
 GLOBAL FONT OVERRIDE
