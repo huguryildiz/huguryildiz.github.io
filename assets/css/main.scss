@@ -110,34 +110,33 @@
 .ra-quantum{ --ra-bg:#e9d5ff; --ra-bd:#c084fc; --ra-fg:#6b21a8; }
 
 /* =========================
-   Footer Visitors (ClustrMaps)
+   Footer Visitors (Left aligned)
    ========================= */
 
 .footer__visitors{
   margin-top: 1.5rem;
-  text-align: center;
+  text-align: left;            /* <-- SOL */
 }
 
 .footer__visitors h4{
-  margin-bottom: .5rem;
+  margin-bottom: .4rem;
   font-size: .85rem;
   font-weight: 600;
   opacity: .75;
 }
 
-/* Globe container */
 .footer__visitors-map{
-  width: 160px;          /* <-- asıl boyut */
+  width: 160px;
   height: 160px;
-  margin: 0 auto;
+  margin-left: 0;              /* <-- SOLA YAPIŞIK */
   overflow: hidden;
 }
 
-/* Force ClustrMaps content to scale */
+/* Scale the globe */
 .footer__visitors-map iframe,
 .footer__visitors-map canvas,
 .footer__visitors-map > div{
-  transform: scale(0.7);        /* <-- küçültme oranı */
+  transform: scale(0.7);
   transform-origin: top left;
 }
 
