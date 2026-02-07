@@ -19,6 +19,27 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
 
 ## Research Interests
 
+<div class="ra-wrap">
+  <span class="ra-chip">Ad Hoc Networks</span>
+  <span class="ra-chip">Wireless Sensor Networks</span>
+  <span class="ra-chip">Underwater Acoustic Sensor Networks</span>
+  <span class="ra-chip">Internet of Things</span>
+  <span class="ra-chip">Smart Grids</span>
+  <span class="ra-chip">Operations Research</span>
+  <span class="ra-chip">Meta-Heuristics</span>
+  <span class="ra-chip">Reinforcement Learning</span>
+</div>
+
+<style>
+.ra-wrap{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.ra-chip{
+  padding:8px 12px;border-radius:999px;
+  background:#f3f4f6;border:1px solid #e5e7eb;
+  font-weight:600;line-height:1
+}
+.ra-chip:hover{transform:translateY(-1px)}
+</style>
+
 - **Operations Research and Mathematical Optimization for Networked Systems:**  
   Development of linear, integer, and mixed-integer programming (MILP) models, including network flow–based formulations, for complex optimization problems arising in communication networks. Primary focus areas include network lifetime maximization, energy efficiency, resource allocation, energy–delay–reliability trade-offs, and resilience under physical, topological, and security constraints.
 
@@ -35,18 +56,9 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
 
 ---
 
-<p align="center">
-  <a href="/images/uwsn.png" target="_blank" rel="noopener">
-    <img src="/images/uwsn.png" alt="Underwater wireless sensor network illustration"
-         style="max-width:700px; width:100%; height:auto;">
-  </a>
-</p>
-
----
-
 ## 🌍 Visitors
 
-<div align="center" style="max-width:300px; margin:auto;">
+<div align="center" style="max-width:500px; margin:auto;">
   <script type="text/javascript" id="clstr_globe"
     src="//clustrmaps.com/globe.js?d=Ff5N5seCdUggOy-cQ08tNCYmISlt6bFGtSiHyvOpvNA">
   </script>
