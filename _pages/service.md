@@ -18,8 +18,6 @@ author_profile: true
 - International Conference on Underwater Networks & Systems (WUWNet 2019–Present),
 - IEEE INFOCOM’18 Workshop on Wirel. Commun. and Netw. in Extreme Environ.
 
----
-
 ## Session Chairing
 
 - *PHY-II: Physical Layer Communications-II*, IEEE BlackSeaCom 2021
@@ -27,8 +25,6 @@ author_profile: true
 - *Communication Networks II*, SIU 2018
 - *Sensor Network, Method and Evaluation*, IEEE SENSORS 2016
 - *Management of Emerging Networks*, IEEE GLOBECOM 2014 Workshop
-
----
 
 ## Reviewer
 
@@ -50,8 +46,6 @@ author_profile: true
 - IEEE Wireless Communications and Networking Conference (WCNC 2018–2024)
 - IEEE Wireless Communications Letters
 - Internet of Things (Guest Editor)
-
----
 
 ## Seminars and Invited Talks
 

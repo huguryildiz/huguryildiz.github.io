@@ -31,8 +31,6 @@ Dec 2015 – Aug 2016
 Turk Telekom, Ankara, Turkey <br>
 Dec 2010 – Nov 2015
 
----
-
 ## Education
 
 - **Ph.D. in Electrical and Electronics Engineering** <br>
@@ -46,8 +44,6 @@ Sep 2011 – Aug 2013
 - **B.Sc. in Electrical and Electronics Engineering** <br>
 Bilkent University, Ankara, Turkey <br>
 Aug 2005 – Aug 2009
-
----
 
 ## Theses
 
@@ -64,8 +60,6 @@ Co-advisor: Prof. Kemal Bicakci <br>
 [![PDF](https://img.shields.io/badge/Resource-PDF-red?style=flat-square)](/files/Yildiz_HuseyinUgur_MSc_Thesis.pdf)
 [![Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=iTkOhwevEenJZ3onUvs52nzi419Y-02Qu4K0DuUcM1T12y2xRhF2YLzHmis2Ng60)
 
----
-
 ## Awards
 
 - **Best Paper Award (Third Place)**,
@@ -73,8 +67,6 @@ Co-advisor: Prof. Kemal Bicakci <br>
   IEEE Middle East and North Africa Communications Conference (MENACOMM) 2019, Manama, Kingdom of Bahrain <br>
   [![Award](https://img.shields.io/badge/Award-Best_Paper-gold?style=flat-square)](https://drive.google.com/file/d/1QbpfuRXmyoTQCFJAFh_H-exv3v3Q8L-t/view)
 
-
----
 
 ## Professional Memberships
 

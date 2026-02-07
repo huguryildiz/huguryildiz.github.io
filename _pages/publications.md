@@ -25,7 +25,6 @@ author_profile: true
 [Conf. Papers (Int.)](#conference-papers-international){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
 [Conf. Papers (Nat.)](#conference-papers-national---in-turkish){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
 
----
 
 ## Journal Papers
 
@@ -121,7 +120,6 @@ author_profile: true
 
 - **Yildiz, H. U.** (2019, November). *Utilization of multi-sink architectures for lifetime maximization in underwater sensor networks*.  
   In *2019 2nd IEEE MENACOMM*.
-
   ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square)
   [![Award](https://img.shields.io/badge/Award-Best_Paper_%283rd%29-ffcc00?style=flat-square)](https://drive.google.com/file/d/1QbpfuRXmyoTQCFJAFh_H-exv3v3Q8L-t/view)
   [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/MENACOMM46666.2019.8988521)

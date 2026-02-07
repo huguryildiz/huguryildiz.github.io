@@ -137,11 +137,12 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
 }
 </style>
 
-
 ---
 
 ## Technical Toolbox
 ![My Skills](https://skillicons.dev/icons?i=py,matlab,latex,git,github&perline=5)
+
+---
 
 ## Latest on LinkedIn
 
