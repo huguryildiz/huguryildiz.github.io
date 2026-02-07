@@ -67,7 +67,7 @@ author_profile: true
 <div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
 
   <div style="flex:1; min-width:150px;">
-    <img src="/images/courses/ee304.png" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:6px;">
+    <img src="/images/courses/ee304.png" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:6px;">
   </div>
 
   <div style="flex:3;">
@@ -94,7 +94,7 @@ author_profile: true
 <div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
 
   <div style="flex:1; min-width:150px;">
-    <img src="/images/courses/ee311.png" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:6px;">
+    <img src="/images/courses/ee311.png" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:6px;">
   </div>
 
   <div style="flex:3;">
@@ -120,7 +120,7 @@ author_profile: true
 <div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
 
   <div style="flex:1; min-width:150px;">
-    <img src="/images/courses/ee413.png" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:6px;">
+    <img src="/images/courses/ee413.png" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:6px;">
   </div>
 
   <div style="flex:3;">
@@ -146,7 +146,7 @@ author_profile: true
 <div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
 
   <div style="flex:1; min-width:150px;">
-    <img src="/images/courses/ee491.png" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:6px;">
+    <img src="/images/courses/ee491.png" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:6px;">
   </div>
 
   <div style="flex:3;">
@@ -157,12 +157,12 @@ author_profile: true
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-491" target="_blank" rel="noopener" style="margin-right:6px; text-decoration: none;">
-      <img src="https://img.shields.io/badge/EE_491%3ACatalog_Page-1f77b4?style=flat-square" alt="EE 491 Course Catalog Page">
+      <img src="https://img.shields.io/badge/EE_491%3A_Catalog_Page-1f77b4?style=flat-square" alt="EE 491 Course Catalog Page">
     </a>
     <img src="https://img.shields.io/badge/EE_491%3A_Fall_2016_%E2%80%94_Present-8bc34a?style=flat-square" alt="Fall 2016–Present"> <br>
 
     <a href="https://www.tedu.edu.tr/ee-492" target="_blank" rel="noopener" style="margin-right:6px; text-decoration: none;">
-      <img src="https://img.shields.io/badge/EE_492%3ACatalog_Page-1f77b4?style=flat-square" alt="EE 492 Course Catalog Page">
+      <img src="https://img.shields.io/badge/EE_492%3A_Catalog_Page-1f77b4?style=flat-square" alt="EE 492 Course Catalog Page">
     </a>
     <img src="https://img.shields.io/badge/EE_492%3A_pring_2017_%E2%80%94_Present-8bc34a?style=flat-square" alt="Spring 2017–Present">
   </div>
@@ -178,7 +178,7 @@ author_profile: true
 <div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
 
   <div style="flex:1; min-width:150px;">
-    <img src="/images/courses/ee512.png" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:6px;">
+    <img src="/images/courses/ee512.png" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:6px;">
   </div>
 
   <div style="flex:3;">
@@ -211,7 +211,7 @@ author_profile: true
 <div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
 
   <div style="flex:1; min-width:150px;">
-    <img src="/images/courses/ee205.png" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:6px;">
+    <img src="/images/courses/ee205.png" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:6px;">
   </div>
 
   <div style="flex:3;">
@@ -238,7 +238,7 @@ author_profile: true
 <div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
 
   <div style="flex:1; min-width:150px;">
-    <img src="/images/courses/ee312.png" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:6px;">
+    <img src="/images/courses/ee312.png" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:6px;">
   </div>
 
   <div style="flex:3;">
@@ -265,7 +265,7 @@ author_profile: true
 <div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
 
   <div style="flex:1; min-width:150px;">
-    <img src="/images/courses/ee462.png" style="width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:6px;">
+    <img src="/images/courses/ee462.png" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:6px;">
   </div>
 
   <div style="flex:3;">
