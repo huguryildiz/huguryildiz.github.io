@@ -70,11 +70,15 @@ a:hover {
   filter: brightness(1.05);
 }
 
-/* Pulse animation (for "new" items) - UPDATED */
-@keyframes badgePulse {
-  0%   { box-shadow: 0 0 0 0 rgba(88, 200, 255, 0.55); }
-  60%  { box-shadow: 0 0 0 12px rgba(88, 200, 255, 0.10); }
-  100% { box-shadow: 0 0 0 0 rgba(88, 200, 255, 0.00); }
+/* Blink animation (subtle, academic-friendly) */
+@keyframes badgeBlink {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.45; }
+  100% { opacity: 1; }
+}
+
+.news-badge.pulse{
+  animation: badgeBlink 1.6s ease-in-out infinite;
 }
 
 .news-badge.pulse{
