@@ -109,6 +109,38 @@
 .ra-ai     { --ra-bg:#d1fae5; --ra-bd:#6ee7b7; --ra-fg:#065f46; }
 .ra-quantum{ --ra-bg:#e9d5ff; --ra-bd:#c084fc; --ra-fg:#6b21a8; }
 
+/* =========================
+   Footer Visitors (ClustrMaps)
+   ========================= */
+
+.footer__visitors{
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.footer__visitors h4{
+  margin-bottom: .5rem;
+  font-size: .85rem;
+  font-weight: 600;
+  opacity: .75;
+}
+
+/* Globe container */
+.footer__visitors-map{
+  width: 160px;          /* <-- asıl boyut */
+  height: 160px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Force ClustrMaps content to scale */
+.footer__visitors-map iframe,
+.footer__visitors-map canvas,
+.footer__visitors-map > div{
+  transform: scale(0.7);        /* <-- küçültme oranı */
+  transform-origin: top left;
+}
+
 /* 
 ==========================
 GLOBAL FONT OVERRIDE
