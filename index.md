@@ -143,13 +143,3 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
 
 ## Technical Toolbox
 ![My Skills](https://skillicons.dev/icons?i=py,matlab,latex,git,github&perline=5)
-
----
-
-## 🌍 Visitors
-
-<div align="center" style="max-width:500px; margin:auto;">
-  <script type="text/javascript" id="clstr_globe"
-    src="//clustrmaps.com/globe.js?d=Ff5N5seCdUggOy-cQ08tNCYmISlt6bFGtSiHyvOpvNA">
-  </script>
-</div>
