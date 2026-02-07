@@ -150,7 +150,7 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
     <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7417308257074999296"></iframe>
   </div>
   <div class="linkedin-card">
-    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:URN_2"></iframe>
+    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6864285108807983104"></iframe>
   </div>
   <div class="linkedin-card">
     <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:URN_3"></iframe>
