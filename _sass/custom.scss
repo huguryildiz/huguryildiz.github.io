@@ -76,8 +76,8 @@ a:hover {
     border-color: rgba(88, 200, 255, 0.55);
   }
   50% {
-    background: rgba(255, 200, 90, 0.35); /* amber highlight */
-    border-color: rgba(255, 180, 60, 0.85);
+    background: rgba(30, 110, 170, 0.45);   /* deeper academic blue */
+    border-color: rgba(30, 110, 170, 0.80);
   }
   100% {
     background: rgba(88, 200, 255, 0.22);
@@ -86,7 +86,7 @@ a:hover {
 }
 
 .news-badge.pulse{
-  animation: badgeBlink 1.6s ease-in-out infinite !important;
+  animation: badgeBlink 1.8s ease-in-out infinite;
 }
 
 /* Dark mode tuning (fixes “washed out” look) */
