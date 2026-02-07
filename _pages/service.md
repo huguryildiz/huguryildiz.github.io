@@ -50,23 +50,23 @@ author_profile: true
 ## Seminars and Invited Talks
 
 - **Prolonging the Lifetime of Underwater Sensor Networks Under Sinkhole Attacks** <br>
-  Georgia Institute of Technology, Atlanta, GA, USA, Oct 24, 2019, Host: Prof. Ian F. Akyildiz
+  Georgia Institute of Technology, Atlanta, GA, USA, Oct 24, 2019, Host: Prof. Ian F. Akyildiz <br>
   [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/14jmfAauo_CHZHZSjCTbuMjjVQVsGz1sm/view)
 
 - **Maximization of Underwater Sensor Networks Lifetime via Fountain Codes** <br>
-  SIU 2019 – Special Session on Next Generation Communication Techniques, Sivas, Turkey , Apr 25, 2019
+  SIU 2019 – Special Session on Next Generation Communication Techniques, Sivas, Turkey, Apr 25, 2019 <br>
   [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/14bzsN_kmMONXaJet98dZsrgdQwOrFmCU/view?usp=sharing)
 
 - **Maximization of Underwater Sensor Networks Lifetime via Fountain Codes** <br>
-  ASELSAN Information and Communication Technologies Workshop, Ankara, Turkey, Feb 19, 2019
+  ASELSAN Information and Communication Technologies Workshop, Ankara, Turkey, Feb 19, 2019 <br>
   [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/14a3OSEhRvUTd9m0eJsiT_AUh9vqzGqZW/view?usp=sharing)
 
 - **Optimal Transmission Power Level Sets for Lifetime Maximization in Wireless Sensor Networks** <br>
-  ASELSAN Information and Communication Technologies Workshop, Ankara, Turkey, Nov 14, 2016 ,
+  ASELSAN Information and Communication Technologies Workshop, Ankara, Turkey, Nov 14, 2016 <br>
   [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/16Cm8oSdQejoQQtKTkOmlRXNUYzaQfKZK/view?usp=sharing)
 
 - **The Impact of Random Power Assignment in Handshaking on Wireless Sensor Network Lifetime** <br>
-  University of Texas at Dallas, Dallas, TX, USA, Dec 3, 2014, Host: Prof. Murat Torlak
+  University of Texas at Dallas, Dallas, TX, USA, Dec 3, 2014, Host: Prof. Murat Torlak <br>
   [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/14injrfacnqRUnJb9IiNEHQdvhcTARxuy/view?usp=sharing)
 
 - **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks** <br>
