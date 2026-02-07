@@ -52,136 +52,72 @@
   text-align: justify !important;
 }
 
-ra-container {
-  margin-top: 1.25rem;
-}
+/* =========================
+   Research Areas
+   ========================= */
 
-.ra-section {
-  margin-bottom: 1.5rem;
-}
+/* Containers */
+.ra-container { margin-top: 1.25rem; }
+.ra-section   { margin-bottom: 1.5rem; }
+.ra-title     { margin-bottom: .75rem; font-weight: 700; }
 
-.ra-title {
-  font-size: 1.1em;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-  color: inherit;
-  opacity: 0.9;
-  font-family: inherit;
-  line-height: inherit;
-}
-
-.ra-wrap {
+/* Chip wrapper */
+.ra-wrap{
   display: flex;
   flex-wrap: wrap;
-  gap: 0.625rem;
+  gap: .6rem;
 }
 
-.ra-chip {
-  padding: 0.5rem 1rem;
+/* Base chip (inherits font, size, color) */
+.ra-chip{
+  padding: .45rem 1rem;
   border-radius: 999px;
   font-weight: 600;
   line-height: 1;
-  font-size: 0.875em;
-  font-family: inherit;
-  letter-spacing: inherit;
-  transition: all 0.2s ease;
   cursor: default;
+
+  background: var(--ra-bg);
+  border: 1px solid var(--ra-bd);
+  color: var(--ra-fg);
+
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
 }
 
-.ra-chip:hover {
+.ra-chip:hover{
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
 }
 
-/* Network Technologies - Mavi tonlar */
-.ra-network {
-  background: #dbeafe;
-  border: 1px solid #93c5fd;
-  color: #1e40af;
+/* =========================
+   Color Variants
+   ========================= */
 
-  &:hover {
-    background: #bfdbfe;
-  }
+/* Network */
+.ra-network{
+  --ra-bg: #dbeafe;
+  --ra-bd: #93c5fd;
+  --ra-fg: #1e40af;
 }
 
-/* Optimization - Turuncu tonlar */
-.ra-opt {
-  background: #fed7aa;
-  border: 1px solid #fdba74;
-  color: #c2410c;
-
-  &:hover {
-    background: #fdc97f;
-  }
+/* Optimization */
+.ra-opt{
+  --ra-bg: #fed7aa;
+  --ra-bd: #fdba74;
+  --ra-fg: #c2410c;
 }
 
-/* AI/ML - Yeşil tonlar */
-.ra-ai {
-  background: #d1fae5;
-  border: 1px solid #6ee7b7;
-  color: #065f46;
-
-  &:hover {
-    background: #a7f3d0;
-  }
+/* AI / ML */
+.ra-ai{
+  --ra-bg: #d1fae5;
+  --ra-bd: #6ee7b7;
+  --ra-fg: #065f46;
 }
 
-/* Quantum - Mor tonlar */
-.ra-quantum {
-  background: #e9d5ff;
-  border: 1px solid #c084fc;
-  color: #6b21a8;
-
-  &:hover {
-    background: #d8b4fe;
-  }
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  .ra-chip:hover {
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
-  }
-
-  .ra-network {
-    background: color-mix(in srgb, #3b82f6 20%, transparent);
-    border: 1px solid color-mix(in srgb, #3b82f6 40%, transparent);
-    color: #93c5fd;
-
-    &:hover {
-      background: color-mix(in srgb, #3b82f6 30%, transparent);
-    }
-  }
-
-  .ra-opt {
-    background: color-mix(in srgb, #f97316 20%, transparent);
-    border: 1px solid color-mix(in srgb, #f97316 40%, transparent);
-    color: #fdba74;
-
-    &:hover {
-      background: color-mix(in srgb, #f97316 30%, transparent);
-    }
-  }
-
-  .ra-ai {
-    background: color-mix(in srgb, #10b981 20%, transparent);
-    border: 1px solid color-mix(in srgb, #10b981 40%, transparent);
-    color: #6ee7b7;
-
-    &:hover {
-      background: color-mix(in srgb, #10b981 30%, transparent);
-    }
-  }
-
-  .ra-quantum {
-    background: color-mix(in srgb, #a855f7 20%, transparent);
-    border: 1px solid color-mix(in srgb, #a855f7 40%, transparent);
-    color: #d8b4fe;
-
-    &:hover {
-      background: color-mix(in srgb, #a855f7 30%, transparent);
-    }
-  }
+/* Quantum */
+.ra-quantum{
+  --ra-bg: #e9d5ff;
+  --ra-bd: #c084fc;
+  --ra-fg: #6b21a8;
 }
 
 /* 
