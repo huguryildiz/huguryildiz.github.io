@@ -101,14 +101,12 @@ author_profile: true
 - Batmaz, A. U., **Yildiz, H. U.**, & Tavli, B. (2014). *Role of unidirectionality and reverse path length on wireless sensor network lifetime*. *IEEE Sensors Journal, 14*(11), 3971–3982.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2014_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JSEN.2014.2359156)
 
----
 
 ## Editorials
 
 - Haytaoglu, E., Arslan, S. S., Dagdeviren, O., **Yildiz, H. U.**, & Ozturk, Y. (2025). *Editorial brief for special issue: Mass connectivity and/or communication paradigms for the internet of things*. *Internet of Things, 32*, 101625.  
 ![Editorial](https://img.shields.io/badge/Type-Editorial-purple?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2025_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1016/j.iot.2025.101625)
 
----
 
 ## Conference Papers (International)
 
@@ -156,7 +154,6 @@ author_profile: true
 - **Yildiz, H. U.**, Bicakci, K., & Tavli, B. (2014, January). *Communication/computation trade-offs in wireless sensor networks: Comparing network-level and node-level strategies*. In *2014 IEEE WiSNet* (pp. 49–51). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/WiSNet.2014.6825515) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16xQgqR0IGGUlx-9fmwTTnk1srKBS-9_w/view?usp=sharing)  
 
----
 
 ## Conference Papers (National — in Turkish)
 
