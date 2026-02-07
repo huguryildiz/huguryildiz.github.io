@@ -39,6 +39,7 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
       <span class="ra-chip ra-opt">Linear Programming</span>
       <span class="ra-chip ra-opt">Mixed-Integer Programming</span>
       <span class="ra-chip ra-opt">Constraint Programming</span>
+      <span class="ra-chip ra-opt">Multi-Objective Optimization</span>
       <span class="ra-chip ra-opt">Network Flow Programming</span>
       <span class="ra-chip ra-opt">Meta-Heuristics (SA/GA)</span>
     </div>
