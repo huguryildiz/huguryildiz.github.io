@@ -20,10 +20,10 @@ author_profile: true
 </p>
 
 **Quick Links:**  
-[Journal Papers](#journal-papers){:.btn .btn--primary .btn--small}
-[Editorials](#editorials){:.btn .btn--primary .btn--small}
-[Conf. Papers (Int.)](#conference-papers-international){:.btn .btn--primary .btn--small}
-[Conf. Papers (Nat.)](#conference-papers-national---in-turkish){:.btn .btn--primary .btn--small}
+[Journal Papers](#journal-papers){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
+[Editorials](#editorials){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
+[Conf. Papers (Int.)](#conference-papers-international){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
+[Conf. Papers (Nat.)](#conference-papers-national---in-turkish){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
 
 ---
 
