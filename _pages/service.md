@@ -49,42 +49,12 @@ author_profile: true
 
 ## Seminars and Invited Talks
 
-{% assign sorted_talks = site.talks | sort: "date" | reverse %}
-
-{% for talk in sorted_talks %}
-### [{{ talk.title }}]({{ talk.url }})
-
-<span style="color:#9aa0a6;">
-<i class="fa fa-clock-o"></i>
-{{ talk.date | date: "%B %d, %Y" }}
-</span>
-
-{% if talk.type %}
-- **Type:** {{ talk.type }}
-{% endif %}
-
-{% if talk.venue %}
-- **Venue:** {{ talk.venue }}{% if talk.location %}, {{ talk.location }}{% endif %}
-{% endif %}
-
-{% if talk.host %}
-- **Host:** {{ talk.host }}
-{% endif %}
-
-{% if talk.slides %}
-[![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)]({{ talk.slides }})
-{% endif %}
-
----
-
-{% endfor %}
-
 - **Prolonging the Lifetime of Underwater Sensor Networks Under Sinkhole Attacks** <br>
-  Georgia Institute of Technology <br>
-  Atlanta, GA, USA <br>
-  Oct 24, 2019 <br>
-  Host: Prof. Ian F. Akyildiz <br>
-  [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/14jmfAauo_CHZHZSjCTbuMjjVQVsGz1sm/view)
+  <i class="fa fa-university"></i> Georgia Institute of Technology <br>
+  <i class="fa fa-map-marker"></i> Atlanta, GA, USA <br>
+  <i class="fa fa-calendar"></i> Oct 24, 2019 <br>
+  <i class="fa fa-user"></i> Host: Prof. Ian F. Akyildiz <br>
+  [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](...)
 
 - **Maximization of Underwater Sensor Networks Lifetime via Fountain Codes** <br>
   SIU 2019 – Special Session on Next Generation Communication Techniques <br>
