@@ -31,3 +31,13 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+@keyframes badgePulse {
+  0%   { box-shadow: 0 0 0 0 rgba(99,231,255,0.55); }
+  70%  { box-shadow: 0 0 0 10px rgba(99,231,255,0.00); }
+  100% { box-shadow: 0 0 0 0 rgba(99,231,255,0.00); }
+}
+
+.news-badge.pulse{
+  animation: badgePulse 1.8s ease-out infinite;
+}
