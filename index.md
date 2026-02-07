@@ -19,35 +19,124 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
 
 ## Research Interests
 
-<div class="ra-wrap">
-  <span class="ra-chip">Ad Hoc Networks</span>
-  <span class="ra-chip">Wireless Sensor Networks</span>
-  <span class="ra-chip">Underwater Acoustic Sensor Networks</span>
-  <span class="ra-chip">Internet of Things</span>
-  <span class="ra-chip">Smart Grids</span>
-  <span class="ra-chip">Operations Research</span>
-  <span class="ra-chip">Meta-Heuristics</span>
-  <span class="ra-chip">Reinforcement Learning</span>
+<div class="ra-container">
+  <!-- Network Technologies & Systems -->
+  <div class="ra-section">
+    <h3 class="ra-title">Network Technologies & Systems</h3>
+    <div class="ra-wrap">
+      <span class="ra-chip ra-network">Ad Hoc Networks</span>
+      <span class="ra-chip ra-network">Wireless Sensor Networks</span>
+      <span class="ra-chip ra-network">Underwater Acoustic Sensor Networks</span>
+      <span class="ra-chip ra-network">Internet of Things</span>
+      <span class="ra-chip ra-network">Smart Grids</span>
+      <span class="ra-chip ra-network">Quantum Networks</span>
+    </div>
+  </div>
+
+  <!-- Optimization & Operations Research -->
+  <div class="ra-section">
+    <h3 class="ra-title">Optimization & Operations Research</h3>
+    <div class="ra-wrap">
+      <span class="ra-chip ra-opt">Linear Programming</span>
+      <span class="ra-chip ra-opt">Mixed-Integer Programming</span>
+      <span class="ra-chip ra-opt">Network Flow Programming</span>
+      <span class="ra-chip ra-opt">Meta-Heuristics (SA/GA)</span>
+    </div>
+  </div>
+
+  <!-- Artificial Intelligence & Machine Learning -->
+  <div class="ra-section">
+    <h3 class="ra-title">Artificial Intelligence & Machine Learning</h3>
+    <div class="ra-wrap">
+      <span class="ra-chip ra-ai">Machine Learning</span>
+      <span class="ra-chip ra-ai">Deep Learning</span>
+      <span class="ra-chip ra-ai">Reinforcement Learning</span>
+    </div>
+  </div>
+
+  <!-- Specialized Topics -->
+  <div class="ra-section">
+    <h3 class="ra-title">Quantum Networking</h3>
+    <div class="ra-wrap">
+      <span class="ra-chip ra-quantum">Entanglement Routing</span>
+    </div>
+  </div>
 </div>
 
 <style>
-.ra-wrap{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
-.ra-chip{
-  padding:8px 12px;border-radius:999px;
-  background:#f3f4f6;border:1px solid #e5e7eb;
-  font-weight:600;line-height:1
+.ra-container{
+  margin-top:20px
 }
-.ra-chip:hover{transform:translateY(-1px)}
+.ra-section{
+  margin-bottom:24px
+}
+.ra-title{
+  font-size:16px;
+  font-weight:700;
+  margin-bottom:12px;
+  color:#374151
+}
+.ra-wrap{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px
+}
+.ra-chip{
+  padding:8px 16px;
+  border-radius:999px;
+  font-weight:600;
+  line-height:1;
+  font-size:14px;
+  transition:all 0.2s ease;
+  cursor:default
+}
+.ra-chip:hover{
+  transform:translateY(-2px);
+  box-shadow:0 4px 12px rgba(0,0,0,0.1)
+}
+
+/* Network Technologies - Mavi tonlar */
+.ra-network{
+  background:#dbeafe;
+  border:1px solid #93c5fd;
+  color:#1e40af
+}
+.ra-network:hover{
+  background:#bfdbfe
+}
+
+/* Optimization - Turuncu tonlar */
+.ra-opt{
+  background:#fed7aa;
+  border:1px solid #fdba74;
+  color:#c2410c
+}
+.ra-opt:hover{
+  background:#fdc97f
+}
+
+/* AI/ML - Yeşil tonlar */
+.ra-ai{
+  background:#d1fae5;
+  border:1px solid #6ee7b7;
+  color:#065f46
+}
+.ra-ai:hover{
+  background:#a7f3d0
+}
+
+/* Quantum - Mor tonlar */
+.ra-quantum{
+  background:#e9d5ff;
+  border:1px solid #c084fc;
+  color:#6b21a8
+}
+.ra-quantum:hover{
+  background:#d8b4fe
+}
 </style>
 
-- **Operations Research and Mathematical Optimization for Networked Systems:**  
-  Development of linear, integer, and mixed-integer programming (MILP) models, including network flow–based formulations, for complex optimization problems arising in communication networks. Primary focus areas include network lifetime maximization, energy efficiency, resource allocation, energy–delay–reliability trade-offs, and resilience under physical, topological, and security constraints.
 
-- **Wireless Ad Hoc and Underwater Sensor Networks:**  
-  Design and optimization of energy-efficient routing, topology control, and communication strategies for terrestrial wireless ad hoc networks and underwater acoustic sensor networks. Research topics span network lifetime and energy-efficiency analysis, k-connectivity–based reliability, multi-sink architectures, void regions, adversarial effects (e.g., eavesdropping and sinkhole attacks), and operation under harsh and resource-constrained environments.
-
-- **Hybrid Optimization and Learning-Based Network Control:**  
-  Integration of mathematical optimization frameworks with machine learning and reinforcement learning techniques to enable adaptive, data-driven, and scalable control of complex networked systems. Recent work explores hybrid optimization–learning methodologies for parameter prediction, dynamic decision-making, and emerging paradigms such as quantum network routing and hybrid classical–quantum architectures.
 
 ---
 
