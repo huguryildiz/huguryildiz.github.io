@@ -5,7 +5,6 @@ permalink: /teaching/
 author_profile: true
 ---
 
-Course materials, including lecture notes and supplementary resources, are available through the [TEDU LMS](https://lms.tedu.edu.tr/).
 
 <!--
 ## Current Courses at TED University
@@ -57,20 +56,6 @@ Course materials, including lecture notes and supplementary resources, are avail
   [![Course Catalog](https://img.shields.io/badge/Course_Catalog-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-462)
 -->
 
-## Teaching Philosophy
-
-My teaching philosophy integrates **theory, practice, and active learning** to foster independent thinking and lifelong learning. I emphasize:
-
-- Interactive classroom discussions that promote collaborative problem-solving  
-- Two-stage collaborative quizzes combining group work with individual assessment  
-- Use of modern computational tools (e.g., MATLAB, tablets) for live problem-solving and visualization  
-- Connecting theoretical concepts to real-world engineering applications  
-- Preparing students for both industry and research careers  
-
-My goal is to create an engaging and supportive learning environment that helps students develop strong analytical and problem-solving skills.
-
----
-
 ## Current Courses at TED University
 
 ### Undergraduate
@@ -89,7 +74,7 @@ My goal is to create an engaging and supportive learning environment that helps 
     <h3 style="margin:0 0 8px 0;">EE 304 – Probability and Random Variables</h3>
 
     <p style="margin:0 0 12px 0;">
-      A third-year undergraduate core course covering probability theory, random variables, distributions, expectation, variance, with engineering applications communications.
+      A third-year undergraduate core course covering probability models, discrete and continuous random variables, joint and conditional distributions, correlation, covariance, and expectation.
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-304" target="_blank" rel="noopener" style="margin-right:6px;">
@@ -116,7 +101,7 @@ My goal is to create an engaging and supportive learning environment that helps 
     <h3 style="margin:0 0 8px 0;">EE 311 – Signals and Systems</h3>
 
     <p style="margin:0 0 12px 0;">
-      A third-year undergraduate core course on continuous- and discrete-time signals, LTI systems, Fourier analysis, and the sampling theorem.
+      A third-year undergraduate core course covering continuous-time and discrete-time signals, linear systems, Fourier analysis, and sampling theory.
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-311" target="_blank" rel="noopener">
@@ -142,7 +127,8 @@ My goal is to create an engaging and supportive learning environment that helps 
     <h3 style="margin:0 0 8px 0;">EE 413 – Communication Systems II</h3>
 
     <p style="margin:0 0 12px 0;">
-      A senior-level undergraduate course on digital communication systems, covering quantization, baseband and bandpass modulation, and an introduction to information theory.
+      A senior-level undergraduate course covering digital communication systems, sampling, quantization, digital modulation, receiver design, noise effects, and introductory information theory concepts.
+
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-413" target="_blank" rel="noopener">
@@ -201,7 +187,7 @@ My goal is to create an engaging and supportive learning environment that helps 
     <h3 style="margin:0 0 8px 0;">EE 512 – Optimization for Communication Networks</h3>
 
     <p style="margin:0 0 12px 0;">
-      Graduate-level elective covering optimization techniques for communication networks, including linear, integer, mixed-integer programming, network flows, and wireless network applications.
+      Graduate-level course covering optimization techniques for communication networks, including linear, integer, mixed-integer programming, network flows, and wireless network applications.
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-512" target="_blank" rel="noopener" style="margin-right:6px;">
@@ -262,7 +248,7 @@ My goal is to create an engaging and supportive learning environment that helps 
     <h3 style="margin:0 0 8px 0;">EE 312 – Communication Systems I</h3>
 
     <p style="margin:0 0 12px 0;">
-      A compulsory undergraduate course covering communication systems, modulation techniques, noise analysis, and Fourier-based signal representations.
+      A compulsory undergraduate course covering communication systems, modulation techniques, and noise analysis.
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-312" target="_blank" rel="noopener" style="margin-right:6px;">
@@ -302,3 +288,21 @@ My goal is to create an engaging and supportive learning environment that helps 
   </div>
 
 </div>
+
+---
+
+Course materials, including lecture notes and supplementary resources, are available through the [TEDU LMS](https://lms.tedu.edu.tr/).
+
+---
+
+## Teaching Philosophy
+
+My teaching philosophy integrates **theory, practice, and active learning** to foster independent thinking and lifelong learning. I emphasize:
+
+- Interactive classroom discussions that promote collaborative problem-solving  
+- Two-stage collaborative quizzes combining group work with individual assessment  
+- Use of modern computational tools (e.g., MATLAB, tablets) for live problem-solving and visualization  
+- Connecting theoretical concepts to real-world engineering applications  
+- Preparing students for both industry and research careers  
+
+My goal is to create an engaging and supportive learning environment that helps students develop strong analytical and problem-solving skills.
