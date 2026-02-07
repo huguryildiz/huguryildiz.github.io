@@ -64,82 +64,31 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
   </div>
 </div>
 
-<style>
-.ra-container{
-  margin-top:20px
-}
-.ra-section{
-  margin-bottom:24px
-}
-.ra-title{
-  font-size:16px;
-  font-weight:700;
-  margin-bottom:12px;
-  color:#374151
-}
-.ra-wrap{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px
-}
-.ra-chip{
-  padding:8px 16px;
-  border-radius:999px;
-  font-weight:600;
-  line-height:1;
-  font-size:14px;
-  transition:all 0.2s ease;
-  cursor:default
-}
-.ra-chip:hover{
-  transform:translateY(-2px);
-  box-shadow:0 4px 12px rgba(0,0,0,0.1)
-}
-
-/* Network Technologies - Mavi tonlar */
-.ra-network{
-  background:#dbeafe;
-  border:1px solid #93c5fd;
-  color:#1e40af
-}
-.ra-network:hover{
-  background:#bfdbfe
-}
-
-/* Optimization - Turuncu tonlar */
-.ra-opt{
-  background:#fed7aa;
-  border:1px solid #fdba74;
-  color:#c2410c
-}
-.ra-opt:hover{
-  background:#fdc97f
-}
-
-/* AI/ML - Yeşil tonlar */
-.ra-ai{
-  background:#d1fae5;
-  border:1px solid #6ee7b7;
-  color:#065f46
-}
-.ra-ai:hover{
-  background:#a7f3d0
-}
-
-/* Quantum - Mor tonlar */
-.ra-quantum{
-  background:#e9d5ff;
-  border:1px solid #c084fc;
-  color:#6b21a8
-}
-.ra-quantum:hover{
-  background:#d8b4fe
-}
-</style>
-
-
 
 ---
 
 ## Technical Toolbox
 ![My Skills](https://skillicons.dev/icons?i=py,matlab,latex,git,github&perline=5)
+
+## Latest on LinkedIn
+
+<div class="linkedin-embed">
+  <iframe
+    src="https://www.linkedin.com/embed/feed/update/urn:li:share:7417308257074999296"
+    frameborder="0"
+    allowfullscreen
+    title="Embedded LinkedIn post">
+  </iframe>
+</div>
+
+<style>
+.linkedin-embed {
+  max-width: 520px;
+  margin: 1.5rem auto;
+}
+.linkedin-embed iframe {
+  width: 100%;
+  height: 820px;
+  border: none;
+}
+</style>
