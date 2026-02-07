@@ -70,16 +70,23 @@ a:hover {
   filter: brightness(1.05);
 }
 
-/* Blink animation (subtle, academic-friendly) */
 @keyframes badgeBlink {
-  0%   { opacity: 1; }
-  50%  { opacity: 0.45; }
-  100% { opacity: 1; }
+  0% {
+    background: rgba(88, 200, 255, 0.22);
+    border-color: rgba(88, 200, 255, 0.55);
+  }
+  50% {
+    background: rgba(255, 200, 90, 0.35); /* amber highlight */
+    border-color: rgba(255, 180, 60, 0.85);
+  }
+  100% {
+    background: rgba(88, 200, 255, 0.22);
+    border-color: rgba(88, 200, 255, 0.55);
+  }
 }
 
-/* FORCE animation (overrides everything) */
 .news-badge.pulse{
-  animation: badgeBlink 1.2s ease-in-out infinite !important;
+  animation: badgeBlink 1.6s ease-in-out infinite !important;
 }
 
 /* Dark mode tuning (fixes “washed out” look) */
