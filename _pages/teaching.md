@@ -198,6 +198,8 @@ author_profile: true
 
 </div>
 
+---
+
 ## Past Courses
 
 ### Undergraduate

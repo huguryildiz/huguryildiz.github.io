@@ -55,46 +55,37 @@
   text-align: justify !important;
 }
 
-/* ---------------------------------
-   Metrics badges (images)
-   ---------------------------------
-   Keep badges inline and remove any default
-   image borders that may be applied by the theme.
-*/
-.metrics-badges img{
-  display: inline-block;
-  margin-right: 8px;
-  border: none;
+/* =========================
+   Metrics badges
+   ========================= */
+
+.metrics-badges{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 1rem 0;
 }
 
-/* ---------------------------------
-   Badge links (anchor elements)
-   ---------------------------------
-   Disable all link underline effects imposed by
-   the Minimal Mistakes / AcademicPages theme.
-   This removes the thin blue separator line
-   appearing before badges.
-*/
-.metrics-badges .badge-link{
-  display: inline-block;
-  margin-right: 10px;
-
-  /* Remove underline, borders, and shadow effects */
+/* Remove ALL link underline effects from theme */
+.metrics-badges a{
   text-decoration: none !important;
+  border: 0 !important;
   border-bottom: 0 !important;
   box-shadow: none !important;
+  background: none !important;
   background-image: none !important;
+
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;   /* <-- kills the thin blue line */
+  padding: 0;
 }
 
-/* ---------------------------------
-   Badge images inside links
-   ---------------------------------
-   Force block-level images inside <a> tags.
-   This prevents residual underline spacing
-   from appearing beneath or before badges.
-*/
-.metrics-badges .badge-link img{
+/* Badge images */
+.metrics-badges img{
   display: block;
+  border: none !important;
 }
 
 /* =========================
