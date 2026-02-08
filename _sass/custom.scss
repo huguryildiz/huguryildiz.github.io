@@ -170,6 +170,18 @@ details[open] {
   font-weight: 600;
 }
 
+/* =============================== */
+/* Footer – Visitors (ClustrMaps)  */
+/* =============================== */
+
+.footer__visitors {
+  text-align: right;
+}
+
+.footer__visitors-map {
+  display: inline-block;
+}
+
 /* =========================
    Optional: nicer spacing for News list
    (works well with Markdown bullets)
