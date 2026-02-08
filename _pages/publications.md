@@ -19,36 +19,24 @@ author_profile: true
   </a>
 </p>
 
-{% assign content_all = page.content %}
-
-{% assign jp_block = content_all | split: "## Journal Papers" | last | split: "## Editorials" | first %}
-{% assign ed_block = content_all | split: "## Editorials" | last | split: "## Conference Papers (International)" | first %}
-{% assign ci_block = content_all | split: "## Conference Papers (International)" | last | split: "## Conference Papers (National — in Turkish)" | first %}
-{% assign cn_block = content_all | split: "## Conference Papers (National — in Turkish)" | last %}
-
-{% assign jp_count = jp_block | split: "\n- " | size | minus: 1 %}
-{% assign ed_count = ed_block | split: "\n- " | size | minus: 1 %}
-{% assign ci_count = ci_block | split: "\n- " | size | minus: 1 %}
-{% assign cn_count = cn_block | split: "\n- " | size | minus: 1 %}
-
 <div class="metrics-cards">
   <div class="metric-card metric-static">
-    <div class="metric-value">{{ jp_count }}</div>
+    <div class="metric-value">18</div>
     <div class="metric-label">Journal Papers</div>
   </div>
 
   <div class="metric-card metric-static">
-    <div class="metric-value">{{ ci_count }}</div>
+    <div class="metric-value">12</div>
     <div class="metric-label">Conf. Papers (Int.)</div>
   </div>
 
   <div class="metric-card metric-static">
-    <div class="metric-value">{{ cn_count }}</div>
+    <div class="metric-value">5</div>
     <div class="metric-label">Conf. Papers (Nat.)</div>
   </div>
 
   <div class="metric-card metric-static">
-    <div class="metric-value">{{ ed_count }}</div>
+    <div class="metric-value">1</div>
     <div class="metric-label">Editorials</div>
   </div>
 </div>
