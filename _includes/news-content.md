@@ -3,9 +3,9 @@
 - <span class="news-badge">11/2025</span> Conference paper presented at IEEE TELFOR 2025: “Non-Uniform k-Connectivity for Energy-Efficient and Reliable UWSNs”.
 - <span class="news-badge">10/2025</span> Journal paper published in *IEEE Internet of Things Journal*: “Mitigating Energy Cost of Connection Reliability in UWSNs Through Non-Uniform k-Connectivity”.
 - <span class="news-badge">08/2025</span> Journal paper published in *Computer Standards & Interfaces*: “Enhancing Drone Network Resilience: k-Connectivity Restoration Strategies”.
-- <span class="news-badge">06/2025</span> Completed Reinforcement Learning Specialization (University of Alberta, Coursera).
-- <span class="news-badge">05/2025</span> Completed Deep Learning Specialization (DeepLearning.AI, Coursera).
-- <span class="news-badge">04/2025</span> Completed Machine Learning Specialization (DeepLearning.AI, Coursera).
+- <span class="news-badge">06/2025</span> Completed [Reinforcement Learning Specialization](https://www.coursera.org/account/accomplishments/specialization/26BOL8LTVD7S) (University of Alberta, Coursera).
+- <span class="news-badge">05/2025</span> Completed [Deep Learning Specialization](https://www.coursera.org/account/accomplishments/specialization/JGGZ4NGSKTQZ) (DeepLearning.AI, Coursera).
+- <span class="news-badge">04/2025</span> Completed [Machine Learning Specialization](https://www.coursera.org/account/accomplishments/specialization/FGT2PNQ9NYVL) (DeepLearning.AI, Coursera).
 
 <details markdown="1">
 <summary><strong>Older news</strong></summary>
