@@ -15,8 +15,6 @@ His research focuses on routing, resource allocation, and energy efficiency chal
 
 He has authored over 20 peer-reviewed journal articles with more than 1,000 citations, received the IEEE Middle East and North Africa Communications Conference 2019 Best Paper Award, and was elevated to IEEE Senior Member in 2021.
 
----
-
 ## Research Interests
 
 <div class="ra-container">
@@ -137,18 +135,18 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
 }
 </style>
 
----
+## Technical Skills
 
-## Technical Toolbox
-![My Skills](https://skillicons.dev/icons?i=py,matlab,latex,git,github&perline=5)
+![Programming](https://skillicons.dev/icons?i=py,matlab,latex,git,github&perline=5)
 
----
+**Optimization & Solvers:**  
+![Gurobi](/images/icons/gurobi.png){:width="36"}  
+![GAMS](/images/icons/gams.png){:width="36"}  
+CPLEX, XPRESS
 
 ## News
 
 {% include news-content.md %}
-
----
 
 ## Latest on LinkedIn
 
