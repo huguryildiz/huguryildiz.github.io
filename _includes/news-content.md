@@ -5,7 +5,7 @@
 - <span class="news-badge">08/2025</span> Journal paper published in *Computer Standards & Interfaces*: “Enhancing drone network resilience: Investigating strategies for k-connectivity restoration”.
 
 <details markdown="1">
-<summary><strong>Older news</strong></summary>
+<summary><strong>Archive</strong></summary>
 
 - <span class="news-badge">08/2025</span> Completed [Reinforcement Learning Specialization](https://www.coursera.org/account/accomplishments/specialization/26BOL8LTVD7S) (University of Alberta, Coursera).
 - <span class="news-badge">06/2025</span> Completed [Deep Learning Specialization](https://www.coursera.org/account/accomplishments/specialization/JGGZ4NGSKTQZ) (DeepLearning.AI, Coursera).
