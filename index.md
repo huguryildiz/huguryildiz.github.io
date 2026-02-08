@@ -137,20 +137,20 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
 
 ## Technical Toolbox
 
-**Programming & Scientific Computing:**
+**Programming & Scientific Computing**
 
 [![Python](/images/icons/python.jpg "Python – Scientific Computing, Optimization, and Machine Learning"){:width="36"}](https://www.python.org)
 [![MATLAB](/images/icons/matlab.jpg "MATLAB – Numerical Computing & Optimization"){:width="36"}](https://www.mathworks.com/products/matlab.html)
 [![LaTeX](/images/icons/latex.svg "LaTeX – Scientific Writing & Typesetting"){:width="36"}](https://www.latex-project.org)
 
-**Optimization & Mathematical Modeling:**
+**Optimization & Mathematical Modeling**
 
 [![GAMS](/images/icons/gams.jpg "GAMS – Mathematical Modeling System"){:width="36"}](https://www.gams.com)
 [![Gurobi](/images/icons/gurobi.jpg "Gurobi Optimizer – Commercial MIP/LP Solver"){:width="36"}](https://www.gurobi.com)
 [![PuLP](/images/icons/pulp.jpg "PuLP – Python Linear Programming API"){:width="36"}](https://coin-or.github.io/pulp/)
 [![Pyomo](/images/icons/pyomo.jpg "Pyomo – Python Optimization Modeling Objects"){:width="36"}](https://www.pyomo.org)
 
-**Development:**
+**Development**
 
 [![GitHub](/images/icons/github.jpg "GitHub – Version Control & Research Code Repositories"){:width="36"}](https://github.com)
 [![PyCharm](/images/icons/pycharm.jpg "PyCharm – Python IDE (JetBrains)"){:width="36"}](https://www.jetbrains.com/pycharm/)
