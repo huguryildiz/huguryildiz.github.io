@@ -65,99 +65,128 @@ author_profile: true
   <button id="pubReset" class="btn btn--small" type="button">Reset</button>
 </div>
 
+<div id="pubCount" style="margin: 10px 0; font-style: italic; color: #666;"></div>
+
 <script>
 (function () {
-  function getYearFromText(text) {
-    const m = text.match(/\((\d{4})(?:[,\)]|\s)/);
-    return m ? m[1] : "";
+  // DOMContentLoaded ile sayfanın tamamen yüklenmesini bekle
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFilter);
+  } else {
+    initFilter();
   }
 
-  // Find first UL/OL after a heading, even if nested inside divs
-  function listAfterHeading(headingId) {
-    const h = document.getElementById(headingId);
-    if (!h) return null;
-
-    let el = h.nextElementSibling;
-
-    while (el) {
-      // direct list
-      if (el.tagName === "UL" || el.tagName === "OL") return el;
-
-      // nested list inside a wrapper div/section/etc.
-      const nested = el.querySelector && el.querySelector("ul, ol");
-      if (nested) return nested;
-
-      el = el.nextElementSibling;
+  function initFilter() {
+    function getYearFromText(text) {
+      const m = text.match(/\((\d{4})(?:[,\)]|\s)/);
+      return m ? m[1] : "";
     }
-    return null;
-  }
 
-  const sections = [
-    { headingId: "journal-papers", type: "journal" },
-    { headingId: "editorials", type: "editorial" },
-    { headingId: "conference-papers-international", type: "conf-int" },
-    { headingId: "conference-papers-national---in-turkish", type: "conf-nat" },
-  ];
+    // Find first UL/OL after a heading
+    function listAfterHeading(headingId) {
+      const h = document.getElementById(headingId);
+      if (!h) return null;
 
-  const allItems = [];
+      let el = h.nextElementSibling;
+      while (el) {
+        if (el.tagName === "UL" || el.tagName === "OL") return el;
+        const nested = el.querySelector && el.querySelector("ul, ol");
+        if (nested) return nested;
+        el = el.nextElementSibling;
+      }
+      return null;
+    }
 
-  sections.forEach(s => {
-    const list = listAfterHeading(s.headingId);
-    if (!list) return;
+    const sections = [
+      { headingId: "journal-papers", type: "journal" },
+      { headingId: "editorials", type: "editorial" },
+      { headingId: "conference-papers-international", type: "conf-int" },
+      { headingId: "conference-papers-national--in-turkish", type: "conf-nat" },
+    ];
 
-    list.querySelectorAll("li").forEach(li => {
-      li.classList.add("pub-item");
-      li.dataset.type = s.type;
+    const allItems = [];
 
-      const y = getYearFromText(li.textContent);
-      if (y) li.dataset.year = y;
+    sections.forEach(s => {
+      const list = listAfterHeading(s.headingId);
+      if (!list) {
+        console.warn(`List not found for heading: ${s.headingId}`);
+        return;
+      }
 
-      allItems.push(li);
+      list.querySelectorAll("li").forEach(li => {
+        li.classList.add("pub-item");
+        li.dataset.type = s.type;
+
+        const y = getYearFromText(li.textContent);
+        if (y) li.dataset.year = y;
+
+        allItems.push(li);
+      });
     });
-  });
 
-  const typeSelect = document.getElementById("pubType");
-  const yearSelect = document.getElementById("pubYear");
-  const applyBtn  = document.getElementById("pubApply");
-  const resetBtn  = document.getElementById("pubReset");
+    console.log(`Total publications found: ${allItems.length}`);
 
-  // Fill years
-  const years = Array.from(new Set(allItems.map(li => li.dataset.year).filter(Boolean)))
-    .sort((a,b) => Number(b) - Number(a));
+    const typeSelect = document.getElementById("pubType");
+    const yearSelect = document.getElementById("pubYear");
+    const applyBtn = document.getElementById("pubApply");
+    const resetBtn = document.getElementById("pubReset");
+    const countDiv = document.getElementById("pubCount");
 
-  // (re)build options, keep "All"
-  yearSelect.innerHTML = '<option value="all">All</option>';
-  years.forEach(y => {
-    const opt = document.createElement("option");
-    opt.value = y;
-    opt.textContent = y;
-    yearSelect.appendChild(opt);
-  });
+    if (!typeSelect || !yearSelect || !applyBtn || !resetBtn) {
+      console.error("Filter elements not found!");
+      return;
+    }
 
-  function applyFilter() {
-    const t = typeSelect.value;
-    const y = yearSelect.value;
+    // Fill years
+    const years = Array.from(new Set(allItems.map(li => li.dataset.year).filter(Boolean)))
+      .sort((a, b) => Number(b) - Number(a));
 
-    allItems.forEach(li => {
-      const okT = (t === "all") || (li.dataset.type === t);
-      const okY = (y === "all") || (li.dataset.year === y);
-      li.style.display = (okT && okY) ? "" : "none";
+    yearSelect.innerHTML = '<option value="all">All</option>';
+    years.forEach(y => {
+      const opt = document.createElement("option");
+      opt.value = y;
+      opt.textContent = y;
+      yearSelect.appendChild(opt);
     });
+
+    function updateCount(visibleCount, totalCount) {
+      if (visibleCount === totalCount) {
+        countDiv.textContent = `Showing all ${totalCount} publications`;
+      } else {
+        countDiv.textContent = `Showing ${visibleCount} of ${totalCount} publications`;
+      }
+    }
+
+    function applyFilter() {
+      const t = typeSelect.value;
+      const y = yearSelect.value;
+      let visibleCount = 0;
+
+      allItems.forEach(li => {
+        const okT = (t === "all") || (li.dataset.type === t);
+        const okY = (y === "all") || (li.dataset.year === y);
+        const visible = okT && okY;
+        
+        li.style.display = visible ? "" : "none";
+        if (visible) visibleCount++;
+      });
+
+      updateCount(visibleCount, allItems.length);
+    }
+
+    applyBtn.addEventListener("click", applyFilter);
+    typeSelect.addEventListener("change", applyFilter);
+    yearSelect.addEventListener("change", applyFilter);
+
+    resetBtn.addEventListener("click", function () {
+      typeSelect.value = "all";
+      yearSelect.value = "all";
+      applyFilter();
+    });
+
+    // Initial count
+    updateCount(allItems.length, allItems.length);
   }
-
-  applyBtn.addEventListener("click", applyFilter);
-
-  // İstersen otomatik apply da kalsın:
-  typeSelect.addEventListener("change", applyFilter);
-  yearSelect.addEventListener("change", applyFilter);
-
-  resetBtn.addEventListener("click", function () {
-    typeSelect.value = "all";
-    yearSelect.value = "all";
-    applyFilter();
-  });
-
-  applyFilter();
 })();
 </script>
 
