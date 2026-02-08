@@ -200,7 +200,7 @@ author_profile: true
 
 ---
 
-## Past Courses
+## Past Courses at TED University
 
 ### Undergraduate
 
