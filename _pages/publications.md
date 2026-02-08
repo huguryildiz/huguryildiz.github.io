@@ -68,123 +68,6 @@ author_profile: true
 
 <div id="pubCount" style="margin: 10px 0; font-style: italic; color: #666;"></div>
 
-<script>
-(function() {
-  function initFilter() {
-    function getYearFromText(text) {
-      var m = text.match(/\((\d{4})(?:[,\)]|\s)/);
-      return m ? m[1] : "";
-    }
-
-    function listAfterHeading(headingId) {
-      var h = document.getElementById(headingId);
-      if (!h) return null;
-      var el = h.nextElementSibling;
-      while (el) {
-        if (el.tagName === "UL" || el.tagName === "OL") return el;
-        var nested = el.querySelector && el.querySelector("ul, ol");
-        if (nested) return nested;
-        el = el.nextElementSibling;
-      }
-      return null;
-    }
-
-    var sections = [
-      { headingId: "journal-papers", type: "journal" },
-      { headingId: "editorials", type: "editorial" },
-      { headingId: "conference-papers-international", type: "conf-int" },
-      { headingId: "conference-papers-national---in-turkish", type: "conf-nat" }
-    ];
-
-    var allItems = [];
-
-    for (var i = 0; i < sections.length; i++) {
-      var s = sections[i];
-      var list = listAfterHeading(s.headingId);
-      if (!list) continue;
-
-      var lis = list.querySelectorAll("li");
-      for (var j = 0; j < lis.length; j++) {
-        var li = lis[j];
-        li.classList.add("pub-item");
-        li.dataset.type = s.type;
-        var y = getYearFromText(li.textContent);
-        if (y) li.dataset.year = y;
-        allItems.push(li);
-      }
-    }
-
-    var typeSelect = document.getElementById("pubType");
-    var yearSelect = document.getElementById("pubYear");
-    var applyBtn = document.getElementById("pubApply");
-    var resetBtn = document.getElementById("pubReset");
-    var countDiv = document.getElementById("pubCount");
-
-    if (!typeSelect || !yearSelect || !applyBtn || !resetBtn) return;
-
-    var yearsObj = {};
-    for (var k = 0; k < allItems.length; k++) {
-      var year = allItems[k].dataset.year;
-      if (year) yearsObj[year] = true;
-    }
-    var years = Object.keys(yearsObj).sort(function(a, b) {
-      return Number(b) - Number(a);
-    });
-
-    yearSelect.innerHTML = '<option value="all">All</option>';
-    for (var m = 0; m < years.length; m++) {
-      var opt = document.createElement("option");
-      opt.value = years[m];
-      opt.textContent = years[m];
-      yearSelect.appendChild(opt);
-    }
-
-    function updateCount(visibleCount, totalCount) {
-      if (visibleCount === totalCount) {
-        countDiv.textContent = "Showing all " + totalCount + " publications";
-      } else {
-        countDiv.textContent = "Showing " + visibleCount + " of " + totalCount + " publications";
-      }
-    }
-
-    function applyFilter() {
-      var t = typeSelect.value;
-      var y = yearSelect.value;
-      var visibleCount = 0;
-
-      for (var n = 0; n < allItems.length; n++) {
-        var li = allItems[n];
-        var okT = (t === "all") || (li.dataset.type === t);
-        var okY = (y === "all") || (li.dataset.year === y);
-        var visible = okT && okY;
-        li.style.display = visible ? "" : "none";
-        if (visible) visibleCount++;
-      }
-
-      updateCount(visibleCount, allItems.length);
-    }
-
-    applyBtn.addEventListener("click", applyFilter);
-    typeSelect.addEventListener("change", applyFilter);
-    yearSelect.addEventListener("change", applyFilter);
-
-    resetBtn.addEventListener("click", function() {
-      typeSelect.value = "all";
-      yearSelect.value = "all";
-      applyFilter();
-    });
-
-    updateCount(allItems.length, allItems.length);
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initFilter);
-  } else {
-    initFilter();
-  }
-})();
-</script>
-
 
 ## Quick Links
 [Journal Papers](#journal-papers){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
@@ -333,4 +216,136 @@ author_profile: true
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2018.8404333) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16RrXq5rQ0TfTveU8T2c0VZO_YbVGIhDx/view?usp=sharing)  
 
 - **Yildiz, H. U.**, Tavli, B., & Kahjogh, B. O. (2017, May). *Assessment of wireless sensor network lifetime reduction due to elimination of critical node sets*. In *2017 25th SIU* (pp. 1–4). IEEE.  
-![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2017.7960228) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/15euPq5RHnGhSFm788StYStlpDJEYPMBA/view?usp=sharing)  
+![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2017.7960228) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/15euPq5RHnGhSFm788StYStlpDJEYPMBA/view?usp=sharing) 
+
+
+<script>
+(function() {
+  function initFilter() {
+    function getYearFromText(text) {
+      var m = text.match(/\((\d{4})(?:[,\)]|\s)/);
+      return m ? m[1] : "";
+    }
+
+    // Find heading by its visible text (works even if id is weird)
+    function findHeadingByText(title) {
+      var hs = document.querySelectorAll("h2, h3");
+      title = title.trim().toLowerCase();
+      for (var i = 0; i < hs.length; i++) {
+        var t = (hs[i].textContent || "").trim().toLowerCase();
+        if (t === title) return hs[i];
+      }
+      return null;
+    }
+
+    // Find first UL/OL after a heading, even if nested
+    function listAfterHeadingEl(h) {
+      if (!h) return null;
+      var el = h.nextElementSibling;
+      while (el) {
+        if (el.tagName === "UL" || el.tagName === "OL") return el;
+        var nested = el.querySelector && el.querySelector("ul, ol");
+        if (nested) return nested;
+        el = el.nextElementSibling;
+      }
+      return null;
+    }
+
+    // Match your exact headings
+    var sections = [
+      { headingText: "Journal Papers", type: "journal" },
+      { headingText: "Editorials", type: "editorial" },
+      { headingText: "Conference Papers (International)", type: "conf-int" },
+      { headingText: "Conference Papers (National — in Turkish)", type: "conf-nat" }
+    ];
+
+    var allItems = [];
+
+    for (var i = 0; i < sections.length; i++) {
+      var s = sections[i];
+      var h = findHeadingByText(s.headingText);
+      var list = listAfterHeadingEl(h);
+      if (!list) continue;
+
+      var lis = list.querySelectorAll("li");
+      for (var j = 0; j < lis.length; j++) {
+        var li = lis[j];
+        li.classList.add("pub-item");
+        li.dataset.type = s.type;
+
+        var y = getYearFromText(li.textContent);
+        if (y) li.dataset.year = y;
+
+        allItems.push(li);
+      }
+    }
+
+    var typeSelect = document.getElementById("pubType");
+    var yearSelect = document.getElementById("pubYear");
+    var applyBtn = document.getElementById("pubApply");
+    var resetBtn = document.getElementById("pubReset");
+    var countDiv = document.getElementById("pubCount");
+
+    if (!typeSelect || !yearSelect || !applyBtn || !resetBtn) return;
+
+    // Build year list
+    var yearsObj = {};
+    for (var k = 0; k < allItems.length; k++) {
+      var yr = allItems[k].dataset.year;
+      if (yr) yearsObj[yr] = true;
+    }
+    var years = Object.keys(yearsObj).sort(function(a, b) { return Number(b) - Number(a); });
+
+    yearSelect.innerHTML = '<option value="all">All</option>';
+    for (var m = 0; m < years.length; m++) {
+      var opt = document.createElement("option");
+      opt.value = years[m];
+      opt.textContent = years[m];
+      yearSelect.appendChild(opt);
+    }
+
+    function updateCount(visibleCount, totalCount) {
+      if (!countDiv) return;
+      countDiv.textContent = (visibleCount === totalCount)
+        ? ("Showing all " + totalCount + " publications")
+        : ("Showing " + visibleCount + " of " + totalCount + " publications");
+    }
+
+    function applyFilter() {
+      var t = typeSelect.value;
+      var y = yearSelect.value;
+      var visibleCount = 0;
+
+      for (var n = 0; n < allItems.length; n++) {
+        var li = allItems[n];
+        var okT = (t === "all") || (li.dataset.type === t);
+        var okY = (y === "all") || (li.dataset.year === y);
+        var visible = okT && okY;
+        li.style.display = visible ? "" : "none";
+        if (visible) visibleCount++;
+      }
+      updateCount(visibleCount, allItems.length);
+    }
+
+    applyBtn.addEventListener("click", applyFilter);
+    typeSelect.addEventListener("change", applyFilter);
+    yearSelect.addEventListener("change", applyFilter);
+
+    resetBtn.addEventListener("click", function() {
+      typeSelect.value = "all";
+      yearSelect.value = "all";
+      applyFilter();
+    });
+
+    applyFilter(); // initial
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initFilter);
+  } else {
+    initFilter();
+  }
+})();
+</script>
+
+ 
