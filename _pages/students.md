@@ -8,7 +8,7 @@ author_profile: true
 ## Student Supervision
 
 - **Graduate Theses Supervised:** 7
-- **Undergraduate Senior Projects:** 25+
+- **Undergraduate Senior Projects:** 40+
 - **Recommendation Letters Written:** 50+
 
 ## Ph.D. Students
