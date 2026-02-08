@@ -40,8 +40,6 @@ author_profile: true
   </a>
 </p>
 
----
-
 ## Filter
 
 <div class="pub-filter" style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin: 10px 0 18px 0;">
@@ -63,42 +61,56 @@ author_profile: true
     </select>
   </label>
 
+  <button id="pubApply" class="btn btn--small btn--primary" type="button">Apply</button>
   <button id="pubReset" class="btn btn--small" type="button">Reset</button>
 </div>
 
 <script>
 (function () {
-  function extractYear(li) {
-    // matches: (2025). or (2025, November). or (2019, April).
-    const m = li.textContent.match(/\((\d{4})(?:[,\)]|\s)/);
+  function getYearFromText(text) {
+    const m = text.match(/\((\d{4})(?:[,\)]|\s)/);
     return m ? m[1] : "";
   }
 
-  function setupSection(sectionId, type) {
-    const section = document.getElementById(sectionId);
-    if (!section) return [];
-    section.dataset.type = type;
-
-    const items = Array.from(section.querySelectorAll("li"));
-    items.forEach(li => {
-      li.dataset.type = type;
-      const y = extractYear(li);
-      if (y) li.dataset.year = y;
-    });
-    return items;
+  // Finds the first <ul> right after the section heading
+  function ulAfterHeading(headingId) {
+    const h = document.getElementById(headingId);
+    if (!h) return null;
+    let el = h.nextElementSibling;
+    while (el && el.tagName !== "UL") el = el.nextElementSibling;
+    return el && el.tagName === "UL" ? el : null;
   }
 
-  const allItems = []
-    .concat(setupSection("pub-journal", "journal"))
-    .concat(setupSection("pub-editorial", "editorial"))
-    .concat(setupSection("pub-conf-int", "conf-int"))
-    .concat(setupSection("pub-conf-nat", "conf-nat"));
+  // These IDs come from your section titles (kramdown/Minimal Mistakes)
+  const sections = [
+    { headingId: "journal-papers", type: "journal" },
+    { headingId: "editorials", type: "editorial" },
+    { headingId: "conference-papers-international", type: "conf-int" },
+    { headingId: "conference-papers-national---in-turkish", type: "conf-nat" },
+  ];
 
-  // Populate year dropdown from existing items
+  const allItems = [];
+
+  sections.forEach(s => {
+    const ul = ulAfterHeading(s.headingId);
+    if (!ul) return;
+    ul.querySelectorAll("li").forEach(li => {
+      li.classList.add("pub-item");
+      li.dataset.type = s.type;
+      const y = getYearFromText(li.textContent);
+      if (y) li.dataset.year = y;
+      allItems.push(li);
+    });
+  });
+
+  const typeSelect = document.getElementById("pubType");
+  const yearSelect = document.getElementById("pubYear");
+  const applyBtn  = document.getElementById("pubApply");
+  const resetBtn  = document.getElementById("pubReset");
+
+  // Populate years from detected publication years
   const years = Array.from(new Set(allItems.map(li => li.dataset.year).filter(Boolean)))
     .sort((a,b) => Number(b) - Number(a));
-
-  const yearSelect = document.getElementById("pubYear");
   years.forEach(y => {
     const opt = document.createElement("option");
     opt.value = y;
@@ -106,20 +118,21 @@ author_profile: true
     yearSelect.appendChild(opt);
   });
 
-  const typeSelect = document.getElementById("pubType");
-  const resetBtn = document.getElementById("pubReset");
-
   function applyFilter() {
     const t = typeSelect.value;
     const y = yearSelect.value;
 
     allItems.forEach(li => {
-      const okType = (t === "all") || (li.dataset.type === t);
-      const okYear = (y === "all") || (li.dataset.year === y);
-      li.style.display = (okType && okYear) ? "" : "none";
+      const okT = (t === "all") || (li.dataset.type === t);
+      const okY = (y === "all") || (li.dataset.year === y);
+      li.style.display = (okT && okY) ? "" : "none";
     });
   }
 
+  // Apply only when button is clicked
+  applyBtn.addEventListener("click", applyFilter);
+
+  // Optional: also auto-apply on change (remove these 2 lines if you want strictly manual)
   typeSelect.addEventListener("change", applyFilter);
   yearSelect.addEventListener("change", applyFilter);
 
@@ -128,10 +141,11 @@ author_profile: true
     yearSelect.value = "all";
     applyFilter();
   });
+
+  // initial render
+  applyFilter();
 })();
 </script>
-
----
 
 ## Quick Links
 [Journal Papers](#journal-papers){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
@@ -139,11 +153,7 @@ author_profile: true
 [Conf. Papers (Int.)](#conference-papers-international){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
 [Conf. Papers (Nat.)](#conference-papers-national---in-turkish){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
 
----
-
 ## Journal Papers
-
-<div id="pub-journal" markdown="1">
 
 - Karagul, C. T., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025). *Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity*. *IEEE Internet of Things Journal, 12*(22), 47817–47826.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2025_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JIOT.2025.3603829)
@@ -202,7 +212,7 @@ author_profile: true
 - Kurt, S., **Yildiz, H. U.**, Yigit, M., Tavli, B., & Gungor, V. C. (2017). *Packet size optimization in wireless sensor networks for smart grid applications*. *IEEE Transactions on Industrial Electronics, 64*(3), 2392–2401.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2017_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/TIE.2016.2619319)
 
-- Akbas, A., **Yildiz, H. U.**, & Tavli, B. (2016). *Joint optimization of transmission power level and packet size for WSN lifetime maximization*. *IEEE Sensors Journal, 16*(12), 5084–5094.  
+- Akbas, A., **Yildiz, H. U.**, Tavli, B., & Uludag, S. (2016). *Joint optimization of transmission power level and packet size for WSN lifetime maximization*. *IEEE Sensors Journal, 16*(12), 5084–5094.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2016_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JSEN.2016.2548661)
 
 - **Yildiz, H. U.**, Bicakci, K., Tavli, B., Gultekin, H., & Incebacak, D. (2016). *Maximizing wireless sensor network lifetime by communication/computation energy optimization: Node level versus network level strategies*. *Ad Hoc Networks, 37*(2), 301–323.  
@@ -217,24 +227,14 @@ author_profile: true
 - Batmaz, A. U., **Yildiz, H. U.**, & Tavli, B. (2014). *Role of unidirectionality and reverse path length on wireless sensor network lifetime*. *IEEE Sensors Journal, 14*(11), 3971–3982.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2014_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JSEN.2014.2359156)
 
-</div>
-
----
 
 ## Editorials
-
-<div id="pub-editorial" markdown="1">
 
 - Haytaoglu, E., Arslan, S. S., Dagdeviren, O., **Yildiz, H. U.**, & Ozturk, Y. (2025). *Editorial brief for special issue: Mass connectivity and/or communication paradigms for the internet of things*. *Internet of Things, 32*, 101625.  
 ![Editorial](https://img.shields.io/badge/Type-Editorial-purple?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2025_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1016/j.iot.2025.101625)
 
-</div>
-
----
 
 ## Conference Papers (International)
-
-<div id="pub-conf-int" markdown="1">
 
 - Karagul, C. T., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025, November). *Non-uniform k-connectivity for energy-efficient and reliable underwater wireless sensor networks*. In *2025 33rd Telecommunications Forum (TELFOR)* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/TELFOR67910.2025.11314281) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://docs.google.com/presentation/d/1K3TCWFDIhZuGReBDxBZDdtoVcevGus7G/)  
@@ -245,7 +245,7 @@ author_profile: true
 - Ozmen, A., **Yildiz, H. U.**, & Tavli, B. (2020, November). *Impact of minimizing the eavesdropping risks on lifetime of underwater acoustic sensor networks*. In *2020 28th TELFOR* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/TELFOR51502.2020.9306557) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/15alVG_AJGp1eepousobHjpCpnDDz3W47/view?usp=sharing)  
 
-- **Yildiz, H. U.** (2019, November). *Utilization of multi-sink architectures for lifetime maximization in underwater sensor networks*. In *2019 2nd IEEE MENACOMM*.  
+- **Yildiz, H. U.** (2019, November). *Utilization of multi-sink architectures for lifetime maximization in underwater sensor networks*. In *2019 2nd IEEE MENACOMM*.
   ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square)
   [![Award](https://img.shields.io/badge/Award-Best_Paper_%283rd%29-ffcc00?style=flat-square)](https://drive.google.com/file/d/1QbpfuRXmyoTQCFJAFh_H-exv3v3Q8L-t/view)
   [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/MENACOMM46666.2019.8988521)
@@ -278,13 +278,8 @@ author_profile: true
 - **Yildiz, H. U.**, Bicakci, K., & Tavli, B. (2014, January). *Communication/computation trade-offs in wireless sensor networks: Comparing network-level and node-level strategies*. In *2014 IEEE WiSNet* (pp. 49–51). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/WiSNet.2014.6825515) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16xQgqR0IGGUlx-9fmwTTnk1srKBS-9_w/view?usp=sharing)  
 
-</div>
-
----
 
 ## Conference Papers (National — in Turkish)
-
-<div id="pub-conf-nat" markdown="1">
 
 - **Yildiz, H. U.** (2019, April). *Improvement of underwater acoustic sensor networks performance with fountain codes*. In *2019 27th SIU* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2019.8806401) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16P_YL9_5u1bCfNzGJOZQnYrHXdjoNtZO/view?usp=sharing)  
@@ -300,5 +295,3 @@ author_profile: true
 
 - **Yildiz, H. U.**, Tavli, B., & Kahjogh, B. O. (2017, May). *Assessment of wireless sensor network lifetime reduction due to elimination of critical node sets*. In *2017 25th SIU* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2017.7960228) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/15euPq5RHnGhSFm788StYStlpDJEYPMBA/view?usp=sharing)  
-
-</div>
