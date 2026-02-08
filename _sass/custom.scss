@@ -132,6 +132,45 @@ details[open] {
 }
 
 /* =========================
+   Publications stats (nice cards)
+   ========================= */
+.pub-stats{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin: 0.7rem 0 1.2rem;
+}
+
+@media (max-width: 900px){
+  .pub-stats{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 480px){
+  .pub-stats{ grid-template-columns: 1fr; }
+}
+
+.pub-stat{
+  padding: 0.95rem 1rem;
+  border-radius: 16px;
+  border: 1px solid rgba(150, 170, 190, 0.25);
+  background: rgba(255,255,255,0.03);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.08);
+}
+
+.pub-stat__num{
+  font-size: 2.05rem;
+  font-weight: 850;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.pub-stat__label{
+  margin-top: 0.25rem;
+  font-size: 0.92rem;
+  opacity: 0.75;
+  font-weight: 600;
+}
+
+/* =========================
    Optional: nicer spacing for News list
    (works well with Markdown bullets)
    ========================= */
