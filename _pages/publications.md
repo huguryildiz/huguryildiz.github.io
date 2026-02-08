@@ -7,6 +7,27 @@ author_profile: true
 
 ## Metrics
 
+<!-- Publication Count -->
+<div class="pub-stats">
+  <div class="pub-stat">
+    <div class="pub-stat__num">24</div>
+    <div class="pub-stat__label">Journal Artices</div>
+  </div>
+  <div class="pub-stat">
+    <div class="pub-stat__num">13</div>
+    <div class="pub-stat__label">Conference Proc. (Int.)</div>
+  </div>
+  <div class="pub-stat">
+    <div class="pub-stat__num">5</div>
+    <div class="pub-stat__label">Conf. Proc. (Nat.)</div>
+  </div>
+  <div class="pub-stat">
+    <div class="pub-stat__num">1</div>
+    <div class="pub-stat__label">Editorials</div>
+  </div>
+</div>
+
+<!-- Citation Metrics -->
 <p class="metrics-badges">
   <a href="https://scholar.google.com.tr/citations?user=nQwHS1gAAAAJ">
     <img src="https://img.shields.io/badge/Citations-1043-blue?style=flat-square&logo=google-scholar" alt="Citations">
@@ -19,24 +40,8 @@ author_profile: true
   </a>
 </p>
 
-<div class="pub-stats">
-  <div class="pub-stat">
-    <div class="pub-stat__num">18</div>
-    <div class="pub-stat__label">Journal</div>
-  </div>
-  <div class="pub-stat">
-    <div class="pub-stat__num">12</div>
-    <div class="pub-stat__label">Conf. (Int.)</div>
-  </div>
-  <div class="pub-stat">
-    <div class="pub-stat__num">5</div>
-    <div class="pub-stat__label">Conf. (Nat.)</div>
-  </div>
-  <div class="pub-stat">
-    <div class="pub-stat__num">1</div>
-    <div class="pub-stat__label">Editorials</div>
-  </div>
-</div>
+
+---
 
 **Quick Links:**  
 [Journal Papers](#journal-papers){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
