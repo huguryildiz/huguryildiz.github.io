@@ -42,29 +42,6 @@ author_profile: true
 
 ## Filter
 
-<div class="pub-filter" style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin: 10px 0 18px 0;">
-  <label style="display:flex; gap:8px; align-items:center;">
-    <span style="min-width:42px;">Type</span>
-    <select id="pubType" style="padding:6px 8px;">
-      <option value="all">All</option>
-      <option value="journal">Journal</option>
-      <option value="editorial">Editorial</option>
-      <option value="conf-int">Conference (International)</option>
-      <option value="conf-nat">Conference (National)</option>
-    </select>
-  </label>
-
-  <label style="display:flex; gap:8px; align-items:center;">
-    <span style="min-width:42px;">Year</span>
-    <select id="pubYear" style="padding:6px 8px;">
-      <option value="all">All</option>
-    </select>
-  </label>
-
-  <button id="pubApply" class="btn btn--small btn--primary" type="button">Apply</button>
-  <button id="pubReset" class="btn btn--small" type="button">Reset</button>
-</div>
-
 <script>
 (function () {
   function getYearFromText(text) {
@@ -72,16 +49,26 @@ author_profile: true
     return m ? m[1] : "";
   }
 
-  // Finds the first <ul> right after the section heading
-  function ulAfterHeading(headingId) {
+  // Find first UL/OL after a heading, even if nested inside divs
+  function listAfterHeading(headingId) {
     const h = document.getElementById(headingId);
     if (!h) return null;
+
     let el = h.nextElementSibling;
-    while (el && el.tagName !== "UL") el = el.nextElementSibling;
-    return el && el.tagName === "UL" ? el : null;
+
+    while (el) {
+      // direct list
+      if (el.tagName === "UL" || el.tagName === "OL") return el;
+
+      // nested list inside a wrapper div/section/etc.
+      const nested = el.querySelector && el.querySelector("ul, ol");
+      if (nested) return nested;
+
+      el = el.nextElementSibling;
+    }
+    return null;
   }
 
-  // These IDs come from your section titles (kramdown/Minimal Mistakes)
   const sections = [
     { headingId: "journal-papers", type: "journal" },
     { headingId: "editorials", type: "editorial" },
@@ -92,13 +79,16 @@ author_profile: true
   const allItems = [];
 
   sections.forEach(s => {
-    const ul = ulAfterHeading(s.headingId);
-    if (!ul) return;
-    ul.querySelectorAll("li").forEach(li => {
+    const list = listAfterHeading(s.headingId);
+    if (!list) return;
+
+    list.querySelectorAll("li").forEach(li => {
       li.classList.add("pub-item");
       li.dataset.type = s.type;
+
       const y = getYearFromText(li.textContent);
       if (y) li.dataset.year = y;
+
       allItems.push(li);
     });
   });
@@ -108,9 +98,12 @@ author_profile: true
   const applyBtn  = document.getElementById("pubApply");
   const resetBtn  = document.getElementById("pubReset");
 
-  // Populate years from detected publication years
+  // Fill years
   const years = Array.from(new Set(allItems.map(li => li.dataset.year).filter(Boolean)))
     .sort((a,b) => Number(b) - Number(a));
+
+  // (re)build options, keep "All"
+  yearSelect.innerHTML = '<option value="all">All</option>';
   years.forEach(y => {
     const opt = document.createElement("option");
     opt.value = y;
@@ -129,10 +122,9 @@ author_profile: true
     });
   }
 
-  // Apply only when button is clicked
   applyBtn.addEventListener("click", applyFilter);
 
-  // Optional: also auto-apply on change (remove these 2 lines if you want strictly manual)
+  // İstersen otomatik apply da kalsın:
   typeSelect.addEventListener("change", applyFilter);
   yearSelect.addEventListener("change", applyFilter);
 
@@ -142,7 +134,6 @@ author_profile: true
     applyFilter();
   });
 
-  // initial render
   applyFilter();
 })();
 </script>
