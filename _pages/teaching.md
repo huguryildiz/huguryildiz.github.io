@@ -285,6 +285,8 @@ author_profile: true
 
 </div>
 
+---
+
 Course materials, including lecture notes and supplementary resources, are available through the [TEDU LMS](https://lms.tedu.edu.tr/).
 
 ## Teaching Philosophy
