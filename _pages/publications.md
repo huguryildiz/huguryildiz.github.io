@@ -42,6 +42,29 @@ author_profile: true
 
 ## Filter
 
+<div class="pub-filter" style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin: 10px 0 18px 0;">
+  <label style="display:flex; gap:8px; align-items:center;">
+    <span style="min-width:42px;">Type</span>
+    <select id="pubType" style="padding:6px 8px;">
+      <option value="all">All</option>
+      <option value="journal">Journal</option>
+      <option value="editorial">Editorial</option>
+      <option value="conf-int">Conference (International)</option>
+      <option value="conf-nat">Conference (National)</option>
+    </select>
+  </label>
+
+  <label style="display:flex; gap:8px; align-items:center;">
+    <span style="min-width:42px;">Year</span>
+    <select id="pubYear" style="padding:6px 8px;">
+      <option value="all">All</option>
+    </select>
+  </label>
+
+  <button id="pubApply" class="btn btn--small btn--primary" type="button">Apply</button>
+  <button id="pubReset" class="btn btn--small" type="button">Reset</button>
+</div>
+
 <script>
 (function () {
   function getYearFromText(text) {
