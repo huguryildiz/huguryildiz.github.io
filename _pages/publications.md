@@ -42,6 +42,7 @@ author_profile: true
 
 ## Filter
 
+
 <div class="pub-filter" style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin: 10px 0 18px 0;">
   <label style="display:flex; gap:8px; align-items:center;">
     <span style="min-width:42px;">Type</span>
@@ -68,108 +69,97 @@ author_profile: true
 <div id="pubCount" style="margin: 10px 0; font-style: italic; color: #666;"></div>
 
 <script>
-(function () {
-  // DOMContentLoaded ile sayfanın tamamen yüklenmesini bekle
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initFilter);
-  } else {
-    initFilter();
-  }
-
+(function() {
   function initFilter() {
     function getYearFromText(text) {
-      const m = text.match(/\((\d{4})(?:[,\)]|\s)/);
+      var m = text.match(/\((\d{4})(?:[,\)]|\s)/);
       return m ? m[1] : "";
     }
 
-    // Find first UL/OL after a heading
     function listAfterHeading(headingId) {
-      const h = document.getElementById(headingId);
+      var h = document.getElementById(headingId);
       if (!h) return null;
-
-      let el = h.nextElementSibling;
+      var el = h.nextElementSibling;
       while (el) {
         if (el.tagName === "UL" || el.tagName === "OL") return el;
-        const nested = el.querySelector && el.querySelector("ul, ol");
+        var nested = el.querySelector && el.querySelector("ul, ol");
         if (nested) return nested;
         el = el.nextElementSibling;
       }
       return null;
     }
 
-    const sections = [
+    var sections = [
       { headingId: "journal-papers", type: "journal" },
       { headingId: "editorials", type: "editorial" },
       { headingId: "conference-papers-international", type: "conf-int" },
-      { headingId: "conference-papers-national--in-turkish", type: "conf-nat" },
+      { headingId: "conference-papers-national---in-turkish", type: "conf-nat" }
     ];
 
-    const allItems = [];
+    var allItems = [];
 
-    sections.forEach(s => {
-      const list = listAfterHeading(s.headingId);
-      if (!list) {
-        console.warn(`List not found for heading: ${s.headingId}`);
-        return;
-      }
+    for (var i = 0; i < sections.length; i++) {
+      var s = sections[i];
+      var list = listAfterHeading(s.headingId);
+      if (!list) continue;
 
-      list.querySelectorAll("li").forEach(li => {
+      var lis = list.querySelectorAll("li");
+      for (var j = 0; j < lis.length; j++) {
+        var li = lis[j];
         li.classList.add("pub-item");
         li.dataset.type = s.type;
-
-        const y = getYearFromText(li.textContent);
+        var y = getYearFromText(li.textContent);
         if (y) li.dataset.year = y;
-
         allItems.push(li);
-      });
-    });
-
-    console.log(`Total publications found: ${allItems.length}`);
-
-    const typeSelect = document.getElementById("pubType");
-    const yearSelect = document.getElementById("pubYear");
-    const applyBtn = document.getElementById("pubApply");
-    const resetBtn = document.getElementById("pubReset");
-    const countDiv = document.getElementById("pubCount");
-
-    if (!typeSelect || !yearSelect || !applyBtn || !resetBtn) {
-      console.error("Filter elements not found!");
-      return;
+      }
     }
 
-    // Fill years
-    const years = Array.from(new Set(allItems.map(li => li.dataset.year).filter(Boolean)))
-      .sort((a, b) => Number(b) - Number(a));
+    var typeSelect = document.getElementById("pubType");
+    var yearSelect = document.getElementById("pubYear");
+    var applyBtn = document.getElementById("pubApply");
+    var resetBtn = document.getElementById("pubReset");
+    var countDiv = document.getElementById("pubCount");
+
+    if (!typeSelect || !yearSelect || !applyBtn || !resetBtn) return;
+
+    var yearsObj = {};
+    for (var k = 0; k < allItems.length; k++) {
+      var year = allItems[k].dataset.year;
+      if (year) yearsObj[year] = true;
+    }
+    var years = Object.keys(yearsObj).sort(function(a, b) {
+      return Number(b) - Number(a);
+    });
 
     yearSelect.innerHTML = '<option value="all">All</option>';
-    years.forEach(y => {
-      const opt = document.createElement("option");
-      opt.value = y;
-      opt.textContent = y;
+    for (var m = 0; m < years.length; m++) {
+      var opt = document.createElement("option");
+      opt.value = years[m];
+      opt.textContent = years[m];
       yearSelect.appendChild(opt);
-    });
+    }
 
     function updateCount(visibleCount, totalCount) {
       if (visibleCount === totalCount) {
-        countDiv.textContent = `Showing all ${totalCount} publications`;
+        countDiv.textContent = "Showing all " + totalCount + " publications";
       } else {
-        countDiv.textContent = `Showing ${visibleCount} of ${totalCount} publications`;
+        countDiv.textContent = "Showing " + visibleCount + " of " + totalCount + " publications";
       }
     }
 
     function applyFilter() {
-      const t = typeSelect.value;
-      const y = yearSelect.value;
-      let visibleCount = 0;
+      var t = typeSelect.value;
+      var y = yearSelect.value;
+      var visibleCount = 0;
 
-      allItems.forEach(li => {
-        const okT = (t === "all") || (li.dataset.type === t);
-        const okY = (y === "all") || (li.dataset.year === y);
-        const visible = okT && okY;
-        
+      for (var n = 0; n < allItems.length; n++) {
+        var li = allItems[n];
+        var okT = (t === "all") || (li.dataset.type === t);
+        var okY = (y === "all") || (li.dataset.year === y);
+        var visible = okT && okY;
         li.style.display = visible ? "" : "none";
         if (visible) visibleCount++;
-      });
+      }
 
       updateCount(visibleCount, allItems.length);
     }
@@ -178,17 +168,23 @@ author_profile: true
     typeSelect.addEventListener("change", applyFilter);
     yearSelect.addEventListener("change", applyFilter);
 
-    resetBtn.addEventListener("click", function () {
+    resetBtn.addEventListener("click", function() {
       typeSelect.value = "all";
       yearSelect.value = "all";
       applyFilter();
     });
 
-    // Initial count
     updateCount(allItems.length, allItems.length);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initFilter);
+  } else {
+    initFilter();
   }
 })();
 </script>
+
 
 ## Quick Links
 [Journal Papers](#journal-papers){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
