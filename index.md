@@ -140,9 +140,13 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
 ![Programming](https://skillicons.dev/icons?i=py,matlab,latex,git,github&perline=5)
 
 **Optimization & Solvers:**  
-![Gurobi](/images/icons/gurobi.png){:width="36"}  
-![GAMS](/images/icons/gams.png){:width="36"}  
-CPLEX, XPRESS
+![Gurobi](/images/icons/gurobi.jpg){:width="36"} 
+![GAMS](/images/icons/gams.jpg){:width="36"}
+![PyCharm](/images/icons/pycharm.jpg){:width="36"}
+![Spyder](/images/icons/spyder.jpg){:width="36"}
+![VS Code](/images/icons/vscode.jpg){:width="36"}
+![Cursor](/images/icons/cursor.jpg){:width="36"}
+
 
 ## News
 
