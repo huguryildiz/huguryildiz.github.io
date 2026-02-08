@@ -142,12 +142,14 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
 ![Programming](https://skillicons.dev/icons?i=py,matlab,latex,git,github&perline=5)
 
 **Optimization & Solvers:**
+
 [![GAMS](/images/icons/gams.jpg "GAMS – Mathematical Modeling System"){:width="36"}](https://www.gams.com)
 [![Gurobi](/images/icons/gurobi.jpg "Gurobi Optimizer – Commercial MIP/LP Solver"){:width="36"}](https://www.gurobi.com)
 [![PuLP](/images/icons/pulp.jpg "PuLP – Python Linear Programming API"){:width="36"}](https://coin-or.github.io/pulp/)
 [![Pyomo](/images/icons/pyomo.jpg "Pyomo – Python Optimization Modeling Objects"){:width="36"}](https://www.pyomo.org)
 
 **Development:**
+
 [![PyCharm](/images/icons/pycharm.jpg "PyCharm – Python IDE (JetBrains)"){:width="36"}](https://www.jetbrains.com/pycharm/)
 [![Spyder](/images/icons/spyder.jpg "Spyder – Scientific Python IDE"){:width="36"}](https://www.spyder-ide.org)
 [![VS Code](/images/icons/vscode.jpg "Visual Studio Code – Lightweight Code Editor"){:width="36"}](https://code.visualstudio.com)
