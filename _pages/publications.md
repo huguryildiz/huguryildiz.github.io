@@ -19,25 +19,22 @@ author_profile: true
   </a>
 </p>
 
-<div class="metrics-cards">
-  <div class="metric-card metric-static">
-    <div class="metric-value">18</div>
-    <div class="metric-label">Journal Papers</div>
+<div class="pub-stats">
+  <div class="pub-stat">
+    <div class="pub-stat__num">18</div>
+    <div class="pub-stat__label">Journal</div>
   </div>
-
-  <div class="metric-card metric-static">
-    <div class="metric-value">12</div>
-    <div class="metric-label">Conf. Papers (Int.)</div>
+  <div class="pub-stat">
+    <div class="pub-stat__num">12</div>
+    <div class="pub-stat__label">Conf. (Int.)</div>
   </div>
-
-  <div class="metric-card metric-static">
-    <div class="metric-value">5</div>
-    <div class="metric-label">Conf. Papers (Nat.)</div>
+  <div class="pub-stat">
+    <div class="pub-stat__num">5</div>
+    <div class="pub-stat__label">Conf. (Nat.)</div>
   </div>
-
-  <div class="metric-card metric-static">
-    <div class="metric-value">1</div>
-    <div class="metric-label">Editorials</div>
+  <div class="pub-stat">
+    <div class="pub-stat__num">1</div>
+    <div class="pub-stat__label">Editorials</div>
   </div>
 </div>
 
