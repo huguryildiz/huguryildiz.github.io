@@ -175,13 +175,20 @@ details[open] {
 /* =============================== */
 
 .footer__visitors {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;   /* 🔥 kritik satır */
+}
+
+.footer__visitors h4 {
   text-align: right;
+  width: 100%;
+  margin-bottom: 6px;
 }
 
 .footer__visitors-map {
-  display: inline-block;
+  display: block;
 }
-
 /* =========================
    Optional: nicer spacing for News list
    (works well with Markdown bullets)
