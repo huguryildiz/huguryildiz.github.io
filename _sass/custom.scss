@@ -174,19 +174,33 @@ details[open] {
 /* Footer: Follow (left) + Visitors (right) */
 /* =============================== */
 
-.footer__top{
-  display:flex;
-  justify-content: space-between;
-  align-items:flex-start;   /* aynı hizaya gelsin */
-  gap: 20px;
+.footer__top {
+  display: flex;
+  align-items: flex-start;   /* üstten hizala */
+  gap: 24px;
+  flex-wrap: wrap;           /* dar ekranda alt satıra düşsün */
 }
 
-.footer__visitors{
-  text-align:right;
+.page__footer-follow {
+  margin: 0;
 }
 
-.footer__visitors-map{
-  display:inline-block;
+.page__footer-follow .social-icons {
+  margin: 0;                 /* ul default margin */
+  padding: 0;
+}
+
+.footer__visitors {
+  margin-left: auto;         /* sağa it */
+  text-align: right;
+}
+
+.footer__visitors h4 {
+  margin: 0 0 6px 0;         /* üst margin'i kaldır (aşağı kaydırmasın) */
+}
+
+.footer__visitors-map {
+  display: inline-block;
 }
 
 /* =========================
