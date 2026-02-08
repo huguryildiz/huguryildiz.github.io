@@ -1,40 +1,42 @@
 {% include base_path %}
 
-{% if site.author.github or site.author.bitbucket or site.atom_feed.hide != true %}
-<div class="page__footer-follow">
-  <ul class="social-icons">
-    {% if site.data.ui-text[site.locale].follow_label %}
-      <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
-    {% endif %}
-    {% if site.author.github %}
-      <li><a href="https://github.com/{{ site.author.github }}"><i class="fab fa-github"></i> GitHub</a></li>
-    {% endif %}
-    {% if site.author.bitbucket %}
-      <li><a href="https://bitbucket.org/{{ site.author.bitbucket }}"><i class="fab fa-bitbucket"></i> Bitbucket</a></li>
-    {% endif %}
-    {% if site.atom_feed.hide != true %}
-      <li>
-        <a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}">
-          <i class="fa fa-fw fa-rss-square"></i>
-          {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}
-        </a>
-      </li>
-    {% endif %}
-  </ul>
-</div>
-{% endif %}
+<div class="footer__top">
+  {% if site.author.github or site.author.bitbucket or site.atom_feed.hide != true %}
+  <div class="page__footer-follow">
+    <ul class="social-icons">
+      {% if site.data.ui-text[site.locale].follow_label %}
+        <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
+      {% endif %}
+      {% if site.author.github %}
+        <li><a href="https://github.com/{{ site.author.github }}"><i class="fab fa-github"></i> GitHub</a></li>
+      {% endif %}
+      {% if site.author.bitbucket %}
+        <li><a href="https://bitbucket.org/{{ site.author.bitbucket }}"><i class="fab fa-bitbucket"></i> Bitbucket</a></li>
+      {% endif %}
+      {% if site.atom_feed.hide != true %}
+        <li>
+          <a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}">
+            <i class="fa fa-fw fa-rss-square"></i>
+            {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+  {% endif %}
 
-<!-- ===================== -->
-<!-- Visitors (ClustrMaps) -->
-<!-- ===================== -->
-<div class="footer__visitors">
-  <h4>Visitors</h4>
-  <div class="footer__visitors-map">
-    <script
-      type="text/javascript"
-      id="clstr_globe"
-      src="//clustrmaps.com/globe.js?d=Ff5N5seCdUggOy-cQ08tNCYmISlt6bFGtSiHyvOpvNA">
-    </script>
+  <!-- ===================== -->
+  <!-- Visitors (ClustrMaps) -->
+  <!-- ===================== -->
+  <div class="footer__visitors">
+    <h4>Visitors</h4>
+    <div class="footer__visitors-map">
+      <script
+        type="text/javascript"
+        id="clstr_globe"
+        src="//clustrmaps.com/globe.js?d=Ff5N5seCdUggOy-cQ08tNCYmISlt6bFGtSiHyvOpvNA">
+      </script>
+    </div>
   </div>
 </div>
 

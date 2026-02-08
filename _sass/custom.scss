@@ -171,24 +171,24 @@ details[open] {
 }
 
 /* =============================== */
-/* Footer – Visitors (ClustrMaps)  */
+/* Footer: Follow (left) + Visitors (right) */
 /* =============================== */
 
-.footer__visitors {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;   /* 🔥 kritik satır */
+.footer__top{
+  display:flex;
+  justify-content: space-between;
+  align-items:flex-start;   /* aynı hizaya gelsin */
+  gap: 20px;
 }
 
-.footer__visitors h4 {
-  text-align: right;
-  width: 100%;
-  margin-bottom: 6px;
+.footer__visitors{
+  text-align:right;
 }
 
-.footer__visitors-map {
-  display: block;
+.footer__visitors-map{
+  display:inline-block;
 }
+
 /* =========================
    Optional: nicer spacing for News list
    (works well with Markdown bullets)
