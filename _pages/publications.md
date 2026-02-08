@@ -11,11 +11,11 @@ author_profile: true
 <div class="pub-stats">
   <div class="pub-stat">
     <div class="pub-stat__num">24</div>
-    <div class="pub-stat__label">Journal Artices</div>
+    <div class="pub-stat__label">Journal Articles</div>
   </div>
   <div class="pub-stat">
     <div class="pub-stat__num">13</div>
-    <div class="pub-stat__label">Conference Proc. (Int.)</div>
+    <div class="pub-stat__label">Conf. Proc. (Int.)</div>
   </div>
   <div class="pub-stat">
     <div class="pub-stat__num">5</div>
@@ -23,7 +23,7 @@ author_profile: true
   </div>
   <div class="pub-stat">
     <div class="pub-stat__num">1</div>
-    <div class="pub-stat__label">Editorials</div>
+    <div class="pub-stat__label">Editorial</div>
   </div>
 </div>
 
@@ -43,12 +43,13 @@ author_profile: true
 
 ---
 
-**Quick Links:**  
+## Quick Links:**  
 [Journal Papers](#journal-papers){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
 [Editorials](#editorials){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
 [Conf. Papers (Int.)](#conference-papers-international){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
 [Conf. Papers (Nat.)](#conference-papers-national---in-turkish){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
 
+---
 
 ## Journal Papers
 
