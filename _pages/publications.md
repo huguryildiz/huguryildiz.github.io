@@ -220,9 +220,6 @@ author_profile: true
 - **Yildiz, H. U.**, Tavli, B., & Kahjogh, B. O. (2017, May). *Assessment of wireless sensor network lifetime reduction due to elimination of critical node sets*. In *2017 25th SIU* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2017.7960228) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/15euPq5RHnGhSFm788StYStlpDJEYPMBA/view?usp=sharing)  
 
-
-<!-- Sadece aşağıdaki iki bloğu değiştir: listAfterHeading + sections -->
-
 <script>
 (function() {
   function initFilter() {
@@ -231,33 +228,8 @@ author_profile: true
       return m ? m[1] : "";
     }
 
-    // ✅ 1) ID ile dene; yoksa başlık metniyle bul (conf-nat için şart)
-    function findHeading(headingId, headingTextFallback) {
+    function listAfterHeading(headingId) {
       var h = document.getElementById(headingId);
-      if (h) return h;
-
-      // fallback: find by text (case-insensitive, normalize dashes/spaces)
-      if (!headingTextFallback) return null;
-
-      var normalize = function(s) {
-        return (s || "")
-          .toLowerCase()
-          .replace(/\u2014|\u2013/g, "-")  // em/en dash -> "-"
-          .replace(/\s+/g, " ")
-          .trim();
-      };
-
-      var target = normalize(headingTextFallback);
-      var hs = document.querySelectorAll("h2, h3");
-
-      for (var i = 0; i < hs.length; i++) {
-        if (normalize(hs[i].textContent) === target) return hs[i];
-      }
-      return null;
-    }
-
-    // ✅ 2) Heading element'inden sonra UL/OL ara (nested dahil)
-    function listAfterHeading(h) {
       if (!h) return null;
       var el = h.nextElementSibling;
       while (el) {
@@ -269,24 +241,18 @@ author_profile: true
       return null;
     }
 
-    // ✅ 3) conf-nat için hem id hem metin fallback veriyoruz
     var sections = [
-      { headingId: "journal-papers", type: "journal", fallbackText: "Journal Papers" },
-      { headingId: "editorials", type: "editorial", fallbackText: "Editorials" },
-      { headingId: "conference-papers-international", type: "conf-int", fallbackText: "Conference Papers (International)" },
-      {
-        headingId: "conference-papers-national---in-turkish",
-        type: "conf-nat",
-        fallbackText: "Conference Papers (National — in Turkish)"
-      }
+      { headingId: "journal-papers", type: "journal" },
+      { headingId: "editorials", type: "editorial" },
+      { headingId: "conference-papers-international", type: "conf-int" },
+      { headingId: "conference-papers-national---in-turkish", type: "conf-nat" }
     ];
 
     var allItems = [];
 
     for (var i = 0; i < sections.length; i++) {
       var s = sections[i];
-      var h = findHeading(s.headingId, s.fallbackText);
-      var list = listAfterHeading(h);
+      var list = listAfterHeading(s.headingId);
       if (!list) continue;
 
       var lis = list.querySelectorAll("li");
@@ -294,10 +260,8 @@ author_profile: true
         var li = lis[j];
         li.classList.add("pub-item");
         li.dataset.type = s.type;
-
         var y = getYearFromText(li.textContent);
         if (y) li.dataset.year = y;
-
         allItems.push(li);
       }
     }
@@ -315,7 +279,9 @@ author_profile: true
       var year = allItems[k].dataset.year;
       if (year) yearsObj[year] = true;
     }
-    var years = Object.keys(yearsObj).sort(function(a, b) { return Number(b) - Number(a); });
+    var years = Object.keys(yearsObj).sort(function(a, b) {
+      return Number(b) - Number(a);
+    });
 
     yearSelect.innerHTML = '<option value="all">All</option>';
     for (var m = 0; m < years.length; m++) {
@@ -326,10 +292,11 @@ author_profile: true
     }
 
     function updateCount(visibleCount, totalCount) {
-      if (!countDiv) return;
-      countDiv.textContent = (visibleCount === totalCount)
-        ? ("Showing all " + totalCount + " publications")
-        : ("Showing " + visibleCount + " of " + totalCount + " publications");
+      if (visibleCount === totalCount) {
+        countDiv.textContent = "Showing all " + totalCount + " publications";
+      } else {
+        countDiv.textContent = "Showing " + visibleCount + " of " + totalCount + " publications";
+      }
     }
 
     function applyFilter() {
@@ -359,7 +326,7 @@ author_profile: true
       applyFilter();
     });
 
-    applyFilter();
+    updateCount(allItems.length, allItems.length);
   }
 
   if (document.readyState === "loading") {
