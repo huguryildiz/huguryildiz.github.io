@@ -68,10 +68,3 @@ Co-advisor: Prof. Kemal Bicakci <br>
   [![Award](https://img.shields.io/badge/Award-Best_Paper-gold?style=flat-square)](https://drive.google.com/file/d/1QbpfuRXmyoTQCFJAFh_H-exv3v3Q8L-t/view)
 
 
-## Professional Memberships
-
-- IEEE Senior Member (2021 – Present)
-- IEEE Member (2016 – 2021)
-- IEEE Student Member (2013 – 2016)
-- IEEE Oceanic Engineering Society
-- IEEE Communications Society

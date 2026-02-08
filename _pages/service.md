@@ -47,6 +47,14 @@ author_profile: true
 - IEEE Wireless Communications Letters
 - Internet of Things (Guest Editor)
 
+## Professional Memberships
+
+- IEEE Senior Member (2021 – Present)
+- IEEE Member (2016 – 2021)
+- IEEE Student Member (2013 – 2016)
+- IEEE Oceanic Engineering Society
+- IEEE Communications Society
+
 ## Seminars and Invited Talks
 
 - **Prolonging the Lifetime of Underwater Sensor Networks Under Sinkhole Attacks** <br>
