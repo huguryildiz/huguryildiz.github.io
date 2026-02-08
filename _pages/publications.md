@@ -40,6 +40,94 @@ author_profile: true
   </a>
 </p>
 
+## Filter
+
+<div class="pub-filter" style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin: 10px 0 18px 0;">
+  <label style="display:flex; gap:8px; align-items:center;">
+    <span style="min-width:42px;">Type</span>
+    <select id="pubType" style="padding:6px 8px;">
+      <option value="all">All</option>
+      <option value="journal">Journal</option>
+      <option value="editorial">Editorial</option>
+      <option value="conf-int">Conference (International)</option>
+      <option value="conf-nat">Conference (National)</option>
+    </select>
+  </label>
+
+  <label style="display:flex; gap:8px; align-items:center;">
+    <span style="min-width:42px;">Year</span>
+    <select id="pubYear" style="padding:6px 8px;">
+      <option value="all">All</option>
+    </select>
+  </label>
+
+  <button id="pubReset" class="btn btn--small" type="button">Reset</button>
+</div>
+
+<script>
+(function () {
+  function extractYear(li) {
+    // matches: (2025). or (2025, November). or (2019, April).
+    const m = li.textContent.match(/\((\d{4})(?:[,\)]|\s)/);
+    return m ? m[1] : "";
+  }
+
+  function setupSection(sectionId, type) {
+    const section = document.getElementById(sectionId);
+    if (!section) return [];
+    section.dataset.type = type;
+
+    const items = Array.from(section.querySelectorAll("li"));
+    items.forEach(li => {
+      li.dataset.type = type;
+      const y = extractYear(li);
+      if (y) li.dataset.year = y;
+    });
+    return items;
+  }
+
+  const allItems = []
+    .concat(setupSection("pub-journal", "journal"))
+    .concat(setupSection("pub-editorial", "editorial"))
+    .concat(setupSection("pub-conf-int", "conf-int"))
+    .concat(setupSection("pub-conf-nat", "conf-nat"));
+
+  // Populate year dropdown from existing items
+  const years = Array.from(new Set(allItems.map(li => li.dataset.year).filter(Boolean)))
+    .sort((a,b) => Number(b) - Number(a));
+
+  const yearSelect = document.getElementById("pubYear");
+  years.forEach(y => {
+    const opt = document.createElement("option");
+    opt.value = y;
+    opt.textContent = y;
+    yearSelect.appendChild(opt);
+  });
+
+  const typeSelect = document.getElementById("pubType");
+  const resetBtn = document.getElementById("pubReset");
+
+  function applyFilter() {
+    const t = typeSelect.value;
+    const y = yearSelect.value;
+
+    allItems.forEach(li => {
+      const okType = (t === "all") || (li.dataset.type === t);
+      const okYear = (y === "all") || (li.dataset.year === y);
+      li.style.display = (okType && okYear) ? "" : "none";
+    });
+  }
+
+  typeSelect.addEventListener("change", applyFilter);
+  yearSelect.addEventListener("change", applyFilter);
+
+  resetBtn.addEventListener("click", function () {
+    typeSelect.value = "all";
+    yearSelect.value = "all";
+    applyFilter();
+  });
+})();
+</script>
 
 ## Quick Links
 [Journal Papers](#journal-papers){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
