@@ -1,0 +1,48 @@
+.pub-chart{
+  margin: 14px 0 8px 0;
+  padding: 14px 14px;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 10px;
+  background: rgba(255,255,255,.03);
+}
+.pub-chart__title{
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  opacity: .95;
+}
+.pub-chart__row{
+  display: grid;
+  grid-template-columns: 180px 1fr 44px;
+  gap: 10px;
+  align-items: center;
+  margin: 10px 0;
+}
+.pub-chart__label{
+  font-size: 0.92rem;
+  opacity: .9;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pub-chart__bar{
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.12);
+  overflow: hidden;
+}
+.pub-chart__fill{
+  height: 100%;
+  border-radius: 999px;
+  width: 0%;
+  transition: width 650ms ease;
+}
+.pub-chart__value{
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  opacity: .9;
+}
+@media (max-width: 640px){
+  .pub-chart__row{ grid-template-columns: 1fr; gap: 6px; }
+  .pub-chart__value{ text-align: left; }
+}
