@@ -64,8 +64,8 @@
       path.setAttribute("opacity", "0.95");
       svg.appendChild(path);
 
-      // Put count text at segment midpoint (skip tiny slices)
-      if (sweep >= 18) {
+      // show counts also for smaller slices
+      if (sweep >= 10) {
         var mid = (start + end) / 2;
         var rText = (rOuter + rInner) / 2;
         var pt = polarToCartesian(cx, cy, rText, mid);
@@ -83,7 +83,6 @@
       angle = end;
     }
 
-    // Center total
     var centerText = document.createElementNS(svgNS, "text");
     centerText.setAttribute("x", cx);
     centerText.setAttribute("y", cy);
@@ -102,7 +101,6 @@
     centerSub.textContent = subtitleText || "";
     svg.appendChild(centerSub);
 
-    // Legend
     var legend = document.createElement("div");
     legend.className = "qdonut-legend";
     wrap.appendChild(legend);
@@ -147,17 +145,17 @@
       else if (label.indexOf("Editorial") !== -1) editorial = value;
     }
 
-    var confTotal = confInt + confNat;
-
     var items = [
       { label: "Journals", value: journal },
-      { label: "Conferences", value: confTotal },
+      { label: "Conf. (Int.)", value: confInt },
+      { label: "Conf. (Nat.)", value: confNat },
       { label: "Editorials", value: editorial }
     ].filter(function (x) { return x.value > 0; });
 
     var colorMap = {
       "Journals": "#1f77b4",
-      "Conferences": "#ff7f0e",
+      "Conf. (Int.)": "#ff7f0e",
+      "Conf. (Nat.)": "#2ca02c",
       "Editorials": "#9467bd"
     };
 
@@ -166,16 +164,19 @@
 
   function buildJournalQDonut() {
     var h = document.getElementById("journal-papers");
-    if (!h) return;
+    if (!h) {
+      // optional: helps debugging
+      // console.warn("[pub-chart] #journal-papers not found; Q donut skipped.");
+      return;
+    }
 
-    // Collect <li> until next H2/H3
     var lis = [];
     var el = h.nextElementSibling;
     while (el) {
       if (el.tagName === "H2" || el.tagName === "H3") break;
       if (el.querySelectorAll) {
         var found = el.querySelectorAll("li");
-        for (var i = 0; i < found.length; i++) lis.push(found[i]);
+        for (var ii = 0; ii < found.length; ii++) lis.push(found[ii]);
       }
       el = el.nextElementSibling;
     }
