@@ -112,8 +112,6 @@ Integration of mathematical optimization frameworks with machine learning and re
 
 ## Tutorials & Research Code
 
-This repository provides a hands-on Python tutorial for network-flow–based optimization models in wireless sensor networks, intended for students and researchers.
-
 <!-- GitHub Repo Card -->
 <div class="github-card"
      data-github="huguryildiz/wsn-opt-python"
@@ -122,3 +120,9 @@ This repository provides a hands-on Python tutorial for network-flow–based opt
 </div>
 
 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+
+<p style="margin-top:8px; font-size:0.95em; color:#666;">
+This repository provides a hands-on Python tutorial for network-flow–based
+optimization models in wireless sensor networks, intended for students and
+researchers.
+</p>
