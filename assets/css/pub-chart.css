@@ -1,61 +1,92 @@
-/* 2 donuts side-by-side */
 .pub-donuts-2col{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px;
+  gap: 24px;
   align-items: start;
+  margin: 12px 0 18px 0;
 }
 
-@media (max-width: 900px){
+@media (max-width: 860px){
   .pub-donuts-2col{
     grid-template-columns: 1fr;
   }
 }
 
-/* Donut layout inside each card */
+.pub-chart{
+  padding: 12px 14px;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 12px;
+  background: rgba(255,255,255,.75);
+}
+
+html[data-theme="dark"] .pub-chart,
+body.dark .pub-chart{
+  border-color: rgba(255,255,255,.10);
+  background: rgba(255,255,255,.03);
+}
+
+.pub-chart__title{
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 2px 0 12px 0;
+}
+
 .qdonut-wrap{
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
+  grid-template-columns: 260px 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+@media (max-width: 860px){
+  .qdonut-wrap{
+    grid-template-columns: 1fr;
+  }
 }
 
 .qdonut-svg{
-  max-width: 300px;
+  width: 100%;
+  height: 240px;
+  display: block;
 }
 
 .qdonut-count{
-  font-size: 14px;
-  font-weight: 800;
-  fill: rgba(255,255,255,.92);
+  font-size: 18px;
+  font-weight: 700;
+  fill: #fff;
+  paint-order: stroke;
+  stroke: rgba(0,0,0,.35);
+  stroke-width: 2px;
 }
 
 .qdonut-total{
-  font-size: 22px;
-  font-weight: 900;
-  fill: rgba(255,255,255,.95);
+  font-size: 26px;
+  font-weight: 800;
+  fill: var(--text-color, #222);
 }
 
 .qdonut-sub{
   font-size: 12px;
-  fill: rgba(255,255,255,.70);
+  font-weight: 600;
+  opacity: .75;
+  fill: var(--text-color, #222);
 }
 
 .qdonut-legend{
   display: grid;
-  gap: 8px;
-  font-size: 0.92rem;
-  opacity: .9;
+  gap: 10px;
 }
 
 .qdonut-legend__row{
-  display:flex;
-  align-items:center;
-  gap:10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 0.98rem;
 }
 
 .qdonut-legend__swatch{
-  width: 10px;
-  height: 10px;
-  border-radius: 3px;
-  display:inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  flex: 0 0 12px;
 }
