@@ -40,8 +40,11 @@ author_profile: true
   </a>
 </p>
 
-
+<!-- Auto-generated Publications Chart (populated from .pub-chart.js) -->
 <div id="pubAutoChart" class="pub-chart" style="display:none;"></div>
+
+<!-- Auto-generated Journal Quartile Chart (Q1/Q2/Q3) -->
+<div id="journalQChart" class="pub-chart" style="display:none;"></div>
 
 ## Filter
 
