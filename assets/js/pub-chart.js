@@ -1,13 +1,166 @@
 (function () {
-  function buildJournalQChart() {
-    var chart = document.getElementById("journalQChart");
-    if (!chart) return;
+  var svgNS = "http://www.w3.org/2000/svg";
 
-    // Journal section heading must exist
+  function polarToCartesian(cx, cy, r, angleDeg) {
+    var a = (angleDeg - 90) * Math.PI / 180.0;
+    return { x: cx + r * Math.cos(a), y: cy + r * Math.sin(a) };
+  }
+
+  function donutPath(cx, cy, rOuter, rInner, startAngle, endAngle) {
+    var p1 = polarToCartesian(cx, cy, rOuter, endAngle);
+    var p2 = polarToCartesian(cx, cy, rOuter, startAngle);
+    var p3 = polarToCartesian(cx, cy, rInner, startAngle);
+    var p4 = polarToCartesian(cx, cy, rInner, endAngle);
+    var largeArc = (endAngle - startAngle) <= 180 ? "0" : "1";
+
+    return [
+      "M", p2.x, p2.y,
+      "A", rOuter, rOuter, 0, largeArc, 1, p1.x, p1.y,
+      "L", p4.x, p4.y,
+      "A", rInner, rInner, 0, largeArc, 0, p3.x, p3.y,
+      "Z"
+    ].join(" ");
+  }
+
+  function renderDonut(containerId, titleText, subtitleText, items, colorMap) {
+    var chart = document.getElementById(containerId);
+    if (!chart) return;
+    if (!items || !items.length) return;
+
+    var total = 0;
+    for (var i = 0; i < items.length; i++) total += items[i].value;
+    if (total <= 0) return;
+
+    chart.innerHTML = "";
+
+    var title = document.createElement("div");
+    title.className = "pub-chart__title";
+    title.textContent = titleText;
+    chart.appendChild(title);
+
+    var wrap = document.createElement("div");
+    wrap.className = "qdonut-wrap";
+    chart.appendChild(wrap);
+
+    var size = 240, cx = size/2, cy = size/2, rOuter = 92, rInner = 54;
+
+    var svg = document.createElementNS(svgNS, "svg");
+    svg.setAttribute("viewBox", "0 0 " + size + " " + size);
+    svg.setAttribute("width", "100%");
+    svg.setAttribute("height", "240");
+    svg.classList.add("qdonut-svg");
+    wrap.appendChild(svg);
+
+    var angle = 0;
+    for (var k = 0; k < items.length; k++) {
+      var frac = items[k].value / total;
+      var sweep = frac * 360;
+      var start = angle;
+      var end = angle + sweep;
+
+      var path = document.createElementNS(svgNS, "path");
+      path.setAttribute("d", donutPath(cx, cy, rOuter, rInner, start, end));
+      path.setAttribute("fill", colorMap[items[k].label] || "#1f77b4");
+      path.setAttribute("opacity", "0.95");
+      svg.appendChild(path);
+
+      // Count inside segment (skip tiny slices)
+      if (sweep >= 18) {
+        var mid = (start + end) / 2;
+        var rText = (rOuter + rInner) / 2;
+        var pt = polarToCartesian(cx, cy, rText, mid);
+
+        var text = document.createElementNS(svgNS, "text");
+        text.setAttribute("x", pt.x);
+        text.setAttribute("y", pt.y);
+        text.setAttribute("text-anchor", "middle");
+        text.setAttribute("dominant-baseline", "middle");
+        text.setAttribute("class", "qdonut-count");
+        text.textContent = String(items[k].value);
+        svg.appendChild(text);
+      }
+
+      angle = end;
+    }
+
+    // Center total
+    var centerText = document.createElementNS(svgNS, "text");
+    centerText.setAttribute("x", cx);
+    centerText.setAttribute("y", cy);
+    centerText.setAttribute("text-anchor", "middle");
+    centerText.setAttribute("dominant-baseline", "middle");
+    centerText.setAttribute("class", "qdonut-total");
+    centerText.textContent = String(total);
+    svg.appendChild(centerText);
+
+    var centerSub = document.createElementNS(svgNS, "text");
+    centerSub.setAttribute("x", cx);
+    centerSub.setAttribute("y", cy + 18);
+    centerSub.setAttribute("text-anchor", "middle");
+    centerSub.setAttribute("dominant-baseline", "middle");
+    centerSub.setAttribute("class", "qdonut-sub");
+    centerSub.textContent = subtitleText || "";
+    svg.appendChild(centerSub);
+
+    // Legend
+    var legend = document.createElement("div");
+    legend.className = "qdonut-legend";
+    wrap.appendChild(legend);
+
+    for (var m = 0; m < items.length; m++) {
+      var row = document.createElement("div");
+      row.className = "qdonut-legend__row";
+
+      var sw = document.createElement("span");
+      sw.className = "qdonut-legend__swatch";
+      sw.style.background = colorMap[items[m].label] || "#1f77b4";
+
+      var txt = document.createElement("span");
+      txt.textContent = items[m].label + " (" + items[m].value + ")";
+
+      row.appendChild(sw);
+      row.appendChild(txt);
+      legend.appendChild(row);
+    }
+
+    chart.style.display = "";
+  }
+
+  function buildPublicationTypeDonut() {
+    // Read from .pub-stats
+    var stats = document.querySelectorAll(".pub-stats .pub-stat");
+    if (!stats || !stats.length) return;
+
+    var items = [];
+    for (var i = 0; i < stats.length; i++) {
+      var numEl = stats[i].querySelector(".pub-stat__num");
+      var labEl = stats[i].querySelector(".pub-stat__label");
+      if (!numEl || !labEl) continue;
+
+      var value = parseInt((numEl.textContent || "").replace(/[^\d]/g, ""), 10);
+      var label = (labEl.textContent || "").trim();
+      if (!isFinite(value) || !label) continue;
+
+      items.push({ label: label, value: value });
+    }
+    if (!items.length) return;
+
+    var colorMap = {
+      "Journal Articles": "#1f77b4",
+      "Conf. Proc. (Int.)": "#ff7f0e",
+      "Conf. Proc. (Nat.)": "#2ca02c",
+      "Editorial": "#9467bd"
+    };
+
+    renderDonut("pubTypeDonut", "Publication Types", "items", items, colorMap);
+  }
+
+  function buildJournalQDonut() {
+    // Find journal section
     var h = document.getElementById("journal-papers");
     if (!h) return;
 
-    // Collect <li> items until next H2/H3
+    // Collect <li> until next H2/H3
     var lis = [];
     var el = h.nextElementSibling;
     while (el) {
@@ -20,22 +173,15 @@
     }
     if (!lis.length) return;
 
-    // Count Q badges by reading image alt: Q1/Q2/Q3/...
     var counts = { Q1: 0, Q2: 0, Q3: 0, Q4: 0, Unknown: 0 };
 
     for (var j = 0; j < lis.length; j++) {
-      var qImgs = lis[j].querySelectorAll('img[alt^="Q"]'); // alt="Q1" etc.
-      if (!qImgs || !qImgs.length) {
-        counts.Unknown++;
-        continue;
-      }
-      // If multiple, take first Q badge
+      var qImgs = lis[j].querySelectorAll('img[alt^="Q"]');
+      if (!qImgs || !qImgs.length) { counts.Unknown++; continue; }
       var q = (qImgs[0].getAttribute("alt") || "").trim().toUpperCase();
-      if (counts.hasOwnProperty(q)) counts[q]++;
-      else counts.Unknown++;
+      if (counts.hasOwnProperty(q)) counts[q]++; else counts.Unknown++;
     }
 
-    // Build items list (only show nonzero categories, but keep order)
     var order = ["Q1", "Q2", "Q3", "Q4", "Unknown"];
     var items = [];
     for (var k = 0; k < order.length; k++) {
@@ -44,72 +190,25 @@
     }
     if (!items.length) return;
 
-    // Compute max for scaling
-    var maxVal = 1;
-    for (var t = 0; t < items.length; t++) if (items[t].value > maxVal) maxVal = items[t].value;
-
-    // Clear chart
-    chart.innerHTML = "";
-
-    // Title
-    var title = document.createElement("div");
-    title.className = "pub-chart__title";
-    title.textContent = "Journal Quartiles (Q)";
-    chart.appendChild(title);
-
-    // Colors
     var colorMap = {
-      Q1: "#d4af37",   // gold-ish
-      Q2: "#2ca02c",   // green
-      Q3: "#ff7f0e",   // orange
-      Q4: "#9467bd",   // purple
+      Q1: "#d4af37",
+      Q2: "#2ca02c",
+      Q3: "#ff7f0e",
+      Q4: "#9467bd",
       Unknown: "#7f7f7f"
     };
 
-    // Rows
-    for (var r = 0; r < items.length; r++) {
-      var row = document.createElement("div");
-      row.className = "pub-chart__row";
-
-      var lab = document.createElement("div");
-      lab.className = "pub-chart__label";
-      lab.textContent = items[r].label;
-
-      var bar = document.createElement("div");
-      bar.className = "pub-chart__bar";
-
-      var fill = document.createElement("div");
-      fill.className = "pub-chart__fill";
-      fill.style.background = colorMap[items[r].label] || "#1f77b4";
-
-      var pct = (items[r].value / maxVal) * 100;
-      fill.setAttribute("data-pct", pct.toFixed(2));
-      bar.appendChild(fill);
-
-      var val = document.createElement("div");
-      val.className = "pub-chart__value";
-      val.textContent = String(items[r].value);
-
-      row.appendChild(lab);
-      row.appendChild(bar);
-      row.appendChild(val);
-      chart.appendChild(row);
-    }
-
-    chart.style.display = "";
-
-    requestAnimationFrame(function () {
-      var fills = chart.querySelectorAll(".pub-chart__fill");
-      for (var u = 0; u < fills.length; u++) {
-        fills[u].style.width = (fills[u].getAttribute("data-pct") || "0") + "%";
-      }
-    });
+    renderDonut("journalQDonut", "Journal Quartiles", "journals", items, colorMap);
   }
 
-  // Hook into existing DOM ready flow
+  function init() {
+    buildPublicationTypeDonut();
+    buildJournalQDonut();
+  }
+
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", buildJournalQChart);
+    document.addEventListener("DOMContentLoaded", init);
   } else {
-    buildJournalQChart();
+    init();
   }
 })();

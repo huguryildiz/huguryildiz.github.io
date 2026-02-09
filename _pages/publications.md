@@ -40,11 +40,13 @@ author_profile: true
   </a>
 </p>
 
-<!-- Auto-generated Publications Chart (populated from .pub-chart.js) -->
-<div id="pubAutoChart" class="pub-chart" style="display:none;"></div>
+<h2 id="journal-papers">Journal Papers</h2>
 
-<!-- Auto-generated Journal Quartile Chart (Q1/Q2/Q3) -->
-<div id="journalQChart" class="pub-chart" style="display:none;"></div>
+<!-- Donut charts: publication types + journal quartiles -->
+<div class="pub-charts-grid">
+  <div id="pubTypeDonut" class="pub-chart" style="display:none;"></div>
+  <div id="journalQDonut" class="pub-chart" style="display:none;"></div>
+</div>
 
 ## Filter
 
