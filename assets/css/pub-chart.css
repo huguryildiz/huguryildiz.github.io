@@ -4,11 +4,12 @@
   grid-template-columns: 1fr 1fr;
   gap: 18px;
   align-items: start;
-  margin-top: 10px;
 }
 
 @media (max-width: 900px){
-  .pub-donuts-2col{ grid-template-columns: 1fr; }
+  .pub-donuts-2col{
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Donut layout inside each card */
