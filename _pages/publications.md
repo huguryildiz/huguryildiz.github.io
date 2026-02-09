@@ -301,13 +301,31 @@ author_profile: true
       var y = yearSelect.value;
       var visibleCount = 0;
 
+      // Count visible items per section
+      var sectionCounts = {};
+      for (var i = 0; i < sections.length; i++) {
+        sectionCounts[sections[i].type] = 0;
+      }
+
       for (var n = 0; n < allItems.length; n++) {
         var li = allItems[n];
         var okT = (t === "all") || (li.dataset.type === t);
         var okY = (y === "all") || (li.dataset.year === y);
         var visible = okT && okY;
         li.style.display = visible ? "" : "none";
-        if (visible) visibleCount++;
+        if (visible) {
+          visibleCount++;
+          sectionCounts[li.dataset.type]++;
+        }
+      }
+
+      // Hide/show section headers based on visibility
+      for (var j = 0; j < sections.length; j++) {
+        var s = sections[j];
+        var heading = document.getElementById(s.headingId);
+        if (heading) {
+          heading.style.display = (sectionCounts[s.type] > 0) ? "" : "none";
+        }
       }
 
       updateCount(visibleCount, allItems.length);
