@@ -112,8 +112,7 @@ Integration of mathematical optimization frameworks with machine learning and re
 
 ## Tutorials & Research Code
 
-Selected tutorials and reference implementations accompanying my research on
-network optimization and wireless sensor networks.
+This repository provides a hands-on Python tutorial for network-flow–based optimization models in wireless sensor networks, intended for students and researchers.
 
 <!-- GitHub Repo Card -->
 <div class="github-card"
@@ -123,9 +122,3 @@ network optimization and wireless sensor networks.
 </div>
 
 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-
-<p style="margin-top:8px; font-size:0.95em; color:#666;">
-This repository provides a hands-on Python tutorial for network-flow–based
-optimization models in wireless sensor networks, intended for students and
-researchers.
-</p>
