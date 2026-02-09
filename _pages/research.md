@@ -28,6 +28,8 @@ Integration of mathematical optimization frameworks with machine learning and re
 
 -->
 
+## Key Research Topics
+
 <!-- =========================
      Research Topic 1
      ========================= -->
