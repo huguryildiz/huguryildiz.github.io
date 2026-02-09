@@ -44,13 +44,35 @@ author_profile: true
 
 <h2 id="journal-papers">Journal Papers</h2>
 
-<div class="pub-donuts-2col">
-  <!-- LEFT: Publication Count -->
-  <div id="pubCountDonut" class="pub-chart"></div>
+## Metrics
 
-  <!-- RIGHT: Journal Quartiles -->
-  <div id="journalQDonut" class="pub-chart"></div>
+{::nomarkdown}
+<!-- Publication Count (MUST be raw HTML so JS can read it) -->
+<div class="pub-stats">
+  <div class="pub-stat">
+    <div class="pub-stat__num">24</div>
+    <div class="pub-stat__label">Journal Articles</div>
+  </div>
+  <div class="pub-stat">
+    <div class="pub-stat__num">13</div>
+    <div class="pub-stat__label">Conf. Proc. (Int.)</div>
+  </div>
+  <div class="pub-stat">
+    <div class="pub-stat__num">5</div>
+    <div class="pub-stat__label">Conf. Proc. (Nat.)</div>
+  </div>
+  <div class="pub-stat">
+    <div class="pub-stat__num">1</div>
+    <div class="pub-stat__label">Editorial</div>
+  </div>
 </div>
+
+<!-- Two donuts side-by-side: LEFT=pub count, RIGHT=Q -->
+<div class="pub-donuts-2col">
+  <div id="pubCountDonut" class="pub-chart" style="display:none;"></div>
+  <div id="journalQDonut" class="pub-chart" style="display:none;"></div>
+</div>
+{:/nomarkdown}
 
 ## Filter
 
