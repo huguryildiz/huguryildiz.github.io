@@ -42,12 +42,11 @@ author_profile: true
 </p>
 -->
 
+<!-- Auto-generated publication count and journal Q distribution charts -->
 {::nomarkdown}
 <link rel="stylesheet" href="{{ '/assets/css/pub-chart.css' | relative_url }}">
 <script defer src="{{ '/assets/js/pub-chart.js' | relative_url }}"></script>
 {:/nomarkdown}
-
-## Metrics
 
 {::nomarkdown}
 <div class="pub-donuts-2col">
@@ -91,6 +90,9 @@ author_profile: true
 
 ## Journal Papers
 {: #journal-papers}
+
+- Karagul, C. T., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025). *Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity*. *IEEE Internet of Things Journal, 12*(22), 47817–47826.  
+![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2025_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JIOT.2025.3603829)
 
 - Karagul, C. T., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025). *Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity*. *IEEE Internet of Things Journal, 12*(22), 47817–47826.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2025_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JIOT.2025.3603829)
