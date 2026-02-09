@@ -22,10 +22,29 @@
     ].join(" ");
   }
 
+  function collectLisUntilNextHeading(headingId) {
+    var h = document.getElementById(headingId);
+    if (!h) return [];
+
+    var lis = [];
+    var el = h.nextElementSibling;
+
+    while (el) {
+      if (el.tagName === "H2" || el.tagName === "H3") break;
+
+      if (el.querySelectorAll) {
+        var found = el.querySelectorAll("li");
+        for (var i = 0; i < found.length; i++) lis.push(found[i]);
+      }
+
+      el = el.nextElementSibling;
+    }
+    return lis;
+  }
+
   function renderDonut(containerId, titleText, subtitleText, items, colorMap) {
     var chart = document.getElementById(containerId);
-    if (!chart) return;
-    if (!items || !items.length) return;
+    if (!chart || !items || !items.length) return;
 
     var total = 0;
     for (var i = 0; i < items.length; i++) total += items[i].value;
@@ -64,8 +83,8 @@
       path.setAttribute("opacity", "0.95");
       svg.appendChild(path);
 
-      // show counts also for smaller slices
-      if (sweep >= 10) {
+      // Segment number (skip tiny slices)
+      if (sweep >= 18) {
         var mid = (start + end) / 2;
         var rText = (rOuter + rInner) / 2;
         var pt = polarToCartesian(cx, cy, rText, mid);
@@ -83,6 +102,7 @@
       angle = end;
     }
 
+    // Center total
     var centerText = document.createElementNS(svgNS, "text");
     centerText.setAttribute("x", cx);
     centerText.setAttribute("y", cy);
@@ -101,6 +121,7 @@
     centerSub.textContent = subtitleText || "";
     svg.appendChild(centerSub);
 
+    // Legend
     var legend = document.createElement("div");
     legend.className = "qdonut-legend";
     wrap.appendChild(legend);
@@ -124,33 +145,21 @@
     chart.style.display = "";
   }
 
-  function buildPublicationCountDonut() {
-    var stats = document.querySelectorAll(".pub-stats .pub-stat");
-    if (!stats || !stats.length) return;
-
-    var journal = 0, confInt = 0, confNat = 0, editorial = 0;
-
-    for (var i = 0; i < stats.length; i++) {
-      var numEl = stats[i].querySelector(".pub-stat__num");
-      var labEl = stats[i].querySelector(".pub-stat__label");
-      if (!numEl || !labEl) continue;
-
-      var value = parseInt((numEl.textContent || "").replace(/[^\d]/g, ""), 10);
-      var label = (labEl.textContent || "").trim();
-      if (!isFinite(value) || !label) continue;
-
-      if (label.indexOf("Journal") !== -1) journal = value;
-      else if (label.indexOf("Conf. Proc. (Int.)") !== -1) confInt = value;
-      else if (label.indexOf("Conf. Proc. (Nat.)") !== -1) confNat = value;
-      else if (label.indexOf("Editorial") !== -1) editorial = value;
-    }
+  function buildPublicationCountFromLists() {
+    // Headings must exist (your page already has these ids)
+    var journalLis = collectLisUntilNextHeading("journal-papers");
+    var editorialLis = collectLisUntilNextHeading("editorials");
+    var confIntLis = collectLisUntilNextHeading("conference-papers-international");
+    var confNatLis = collectLisUntilNextHeading("conference-papers-national-turkish");
 
     var items = [
-      { label: "Journals", value: journal },
-      { label: "Conf. (Int.)", value: confInt },
-      { label: "Conf. (Nat.)", value: confNat },
-      { label: "Editorials", value: editorial }
+      { label: "Journals", value: journalLis.length },
+      { label: "Conf. (Int.)", value: confIntLis.length },
+      { label: "Conf. (Nat.)", value: confNatLis.length },
+      { label: "Editorials", value: editorialLis.length }
     ].filter(function (x) { return x.value > 0; });
+
+    if (!items.length) return;
 
     var colorMap = {
       "Journals": "#1f77b4",
@@ -162,33 +171,32 @@
     renderDonut("pubCountDonut", "Publication Count", "total", items, colorMap);
   }
 
-  function buildJournalQDonut() {
-    var h = document.getElementById("journal-papers");
-    if (!h) {
-      // optional: helps debugging
-      // console.warn("[pub-chart] #journal-papers not found; Q donut skipped.");
-      return;
+  function getQFromJournalLi(li) {
+    // 1) Try to find an <img alt="Q1"> style badge
+    var qImgs = li.querySelectorAll('img[alt^="Q"]');
+    if (qImgs && qImgs.length) {
+      var q = (qImgs[0].getAttribute("alt") || "").trim().toUpperCase();
+      if (/^Q[1-4]$/.test(q)) return q;
     }
 
-    var lis = [];
-    var el = h.nextElementSibling;
-    while (el) {
-      if (el.tagName === "H2" || el.tagName === "H3") break;
-      if (el.querySelectorAll) {
-        var found = el.querySelectorAll("li");
-        for (var ii = 0; ii < found.length; ii++) lis.push(found[ii]);
-      }
-      el = el.nextElementSibling;
-    }
-    if (!lis.length) return;
+    // 2) Fallback: parse from text or badge URLs e.g. "...-Q1-..." or "2025_Rank-Q1-..."
+    var t = (li.textContent || "").toUpperCase();
+    var m = t.match(/\bQ([1-4])\b/);
+    if (m) return "Q" + m[1];
+
+    return "Unknown";
+  }
+
+  function buildJournalQFromList() {
+    var journalLis = collectLisUntilNextHeading("journal-papers");
+    if (!journalLis.length) return;
 
     var counts = { Q1: 0, Q2: 0, Q3: 0, Q4: 0, Unknown: 0 };
 
-    for (var j = 0; j < lis.length; j++) {
-      var qImgs = lis[j].querySelectorAll('img[alt^="Q"]');
-      if (!qImgs || !qImgs.length) { counts.Unknown++; continue; }
-      var q = (qImgs[0].getAttribute("alt") || "").trim().toUpperCase();
-      if (counts.hasOwnProperty(q)) counts[q]++; else counts.Unknown++;
+    for (var i = 0; i < journalLis.length; i++) {
+      var q = getQFromJournalLi(journalLis[i]);
+      if (counts.hasOwnProperty(q)) counts[q]++;
+      else counts.Unknown++;
     }
 
     var order = ["Q1", "Q2", "Q3", "Q4", "Unknown"];
@@ -211,8 +219,10 @@
   }
 
   function init() {
-    buildPublicationCountDonut();
-    buildJournalQDonut();
+    // LEFT: publication count
+    buildPublicationCountFromLists();
+    // RIGHT: Q distribution (journals)
+    buildJournalQFromList();
   }
 
   if (document.readyState === "loading") {
