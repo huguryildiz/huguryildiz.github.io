@@ -218,93 +218,117 @@ author_profile: true
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2017.7960228) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/15euPq5RHnGhSFm788StYStlpDJEYPMBA/view?usp=sharing)  
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Get all publication items
-  var items = document.querySelectorAll('.pub-item, li');
-  var allPubs = [];
-  
-  // Find items under each section
-  var sections = {
-    'journal': document.querySelector('#journal-papers ~ ul, #journal-papers ~ ol'),
-    'editorial': document.querySelector('#editorials ~ ul, #editorials ~ ol'),
-    'conf-int': document.querySelector('#conference-papers-international ~ ul, #conference-papers-international ~ ol'),
-    'conf-nat': document.querySelector('#conference-papers-national-turkish ~ ul, #conference-papers-national-turkish ~ ol')
-  };
-  
-  // Tag all items with their type
-  for (var type in sections) {
-    if (sections[type]) {
-      var lis = sections[type].querySelectorAll('li');
-      for (var i = 0; i < lis.length; i++) {
-        lis[i].dataset.type = type;
-        var match = lis[i].textContent.match(/\((\d{4})[,\)]/);
-        if (match) lis[i].dataset.year = match[1];
-        allPubs.push(lis[i]);
-      }
+document.addEventListener('DOMContentLoaded', function () {
+
+  function getListAfterHeading(headingId) {
+    const h = document.getElementById(headingId);
+    if (!h) return null;
+
+    let el = h.nextElementSibling;
+    while (el && !['UL', 'OL'].includes(el.tagName)) {
+      el = el.nextElementSibling;
     }
+    return el;
   }
-  
-  // Get controls
-  var typeSelect = document.getElementById('pubType');
-  var yearSelect = document.getElementById('pubYear');
-  var countDiv = document.getElementById('pubCount');
-  
+
+  const sections = {
+    'journal': getListAfterHeading('journal-papers'),
+    'editorial': getListAfterHeading('editorials'),
+    'conf-int': getListAfterHeading('conference-papers-international'),
+    'conf-nat': getListAfterHeading('conference-papers-national-turkish')
+  };
+
+  const allPubs = [];
+
+  // Tag all items with type + year
+  Object.keys(sections).forEach(type => {
+    const list = sections[type];
+    if (!list) return;
+
+    list.querySelectorAll('li').forEach(li => {
+      li.dataset.type = type;
+
+      // year parse: first (YYYY, ... ) pattern
+      const m = li.textContent.match(/\((\d{4})(?:[,\)]|\s)/);
+      if (m) li.dataset.year = m[1];
+
+      allPubs.push(li);
+    });
+  });
+
+  const typeSelect = document.getElementById('pubType');
+  const yearSelect = document.getElementById('pubYear');
+  const countDiv  = document.getElementById('pubCount');
+
+  if (!typeSelect || !yearSelect || !countDiv || allPubs.length === 0) {
+    // Debug için:
+    // console.log("Filter init failed:", {typeSelect, yearSelect, countDiv, allPubs: allPubs.length});
+    return;
+  }
+
   // Populate years
-  var years = {};
-  for (var i = 0; i < allPubs.length; i++) {
-    if (allPubs[i].dataset.year) years[allPubs[i].dataset.year] = true;
-  }
-  var yearList = Object.keys(years).sort().reverse();
-  for (var i = 0; i < yearList.length; i++) {
-    var opt = document.createElement('option');
-    opt.value = yearList[i];
-    opt.textContent = yearList[i];
+  const years = [...new Set(allPubs.map(x => x.dataset.year).filter(Boolean))]
+    .sort((a,b) => b.localeCompare(a));
+
+  years.forEach(y => {
+    const opt = document.createElement('option');
+    opt.value = y;
+    opt.textContent = y;
     yearSelect.appendChild(opt);
-  }
-  
-  // Filter function
+  });
+
   function filter() {
-    var type = typeSelect.value;
-    var year = yearSelect.value;
-    var visible = 0;
-    
-    // Show/hide items
-    for (var i = 0; i < allPubs.length; i++) {
-      var item = allPubs[i];
-      var show = true;
+    const type = typeSelect.value;
+    const year = yearSelect.value;
+
+    let visibleTotal = 0;
+
+    allPubs.forEach(item => {
+      let show = true;
       if (type !== 'all' && item.dataset.type !== type) show = false;
       if (year !== 'all' && item.dataset.year !== year) show = false;
+
       item.style.display = show ? '' : 'none';
-      if (show) visible++;
-    }
-    
-    // Show/hide headers
-    document.getElementById('journal-papers').style.display = 
-      (type === 'all' || type === 'journal') ? '' : 'none';
-    document.getElementById('editorials').style.display = 
-      (type === 'all' || type === 'editorial') ? '' : 'none';
-    document.getElementById('conference-papers-international').style.display = 
-      (type === 'all' || type === 'conf-int') ? '' : 'none';
-    document.getElementById('conference-papers-national-turkish').style.display = 
-      (type === 'all' || type === 'conf-nat') ? '' : 'none';
-    
-    // Update count
-    countDiv.textContent = visible === allPubs.length ? 
-      'Showing all ' + allPubs.length + ' publications' :
-      'Showing ' + visible + ' of ' + allPubs.length + ' publications';
+      if (show) visibleTotal++;
+    });
+
+    // Hide/show section headings depending on whether that section has visible items
+    const sectionHeadingIds = {
+      'journal': 'journal-papers',
+      'editorial': 'editorials',
+      'conf-int': 'conference-papers-international',
+      'conf-nat': 'conference-papers-national-turkish'
+    };
+
+    Object.keys(sections).forEach(t => {
+      const heading = document.getElementById(sectionHeadingIds[t]);
+      const list = sections[t];
+      if (!heading || !list) return;
+
+      const anyVisible = Array.from(list.querySelectorAll('li'))
+        .some(li => li.style.display !== 'none');
+
+      heading.style.display = anyVisible ? '' : 'none';
+      list.style.display = anyVisible ? '' : 'none';
+    });
+
+    countDiv.textContent =
+      (visibleTotal === allPubs.length)
+        ? `Showing all ${allPubs.length} publications`
+        : `Showing ${visibleTotal} of ${allPubs.length} publications`;
   }
-  
-  // Attach events
+
+  // Events
   typeSelect.addEventListener('change', filter);
   yearSelect.addEventListener('change', filter);
-  document.getElementById('pubApply').addEventListener('click', filter);
-  document.getElementById('pubReset').addEventListener('click', function() {
+
+  document.getElementById('pubApply')?.addEventListener('click', filter);
+  document.getElementById('pubReset')?.addEventListener('click', function () {
     typeSelect.value = 'all';
     yearSelect.value = 'all';
     filter();
   });
-  
-  // Initial display
+
   filter();
 });
 </script>
