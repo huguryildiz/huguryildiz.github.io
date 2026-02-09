@@ -42,6 +42,7 @@ author_profile: true
 
 ## Filter
 
+
 <div class="pub-filter" style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin: 10px 0 18px 0;">
   <label style="display:flex; gap:8px; align-items:center;">
     <span style="min-width:42px;">Type</span>
@@ -65,13 +66,16 @@ author_profile: true
   <button id="pubReset" class="btn btn--small" type="button">Reset</button>
 </div>
 
-<div id="pubCount" style="margin: 10px 0; font-style: italic; color: var(--text-color, #666);"></div>
+<div id="pubCount" style="margin: 10px 0; font-style: italic; color: #666;"></div>
+
+
+
 
 ## Quick Links
 [Journal Papers](#journal-papers){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
 [Editorials](#editorials){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
 [Conf. Papers (Int.)](#conference-papers-international){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
-[Conf. Papers (Nat.)](#conference-papers-national-turkish){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
+[Conf. Papers (Nat.)](#conference-papers-national---in-turkish){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
 
 ## Journal Papers
 
@@ -199,8 +203,7 @@ author_profile: true
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/WiSNet.2014.6825515) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16xQgqR0IGGUlx-9fmwTTnk1srKBS-9_w/view?usp=sharing)  
 
 
-## Conference Papers (National - in Turkish)
-{: #conference-papers-national-turkish}
+## Conference Papers (National — in Turkish)
 
 - **Yildiz, H. U.** (2019, April). *Improvement of underwater acoustic sensor networks performance with fountain codes*. In *2019 27th SIU* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2019.8806401) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16P_YL9_5u1bCfNzGJOZQnYrHXdjoNtZO/view?usp=sharing)  
@@ -218,93 +221,118 @@ author_profile: true
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2017.7960228) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/15euPq5RHnGhSFm788StYStlpDJEYPMBA/view?usp=sharing)  
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Get all publication items
-  var items = document.querySelectorAll('.pub-item, li');
-  var allPubs = [];
-  
-  // Find items under each section
-  var sections = {
-    'journal': document.querySelector('#journal-papers ~ ul, #journal-papers ~ ol'),
-    'editorial': document.querySelector('#editorials ~ ul, #editorials ~ ol'),
-    'conf-int': document.querySelector('#conference-papers-international ~ ul, #conference-papers-international ~ ol'),
-    'conf-nat': document.querySelector('#conference-papers-national-turkish ~ ul, #conference-papers-national-turkish ~ ol')
-  };
-  
-  // Tag all items with their type
-  for (var type in sections) {
-    if (sections[type]) {
-      var lis = sections[type].querySelectorAll('li');
-      for (var i = 0; i < lis.length; i++) {
-        lis[i].dataset.type = type;
-        var match = lis[i].textContent.match(/\((\d{4})[,\)]/);
-        if (match) lis[i].dataset.year = match[1];
-        allPubs.push(lis[i]);
+(function() {
+  function initFilter() {
+    function getYearFromText(text) {
+      var m = text.match(/\((\d{4})(?:[,\)]|\s)/);
+      return m ? m[1] : "";
+    }
+
+    function listAfterHeading(headingId) {
+      var h = document.getElementById(headingId);
+      if (!h) return null;
+      var el = h.nextElementSibling;
+      while (el) {
+        if (el.tagName === "UL" || el.tagName === "OL") return el;
+        var nested = el.querySelector && el.querySelector("ul, ol");
+        if (nested) return nested;
+        el = el.nextElementSibling;
+      }
+      return null;
+    }
+
+    var sections = [
+      { headingId: "journal-papers", type: "journal" },
+      { headingId: "editorials", type: "editorial" },
+      { headingId: "conference-papers-international", type: "conf-int" },
+      { headingId: "conference-papers-national---in-turkish", type: "conf-nat" }
+    ];
+
+    var allItems = [];
+
+    for (var i = 0; i < sections.length; i++) {
+      var s = sections[i];
+      var list = listAfterHeading(s.headingId);
+      if (!list) continue;
+
+      var lis = list.querySelectorAll("li");
+      for (var j = 0; j < lis.length; j++) {
+        var li = lis[j];
+        li.classList.add("pub-item");
+        li.dataset.type = s.type;
+        var y = getYearFromText(li.textContent);
+        if (y) li.dataset.year = y;
+        allItems.push(li);
       }
     }
-  }
-  
-  // Get controls
-  var typeSelect = document.getElementById('pubType');
-  var yearSelect = document.getElementById('pubYear');
-  var countDiv = document.getElementById('pubCount');
-  
-  // Populate years
-  var years = {};
-  for (var i = 0; i < allPubs.length; i++) {
-    if (allPubs[i].dataset.year) years[allPubs[i].dataset.year] = true;
-  }
-  var yearList = Object.keys(years).sort().reverse();
-  for (var i = 0; i < yearList.length; i++) {
-    var opt = document.createElement('option');
-    opt.value = yearList[i];
-    opt.textContent = yearList[i];
-    yearSelect.appendChild(opt);
-  }
-  
-  // Filter function
-  function filter() {
-    var type = typeSelect.value;
-    var year = yearSelect.value;
-    var visible = 0;
-    
-    // Show/hide items
-    for (var i = 0; i < allPubs.length; i++) {
-      var item = allPubs[i];
-      var show = true;
-      if (type !== 'all' && item.dataset.type !== type) show = false;
-      if (year !== 'all' && item.dataset.year !== year) show = false;
-      item.style.display = show ? '' : 'none';
-      if (show) visible++;
+
+    var typeSelect = document.getElementById("pubType");
+    var yearSelect = document.getElementById("pubYear");
+    var applyBtn = document.getElementById("pubApply");
+    var resetBtn = document.getElementById("pubReset");
+    var countDiv = document.getElementById("pubCount");
+
+    if (!typeSelect || !yearSelect || !applyBtn || !resetBtn) return;
+
+    var yearsObj = {};
+    for (var k = 0; k < allItems.length; k++) {
+      var year = allItems[k].dataset.year;
+      if (year) yearsObj[year] = true;
     }
-    
-    // Show/hide headers
-    document.getElementById('journal-papers').style.display = 
-      (type === 'all' || type === 'journal') ? '' : 'none';
-    document.getElementById('editorials').style.display = 
-      (type === 'all' || type === 'editorial') ? '' : 'none';
-    document.getElementById('conference-papers-international').style.display = 
-      (type === 'all' || type === 'conf-int') ? '' : 'none';
-    document.getElementById('conference-papers-national-turkish').style.display = 
-      (type === 'all' || type === 'conf-nat') ? '' : 'none';
-    
-    // Update count
-    countDiv.textContent = visible === allPubs.length ? 
-      'Showing all ' + allPubs.length + ' publications' :
-      'Showing ' + visible + ' of ' + allPubs.length + ' publications';
+    var years = Object.keys(yearsObj).sort(function(a, b) {
+      return Number(b) - Number(a);
+    });
+
+    yearSelect.innerHTML = '<option value="all">All</option>';
+    for (var m = 0; m < years.length; m++) {
+      var opt = document.createElement("option");
+      opt.value = years[m];
+      opt.textContent = years[m];
+      yearSelect.appendChild(opt);
+    }
+
+    function updateCount(visibleCount, totalCount) {
+      if (visibleCount === totalCount) {
+        countDiv.textContent = "Showing all " + totalCount + " publications";
+      } else {
+        countDiv.textContent = "Showing " + visibleCount + " of " + totalCount + " publications";
+      }
+    }
+
+    function applyFilter() {
+      var t = typeSelect.value;
+      var y = yearSelect.value;
+      var visibleCount = 0;
+
+      for (var n = 0; n < allItems.length; n++) {
+        var li = allItems[n];
+        var okT = (t === "all") || (li.dataset.type === t);
+        var okY = (y === "all") || (li.dataset.year === y);
+        var visible = okT && okY;
+        li.style.display = visible ? "" : "none";
+        if (visible) visibleCount++;
+      }
+
+      updateCount(visibleCount, allItems.length);
+    }
+
+    applyBtn.addEventListener("click", applyFilter);
+    typeSelect.addEventListener("change", applyFilter);
+    yearSelect.addEventListener("change", applyFilter);
+
+    resetBtn.addEventListener("click", function() {
+      typeSelect.value = "all";
+      yearSelect.value = "all";
+      applyFilter();
+    });
+
+    updateCount(allItems.length, allItems.length);
   }
-  
-  // Attach events
-  typeSelect.addEventListener('change', filter);
-  yearSelect.addEventListener('change', filter);
-  document.getElementById('pubApply').addEventListener('click', filter);
-  document.getElementById('pubReset').addEventListener('click', function() {
-    typeSelect.value = 'all';
-    yearSelect.value = 'all';
-    filter();
-  });
-  
-  // Initial display
-  filter();
-});
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initFilter);
+  } else {
+    initFilter();
+  }
+})();
 </script>
