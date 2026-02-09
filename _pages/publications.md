@@ -246,11 +246,18 @@ author_profile: true
     ];
 
     var allItems = [];
+    var sectionHeadings = {}; // Store heading references
 
     for (var i = 0; i < sections.length; i++) {
       var s = sections[i];
       var list = listAfterHeading(s.headingId);
       if (!list) continue;
+
+      // Store heading reference
+      var heading = document.getElementById(s.headingId);
+      if (heading) {
+        sectionHeadings[s.type] = heading;
+      }
 
       var lis = list.querySelectorAll("li");
       for (var j = 0; j < lis.length; j++) {
@@ -302,10 +309,12 @@ author_profile: true
       var visibleCount = 0;
 
       // Count visible items per section
-      var sectionCounts = {};
-      for (var i = 0; i < sections.length; i++) {
-        sectionCounts[sections[i].type] = 0;
-      }
+      var sectionCounts = {
+        "journal": 0,
+        "editorial": 0,
+        "conf-int": 0,
+        "conf-nat": 0
+      };
 
       for (var n = 0; n < allItems.length; n++) {
         var li = allItems[n];
@@ -320,11 +329,10 @@ author_profile: true
       }
 
       // Hide/show section headers based on visibility
-      for (var j = 0; j < sections.length; j++) {
-        var s = sections[j];
-        var heading = document.getElementById(s.headingId);
+      for (var type in sectionHeadings) {
+        var heading = sectionHeadings[type];
         if (heading) {
-          heading.style.display = (sectionCounts[s.type] > 0) ? "" : "none";
+          heading.style.display = (sectionCounts[type] > 0) ? "" : "none";
         }
       }
 
