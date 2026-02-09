@@ -42,7 +42,6 @@ author_profile: true
 </p>
 -->
 
-<h2 id="journal-papers">Journal Papers</h2>
 {::nomarkdown}
 <link rel="stylesheet" href="{{ '/assets/css/pub-chart.css' | relative_url }}">
 <script defer src="{{ '/assets/js/pub-chart.js' | relative_url }}"></script>

@@ -1,34 +1,28 @@
 .pub-donuts-2col{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: 18px;
   align-items: start;
-  margin: 12px 0 18px 0;
+  margin: 10px 0 18px 0;
 }
 
-@media (max-width: 860px){
+@media (max-width: 900px){
   .pub-donuts-2col{
     grid-template-columns: 1fr;
   }
 }
 
 .pub-chart{
-  padding: 12px 14px;
+  padding: 14px 14px;
   border: 1px solid rgba(0,0,0,.08);
-  border-radius: 12px;
-  background: rgba(255,255,255,.75);
-}
-
-html[data-theme="dark"] .pub-chart,
-body.dark .pub-chart{
-  border-color: rgba(255,255,255,.10);
-  background: rgba(255,255,255,.03);
+  border-radius: 14px;
+  background: #fff;
 }
 
 .pub-chart__title{
   font-size: 1.05rem;
   font-weight: 700;
-  margin: 2px 0 12px 0;
+  margin: 0 0 10px 0;
 }
 
 .qdonut-wrap{
@@ -38,16 +32,15 @@ body.dark .pub-chart{
   align-items: center;
 }
 
-@media (max-width: 860px){
+@media (max-width: 640px){
   .qdonut-wrap{
     grid-template-columns: 1fr;
   }
 }
 
 .qdonut-svg{
-  width: 100%;
-  height: 240px;
-  display: block;
+  max-width: 260px;
+  margin: 0 auto;
 }
 
 .qdonut-count{
@@ -56,37 +49,39 @@ body.dark .pub-chart{
   fill: #fff;
   paint-order: stroke;
   stroke: rgba(0,0,0,.35);
-  stroke-width: 2px;
+  stroke-width: 3px;
 }
 
 .qdonut-total{
-  font-size: 26px;
+  font-size: 34px;
   font-weight: 800;
-  fill: var(--text-color, #222);
+  fill: #222;
 }
 
 .qdonut-sub{
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 600;
-  opacity: .75;
-  fill: var(--text-color, #222);
+  fill: #666;
 }
 
 .qdonut-legend{
   display: grid;
   gap: 10px;
+  align-content: start;
 }
 
 .qdonut-legend__row{
   display: flex;
-  gap: 10px;
   align-items: center;
-  font-size: 0.98rem;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #444;
 }
 
 .qdonut-legend__swatch{
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   border-radius: 4px;
-  flex: 0 0 12px;
+  flex: 0 0 auto;
 }
