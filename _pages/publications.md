@@ -220,35 +220,44 @@ author_profile: true
 <script>
 document.addEventListener('DOMContentLoaded', function () {
 
-  function getListAfterHeading(headingId) {
+  // Collect <li> items that belong to a section:
+  // from a heading until the next heading (H2/H3) appears.
+  function collectLisUntilNextHeading(headingId) {
     const h = document.getElementById(headingId);
-    if (!h) return null;
+    if (!h) return [];
 
+    const lis = [];
     let el = h.nextElementSibling;
-    while (el && !['UL', 'OL'].includes(el.tagName)) {
+
+    while (el) {
+      // stop when next section starts
+      if (['H2', 'H3'].includes(el.tagName)) break;
+
+      // collect list items inside this block
+      el.querySelectorAll?.('li')?.forEach(li => lis.push(li));
+
       el = el.nextElementSibling;
     }
-    return el;
+    return lis;
   }
 
-  const sections = {
-    'journal': getListAfterHeading('journal-papers'),
-    'editorial': getListAfterHeading('editorials'),
-    'conf-int': getListAfterHeading('conference-papers-international'),
-    'conf-nat': getListAfterHeading('conference-papers-national-turkish')
+  const sectionHeadingIds = {
+    'journal': 'journal-papers',
+    'editorial': 'editorials',
+    'conf-int': 'conference-papers-international',
+    'conf-nat': 'conference-papers-national-turkish'
   };
 
   const allPubs = [];
 
-  // Tag all items with type + year
-  Object.keys(sections).forEach(type => {
-    const list = sections[type];
-    if (!list) return;
+  // Tag items
+  Object.keys(sectionHeadingIds).forEach(type => {
+    const id = sectionHeadingIds[type];
+    const lis = collectLisUntilNextHeading(id);
 
-    list.querySelectorAll('li').forEach(li => {
+    lis.forEach(li => {
       li.dataset.type = type;
 
-      // year parse: first (YYYY, ... ) pattern
       const m = li.textContent.match(/\((\d{4})(?:[,\)]|\s)/);
       if (m) li.dataset.year = m[1];
 
@@ -260,16 +269,16 @@ document.addEventListener('DOMContentLoaded', function () {
   const yearSelect = document.getElementById('pubYear');
   const countDiv  = document.getElementById('pubCount');
 
-  if (!typeSelect || !yearSelect || !countDiv || allPubs.length === 0) {
-    // Debug için:
-    // console.log("Filter init failed:", {typeSelect, yearSelect, countDiv, allPubs: allPubs.length});
-    return;
-  }
+  if (!typeSelect || !yearSelect || !countDiv) return;
+
+  // If this is 0, headings/ids are not matching.
+  // console.log("pubs found:", allPubs.length);
 
   // Populate years
   const years = [...new Set(allPubs.map(x => x.dataset.year).filter(Boolean))]
     .sort((a,b) => b.localeCompare(a));
 
+  // keep existing "All" option, only append years
   years.forEach(y => {
     const opt = document.createElement('option');
     opt.value = y;
@@ -292,24 +301,16 @@ document.addEventListener('DOMContentLoaded', function () {
       if (show) visibleTotal++;
     });
 
-    // Hide/show section headings depending on whether that section has visible items
-    const sectionHeadingIds = {
-      'journal': 'journal-papers',
-      'editorial': 'editorials',
-      'conf-int': 'conference-papers-international',
-      'conf-nat': 'conference-papers-national-turkish'
-    };
+    // Hide/show headings based on whether their section has any visible <li>
+    Object.keys(sectionHeadingIds).forEach(t => {
+      const hid = sectionHeadingIds[t];
+      const heading = document.getElementById(hid);
+      if (!heading) return;
 
-    Object.keys(sections).forEach(t => {
-      const heading = document.getElementById(sectionHeadingIds[t]);
-      const list = sections[t];
-      if (!heading || !list) return;
-
-      const anyVisible = Array.from(list.querySelectorAll('li'))
-        .some(li => li.style.display !== 'none');
+      const lis = collectLisUntilNextHeading(hid);
+      const anyVisible = lis.some(li => li.style.display !== 'none');
 
       heading.style.display = anyVisible ? '' : 'none';
-      list.style.display = anyVisible ? '' : 'none';
     });
 
     countDiv.textContent =
@@ -318,7 +319,6 @@ document.addEventListener('DOMContentLoaded', function () {
         : `Showing ${visibleTotal} of ${allPubs.length} publications`;
   }
 
-  // Events
   typeSelect.addEventListener('change', filter);
   yearSelect.addEventListener('change', filter);
 
