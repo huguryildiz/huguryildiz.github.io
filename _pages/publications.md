@@ -40,6 +40,139 @@ author_profile: true
   </a>
 </p>
 
+<!-- =========================
+     Auto Publications Chart
+     Reads counts from .pub-stats
+     ========================= -->
+<div id="pubAutoChart" class="pub-chart" style="display:none;"></div>
+
+<style>
+/* Local chart styling */
+.pub-chart{
+  margin: 14px 0 8px 0;
+  padding: 14px 14px;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 10px;
+  background: rgba(255,255,255,.03);
+}
+
+.pub-chart__title{
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  opacity: .95;
+}
+
+.pub-chart__row{
+  display: grid;
+  grid-template-columns: 180px 1fr 44px;
+  gap: 10px;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.pub-chart__label{
+  font-size: 0.92rem;
+  opacity: .9;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pub-chart__bar{
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.12);
+  overflow: hidden;
+}
+
+.pub-chart__fill{
+  height: 100%;
+  border-radius: 999px;
+  background: #1f77b4; /* matches your button color */
+  width: 0%;
+  transition: width 650ms ease;
+}
+
+.pub-chart__value{
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  opacity: .9;
+}
+
+/* Mobile */
+@media (max-width: 640px){
+  .pub-chart__row{
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .pub-chart__value{
+    text-align: left;
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const stats = document.querySelectorAll('.pub-stats .pub-stat');
+  const chart = document.getElementById('pubAutoChart');
+  if (!stats.length || !chart) return;
+
+  // Extract {label, value} from your existing "Publication Count" tiles
+  const items = [];
+  stats.forEach(s => {
+    const numEl = s.querySelector('.pub-stat__num');
+    const labEl = s.querySelector('.pub-stat__label');
+    if (!numEl || !labEl) return;
+
+    const value = parseInt((numEl.textContent || '').replace(/[^\d]/g, ''), 10);
+    const label = (labEl.textContent || '').trim();
+    if (!Number.isFinite(value) || !label) return;
+
+    items.push({ label, value });
+  });
+
+  if (!items.length) return;
+
+  const maxVal = Math.max(...items.map(x => x.value), 1);
+
+  // Build chart HTML
+  const titleHtml = `<div class="pub-chart__title">Publications (auto)</div>`;
+  const rowsHtml = items.map((x, idx) => {
+    // color accents (optional): keep first blue, then subtle alternates
+    // If you want all bars same color, remove the --c part + style below.
+    const color =
+      idx === 0 ? '#1f77b4' :
+      idx === 1 ? '#ff7f0e' :
+      idx === 2 ? '#2ca02c' :
+      '#9467bd';
+
+    const pct = (x.value / maxVal) * 100;
+
+    return `
+      <div class="pub-chart__row">
+        <div class="pub-chart__label" title="${x.label}">${x.label}</div>
+        <div class="pub-chart__bar">
+          <div class="pub-chart__fill" data-pct="${pct.toFixed(2)}" style="background:${color};"></div>
+        </div>
+        <div class="pub-chart__value">${x.value}</div>
+      </div>
+    `;
+  }).join('');
+
+  chart.innerHTML = titleHtml + rowsHtml;
+  chart.style.display = '';
+
+  // Animate widths after insertion (so transition triggers)
+  requestAnimationFrame(() => {
+    chart.querySelectorAll('.pub-chart__fill').forEach(el => {
+      const pct = el.getAttribute('data-pct') || '0';
+      el.style.width = pct + '%';
+    });
+  });
+});
+</script>
+
 ## Filter
 
 <div class="pub-filter" style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin: 10px 0 18px 0;">
