@@ -41,13 +41,12 @@ author_profile: true
 </p>
 
 <!-- =========================
-     Auto Publications Chart
+     Auto Publications Chart (Liquid-safe)
      Reads counts from .pub-stats
      ========================= -->
 <div id="pubAutoChart" class="pub-chart" style="display:none;"></div>
 
 <style>
-/* Local chart styling */
 .pub-chart{
   margin: 14px 0 8px 0;
   padding: 14px 14px;
@@ -55,14 +54,12 @@ author_profile: true
   border-radius: 10px;
   background: rgba(255,255,255,.03);
 }
-
 .pub-chart__title{
   font-size: 0.95rem;
   font-weight: 600;
   margin-bottom: 10px;
   opacity: .95;
 }
-
 .pub-chart__row{
   display: grid;
   grid-template-columns: 180px 1fr 44px;
@@ -70,7 +67,6 @@ author_profile: true
   align-items: center;
   margin: 10px 0;
 }
-
 .pub-chart__label{
   font-size: 0.92rem;
   opacity: .9;
@@ -78,99 +74,118 @@ author_profile: true
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 .pub-chart__bar{
   height: 10px;
   border-radius: 999px;
   background: rgba(255,255,255,.12);
   overflow: hidden;
 }
-
 .pub-chart__fill{
   height: 100%;
   border-radius: 999px;
-  background: #1f77b4; /* matches your button color */
   width: 0%;
   transition: width 650ms ease;
 }
-
 .pub-chart__value{
   text-align: right;
   font-variant-numeric: tabular-nums;
   opacity: .9;
 }
-
-/* Mobile */
 @media (max-width: 640px){
-  .pub-chart__row{
-    grid-template-columns: 1fr;
-    gap: 6px;
-  }
-  .pub-chart__value{
-    text-align: left;
-  }
+  .pub-chart__row{ grid-template-columns: 1fr; gap: 6px; }
+  .pub-chart__value{ text-align: left; }
 }
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const stats = document.querySelectorAll('.pub-stats .pub-stat');
-  const chart = document.getElementById('pubAutoChart');
-  if (!stats.length || !chart) return;
+(function(){
+  function buildChart(){
+    var stats = document.querySelectorAll('.pub-stats .pub-stat');
+    var chart = document.getElementById('pubAutoChart');
+    if (!chart || !stats || !stats.length) return;
 
-  // Extract {label, value} from your existing "Publication Count" tiles
-  const items = [];
-  stats.forEach(s => {
-    const numEl = s.querySelector('.pub-stat__num');
-    const labEl = s.querySelector('.pub-stat__label');
-    if (!numEl || !labEl) return;
+    var items = [];
+    for (var i=0; i<stats.length; i++){
+      var numEl = stats[i].querySelector('.pub-stat__num');
+      var labEl = stats[i].querySelector('.pub-stat__label');
+      if (!numEl || !labEl) continue;
 
-    const value = parseInt((numEl.textContent || '').replace(/[^\d]/g, ''), 10);
-    const label = (labEl.textContent || '').trim();
-    if (!Number.isFinite(value) || !label) return;
+      var value = parseInt((numEl.textContent || '').replace(/[^\d]/g,''), 10);
+      var label = (labEl.textContent || '').trim();
+      if (!isFinite(value) || !label) continue;
 
-    items.push({ label, value });
-  });
+      items.push({ label: label, value: value });
+    }
+    if (!items.length) return;
 
-  if (!items.length) return;
+    var maxVal = 1;
+    for (var j=0; j<items.length; j++){
+      if (items[j].value > maxVal) maxVal = items[j].value;
+    }
 
-  const maxVal = Math.max(...items.map(x => x.value), 1);
+    // clear chart
+    while (chart.firstChild) chart.removeChild(chart.firstChild);
 
-  // Build chart HTML
-  const titleHtml = `<div class="pub-chart__title">Publications (auto)</div>`;
-  const rowsHtml = items.map((x, idx) => {
-    // color accents (optional): keep first blue, then subtle alternates
-    // If you want all bars same color, remove the --c part + style below.
-    const color =
-      idx === 0 ? '#1f77b4' :
-      idx === 1 ? '#ff7f0e' :
-      idx === 2 ? '#2ca02c' :
-      '#9467bd';
+    // title
+    var title = document.createElement('div');
+    title.className = 'pub-chart__title';
+    title.textContent = 'Publications';
+    chart.appendChild(title);
 
-    const pct = (x.value / maxVal) * 100;
+    // rows
+    var colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#9467bd'];
 
-    return `
-      <div class="pub-chart__row">
-        <div class="pub-chart__label" title="${x.label}">${x.label}</div>
-        <div class="pub-chart__bar">
-          <div class="pub-chart__fill" data-pct="${pct.toFixed(2)}" style="background:${color};"></div>
-        </div>
-        <div class="pub-chart__value">${x.value}</div>
-      </div>
-    `;
-  }).join('');
+    for (var k=0; k<items.length; k++){
+      var row = document.createElement('div');
+      row.className = 'pub-chart__row';
 
-  chart.innerHTML = titleHtml + rowsHtml;
-  chart.style.display = '';
+      var lab = document.createElement('div');
+      lab.className = 'pub-chart__label';
+      lab.title = items[k].label;
+      lab.textContent = items[k].label;
 
-  // Animate widths after insertion (so transition triggers)
-  requestAnimationFrame(() => {
-    chart.querySelectorAll('.pub-chart__fill').forEach(el => {
-      const pct = el.getAttribute('data-pct') || '0';
-      el.style.width = pct + '%';
+      var bar = document.createElement('div');
+      bar.className = 'pub-chart__bar';
+
+      var fill = document.createElement('div');
+      fill.className = 'pub-chart__fill';
+      fill.style.background = colors[k % colors.length];
+
+      var pct = (items[k].value / maxVal) * 100;
+      fill.setAttribute('data-pct', pct.toFixed(2));
+
+      bar.appendChild(fill);
+
+      var val = document.createElement('div');
+      val.className = 'pub-chart__value';
+      val.textContent = String(items[k].value);
+
+      row.appendChild(lab);
+      row.appendChild(bar);
+      row.appendChild(val);
+
+      chart.appendChild(row);
+    }
+
+    chart.style.display = '';
+
+    // animate widths (after insertion)
+    window.requestAnimationFrame(function(){
+      var fills = chart.querySelectorAll('.pub-chart__fill');
+      for (var t=0; t<fills.length; t++){
+        var p = fills[t].getAttribute('data-pct') || '0';
+        fills[t].style.width = p + '%';
+      }
     });
-  });
-});
+  }
+
+  // Run on DOM ready (handles cases where this script is not at bottom)
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', buildChart);
+  } else {
+    buildChart();
+  }
+})();
 </script>
 
 ## Filter
