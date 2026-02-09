@@ -80,7 +80,7 @@ author_profile: true
   <button id="pubReset" class="btn btn--small" type="button">Reset</button>
 </div>
 
-<div id="pubCount" style="margin: 10px 0; font-style: italic; color: var(--text-color, #666);"></div>
+
 
 ## Quick Links
 [Journal Papers](#journal-papers){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
@@ -90,9 +90,6 @@ author_profile: true
 
 ## Journal Papers
 {: #journal-papers}
-
-- Karagul, C. T., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025). *Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity*. *IEEE Internet of Things Journal, 12*(22), 47817–47826.  
-![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2025_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JIOT.2025.3603829)
 
 - Karagul, C. T., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025). *Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity*. *IEEE Internet of Things Journal, 12*(22), 47817–47826.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2025_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JIOT.2025.3603829)
@@ -238,118 +235,130 @@ author_profile: true
 - **Yildiz, H. U.**, Tavli, B., & Kahjogh, B. O. (2017, May). *Assessment of wireless sensor network lifetime reduction due to elimination of critical node sets*. In *2017 25th SIU* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2017.7960228) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/15euPq5RHnGhSFm788StYStlpDJEYPMBA/view?usp=sharing)  
 
+
 <script>
-document.addEventListener('DOMContentLoaded', function () {
+(function() {
+  // Wait for page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 
-  // Collect <li> items that belong to a section:
-  // from a heading until the next heading (H2/H3) appears.
-  function collectLisUntilNextHeading(headingId) {
-    const h = document.getElementById(headingId);
-    if (!h) return [];
+  function init() {
+    // Find all list items in publication sections
+    var allItems = [];
+    var headings = {
+      'journal': document.getElementById('journal-papers'),
+      'editorial': document.getElementById('editorials'),
+      'conf-int': document.getElementById('conference-papers-international'),
+      'conf-nat': document.getElementById('conference-papers-national-turkish')
+    };
 
-    const lis = [];
-    let el = h.nextElementSibling;
-
-    while (el) {
-      // stop when next section starts
-      if (['H2', 'H3'].includes(el.tagName)) break;
-
-      // collect list items inside this block
-      el.querySelectorAll?.('li')?.forEach(li => lis.push(li));
-
-      el = el.nextElementSibling;
+    // Process each section
+    for (var type in headings) {
+      var heading = headings[type];
+      if (!heading) continue;
+      
+      // Find the list after the heading
+      var el = heading.nextElementSibling;
+      while (el && el.tagName !== 'UL' && el.tagName !== 'OL') {
+        el = el.nextElementSibling;
+      }
+      
+      if (el) {
+        var items = el.getElementsByTagName('li');
+        for (var i = 0; i < items.length; i++) {
+          items[i].setAttribute('data-type', type);
+          // Extract year
+          var match = items[i].textContent.match(/\((\d{4})\)/);
+          if (match) {
+            items[i].setAttribute('data-year', match[1]);
+          }
+          allItems.push(items[i]);
+        }
+      }
     }
-    return lis;
+
+    // Get UI elements
+    var typeSelect = document.getElementById('pubType');
+    var yearSelect = document.getElementById('pubYear');
+    var applyBtn = document.getElementById('pubApply');
+    var resetBtn = document.getElementById('pubReset');
+    var countDiv = document.getElementById('pubCount');
+
+    if (!typeSelect || !yearSelect) return;
+
+    // Populate year dropdown
+    var years = {};
+    for (var i = 0; i < allItems.length; i++) {
+      var y = allItems[i].getAttribute('data-year');
+      if (y) years[y] = true;
+    }
+    var yearList = Object.keys(years).sort(function(a, b) { return b - a; });
+    
+    for (var i = 0; i < yearList.length; i++) {
+      var opt = document.createElement('option');
+      opt.value = yearList[i];
+      opt.textContent = yearList[i];
+      yearSelect.appendChild(opt);
+    }
+
+    // Filter function
+    function applyFilter() {
+      var selectedType = typeSelect.value;
+      var selectedYear = yearSelect.value;
+      var visibleCount = 0;
+      var counts = { journal: 0, editorial: 0, 'conf-int': 0, 'conf-nat': 0 };
+
+      // Filter items
+      for (var i = 0; i < allItems.length; i++) {
+        var item = allItems[i];
+        var itemType = item.getAttribute('data-type');
+        var itemYear = item.getAttribute('data-year');
+        
+        var typeMatch = (selectedType === 'all' || itemType === selectedType);
+        var yearMatch = (selectedYear === 'all' || itemYear === selectedYear);
+        var show = typeMatch && yearMatch;
+        
+        item.style.display = show ? '' : 'none';
+        
+        if (show) {
+          visibleCount++;
+          counts[itemType]++;
+        }
+      }
+
+      // Show/hide headings
+      for (var type in headings) {
+        if (headings[type]) {
+          headings[type].style.display = (counts[type] > 0) ? '' : 'none';
+        }
+      }
+
+      // Update count message
+      if (countDiv) {
+        var msg = visibleCount === allItems.length
+          ? 'Showing all ' + allItems.length + ' publications'
+          : 'Showing ' + visibleCount + ' of ' + allItems.length + ' publications';
+        countDiv.textContent = msg;
+      }
+    }
+
+    // Attach events
+    if (typeSelect) typeSelect.addEventListener('change', applyFilter);
+    if (yearSelect) yearSelect.addEventListener('change', applyFilter);
+    if (applyBtn) applyBtn.addEventListener('click', applyFilter);
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function() {
+        typeSelect.value = 'all';
+        yearSelect.value = 'all';
+        applyFilter();
+      });
+    }
+
+    // Initial run
+    applyFilter();
   }
-
-  const sectionHeadingIds = {
-    'journal': 'journal-papers',
-    'editorial': 'editorials',
-    'conf-int': 'conference-papers-international',
-    'conf-nat': 'conference-papers-national-turkish'
-  };
-
-  const allPubs = [];
-
-  // Tag items
-  Object.keys(sectionHeadingIds).forEach(type => {
-    const id = sectionHeadingIds[type];
-    const lis = collectLisUntilNextHeading(id);
-
-    lis.forEach(li => {
-      li.dataset.type = type;
-
-      const m = li.textContent.match(/\((\d{4})(?:[,\)]|\s)/);
-      if (m) li.dataset.year = m[1];
-
-      allPubs.push(li);
-    });
-  });
-
-  const typeSelect = document.getElementById('pubType');
-  const yearSelect = document.getElementById('pubYear');
-  const countDiv  = document.getElementById('pubCount');
-
-  if (!typeSelect || !yearSelect || !countDiv) return;
-
-  // If this is 0, headings/ids are not matching.
-  // console.log("pubs found:", allPubs.length);
-
-  // Populate years
-  const years = [...new Set(allPubs.map(x => x.dataset.year).filter(Boolean))]
-    .sort((a,b) => b.localeCompare(a));
-
-  // keep existing "All" option, only append years
-  years.forEach(y => {
-    const opt = document.createElement('option');
-    opt.value = y;
-    opt.textContent = y;
-    yearSelect.appendChild(opt);
-  });
-
-  function filter() {
-    const type = typeSelect.value;
-    const year = yearSelect.value;
-
-    let visibleTotal = 0;
-
-    allPubs.forEach(item => {
-      let show = true;
-      if (type !== 'all' && item.dataset.type !== type) show = false;
-      if (year !== 'all' && item.dataset.year !== year) show = false;
-
-      item.style.display = show ? '' : 'none';
-      if (show) visibleTotal++;
-    });
-
-    // Hide/show headings based on whether their section has any visible <li>
-    Object.keys(sectionHeadingIds).forEach(t => {
-      const hid = sectionHeadingIds[t];
-      const heading = document.getElementById(hid);
-      if (!heading) return;
-
-      const lis = collectLisUntilNextHeading(hid);
-      const anyVisible = lis.some(li => li.style.display !== 'none');
-
-      heading.style.display = anyVisible ? '' : 'none';
-    });
-
-    countDiv.textContent =
-      (visibleTotal === allPubs.length)
-        ? `Showing all ${allPubs.length} publications`
-        : `Showing ${visibleTotal} of ${allPubs.length} publications`;
-  }
-
-  typeSelect.addEventListener('change', filter);
-  yearSelect.addEventListener('change', filter);
-
-  document.getElementById('pubApply')?.addEventListener('click', filter);
-  document.getElementById('pubReset')?.addEventListener('click', function () {
-    typeSelect.value = 'all';
-    yearSelect.value = 'all';
-    filter();
-  });
-
-  filter();
-});
+})();
 </script>
