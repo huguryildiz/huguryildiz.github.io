@@ -11,6 +11,7 @@ My research focuses on routing, resource allocation, and energy-efficient design
 
 More recently, I have been exploring hybrid classical–quantum network routing, investigating how physical constraints such as entanglement lifetime and network reliability influence routing and control decisions.
 
+<!-- 
 ## Key Research Topics
 
 ### Operations Research and Mathematical Optimization for Networked Systems:
@@ -23,11 +24,11 @@ Design and optimization of energy-efficient routing, topology control, and commu
 
 ### Hybrid Optimization and Learning-Based Network Control:
 
-Integration of mathematical optimization frameworks with machine learning and reinforcement learning techniques to enable adaptive, data-driven, and scalable control of complex networked systems. Recent work explores hybrid optimization–learning methodologies for parameter prediction, dynamic decision-making, and emerging paradigms such as quantum network routing and hybrid classical–quantum architectures.
+Integration of mathematical optimization frameworks with machine learning and reinforcement learning techniques to enable adaptive, data-driven, and scalable control of complex networked systems. Recent work explores hybrid optimization–learning methodologies for parameter prediction, dynamic decision-making, and emerging paradigms such as quantum network routing and hybrid classical–quantum architectures. 
+
+-->
 
 ## Key Research Topics
-
-<h2>Key Research Topics</h2>
 
 <!-- =========================
      Research Topic 1
