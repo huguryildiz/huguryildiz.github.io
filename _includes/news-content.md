@@ -14,7 +14,7 @@
 - <span class="news-badge">06/2023</span> Journal paper published in *Ad Hoc Networks*: “Exploring the tradeoff between energy dissipation, delay, and the number of backbones for broadcasting in wireless sensor networks through goal programming”.
 - <span class="news-badge">12/2022</span> Muhammed Çobanlar successfully defended his Ph.D. dissertation at TOBB University of Economics and Technology.
 - <span class="news-badge">11/2022</span> Journal paper published in *IEEE Internet of Things Journal*: “On the trade-off between network lifetime and k-connectivity-based reliability in UWSNs”.
-- <span class="news-badge">09/2022</span> Journal paper published in *Ad Hoc Networks*: “RReliability of linear WSNs: A complementary overview and analysis of impact of cascaded failures on network lifetime”.
+- <span class="news-badge">09/2022</span> Journal paper published in *Ad Hoc Networks*: “Reliability of linear WSNs: A complementary overview and analysis of impact of cascaded failures on network lifetime”.
 - <span class="news-badge">04/2022</span> [Burak Emre Ün](https://www.linkedin.com/in/burak-emre-%C3%BCn-2a558892/) successfully defended his M.Sc. thesis at TOBB University of Economics and Technology.
 - <span class="news-badge">08/2021</span> Ceylan Aydın successfully defended her M.Sc. thesis at TOBB University of Economics and Technology.
 - <span class="news-badge">07/2021</span> Appointed Chair of the Electrical and Electronics Engineering Department, TED University.
