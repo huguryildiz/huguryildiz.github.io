@@ -24,3 +24,23 @@ Design and optimization of energy-efficient routing, topology control, and commu
 ### Hybrid Optimization and Learning-Based Network Control:
 
 Integration of mathematical optimization frameworks with machine learning and reinforcement learning techniques to enable adaptive, data-driven, and scalable control of complex networked systems. Recent work explores hybrid optimization–learning methodologies for parameter prediction, dynamic decision-making, and emerging paradigms such as quantum network routing and hybrid classical–quantum architectures.
+
+## Tutorials & Research Code
+
+Selected tutorials and reference implementations accompanying my research on
+network optimization and wireless sensor networks.
+
+<!-- GitHub Repo Card -->
+<div class="github-card"
+     data-github="huguryildiz/wsn-opt-python"
+     data-width="420"
+     data-theme="default">
+</div>
+
+<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+
+<p style="margin-top:8px; font-size:0.95em; color:#666;">
+This repository provides a hands-on Python tutorial for network-flow–based
+optimization models in wireless sensor networks, intended for students and
+researchers.
+</p>
