@@ -42,7 +42,6 @@ author_profile: true
 
 ## Filter
 
-
 <div class="pub-filter" style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin: 10px 0 18px 0;">
   <label style="display:flex; gap:8px; align-items:center;">
     <span style="min-width:42px;">Type</span>
@@ -66,16 +65,13 @@ author_profile: true
   <button id="pubReset" class="btn btn--small" type="button">Reset</button>
 </div>
 
-<div id="pubCount" style="margin: 10px 0; font-style: italic; color: #666;"></div>
-
-
-
+<div id="pubCount" style="margin: 10px 0; font-style: italic; color: var(--text-color, #666);"></div>
 
 ## Quick Links
 [Journal Papers](#journal-papers){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
 [Editorials](#editorials){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
 [Conf. Papers (Int.)](#conference-papers-international){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
-[Conf. Papers (Nat.)](#conference-papers-national---in-turkish){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
+[Conf. Papers (Nat.)](#conference-papers-national-turkish){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
 
 ## Journal Papers
 
@@ -203,7 +199,8 @@ author_profile: true
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/WiSNet.2014.6825515) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16xQgqR0IGGUlx-9fmwTTnk1srKBS-9_w/view?usp=sharing)  
 
 
-## Conference Papers (National — in Turkish)
+## Conference Papers (National - in Turkish)
+{: #conference-papers-national-turkish}
 
 - **Yildiz, H. U.** (2019, April). *Improvement of underwater acoustic sensor networks performance with fountain codes*. In *2019 27th SIU* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2019.8806401) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16P_YL9_5u1bCfNzGJOZQnYrHXdjoNtZO/view?usp=sharing)  
@@ -219,7 +216,6 @@ author_profile: true
 
 - **Yildiz, H. U.**, Tavli, B., & Kahjogh, B. O. (2017, May). *Assessment of wireless sensor network lifetime reduction due to elimination of critical node sets*. In *2017 25th SIU* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2017.7960228) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/15euPq5RHnGhSFm788StYStlpDJEYPMBA/view?usp=sharing)  
-
 
 <script>
 (function() {
