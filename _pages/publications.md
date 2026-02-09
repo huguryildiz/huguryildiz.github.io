@@ -220,6 +220,7 @@ author_profile: true
 - **Yildiz, H. U.**, Tavli, B., & Kahjogh, B. O. (2017, May). *Assessment of wireless sensor network lifetime reduction due to elimination of critical node sets*. In *2017 25th SIU* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2017.7960228) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/15euPq5RHnGhSFm788StYStlpDJEYPMBA/view?usp=sharing)  
 
+
 <script>
 (function() {
   function initFilter() {
@@ -245,7 +246,7 @@ author_profile: true
       { headingId: "journal-papers", type: "journal" },
       { headingId: "editorials", type: "editorial" },
       { headingId: "conference-papers-international", type: "conf-int" },
-      { headingId: "conference-papers-national---in-turkish", type: "conf-nat" }
+      { headingId: "conference-papers-national-turkish", type: "conf-nat" }
     ];
 
     var allItems = [];
