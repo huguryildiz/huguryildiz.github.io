@@ -28,8 +28,6 @@ Integration of mathematical optimization frameworks with machine learning and re
 
 -->
 
-## Key Research Topics
-
 <!-- =========================
      Research Topic 1
      ========================= -->
@@ -57,9 +55,9 @@ Integration of mathematical optimization frameworks with machine learning and re
 </div>
 
 <!-- =========================
-     Research Topic 2
+     Research Topic 2 (zig-zag)
      ========================= -->
-<div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
+<div style="display:flex; flex-direction:row-reverse; gap:20px; align-items:flex-start; margin-bottom:30px;">
 
   <div style="flex:1; min-width:150px;">
     <img src="/images/research/wireless_ad_hoc_underwater_sensor_networks.png"
