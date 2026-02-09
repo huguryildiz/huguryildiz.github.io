@@ -42,7 +42,7 @@
     wrap.className = "qdonut-wrap";
     chart.appendChild(wrap);
 
-    var size = 240, cx = size/2, cy = size/2, rOuter = 92, rInner = 54;
+    var size = 240, cx = size / 2, cy = size / 2, rOuter = 92, rInner = 54;
 
     var svg = document.createElementNS(svgNS, "svg");
     svg.setAttribute("viewBox", "0 0 " + size + " " + size);
@@ -64,7 +64,7 @@
       path.setAttribute("opacity", "0.95");
       svg.appendChild(path);
 
-      // Count inside segment (skip tiny slices)
+      // Put count text at segment midpoint (skip tiny slices)
       if (sweep >= 18) {
         var mid = (start + end) / 2;
         var rText = (rOuter + rInner) / 2;
@@ -126,12 +126,12 @@
     chart.style.display = "";
   }
 
-  function buildPublicationTypeDonut() {
-    // Read from .pub-stats
+  function buildPublicationCountDonut() {
     var stats = document.querySelectorAll(".pub-stats .pub-stat");
     if (!stats || !stats.length) return;
 
-    var items = [];
+    var journal = 0, confInt = 0, confNat = 0, editorial = 0;
+
     for (var i = 0; i < stats.length; i++) {
       var numEl = stats[i].querySelector(".pub-stat__num");
       var labEl = stats[i].querySelector(".pub-stat__label");
@@ -141,22 +141,30 @@
       var label = (labEl.textContent || "").trim();
       if (!isFinite(value) || !label) continue;
 
-      items.push({ label: label, value: value });
+      if (label.indexOf("Journal") !== -1) journal = value;
+      else if (label.indexOf("Conf. Proc. (Int.)") !== -1) confInt = value;
+      else if (label.indexOf("Conf. Proc. (Nat.)") !== -1) confNat = value;
+      else if (label.indexOf("Editorial") !== -1) editorial = value;
     }
-    if (!items.length) return;
+
+    var confTotal = confInt + confNat;
+
+    var items = [
+      { label: "Journals", value: journal },
+      { label: "Conferences", value: confTotal },
+      { label: "Editorials", value: editorial }
+    ].filter(function (x) { return x.value > 0; });
 
     var colorMap = {
-      "Journal Articles": "#1f77b4",
-      "Conf. Proc. (Int.)": "#ff7f0e",
-      "Conf. Proc. (Nat.)": "#2ca02c",
-      "Editorial": "#9467bd"
+      "Journals": "#1f77b4",
+      "Conferences": "#ff7f0e",
+      "Editorials": "#9467bd"
     };
 
-    renderDonut("pubTypeDonut", "Publication Types", "items", items, colorMap);
+    renderDonut("pubCountDonut", "Publication Count", "total", items, colorMap);
   }
 
   function buildJournalQDonut() {
-    // Find journal section
     var h = document.getElementById("journal-papers");
     if (!h) return;
 
@@ -198,11 +206,11 @@
       Unknown: "#7f7f7f"
     };
 
-    renderDonut("journalQDonut", "Journal Quartiles", "journals", items, colorMap);
+    renderDonut("journalQDonut", "Journal Quartiles (Q)", "journals", items, colorMap);
   }
 
   function init() {
-    buildPublicationTypeDonut();
+    buildPublicationCountDonut();
     buildJournalQDonut();
   }
 

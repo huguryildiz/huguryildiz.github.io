@@ -1,47 +1,57 @@
-.pub-charts-grid{
+/* 2 donuts side-by-side */
+.pub-donuts-2col{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  gap: 18px;
   align-items: start;
   margin-top: 10px;
 }
+
 @media (max-width: 900px){
-  .pub-charts-grid{ grid-template-columns: 1fr; }
+  .pub-donuts-2col{ grid-template-columns: 1fr; }
 }
 
+/* Donut layout inside each card */
 .qdonut-wrap{
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
 }
+
 .qdonut-svg{
-  max-width: 280px;
+  max-width: 300px;
 }
+
 .qdonut-count{
   font-size: 14px;
   font-weight: 800;
   fill: rgba(255,255,255,.92);
 }
+
 .qdonut-total{
   font-size: 22px;
   font-weight: 900;
   fill: rgba(255,255,255,.95);
 }
+
 .qdonut-sub{
   font-size: 12px;
   fill: rgba(255,255,255,.70);
 }
+
 .qdonut-legend{
   display: grid;
   gap: 8px;
   font-size: 0.92rem;
   opacity: .9;
 }
+
 .qdonut-legend__row{
   display:flex;
   align-items:center;
   gap:10px;
 }
+
 .qdonut-legend__swatch{
   width: 10px;
   height: 10px;
