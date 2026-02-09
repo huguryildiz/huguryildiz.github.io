@@ -7,7 +7,7 @@ author_profile: true
 
 ## Metrics
 
-<!-- Publication Count -->
+<!-- Publication Count 
 <div class="pub-stats">
   <div class="pub-stat">
     <div class="pub-stat__num">24</div>
@@ -26,8 +26,9 @@ author_profile: true
     <div class="pub-stat__label">Editorial</div>
   </div>
 </div>
+-->
 
-<!-- Citation Metrics -->
+<!-- Citation Metrics 
 <p class="metrics-badges">
   <a href="https://scholar.google.com.tr/citations?user=nQwHS1gAAAAJ">
     <img src="https://img.shields.io/badge/Citations-1043-blue?style=flat-square&logo=google-scholar" alt="Citations">
@@ -39,13 +40,16 @@ author_profile: true
     <img src="https://img.shields.io/badge/i10--index-23-success?style=flat-square" alt="i10-index">
   </a>
 </p>
+-->
 
 <h2 id="journal-papers">Journal Papers</h2>
 
-<!-- Donut charts: publication types + journal quartiles -->
-<div class="pub-charts-grid">
-  <div id="pubTypeDonut" class="pub-chart" style="display:none;"></div>
-  <div id="journalQDonut" class="pub-chart" style="display:none;"></div>
+<div class="pub-donuts-2col">
+  <!-- LEFT: Publication Count -->
+  <div id="pubCountDonut" class="pub-chart"></div>
+
+  <!-- RIGHT: Journal Quartiles -->
+  <div id="journalQDonut" class="pub-chart"></div>
 </div>
 
 ## Filter
