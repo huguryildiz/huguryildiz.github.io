@@ -3,6 +3,8 @@ layout: single
 title: ""
 permalink: /students/
 author_profile: true
+custom_css:
+  - supervision-stats
 ---
 
 ## Student Supervision
