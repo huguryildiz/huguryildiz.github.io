@@ -126,3 +126,25 @@ This repository provides a hands-on Python tutorial for network-flow–based
 optimization models in wireless sensor networks, intended for students and
 researchers.
 </p>
+
+<section class="research-resource">
+  <h2>Supplementary Resource</h2>
+
+  <div class="resource-card">
+    <div class="resource-icon">📄</div>
+
+    <div class="resource-content">
+      <h3>Underwater Networks – Basics</h3>
+      <p>
+        An introductory document covering core principles of underwater acoustic
+        communication and sensor networks.
+      </p>
+
+      <a class="resource-btn"
+         href="/files/underwater_networks_basics.pdf"
+         target="_blank">
+        View PDF
+      </a>
+    </div>
+  </div>
+</section>
