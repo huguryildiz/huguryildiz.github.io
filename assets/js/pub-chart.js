@@ -167,15 +167,15 @@
 
     var items = [
       { label: "Journal Articles", value: journal },
-      { label: "Conference Papers (International)", value: confInt },
-      { label: "Conference Papers (National)", value: confNat },
+      { label: "Conf. Papers (Intl.)", value: confInt },
+      { label: "Conf. Papers (Nat.)", value: confNat },
       { label: "Editorial", value: editorial }
     ].filter(function (x) { return x.value > 0; });
 
     var colorMap = {
       "Journal Articles": "#1f77b4",
-      "Conference Papers (International)": "#ff7f0e",
-      "Conference Papers (National)": "#2ca02c",
+      "Conf. Papers (Intl.)": "#ff7f0e",
+      "Conf. Papers (Nat.)": "#2ca02c",
       "Editorial": "#9467bd"
     };
 
