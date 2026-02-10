@@ -139,4 +139,22 @@
 [data-theme="dark"] .qdonut-count {
   fill: var(--text-color);
 }
+
+/* =========================
+   Donut inner hole fix
+   ========================= */
+
+/* SVG inner circle color = card background */
+.pub-chart svg {
+  background: transparent;
+}
+
+.pub-chart .qdonut-hole {
+  fill: var(--background-color);
+}
+
+/* Dark mode refinement */
+[data-theme="dark"] .pub-chart .qdonut-hole {
+  fill: color-mix(in srgb, var(--background-color) 88%, #000);
+}
 }
