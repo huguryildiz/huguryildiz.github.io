@@ -277,37 +277,40 @@ body.theme-dark{
 }
 
 /* =========================================================
-   HARD OVERRIDE — Dark mode sticky filter MUST be opaque
-   Put this at the VERY END of pub-chart.css
+   Dark mode — THEME-COMPATIBLE sticky filter
    ========================================================= */
 
 html[data-theme="dark"] .pub-filter-sticky,
 body[data-theme="dark"] .pub-filter-sticky,
-[data-theme="dark"] .pub-filter-sticky,
 html.dark .pub-filter-sticky,
-body.dark .pub-filter-sticky,
-html.dark-mode .pub-filter-sticky,
-body.dark-mode .pub-filter-sticky,
-html.theme-dark .pub-filter-sticky,
-body.theme-dark .pub-filter-sticky{
-  background-color: #2f2f2f !important;   /* NOTE: background-color */
+body.dark .pub-filter-sticky{
+  /* Tema ile uyumlu koyu gri (arka planla akraba) */
+  background-color: #3f3f3f !important;
+
+  /* Kart hissi */
+  border: 1px solid rgba(255,255,255,.12) !important;
+  border-radius: 14px;
+
+  /* Tema gölgesi */
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.45),
+    inset 0 1px 0 rgba(255,255,255,.04);
+
+  /* Tam opak */
   opacity: 1 !important;
-  filter: none !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
 
-  /* “alttaki içerik görünüyor” hissini kesmek için */
   isolation: isolate;
-  background-clip: padding-box;
-
-  border-color: rgba(255,255,255,.14) !important;
-  box-shadow: 0 14px 34px rgba(0,0,0,.55) !important;
 }
 
-/* İçeride bir eleman (header/row) şeffaflık veriyorsa onu da sabitle */
-html[data-theme="dark"] .pub-filter-sticky * ,
-[data-theme="dark"] .pub-filter-sticky * ,
-html.dark .pub-filter-sticky * ,
-body.dark .pub-filter-sticky * {
-  opacity: 1 !important;
+html[data-theme="dark"] #pubApply,
+html[data-theme="dark"] #pubReset{
+  background-color: #2aa1c0;
+  border-color: #2aa1c0;
+}
+
+html[data-theme="dark"] #pubApply:hover,
+html[data-theme="dark"] #pubReset:hover{
+  background-color: #238fb0;
 }
