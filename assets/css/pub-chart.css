@@ -1,38 +1,54 @@
-/* 2-column wrapper */
+/* =========================
+   2-column layout
+   ========================= */
 .pub-donuts-2col{
-  display:grid;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
   align-items: start;
   margin: 10px 0 18px 0;
 }
+
 @media (max-width: 900px){
   .pub-donuts-2col{ grid-template-columns: 1fr; }
 }
 
-/* Card uses theme colors (inherits) */
+/* =========================
+   Theme-derived tokens (with safe fallbacks)
+   ========================= */
 .pub-chart{
+  /* Minimal Mistakes exposes theme vars on many skins.
+     If any is missing, fall back gracefully. */
+  --pc-bg: var(--background-color, #fff);
+  --pc-text: var(--text-color, #222);
+  --pc-border: var(--border-color, rgba(0,0,0,.10));
+  --pc-shadow: 0 10px 28px rgba(0,0,0,0.18);
+
+  background: var(--pc-bg);
+  border: 1px solid var(--pc-border);
+  box-shadow: var(--pc-shadow);
+
   padding: 14px 14px;
   border-radius: 14px;
-  border: 1px solid rgba(255,255,255,.08);
-  background: var(--background-color, #fff);
-  color: var(--text-color, #222);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
-}
-.pub-chart__title{
-  margin: 0 0 10px 0;
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: inherit;
 }
 
-/* Layout: donut + legend */
+.pub-chart__title{
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+  color: var(--pc-text);
+}
+
+/* =========================
+   Donut layout
+   ========================= */
 .qdonut-wrap{
-  display:grid;
+  display: grid;
   grid-template-columns: 260px 1fr;
   gap: 16px;
   align-items: center;
 }
+
 @media (max-width: 640px){
   .qdonut-wrap{ grid-template-columns: 1fr; }
 }
@@ -40,41 +56,80 @@
 .qdonut-svg{
   max-width: 260px;
   margin: 0 auto;
-  display:block;
+  display: block;
+
+  /* sharper text */
   text-rendering: geometricPrecision;
+  shape-rendering: geometricPrecision;
 }
 
-/* Legend inherits theme */
+/* Inner hole painted with card background (theme-driven) */
+.qdonut-hole{
+  fill: var(--pc-bg);
+}
+
+/* =========================
+   Legend inherits theme color
+   ========================= */
 .qdonut-legend{
-  display:grid;
+  display: grid;
   gap: 10px;
   align-content: start;
-  color: inherit;
+  color: var(--pc-text);
 }
+
 .qdonut-legend__row{
-  display:flex;
-  align-items:center;
-  gap:10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 18px;
   font-weight: 650;
-  color: inherit;          /* ✅ theme inherit */
+  color: inherit;
 }
-.qdonut-legend__row span{ color: inherit; }
+
+.qdonut-legend__row span{
+  color: inherit;
+}
 
 .qdonut-legend__swatch{
   width: 14px;
   height: 14px;
   border-radius: 4px;
   flex: 0 0 auto;
-  border: 1px solid rgba(127,127,127,.35);
+  border: 1px solid var(--pc-border);
 }
 
-/* SVG text (inherit via inline fill set in JS, stroke kept subtle) */
-.qdonut-count,
-.qdonut-total,
-.qdonut-sub{
+/* =========================
+   SVG text colors
+   ========================= */
+
+/* Slice numbers: white fill + adaptive stroke (not theme text) */
+.qdonut-count{
+  font-size: 18px;
+  font-weight: 800;
+  fill: #fff;
+
   paint-order: stroke fill;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-  stroke-width: 2px;       /* ✅ less “blurry” */
+  stroke: rgba(0,0,0,.35);
+  stroke-width: 2.5px;
+}
+
+/* Center text: inherit theme text color */
+.qdonut-total{
+  font-size: 34px;
+  font-weight: 900;
+  fill: var(--pc-text);
+}
+
+.qdonut-sub{
+  font-size: 15px;
+  font-weight: 650;
+  fill: color-mix(in srgb, var(--pc-text) 65%, transparent);
+}
+
+/* If your theme sets data-theme="dark", lighten stroke automatically */
+[data-theme="dark"] .qdonut-count,
+html[data-theme="dark"] .qdonut-count,
+body[data-theme="dark"] .qdonut-count{
+  stroke: rgba(255,255,255,.35);
 }
