@@ -1,6 +1,4 @@
-/* =========================
-   2-column layout
-   ========================= */
+/* 2 donuts side-by-side (responsive) */
 .pub-donuts-2col{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -13,35 +11,34 @@
   .pub-donuts-2col{ grid-template-columns: 1fr; }
 }
 
-/* =========================
-   Theme-derived tokens (with safe fallbacks)
-   ========================= */
+/* Card base (theme-aware via --pub-card-bg / --pub-text set in JS) */
 .pub-chart{
-  /* Minimal Mistakes exposes theme vars on many skins.
-     If any is missing, fall back gracefully. */
-  --pc-bg: var(--background-color, #fff);
-  --pc-text: var(--text-color, #222);
-  --pc-border: var(--border-color, rgba(0,0,0,.10));
-  --pc-shadow: 0 10px 28px rgba(0,0,0,0.18);
-
-  background: var(--pc-bg);
-  border: 1px solid var(--pc-border);
-  box-shadow: var(--pc-shadow);
-
   padding: 14px 14px;
   border-radius: 14px;
+
+  background: var(--pub-card-bg, #fff);
+  border: 1px solid rgba(0,0,0,.10);
+
+  /* soft shadow; avoid heavy blur in dark mode */
+  box-shadow: 0 10px 28px rgba(0,0,0,0.14);
+}
+
+/* Dark mode variants (works for most themes) */
+html[data-theme="dark"] .pub-chart,
+[data-theme="dark"] .pub-chart,
+.dark .pub-chart,
+.theme-dark .pub-chart{
+  border-color: rgba(255,255,255,0.12);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.55);
 }
 
 .pub-chart__title{
   font-size: 1.05rem;
-  font-weight: 800;
+  font-weight: 750;
   margin: 0 0 10px 0;
-  color: var(--pc-text);
+  color: var(--pub-text, rgba(0,0,0,0.86));
 }
 
-/* =========================
-   Donut layout
-   ========================= */
 .qdonut-wrap{
   display: grid;
   grid-template-columns: 260px 1fr;
@@ -56,26 +53,61 @@
 .qdonut-svg{
   max-width: 260px;
   margin: 0 auto;
-  display: block;
 
-  /* sharper text */
+  /* improve “blurry” feeling */
   text-rendering: geometricPrecision;
   shape-rendering: geometricPrecision;
 }
 
-/* Inner hole painted with card background (theme-driven) */
 .qdonut-hole{
-  fill: var(--pc-bg);
+  /* fill is set from JS to match the card background exactly */
 }
 
-/* =========================
-   Legend inherits theme color
-   ========================= */
+.qdonut-count{
+  font-size: 18px;
+  font-weight: 800;
+  fill: #ffffff;
+
+  /* crisp stroke (keep subtle to avoid blur) */
+  paint-order: stroke fill;
+  stroke: rgba(0,0,0,.35);
+  stroke-width: 2px;
+}
+
+.qdonut-total{
+  font-size: 34px;
+  font-weight: 850;
+  fill: var(--pub-text, rgba(0,0,0,0.86));
+
+  paint-order: stroke fill;
+  stroke: rgba(255,255,255,0.0);
+  stroke-width: 0;
+}
+
+.qdonut-sub{
+  font-size: 15px;
+  font-weight: 650;
+  fill: color-mix(in srgb, var(--pub-text, rgba(0,0,0,0.86)) 70%, transparent);
+
+  paint-order: stroke fill;
+  stroke: rgba(255,255,255,0.0);
+  stroke-width: 0;
+}
+
+/* Dark mode: improve contrast on slice numbers without adding blur */
+html[data-theme="dark"] .qdonut-count,
+[data-theme="dark"] .qdonut-count,
+.dark .qdonut-count,
+.theme-dark .qdonut-count{
+  stroke: rgba(255,255,255,0.35);
+}
+
+/* Legend inherits theme text */
 .qdonut-legend{
   display: grid;
   gap: 10px;
   align-content: start;
-  color: var(--pc-text);
+  color: var(--pub-text, rgba(0,0,0,0.86));
 }
 
 .qdonut-legend__row{
@@ -87,49 +119,19 @@
   color: inherit;
 }
 
-.qdonut-legend__row span{
-  color: inherit;
-}
+.qdonut-legend__row span{ color: inherit; }
 
 .qdonut-legend__swatch{
   width: 14px;
   height: 14px;
   border-radius: 4px;
   flex: 0 0 auto;
-  border: 1px solid var(--pc-border);
+  border: 1px solid rgba(0,0,0,0.15);
 }
 
-/* =========================
-   SVG text colors
-   ========================= */
-
-/* Slice numbers: white fill + adaptive stroke (not theme text) */
-.qdonut-count{
-  font-size: 18px;
-  font-weight: 800;
-  fill: #fff;
-
-  paint-order: stroke fill;
-  stroke: rgba(0,0,0,.35);
-  stroke-width: 2.5px;
-}
-
-/* Center text: inherit theme text color */
-.qdonut-total{
-  font-size: 34px;
-  font-weight: 900;
-  fill: var(--pc-text);
-}
-
-.qdonut-sub{
-  font-size: 15px;
-  font-weight: 650;
-  fill: color-mix(in srgb, var(--pc-text) 65%, transparent);
-}
-
-/* If your theme sets data-theme="dark", lighten stroke automatically */
-[data-theme="dark"] .qdonut-count,
-html[data-theme="dark"] .qdonut-count,
-body[data-theme="dark"] .qdonut-count{
-  stroke: rgba(255,255,255,.35);
+html[data-theme="dark"] .qdonut-legend__swatch,
+[data-theme="dark"] .qdonut-legend__swatch,
+.dark .qdonut-legend__swatch,
+.theme-dark .qdonut-legend__swatch{
+  border-color: rgba(255,255,255,0.22);
 }
