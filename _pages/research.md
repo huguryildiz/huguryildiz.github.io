@@ -127,9 +127,7 @@ optimization models in wireless sensor networks, intended for students and
 researchers.
 </p>
 
-<section class="research-resource">
-  <h2>Supplementary Resource</h2>
-
+<div class="research-resource">
   <div class="resource-card">
     <div class="resource-icon">📄</div>
 
@@ -140,11 +138,12 @@ researchers.
         communication and sensor networks.
       </p>
 
-      <a class="resource-btn"
-         href="/files/underwater_networks_basics.pdf"
-         target="_blank">
-        View PDF
+      <a href="/files/underwater-basics.pdf"
+         target="_blank"
+         class="resource-btn">
+         View PDF
       </a>
     </div>
   </div>
+</div>
 </section>
