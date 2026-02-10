@@ -117,4 +117,4 @@ Integration of mathematical optimization frameworks with machine learning and re
   👉 [![GitHub Repository](https://img.shields.io/badge/GitHub_Repository-1f77b4?style=flat-square&logo=github&logoColor=white)](https://github.com/huguryildiz/wsn-opt-python)
 
 - **Underwater Networks – Basics:** An introductory document covering core principles of underwater acoustic communication and sensor networks.  
-  👉 [![Course Catalog Page](https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-512)
+  👉 [![Course Catalog Page](https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-512)clus
