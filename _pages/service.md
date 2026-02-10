@@ -52,8 +52,8 @@ author_profile: true
 - IEEE Senior Member (2021 – Present)
 - IEEE Member (2016 – 2021)
 - IEEE Student Member (2013 – 2016)
-- IEEE Oceanic Engineering Society
-- IEEE Communications Society
+- IEEE Oceanic Engineering Society (2021)
+- IEEE Communications Society (2015 – 2018)
 
 ## Seminars and Invited Talks
 
