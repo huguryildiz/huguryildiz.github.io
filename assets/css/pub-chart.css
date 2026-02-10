@@ -11,13 +11,16 @@
 
 /* Theme-driven tokens */
 :root{
-  --pub-text: #222;
-  --pub-border: rgba(0,0,0,.12);
+  --pub-text: var(--text-color, #222);
+  --pub-border: var(--border-color, rgba(0,0,0,.12));
+  --pub-bg: var(--background-color, #fff);
   --pub-card-bg: #fff;
   --pub-shadow: 0 10px 26px rgba(0,0,0,.10);
-  /* Segment label style */
+  /* Segment label style (simit içindeki sayılar için) */
   --pub-seg-fill: #ffffff;
   --pub-seg-stroke: rgba(0,0,0,.45);
+  /* Center text color (merkez yazılar için) */
+  --pub-center-text: #222;
 }
 
 /* Dark theme */
@@ -28,7 +31,7 @@ body[data-theme="dark"]{
   --pub-card-bg: rgba(255,255,255,.08);
   --pub-shadow: 0 14px 34px rgba(0,0,0,.55);
   --pub-border: rgba(255,255,255,.14);
-  --pub-seg-stroke: rgba(255,255,255,.45);
+  --pub-center-text: rgba(255,255,255,.95);
 }
 
 /* Card */
@@ -66,7 +69,7 @@ body[data-theme="dark"]{
   text-rendering: geometricPrecision;
 }
 
-/* Segment counts (inside ring) */
+/* Segment counts (inside ring) - DOKUNMA! */
 .qdonut-count{
   font-size: 18px;
   font-weight: 800;
@@ -77,26 +80,18 @@ body[data-theme="dark"]{
   stroke-linejoin: round;
 }
 
-/* Center texts - AYNI STYLE segment sayıları gibi */
+/* Center texts - tema rengini kullan */
 .qdonut-total{
   font-size: 34px;
   font-weight: 900;
-  fill: var(--pub-seg-fill);
-  paint-order: stroke fill;
-  stroke: var(--pub-seg-stroke);
-  stroke-width: 3px;
-  stroke-linejoin: round;
+  fill: var(--pub-center-text);
 }
 
 .qdonut-sub{
   font-size: 15px;
   font-weight: 700;
-  fill: var(--pub-seg-fill);
-  paint-order: stroke fill;
-  stroke: var(--pub-seg-stroke);
-  stroke-width: 2.5px;
-  stroke-linejoin: round;
-  opacity: .85;
+  fill: var(--pub-center-text);
+  opacity: .70;
 }
 
 /* Donut hole - kartın arka planıyla aynı */
@@ -140,7 +135,7 @@ body[data-theme="dark"]{
     --pub-card-bg: rgba(255,255,255,.08);
     --pub-shadow: 0 14px 34px rgba(0,0,0,.55);
     --pub-border: rgba(255,255,255,.14);
-    --pub-seg-stroke: rgba(255,255,255,.45);
+    --pub-center-text: rgba(255,255,255,.95);
   }
 }
 
@@ -155,5 +150,5 @@ body.theme-dark{
   --pub-card-bg: rgba(255,255,255,.08);
   --pub-shadow: 0 14px 34px rgba(0,0,0,.55);
   --pub-border: rgba(255,255,255,.14);
-  --pub-seg-stroke: rgba(255,255,255,.45);
+  --pub-center-text: rgba(255,255,255,.95);
 }
