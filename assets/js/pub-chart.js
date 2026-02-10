@@ -1,6 +1,15 @@
+/* /assets/js/pub-chart.js
+   - Builds TWO donuts side-by-side:
+     (1) Publication Count (Journals / Conf Int / Conf Nat / Editorial)
+     (2) Journal Quartiles (Q1..Q4 + Unknown) computed from journal list badges
+   - Counts are derived from your publication lists (NOT from .pub-stats tiles).
+*/
 (function () {
+  "use strict";
+
   var svgNS = "http://www.w3.org/2000/svg";
 
+  // ---------- Geometry helpers ----------
   function polarToCartesian(cx, cy, r, angleDeg) {
     var a = (angleDeg - 90) * Math.PI / 180.0;
     return { x: cx + r * Math.cos(a), y: cy + r * Math.sin(a) };
@@ -22,15 +31,20 @@
     ].join(" ");
   }
 
-  // Collect <li> items from heading until next H2/H3
-  function collectLisUntilNextHeading(headingEl) {
-    if (!headingEl) return [];
+  // ---------- DOM helpers ----------
+  function textIncludes(label, needle) {
+    return String(label || "").toLowerCase().indexOf(String(needle || "").toLowerCase()) !== -1;
+  }
+
+  function collectLisUntilNextHeading(headingId) {
+    var h = document.getElementById(headingId);
+    if (!h) return [];
+
     var lis = [];
-    var el = headingEl.nextElementSibling;
+    var el = h.nextElementSibling;
 
     while (el) {
       if (el.tagName === "H2" || el.tagName === "H3") break;
-
       if (el.querySelectorAll) {
         var found = el.querySelectorAll("li");
         for (var i = 0; i < found.length; i++) lis.push(found[i]);
@@ -40,56 +54,84 @@
     return lis;
   }
 
-  // If duplicate IDs exist, pick the one that actually has <li> after it
-  function findHeadingWithLis(id) {
-    var nodes = document.querySelectorAll("#" + CSS.escape(id));
-    if (!nodes || !nodes.length) return null;
-
-    var best = null;
-    var bestCount = -1;
-
-    for (var i = 0; i < nodes.length; i++) {
-      var lis = collectLisUntilNextHeading(nodes[i]);
-      if (lis.length > bestCount) {
-        bestCount = lis.length;
-        best = nodes[i];
-      }
-    }
-    return bestCount > 0 ? best : nodes[0];
+  // Try to extract badge colors from shields images:
+  // e.g. .../badge/...-Q1-gold?... => "gold"
+  // If parsing fails, return null (we fall back to defaults).
+  function parseShieldsColorFromImgSrc(src) {
+    if (!src) return null;
+    // shields pattern: /badge/<label>-<message>-<color>
+    // message may contain '-' so we capture last '-' segment before '?' (or end)
+    var m = String(src).match(/\/badge\/[^/]+-([^/?#]+)(?:\?|$)/i);
+    if (!m) return null;
+    // m[1] is "blue?style=..."? no, due to regex it stops at ?.
+    // But could still contain extra '-' segments depending on label/message.
+    // We want the LAST hyphen-separated token.
+    var token = m[1];
+    var parts = token.split("-");
+    return parts[parts.length - 1] || null;
   }
 
-  function renderDonut(containerId, titleText, subtitleText, items, colorMap) {
+  // Resolve a CSS variable to a computed value (e.g. var(--text-color) -> rgb(...))
+  function cssVarValue(varName, fallback) {
+    try {
+      var v = getComputedStyle(document.documentElement).getPropertyValue(varName);
+      v = (v || "").trim();
+      return v || fallback;
+    } catch (e) {
+      return fallback;
+    }
+  }
+
+  // ---------- Donut renderer ----------
+  function renderDonut(opts) {
+    var containerId = opts.containerId;
+    var titleText   = opts.titleText || "";
+    var subtitleText= opts.subtitleText || "";
+    var items       = opts.items || [];
+    var colorMap    = opts.colorMap || {};
+    var centerLabel = opts.centerLabel || "total";
+
     var chart = document.getElementById(containerId);
-    if (!chart) return;
-    if (!items || !items.length) return;
+    if (!chart || !items.length) return;
 
     var total = 0;
-    for (var i = 0; i < items.length; i++) total += items[i].value;
+    for (var i = 0; i < items.length; i++) total += (items[i].value || 0);
     if (total <= 0) return;
 
     chart.innerHTML = "";
 
+    // Title
     var title = document.createElement("div");
     title.className = "pub-chart__title";
     title.textContent = titleText;
     chart.appendChild(title);
 
+    // Layout container
     var wrap = document.createElement("div");
     wrap.className = "qdonut-wrap";
     chart.appendChild(wrap);
 
-    var size = 240, cx = size / 2, cy = size / 2, rOuter = 92, rInner = 54;
+    // SVG canvas (use integral viewBox for crispness)
+    var size = 260;
+    var cx = size / 2;
+    var cy = size / 2;
+    var rOuter = 98;
+    var rInner = 58;
 
     var svg = document.createElementNS(svgNS, "svg");
     svg.setAttribute("viewBox", "0 0 " + size + " " + size);
     svg.setAttribute("width", "100%");
-    svg.setAttribute("height", "240");
+    svg.setAttribute("height", String(size));
+    svg.setAttribute("shape-rendering", "geometricPrecision");
+    svg.setAttribute("text-rendering", "geometricPrecision");
+    svg.setAttribute("style", "display:block;");
     svg.classList.add("qdonut-svg");
     wrap.appendChild(svg);
 
+    // Slices
     var angle = 0;
     for (var k = 0; k < items.length; k++) {
-      var frac = items[k].value / total;
+      var frac = (items[k].value || 0) / total;
       var sweep = frac * 360;
       var start = angle;
       var end = angle + sweep;
@@ -97,45 +139,55 @@
       var path = document.createElementNS(svgNS, "path");
       path.setAttribute("d", donutPath(cx, cy, rOuter, rInner, start, end));
       path.setAttribute("fill", colorMap[items[k].label] || "#1f77b4");
-      path.setAttribute("opacity", "0.95");
+      path.setAttribute("opacity", "0.96");
       svg.appendChild(path);
 
-      // segment count (skip tiny slices)
+      // Segment counts (skip tiny slices)
       if (sweep >= 18) {
         var mid = (start + end) / 2;
         var rText = (rOuter + rInner) / 2;
         var pt = polarToCartesian(cx, cy, rText, mid);
 
-        var text = document.createElementNS(svgNS, "text");
-        text.setAttribute("x", pt.x);
-        text.setAttribute("y", pt.y);
-        text.setAttribute("text-anchor", "middle");
-        text.setAttribute("dominant-baseline", "middle");
-        text.setAttribute("class", "qdonut-count");
-        text.textContent = String(items[k].value);
-        svg.appendChild(text);
+        var segText = document.createElementNS(svgNS, "text");
+        segText.setAttribute("x", pt.x);
+        segText.setAttribute("y", pt.y);
+        segText.setAttribute("text-anchor", "middle");
+        segText.setAttribute("dominant-baseline", "middle");
+        segText.setAttribute("class", "qdonut-count");
+        segText.textContent = String(items[k].value);
+        svg.appendChild(segText);
       }
 
       angle = end;
     }
 
-    // Center total
-    var centerText = document.createElementNS(svgNS, "text");
-    centerText.setAttribute("x", cx);
-    centerText.setAttribute("y", cy);
-    centerText.setAttribute("text-anchor", "middle");
-    centerText.setAttribute("dominant-baseline", "middle");
-    centerText.setAttribute("class", "qdonut-total");
-    centerText.textContent = String(total);
-    svg.appendChild(centerText);
+    // ---- Inner hole (theme-aware via CSS .qdonut-hole) ----
+    // Put hole ABOVE slices, BELOW texts
+    var hole = document.createElementNS(svgNS, "circle");
+    hole.setAttribute("cx", cx);
+    hole.setAttribute("cy", cy);
+    hole.setAttribute("r", rInner - 1);
+    hole.setAttribute("class", "qdonut-hole");
+    svg.appendChild(hole);
 
+    // Center total
+    var centerTotal = document.createElementNS(svgNS, "text");
+    centerTotal.setAttribute("x", cx);
+    centerTotal.setAttribute("y", cy - 2);
+    centerTotal.setAttribute("text-anchor", "middle");
+    centerTotal.setAttribute("dominant-baseline", "middle");
+    centerTotal.setAttribute("class", "qdonut-total");
+    centerTotal.textContent = String(total);
+    svg.appendChild(centerTotal);
+
+    // Center subtitle
     var centerSub = document.createElementNS(svgNS, "text");
     centerSub.setAttribute("x", cx);
-    centerSub.setAttribute("y", cy + 18);
+    centerSub.setAttribute("y", cy + 22);
     centerSub.setAttribute("text-anchor", "middle");
     centerSub.setAttribute("dominant-baseline", "middle");
     centerSub.setAttribute("class", "qdonut-sub");
-    centerSub.textContent = subtitleText || "";
+    centerSub.textContent = subtitleText || centerLabel;
     svg.appendChild(centerSub);
 
     // Legend
@@ -162,29 +214,37 @@
     chart.style.display = "";
   }
 
+  // ---------- Build Publication Count from lists ----------
   function buildPublicationCountDonutFromLists() {
-    var hJ = findHeadingWithLis("journal-papers");
-    var hE = findHeadingWithLis("editorials");
-    var hCI = findHeadingWithLis("conference-papers-international");
-    var hCN = findHeadingWithLis("conference-papers-national-turkish");
+    // Your section ids:
+    var ids = {
+      journal:  "journal-papers",
+      editorial:"editorials",
+      confInt:  "conference-papers-international",
+      confNat:  "conference-papers-national-turkish"
+    };
 
-    var journalLis = collectLisUntilNextHeading(hJ);
-    var editorialLis = collectLisUntilNextHeading(hE);
-    var confIntLis = collectLisUntilNextHeading(hCI);
-    var confNatLis = collectLisUntilNextHeading(hCN);
+    var journalLis  = collectLisUntilNextHeading(ids.journal);
+    var editorialLis= collectLisUntilNextHeading(ids.editorial);
+    var confIntLis  = collectLisUntilNextHeading(ids.confInt);
+    var confNatLis  = collectLisUntilNextHeading(ids.confNat);
 
     var journal = journalLis.length;
     var editorial = editorialLis.length;
     var confInt = confIntLis.length;
     var confNat = confNatLis.length;
 
+    // If all zero, nothing to render
+    if (journal + editorial + confInt + confNat === 0) return;
+
     var items = [
-      { label: "Journals", value: journal },
+      { label: "Journals",     value: journal },
       { label: "Conf. (Int.)", value: confInt },
       { label: "Conf. (Nat.)", value: confNat },
-      { label: "Editorials", value: editorial }
+      { label: "Editorials",   value: editorial }
     ].filter(function (x) { return x.value > 0; });
 
+    // Defaults (match your current palette)
     var colorMap = {
       "Journals": "#1f77b4",
       "Conf. (Int.)": "#ff7f0e",
@@ -192,21 +252,31 @@
       "Editorials": "#9467bd"
     };
 
-    renderDonut("pubCountDonut", "Publication Count", "total", items, colorMap);
+    renderDonut({
+      containerId: "pubCountDonut",
+      titleText: "Publication Count",
+      subtitleText: "total",
+      items: items,
+      colorMap: colorMap,
+      centerLabel: "total"
+    });
   }
 
-  function buildJournalQDonut() {
-    var h = findHeadingWithLis("journal-papers");
-    var lis = collectLisUntilNextHeading(h);
+  // ---------- Build Journal Quartiles donut from badges inside Journal list ----------
+  function buildJournalQDonutFromBadges() {
+    var journalHeadingId = "journal-papers";
+    var lis = collectLisUntilNextHeading(journalHeadingId);
     if (!lis.length) return;
 
     var counts = { Q1: 0, Q2: 0, Q3: 0, Q4: 0, Unknown: 0 };
 
     for (var i = 0; i < lis.length; i++) {
-      // Your Q badge images: alt="Q1" etc.
+      // Your badge markdown creates: <img alt="Q1" ...>
       var qImgs = lis[i].querySelectorAll('img[alt^="Q"]');
-      if (!qImgs || !qImgs.length) { counts.Unknown++; continue; }
-
+      if (!qImgs || !qImgs.length) {
+        counts.Unknown++;
+        continue;
+      }
       var q = (qImgs[0].getAttribute("alt") || "").trim().toUpperCase();
       if (counts.hasOwnProperty(q)) counts[q]++;
       else counts.Unknown++;
@@ -220,20 +290,67 @@
     }
     if (!items.length) return;
 
+    // Try to match badge colors by parsing one example src (optional),
+    // otherwise fall back to the palette you’ve been using.
+    var fallback = { Q1: "#d4af37", Q2: "#2ca02c", Q3: "#ff7f0e", Q4: "#9467bd", Unknown: "#7f7f7f" };
     var colorMap = {
-      Q1: "#d4af37",
-      Q2: "#2ca02c",
-      Q3: "#ff7f0e",
-      Q4: "#9467bd",
-      Unknown: "#7f7f7f"
+      Q1: fallback.Q1,
+      Q2: fallback.Q2,
+      Q3: fallback.Q3,
+      Q4: fallback.Q4,
+      Unknown: fallback.Unknown
     };
 
-    renderDonut("journalQDonut", "Journal Quartiles (Q)", "journals", items, colorMap);
+    // Optional: detect your Q badge colors from first occurrence
+    // (If shields uses "gold"/"green"/"orange" this will still end up as CSS named colors)
+    for (var j = 0; j < lis.length; j++) {
+      var imgs = lis[j].querySelectorAll('img[alt^="Q"]');
+      if (!imgs || !imgs.length) continue;
+
+      var alt = (imgs[0].getAttribute("alt") || "").trim().toUpperCase();
+      var src = imgs[0].getAttribute("src") || "";
+      var c = parseShieldsColorFromImgSrc(src);
+      if (alt && c && colorMap[alt]) {
+        // Only override if parse seems meaningful
+        colorMap[alt] = c;
+      }
+    }
+
+    renderDonut({
+      containerId: "journalQDonut",
+      titleText: "Journal Quartiles (Q)",
+      subtitleText: "journals",
+      items: items,
+      colorMap: colorMap,
+      centerLabel: "journals"
+    });
   }
 
+  // ---------- Init ----------
   function init() {
+    // Ensure the containers exist before rendering
     buildPublicationCountDonutFromLists();
-    buildJournalQDonut();
+    buildJournalQDonutFromBadges();
+
+    // If your theme toggles dark/light by changing data-theme after load,
+    // you can re-render to ensure hole/text stays consistent:
+    // (Optional) watch attribute changes on <html>
+    try {
+      var html = document.documentElement;
+      var obs = new MutationObserver(function (mutations) {
+        for (var i = 0; i < mutations.length; i++) {
+          if (mutations[i].type === "attributes" && mutations[i].attributeName === "data-theme") {
+            // re-render
+            buildPublicationCountDonutFromLists();
+            buildJournalQDonutFromBadges();
+            break;
+          }
+        }
+      });
+      obs.observe(html, { attributes: true });
+    } catch (e) {
+      // ignore
+    }
   }
 
   if (document.readyState === "loading") {
