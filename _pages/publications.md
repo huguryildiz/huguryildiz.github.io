@@ -83,13 +83,14 @@ author_profile: true
 <div id="pubCount" style="margin: 10px 0; font-style: italic; color: var(--text-color, #666);"></div>
 
 
-
+<!-- 
 ## Quick Links
 [Journal Papers](#journal-papers){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
 [Editorials](#editorials){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
 [Conf. Papers (Int.)](#conference-papers-international){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
 [Conf. Papers (Nat.)](#conference-papers-national-turkish){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
 
+-->
 ## Journal Papers
 {: #journal-papers}
 
