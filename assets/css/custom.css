@@ -119,3 +119,58 @@ details[open] {
 .page__content ul li {
   margin-bottom: 0.35rem;
 }
+
+/* ================================
+   Research – Supplementary Resource
+   ================================ */
+
+.research-resource {
+  margin-top: 40px;
+}
+
+.resource-card {
+  display: flex;
+  gap: 16px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  border: 1px solid var(--pub-border, rgba(0,0,0,.12));
+  background: var(--pub-card-bg, #fff);
+  box-shadow: 0 10px 26px rgba(0,0,0,.08);
+}
+
+.resource-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.resource-content h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.resource-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--pub-muted, #555);
+}
+
+.resource-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 12px;
+  background: #007ec7;
+  color: #fff !important;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Dark mode uyumu */
+[data-theme="dark"] .resource-card,
+html.dark .resource-card,
+body.dark .resource-card {
+  background: rgba(255,255,255,.06);
+  border-color: rgba(255,255,255,.14);
+}
