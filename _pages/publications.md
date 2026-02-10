@@ -42,6 +42,8 @@ author_profile: true
 </p>
 -->
 
+## Metrics
+
 <!-- Auto-generated publication count and journal Q distribution charts -->
 {::nomarkdown}
 <link rel="stylesheet" href="{{ '/assets/css/pub-chart.css' | relative_url }}">
@@ -55,33 +57,40 @@ author_profile: true
 </div>
 {:/nomarkdown}
 
-## Filter
+## Publications
 
-<div class="pub-filter" style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin: 10px 0 18px 0;">
-  <label style="display:flex; gap:8px; align-items:center; color: var(--pub-text);">
-    <span style="min-width:42px;">Type</span>
-    <select id="pubType" style="padding:6px 8px; background: var(--pub-card-bg); color: var(--pub-text); border: 1px solid var(--pub-border);">
-      <option value="all">All</option>
-      <option value="journal">Journal</option>
-      <option value="editorial">Editorial</option>
-      <option value="conf-int">Conference (International)</option>
-      <option value="conf-nat">Conference (National)</option>
-    </select>
-  </label>
+{::nomarkdown}
+<div class="pub-filter-sticky">
+  <div class="pub-filter-header">
+    <h3 class="pub-filter-title">Filter Publications</h3>
+  </div>
+  
+  <div class="pub-filter">
+    <label class="pub-filter-label">
+      <span class="pub-filter-label-text">Type</span>
+      <select id="pubType" class="pub-filter-select">
+        <option value="all">All</option>
+        <option value="journal">Journal</option>
+        <option value="editorial">Editorial</option>
+        <option value="conf-int">Conference (International)</option>
+        <option value="conf-nat">Conference (National)</option>
+      </select>
+    </label>
 
-  <label style="display:flex; gap:8px; align-items:center; color: var(--pub-text);">
-    <span style="min-width:42px;">Year</span>
-    <select id="pubYear" style="padding:6px 8px; background: var(--pub-card-bg); color: var(--pub-text); border: 1px solid var(--pub-border);">
-      <option value="all">All</option>
-    </select>
-  </label>
+    <label class="pub-filter-label">
+      <span class="pub-filter-label-text">Year</span>
+      <select id="pubYear" class="pub-filter-select">
+        <option value="all">All</option>
+      </select>
+    </label>
 
-  <button id="pubApply" class="btn btn--small btn--primary" type="button">Apply</button>
-  <button id="pubReset" class="btn btn--small" type="button">Reset</button>
+    <button id="pubApply" class="btn btn--small btn--primary" type="button">Apply</button>
+    <button id="pubReset" class="btn btn--small" type="button">Reset</button>
+  </div>
+
+  <div id="pubCount" class="pub-count-text"></div>
 </div>
-
-<div id="pubCount" style="margin: 10px 0; font-style: italic; color: var(--pub-text);"></div>
-
+{:/nomarkdown}
 
 <!-- 
 ## Quick Links
@@ -91,7 +100,7 @@ author_profile: true
 [Conf. Papers (Nat.)](#conference-papers-national-turkish){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
 
 -->
-## Journal Papers
+### Journal Papers
 {: #journal-papers}
 
 - Karagul, C. T., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025). *Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity*. *IEEE Internet of Things Journal, 12*(22), 47817–47826.  
@@ -167,14 +176,14 @@ author_profile: true
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2014_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JSEN.2014.2359156)
 
 
-## Editorials
+### Editorials
 {: #editorials}
 
 - Haytaoglu, E., Arslan, S. S., Dagdeviren, O., **Yildiz, H. U.**, & Ozturk, Y. (2025). *Editorial brief for special issue: Mass connectivity and/or communication paradigms for the internet of things*. *Internet of Things, 32*, 101625.  
 ![Editorial](https://img.shields.io/badge/Type-Editorial-purple?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2025_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1016/j.iot.2025.101625)
 
 
-## Conference Papers (International)
+### Conference Papers (International)
 {: #conference-papers-international}
 
 - Karagul, C. T., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025, November). *Non-uniform k-connectivity for energy-efficient and reliable underwater wireless sensor networks*. In *2025 33rd Telecommunications Forum (TELFOR)* (pp. 1–4). IEEE.  
@@ -220,7 +229,7 @@ author_profile: true
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/WiSNet.2014.6825515) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16xQgqR0IGGUlx-9fmwTTnk1srKBS-9_w/view?usp=sharing)  
 
 
-## Conference Papers (National - in Turkish)
+### Conference Papers (National - in Turkish)
 {: #conference-papers-national-turkish}
 
 - **Yildiz, H. U.** (2019, April). *Improvement of underwater acoustic sensor networks performance with fountain codes*. In *2019 27th SIU* (pp. 1–4). IEEE.  

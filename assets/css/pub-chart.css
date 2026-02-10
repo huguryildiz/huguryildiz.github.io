@@ -217,3 +217,100 @@ html.theme-dark, body.theme-dark{
   fill: #fff !important;
   stroke: rgba(0,0,0,.45) !important;
 }
+
+/* ===================================
+   STICKY FILTER
+   =================================== */
+.pub-filter-sticky{
+  position: sticky;
+  top: 60px;
+  z-index: 100;
+  background: var(--pub-card-bg);
+  padding: 16px;
+  border: 1px solid var(--pub-border);
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: var(--pub-shadow);
+  transition: box-shadow 0.2s ease;
+}
+
+/* Scroll edildiğinde shadow arttır */
+.pub-filter-sticky.scrolled{
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+
+[data-theme="dark"] .pub-filter-sticky.scrolled,
+html[data-theme="dark"] .pub-filter-sticky.scrolled,
+body[data-theme="dark"] .pub-filter-sticky.scrolled{
+  box-shadow: 0 4px 16px rgba(0,0,0,.45);
+}
+
+.pub-filter-header{
+  border-bottom: 1px solid var(--pub-border);
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+.pub-filter-title{
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--pub-text);
+}
+
+.pub-filter{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.pub-filter-label{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--pub-text);
+}
+
+.pub-filter-label-text{
+  min-width: 42px;
+  color: var(--pub-text);
+}
+
+.pub-filter-select{
+  padding: 6px 8px;
+  background: var(--pub-card-bg);
+  color: var(--pub-text);
+  border: 1px solid var(--pub-border);
+  border-radius: 4px;
+}
+
+.pub-count-text{
+  margin: 10px 0 0 0;
+  font-style: italic;
+  color: var(--pub-text);
+  font-size: 0.9rem;
+}
+
+/* Mobilde sticky davranışını koru ama daha kompakt */
+@media (max-width: 768px){
+  .pub-filter-sticky{
+    top: 48px;
+    padding: 12px;
+    margin: 15px 0;
+  }
+  
+  .pub-filter{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .pub-filter-label{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .pub-filter-select{
+    width: 100%;
+  }
+}
