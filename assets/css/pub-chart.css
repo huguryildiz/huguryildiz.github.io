@@ -147,3 +147,41 @@ body.theme-dark{
   --pub-shadow: 0 14px 34px rgba(0,0,0,.55);
   --pub-border: rgba(255,255,255,.14);
 }
+
+/* 1) SVG text’in rengi: currentColor’ın kaynağını kesinleştir */
+.pub-chart,
+.pub-chart *{
+  color: inherit;
+}
+
+/* svg’nin kendisine de color ver (seninki var ama daha güçlü yapıyoruz) */
+.pub-chart svg{
+  color: var(--pub-text);
+}
+
+/* center text kesinlikle pub-text alsın (light mode’da beyaza kaçmayı bitirir) */
+.pub-chart .qdonut-total,
+.pub-chart .qdonut-sub{
+  fill: var(--pub-text);
+}
+
+/* (isteğe bağlı) dark mode’da biraz daha soluk alt yazı */
+[data-theme="dark"] .pub-chart .qdonut-sub{
+  opacity: .75;
+}
+
+/* 2) Legend: tema rengi ile inherit etsin, beyaza sabitlenmesin */
+.pub-chart .qdonut-legend{
+  color: var(--pub-text);
+}
+
+.pub-chart .qdonut-legend__row{
+  color: inherit;         /* var(--pub-text) yerine inherit */
+}
+
+.pub-chart .qdonut-legend__row span{
+  color: inherit;         /* hardcoded kaldır */
+}
+
+/* Eğer legend text’i JS ile "txt.textContent" olarak ekleniyorsa span yok;
+   yine de row inherit ile düzelir. */
