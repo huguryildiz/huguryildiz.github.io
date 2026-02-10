@@ -187,3 +187,39 @@ body.theme-dark{
   fill: var(--pub-seg-fill) !important;
   stroke: var(--pub-seg-stroke) !important;
 }
+
+/* =========================
+   HARD FIX (put at END)
+   - Always inherit text color from the theme (light/dark)
+   - Prevent "white text in light mode"
+   ========================= */
+
+.pub-chart{
+  /* theme ne veriyorsa onu kullan */
+  color: inherit !important;
+}
+
+/* Title + legend always inherit (no variables) */
+.pub-chart__title,
+.pub-chart .qdonut-legend,
+.pub-chart .qdonut-legend__row,
+.pub-chart .qdonut-legend__row span{
+  color: inherit !important;
+}
+
+/* SVG: currentColor zinciri kesin */
+.pub-chart svg{
+  color: inherit !important;
+}
+
+/* Center texts: always use currentColor */
+.pub-chart .qdonut-total,
+.pub-chart .qdonut-sub{
+  fill: currentColor !important;
+}
+
+/* Segment numbers stay white (as you wanted) */
+.pub-chart .qdonut-count{
+  fill: #fff !important;
+  stroke: rgba(0,0,0,.45) !important;
+}
