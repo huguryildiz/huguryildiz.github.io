@@ -85,3 +85,36 @@
   border-radius: 4px;
   flex: 0 0 auto;
 }
+
+/* =========================
+   Dark mode support
+   ========================= */
+
+[data-theme="dark"] .pub-chart {
+  background: #1f1f1f;
+  border-color: #2c2c2c;
+}
+
+[data-theme="dark"] .pub-chart__title {
+  color: #f0f0f0;
+}
+
+[data-theme="dark"] .qdonut-total,
+[data-theme="dark"] .qdonut-sub,
+[data-theme="dark"] .qdonut-count {
+  fill: #f5f5f5;
+  color: #f5f5f5;
+}
+
+[data-theme="dark"] .qdonut-legend__row {
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .qdonut-legend__swatch {
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.25);
+}
+
+/* optional: soften card shadow in dark mode */
+[data-theme="dark"] .pub-chart {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
