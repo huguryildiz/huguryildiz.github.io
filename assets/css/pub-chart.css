@@ -122,3 +122,47 @@ body[data-theme="dark"]{
   flex: 0 0 auto;
   border: 1px solid var(--pub-border);
 }
+
+/* =========================
+   Dark mode detection fallback
+   (theme may NOT use data-theme)
+   ========================= */
+
+@media (prefers-color-scheme: dark) {
+  .pub-chart{
+    /* theme var yoksa bile sayfa ile uyumlu koyu kart */
+    background: rgba(0,0,0,.28);
+    border-color: rgba(255,255,255,.14);
+    box-shadow: 0 14px 34px rgba(0,0,0,.55);
+    color: inherit;
+  }
+
+  /* donut hole must match card bg */
+  .qdonut-hole{ fill: rgba(0,0,0,.28); }
+}
+
+/* If your theme uses a class-based toggle, catch common ones */
+html.dark .pub-chart,
+body.dark .pub-chart,
+html.dark-mode .pub-chart,
+body.dark-mode .pub-chart,
+html.theme-dark .pub-chart,
+body.theme-dark .pub-chart,
+html[data-theme="dark"] .pub-chart,
+body[data-theme="dark"] .pub-chart{
+  background: rgba(0,0,0,.28);
+  border-color: rgba(255,255,255,.14);
+  box-shadow: 0 14px 34px rgba(0,0,0,.55);
+  color: inherit;
+}
+
+html.dark .qdonut-hole,
+body.dark .qdonut-hole,
+html.dark-mode .qdonut-hole,
+body.dark-mode .qdonut-hole,
+html.theme-dark .qdonut-hole,
+body.theme-dark .qdonut-hole,
+html[data-theme="dark"] .qdonut-hole,
+body[data-theme="dark"] .qdonut-hole{
+  fill: rgba(0,0,0,.28);
+}
