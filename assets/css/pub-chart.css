@@ -1,11 +1,14 @@
 /* =========================================================
    Publication Donut Charts (pub-chart.css)
    - Theme-aware (light/dark)
-   - Center text + legend always use theme text color
-   - Segment numbers stay white with dark stroke (like light mode)
+   - Center text + legend always follow theme text color
+   - Segment numbers stay white with dark stroke
+   - Legend below donut
    ========================================================= */
 
-/* 2-column wrapper */
+/* -------------------------
+   2-column wrapper
+-------------------------- */
 .pub-donuts-2col{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -17,81 +20,81 @@
   .pub-donuts-2col{ grid-template-columns: 1fr; }
 }
 
-/* Theme-driven tokens (defaults = light) */
+/* -------------------------
+   Theme tokens (defaults = light)
+   Not: var(--text-color) / var(--border-color) varsa onları da kullanır.
+-------------------------- */
 :root{
-  --pub-text: #222;
-  --pub-border: rgba(0,0,0,.12);
+  --pub-text: var(--text-color, #222);
+  --pub-border: var(--border-color, rgba(0,0,0,.12));
   --pub-card-bg: #fff;
   --pub-shadow: 0 10px 26px rgba(0,0,0,.10);
 
-  /* Segment label style (numbers on the ring) */
-  --pub-seg-fill: #ffffff;          /* keep white numbers */
-  --pub-seg-stroke: rgba(0,0,0,.45);/* black-ish outline (same in dark) */
+  /* Numbers on ring segments */
+  --pub-seg-fill: #fff;
+  --pub-seg-stroke: rgba(0,0,0,.45);
 }
 
-/* Dark theme (supports data-theme on html/body/any parent) */
-[data-theme="dark"],
+/* Dark theme (data-theme) */
 html[data-theme="dark"],
-body[data-theme="dark"]{
-  --pub-text: rgba(255,255,255,.95);
+body[data-theme="dark"],
+[data-theme="dark"]{
+  --pub-text: var(--text-color, rgba(255,255,255,.95));
+  --pub-border: var(--border-color, rgba(255,255,255,.14));
   --pub-card-bg: rgba(255,255,255,.08);
   --pub-shadow: 0 14px 34px rgba(0,0,0,.55);
-  --pub-border: rgba(255,255,255,.14);
 }
 
-/* Dark mode detection fallback (OS-level) */
+/* OS-level dark fallback */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]){
-    --pub-text: rgba(255,255,255,.95);
+    --pub-text: var(--text-color, rgba(255,255,255,.95));
+    --pub-border: var(--border-color, rgba(255,255,255,.14));
     --pub-card-bg: rgba(255,255,255,.08);
     --pub-shadow: 0 14px 34px rgba(0,0,0,.55);
-    --pub-border: rgba(255,255,255,.14);
   }
 }
 
-/* Class-based dark mode support (extra fallbacks) */
-html.dark,
-body.dark,
-html.dark-mode,
-body.dark-mode,
-html.theme-dark,
-body.theme-dark{
-  --pub-text: rgba(255,255,255,.95);
+/* Extra class-based fallbacks */
+html.dark, body.dark,
+html.dark-mode, body.dark-mode,
+html.theme-dark, body.theme-dark{
+  --pub-text: var(--text-color, rgba(255,255,255,.95));
+  --pub-border: var(--border-color, rgba(255,255,255,.14));
   --pub-card-bg: rgba(255,255,255,.08);
   --pub-shadow: 0 14px 34px rgba(0,0,0,.55);
-  --pub-border: rgba(255,255,255,.14);
 }
 
-/* Card */
+/* -------------------------
+   Card
+-------------------------- */
 .pub-chart{
   padding: 14px;
   border: 1px solid var(--pub-border);
   border-radius: 14px;
   background: var(--pub-card-bg);
   box-shadow: var(--pub-shadow);
-  color: var(--pub-text);
+  color: var(--pub-text); /* <-- the single source of truth */
 }
 
-/* Title */
 .pub-chart__title{
   font-size: 1.05rem;
   font-weight: 800;
   margin: 0 0 10px 0;
-  color: var(--pub-text);
+  color: inherit;
 }
 
-/* Inside layout */
+/* -------------------------
+   Layout inside chart
+   (Legend below donut)
+-------------------------- */
 .qdonut-wrap{
   display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 16px;
-  align-items: center;
-}
-@media (max-width: 640px){
-  .qdonut-wrap{ grid-template-columns: 1fr; }
+  grid-template-columns: 1fr;   /* donut üstte, legend altta */
+  gap: 14px;
+  align-items: start;
 }
 
-/* SVG */
 .qdonut-svg{
   max-width: 260px;
   margin: 0 auto;
@@ -101,12 +104,18 @@ body.theme-dark{
   text-rendering: geometricPrecision;
 }
 
+/* -------------------------
+   SVG text color chain
+   Make currentColor = theme text
+-------------------------- */
+.pub-chart svg{
+  color: inherit; /* currentColor comes from card text */
+}
+
 /* Ring segment counts (numbers on slices) */
 .qdonut-count{
   font-size: 18px;
   font-weight: 800;
-
-  /* KEEP THESE (requested) */
   fill: var(--pub-seg-fill);
   paint-order: stroke fill;
   stroke: var(--pub-seg-stroke);
@@ -132,24 +141,30 @@ body.theme-dark{
   fill: var(--pub-card-bg);
 }
 
-/* Legend */
+/* -------------------------
+   Legend (below)
+-------------------------- */
 .qdonut-legend{
   display: grid;
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px 18px;
   align-content: start;
-  color: var(--pub-text);
+  color: inherit;
 }
+
 .qdonut-legend__row{
   display: flex;
   align-items: center;
   gap: 10px;
   font-size: 18px;
   font-weight: 650;
-  color: var(--pub-text);
+  color: inherit;
 }
+
 .qdonut-legend__row span{
   color: inherit;
 }
+
 .qdonut-legend__swatch{
   width: 14px;
   height: 14px;
@@ -158,68 +173,11 @@ body.theme-dark{
   border: 1px solid var(--pub-border);
 }
 
-/* =========================================================
-   FORCE FIX (KEEP AT END)
-   - Fixes center text/legend turning white in light mode
-   - Keeps segment counts white
-   ========================================================= */
-
-/* Make sure SVG currentColor comes from theme text */
-.pub-chart svg{
-  color: var(--pub-text) !important;
-}
-
-/* Center text must always be theme color */
-.pub-chart .qdonut-total,
-.pub-chart .qdonut-sub{
-  fill: var(--pub-text) !important;
-}
-
-/* Legend must always be theme color */
-.pub-chart .qdonut-legend,
-.pub-chart .qdonut-legend__row,
-.pub-chart .qdonut-legend__row span{
-  color: var(--pub-text) !important;
-}
-
-/* Keep segment numbers white with outline */
-.pub-chart .qdonut-count{
-  fill: var(--pub-seg-fill) !important;
-  stroke: var(--pub-seg-stroke) !important;
-}
-
-/* =========================
-   HARD FIX (put at END)
-   - Always inherit text color from the theme (light/dark)
-   - Prevent "white text in light mode"
-   ========================= */
-
-.pub-chart{
-  /* theme ne veriyorsa onu kullan */
-  color: inherit !important;
-}
-
-/* Title + legend always inherit (no variables) */
-.pub-chart__title,
-.pub-chart .qdonut-legend,
-.pub-chart .qdonut-legend__row,
-.pub-chart .qdonut-legend__row span{
-  color: inherit !important;
-}
-
-/* SVG: currentColor zinciri kesin */
-.pub-chart svg{
-  color: inherit !important;
-}
-
-/* Center texts: always use currentColor */
-.pub-chart .qdonut-total,
-.pub-chart .qdonut-sub{
-  fill: currentColor !important;
-}
-
-/* Segment numbers stay white (as you wanted) */
-.pub-chart .qdonut-count{
-  fill: #fff !important;
-  stroke: rgba(0,0,0,.45) !important;
+/* -------------------------
+   Mobile tweaks
+-------------------------- */
+@media (max-width: 640px){
+  .qdonut-legend{
+    grid-template-columns: 1fr;
+  }
 }
