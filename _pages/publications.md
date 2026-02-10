@@ -68,10 +68,10 @@ author_profile: true
       <span class="pub-filter-label-text">Type</span>
       <select id="pubType" class="pub-filter-select">
         <option value="all">All</option>
-        <option value="journal">Journal</option>
+        <option value="journal">Journal Articles</option>
         <option value="editorial">Editorial</option>
-        <option value="conf-int">Conference (International)</option>
-        <option value="conf-nat">Conference (National)</option>
+        <option value="conf-int">Conf. Papers (Intl.)</option>
+        <option value="conf-nat">Conf. Papers (Nat.)</option>
       </select>
     </label>
 
