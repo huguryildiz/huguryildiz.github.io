@@ -11,16 +11,13 @@
 
 /* Theme-driven tokens */
 :root{
-  --pub-text: var(--text-color, #222);
-  --pub-border: var(--border-color, rgba(0,0,0,.12));
-  --pub-bg: var(--background-color, #fff);
+  --pub-text: #222;
+  --pub-border: rgba(0,0,0,.12);
   --pub-card-bg: #fff;
   --pub-shadow: 0 10px 26px rgba(0,0,0,.10);
   /* Segment label style (simit içindeki sayılar için) */
   --pub-seg-fill: #ffffff;
   --pub-seg-stroke: rgba(0,0,0,.45);
-  /* Center text color (merkez yazılar için) */
-  --pub-center-text: #222;
 }
 
 /* Dark theme */
@@ -31,7 +28,6 @@ body[data-theme="dark"]{
   --pub-card-bg: rgba(255,255,255,.08);
   --pub-shadow: 0 14px 34px rgba(0,0,0,.55);
   --pub-border: rgba(255,255,255,.14);
-  --pub-center-text: rgba(255,255,255,.95);
 }
 
 /* Card */
@@ -48,7 +44,7 @@ body[data-theme="dark"]{
   font-size: 1.05rem;
   font-weight: 800;
   margin: 0 0 10px 0;
-  color: inherit;
+  color: var(--pub-text);
 }
 
 /* Layout inside chart */
@@ -67,6 +63,7 @@ body[data-theme="dark"]{
   margin: 0 auto;
   shape-rendering: geometricPrecision;
   text-rendering: geometricPrecision;
+  color: var(--pub-text); /* SVG için color tanımla */
 }
 
 /* Segment counts (inside ring) - DOKUNMA! */
@@ -80,17 +77,17 @@ body[data-theme="dark"]{
   stroke-linejoin: round;
 }
 
-/* Center texts - tema rengini kullan */
+/* Center texts - currentColor SVG'nin color'unu alır */
 .qdonut-total{
   font-size: 34px;
   font-weight: 900;
-  fill: var(--pub-center-text);
+  fill: currentColor;
 }
 
 .qdonut-sub{
   font-size: 15px;
   font-weight: 700;
-  fill: var(--pub-center-text);
+  fill: currentColor;
   opacity: .70;
 }
 
@@ -104,7 +101,7 @@ body[data-theme="dark"]{
   display: grid;
   gap: 10px;
   align-content: start;
-  color: inherit;
+  color: var(--pub-text);
 }
 
 .qdonut-legend__row{
@@ -113,11 +110,11 @@ body[data-theme="dark"]{
   gap: 10px;
   font-size: 18px;
   font-weight: 650;
-  color: inherit;
+  color: var(--pub-text);
 }
 
 .qdonut-legend__row span{
-  color: inherit;
+  color: var(--pub-text);
 }
 
 .qdonut-legend__swatch{
@@ -135,7 +132,6 @@ body[data-theme="dark"]{
     --pub-card-bg: rgba(255,255,255,.08);
     --pub-shadow: 0 14px 34px rgba(0,0,0,.55);
     --pub-border: rgba(255,255,255,.14);
-    --pub-center-text: rgba(255,255,255,.95);
   }
 }
 
@@ -150,5 +146,4 @@ body.theme-dark{
   --pub-card-bg: rgba(255,255,255,.08);
   --pub-shadow: 0 14px 34px rgba(0,0,0,.55);
   --pub-border: rgba(255,255,255,.14);
-  --pub-center-text: rgba(255,255,255,.95);
 }
