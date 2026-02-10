@@ -1,66 +1,65 @@
 /* =========================================================
-   pub-chart.css (FULL)
-   - Donut cards + theme tokens
+   pub-chart.css  (FULL)
+   - Fix: light mode text turning white (prefers-color-scheme trap removed)
+   - Donut center text + legend always readable
    - Legend below donut
-   - Sticky Filter panel (no overlap)
-   - Light/Dark compatible inputs and text
+   - Sticky filter card that doesn't overlap / collide
    ========================================================= */
 
-/* -------------------------
-   Theme tokens
-------------------------- */
+
+/* =========================
+   0) THEME TOKENS (LIGHT DEFAULT)
+   ========================= */
 :root{
   --pub-text: #222;
-  --pub-muted: rgba(0,0,0,.60);
-  --pub-border: rgba(0,0,0,.14);
+  --pub-muted: rgba(0,0,0,.68);
+
+  --pub-border: rgba(0,0,0,.12);
   --pub-card-bg: #fff;
   --pub-shadow: 0 10px 26px rgba(0,0,0,.10);
 
-  /* Donut segment label */
-  --pub-seg-fill: #fff;
+  /* segment numbers on ring */
+  --pub-seg-fill: #ffffff;
   --pub-seg-stroke: rgba(0,0,0,.45);
 
-  /* Accent: DOI Available blue-ish */
-  --pub-accent: #2f6fbd;
-  --pub-accent-hover: #2a62a8;
-  --pub-accent-soft: rgba(47,111,189,.12);
-
-  /* Sticky offset (MM theme header varsa rahatlatır) */
-  --pub-sticky-top: 14px;
+  /* form controls */
+  --pub-input-bg: #fff;
+  --pub-input-text: #222;
+  --pub-input-border: rgba(0,0,0,.18);
+  --pub-focus: rgba(31,119,180,.35);
 }
 
-/* Dark theme switches */
+/* Dark theme (Minimal Mistakes / your toggles) */
 [data-theme="dark"],
 html[data-theme="dark"],
 body[data-theme="dark"],
-html.dark, body.dark,
-html.dark-mode, body.dark-mode,
-html.theme-dark, body.theme-dark{
+html.dark,
+body.dark,
+html.dark-mode,
+body.dark-mode,
+html.theme-dark,
+body.theme-dark{
   --pub-text: rgba(255,255,255,.95);
-  --pub-muted: rgba(255,255,255,.70);
+  --pub-muted: rgba(255,255,255,.72);
+
   --pub-card-bg: rgba(255,255,255,.08);
   --pub-shadow: 0 14px 34px rgba(0,0,0,.55);
   --pub-border: rgba(255,255,255,.14);
 
-  /* select background in dark */
-  --pub-select-bg: rgba(255,255,255,.10);
-  --pub-select-border: rgba(255,255,255,.18);
+  --pub-input-bg: rgba(255,255,255,.10);
+  --pub-input-text: rgba(255,255,255,.95);
+  --pub-input-border: rgba(255,255,255,.22);
+  --pub-focus: rgba(255,255,255,.18);
 }
 
-/* OS fallback */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]){
-    --pub-text: rgba(255,255,255,.95);
-    --pub-muted: rgba(255,255,255,.70);
-    --pub-card-bg: rgba(255,255,255,.08);
-    --pub-shadow: 0 14px 34px rgba(0,0,0,.55);
-    --pub-border: rgba(255,255,255,.14);
-  }
-}
+/* IMPORTANT:
+   prefers-color-scheme fallback REMOVED on purpose.
+   Because it can override your "light" UI when OS is dark. */
 
-/* -------------------------
-   Donut grid wrapper
-------------------------- */
+
+/* =========================
+   1) METRICS LAYOUT (2 CARDS)
+   ========================= */
 .pub-donuts-2col{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -72,9 +71,10 @@ html.theme-dark, body.theme-dark{
   .pub-donuts-2col{ grid-template-columns: 1fr; }
 }
 
-/* -------------------------
-   Card (donut container)
-------------------------- */
+
+/* =========================
+   2) DONUT CARD
+   ========================= */
 .pub-chart{
   padding: 14px;
   border: 1px solid var(--pub-border);
@@ -91,38 +91,27 @@ html.theme-dark, body.theme-dark{
   color: var(--pub-text);
 }
 
-/* -------------------------
-   Donut layout: legend below
-------------------------- */
+/* donut + legend now stacked (legend below) */
 .qdonut-wrap{
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr;     /* <- legend below */
   gap: 14px;
-  align-items: center;
+  align-items: start;
 }
 
+/* SVG */
 .qdonut-svg{
-  max-width: 260px;
+  width: 100%;
+  max-width: 320px;
   margin: 0 auto;
   shape-rendering: geometricPrecision;
   text-rendering: geometricPrecision;
+
+  /* Make currentColor reliable for SVG text */
   color: var(--pub-text);
 }
 
-.qdonut-hole{ fill: var(--pub-card-bg); }
-
-.qdonut-total{
-  font-size: 34px;
-  font-weight: 900;
-  fill: currentColor;
-}
-.qdonut-sub{
-  font-size: 15px;
-  font-weight: 700;
-  fill: currentColor;
-  opacity: .72;
-}
-
+/* Ring segment counts (numbers on slices) */
 .qdonut-count{
   font-size: 18px;
   font-weight: 800;
@@ -133,11 +122,29 @@ html.theme-dark, body.theme-dark{
   stroke-linejoin: round;
 }
 
-/* Legend below donut */
+/* Center texts */
+.qdonut-total{
+  font-size: 34px;
+  font-weight: 900;
+  fill: currentColor;            /* uses svg color */
+}
+.qdonut-sub{
+  font-size: 15px;
+  font-weight: 700;
+  fill: currentColor;
+  opacity: .70;
+}
+
+/* Hole color */
+.qdonut-hole{
+  fill: var(--pub-card-bg);
+}
+
+/* Legend (grid so it wraps nicely) */
 .qdonut-legend{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 12px 18px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px 18px;
   align-content: start;
   color: var(--pub-text);
 }
@@ -149,8 +156,9 @@ html.theme-dark, body.theme-dark{
   font-size: 18px;
   font-weight: 650;
   color: inherit;
-  line-height: 1.2;
 }
+
+.qdonut-legend__row span{ color: inherit; }
 
 .qdonut-legend__swatch{
   width: 14px;
@@ -160,167 +168,110 @@ html.theme-dark, body.theme-dark{
   border: 1px solid var(--pub-border);
 }
 
-/* Force text colors (SVG + legend) */
+/* FORCE: ensure center + legend never “white in light mode” */
 .pub-chart svg{ color: var(--pub-text) !important; }
 .pub-chart .qdonut-total,
 .pub-chart .qdonut-sub{ fill: var(--pub-text) !important; }
 .pub-chart .qdonut-legend,
-.pub-chart .qdonut-legend__row{ color: var(--pub-text) !important; }
+.pub-chart .qdonut-legend__row,
+.pub-chart .qdonut-legend__row span{ color: var(--pub-text) !important; }
+
+/* KEEP: segment numbers white */
 .pub-chart .qdonut-count{
   fill: var(--pub-seg-fill) !important;
   stroke: var(--pub-seg-stroke) !important;
 }
 
-/* =========================================================
-   Sticky Filter Panel (NO OVERLAP in dark mode)
-   ========================================================= */
 
+/* =========================
+   3) PUBLICATIONS FILTER (STICKY CARD)
+   ========================= */
 .pub-filter-sticky{
   position: sticky;
-  top: var(--pub-sticky-top);
-  z-index: 20;                    /* stays above list */
+  top: 90px;                     /* adjust if header height differs */
+  z-index: 30;
+
   margin: 18px 0 26px 0;
-  padding: 16px 18px;
+  padding: 14px 14px 12px 14px;
+
   border: 1px solid var(--pub-border);
-  border-radius: 18px;
+  border-radius: 14px;
   background: var(--pub-card-bg);
   box-shadow: var(--pub-shadow);
+
   color: var(--pub-text);
-
-  /* prevents the section title from sliding under it visually */
-  backdrop-filter: saturate(120%) blur(6px);
 }
 
-/* sticky header */
+/* Optional header inside filter card */
 .pub-filter-header{
-  margin: 0 0 12px 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
 }
+
 .pub-filter-title{
   margin: 0;
-  font-weight: 900;
-  font-size: 1.65rem;
+  font-size: 1.0rem;
+  font-weight: 850;
   color: var(--pub-text);
 }
 
-/* filter row */
+/* Filter row */
 .pub-filter{
   display: flex;
-  gap: 14px;
   flex-wrap: wrap;
+  gap: 12px;
   align-items: flex-end;
 }
 
-/* label blocks */
+/* label block (Type/Year) */
 .pub-filter-label{
-  display: grid;
-  gap: 8px;
-  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 220px;
+  color: var(--pub-text);
 }
 
 .pub-filter-label-text{
-  font-weight: 800;
-  font-size: 1.25rem;
+  font-size: .92rem;
+  font-weight: 700;
   color: var(--pub-text);
 }
 
-/* selects: IMPORTANT (light mode text disappearing fix) */
+/* selects */
 .pub-filter-select{
-  height: 54px;
-  padding: 10px 14px;
-  border-radius: 14px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--pub-input-border);
+  background: var(--pub-input-bg);
+  color: var(--pub-input-text);
 
-  background: var(--pub-card-bg);
-  color: var(--pub-text);
-  border: 1px solid var(--pub-border);
-
-  font-size: 24px;
-  font-weight: 650;
-
+  line-height: 1.2;
+  min-height: 40px;
   outline: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,.06);
-  -webkit-appearance: none;
-  appearance: none;
 }
 
-/* options (some browsers need explicit) */
-.pub-filter-select option{
-  color: #111;
-}
-[data-theme="dark"] .pub-filter-select option,
-html.dark .pub-filter-select option,
-body.dark .pub-filter-select option{
-  color: #111; /* dropdown list usually white anyway */
+.pub-filter-select:focus{
+  box-shadow: 0 0 0 3px var(--pub-focus);
 }
 
-/* dark select surfaces */
-[data-theme="dark"] .pub-filter-select,
-html.dark .pub-filter-select,
-body.dark .pub-filter-select{
-  background: rgba(255,255,255,.10);
-  border-color: rgba(255,255,255,.18);
-  color: rgba(255,255,255,.95);
-}
-
-/* count text */
+/* count text under controls */
 .pub-count-text{
-  margin-top: 14px;
+  margin-top: 10px;
   font-style: italic;
-  font-size: 1.65rem;
   color: var(--pub-muted);
 }
 
-/* Prevent headings getting hidden under sticky when using anchors */
-h2, h3, h4{
-  scroll-margin-top: calc(var(--pub-sticky-top) + 140px);
-}
-
-/* Add spacing between sticky panel and first heading in list */
-.pub-filter-sticky + h2,
-.pub-filter-sticky + h3,
-.pub-filter-sticky + h4{
-  margin-top: 26px !important;
-}
-
-/* =========================================================
-   Buttons: DOI Blue theme + Apply active/passive
-   ========================================================= */
-
-.pub-filter-sticky .btn{
-  border-radius: 10px;
-  line-height: 1;
-  padding: 14px 18px;
-}
-
-/* Apply */
-.pub-filter-sticky #pubApply{
-  background: var(--pub-accent) !important;
-  border-color: var(--pub-accent) !important;
-  color: #fff !important;
-}
-.pub-filter-sticky #pubApply:hover{
-  background: var(--pub-accent-hover) !important;
-  border-color: var(--pub-accent-hover) !important;
-}
-
-/* Apply disabled */
-.pub-filter-sticky #pubApply.is-disabled,
-.pub-filter-sticky #pubApply:disabled{
-  opacity: .45 !important;
-  cursor: not-allowed !important;
-}
-
-/* Reset */
-.pub-filter-sticky #pubReset{
-  background: transparent !important;
-  border: 1px solid var(--pub-accent) !important;
-  color: var(--pub-accent) !important;
-}
-.pub-filter-sticky #pubReset:hover{
-  background: var(--pub-accent-soft) !important;
-}
-
-/* Mobile: nicer stacking */
-@media (max-width: 780px){
+/* Mobile: make selects full width */
+@media (max-width: 640px){
   .pub-filter-label{ min-width: 100%; }
-  .pub-filter-sticky .btn{ width: auto; }
+  .pub-filter{ align-items: stretch; }
+}
+
+/* Prevent sticky card overlapping section headers when jumping via anchors */
+:target{
+  scroll-margin-top: 120px; /* should be > sticky top */
 }
