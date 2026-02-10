@@ -7,9 +7,23 @@ author_profile: true
 
 ## Student Supervision
 
-- **Graduate Theses Supervised:** 7
-- **Undergraduate Senior Projects:** 40+
-- **Recommendation Letters Written:** 50+
+<!-- Student Supervision Stats -->
+<div class="sup-stats">
+  <div class="sup-stat">
+    <div class="sup-stat__num">7</div>
+    <div class="sup-stat__label">Graduate Theses Supervised</div>
+  </div>
+
+  <div class="sup-stat">
+    <div class="sup-stat__num">40+</div>
+    <div class="sup-stat__label">Undergraduate Senior Projects</div>
+  </div>
+
+  <div class="sup-stat">
+    <div class="sup-stat__num">50+</div>
+    <div class="sup-stat__label">Recommendation Letters Written</div>
+  </div>
+</div>
 
 ## Ph.D. Students
 
