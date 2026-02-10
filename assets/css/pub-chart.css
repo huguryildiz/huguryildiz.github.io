@@ -182,32 +182,38 @@ html.theme-dark, body.theme-dark{
   }
 }
 
-/* =========================================
-   FINAL OVERRIDES (put at VERY END)
-   - Fix: center text + legend turning white on light cards
-   - Keep: slice numbers white
-   ========================================= */
+/* =========================
+   HARD FIX (put at END)
+   - Always inherit text color from the theme (light/dark)
+   - Prevent "white text in light mode"
+   ========================= */
 
-/* 1) Legend text: force readable color */
+.pub-chart{
+  /* theme ne veriyorsa onu kullan */
+  color: inherit !important;
+}
+
+/* Title + legend always inherit (no variables) */
+.pub-chart__title,
 .pub-chart .qdonut-legend,
 .pub-chart .qdonut-legend__row,
 .pub-chart .qdonut-legend__row span{
-  color: var(--pub-text) !important;
+  color: inherit !important;
 }
 
-/* 2) SVG center text: force readable fill */
-.pub-chart svg text{
-  fill: var(--pub-text) !important;
+/* SVG: currentColor zinciri kesin */
+.pub-chart svg{
+  color: inherit !important;
 }
 
-/* 3) BUT slice numbers must stay white */
-.pub-chart svg text.qdonut-count{
-  fill: var(--pub-seg-fill) !important;      /* #fff */
-  stroke: var(--pub-seg-stroke) !important;  /* rgba(0,0,0,.45) */
+/* Center texts: always use currentColor */
+.pub-chart .qdonut-total,
+.pub-chart .qdonut-sub{
+  fill: currentColor !important;
 }
 
-/* 4) And keep center texts as theme color */
-.pub-chart svg text.qdonut-total,
-.pub-chart svg text.qdonut-sub{
-  fill: var(--pub-text) !important;
+/* Segment numbers stay white (as you wanted) */
+.pub-chart .qdonut-count{
+  fill: #fff !important;
+  stroke: rgba(0,0,0,.45) !important;
 }
