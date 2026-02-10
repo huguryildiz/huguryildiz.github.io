@@ -1,12 +1,12 @@
-- <span class="news-badge pulse">02/2026</span> Editorial published in *Internet of Things* (Elsevier), Special Issue on Mass Connectivity and Communication Paradigms for IoT.
 - <span class="news-badge pulse">12/2025</span> [Çağla Tantur Karagül](https://www.linkedin.com/in/%C3%A7a%C4%9Fla-tantur-karag%C3%BCl-b834b0b5/) successfully defended her Ph.D. dissertation at TOBB University of Economics and Technology.
-- <span class="news-badge">11/2025</span> Conference paper presented at IEEE TELFOR 2025: “Non-uniform k-connectivity for energy-efficient and reliable underwater wireless sensor networks”.
+- <span class="news-badge pulse">11/2025</span> Conference paper presented at IEEE TELFOR 2025: “Non-uniform k-connectivity for energy-efficient and reliable underwater wireless sensor networks”.
 - <span class="news-badge">10/2025</span> Journal paper published in *IEEE Internet of Things Journal*: “Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity”.
 - <span class="news-badge">08/2025</span> Journal paper published in *Computer Standards & Interfaces*: “Enhancing drone network resilience: Investigating strategies for k-connectivity restoration”.
 
 <details markdown="1">
 <summary><strong>Archive</strong></summary>
 
+- <span class="news-badge">07/2025</span> Editorial published in *Internet of Things* (Elsevier), Special Issue on Mass Connectivity and Communication Paradigms for IoT.
 - <span class="news-badge">08/2025</span> Completed [Reinforcement Learning Specialization](https://www.coursera.org/account/accomplishments/specialization/26BOL8LTVD7S) (University of Alberta, Coursera).
 - <span class="news-badge">06/2025</span> Completed [Deep Learning Specialization](https://www.coursera.org/account/accomplishments/specialization/JGGZ4NGSKTQZ) (DeepLearning.AI, Coursera).
 - <span class="news-badge">03/2025</span> Completed [Machine Learning Specialization](https://www.coursera.org/account/accomplishments/specialization/FGT2PNQ9NYVL) (DeepLearning.AI, Coursera).
