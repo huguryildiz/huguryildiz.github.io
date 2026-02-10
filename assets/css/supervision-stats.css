@@ -1,0 +1,39 @@
+/* =========================================================
+   Student Supervision – Stat Cards
+   ========================================================= */
+
+.sup-stats{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 18px 0 10px 0;
+}
+
+@media (max-width: 900px){
+  .sup-stats{
+    grid-template-columns: 1fr;
+  }
+}
+
+.sup-stat{
+  padding: 18px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--pub-border);
+  background: var(--pub-card-bg);
+  box-shadow: var(--pub-shadow);
+  text-align: center;
+}
+
+.sup-stat__num{
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--pub-text);
+  margin-bottom: 6px;
+}
+
+.sup-stat__label{
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--pub-muted);
+}
