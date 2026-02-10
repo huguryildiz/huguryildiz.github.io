@@ -42,8 +42,6 @@ author_profile: true
 </p>
 -->
 
-## Metrics
-
 <!-- Auto-generated publication count and journal Q distribution charts -->
 {::nomarkdown}
 <link rel="stylesheet" href="{{ '/assets/css/pub-chart.css' | relative_url }}">

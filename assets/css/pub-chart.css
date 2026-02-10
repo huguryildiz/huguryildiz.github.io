@@ -276,7 +276,11 @@ body.theme-dark{
   scroll-margin-top: 120px; /* should be > sticky top */
 }
 
-/* Dark mode only: make sticky filter fully opaque */
+/* =========================================================
+   HARD OVERRIDE — Dark mode sticky filter MUST be opaque
+   Put this at the VERY END of pub-chart.css
+   ========================================================= */
+
 html[data-theme="dark"] .pub-filter-sticky,
 body[data-theme="dark"] .pub-filter-sticky,
 [data-theme="dark"] .pub-filter-sticky,
@@ -286,13 +290,24 @@ html.dark-mode .pub-filter-sticky,
 body.dark-mode .pub-filter-sticky,
 html.theme-dark .pub-filter-sticky,
 body.theme-dark .pub-filter-sticky{
-  background: #2f2f2f !important;        /* opak koyu zemin */
-  border: 1px solid rgba(255,255,255,.14) !important;
+  background-color: #2f2f2f !important;   /* NOTE: background-color */
+  opacity: 1 !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+
+  /* “alttaki içerik görünüyor” hissini kesmek için */
+  isolation: isolate;
+  background-clip: padding-box;
+
+  border-color: rgba(255,255,255,.14) !important;
   box-shadow: 0 14px 34px rgba(0,0,0,.55) !important;
 }
 
-/* içteki alan şeffaf kalıyorsa (bazı yapılarda) */
-html[data-theme="dark"] .pub-filter-sticky .pub-filter,
-[data-theme="dark"] .pub-filter-sticky .pub-filter{
-  background: transparent !important;
+/* İçeride bir eleman (header/row) şeffaflık veriyorsa onu da sabitle */
+html[data-theme="dark"] .pub-filter-sticky * ,
+[data-theme="dark"] .pub-filter-sticky * ,
+html.dark .pub-filter-sticky * ,
+body.dark .pub-filter-sticky * {
+  opacity: 1 !important;
 }
