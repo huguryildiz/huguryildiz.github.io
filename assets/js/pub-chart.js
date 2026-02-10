@@ -1,17 +1,41 @@
 (function () {
-  const svgNS = "http://www.w3.org/2000/svg";
+  var svgNS = "http://www.w3.org/2000/svg";
 
+  // ---------- DOM helpers ----------
+  function byId(id) { return document.getElementById(id); }
+
+  // Collect <li> from a section heading until the next H2/H3
+  function collectLisUntilNextHeading(headingId) {
+    var h = byId(headingId);
+    if (!h) return [];
+
+    var lis = [];
+    var el = h.nextElementSibling;
+
+    while (el) {
+      if (el.tagName === "H2" || el.tagName === "H3") break;
+
+      if (el.querySelectorAll) {
+        var found = el.querySelectorAll("li");
+        for (var i = 0; i < found.length; i++) lis.push(found[i]);
+      }
+      el = el.nextElementSibling;
+    }
+    return lis;
+  }
+
+  // ---------- SVG geometry ----------
   function polarToCartesian(cx, cy, r, angleDeg) {
-    const a = (angleDeg - 90) * Math.PI / 180.0;
+    var a = (angleDeg - 90) * Math.PI / 180.0;
     return { x: cx + r * Math.cos(a), y: cy + r * Math.sin(a) };
   }
 
   function donutPath(cx, cy, rOuter, rInner, startAngle, endAngle) {
-    const p1 = polarToCartesian(cx, cy, rOuter, endAngle);
-    const p2 = polarToCartesian(cx, cy, rOuter, startAngle);
-    const p3 = polarToCartesian(cx, cy, rInner, startAngle);
-    const p4 = polarToCartesian(cx, cy, rInner, endAngle);
-    const largeArc = (endAngle - startAngle) <= 180 ? "0" : "1";
+    var p1 = polarToCartesian(cx, cy, rOuter, endAngle);
+    var p2 = polarToCartesian(cx, cy, rOuter, startAngle);
+    var p3 = polarToCartesian(cx, cy, rInner, startAngle);
+    var p4 = polarToCartesian(cx, cy, rInner, endAngle);
+    var largeArc = (endAngle - startAngle) <= 180 ? "0" : "1";
 
     return [
       "M", p2.x, p2.y,
@@ -22,173 +46,139 @@
     ].join(" ");
   }
 
-  // Collect <li> items after a heading id until next H2/H3
-  function collectLisUntilNextHeading(headingId) {
-    const h = document.getElementById(headingId);
-    if (!h) return [];
-    const lis = [];
-    let el = h.nextElementSibling;
-
-    while (el && !["H2", "H3"].includes(el.tagName)) {
-      el.querySelectorAll?.("li")?.forEach(li => lis.push(li));
-      el = el.nextElementSibling;
-    }
-    return lis;
-  }
-
+  // ---------- Donut renderer ----------
   function renderDonut(containerId, titleText, subtitleText, items, colorMap) {
-    const chart = document.getElementById(containerId);
-    if (!chart || !items || !items.length) return;
+    var chart = byId(containerId);
+    if (!chart) return;
+    if (!items || !items.length) return;
 
-    const total = items.reduce((s, x) => s + (x.value || 0), 0);
+    var total = 0;
+    for (var i = 0; i < items.length; i++) total += items[i].value;
     if (total <= 0) return;
-
-    // ✅ REAL theme colors from computed styles (no CSS-var guesswork)
-    const cs = getComputedStyle(chart);
-    const cardBg = cs.backgroundColor || "#fff";
-    const textColor = cs.color || "#222";
-
-    // Stroke color depends on theme brightness (simple heuristic)
-    const strokeColor = (function () {
-      // parse rgb(a)
-      const m = cardBg.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/i);
-      if (!m) return "rgba(0,0,0,.35)";
-      const r = +m[1], g = +m[2], b = +m[3];
-      const luminance = (0.2126*r + 0.7152*g + 0.0722*b);
-      return luminance < 90 ? "rgba(255,255,255,.35)" : "rgba(0,0,0,.35)";
-    })();
 
     chart.innerHTML = "";
 
-    const title = document.createElement("div");
+    // title
+    var title = document.createElement("div");
     title.className = "pub-chart__title";
     title.textContent = titleText;
     chart.appendChild(title);
 
-    const wrap = document.createElement("div");
+    var wrap = document.createElement("div");
     wrap.className = "qdonut-wrap";
     chart.appendChild(wrap);
 
-    const size = 240, cx = size / 2, cy = size / 2, rOuter = 92, rInner = 54;
+    var size = 240, cx = size / 2, cy = size / 2;
+    var rOuter = 92, rInner = 54;
 
-    const svg = document.createElementNS(svgNS, "svg");
-    svg.setAttribute("viewBox", `0 0 ${size} ${size}`);
+    var svg = document.createElementNS(svgNS, "svg");
+    svg.setAttribute("viewBox", "0 0 " + size + " " + size);
     svg.setAttribute("width", "100%");
     svg.setAttribute("height", "240");
     svg.classList.add("qdonut-svg");
     wrap.appendChild(svg);
 
     // segments
-    let angle = 0;
-    items.forEach((it) => {
-      const frac = it.value / total;
-      const sweep = frac * 360;
-      const start = angle;
-      const end = angle + sweep;
+    var angle = 0;
+    for (var k = 0; k < items.length; k++) {
+      var frac = items[k].value / total;
+      var sweep = frac * 360;
+      var start = angle;
+      var end = angle + sweep;
 
-      const path = document.createElementNS(svgNS, "path");
+      var path = document.createElementNS(svgNS, "path");
       path.setAttribute("d", donutPath(cx, cy, rOuter, rInner, start, end));
-      path.setAttribute("fill", colorMap[it.label] || "#1f77b4");
+      path.setAttribute("fill", colorMap[items[k].label] || "#1f77b4");
       path.setAttribute("opacity", "0.95");
       svg.appendChild(path);
 
-      // segment value text (skip tiny slices)
-      if (sweep >= 18) {
-        const mid = (start + end) / 2;
-        const rText = (rOuter + rInner) / 2;
-        const pt = polarToCartesian(cx, cy, rText, mid);
+      // slice count label (skip too tiny slices)
+      if (sweep >= 16) {
+        var mid = (start + end) / 2;
+        var rText = (rOuter + rInner) / 2;
+        var pt = polarToCartesian(cx, cy, rText, mid);
 
-        const t = document.createElementNS(svgNS, "text");
-        t.setAttribute("x", pt.x.toFixed(2));
-        t.setAttribute("y", pt.y.toFixed(2));
+        var t = document.createElementNS(svgNS, "text");
+        t.setAttribute("x", pt.x);
+        t.setAttribute("y", pt.y);
         t.setAttribute("text-anchor", "middle");
         t.setAttribute("dominant-baseline", "middle");
         t.setAttribute("class", "qdonut-count");
-        t.setAttribute("fill", textColor);
-        t.style.stroke = strokeColor;
-        t.textContent = String(it.value);
+        t.textContent = String(items[k].value);
         svg.appendChild(t);
       }
 
       angle = end;
-    });
+    }
 
-    // ✅ hole LAST so it covers the middle cleanly (no “black disk”)
-    const hole = document.createElementNS(svgNS, "circle");
+    // IMPORTANT: draw a hole circle ON TOP to force theme background inside donut
+    var hole = document.createElementNS(svgNS, "circle");
     hole.setAttribute("cx", cx);
     hole.setAttribute("cy", cy);
-    hole.setAttribute("r", rInner - 2);
-    hole.setAttribute("fill", cardBg);
+    hole.setAttribute("r", rInner - 0.5);
+    hole.setAttribute("class", "qdonut-hole");
     svg.appendChild(hole);
 
     // center total
-    const totalText = document.createElementNS(svgNS, "text");
-    totalText.setAttribute("x", cx);
-    totalText.setAttribute("y", cy - 2);
-    totalText.setAttribute("text-anchor", "middle");
-    totalText.setAttribute("dominant-baseline", "middle");
-    totalText.setAttribute("class", "qdonut-total");
-    totalText.setAttribute("fill", textColor);
-    totalText.style.stroke = strokeColor;
-    totalText.textContent = String(total);
-    totalText.style.fontSize = "34px";
-    totalText.style.fontWeight = "800";
-    svg.appendChild(totalText);
+    var centerText = document.createElementNS(svgNS, "text");
+    centerText.setAttribute("x", cx);
+    centerText.setAttribute("y", cy - 2);
+    centerText.setAttribute("text-anchor", "middle");
+    centerText.setAttribute("dominant-baseline", "middle");
+    centerText.setAttribute("class", "qdonut-total");
+    centerText.textContent = String(total);
+    svg.appendChild(centerText);
 
-    const subText = document.createElementNS(svgNS, "text");
-    subText.setAttribute("x", cx);
-    subText.setAttribute("y", cy + 20);
-    subText.setAttribute("text-anchor", "middle");
-    subText.setAttribute("dominant-baseline", "middle");
-    subText.setAttribute("class", "qdonut-sub");
-    subText.setAttribute("fill", textColor);
-    subText.style.stroke = "transparent"; // ✅ keep crisp
-    subText.textContent = subtitleText || "";
-    subText.style.fontSize = "15px";
-    subText.style.fontWeight = "650";
-    svg.appendChild(subText);
+    var centerSub = document.createElementNS(svgNS, "text");
+    centerSub.setAttribute("x", cx);
+    centerSub.setAttribute("y", cy + 20);
+    centerSub.setAttribute("text-anchor", "middle");
+    centerSub.setAttribute("dominant-baseline", "middle");
+    centerSub.setAttribute("class", "qdonut-sub");
+    centerSub.textContent = subtitleText || "";
+    svg.appendChild(centerSub);
 
     // legend
-    const legend = document.createElement("div");
+    var legend = document.createElement("div");
     legend.className = "qdonut-legend";
     wrap.appendChild(legend);
 
-    items.forEach((it) => {
-      const row = document.createElement("div");
+    for (var m = 0; m < items.length; m++) {
+      var row = document.createElement("div");
       row.className = "qdonut-legend__row";
 
-      const sw = document.createElement("span");
+      var sw = document.createElement("span");
       sw.className = "qdonut-legend__swatch";
-      sw.style.background = colorMap[it.label] || "#1f77b4";
+      sw.style.background = colorMap[items[m].label] || "#1f77b4";
 
-      const txt = document.createElement("span");
-      txt.textContent = `${it.label} (${it.value})`;
+      var txt = document.createElement("span");
+      txt.textContent = items[m].label + " (" + items[m].value + ")";
 
       row.appendChild(sw);
       row.appendChild(txt);
       legend.appendChild(row);
-    });
+    }
 
     chart.style.display = "";
   }
 
-  // ---- Data builders (AUTO from lists) ----
-
+  // ---------- Build donuts from YOUR LISTS ----------
   function buildPublicationCountDonut() {
-    // count list items from your sections
-    const journals = collectLisUntilNextHeading("journal-papers").length;
-    const editorials = collectLisUntilNextHeading("editorials").length;
-    const confInt = collectLisUntilNextHeading("conference-papers-international").length;
-    const confNat = collectLisUntilNextHeading("conference-papers-national-turkish").length;
+    var journalLis = collectLisUntilNextHeading("journal-papers");
+    var editorialLis = collectLisUntilNextHeading("editorials");
+    var confIntLis = collectLisUntilNextHeading("conference-papers-international");
+    var confNatLis = collectLisUntilNextHeading("conference-papers-national-turkish");
 
-    const items = [
-      { label: "Journals", value: journals },
-      { label: "Conf. (Int.)", value: confInt },
-      { label: "Conf. (Nat.)", value: confNat },
-      { label: "Editorials", value: editorials },
-    ].filter(x => x.value > 0);
+    var items = [
+      { label: "Journals", value: journalLis.length },
+      { label: "Conf. (Int.)", value: confIntLis.length },
+      { label: "Conf. (Nat.)", value: confNatLis.length },
+      { label: "Editorials", value: editorialLis.length }
+    ].filter(function (x) { return x.value > 0; });
 
-    const colorMap = {
+    if (!items.length) return;
+
+    var colorMap = {
       "Journals": "#1f77b4",
       "Conf. (Int.)": "#ff7f0e",
       "Conf. (Nat.)": "#2ca02c",
@@ -199,30 +189,35 @@
   }
 
   function buildJournalQDonut() {
-    const lis = collectLisUntilNextHeading("journal-papers");
+    var lis = collectLisUntilNextHeading("journal-papers");
     if (!lis.length) return;
 
-    const counts = { Q1: 0, Q2: 0, Q3: 0, Q4: 0, Unknown: 0 };
+    var counts = { Q1: 0, Q2: 0, Q3: 0, Q4: 0, Unknown: 0 };
 
-    lis.forEach(li => {
-      // Your badges are like: ![Q1](...)
-      const qImg = li.querySelector('img[alt^="Q"]');
-      if (!qImg) { counts.Unknown++; return; }
-      const q = (qImg.getAttribute("alt") || "").trim().toUpperCase();
-      if (counts[q] != null) counts[q]++; else counts.Unknown++;
-    });
+    for (var i = 0; i < lis.length; i++) {
+      // Your badges are like: ![Q1](...Q1...)
+      // That becomes <img alt="Q1" ...>
+      var qImgs = lis[i].querySelectorAll('img[alt^="Q"]');
+      if (!qImgs || !qImgs.length) { counts.Unknown++; continue; }
 
-    const order = ["Q1", "Q2", "Q3", "Q4", "Unknown"];
-    const items = order
-      .filter(k => counts[k] > 0)
-      .map(k => ({ label: k, value: counts[k] }));
+      var q = (qImgs[0].getAttribute("alt") || "").trim().toUpperCase();
+      if (counts.hasOwnProperty(q)) counts[q]++; else counts.Unknown++;
+    }
+
+    var order = ["Q1", "Q2", "Q3", "Q4", "Unknown"];
+    var items = [];
+    for (var k = 0; k < order.length; k++) {
+      var key = order[k];
+      if (counts[key] > 0) items.push({ label: key, value: counts[key] });
+    }
+    if (!items.length) return;
 
     // badge-like colors
-    const colorMap = {
-      Q1: "#d4af37",
-      Q2: "#2ca02c",
-      Q3: "#ff7f0e",
-      Q4: "#9467bd",
+    var colorMap = {
+      Q1: "#d4af37",   // gold
+      Q2: "#2ca02c",   // green
+      Q3: "#ff7f0e",   // orange
+      Q4: "#9467bd",   // purple
       Unknown: "#7f7f7f"
     };
 
@@ -230,8 +225,9 @@
   }
 
   function init() {
-    buildPublicationCountDonut();
-    buildJournalQDonut();
+    // Only run if containers exist
+    if (byId("pubCountDonut")) buildPublicationCountDonut();
+    if (byId("journalQDonut")) buildJournalQDonut();
   }
 
   if (document.readyState === "loading") {
