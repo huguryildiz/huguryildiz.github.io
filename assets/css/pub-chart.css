@@ -181,3 +181,33 @@ html.theme-dark, body.theme-dark{
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================================
+   FINAL OVERRIDES (put at VERY END)
+   - Fix: center text + legend turning white on light cards
+   - Keep: slice numbers white
+   ========================================= */
+
+/* 1) Legend text: force readable color */
+.pub-chart .qdonut-legend,
+.pub-chart .qdonut-legend__row,
+.pub-chart .qdonut-legend__row span{
+  color: var(--pub-text) !important;
+}
+
+/* 2) SVG center text: force readable fill */
+.pub-chart svg text{
+  fill: var(--pub-text) !important;
+}
+
+/* 3) BUT slice numbers must stay white */
+.pub-chart svg text.qdonut-count{
+  fill: var(--pub-seg-fill) !important;      /* #fff */
+  stroke: var(--pub-seg-stroke) !important;  /* rgba(0,0,0,.45) */
+}
+
+/* 4) And keep center texts as theme color */
+.pub-chart svg text.qdonut-total,
+.pub-chart svg text.qdonut-sub{
+  fill: var(--pub-text) !important;
+}
