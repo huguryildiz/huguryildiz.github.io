@@ -166,17 +166,17 @@
     var confNat = confNatLis.length;
 
     var items = [
-      { label: "Journals", value: journal },
-      { label: "Conf. (Int.)", value: confInt },
-      { label: "Conf. (Nat.)", value: confNat },
-      { label: "Editorials", value: editorial }
+      { label: "Journal Articles", value: journal },
+      { label: "Conference Papers (International)", value: confInt },
+      { label: "Conference Papers (National)", value: confNat },
+      { label: "Editorial", value: editorial }
     ].filter(function (x) { return x.value > 0; });
 
     var colorMap = {
-      "Journals": "#1f77b4",
-      "Conf. (Int.)": "#ff7f0e",
-      "Conf. (Nat.)": "#2ca02c",
-      "Editorials": "#9467bd"
+      "Journal Articles": "#1f77b4",
+      "Conference Papers (International)": "#ff7f0e",
+      "Conference Papers (National)": "#2ca02c",
+      "Editorial": "#9467bd"
     };
 
     renderDonut("pubCountDonut", "Publication Count", "total", items, colorMap, (journal + confInt + confNat + editorial));
