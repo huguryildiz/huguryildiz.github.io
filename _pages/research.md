@@ -110,40 +110,11 @@ Integration of mathematical optimization frameworks with machine learning and re
 
 </div>
 
-## Tutorials & Research Code
 
-<!-- GitHub Repo Card -->
-<div class="github-card"
-     data-github="huguryildiz/wsn-opt-python"
-     data-width="420"
-     data-theme="default">
-</div>
+## Code & Learning Resources
 
-<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+- **wsn-opt-python:** A hands-on Python tutorial for network-flow–based optimization models in wireless sensor networks, intended for students and researchers.  
+  👉 [View on GitHub](https://github.com/huguryildiz/wsn-opt-python)
 
-<p style="margin-top:8px; font-size:0.95em; color:#666;">
-This repository provides a hands-on Python tutorial for network-flow–based
-optimization models in wireless sensor networks, intended for students and
-researchers.
-</p>
-
-<div class="research-resource">
-  <div class="resource-card">
-    <div class="resource-icon">📄</div>
-
-    <div class="resource-content">
-      <h3>Underwater Networks – Basics</h3>
-      <p>
-        An introductory document covering core principles of underwater acoustic
-        communication and sensor networks.
-      </p>
-
-      <a href="/files/underwater-basics.pdf"
-         target="_blank"
-         class="resource-btn">
-         View PDF
-      </a>
-    </div>
-  </div>
-</div>
-</section>
+- **Underwater Networks – Basics*:* An introductory document covering core principles of underwater acoustic communication and sensor networks.  
+  👉 [View PDF](/files/underwater-basics.pdf)
