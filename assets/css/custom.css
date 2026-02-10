@@ -119,3 +119,9 @@ details[open] {
 .page__content ul li {
   margin-bottom: 0.35rem;
 }
+
+/* Footer visitor map alignment */
+.footer__clustrmap{
+  text-align: left;
+  margin-top: 12px;
+}
