@@ -58,9 +58,9 @@ author_profile: true
 ## Filter
 
 <div class="pub-filter" style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin: 10px 0 18px 0;">
-  <label style="display:flex; gap:8px; align-items:center;">
+  <label style="display:flex; gap:8px; align-items:center; color: var(--pub-text);">
     <span style="min-width:42px;">Type</span>
-    <select id="pubType" style="padding:6px 8px;">
+    <select id="pubType" style="padding:6px 8px; background: var(--pub-card-bg); color: var(--pub-text); border: 1px solid var(--pub-border);">
       <option value="all">All</option>
       <option value="journal">Journal</option>
       <option value="editorial">Editorial</option>
@@ -69,9 +69,9 @@ author_profile: true
     </select>
   </label>
 
-  <label style="display:flex; gap:8px; align-items:center;">
+  <label style="display:flex; gap:8px; align-items:center; color: var(--pub-text);">
     <span style="min-width:42px;">Year</span>
-    <select id="pubYear" style="padding:6px 8px;">
+    <select id="pubYear" style="padding:6px 8px; background: var(--pub-card-bg); color: var(--pub-text); border: 1px solid var(--pub-border);">
       <option value="all">All</option>
     </select>
   </label>
@@ -80,7 +80,7 @@ author_profile: true
   <button id="pubReset" class="btn btn--small" type="button">Reset</button>
 </div>
 
-<div id="pubCount" style="margin: 10px 0; font-style: italic; color: var(--text-color, #666);"></div>
+<div id="pubCount" style="margin: 10px 0; font-style: italic; color: var(--pub-text);"></div>
 
 
 <!-- 
