@@ -307,3 +307,37 @@ html.dark-mode, body.dark-mode,
 html.theme-dark, body.theme-dark{
   --pub-card-bg: #3f3f3f; /* solid, and now BOTH donuts + filter match */
 }
+
+/* =========================================================
+   Filter buttons color (Apply / Reset)
+   ========================================================= */
+
+#pubApply,
+#pubReset{
+  background-color: #007ec7 !important;
+  border-color: #007ec7 !important;
+  color: #ffffff !important;
+}
+
+/* hover */
+#pubApply:hover,
+#pubReset:hover{
+  background-color: #0069a8 !important;
+  border-color: #0069a8 !important;
+}
+
+/* focus (keyboard accessibility) */
+#pubApply:focus,
+#pubReset:focus{
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0,126,199,.35) !important;
+}
+
+/* disabled / passive state (ileride Apply için kullanırsan) */
+#pubApply.is-disabled,
+#pubApply:disabled{
+  background-color: rgba(0,126,199,.45) !important;
+  border-color: rgba(0,126,199,.45) !important;
+  cursor: not-allowed;
+  box-shadow: none !important;
+}

@@ -98,7 +98,7 @@ author_profile: true
 [Conf. Papers (Nat.)](#conference-papers-national-turkish){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
 
 -->
-### Journal Papers
+### Journal Articles
 {: #journal-papers}
 
 - Karagul, C. T., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025). *Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity*. *IEEE Internet of Things Journal, 12*(22), 47817–47826.  
@@ -174,7 +174,7 @@ author_profile: true
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2014_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JSEN.2014.2359156)
 
 
-### Editorials
+### Editorial
 {: #editorials}
 
 - Haytaoglu, E., Arslan, S. S., Dagdeviren, O., **Yildiz, H. U.**, & Ozturk, Y. (2025). *Editorial brief for special issue: Mass connectivity and/or communication paradigms for the internet of things*. *Internet of Things, 32*, 101625.  
