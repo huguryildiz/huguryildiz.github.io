@@ -1,14 +1,65 @@
 /* =========================================================
-   Publication Donut Charts (pub-chart.css)
-   - Theme-aware (light/dark)
-   - Center text + legend always follow theme text color
-   - Segment numbers stay white with dark stroke
+   pub-chart.css  (FULL)
+   - Fix: light mode text turning white (prefers-color-scheme trap removed)
+   - Donut center text + legend always readable
    - Legend below donut
+   - Sticky filter card that doesn't overlap / collide
    ========================================================= */
 
-/* -------------------------
-   2-column wrapper
--------------------------- */
+
+/* =========================
+   0) THEME TOKENS (LIGHT DEFAULT)
+   ========================= */
+:root{
+  --pub-text: #222;
+  --pub-muted: rgba(0,0,0,.68);
+
+  --pub-border: rgba(0,0,0,.12);
+  --pub-card-bg: #fff;
+  --pub-shadow: 0 10px 26px rgba(0,0,0,.10);
+
+  /* segment numbers on ring */
+  --pub-seg-fill: #ffffff;
+  --pub-seg-stroke: rgba(0,0,0,.45);
+
+  /* form controls */
+  --pub-input-bg: #fff;
+  --pub-input-text: #222;
+  --pub-input-border: rgba(0,0,0,.18);
+  --pub-focus: rgba(31,119,180,.35);
+}
+
+/* Dark theme (Minimal Mistakes / your toggles) */
+[data-theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
+html.dark,
+body.dark,
+html.dark-mode,
+body.dark-mode,
+html.theme-dark,
+body.theme-dark{
+  --pub-text: rgba(255,255,255,.95);
+  --pub-muted: rgba(255,255,255,.72);
+
+  --pub-card-bg: rgba(255,255,255,.08);
+  --pub-shadow: 0 14px 34px rgba(0,0,0,.55);
+  --pub-border: rgba(255,255,255,.14);
+
+  --pub-input-bg: rgba(255,255,255,.10);
+  --pub-input-text: rgba(255,255,255,.95);
+  --pub-input-border: rgba(255,255,255,.22);
+  --pub-focus: rgba(255,255,255,.18);
+}
+
+/* IMPORTANT:
+   prefers-color-scheme fallback REMOVED on purpose.
+   Because it can override your "light" UI when OS is dark. */
+
+
+/* =========================
+   1) METRICS LAYOUT (2 CARDS)
+   ========================= */
 .pub-donuts-2col{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -20,96 +71,44 @@
   .pub-donuts-2col{ grid-template-columns: 1fr; }
 }
 
-/* -------------------------
-   Theme tokens (defaults = light)
-   Not: var(--text-color) / var(--border-color) varsa onları da kullanır.
--------------------------- */
-:root{
-  --pub-text: var(--text-color, #222);
-  --pub-border: var(--border-color, rgba(0,0,0,.12));
-  --pub-card-bg: #fff;
-  --pub-shadow: 0 10px 26px rgba(0,0,0,.10);
 
-  /* Numbers on ring segments */
-  --pub-seg-fill: #fff;
-  --pub-seg-stroke: rgba(0,0,0,.45);
-}
-
-/* Dark theme (data-theme) */
-html[data-theme="dark"],
-body[data-theme="dark"],
-[data-theme="dark"]{
-  --pub-text: var(--text-color, rgba(255,255,255,.95));
-  --pub-border: var(--border-color, rgba(255,255,255,.14));
-  --pub-card-bg: rgba(255,255,255,.08);
-  --pub-shadow: 0 14px 34px rgba(0,0,0,.55);
-}
-
-/* OS-level dark fallback */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]){
-    --pub-text: var(--text-color, rgba(255,255,255,.95));
-    --pub-border: var(--border-color, rgba(255,255,255,.14));
-    --pub-card-bg: rgba(255,255,255,.08);
-    --pub-shadow: 0 14px 34px rgba(0,0,0,.55);
-  }
-}
-
-/* Extra class-based fallbacks */
-html.dark, body.dark,
-html.dark-mode, body.dark-mode,
-html.theme-dark, body.theme-dark{
-  --pub-text: var(--text-color, rgba(255,255,255,.95));
-  --pub-border: var(--border-color, rgba(255,255,255,.14));
-  --pub-card-bg: rgba(255,255,255,.08);
-  --pub-shadow: 0 14px 34px rgba(0,0,0,.55);
-}
-
-/* -------------------------
-   Card
--------------------------- */
+/* =========================
+   2) DONUT CARD
+   ========================= */
 .pub-chart{
   padding: 14px;
   border: 1px solid var(--pub-border);
   border-radius: 14px;
   background: var(--pub-card-bg);
   box-shadow: var(--pub-shadow);
-  color: var(--pub-text); /* <-- the single source of truth */
+  color: var(--pub-text);
 }
 
 .pub-chart__title{
   font-size: 1.05rem;
   font-weight: 800;
   margin: 0 0 10px 0;
-  color: inherit;
+  color: var(--pub-text);
 }
 
-/* -------------------------
-   Layout inside chart
-   (Legend below donut)
--------------------------- */
+/* donut + legend now stacked (legend below) */
 .qdonut-wrap{
   display: grid;
-  grid-template-columns: 1fr;   /* donut üstte, legend altta */
+  grid-template-columns: 1fr;     /* <- legend below */
   gap: 14px;
   align-items: start;
 }
 
+/* SVG */
 .qdonut-svg{
-  max-width: 260px;
+  width: 100%;
+  max-width: 320px;
   margin: 0 auto;
-
-  /* reduce blur on text/edges */
   shape-rendering: geometricPrecision;
   text-rendering: geometricPrecision;
-}
 
-/* -------------------------
-   SVG text color chain
-   Make currentColor = theme text
--------------------------- */
-.pub-chart svg{
-  color: inherit; /* currentColor comes from card text */
+  /* Make currentColor reliable for SVG text */
+  color: var(--pub-text);
 }
 
 /* Ring segment counts (numbers on slices) */
@@ -127,7 +126,7 @@ html.theme-dark, body.theme-dark{
 .qdonut-total{
   font-size: 34px;
   font-weight: 900;
-  fill: currentColor;
+  fill: currentColor;            /* uses svg color */
 }
 .qdonut-sub{
   font-size: 15px;
@@ -136,20 +135,18 @@ html.theme-dark, body.theme-dark{
   opacity: .70;
 }
 
-/* Hole color (matches card background) */
+/* Hole color */
 .qdonut-hole{
   fill: var(--pub-card-bg);
 }
 
-/* -------------------------
-   Legend (below)
--------------------------- */
+/* Legend (grid so it wraps nicely) */
 .qdonut-legend{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 12px 18px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px 18px;
   align-content: start;
-  color: inherit;
+  color: var(--pub-text);
 }
 
 .qdonut-legend__row{
@@ -161,9 +158,7 @@ html.theme-dark, body.theme-dark{
   color: inherit;
 }
 
-.qdonut-legend__row span{
-  color: inherit;
-}
+.qdonut-legend__row span{ color: inherit; }
 
 .qdonut-legend__swatch{
   width: 14px;
@@ -173,144 +168,110 @@ html.theme-dark, body.theme-dark{
   border: 1px solid var(--pub-border);
 }
 
-/* -------------------------
-   Mobile tweaks
--------------------------- */
-@media (max-width: 640px){
-  .qdonut-legend{
-    grid-template-columns: 1fr;
-  }
-}
-
-/* =========================
-   HARD FIX (put at END)
-   - Always inherit text color from the theme (light/dark)
-   - Prevent "white text in light mode"
-   ========================= */
-
-.pub-chart{
-  /* theme ne veriyorsa onu kullan */
-  color: inherit !important;
-}
-
-/* Title + legend always inherit (no variables) */
-.pub-chart__title,
+/* FORCE: ensure center + legend never “white in light mode” */
+.pub-chart svg{ color: var(--pub-text) !important; }
+.pub-chart .qdonut-total,
+.pub-chart .qdonut-sub{ fill: var(--pub-text) !important; }
 .pub-chart .qdonut-legend,
 .pub-chart .qdonut-legend__row,
-.pub-chart .qdonut-legend__row span{
-  color: inherit !important;
-}
+.pub-chart .qdonut-legend__row span{ color: var(--pub-text) !important; }
 
-/* SVG: currentColor zinciri kesin */
-.pub-chart svg{
-  color: inherit !important;
-}
-
-/* Center texts: always use currentColor */
-.pub-chart .qdonut-total,
-.pub-chart .qdonut-sub{
-  fill: currentColor !important;
-}
-
-/* Segment numbers stay white (as you wanted) */
+/* KEEP: segment numbers white */
 .pub-chart .qdonut-count{
-  fill: #fff !important;
-  stroke: rgba(0,0,0,.45) !important;
+  fill: var(--pub-seg-fill) !important;
+  stroke: var(--pub-seg-stroke) !important;
 }
 
-/* ===================================
-   STICKY FILTER
-   =================================== */
+
+/* =========================
+   3) PUBLICATIONS FILTER (STICKY CARD)
+   ========================= */
 .pub-filter-sticky{
   position: sticky;
-  top: 60px;
-  z-index: 100;
-  background: var(--pub-card-bg);
-  padding: 16px;
+  top: 90px;                     /* adjust if header height differs */
+  z-index: 30;
+
+  margin: 18px 0 26px 0;
+  padding: 14px 14px 12px 14px;
+
   border: 1px solid var(--pub-border);
-  border-radius: 12px;
-  margin: 20px 0;
+  border-radius: 14px;
+  background: var(--pub-card-bg);
   box-shadow: var(--pub-shadow);
-  transition: box-shadow 0.2s ease;
+
+  color: var(--pub-text);
 }
 
-/* Scroll edildiğinde shadow arttır */
-.pub-filter-sticky.scrolled{
-  box-shadow: 0 4px 12px rgba(0,0,0,.15);
-}
-
-[data-theme="dark"] .pub-filter-sticky.scrolled,
-html[data-theme="dark"] .pub-filter-sticky.scrolled,
-body[data-theme="dark"] .pub-filter-sticky.scrolled{
-  box-shadow: 0 4px 16px rgba(0,0,0,.45);
-}
-
+/* Optional header inside filter card */
 .pub-filter-header{
-  border-bottom: 1px solid var(--pub-border);
-  padding-bottom: 10px;
-  margin-bottom: 12px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
 }
 
 .pub-filter-title{
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1.0rem;
+  font-weight: 850;
   color: var(--pub-text);
 }
 
+/* Filter row */
 .pub-filter{
   display: flex;
-  gap: 10px;
   flex-wrap: wrap;
-  align-items: center;
-  margin-top: 12px;
+  gap: 12px;
+  align-items: flex-end;
 }
 
+/* label block (Type/Year) */
 .pub-filter-label{
   display: flex;
-  gap: 8px;
-  align-items: center;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 220px;
   color: var(--pub-text);
 }
 
 .pub-filter-label-text{
-  min-width: 42px;
+  font-size: .92rem;
+  font-weight: 700;
   color: var(--pub-text);
 }
 
+/* selects */
 .pub-filter-select{
-  padding: 6px 8px;
-  background: var(--pub-card-bg);
-  color: var(--pub-text);
-  border: 1px solid var(--pub-border);
-  border-radius: 4px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--pub-input-border);
+  background: var(--pub-input-bg);
+  color: var(--pub-input-text);
+
+  line-height: 1.2;
+  min-height: 40px;
+  outline: none;
 }
 
+.pub-filter-select:focus{
+  box-shadow: 0 0 0 3px var(--pub-focus);
+}
+
+/* count text under controls */
 .pub-count-text{
-  margin: 10px 0 0 0;
+  margin-top: 10px;
   font-style: italic;
-  color: var(--pub-text);
-  font-size: 0.9rem;
+  color: var(--pub-muted);
 }
 
-/* Mobilde sticky davranışını koru ama daha kompakt */
-@media (max-width: 768px){
-  .pub-filter-sticky{
-    top: 48px;
-    padding: 12px;
-    margin: 15px 0;
-  }
-  
-  .pub-filter{
-    flex-direction: column;
-    align-items: stretch;
-  }
-  
-  .pub-filter-label{
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .pub-filter-select{
-    width: 100%;
-  }
+/* Mobile: make selects full width */
+@media (max-width: 640px){
+  .pub-filter-label{ min-width: 100%; }
+  .pub-filter{ align-items: stretch; }
+}
+
+/* Prevent sticky card overlapping section headers when jumping via anchors */
+:target{
+  scroll-margin-top: 120px; /* should be > sticky top */
 }
