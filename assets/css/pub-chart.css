@@ -1,3 +1,11 @@
+/* =========================================================
+   Publication Donut Charts (pub-chart.css)
+   - Theme-aware (light/dark)
+   - Center text + legend always use theme text color
+   - Segment numbers stay white with dark stroke (like light mode)
+   ========================================================= */
+
+/* 2-column wrapper */
 .pub-donuts-2col{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -9,21 +17,45 @@
   .pub-donuts-2col{ grid-template-columns: 1fr; }
 }
 
-/* Theme-driven tokens */
+/* Theme-driven tokens (defaults = light) */
 :root{
   --pub-text: #222;
   --pub-border: rgba(0,0,0,.12);
   --pub-card-bg: #fff;
   --pub-shadow: 0 10px 26px rgba(0,0,0,.10);
-  /* Segment label style (simit içindeki sayılar için) */
-  --pub-seg-fill: #ffffff;
-  --pub-seg-stroke: rgba(0,0,0,.45);
+
+  /* Segment label style (numbers on the ring) */
+  --pub-seg-fill: #ffffff;          /* keep white numbers */
+  --pub-seg-stroke: rgba(0,0,0,.45);/* black-ish outline (same in dark) */
 }
 
-/* Dark theme */
+/* Dark theme (supports data-theme on html/body/any parent) */
 [data-theme="dark"],
 html[data-theme="dark"],
 body[data-theme="dark"]{
+  --pub-text: rgba(255,255,255,.95);
+  --pub-card-bg: rgba(255,255,255,.08);
+  --pub-shadow: 0 14px 34px rgba(0,0,0,.55);
+  --pub-border: rgba(255,255,255,.14);
+}
+
+/* Dark mode detection fallback (OS-level) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]){
+    --pub-text: rgba(255,255,255,.95);
+    --pub-card-bg: rgba(255,255,255,.08);
+    --pub-shadow: 0 14px 34px rgba(0,0,0,.55);
+    --pub-border: rgba(255,255,255,.14);
+  }
+}
+
+/* Class-based dark mode support (extra fallbacks) */
+html.dark,
+body.dark,
+html.dark-mode,
+body.dark-mode,
+html.theme-dark,
+body.theme-dark{
   --pub-text: rgba(255,255,255,.95);
   --pub-card-bg: rgba(255,255,255,.08);
   --pub-shadow: 0 14px 34px rgba(0,0,0,.55);
@@ -40,6 +72,7 @@ body[data-theme="dark"]{
   color: var(--pub-text);
 }
 
+/* Title */
 .pub-chart__title{
   font-size: 1.05rem;
   font-weight: 800;
@@ -47,7 +80,7 @@ body[data-theme="dark"]{
   color: var(--pub-text);
 }
 
-/* Layout inside chart */
+/* Inside layout */
 .qdonut-wrap{
   display: grid;
   grid-template-columns: 260px 1fr;
@@ -58,18 +91,22 @@ body[data-theme="dark"]{
   .qdonut-wrap{ grid-template-columns: 1fr; }
 }
 
+/* SVG */
 .qdonut-svg{
   max-width: 260px;
   margin: 0 auto;
+
+  /* reduce blur on text/edges */
   shape-rendering: geometricPrecision;
   text-rendering: geometricPrecision;
-  color: var(--pub-text); /* SVG için color tanımla */
 }
 
-/* Segment counts (inside ring) - DOKUNMA! */
+/* Ring segment counts (numbers on slices) */
 .qdonut-count{
   font-size: 18px;
   font-weight: 800;
+
+  /* KEEP THESE (requested) */
   fill: var(--pub-seg-fill);
   paint-order: stroke fill;
   stroke: var(--pub-seg-stroke);
@@ -77,13 +114,12 @@ body[data-theme="dark"]{
   stroke-linejoin: round;
 }
 
-/* Center texts - currentColor SVG'nin color'unu alır */
+/* Center texts */
 .qdonut-total{
   font-size: 34px;
   font-weight: 900;
   fill: currentColor;
 }
-
 .qdonut-sub{
   font-size: 15px;
   font-weight: 700;
@@ -91,7 +127,7 @@ body[data-theme="dark"]{
   opacity: .70;
 }
 
-/* Donut hole - kartın arka planıyla aynı */
+/* Hole color (matches card background) */
 .qdonut-hole{
   fill: var(--pub-card-bg);
 }
@@ -103,7 +139,6 @@ body[data-theme="dark"]{
   align-content: start;
   color: var(--pub-text);
 }
-
 .qdonut-legend__row{
   display: flex;
   align-items: center;
@@ -112,11 +147,9 @@ body[data-theme="dark"]{
   font-weight: 650;
   color: var(--pub-text);
 }
-
 .qdonut-legend__row span{
-  color: var(--pub-text);
+  color: inherit;
 }
-
 .qdonut-legend__swatch{
   width: 14px;
   height: 14px;
@@ -125,63 +158,32 @@ body[data-theme="dark"]{
   border: 1px solid var(--pub-border);
 }
 
-/* Dark mode detection fallback (prefers-color-scheme) */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]){
-    --pub-text: rgba(255,255,255,.95);
-    --pub-card-bg: rgba(255,255,255,.08);
-    --pub-shadow: 0 14px 34px rgba(0,0,0,.55);
-    --pub-border: rgba(255,255,255,.14);
-  }
-}
+/* =========================================================
+   FORCE FIX (KEEP AT END)
+   - Fixes center text/legend turning white in light mode
+   - Keeps segment counts white
+   ========================================================= */
 
-/* Class-based dark mode support */
-html.dark,
-body.dark,
-html.dark-mode,
-body.dark-mode,
-html.theme-dark,
-body.theme-dark{
-  --pub-text: rgba(255,255,255,.95);
-  --pub-card-bg: rgba(255,255,255,.08);
-  --pub-shadow: 0 14px 34px rgba(0,0,0,.55);
-  --pub-border: rgba(255,255,255,.14);
-}
-
-/* 1) SVG text’in rengi: currentColor’ın kaynağını kesinleştir */
-.pub-chart,
-.pub-chart *{
-  color: inherit;
-}
-
-/* svg’nin kendisine de color ver (seninki var ama daha güçlü yapıyoruz) */
+/* Make sure SVG currentColor comes from theme text */
 .pub-chart svg{
-  color: var(--pub-text);
+  color: var(--pub-text) !important;
 }
 
-/* center text kesinlikle pub-text alsın (light mode’da beyaza kaçmayı bitirir) */
+/* Center text must always be theme color */
 .pub-chart .qdonut-total,
 .pub-chart .qdonut-sub{
-  fill: var(--pub-text);
+  fill: var(--pub-text) !important;
 }
 
-/* (isteğe bağlı) dark mode’da biraz daha soluk alt yazı */
-[data-theme="dark"] .pub-chart .qdonut-sub{
-  opacity: .75;
-}
-
-/* 2) Legend: tema rengi ile inherit etsin, beyaza sabitlenmesin */
-.pub-chart .qdonut-legend{
-  color: var(--pub-text);
-}
-
-.pub-chart .qdonut-legend__row{
-  color: inherit;         /* var(--pub-text) yerine inherit */
-}
-
+/* Legend must always be theme color */
+.pub-chart .qdonut-legend,
+.pub-chart .qdonut-legend__row,
 .pub-chart .qdonut-legend__row span{
-  color: inherit;         /* hardcoded kaldır */
+  color: var(--pub-text) !important;
 }
 
-/* Eğer legend text’i JS ile "txt.textContent" olarak ekleniyorsa span yok;
-   yine de row inherit ile düzelir. */
+/* Keep segment numbers white with outline */
+.pub-chart .qdonut-count{
+  fill: var(--pub-seg-fill) !important;
+  stroke: var(--pub-seg-stroke) !important;
+}
