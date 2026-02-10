@@ -114,4 +114,29 @@
   fill: var(--text-color);
   color: var(--text-color);
 }
+
+/* =========================
+   Inherit theme text color
+   ========================= */
+
+/* HTML text */
+.pub-chart,
+.pub-chart__title,
+.qdonut-legend__row {
+  color: var(--text-color);
+}
+
+/* SVG text MUST use fill */
+.qdonut-total,
+.qdonut-sub,
+.qdonut-count {
+  fill: var(--text-color);
+}
+
+/* Dark mode fine-tuning (optional but recommended) */
+[data-theme="dark"] .qdonut-total,
+[data-theme="dark"] .qdonut-sub,
+[data-theme="dark"] .qdonut-count {
+  fill: var(--text-color);
+}
 }
