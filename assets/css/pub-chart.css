@@ -9,23 +9,25 @@
   .pub-donuts-2col{ grid-template-columns: 1fr; }
 }
 
-/* Theme-driven tokens (fallback’lı) */
+/* Theme-driven tokens */
 :root{
   --pub-text: var(--text-color, #222);
   --pub-border: var(--border-color, rgba(0,0,0,.12));
   --pub-bg: var(--background-color, #fff);
+  --pub-card-bg: #fff;
   --pub-shadow: 0 10px 26px rgba(0,0,0,.10);
-
-  /* Segment label style (both modes same) */
+  /* Segment label style */
   --pub-seg-fill: #ffffff;
   --pub-seg-stroke: rgba(0,0,0,.45);
 }
 
-/* Dark theme: still inherit from theme; only shadow a bit stronger */
+/* Dark theme */
 [data-theme="dark"],
 html[data-theme="dark"],
 body[data-theme="dark"]{
+  --pub-card-bg: rgba(255,255,255,.08);
   --pub-shadow: 0 14px 34px rgba(0,0,0,.55);
+  --pub-border: rgba(255,255,255,.14);
 }
 
 /* Card */
@@ -33,11 +35,8 @@ body[data-theme="dark"]{
   padding: 14px;
   border: 1px solid var(--pub-border);
   border-radius: 14px;
-
-  /* IMPORTANT: background comes from theme */
-  background: var(--pub-bg);
+  background: var(--pub-card-bg);
   box-shadow: var(--pub-shadow);
-
   color: var(--pub-text);
 }
 
@@ -45,7 +44,7 @@ body[data-theme="dark"]{
   font-size: 1.05rem;
   font-weight: 800;
   margin: 0 0 10px 0;
-  color: inherit; /* inherit from theme */
+  color: inherit;
 }
 
 /* Layout inside chart */
@@ -62,13 +61,11 @@ body[data-theme="dark"]{
 .qdonut-svg{
   max-width: 260px;
   margin: 0 auto;
-
-  /* make SVG crisp (reduces “blur” feeling) */
   shape-rendering: geometricPrecision;
   text-rendering: geometricPrecision;
 }
 
-/* Segment counts (inside ring) — same in light & dark */
+/* Segment counts (inside ring) */
 .qdonut-count{
   font-size: 18px;
   font-weight: 800;
@@ -79,12 +76,13 @@ body[data-theme="dark"]{
   stroke-linejoin: round;
 }
 
-/* Center texts should inherit theme text color */
+/* Center texts */
 .qdonut-total{
   font-size: 34px;
   font-weight: 900;
   fill: currentColor;
 }
+
 .qdonut-sub{
   font-size: 15px;
   font-weight: 700;
@@ -92,18 +90,19 @@ body[data-theme="dark"]{
   opacity: .70;
 }
 
-/* Donut hole fill matches card background (theme) */
+/* Donut hole - kartın arka planıyla aynı */
 .qdonut-hole{
-  fill: var(--pub-bg);
+  fill: var(--pub-card-bg);
 }
 
-/* Legend inherits theme color (no hardcode) */
+/* Legend */
 .qdonut-legend{
   display: grid;
   gap: 10px;
   align-content: start;
   color: inherit;
 }
+
 .qdonut-legend__row{
   display: flex;
   align-items: center;
@@ -112,9 +111,11 @@ body[data-theme="dark"]{
   font-weight: 650;
   color: inherit;
 }
+
 .qdonut-legend__row span{
   color: inherit;
 }
+
 .qdonut-legend__swatch{
   width: 14px;
   height: 14px;
@@ -123,46 +124,23 @@ body[data-theme="dark"]{
   border: 1px solid var(--pub-border);
 }
 
-/* =========================
-   Dark mode detection fallback
-   (theme may NOT use data-theme)
-   ========================= */
-
+/* Dark mode detection fallback (prefers-color-scheme) */
 @media (prefers-color-scheme: dark) {
-  .pub-chart{
-    /* theme var yoksa bile sayfa ile uyumlu koyu kart */
-    background: rgba(0,0,0,.28);
-    border-color: rgba(255,255,255,.14);
-    box-shadow: 0 14px 34px rgba(0,0,0,.55);
-    color: inherit;
+  :root:not([data-theme="light"]){
+    --pub-card-bg: rgba(255,255,255,.08);
+    --pub-shadow: 0 14px 34px rgba(0,0,0,.55);
+    --pub-border: rgba(255,255,255,.14);
   }
-
-  /* donut hole must match card bg */
-  .qdonut-hole{ fill: rgba(0,0,0,.28); }
 }
 
-/* If your theme uses a class-based toggle, catch common ones */
-html.dark .pub-chart,
-body.dark .pub-chart,
-html.dark-mode .pub-chart,
-body.dark-mode .pub-chart,
-html.theme-dark .pub-chart,
-body.theme-dark .pub-chart,
-html[data-theme="dark"] .pub-chart,
-body[data-theme="dark"] .pub-chart{
-  background: rgba(0,0,0,.28);
-  border-color: rgba(255,255,255,.14);
-  box-shadow: 0 14px 34px rgba(0,0,0,.55);
-  color: inherit;
-}
-
-html.dark .qdonut-hole,
-body.dark .qdonut-hole,
-html.dark-mode .qdonut-hole,
-body.dark-mode .qdonut-hole,
-html.theme-dark .qdonut-hole,
-body.theme-dark .qdonut-hole,
-html[data-theme="dark"] .qdonut-hole,
-body[data-theme="dark"] .qdonut-hole{
-  fill: rgba(0,0,0,.28);
+/* Class-based dark mode support */
+html.dark,
+body.dark,
+html.dark-mode,
+body.dark-mode,
+html.theme-dark,
+body.theme-dark{
+  --pub-card-bg: rgba(255,255,255,.08);
+  --pub-shadow: 0 14px 34px rgba(0,0,0,.55);
+  --pub-border: rgba(255,255,255,.14);
 }
