@@ -94,6 +94,7 @@
         text.setAttribute("y", pt.y);
         text.setAttribute("text-anchor", "middle");
         text.setAttribute("dominant-baseline", "middle");
+        text.setAttribute("font-weight", "normal");
         text.setAttribute("class", "qdonut-count");
         text.textContent = String(items[k].value);
         svg.appendChild(text);
@@ -102,7 +103,6 @@
       angle = end;
     }
 
-    /* IMPORTANT: hole color should match card background via CSS var */
     var hole = document.createElementNS(svgNS, "circle");
     hole.setAttribute("cx", cx);
     hole.setAttribute("cy", cy);
@@ -110,21 +110,24 @@
     hole.setAttribute("class", "qdonut-hole");
     svg.appendChild(hole);
 
-    // Center total + subtitle (inherits theme text via currentColor)
+    // Center total
     var centerText = document.createElementNS(svgNS, "text");
     centerText.setAttribute("x", cx);
     centerText.setAttribute("y", cy);
     centerText.setAttribute("text-anchor", "middle");
     centerText.setAttribute("dominant-baseline", "middle");
+    centerText.setAttribute("font-weight", "normal");
     centerText.setAttribute("class", "qdonut-total");
     centerText.textContent = String(centerTotal != null ? centerTotal : total);
     svg.appendChild(centerText);
 
+    // Center subtitle
     var centerSub = document.createElementNS(svgNS, "text");
     centerSub.setAttribute("x", cx);
     centerSub.setAttribute("y", cy + 18);
     centerSub.setAttribute("text-anchor", "middle");
     centerSub.setAttribute("dominant-baseline", "middle");
+    centerSub.setAttribute("font-weight", "normal");
     centerSub.setAttribute("class", "qdonut-sub");
     centerSub.textContent = subtitleText || "";
     svg.appendChild(centerSub);
@@ -143,6 +146,7 @@
       sw.style.background = colorMap[items[m].label] || "#1f77b4";
 
       var txt = document.createElement("span");
+      txt.style.fontWeight = "normal";
       txt.textContent = items[m].label + " (" + items[m].value + ")";
 
       row.appendChild(sw);
@@ -154,7 +158,6 @@
   }
 
   function buildPublicationCountDonutFromLists() {
-    // Count from your actual sections (NOT .pub-stats)
     var journalLis = collectLisUntilNextHeading("journal-papers");
     var editorialLis = collectLisUntilNextHeading("editorials");
     var confIntLis = collectLisUntilNextHeading("conference-papers-international");
@@ -189,7 +192,7 @@
     var counts = { Q1: 0, Q2: 0, Q3: 0, Q4: 0, Unknown: 0 };
 
     for (var j = 0; j < lis.length; j++) {
-      var qImgs = lis[j].querySelectorAll('img[alt^="Q"]'); // alt="Q1" etc.
+      var qImgs = lis[j].querySelectorAll('img[alt^="Q"]');
       if (!qImgs || !qImgs.length) { counts.Unknown++; continue; }
 
       var q = (qImgs[0].getAttribute("alt") || "").trim().toUpperCase();
@@ -204,7 +207,6 @@
     }
     if (!items.length) return;
 
-    // Badge colors with your mapping (gold/green/orange/purple/gray)
     var colorMap = {
       Q1: "#d4af37",
       Q2: "#2ca02c",
