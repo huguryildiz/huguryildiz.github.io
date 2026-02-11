@@ -95,12 +95,12 @@ Co-advisor: [Prof. Kemal Bicakci](https://scholar.google.com/citations?user=HCTy
 ## Professional Development
 
 - **Reinforcement Learning Specialization**, University of Alberta (Coursera), 2025  
-  [![Credential](https://img.shields.io/badge/Credential-Verified-1f77b4?style=flat-square)](https://www.coursera.org/account/accomplishments/specialization/26BOL8LTVD7S)
+  [![View Credential](https://img.shields.io/badge/Coursera-Credential-0056D2?style=flat-square&logo=coursera&logoColor=white)](https://www.coursera.org/account/accomplishments/specialization/26BOL8LTVD7S)
 
 - **Deep Learning Specialization**, DeepLearning.AI (Coursera), 2025  
-  [![Credential](https://img.shields.io/badge/Credential-Verified-1f77b4?style=flat-square)](https://www.coursera.org/account/accomplishments/specialization/JGGZ4NGSKTQZ)
+  [![View Credential](https://img.shields.io/badge/Coursera-Credential-0056D2?style=flat-square&logo=coursera&logoColor=white)](https://www.coursera.org/account/accomplishments/specialization/JGGZ4NGSKTQZ)
 
 - **Machine Learning Specialization**, DeepLearning.AI (Coursera), 2025  
-  [![Credential](https://img.shields.io/badge/Credential-Verified-1f77b4?style=flat-square)](https://www.coursera.org/account/accomplishments/specialization/FGT2PNQ9NYVL)
+  [![View Credential](https://img.shields.io/badge/Coursera-Credential-0056D2?style=flat-square&logo=coursera&logoColor=white)](https://www.coursera.org/account/accomplishments/specialization/FGT2PNQ9NYVL)
 
 
