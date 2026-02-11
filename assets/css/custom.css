@@ -119,3 +119,10 @@ details[open] {
 .page__content ul li {
   margin-bottom: 0.35rem;
 }
+
+/* Hide page titles globally (Minimal Mistakes) */
+.page__title,
+#page-title,
+.page__header {
+  display: none !important;
+}
