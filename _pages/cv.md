@@ -65,7 +65,7 @@ Co-advisor: [Prof. Kemal Bicakci](https://scholar.google.com/citations?user=HCTy
 
 - **Elevation to IEEE Senior Member (2021)**,
   Awarded for significant professional contributions; achieved by fewer than 10% of IEEE members. <br>
-  [![IEEE Senior Member](https://img.shields.io/badge/IEEE-Senior_Member-gold?style=flat-square&logo=ieee&logoColor=black)](https://ieeexplore.ieee.org/author/37085350625)
+  [![IEEE Senior Member 2021](https://img.shields.io/badge/IEEE-Elevation%20to%20Senior%20Member%202021-00629B?style=flat-square&logo=ieee&logoColor=white)](/images/ieee_senior_member_2021.jpg)
   
 
 - **Best Paper Award (Third Place)**,
