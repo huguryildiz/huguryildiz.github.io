@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Personal Website of Huseyin Ugur Yildiz"
+title: "Huseyin Ugur Yildiz"
 author_profile: true
 permalink: /
 ---
