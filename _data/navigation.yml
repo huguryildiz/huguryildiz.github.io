@@ -1,18 +1,13 @@
 main:
   - title: "CV"
-    url: /cv/
-
+    url: "/cv/"
   - title: "Publications"
-    url: /publications/
-
+    url: "/publications/"
   - title: "Research"
-    url: /research/
-
+    url: "/research/"
   - title: "Service"
-    url: /service/
-
+    url: "/service/"
   - title: "Students"
-    url: /students/
-
+    url: "/students/"
   - title: "Teaching"
-    url: /teaching/
+    url: "/teaching/"
