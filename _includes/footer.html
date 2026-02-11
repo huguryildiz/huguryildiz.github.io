@@ -1,38 +1,43 @@
 {% include base_path %}
 <div class="footer__top">
-<div class="footer__extras" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 30px; flex-wrap: wrap;">
-
-  <!-- Left Column -->
-  <div style="display: flex; flex-direction: column; gap: 15px;">
-
+<div class="footer__extras" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
+  <!-- Left Column: Sitemap + Follow + Visitors -->
+  <div style="display: flex; flex-direction: column; gap: 10px;">
     <!-- Sitemap -->
     <div>
       <strong><a href="/sitemap/" style="color: #999;">Sitemap</a></strong>
     </div>
-
+    
     <!-- Follow -->
-    {% if site.author.github or site.atom_feed.hide != true %}
+    {% if site.author.github or site.author.bitbucket or site.atom_feed.hide != true %}
     <div class="page__footer-follow">
       <ul class="social-icons">
+        {% if site.data.ui-text[site.locale].follow_label %}
+          <li><strong style="color: #999;">{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
+        {% endif %}
         {% if site.author.github %}
           <li><a href="https://github.com/{{ site.author.github }}" style="color: #999;"><i class="fab fa-github"></i> GitHub</a></li>
         {% endif %}
+        {% if site.author.bitbucket %}
+          <li><a href="https://bitbucket.org/{{ site.author.bitbucket }}" style="color: #999;"><i class="fab fa-bitbucket"></i> Bitbucket</a></li>
+        {% endif %}
         {% if site.atom_feed.hide != true %}
           <li>
-            <a href="{{ base_path }}/feed.xml" style="color: #999;">
-              <i class="fa fa-fw fa-rss-square"></i> Feed
+            <a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" style="color: #999;">
+              <i class="fa fa-fw fa-rss-square"></i>
+              {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}
             </a>
           </li>
         {% endif %}
       </ul>
     </div>
     {% endif %}
-
-    <!-- Visitors -->
+    
+    <!-- Visitors map -->
     <div class="page__footer-visitors">
       <strong><span style="color: #999;">Visitors</span></strong>
-      <div style="margin-top: 10px;">
-        <div style="width: 120px; height: 120px;">
+      <div class="footer__clustrmap" style="margin-top: 10px; margin-bottom: 20px;">
+        <div style="width: 150px; height: 150px;">
           <script
             type="text/javascript"
             id="clstr_globe"
@@ -41,38 +46,49 @@
         </div>
       </div>
     </div>
-
   </div>
-
-  <!-- Right Column -->
-  <div class="footer__spotify" style="display: flex; flex-direction: column; gap: 15px;">
+  
+  <!-- Right Column: Listening + Spotify Playlists -->
+  <div class="footer__spotify" style="display: flex; flex-direction: column; gap: 10px;">
     <strong><span style="color: #999;">Listening</span></strong>
-
     <iframe
+      style="border-radius:12px; width: 400px; height: 85px;"
       src="https://open.spotify.com/embed/playlist/0rGMcXyrxCuw5GGxl9WwXX?theme=0"
       frameBorder="0"
+      allowfullscreen=""
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy"
-      style="width:280px; height:80px; border-radius:12px;">
+      loading="lazy">
     </iframe>
-
+    
     <iframe
-      src="https://open.spotify.com/embed/playlist/5bOF9kW6kCyQkrXdiUTwAu?theme=0"
+      data-testid="embed-iframe"
+      style="border-radius:12px; width: 400px; height: 85px;"
+      src="https://open.spotify.com/embed/playlist/5bOF9kW6kCyQkrXdiUTwAu?utm_source=generator&theme=0"
       frameBorder="0"
+      allowfullscreen=""
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy"
-      style="width:280px; height:80px; border-radius:12px;">
+      loading="lazy">
     </iframe>
-
+    
     <iframe
+      style="border-radius:12px; width: 400px; height: 85px;"
       src="https://open.spotify.com/embed/playlist/1cJ9WnD1JoJJV4VzdQ1K1Z?theme=0"
       frameBorder="0"
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy"
-      style="width:280px; height:80px; border-radius:12px;">
+      loading="lazy">
     </iframe>
-
   </div>
-
 </div>
+</div>
+
+<div class="page__footer-copyright">
+  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }},
+  {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }}
+  <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp;
+  <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>,
+  a fork of
+  <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">
+    Minimal Mistakes
+  </a>.<br />
+  Site last updated {{ "now" | date: '%Y-%m-%d' }}
 </div>
