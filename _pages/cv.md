@@ -66,7 +66,7 @@ Co-advisor: [Prof. Kemal Bicakci](https://scholar.google.com/citations?user=HCTy
 - **IEEE Senior Member**, IEEE, 2021  
   Recognized for significant professional maturity, documented technical achievements, and at least ten years of professional experience in the field of electrical and electronics engineering.
 
-  [![IEEE Senior Member](/images/ieee_senior_member_2021.jpg)](/images/ieee_senior_member_2021.jpg)
+  <img src="/images/ieee_senior_member_2021.jpg" width="400">
 
 - **Best Paper Award (Third Place)**,
   *Utilization of Multi-Sink Architectures for Lifetime Maximization in Underwater Sensor Networks*,
