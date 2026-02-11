@@ -120,38 +120,59 @@ details[open] {
   margin-bottom: 0.35rem;
 }
 
-/* =========================
-   Footer extras (Visitors + Spotify)
-   ========================= */
-
+/* Footer layout */
 .footer__extras{
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-  margin-top: 16px;
+  align-items: flex-end;
+  gap: 16px;
+  margin-top: 12px;
 }
 
-/* Left block */
+/* ===== Clustrmaps ===== */
 .footer__visitors{
   flex: 0 0 auto;
-  text-align: left;
+  width: 220px;          /* ← burada kontrol sende */
+  max-width: 220px;
 }
 
-/* Right block */
+#clustrmaps-container{
+  width: 220px;
+  height: 220px;
+  overflow: hidden;     /* ← taşmayı ENGELLER */
+  position: relative;
+}
+
+/* Clustrmaps canvas / svg zorla küçült */
+#clustrmaps-container canvas,
+#clustrmaps-container svg{
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
+/* ===== Spotify ===== */
 .footer__spotify{
-  flex: 0 0 320px;   /* Spotify genişliği */
-  max-width: 320px;
+  flex: 0 0 420px;
+  max-width: 420px;
+  margin-left: auto;
 }
 
-/* Mobile: alt alta gelsin */
-@media (max-width: 768px){
+.footer__spotify iframe{
+  width: 100% !important;
+  height: 92px !important;
+  border-radius: 12px;
+  border: 0;
+}
+
+/* Mobile */
+@media (max-width: 900px){
   .footer__extras{
     flex-direction: column;
     align-items: stretch;
   }
-
-  .footer__spotify{
+  .footer__visitors,
+  #clustrmaps-container{
+    width: 100%;
     max-width: 100%;
   }
 }
