@@ -133,3 +133,9 @@ details[open] {
 .page__title {
   display: none !important;
 }
+
+/* Force all nav items to stay inside hamburger on small screens */
+@media (max-width: 768px){
+  .masthead__menu .visible-links{ display:none !important; }
+  .masthead__menu .hidden-links{ display:block !important; }
+}
