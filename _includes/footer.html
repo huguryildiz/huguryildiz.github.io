@@ -25,6 +25,7 @@
   {% endif %}
 
 <div class="footer__extras" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
+
   <!-- Visitors map -->
   <div class="page__footer-visitors" style="margin-top: 5px;">
     <span style="color:#999; font-weight:600;">Visitors</span>
@@ -39,13 +40,27 @@
     </div>
   </div>
 
-  <!-- Spotify -->
-  <div class="footer__spotify">
+  <!-- Spotify Playlists -->
+  <div class="footer__spotify" style="display: flex; flex-direction: column; gap: 10px;">
+    <!-- First Playlist (Jazz) -->
     <iframe
-      style="width: 300px; height: 152px; border-radius: 12px;"
+      style="border-radius:12px; width: 300px; height: 152px;"
       src="https://open.spotify.com/embed/playlist/0rGMcXyrxCuw5GGxl9WwXX?theme=0"
-      loading="lazy"
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+      frameBorder="0"
+      allowfullscreen=""
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>
+    
+    <!-- Second Playlist -->
+    <iframe
+      data-testid="embed-iframe"
+      style="border-radius:12px; width: 300px; height: 152px;"
+      src="https://open.spotify.com/embed/playlist/5bOF9kW6kCyQkrXdiUTwAu?utm_source=generator&theme=0"
+      frameBorder="0"
+      allowfullscreen=""
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
     </iframe>
   </div>
 </div>
