@@ -1,5 +1,4 @@
 {% include base_path %}
-
 <div class="footer__top">
   {% if site.author.github or site.author.bitbucket or site.atom_feed.hide != true %}
   <div class="page__footer-follow">
@@ -25,12 +24,19 @@
   </div>
   {% endif %}
 
-<div class="footer__clustrmap">
-  <script
-    type="text/javascript"
-    id="clstr_globe"
-    src="//clustrmaps.com/globe.js?d=Ff5N5seCdUggOy-cQ08tNCYmISlt6bFGtSiHyvOpvNA">
-  </script>
+  <!-- Visitors Section -->
+  <div class="page__footer-visitors" style="margin-top: 20px;">
+    <strong style="color: #999;">Visitors</strong>
+    <div class="footer__clustrmap" style="margin-top: 10px;">
+      <div style="width: 200px; height: 200px;">
+        <script
+          type="text/javascript"
+          id="clstr_globe"
+          src="//clustrmaps.com/globe.js?d=Ff5N5seCdUggOy-cQ08tNCYmISlt6bFGtSiHyvOpvNA">
+        </script>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="page__footer-copyright">
