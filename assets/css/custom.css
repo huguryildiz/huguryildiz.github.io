@@ -119,3 +119,8 @@ details[open] {
 .page__content ul li {
   margin-bottom: 0.35rem;
 }
+
+/* Hide big H1 title only on pages with class no-page-title */
+.no-page-title .page__title{
+  display: none !important;
+}

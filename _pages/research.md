@@ -3,6 +3,7 @@ layout: single
 title: "Research"
 permalink: /research/
 author_profile: true
+classes: no-page-title
 ---
 
 ## Research Summary
