@@ -51,6 +51,8 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
       <span class="ra-chip ra-ai">Machine Learning</span>
       <span class="ra-chip ra-ai">Deep Learning</span>
       <span class="ra-chip ra-ai">Reinforcement Learning</span>
+      <span class="ra-chip ra-ai">Neural Networks</span>
+      <span class="ra-chip ra-ai">Proximal Policy Optimization</span>
     </div>
   </div>
 
