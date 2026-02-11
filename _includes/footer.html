@@ -23,12 +23,10 @@
     </ul>
   </div>
   {% endif %}
-
 <div class="footer__extras" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
-
   <!-- Visitors map -->
-  <div class="page__footer-visitors" style="margin-top: 5px;">
-    <span style="">Visitors</span>
+  <div class="page__footer-visitors">
+    <span style="color:#999; font-weight:600;">Visitors</span>
     <div class="footer__clustrmap" style="margin-top: 10px; margin-bottom: 20px;">
       <div style="width: 150px; height: 150px;">
         <script
@@ -39,11 +37,9 @@
       </div>
     </div>
   </div>
-
   <!-- Spotify Playlists -->
-
   <div class="footer__spotify" style="display: flex; flex-direction: column; gap: 10px;">
-    <span class="footer__section-title">Listening</span>
+    <span style="color:#999; font-weight:600;">Listening</span>
     <!-- First Playlist (Jazz) -->
     <iframe
       style="border-radius:12px; width: 400px; height: 90px;"
@@ -64,18 +60,17 @@
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
       loading="lazy">
     </iframe>
-
     <!-- Playlist 3 (NEW) -->
     <iframe
       style="border-radius:12px; width: 400px; height: 90px;"
       src="https://open.spotify.com/embed/playlist/1cJ9WnD1JoJJV4VzdQ1K1Z?theme=0"
-      class="footer__spotify-embed"
+      frameBorder="0"
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
       loading="lazy">
     </iframe>
     </div>
 </div>
-
+</div>
 <div class="page__footer-copyright">
   &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }},
   {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }}
