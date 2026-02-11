@@ -1,5 +1,10 @@
 {% include base_path %}
 <div class="footer__top">
+  <!-- Sitemap -->
+  <div style="margin-bottom: 10px;">
+    <a href="/sitemap/" style="color:#999; font-weight:600; text-decoration:none;">Sitemap</a>
+  </div>
+  
   {% if site.author.github or site.author.bitbucket or site.atom_feed.hide != true %}
   <div class="page__footer-follow">
     <ul class="social-icons">
@@ -23,10 +28,11 @@
     </ul>
   </div>
   {% endif %}
-<div class="footer__extras" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
+
+<div class="footer__extras" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap; margin-top: 15px;">
   <!-- Visitors map -->
   <div class="page__footer-visitors">
-    <span style="color:#999; font-weight:600;">Visitors</span>
+    <span style="">Visitors</span>
     <div class="footer__clustrmap" style="margin-top: 10px; margin-bottom: 20px;">
       <div style="width: 150px; height: 150px;">
         <script
@@ -37,10 +43,10 @@
       </div>
     </div>
   </div>
+  
   <!-- Spotify Playlists -->
   <div class="footer__spotify" style="display: flex; flex-direction: column; gap: 10px;">
-    <span style="color:#999; font-weight:600;">Listening</span>
-    <!-- First Playlist (Jazz) -->
+    <span style="">Listening</span>
     <iframe
       style="border-radius:12px; width: 400px; height: 90px;"
       src="https://open.spotify.com/embed/playlist/0rGMcXyrxCuw5GGxl9WwXX?theme=0"
@@ -50,7 +56,6 @@
       loading="lazy">
     </iframe>
     
-    <!-- Second Playlist -->
     <iframe
       data-testid="embed-iframe"
       style="border-radius:12px; width: 400px; height: 90px;"
@@ -60,7 +65,7 @@
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
       loading="lazy">
     </iframe>
-    <!-- Playlist 3 (NEW) -->
+    
     <iframe
       style="border-radius:12px; width: 400px; height: 90px;"
       src="https://open.spotify.com/embed/playlist/1cJ9WnD1JoJJV4VzdQ1K1Z?theme=0"
@@ -68,9 +73,10 @@
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
       loading="lazy">
     </iframe>
-    </div>
+  </div>
 </div>
 </div>
+
 <div class="page__footer-copyright">
   &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }},
   {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }}
