@@ -13,6 +13,7 @@ nav: main
 Department of Electrical and Electronics Engineering <br>
 TED University, Ankara, Turkey <br>
 Jul 2021 – Jul 2024
+  - Directed academic governance, accreditation (MUDEK), program development, faculty recruitment, and laboratory expansion while supervising 200+ students and leading departmental strategic growth.
 
 - **Associate Professor** <br>
 Department of Electrical and Electronics Engineering <br>
