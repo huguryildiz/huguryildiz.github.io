@@ -1,10 +1,5 @@
 {% include base_path %}
 <div class="footer__top">
-  <!-- Sitemap -->
-  <div style="margin-bottom: 10px;">
-    <a href="/sitemap/" style="color:#999; font-weight:600; text-decoration:none;">Sitemap</a>
-  </div>
-  
   {% if site.author.github or site.author.bitbucket or site.atom_feed.hide != true %}
   <div class="page__footer-follow">
     <ul class="social-icons">
@@ -30,21 +25,29 @@
   {% endif %}
 
 <div class="footer__extras" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap; margin-top: 15px;">
-  <!-- Visitors map -->
-  <div class="page__footer-visitors">
-    <span style="">Visitors</span>
-    <div class="footer__clustrmap" style="margin-top: 10px; margin-bottom: 20px;">
-      <div style="width: 150px; height: 150px;">
-        <script
-          type="text/javascript"
-          id="clstr_globe"
-          src="//clustrmaps.com/globe.js?d=Ff5N5seCdUggOy-cQ08tNCYmISlt6bFGtSiHyvOpvNA">
-        </script>
+  <!-- Left Column: Sitemap + Visitors -->
+  <div style="display: flex; flex-direction: column; gap: 5px;">
+    <!-- Sitemap -->
+    <div>
+      <a href="/sitemap/">Sitemap</a>
+    </div>
+    
+    <!-- Visitors map -->
+    <div class="page__footer-visitors">
+      <span style="">Visitors</span>
+      <div class="footer__clustrmap" style="margin-top: 10px; margin-bottom: 20px;">
+        <div style="width: 150px; height: 150px;">
+          <script
+            type="text/javascript"
+            id="clstr_globe"
+            src="//clustrmaps.com/globe.js?d=Ff5N5seCdUggOy-cQ08tNCYmISlt6bFGtSiHyvOpvNA">
+          </script>
+        </div>
       </div>
     </div>
   </div>
   
-  <!-- Spotify Playlists -->
+  <!-- Right Column: Listening + Spotify Playlists -->
   <div class="footer__spotify" style="display: flex; flex-direction: column; gap: 10px;">
     <span style="">Listening</span>
     <iframe
