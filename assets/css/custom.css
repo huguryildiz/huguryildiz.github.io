@@ -120,23 +120,39 @@ details[open] {
   margin-bottom: 0.35rem;
 }
 
-/* Footer visitor map alignment + sizing */
-.footer__clustrmap{
+/* =========================
+   Footer extras (Visitors + Spotify)
+   ========================= */
+
+.footer__extras{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 16px;
+}
+
+/* Left block */
+.footer__visitors{
+  flex: 0 0 auto;
   text-align: left;
-  margin-top: 12px;
 }
 
-/* This controls the visible box (no tiny width!) */
-.footer__clustrmap-inner{
-  width: 100px;            /* 👈 burayı değiştir */
-  max-width: 100%;
-  overflow: hidden;        /* büyükse kırp, ama kontrollü */
+/* Right block */
+.footer__spotify{
+  flex: 0 0 320px;   /* Spotify genişliği */
+  max-width: 320px;
 }
 
-/* Scale the generated embed itself */
-.footer__clustrmap-inner iframe,
-.footer__clustrmap-inner canvas{
-  transform: scale(0.3);  /* 👈 burayı değiştir */
-  transform-origin: left top;
-  display: block;
+/* Mobile: alt alta gelsin */
+@media (max-width: 768px){
+  .footer__extras{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footer__spotify{
+    max-width: 100%;
+  }
 }
+
