@@ -7,7 +7,7 @@ author_profile: true
 
 ## Research Summary
 
-My research focuses on routing, resource allocation, and energy-efficient design of networked systems, with an emphasis on wireless ad hoc networks and underwater acoustic sensor networks. I develop optimization-based models and increasingly combine them with reinforcement learning to address scalability and uncertainty.
+My research focuses on routing, resource allocation, and energy-efficient design of networked systems, with an emphasis on wireless ad hoc networks, underwater acoustic sensor networks, and drone-assisted aerial networks. I develop optimization-based models and increasingly combine them with reinforcement learning to address scalability and uncertainty.
 
 More recently, I have been exploring hybrid classical–quantum network routing, investigating how physical constraints such as entanglement lifetime and network reliability influence routing and control decisions.
 
