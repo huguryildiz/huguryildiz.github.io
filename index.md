@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Huseyin Ugur Yildiz"
+title: "Home"
 author_profile: true
 permalink: /
 ---
