@@ -10,9 +10,6 @@ baseurl: ""
 repository: "huguryildiz/huguryildiz.github.io"
 timezone: Europe/Istanbul
 
-# Read time (fix "Undefined parameter words_per_minute")
-words_per_minute: 200
-
 # =========================
 # Theme
 # =========================
@@ -88,7 +85,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true     # <-- FIX: was false (conflicted)
+      read_time: false     
       comments: false
       share: false
       related: false
@@ -106,7 +103,7 @@ permalink: /:categories/:title/
 # =========================
 author:
   name             : "Huseyin Ugur Yildiz"
-  avatar           : "https://huguryildiz.com/images/profile.png"
+  avatar           : "profile.png"
   bio              : "Associate Professor of Electrical Engineering | IEEE Senior Member"
   location         : "Ankara, Turkey"
   employer         : "TED University"
