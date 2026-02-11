@@ -1,7 +1,7 @@
 {% include base_path %}
 <div class="footer__top">
 <div class="footer__extras" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
-  <!-- Left Column: Sitemap + Follow + Visitors -->
+  <!-- Left Column: Sitemap + Follow + Listening + Visitors -->
   <div style="display: flex; flex-direction: column; gap: 10px;">
     <!-- Sitemap -->
     <div>
@@ -32,6 +32,25 @@
       </ul>
     </div>
     {% endif %}
+
+    <!-- Listening -->
+    <div style="display: flex; flex-direction: column; gap: 4px; font-size: 0.8em;">
+      <strong><span style="color: #999;">Listening</span></strong>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 2px;">
+        <a href="https://open.spotify.com/playlist/0rGMcXyrxCuw5GGxl9WwXX"
+           style="color: #999; text-decoration: none;" target="_blank">
+          <i class="fab fa-spotify"></i> Jazz
+        </a>
+        <a href="https://open.spotify.com/playlist/5bOF9kW6kCyQkrXdiUTwAu"
+           style="color: #999; text-decoration: none;" target="_blank">
+          <i class="fab fa-spotify"></i> Metal
+        </a>
+        <a href="https://open.spotify.com/playlist/1cJ9WnD1JoJJV4VzdQ1K1Z"
+           style="color: #999; text-decoration: none;" target="_blank">
+          <i class="fab fa-spotify"></i> Progressive House
+        </a>
+      </div>
+    </div>
     
     <!-- Visitors map -->
     <div class="page__footer-visitors">
@@ -45,25 +64,6 @@
           </script>
         </div>
       </div>
-    </div>
-  </div>
-  
-  <!-- Right Column: Listening -->
-  <div class="footer__spotify" style="display: flex; flex-direction: column; gap: 6px;">
-    <strong><span style="color: #999;">Listening</span></strong>
-    <div style="display: flex; flex-direction: column; gap: 4px; font-size: 0.8em; margin-top: 2px;">
-      <a href="https://open.spotify.com/playlist/0rGMcXyrxCuw5GGxl9WwXX"
-         style="color: #999; text-decoration: none;" target="_blank">
-        <i class="fab fa-spotify"></i> Jazz
-      </a>
-      <a href="https://open.spotify.com/playlist/5bOF9kW6kCyQkrXdiUTwAu"
-         style="color: #999; text-decoration: none;" target="_blank">
-        <i class="fab fa-spotify"></i> Metal
-      </a>
-      <a href="https://open.spotify.com/playlist/1cJ9WnD1JoJJV4VzdQ1K1Z"
-         style="color: #999; text-decoration: none;" target="_blank">
-        <i class="fab fa-spotify"></i> Progressive House
-      </a>
     </div>
   </div>
 </div>
