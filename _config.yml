@@ -32,7 +32,7 @@ search_provider: lunr
 
 breadcrumbs: false
 enable_copy_code_button: false
-read_time: true
+read_time: false
 related: false
 comments: false
 share: false
@@ -106,7 +106,7 @@ permalink: /:categories/:title/
 # =========================
 author:
   name             : "Huseyin Ugur Yildiz"
-  avatar           : "/images/profile.png"
+  avatar           : "https://huguryildiz.com/images/profile.png"
   bio              : "Associate Professor of Electrical Engineering | IEEE Senior Member"
   location         : "Ankara, Turkey"
   employer         : "TED University"
