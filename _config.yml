@@ -10,6 +10,9 @@ baseurl: ""
 repository: "huguryildiz/huguryildiz.github.io"
 timezone: Europe/Istanbul
 
+# Read time (fix "Undefined parameter words_per_minute")
+words_per_minute: 200
+
 # =========================
 # Theme
 # =========================
@@ -66,7 +69,7 @@ social:
 analytics:
   provider: "google-gtag"
   google:
-    tracking_id: "G-XXXXXXXXXX"   # <-- kendi ID'ni koy
+    tracking_id: "G-FPSF7J6F4C"
     anonymize_ip: true
 
 # =========================
@@ -85,7 +88,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      read_time: true     # <-- FIX: was false (conflicted)
       comments: false
       share: false
       related: false
