@@ -122,13 +122,17 @@ author:
       icon: "ai ai-dblp"
       url: "https://dblp.org/pid/160/4924.html"
 
-    - label: "Web of Science"
-      icon: "fas fa-globe"
+    - label: "ResearcherID"
+      icon: "ai ai-researcherid"
       url: "https://www.webofscience.com/wos/author/record/S-6587-2016"
 
     - label: "Scopus"
       icon: "ai ai-scopus"
       url: "https://www.scopus.com/authid/detail.uri?authorId=56242674200"
+
+    - label: "IEEE Xplore"
+      icon: "ai ai-ieee"
+      url: "https://ieeexplore.ieee.org/author/37085350625"  
 
 # =========================
 # Excludes
