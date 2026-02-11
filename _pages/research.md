@@ -97,7 +97,7 @@ Integration of mathematical optimization frameworks with machine learning and re
 
   <div style="flex:3;">
     <h3 style="margin:0 0 10px 0;">
-      Resilient Drone-Assisted Aerial Networks and k-Connectivity Restoration
+      Resilient Drone-Assisted Aerial Networks
     </h3>
 
     <p style="margin:0;">
