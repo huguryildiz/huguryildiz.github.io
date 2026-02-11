@@ -3,7 +3,6 @@ layout: single
 title: "Publications"
 permalink: /publications/
 author_profile: true
-classes: no-page-title
 ---
 
 ## Metrics

@@ -3,7 +3,6 @@ layout: single
 title: "Students"
 permalink: /students/
 author_profile: true
-classes: no-page-title
 custom_css:
   - supervision-stats
 ---

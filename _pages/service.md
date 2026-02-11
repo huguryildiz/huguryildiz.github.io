@@ -3,7 +3,6 @@ layout: single
 title: "Service"
 permalink: /service/
 author_profile: true
-classes: no-page-title
 ---
 
 ## Technical Program Committee Memberships
