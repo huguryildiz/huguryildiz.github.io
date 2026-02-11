@@ -92,4 +92,15 @@ Co-advisor: [Prof. Kemal Bicakci](https://scholar.google.com/citations?user=HCTy
 [![VS Code](/images/icons/vscode.jpg "Visual Studio Code – Lightweight Code Editor"){:width="36"}](https://code.visualstudio.com)
 [![Cursor](/images/icons/cursor.jpg "Cursor – AI-Powered Code Editor"){:width="36"}](https://cursor.sh)
 
+## Professional Development
+
+- **Reinforcement Learning Specialization**, University of Alberta (Coursera), 2025  
+  [![Credential](https://img.shields.io/badge/Credential-Verified-1f77b4?style=flat-square)](https://www.coursera.org/account/accomplishments/specialization/26BOL8LTVD7S)
+
+- **Deep Learning Specialization**, DeepLearning.AI (Coursera), 2025  
+  [![Credential](https://img.shields.io/badge/Credential-Verified-1f77b4?style=flat-square)](https://www.coursera.org/account/accomplishments/specialization/JGGZ4NGSKTQZ)
+
+- **Machine Learning Specialization**, DeepLearning.AI (Coursera), 2025  
+  [![Credential](https://img.shields.io/badge/Credential-Verified-1f77b4?style=flat-square)](https://www.coursera.org/account/accomplishments/specialization/FGT2PNQ9NYVL)
+
 
