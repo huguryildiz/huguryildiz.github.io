@@ -3,7 +3,6 @@ layout: single
 title: "CV"
 permalink: /cv/
 author_profile: true
-classes: no-page-title
 ---
 
 
