@@ -141,4 +141,4 @@ exclude:
   - vendor
 
 # Force rebuild
-force_rebuild: 2026-02-11-01
+force_rebuild: 2026-02-11-03

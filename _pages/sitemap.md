@@ -5,7 +5,7 @@ permalink: /sitemap/
 ---
 
 - [Home](/)
-- [Experience](/experience/)
+- [CV](/cv)
 - [Publications](/publications/)
 - [Research](/research/)
 - [Service](/service/)
