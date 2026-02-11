@@ -48,39 +48,26 @@
     </div>
   </div>
   
-  <!-- Right Column: Listening + Spotify Playlists -->
-  <div class="footer__spotify" style="display: flex; flex-direction: column; gap: 10px;">
+  <!-- Right Column: Listening -->
+  <div class="footer__spotify" style="display: flex; flex-direction: column; gap: 6px;">
     <strong><span style="color: #999;">Listening</span></strong>
-    <iframe
-      style="border-radius:12px; width: 400px; height: 85px;"
-      src="https://open.spotify.com/embed/playlist/0rGMcXyrxCuw5GGxl9WwXX?theme=0"
-      frameBorder="0"
-      allowfullscreen=""
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy">
-    </iframe>
-    
-    <iframe
-      data-testid="embed-iframe"
-      style="border-radius:12px; width: 400px; height: 85px;"
-      src="https://open.spotify.com/embed/playlist/5bOF9kW6kCyQkrXdiUTwAu?utm_source=generator&theme=0"
-      frameBorder="0"
-      allowfullscreen=""
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy">
-    </iframe>
-    
-    <iframe
-      style="border-radius:12px; width: 400px; height: 85px;"
-      src="https://open.spotify.com/embed/playlist/1cJ9WnD1JoJJV4VzdQ1K1Z?theme=0"
-      frameBorder="0"
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy">
-    </iframe>
+    <div style="display: flex; flex-direction: column; gap: 4px; font-size: 0.8em; margin-top: 2px;">
+      <a href="https://open.spotify.com/playlist/0rGMcXyrxCuw5GGxl9WwXX"
+         style="color: #999; text-decoration: none;" target="_blank">
+        <i class="fab fa-spotify"></i> Jazz
+      </a>
+      <a href="https://open.spotify.com/playlist/5bOF9kW6kCyQkrXdiUTwAu"
+         style="color: #999; text-decoration: none;" target="_blank">
+        <i class="fab fa-spotify"></i> Metal
+      </a>
+      <a href="https://open.spotify.com/playlist/1cJ9WnD1JoJJV4VzdQ1K1Z"
+         style="color: #999; text-decoration: none;" target="_blank">
+        <i class="fab fa-spotify"></i> Progressive House
+      </a>
+    </div>
   </div>
 </div>
 </div>
-
 <div class="page__footer-copyright">
   &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }},
   {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }}

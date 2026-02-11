@@ -196,76 +196,58 @@ Catch everything else
 */
 
 /* =========================================================
-   Publications Donut Charts — Typography Alignment
-   Matches chart fonts with the site theme typography
+   Publications Donut Charts — Minimal Theme-Aligned Style
    ========================================================= */
 
-/* Inherit theme font family and text color */
-.pub-chart__title,
-.qdonut-legend,
-.qdonut-legend__row,
-.qdonut-legend__row span,
+/* Inherit theme font and color */
 .qdonut-wrap,
-.qdonut-svg text {
+.qdonut-svg text,
+.qdonut-legend,
+.pub-chart__title {
   font-family: inherit !important;
   color: inherit;
 }
 
-/* Chart title styling (slightly smaller than H3) */
+/* Chart title (match theme h3 weight) */
 .pub-chart__title {
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin: 0 0 0.75rem 0;
+  font-size: 1rem;
+  font-weight: 600;   /* was 700 */
+  margin-bottom: 0.75rem;
 }
 
-/* Legend text styling (match body size) */
+/* Legend styling */
 .qdonut-legend {
   font-size: 0.95rem;
-  line-height: 1.35;
+  font-weight: 400;   /* remove bold */
+  line-height: 1.4;
   margin-top: 0.75rem;
 }
 
-/* Legend color swatch size */
-.qdonut-legend__swatch {
-  width: 12px;
-  height: 12px;
-  border-radius: 4px;
-  margin-right: 10px;
-}
-
-/* Segment value labels inside donut slices */
+/* Segment numbers */
 .qdonut-count {
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-size: 0.9rem;
+  font-weight: 500;   /* softer */
   fill: #ffffff;
 }
 
-/* Center total number (e.g., 43 / 24) */
+/* Center total (main number) */
 .qdonut-total {
-  font-size: 2.2rem;
-  font-weight: 800;
+  font-size: 2rem;
+  font-weight: 600;   /* was 800 */
   fill: currentColor;
 }
 
-/* Center subtitle (e.g., "total", "journals") */
+/* Subtitle inside donut */
 .qdonut-sub {
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 400;   /* remove bold */
   fill: currentColor;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
-/* Constrain SVG size for better visual balance */
-.qdonut-svg {
-  max-width: 240px;
-  height: auto !important;
-}
-
-/* Mobile adjustments for compact layout */
-@media (max-width: 480px) {
-  .pub-chart__title { font-size: 1rem; }
-  .qdonut-total { font-size: 1.9rem; }
-  .qdonut-sub { font-size: 0.9rem; }
-  .qdonut-legend { font-size: 0.9rem; }
-  .qdonut-svg { max-width: 210px; }
+/* Reduce visual heaviness of legend swatches */
+.qdonut-legend__swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
 }
