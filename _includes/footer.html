@@ -5,7 +5,7 @@
   <div style="display: flex; flex-direction: column; gap: 10px;">
     <!-- Sitemap -->
     <div>
-      <a href="/sitemap/" style="color: #999; font-weight: 600;">Sitemap</a>
+      <strong><a href="/sitemap/" style="color: #999;">Sitemap</a></strong>
     </div>
     
     <!-- Follow -->
@@ -13,7 +13,7 @@
     <div class="page__footer-follow">
       <ul class="social-icons">
         {% if site.data.ui-text[site.locale].follow_label %}
-          <li><strong style="color: #999; font-weight: 600;">{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
+          <li><strong style="color: #999;">{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
         {% endif %}
         {% if site.author.github %}
           <li><a href="https://github.com/{{ site.author.github }}" style="color: #999;"><i class="fab fa-github"></i> GitHub</a></li>
@@ -35,7 +35,7 @@
     
     <!-- Visitors map -->
     <div class="page__footer-visitors">
-      <span style="color: #999; font-weight: 600;">Visitors</span>
+      <strong><span style="color: #999;">Visitors</span></strong>
       <div class="footer__clustrmap" style="margin-top: 10px; margin-bottom: 20px;">
         <div style="width: 150px; height: 150px;">
           <script
@@ -50,9 +50,9 @@
   
   <!-- Right Column: Listening + Spotify Playlists -->
   <div class="footer__spotify" style="display: flex; flex-direction: column; gap: 10px;">
-    <span style="color: #999; font-weight: 600;">Listening</span>
+    <strong><span style="color: #999;">Listening</span></strong>
     <iframe
-      style="border-radius:12px; width: 350px; height: 80px;"
+      style="border-radius:12px; width: 400px; height: 90px;"
       src="https://open.spotify.com/embed/playlist/0rGMcXyrxCuw5GGxl9WwXX?theme=0"
       frameBorder="0"
       allowfullscreen=""
@@ -62,7 +62,7 @@
     
     <iframe
       data-testid="embed-iframe"
-      style="border-radius:12px; width: 350px; height: 80px;"
+      style="border-radius:12px; width: 400px; height: 90px;"
       src="https://open.spotify.com/embed/playlist/5bOF9kW6kCyQkrXdiUTwAu?utm_source=generator&theme=0"
       frameBorder="0"
       allowfullscreen=""
@@ -71,7 +71,7 @@
     </iframe>
     
     <iframe
-      style="border-radius:12px; width: 350px; height: 80px;"
+      style="border-radius:12px; width: 400px; height: 90px;"
       src="https://open.spotify.com/embed/playlist/1cJ9WnD1JoJJV4VzdQ1K1Z?theme=0"
       frameBorder="0"
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
