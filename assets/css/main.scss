@@ -79,7 +79,7 @@
 
   display: inline-flex;
   align-items: center;
-  line-height: 0;   /* <-- kills the thin blue line */
+  line-height: 0;
   padding: 0;
 }
 
@@ -93,32 +93,27 @@
    Research Areas
    ========================= */
 
-/* Containers */
 .ra-container { margin-top: 1.25rem; }
 .ra-section   { margin-bottom: 1.5rem; }
 
-/* Title: inherit theme colors (fix dark mode) */
 .ra-title{
   margin-bottom: .75rem;
   font-weight: 700;
-  color: inherit;          /* <-- key fix */
+  color: inherit;
 }
 
-/* If you use h2/h3 in the section, force same behavior */
 .ra-section h2,
 .ra-section h3,
 .ra-section h4{
-  color: inherit;          /* <-- key fix */
+  color: inherit;
 }
 
-/* Chip wrapper */
 .ra-wrap{
   display: flex;
   flex-wrap: wrap;
   gap: .6rem;
 }
 
-/* Base chip */
 .ra-chip{
   padding: .45rem 1rem;
   border-radius: 999px;
@@ -152,7 +147,7 @@
 
 .footer__visitors{
   margin-top: 1.5rem;
-  text-align: left;            /* <-- SOL */
+  text-align: left;
 }
 
 .footer__visitors h4{
@@ -165,35 +160,16 @@
 .footer__visitors-map{
   width: 160px;
   height: 160px;
-  margin-left: 0;              /* <-- SOLA YAPIŞIK */
+  margin-left: 0;
   overflow: hidden;
 }
 
-/* Scale the globe */
 .footer__visitors-map iframe,
 .footer__visitors-map canvas,
 .footer__visitors-map > div{
   transform: scale(0.7);
   transform-origin: top left;
 }
-
-/* 
-==========================
-GLOBAL FONT OVERRIDE
-==========================
-
-Force Lora everywhere
-
-html, body {
-  font-family: "Lora", Georgia, serif !important;
-}
-
-Catch everything else
-
-* {
-  font-family: "Lora", Georgia, serif !important;
-}
-*/
 
 /* =========================================================
    Publications Donut Charts — Minimal Theme-Aligned Style
@@ -208,44 +184,44 @@ Catch everything else
   color: inherit;
 }
 
-/* Chart title (match theme h3 weight) */
+/* Chart title */
 .pub-chart__title {
-  font-size: 1rem;
-  font-weight: 600;   /* was 700 */
+  font-size: inherit;
+  font-weight: 600;
   margin-bottom: 0.75rem;
 }
 
 /* Legend styling */
 .qdonut-legend {
-  font-size: 0.95rem;
-  font-weight: 400;   /* remove bold */
+  font-size: inherit;
+  font-weight: normal;
   line-height: 1.4;
   margin-top: 0.75rem;
 }
 
 /* Segment numbers */
 .qdonut-count {
-  font-size: 0.9rem;
-  font-weight: 500;   /* softer */
+  font-size: inherit;
+  font-weight: normal;
   fill: #ffffff;
 }
 
 /* Center total (main number) */
 .qdonut-total {
-  font-size: 2rem;
-  font-weight: 600;   /* was 800 */
+  font-size: 1.8em;
+  font-weight: normal;
   fill: currentColor;
 }
 
 /* Subtitle inside donut */
 .qdonut-sub {
-  font-size: 0.9rem;
-  font-weight: 400;   /* remove bold */
+  font-size: inherit;
+  font-weight: normal;
   fill: currentColor;
   opacity: 0.8;
 }
 
-/* Reduce visual heaviness of legend swatches */
+/* Legend swatches */
 .qdonut-legend__swatch {
   width: 10px;
   height: 10px;
