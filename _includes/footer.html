@@ -5,7 +5,7 @@
   <div style="display: flex; flex-direction: column; gap: 10px;">
     <!-- Sitemap -->
     <div>
-      <a href="/sitemap/">Sitemap</a>
+      <a href="/sitemap/" style="color: #999;">Sitemap</a>
     </div>
     
     <!-- Follow -->
@@ -13,17 +13,17 @@
     <div class="page__footer-follow">
       <ul class="social-icons">
         {% if site.data.ui-text[site.locale].follow_label %}
-          <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
+          <li><strong style="color: #999;">{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
         {% endif %}
         {% if site.author.github %}
-          <li><a href="https://github.com/{{ site.author.github }}"><i class="fab fa-github"></i> GitHub</a></li>
+          <li><a href="https://github.com/{{ site.author.github }}" style="color: #999;"><i class="fab fa-github"></i> GitHub</a></li>
         {% endif %}
         {% if site.author.bitbucket %}
-          <li><a href="https://bitbucket.org/{{ site.author.bitbucket }}"><i class="fab fa-bitbucket"></i> Bitbucket</a></li>
+          <li><a href="https://bitbucket.org/{{ site.author.bitbucket }}" style="color: #999;"><i class="fab fa-bitbucket"></i> Bitbucket</a></li>
         {% endif %}
         {% if site.atom_feed.hide != true %}
           <li>
-            <a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}">
+            <a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" style="color: #999;">
               <i class="fa fa-fw fa-rss-square"></i>
               {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}
             </a>
@@ -35,7 +35,7 @@
     
     <!-- Visitors map -->
     <div class="page__footer-visitors">
-      <span style="">Visitors</span>
+      <span style="color: #999;">Visitors</span>
       <div class="footer__clustrmap" style="margin-top: 10px; margin-bottom: 20px;">
         <div style="width: 150px; height: 150px;">
           <script
@@ -50,9 +50,9 @@
   
   <!-- Right Column: Listening + Spotify Playlists -->
   <div class="footer__spotify" style="display: flex; flex-direction: column; gap: 10px;">
-    <span style="">Listening</span>
+    <span style="color: #999;">Listening</span>
     <iframe
-      style="border-radius:12px; width: 400px; height: 90px;"
+      style="border-radius:12px; width: 400px; height: 80px;"
       src="https://open.spotify.com/embed/playlist/0rGMcXyrxCuw5GGxl9WwXX?theme=0"
       frameBorder="0"
       allowfullscreen=""
@@ -62,7 +62,7 @@
     
     <iframe
       data-testid="embed-iframe"
-      style="border-radius:12px; width: 400px; height: 90px;"
+      style="border-radius:12px; width: 400px; height: 80px;"
       src="https://open.spotify.com/embed/playlist/5bOF9kW6kCyQkrXdiUTwAu?utm_source=generator&theme=0"
       frameBorder="0"
       allowfullscreen=""
@@ -71,7 +71,7 @@
     </iframe>
     
     <iframe
-      style="border-radius:12px; width: 400px; height: 90px;"
+      style="border-radius:12px; width: 400px; height: 80px;"
       src="https://open.spotify.com/embed/playlist/1cJ9WnD1JoJJV4VzdQ1K1Z?theme=0"
       frameBorder="0"
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
