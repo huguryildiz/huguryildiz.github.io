@@ -3,7 +3,7 @@
    - Fix: light mode text turning white (prefers-color-scheme trap removed)
    - Donut center text + legend always readable
    - Legend below donut
-   - Sticky filter card that doesn't overlap / collide
+   - NO STICKY filter card
    ========================================================= */
 
 
@@ -168,7 +168,7 @@ body.theme-dark{
   border: 1px solid var(--pub-border);
 }
 
-/* FORCE: ensure center + legend never “white in light mode” */
+/* FORCE: ensure center + legend never "white in light mode" */
 .pub-chart svg{ color: var(--pub-text) !important; }
 .pub-chart .qdonut-total,
 .pub-chart .qdonut-sub{ fill: var(--pub-text) !important; }
@@ -184,13 +184,11 @@ body.theme-dark{
 
 
 /* =========================
-   3) PUBLICATIONS FILTER (STICKY CARD)
+   3) PUBLICATIONS FILTER (REGULAR CARD - NOT STICKY)
    ========================= */
 .pub-filter-sticky{
-  position: sticky;
-  top: 90px;                     /* adjust if header height differs */
-  z-index: 30;
-
+  /* REMOVED: position: sticky; top: 90px; z-index: 30; */
+  
   margin: 18px 0 26px 0;
   padding: 14px 14px 12px 14px;
 
@@ -271,13 +269,11 @@ body.theme-dark{
   .pub-filter{ align-items: stretch; }
 }
 
-/* Prevent sticky card overlapping section headers when jumping via anchors */
-:target{
-  scroll-margin-top: 120px; /* should be > sticky top */
-}
+/* REMOVED: :target scroll-margin-top (no longer needed without sticky) */
+
 
 /* =========================================================
-   Dark mode: Sticky filter background = donut card background
+   Dark mode: Filter background = donut card background
    (match pub-chart exactly)
    ========================================================= */
 
@@ -333,7 +329,7 @@ html.theme-dark, body.theme-dark{
   box-shadow: 0 0 0 3px rgba(0,126,199,.35) !important;
 }
 
-/* disabled / passive state (ileride Apply için kullanırsan) */
+/* disabled / passive state */
 #pubApply.is-disabled,
 #pubApply:disabled{
   background-color: rgba(0,126,199,.45) !important;
