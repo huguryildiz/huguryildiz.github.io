@@ -67,7 +67,7 @@ Co-advisor: [Prof. Kemal Bicakci](https://scholar.google.com/citations?user=HCTy
   IEEE Middle East and North Africa Communications Conference (MENACOMM) 2019, Manama, Kingdom of Bahrain <br>
   [![Award](https://img.shields.io/badge/Award-Best_Paper-gold?style=flat-square)](https://drive.google.com/file/d/1QbpfuRXmyoTQCFJAFh_H-exv3v3Q8L-t/view)
 
-  ## Technical Toolbox
+## Technical Toolbox
 
 **Programming & Scientific Computing**
 
