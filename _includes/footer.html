@@ -1,36 +1,37 @@
 {% include base_path %}
 <div class="footer__top">
-  {% if site.author.github or site.author.bitbucket or site.atom_feed.hide != true %}
-  <div class="page__footer-follow">
-    <ul class="social-icons">
-      {% if site.data.ui-text[site.locale].follow_label %}
-        <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
-      {% endif %}
-      {% if site.author.github %}
-        <li><a href="https://github.com/{{ site.author.github }}"><i class="fab fa-github"></i> GitHub</a></li>
-      {% endif %}
-      {% if site.author.bitbucket %}
-        <li><a href="https://bitbucket.org/{{ site.author.bitbucket }}"><i class="fab fa-bitbucket"></i> Bitbucket</a></li>
-      {% endif %}
-      {% if site.atom_feed.hide != true %}
-        <li>
-          <a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}">
-            <i class="fa fa-fw fa-rss-square"></i>
-            {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}
-          </a>
-        </li>
-      {% endif %}
-    </ul>
-  </div>
-  {% endif %}
-
-<div class="footer__extras" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap; margin-top: 15px;">
-  <!-- Left Column: Sitemap + Visitors -->
-  <div style="display: flex; flex-direction: column; gap: 5px;">
+<div class="footer__extras" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
+  <!-- Left Column: Sitemap + Follow + Visitors -->
+  <div style="display: flex; flex-direction: column; gap: 10px;">
     <!-- Sitemap -->
     <div>
       <a href="/sitemap/">Sitemap</a>
     </div>
+    
+    <!-- Follow -->
+    {% if site.author.github or site.author.bitbucket or site.atom_feed.hide != true %}
+    <div class="page__footer-follow">
+      <ul class="social-icons">
+        {% if site.data.ui-text[site.locale].follow_label %}
+          <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
+        {% endif %}
+        {% if site.author.github %}
+          <li><a href="https://github.com/{{ site.author.github }}"><i class="fab fa-github"></i> GitHub</a></li>
+        {% endif %}
+        {% if site.author.bitbucket %}
+          <li><a href="https://bitbucket.org/{{ site.author.bitbucket }}"><i class="fab fa-bitbucket"></i> Bitbucket</a></li>
+        {% endif %}
+        {% if site.atom_feed.hide != true %}
+          <li>
+            <a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}">
+              <i class="fa fa-fw fa-rss-square"></i>
+              {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}
+            </a>
+          </li>
+        {% endif %}
+      </ul>
+    </div>
+    {% endif %}
     
     <!-- Visitors map -->
     <div class="page__footer-visitors">
