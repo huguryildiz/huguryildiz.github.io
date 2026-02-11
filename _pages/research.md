@@ -33,78 +33,109 @@ Integration of mathematical optimization frameworks with machine learning and re
 <!-- =========================
      Research Topic 1
      ========================= -->
-<div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
+<div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:40px;">
 
-  <div style="flex:1; min-width:150px;">
+  <div style="flex:1; min-width:160px;">
     <img src="/images/research/network_flow_optimization.png"
-         style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:6px;">
+         style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:8px;">
   </div>
 
   <div style="flex:3;">
-    <h3 style="margin:0 0 8px 0;">
+    <h3 style="margin:0 0 10px 0;">
       Operations Research and Mathematical Optimization for Networked Systems
     </h3>
 
     <p style="margin:0;">
       Development of linear, integer, and mixed-integer programming (MILP) models,
       including network flow–based formulations, for complex optimization problems
-      in communication networks. Primary focus areas include network lifetime
-      maximization, energy efficiency, resource allocation, energy–delay–reliability
-      trade-offs, and resilience under physical, topological, and security constraints.
+      in communication networks. Core themes include network lifetime maximization,
+      energy efficiency, resource allocation, energy–delay–reliability trade-offs,
+      and resilience under physical, topological, and security constraints.
     </p>
   </div>
 
 </div>
 
+
 <!-- =========================
      Research Topic 2 (zig-zag)
      ========================= -->
-<div style="display:flex; flex-direction:row-reverse; gap:20px; align-items:flex-start; margin-bottom:30px;">
+<div style="display:flex; flex-direction:row-reverse; gap:20px; align-items:flex-start; margin-bottom:40px;">
 
-  <div style="flex:1; min-width:150px;">
+  <div style="flex:1; min-width:160px;">
     <img src="/images/research/wireless_ad_hoc_underwater_sensor_networks.png"
-         style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:6px;">
+         style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:8px;">
   </div>
 
   <div style="flex:3;">
-    <h3 style="margin:0 0 8px 0;">
-      Wireless Ad Hoc and Underwater Sensor Networks
+    <h3 style="margin:0 0 10px 0;">
+      Wireless Ad Hoc and Underwater Acoustic Sensor Networks
     </h3>
 
     <p style="margin:0;">
       Design and optimization of energy-efficient routing, topology control, and
       communication strategies for terrestrial wireless ad hoc networks and
       underwater acoustic sensor networks. Research topics span network lifetime
-      and energy-efficiency analysis, k-connectivity–based reliability, multi-sink
-      architectures, void regions, adversarial effects, and operation under harsh
+      analysis, k-connectivity–based reliability, multi-sink architectures,
+      void-region mitigation, adversarial effects, and operation under harsh
       and resource-constrained environments.
     </p>
   </div>
 
 </div>
 
+
 <!-- =========================
      Research Topic 3
      ========================= -->
-<div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
+<div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:40px;">
 
-  <div style="flex:1; min-width:150px;">
-    <img src="/images/research/hybrid_opt_rl_networks.png"
-         style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:6px;">
+  <div style="flex:1; min-width:160px;">
+    <img src="/images/research/drone_network_resilience.png"
+         style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:8px;">
   </div>
 
   <div style="flex:3;">
-    <h3 style="margin:0 0 8px 0;">
+    <h3 style="margin:0 0 10px 0;">
+      Resilient Drone-Assisted Aerial Networks and k-Connectivity Restoration
+    </h3>
+
+    <p style="margin:0;">
+      Design and restoration of resilient k-connected drone networks using
+      integer programming and heuristic optimization techniques.
+      This research investigates mobility-aware connectivity restoration,
+      minimum-movement strategies, and topology adaptation in grid-based
+      aerial deployments. Recent work develops exact optimization models
+      and scalable heuristics to balance resilience, execution time,
+      and mobility cost in drone-assisted communication systems.
+    </p>
+  </div>
+
+</div>
+
+
+<!-- =========================
+     Research Topic 4 (zig-zag)
+     ========================= -->
+<div style="display:flex; flex-direction:row-reverse; gap:20px; align-items:flex-start; margin-bottom:40px;">
+
+  <div style="flex:1; min-width:160px;">
+    <img src="/images/research/hybrid_opt_rl_networks.png"
+         style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:8px;">
+  </div>
+
+  <div style="flex:3;">
+    <h3 style="margin:0 0 10px 0;">
       Hybrid Optimization and Learning-Based Network Control
     </h3>
 
     <p style="margin:0;">
-      Integration of mathematical optimization frameworks with machine learning
-      and reinforcement learning techniques to enable adaptive, data-driven, and
-      scalable control of complex networked systems. Recent work explores hybrid
-      optimization–learning methodologies for parameter prediction, dynamic
-      decision-making, and emerging paradigms such as quantum network routing and
-      hybrid classical–quantum architectures.
+      Integration of mathematical optimization frameworks with machine
+      learning and reinforcement learning techniques to enable adaptive,
+      data-driven, and scalable control of complex networked systems.
+      Current work explores hybrid optimization–learning methodologies
+      for dynamic decision-making and emerging paradigms such as
+      hybrid classical–quantum network routing architectures.
     </p>
   </div>
 
