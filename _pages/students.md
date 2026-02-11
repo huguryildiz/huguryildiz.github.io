@@ -1,6 +1,6 @@
 ---
 layout: single
-title: ""
+title: "Students"
 permalink: /students/
 author_profile: true
 custom_css:

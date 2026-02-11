@@ -2,69 +2,81 @@
 # Site Settings
 # =========================
 title: "Huseyin Ugur Yildiz"
-description: "Associate Professor of Electrical Engineering, IEEE Senior Member"
+name: "Huseyin Ugur Yildiz"
+description: "Associate Professor of Electrical Engineering | IEEE Senior Member"
 locale: en-US
-
 url: "https://huguryildiz.com"
 baseurl: ""
-
 repository: "huguryildiz/huguryildiz.github.io"
+timezone: Europe/Istanbul
+
+# =========================
+# Theme
+# =========================
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "default"
+enable_darkmode: false
 
 header:
   overlay: false
 
-enable_darkmode: false
+# =========================
+# UI Settings
+# =========================
+search: true
+search_full_content: true
+search_provider: lunr
 
-# =========================
-# Theme (Minimal Mistakes)
-# =========================
-remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "default"   # "aqua" da olur
-
-# =========================
-# UI Simplification
-# =========================
-search: false
 breadcrumbs: false
 enable_copy_code_button: false
+read_time: true
+related: false
+comments: false
+share: false
 
 # =========================
-# Plugins (GitHub Pages uyumlu)
+# Feed (ON)
+# =========================
+atom_feed:
+  hide: false
+
+# =========================
+# SEO (ON)
 # =========================
 plugins:
   - jekyll-remote-theme
   - jekyll-include-cache
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-seo-tag
+
+title_separator: "|"
+
+social:
+  type: Person
+  name: "Huseyin Ugur Yildiz"
+  links:
+    - "https://github.com/huguryildiz"
+    - "https://www.linkedin.com/in/huguryildiz/"
+    - "https://scholar.google.com/citations?user=nQwHS1gAAAAJ"
 
 # =========================
-# IMPORTANT: Include _pages
+# Google Analytics (ON)
+# =========================
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "G-XXXXXXXXXX"   # <-- kendi ID'ni koy
+    anonymize_ip: true
+
+# =========================
+# Include Pages
 # =========================
 include:
   - _pages
 
-defaults:
-  - scope:
-      path: ""
-    values:
-      classes: wide  
-
 # =========================
-# Markdown & Permalinks
-# =========================
-markdown: kramdown
-highlighter: rouge
-
-# Sayfa permalinkleri front-matter ile kontrol edilecek
-permalink: /:categories/:title/
-
-# =========================
-# Navigation
-# =========================
-data_dir: _data
-
-# =========================
-# Defaults (AcademicPages standard)
+# Page Defaults
 # =========================
 defaults:
   - scope:
@@ -73,20 +85,25 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: false
+      read_time: true
       comments: false
       share: false
       related: false
+      classes: wide
 
-stylesheets:
-  - /assets/css/custom.css
+# =========================
+# Markdown
+# =========================
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
 
 # =========================
 # Author Profile
 # =========================
 author:
   name             : "Huseyin Ugur Yildiz"
-  avatar           : "profile.png"
+  avatar           : "/images/profile.png"
   bio              : "Associate Professor of Electrical Engineering | IEEE Senior Member"
   location         : "Ankara, Turkey"
   employer         : "TED University"
@@ -99,7 +116,6 @@ author:
 
   github           : "huguryildiz"
   linkedin         : "huguryildiz"
-  dblp             : "https://dblp.org/pid/160/4924.html"
 
   links:
     - label: "DBLP"
@@ -112,18 +128,7 @@ author:
 
     - label: "Scopus"
       icon: "ai ai-scopus"
-      url: "https://www.scopus.com/authid/detail.uri?authorId=56242674200"  
-
-
-# =========================
-# Build / Performance
-# =========================
-future: false
-timezone: Europe/Istanbul
-
-search: true
-search_full_content: true
-search_provider: lunr
+      url: "https://www.scopus.com/authid/detail.uri?authorId=56242674200"
 
 # =========================
 # Excludes
@@ -135,5 +140,5 @@ exclude:
   - node_modules
   - vendor
 
-# force rebuild
-force_rebuild: 2026-02-02-01
+# Force rebuild
+force_rebuild: 2026-02-11-01
