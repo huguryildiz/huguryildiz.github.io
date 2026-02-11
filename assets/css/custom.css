@@ -120,11 +120,23 @@ details[open] {
   margin-bottom: 0.35rem;
 }
 
-/* Footer visitor map alignment */
+/* Footer visitor map alignment + sizing */
 .footer__clustrmap{
   text-align: left;
   margin-top: 12px;
-  width: 30px;
-  transform: scale(0.75);
+}
+
+/* This controls the visible box (no tiny width!) */
+.footer__clustrmap-inner{
+  width: 220px;            /* 👈 burayı değiştir */
+  max-width: 100%;
+  overflow: hidden;        /* büyükse kırp, ama kontrollü */
+}
+
+/* Scale the generated embed itself */
+.footer__clustrmap-inner iframe,
+.footer__clustrmap-inner canvas{
+  transform: scale(0.75);  /* 👈 burayı değiştir */
   transform-origin: left top;
+  display: block;
 }
