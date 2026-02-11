@@ -126,3 +126,10 @@ details[open] {
 .page__header {
   display: none !important;
 }
+
+/* Hide the big page title block (Minimal Mistakes) */
+.page__inner-wrap > header,
+.page__inner-wrap > h1.page__title,
+.page__title {
+  display: none !important;
+}

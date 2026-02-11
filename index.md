@@ -5,7 +5,7 @@ author_profile: true
 permalink: /
 ---
 
-## About
+## Biography
  
 Huseyin Ugur Yildiz received the B.Sc. degree in Electrical and Electronics Engineering from [Bilkent University](https://w3.bilkent.edu.tr/bilkent/), Ankara, Turkey, in 2009, and the M.Sc. and Ph.D. degrees from [TOBB University of Economics and Technology](https://www.etu.edu.tr/en), Ankara, in 2013 and 2016, respectively.
 
@@ -135,30 +135,6 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
   background:#d8b4fe
 }
 </style>
-
-## Technical Toolbox
-
-**Programming & Scientific Computing**
-
-[![Python](/images/icons/python.jpg "Python – Scientific Computing, Optimization, and Machine Learning"){:width="36"}](https://www.python.org)
-[![MATLAB](/images/icons/matlab.jpg "MATLAB – Numerical Computing & Optimization"){:width="36"}](https://www.mathworks.com/products/matlab.html)
-[![LaTeX](/images/icons/latex.svg "LaTeX – Scientific Writing & Typesetting"){:width="36"}](https://www.latex-project.org)
-
-**Optimization & Mathematical Modeling**
-
-[![GAMS](/images/icons/gams.jpg "GAMS – Mathematical Modeling System"){:width="36"}](https://www.gams.com)
-[![Gurobi](/images/icons/gurobi.jpg "Gurobi Optimizer – Commercial MIP/LP Solver"){:width="36"}](https://www.gurobi.com)
-[![PuLP](/images/icons/pulp.jpg "PuLP – Python Linear Programming API"){:width="36"}](https://coin-or.github.io/pulp/)
-[![Pyomo](/images/icons/pyomo.jpg "Pyomo – Python Optimization Modeling Objects"){:width="36"}](https://www.pyomo.org)
-
-**Development**
-
-[![GitHub](/images/icons/github.jpg "GitHub – Version Control & Research Code Repositories"){:width="36"}](https://github.com)
-[![Jupyter](/images/icons/jupyter.jpg "Jupyter Notebook – Interactive Research & Prototyping Environment"){:width="36"}](https://jupyter.org)
-[![PyCharm](/images/icons/pycharm.jpg "PyCharm – Python IDE (JetBrains)"){:width="36"}](https://www.jetbrains.com/pycharm/)
-[![Spyder](/images/icons/spyder.jpg "Spyder – Scientific Python IDE"){:width="36"}](https://www.spyder-ide.org)
-[![VS Code](/images/icons/vscode.jpg "Visual Studio Code – Lightweight Code Editor"){:width="36"}](https://code.visualstudio.com)
-[![Cursor](/images/icons/cursor.jpg "Cursor – AI-Powered Code Editor"){:width="36"}](https://cursor.sh)
 
 ## News
 
