@@ -146,3 +146,13 @@ details[open] {
     opacity:1 !important;
   }
 }
+
+/* FORCE hamburger to show even if theme JS fails */
+@media (max-width: 768px){
+  .greedy-nav__toggle,
+  .greedy-nav__toggle.hidden{
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
