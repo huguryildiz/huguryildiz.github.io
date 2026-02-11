@@ -114,7 +114,7 @@ Integration of mathematical optimization frameworks with machine learning and re
 ## Code & Learning Resources
 
 - **wsn-opt-python:** A hands-on Python tutorial for network-flow–based optimization models in wireless sensor networks, intended for students and researchers.  
-  👉 [![GitHub Repository](https://img.shields.io/badge/GitHub_Repository-1f77b4?style=flat-square&logo=github&logoColor=white)](https://github.com/huguryildiz/wsn-opt-python)
+  [![GitHub Repository](https://img.shields.io/badge/GitHub_Repository-1f77b4?style=flat-square&logo=github&logoColor=white)](https://github.com/huguryildiz/wsn-opt-python)
 
 - **Underwater Networks – Basics:** An introductory document covering core principles of underwater acoustic communication and sensor networks.  
-  👉 [![Course Catalog Page](https://img.shields.io/badge/Course_Catalog_Page-1f77b4?style=flat-square)](https://www.tedu.edu.tr/ee-512)
+  [![PDF](https://img.shields.io/badge/PDF-Download-1f77b4?style=flat-square&logo=adobeacrobatreader)](/files/underwater_networks_basics.pdf)
