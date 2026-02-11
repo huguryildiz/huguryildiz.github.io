@@ -134,8 +134,15 @@ details[open] {
   display: none !important;
 }
 
-/* Force all nav items to stay inside hamburger on small screens */
+/* Mobile nav fix: keep hamburger working */
 @media (max-width: 768px){
-  .masthead__menu .visible-links{ display:none !important; }
-  .masthead__menu .hidden-links{ display:block !important; }
+  /* visible-links'i zorla kapatma -> greedy-nav bozuluyor */
+  .masthead__menu .visible-links{ display:flex !important; }
+
+  /* hamburger butonu her zaman görünsün */
+  .greedy-nav__toggle{
+    display:block !important;
+    visibility:visible !important;
+    opacity:1 !important;
+  }
 }
