@@ -44,21 +44,31 @@ a:hover {
 }
 
 /* =========================
-   News badges (pill)
+   News badges (pill) – FIXED
    ========================= */
 .news-badge {
   display: inline-block;
-  padding: 0.15em 0.55em;
-  margin-right: 0.45em;
+  padding: 0.2em 0.65em;
+  margin-right: 0.5em;
   border-radius: 999px;
   font-size: 0.85em;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  /* LIGHT MODE */
+  color: #064a57;                      /* koyu teal */
+  background: rgba(99, 231, 255, 0.18); /* biraz daha soft */
+  border: 1px solid rgba(99, 231, 255, 0.6);
+}
+
+/* DARK MODE */
+html.dark .news-badge,
+[data-theme="dark"] .news-badge {
   color: #eaffff;
   background: rgba(99, 231, 255, 0.25);
   border: 1px solid rgba(99, 231, 255, 0.5);
-  vertical-align: middle;
-  white-space: nowrap;
 }
 
 /* Subtle hover to feel clickable (optional) */
