@@ -333,11 +333,12 @@ body.theme-dark{
    Most Cited Paper - Blink Effect
    ===================================================== */
 
-.most-cited-badge img {
+/* Blink only the one badge (by ID) */
+#most-cited-badge{
   animation: citedBlink 1.6s infinite;
 }
 
-@keyframes citedBlink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: .35; }
+@keyframes citedBlink{
+  0%, 100%{ opacity: 1; }
+  50%{ opacity: .35; }
 }
