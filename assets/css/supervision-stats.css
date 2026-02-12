@@ -97,10 +97,10 @@ body.dark-mode .prospective-card{
 
   /* Use the same academic blue tone */
   background: radial-gradient(
-    circle at 50% 50%,
-    rgba(31,119,180,.22) /* academic blue */
-    rgba(31,119,180,0) 65%
-  );
+  circle at 50% 50%,
+  rgba(212,175,55,.16),   /* Academic gold */
+  rgba(212,175,55,0) 65%
+);
 
   opacity: 0;
   animation: academicPulse 3.8s ease-in-out infinite;
