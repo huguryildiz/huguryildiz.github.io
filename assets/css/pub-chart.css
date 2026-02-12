@@ -1,15 +1,19 @@
 /* =========================================================
-   pub-chart.css  (FULL)
-   - Fix: light mode text turning white (prefers-color-scheme trap removed)
+   pub-chart.css (CLEAN FULL)
+   - Single source of truth for tokens (light + dark)
    - Donut center text + legend always readable
    - Legend below donut
-   - NO STICKY filter card
+   - Filter card is NOT sticky
+   - Research metrics card matches donut cards
    ========================================================= */
 
 
-/* =========================
+/* =========================================================
    0) THEME TOKENS (LIGHT DEFAULT)
-   ========================= */
+   ---------------------------------------------------------
+   Use CSS variables everywhere so all cards stay consistent.
+   Dark mode overrides are defined ONCE below.
+   ========================================================= */
 :root{
   --pub-text: #222;
   --pub-muted: rgba(0,0,0,.68);
@@ -27,9 +31,18 @@
   --pub-input-text: #222;
   --pub-input-border: rgba(0,0,0,.18);
   --pub-focus: rgba(31,119,180,.35);
+
+  /* accent (buttons / glow etc.) */
+  --pub-accent: #007ec7;
+  --pub-accent-hover: #0069a8;
+  --pub-accent-focus: rgba(0,126,199,.35);
 }
 
-/* Dark theme (Minimal Mistakes / your toggles) */
+/* =========================================================
+   Dark theme override (Minimal Mistakes + custom toggles)
+   ---------------------------------------------------------
+   IMPORTANT: Define dark tokens ONLY here (no duplicates later).
+   ========================================================= */
 [data-theme="dark"],
 html[data-theme="dark"],
 body[data-theme="dark"],
@@ -42,7 +55,9 @@ body.theme-dark{
   --pub-text: rgba(255,255,255,.95);
   --pub-muted: rgba(255,255,255,.72);
 
-  --pub-card-bg: rgba(255,255,255,.08);
+  /* Choose ONE style: solid dark card background */
+  --pub-card-bg: #3f3f3f;
+
   --pub-shadow: 0 14px 34px rgba(0,0,0,.55);
   --pub-border: rgba(255,255,255,.14);
 
@@ -52,32 +67,30 @@ body.theme-dark{
   --pub-focus: rgba(255,255,255,.18);
 }
 
-/* IMPORTANT:
-   prefers-color-scheme fallback REMOVED on purpose.
-   Because it can override your "light" UI when OS is dark. */
+/* NOTE:
+   prefers-color-scheme fallback intentionally REMOVED.
+   We rely on your theme toggle/data-theme instead. */
 
 
-/* =========================
+/* =========================================================
    1) METRICS LAYOUT (2 CARDS)
-   ========================= */
+   ========================================================= */
 .pub-donuts-2col{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
-  align-items: stretch;   /* cards stretch to same height */
+  align-items: stretch;      /* equal card height */
   margin: 10px 0 18px 0;
 }
 @media (max-width: 900px){
   .pub-donuts-2col{ grid-template-columns: 1fr; }
 }
+.pub-donuts-2col .pub-chart{ height: 100%; }
 
-.pub-donuts-2col .pub-chart{
-  height: 100%;
-}
 
-/* =========================
+/* =========================================================
    2) DONUT CARD
-   ========================= */
+   ========================================================= */
 .pub-chart{
   padding: 14px;
   border: 1px solid var(--pub-border);
@@ -94,27 +107,25 @@ body.theme-dark{
   color: var(--pub-text);
 }
 
-/* donut + legend now stacked (legend below) */
+/* Donut + legend stacked (legend below) */
 .qdonut-wrap{
   display: grid;
-  grid-template-columns: 1fr;     /* <- legend below */
+  grid-template-columns: 1fr;
   gap: 14px;
   align-items: start;
 }
 
-/* SVG */
+/* SVG: use currentColor so text follows card color */
 .qdonut-svg{
   width: 100%;
   max-width: 320px;
   margin: 0 auto;
   shape-rendering: geometricPrecision;
   text-rendering: geometricPrecision;
-
-  /* Make currentColor reliable for SVG text */
   color: var(--pub-text);
 }
 
-/* Ring segment counts (numbers on slices) */
+/* Slice value labels on the ring */
 .qdonut-count{
   font-size: 18px;
   font-weight: 800;
@@ -125,11 +136,11 @@ body.theme-dark{
   stroke-linejoin: round;
 }
 
-/* Center texts */
+/* Center labels */
 .qdonut-total{
   font-size: 34px;
   font-weight: 900;
-  fill: currentColor;            /* uses svg color */
+  fill: currentColor;
 }
 .qdonut-sub{
   font-size: 15px;
@@ -138,12 +149,12 @@ body.theme-dark{
   opacity: .70;
 }
 
-/* Hole color */
+/* Donut hole matches card background */
 .qdonut-hole{
   fill: var(--pub-card-bg);
 }
 
-/* Legend (grid so it wraps nicely) */
+/* Legend */
 .qdonut-legend{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -151,7 +162,6 @@ body.theme-dark{
   align-content: start;
   color: var(--pub-text);
 }
-
 .qdonut-legend__row{
   display: flex;
   align-items: center;
@@ -160,9 +170,7 @@ body.theme-dark{
   font-weight: 650;
   color: inherit;
 }
-
 .qdonut-legend__row span{ color: inherit; }
-
 .qdonut-legend__swatch{
   width: 14px;
   height: 14px;
@@ -171,27 +179,18 @@ body.theme-dark{
   border: 1px solid var(--pub-border);
 }
 
-/* FORCE: ensure center + legend never "white in light mode" */
-.pub-chart svg{ color: var(--pub-text) !important; }
+/* Only keep this safety net (minimal) */
 .pub-chart .qdonut-total,
-.pub-chart .qdonut-sub{ fill: var(--pub-text) !important; }
-.pub-chart .qdonut-legend,
-.pub-chart .qdonut-legend__row,
-.pub-chart .qdonut-legend__row span{ color: var(--pub-text) !important; }
-
-/* KEEP: segment numbers white */
-.pub-chart .qdonut-count{
-  fill: var(--pub-seg-fill) !important;
-  stroke: var(--pub-seg-stroke) !important;
+.pub-chart .qdonut-sub{
+  fill: var(--pub-text);
 }
 
 
-/* =========================
+/* =========================================================
    3) PUBLICATIONS FILTER (REGULAR CARD - NOT STICKY)
-   ========================= */
+   ========================================================= */
 .pub-filter-sticky{
-  /* REMOVED: position: sticky; top: 90px; z-index: 30; */
-  
+  /* Sticky intentionally removed */
   margin: 18px 0 26px 0;
   padding: 14px 14px 12px 14px;
 
@@ -199,11 +198,10 @@ body.theme-dark{
   border-radius: 14px;
   background: var(--pub-card-bg);
   box-shadow: var(--pub-shadow);
-
   color: var(--pub-text);
 }
 
-/* Optional header inside filter card */
+/* Header */
 .pub-filter-header{
   display: flex;
   align-items: baseline;
@@ -211,7 +209,6 @@ body.theme-dark{
   gap: 12px;
   margin-bottom: 10px;
 }
-
 .pub-filter-title{
   margin: 0;
   font-size: 1.0rem;
@@ -219,7 +216,7 @@ body.theme-dark{
   color: var(--pub-text);
 }
 
-/* Filter row */
+/* Controls row */
 .pub-filter{
   display: flex;
   flex-wrap: wrap;
@@ -227,7 +224,7 @@ body.theme-dark{
   align-items: flex-end;
 }
 
-/* label block (Type/Year) */
+/* Label blocks */
 .pub-filter-label{
   display: flex;
   flex-direction: column;
@@ -235,104 +232,60 @@ body.theme-dark{
   min-width: 220px;
   color: var(--pub-text);
 }
-
 .pub-filter-label-text{
   font-size: .92rem;
   font-weight: 700;
   color: var(--pub-text);
 }
 
-/* selects */
+/* Selects */
 .pub-filter-select{
   padding: 8px 10px;
   border-radius: 10px;
   border: 1px solid var(--pub-input-border);
   background: var(--pub-input-bg);
   color: var(--pub-input-text);
-
   line-height: 1.2;
   min-height: 40px;
   outline: none;
 }
-
 .pub-filter-select:focus{
   box-shadow: 0 0 0 3px var(--pub-focus);
 }
 
-/* count text under controls */
+/* Count text under controls */
 .pub-count-text{
   margin-top: 10px;
   font-style: italic;
   color: var(--pub-muted);
 }
 
-/* Mobile: make selects full width */
+/* Mobile */
 @media (max-width: 640px){
   .pub-filter-label{ min-width: 100%; }
   .pub-filter{ align-items: stretch; }
 }
 
-/* REMOVED: :target scroll-margin-top (no longer needed without sticky) */
-
 
 /* =========================================================
-   Dark mode: Filter background = donut card background
-   (match pub-chart exactly)
+   4) FILTER BUTTONS (Apply / Reset)
    ========================================================= */
-
-html[data-theme="dark"] .pub-filter-sticky,
-body[data-theme="dark"] .pub-filter-sticky,
-[data-theme="dark"] .pub-filter-sticky,
-html.dark .pub-filter-sticky,
-body.dark .pub-filter-sticky,
-html.dark-mode .pub-filter-sticky,
-body.dark-mode .pub-filter-sticky,
-html.theme-dark .pub-filter-sticky,
-body.theme-dark .pub-filter-sticky{
-  /* SAME as .pub-chart background */
-  background: var(--pub-card-bg) !important;
-
-  /* keep it readable, no glass effects */
-  opacity: 1 !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-}
-
-html[data-theme="dark"],
-body[data-theme="dark"],
-[data-theme="dark"],
-html.dark, body.dark,
-html.dark-mode, body.dark-mode,
-html.theme-dark, body.theme-dark{
-  --pub-card-bg: #3f3f3f; /* solid, and now BOTH donuts + filter match */
-}
-
-/* =========================================================
-   Filter buttons color (Apply / Reset)
-   ========================================================= */
-
 #pubApply,
 #pubReset{
-  background-color: #007ec7 !important;
-  border-color: #007ec7 !important;
+  background-color: var(--pub-accent) !important;
+  border-color: var(--pub-accent) !important;
   color: #ffffff !important;
 }
-
-/* hover */
 #pubApply:hover,
 #pubReset:hover{
-  background-color: #0069a8 !important;
-  border-color: #0069a8 !important;
+  background-color: var(--pub-accent-hover) !important;
+  border-color: var(--pub-accent-hover) !important;
 }
-
-/* focus (keyboard accessibility) */
 #pubApply:focus,
 #pubReset:focus{
   outline: none;
-  box-shadow: 0 0 0 3px rgba(0,126,199,.35) !important;
+  box-shadow: 0 0 0 3px var(--pub-accent-focus) !important;
 }
-
-/* disabled / passive state */
 #pubApply.is-disabled,
 #pubApply:disabled{
   background-color: rgba(0,126,199,.45) !important;
@@ -341,36 +294,38 @@ html.theme-dark, body.theme-dark{
   box-shadow: none !important;
 }
 
-/* Research Impact card: match donut cards exactly */
-.research-metrics {
+
+/* =========================================================
+   5) RESEARCH IMPACT CARD (OpenAlex include)
+   - Matches donut cards exactly
+   ========================================================= */
+.research-metrics{
   padding: 14px;
   border: 1px solid var(--pub-border);
   border-radius: 14px;
-  background: var(--pub-card-bg) !important;
+  background: var(--pub-card-bg);
   box-shadow: var(--pub-shadow);
   color: var(--pub-text);
 }
 
 /* Reduce vertical whitespace inside Research Impact */
 .research-metrics .metrics-title{
-  margin: 0 0 8px 0 !important;
+  margin: 0 0 8px 0;
 }
-
 .research-metrics .metrics-row{
-  margin: 0 !important;
+  margin: 0;
   gap: 26px;
 }
-
 .research-metrics .metric-footer{
-  margin-top: 8px !important;
+  margin-top: 8px;
 }
 
+/* Logo sizing (change here) */
 .research-metrics .metric-logo{
-  height: 50px;     /* burayı değiştir */
-  width: auto;      /* oranı korur */
+  height: 50px;   /* adjust this only */
+  width: auto;
   display: block;
 }
-
 .research-metrics .metric-source-link{
   display: inline-flex;
   align-items: center;

@@ -1,16 +1,75 @@
+/**
+ * ==============================================================
+ * Publications Donut Charts (Pure SVG Implementation)
+ * ==============================================================
+ *
+ * This script dynamically generates two donut charts for the
+ * Publications page:
+ *
+ * 1) Publication Type Distribution
+ *    - Journal Articles
+ *    - Intl. Conference Papers
+ *    - Nat. Conference Papers
+ *    - Editorials
+ *
+ * 2) Journal Quartile (Q1–Q4) Distribution
+ *
+ * The charts are:
+ * - Fully auto-generated from the publication lists
+ * - Based on section heading IDs
+ * - Rendered using native SVG (no external libraries)
+ *
+ * This ensures:
+ * - Automatic synchronization with page content
+ * - Lightweight implementation
+ * - Full theme compatibility
+ *
+ * ==============================================================
+ */
+
 (function () {
+
+  // SVG namespace required when creating SVG elements dynamically
   var svgNS = "http://www.w3.org/2000/svg";
 
+  /**
+   * Convert polar coordinates (angle, radius) into Cartesian (x,y).
+   * Used for positioning arc endpoints and text labels.
+   *
+   * @param {number} cx - center x
+   * @param {number} cy - center y
+   * @param {number} r  - radius
+   * @param {number} angleDeg - angle in degrees
+   * @returns {object} {x, y}
+   */
   function polarToCartesian(cx, cy, r, angleDeg) {
     var a = (angleDeg - 90) * Math.PI / 180.0;
-    return { x: cx + r * Math.cos(a), y: cy + r * Math.sin(a) };
+    return {
+      x: cx + r * Math.cos(a),
+      y: cy + r * Math.sin(a)
+    };
   }
 
+  /**
+   * Generate SVG path string for a donut slice.
+   * Uses outer arc + inner arc to create ring segment.
+   *
+   * @param {number} cx
+   * @param {number} cy
+   * @param {number} rOuter
+   * @param {number} rInner
+   * @param {number} startAngle
+   * @param {number} endAngle
+   * @returns {string} SVG path string
+   */
   function donutPath(cx, cy, rOuter, rInner, startAngle, endAngle) {
+
     var p1 = polarToCartesian(cx, cy, rOuter, endAngle);
     var p2 = polarToCartesian(cx, cy, rOuter, startAngle);
     var p3 = polarToCartesian(cx, cy, rInner, startAngle);
     var p4 = polarToCartesian(cx, cy, rInner, endAngle);
+
+    // Determines if arc > 180° (SVG arc flag requirement)
     var largeArc = (endAngle - startAngle) <= 180 ? "0" : "1";
 
     return [
@@ -22,7 +81,15 @@
     ].join(" ");
   }
 
+  /**
+   * Collect all <li> elements that belong to a section.
+   * Stops when next heading (H2/H3) is encountered.
+   *
+   * @param {string} headingId
+   * @returns {Array} list items
+   */
   function collectLisUntilNextHeading(headingId) {
+
     var h = document.getElementById(headingId);
     if (!h) return [];
 
@@ -31,37 +98,61 @@
 
     while (el) {
       if (el.tagName === "H2" || el.tagName === "H3") break;
+
       if (el.querySelectorAll) {
         var found = el.querySelectorAll("li");
-        for (var i = 0; i < found.length; i++) lis.push(found[i]);
+        for (var i = 0; i < found.length; i++) {
+          lis.push(found[i]);
+        }
       }
+
       el = el.nextElementSibling;
     }
+
     return lis;
   }
 
+  /**
+   * Core rendering engine for donut charts.
+   *
+   * @param {string} containerId
+   * @param {string} titleText
+   * @param {string} subtitleText
+   * @param {Array} items [{label,value}]
+   * @param {object} colorMap
+   * @param {number} centerTotal
+   */
   function renderDonut(containerId, titleText, subtitleText, items, colorMap, centerTotal) {
-    var chart = document.getElementById(containerId);
-    if (!chart) return;
-    if (!items || !items.length) return;
 
+    var chart = document.getElementById(containerId);
+    if (!chart || !items || !items.length) return;
+
+    // Compute total value
     var total = 0;
-    for (var i = 0; i < items.length; i++) total += items[i].value;
+    for (var i = 0; i < items.length; i++) {
+      total += items[i].value;
+    }
     if (total <= 0) return;
 
     chart.innerHTML = "";
 
+    // Title
     var title = document.createElement("div");
     title.className = "pub-chart__title";
     title.textContent = titleText;
     chart.appendChild(title);
 
+    // Wrapper
     var wrap = document.createElement("div");
     wrap.className = "qdonut-wrap";
     chart.appendChild(wrap);
 
-    var size = 240, cx = size / 2, cy = size / 2;
-    var rOuter = 92, rInner = 54;
+    // SVG setup
+    var size = 240;
+    var cx = size / 2;
+    var cy = size / 2;
+    var rOuter = 92;
+    var rInner = 54;
 
     var svg = document.createElementNS(svgNS, "svg");
     svg.setAttribute("viewBox", "0 0 " + size + " " + size);
@@ -70,10 +161,14 @@
     svg.classList.add("qdonut-svg");
     wrap.appendChild(svg);
 
+    // Build slices
     var angle = 0;
+
     for (var k = 0; k < items.length; k++) {
-      var frac = items[k].value / total;
-      var sweep = frac * 360;
+
+      var fraction = items[k].value / total;
+      var sweep = fraction * 360;
+
       var start = angle;
       var end = angle + sweep;
 
@@ -83,8 +178,9 @@
       path.setAttribute("opacity", "0.95");
       svg.appendChild(path);
 
-      // Segment count text (skip tiny slices)
+      // Place slice value text (if large enough)
       if (sweep >= 18) {
+
         var mid = (start + end) / 2;
         var rText = (rOuter + rInner) / 2;
         var pt = polarToCartesian(cx, cy, rText, mid);
@@ -94,15 +190,16 @@
         text.setAttribute("y", pt.y);
         text.setAttribute("text-anchor", "middle");
         text.setAttribute("dominant-baseline", "middle");
-        text.setAttribute("font-weight", "normal");
         text.setAttribute("class", "qdonut-count");
         text.textContent = String(items[k].value);
+
         svg.appendChild(text);
       }
 
       angle = end;
     }
 
+    // Create donut hole
     var hole = document.createElementNS(svgNS, "circle");
     hole.setAttribute("cx", cx);
     hole.setAttribute("cy", cy);
@@ -116,7 +213,6 @@
     centerText.setAttribute("y", cy);
     centerText.setAttribute("text-anchor", "middle");
     centerText.setAttribute("dominant-baseline", "middle");
-    centerText.setAttribute("font-weight", "normal");
     centerText.setAttribute("class", "qdonut-total");
     centerText.textContent = String(centerTotal != null ? centerTotal : total);
     svg.appendChild(centerText);
@@ -127,46 +223,22 @@
     centerSub.setAttribute("y", cy + 18);
     centerSub.setAttribute("text-anchor", "middle");
     centerSub.setAttribute("dominant-baseline", "middle");
-    centerSub.setAttribute("font-weight", "normal");
     centerSub.setAttribute("class", "qdonut-sub");
     centerSub.textContent = subtitleText || "";
     svg.appendChild(centerSub);
 
-    // Legend
-    var legend = document.createElement("div");
-    legend.className = "qdonut-legend";
-    wrap.appendChild(legend);
-
-    for (var m = 0; m < items.length; m++) {
-      var row = document.createElement("div");
-      row.className = "qdonut-legend__row";
-
-      var sw = document.createElement("span");
-      sw.className = "qdonut-legend__swatch";
-      sw.style.background = colorMap[items[m].label] || "#1f77b4";
-
-      var txt = document.createElement("span");
-      txt.style.fontWeight = "normal";
-      txt.textContent = items[m].label + " (" + items[m].value + ")";
-
-      row.appendChild(sw);
-      row.appendChild(txt);
-      legend.appendChild(row);
-    }
-
     chart.style.display = "";
   }
 
+  /**
+   * Build publication-type distribution donut
+   */
   function buildPublicationCountDonutFromLists() {
-    var journalLis = collectLisUntilNextHeading("journal-papers");
-    var editorialLis = collectLisUntilNextHeading("editorials");
-    var confIntLis = collectLisUntilNextHeading("conference-papers-international");
-    var confNatLis = collectLisUntilNextHeading("conference-papers-national-turkish");
 
-    var journal = journalLis.length;
-    var editorial = editorialLis.length;
-    var confInt = confIntLis.length;
-    var confNat = confNatLis.length;
+    var journal = collectLisUntilNextHeading("journal-papers").length;
+    var editorial = collectLisUntilNextHeading("editorials").length;
+    var confInt = collectLisUntilNextHeading("conference-papers-international").length;
+    var confNat = collectLisUntilNextHeading("conference-papers-national-turkish").length;
 
     var items = [
       { label: "Journal Articles", value: journal },
@@ -182,30 +254,45 @@
       "Editorial": "#9467bd"
     };
 
-    renderDonut("pubCountDonut", "Publication Count", "total", items, colorMap, (journal + confInt + confNat + editorial));
+    renderDonut("pubCountDonut",
+      "Publication Count",
+      "total",
+      items,
+      colorMap,
+      journal + confInt + confNat + editorial);
   }
 
+  /**
+   * Build journal quartile distribution donut
+   */
   function buildJournalQDonutFromJournalList() {
+
     var lis = collectLisUntilNextHeading("journal-papers");
     if (!lis.length) return;
 
     var counts = { Q1: 0, Q2: 0, Q3: 0, Q4: 0, Unknown: 0 };
 
     for (var j = 0; j < lis.length; j++) {
+
       var qImgs = lis[j].querySelectorAll('img[alt^="Q"]');
-      if (!qImgs || !qImgs.length) { counts.Unknown++; continue; }
+      if (!qImgs || !qImgs.length) {
+        counts.Unknown++;
+        continue;
+      }
 
       var q = (qImgs[0].getAttribute("alt") || "").trim().toUpperCase();
-      if (counts.hasOwnProperty(q)) counts[q]++; else counts.Unknown++;
+      if (counts.hasOwnProperty(q)) counts[q]++;
+      else counts.Unknown++;
     }
 
     var order = ["Q1", "Q2", "Q3", "Q4", "Unknown"];
     var items = [];
+
     for (var k = 0; k < order.length; k++) {
-      var key = order[k];
-      if (counts[key] > 0) items.push({ label: key, value: counts[key] });
+      if (counts[order[k]] > 0) {
+        items.push({ label: order[k], value: counts[order[k]] });
+      }
     }
-    if (!items.length) return;
 
     var colorMap = {
       Q1: "#d4af37",
@@ -215,17 +302,27 @@
       Unknown: "#7f7f7f"
     };
 
-    renderDonut("journalQDonut", "Journal Quartiles (Q)", "journals", items, colorMap, lis.length);
+    renderDonut("journalQDonut",
+      "Journal Quartiles (Q)",
+      "journals",
+      items,
+      colorMap,
+      lis.length);
   }
 
+  /**
+   * Initialization entry point
+   */
   function init() {
     buildPublicationCountDonutFromLists();
     buildJournalQDonutFromJournalList();
   }
 
+  // Ensure DOM is ready
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);
   } else {
     init();
   }
+
 })();

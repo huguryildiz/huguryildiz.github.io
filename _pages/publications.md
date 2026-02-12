@@ -59,7 +59,7 @@ custom_js:
 {:/nomarkdown}
 
 <!-- Open Alex Citation Report -->
-<!--  _includes/research-metrics.html -->
+<!--  /_includes/research-metrics.html -->
 {% include research-metrics.html %}
 
 ## Publications
