@@ -337,3 +337,14 @@ html.theme-dark, body.theme-dark{
   cursor: not-allowed;
   box-shadow: none !important;
 }
+
+/* Make Research Impact card match donut chart card styling */
+.research-metrics {
+  /* Match .pub-chart styling */
+  background: var(--mm-bg, rgba(255,255,255,0.06));
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 18px 18px 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  backdrop-filter: blur(6px);
+}
