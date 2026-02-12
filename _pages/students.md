@@ -29,13 +29,17 @@ custom_css:
 
 ## Prospective Students
 
-<div class="prospective-card">
+{::nomarkdown}
+<link rel="stylesheet" href="{{ '/assets/css/supervision-stats.css' | relative_url }}">
+{:/nomarkdown}
 
+{::nomarkdown}
+<div class="prospective-card">
   <p>
     I am interested in supervising highly motivated M.Sc. and Ph.D. students working at the intersection of operations research, mathematical optimization, and machine learning for next-generation networked systems, including wireless, underwater, and aerial communication networks. Interested candidates are encouraged to contact me via email with their CV, transcript, and a concise statement of research interests.
   </p>
-
 </div>
+{:/nomarkdown}
 
 ## Ph.D. Students
 
