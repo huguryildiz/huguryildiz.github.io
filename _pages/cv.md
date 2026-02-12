@@ -11,14 +11,14 @@ nav: main
 
 ### TED University, Ankara, Turkey
 
-#### **Department Chair** | Jul 2021 – Jul 2024  
+**Department Chair** | Jul 2021 – Jul 2024  
 - Led academic operations for 100+ students and 12 faculty members, overseeing budgeting, accreditation (MUDEK), curriculum development, and departmental strategic planning.
 
-#### **Associate Professor** | Mar 2021 – Present  
+**Associate Professor** | Mar 2021 – Present  
 - Designed 40+ network flow–based optimization models and conducted large-scale simulations to enhance wireless and underwater network performance, resulting in 20+ peer-reviewed publications (14 IEEE).
 - Taught 15+ undergraduate courses; mentored 25+ senior design teams and supervised 6 graduate theses using active learning methodologies.
 
-#### **Assistant Professor** | Sep 2016 – Mar 2021  
+**Assistant Professor** | Sep 2016 – Mar 2021  
 
 
 ### Turkish Aerospace Industries (TAI), Ankara, Turkey
