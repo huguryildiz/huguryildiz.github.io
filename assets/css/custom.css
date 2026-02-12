@@ -206,4 +206,39 @@ details[open] {
     0 16px 40px rgba(0,0,0,.15),
     0 0 28px rgba(31,119,180,.25);
 }
+
+/* =====================================================
+   Research Metrics Footer
+   - OpenAlex logo alignment
+   - Hover animation
+   ===================================================== */
+
+/* Footer container:
+   Align logo and "Updated" text horizontally */
+.metric-footer {
+  display: flex;            /* Horizontal layout */
+  align-items: center;      /* Vertically center items */
+  gap: 12px;                /* Space between logo and date */
+  margin-top: 10px;         /* Small spacing from metrics above */
+}
+
+
+/* OpenAlex logo styling */
+.metric-logo {
+  height: 42px;             /* Controlled logo height */
+  width: auto;              /* Keep aspect ratio */
+  cursor: pointer;          /* Show pointer on hover */
+
+  /* Smooth hover animation */
+  transition: 
+    transform .2s ease, 
+    opacity .2s ease;
+}
+
+
+/* Hover effect:
+   Slight enlargement + subtle fade */
+.metric-source-link:hover .metric-logo {
+  transform: scale(1.08);   /* Slight zoom effect */
+  opacity: .85;             /* Slight transparency */
 }
