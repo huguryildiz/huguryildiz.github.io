@@ -9,29 +9,28 @@ nav: main
 
 ## Professional Experience
 
-### TED University, Ankara, Turkey
+- **Department Chair** <br>
+Department of Electrical and Electronics Engineering <br>
+TED University, Ankara, Turkey <br>
+Jul 2021 – Jul 2024
 
-**Department Chair** | Jul 2021 – Jul 2024  
-- Led academic operations for 100+ students and 12 faculty members, overseeing budgeting, accreditation (MUDEK), curriculum development, and departmental strategic planning.
+- **Associate Professor** <br>
+Department of Electrical and Electronics Engineering <br>
+TED University, Ankara, Turkey <br>
+Mar 2021 – Present
 
-**Associate Professor** | Mar 2021 – Present  
-- Designed 40+ network flow–based optimization models and conducted large-scale simulations to enhance wireless and underwater network performance, resulting in 20+ peer-reviewed publications (14 IEEE).
-- Taught 15+ undergraduate courses; mentored 25+ senior design teams and supervised 6 graduate theses using active learning methodologies.
+- **Assistant Professor** <br>
+Department of Electrical and Electronics Engineering <br>
+TED University, Ankara, Turkey <br>
+Sep 2016 – Mar 2021
 
-**Assistant Professor** | Sep 2016 – Mar 2021  
+- **Avionics Design Engineer** <br>
+Turkish Aerospace Industries (TAI), Ankara, Turkey <br>
+Dec 2015 – Aug 2016
 
-
-### Turkish Aerospace Industries (TAI), Ankara, Turkey
-
-**Avionics Design Engineer** | Dec 2015 – Aug 2016  
-- Built and configured the network infrastructure for 3 ground stations and 5 UAVs in the [ANKA](https://www.tusas.com/en/products/uav/operative-strategic-uav-systems/anka) program.
-- Designed a high-availability UAV communication network with 20+ Cisco devices using VRRP, IPsec, and multicast, enabling secure 24/7 mission readiness.
-
-### Turk Telekom, Ankara, Turkey
-
-**Senior Network Engineer** | Dec 2010 – Nov 2015  
-- Designed and maintained the [Safer Internet Service](https://www.guvenlinet.org.tr/) for 5M+ subscribers, leveraging Cisco and Procera DPI systems to block harmful web content.
-- Monitored and optimized 100+ DPI appliances, ensuring 99.9% service availability and compliance with national content regulation policies.
+- **Senior Network Engineer** <br>
+Turk Telekom, Ankara, Turkey <br>
+Dec 2010 – Nov 2015
 
 ## Education
 
