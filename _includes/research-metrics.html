@@ -1,29 +1,43 @@
 <div class="research-metrics">
   <h2 class="metrics-title">Research Impact</h2>
+
   <div class="metrics-row">
     <div class="metric">
       <span class="metric-value">{{ site.data.research_metrics.citations }}</span>
       <span class="metric-label">Citations</span>
     </div>
+
     <div class="metric">
       <span class="metric-value">{{ site.data.research_metrics.h_index }}</span>
       <span class="metric-label">h-index</span>
     </div>
+
     <div class="metric">
       <span class="metric-value">{{ site.data.research_metrics.works }}</span>
       <span class="metric-label">Publications</span>
     </div>
   </div>
+
   <div class="metric-footer">
-    <a href="{{ site.data.research_metrics.profile_url }}" target="_blank" rel="noopener">
+
+    <a href="{{ site.data.research_metrics.profile_url }}"
+       target="_blank"
+       rel="noopener"
+       class="metric-source-link">
+
       <img
         src="{{ '/images/icons/openalex.png' | relative_url }}"
         alt="OpenAlex"
-        width="16"
-        height="16"
-        style="vertical-align: middle; margin-right: 6px;"
+        width="50"
+        height="100"
       />
+
+      <span>OpenAlex</span>
     </a>
-    <span>• Updated {{ site.data.research_metrics.updated_utc | date: "%b %d, %Y at %H:%M" }}</span>
+
+    <span class="metric-updated">
+      • Updated {{ site.data.research_metrics.updated_utc | date: "%b %d, %Y at %H:%M" }}
+    </span>
+
   </div>
 </div>
