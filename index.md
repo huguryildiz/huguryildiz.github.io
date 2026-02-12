@@ -15,6 +15,7 @@ His research focuses on routing, resource allocation, and energy efficiency chal
 
 He has authored over 20 peer-reviewed journal articles with more than 1,000 citations, received the IEEE Middle East and North Africa Communications Conference 2019 Best Paper Award, and was elevated to IEEE Senior Member in 2021.
 
+{% include research-metrics.html %}
 
 ## Research Interests
 
