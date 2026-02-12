@@ -38,86 +38,39 @@
   color: var(--pub-muted);
 }
 
-/* =========================================================
-   Prospective Students Card
-   - Matches supervision stat cards in dark mode
-   - Cool academic breathing glow
-   - Clean typography
-   ========================================================= */
+/* =========================================
+   Prospective Card – Full Background Pulse
+   Subtle academic breathing effect
+   ========================================= */
 
-.prospective-card{
-  position: relative;
-  overflow: hidden;
-
+.prospective-card {
   padding: 22px 24px;
   margin: 18px 0 18px 0;
 
   border-radius: 16px;
 
-  /* Default (light mode) */
   background: var(--pub-card-bg);
   color: var(--pub-text);
+
   border: 1px solid rgba(0,0,0,.08);
-
   box-shadow: 0 10px 26px rgba(0,0,0,.10);
+
+  animation: fullPulse 3.8s ease-in-out infinite;
 }
 
-/* Keep paragraph compact */
-.prospective-card p{
-  margin: 0;
-  text-align: left;
-  line-height: 1.6;
-}
-
-/* =========================================================
-   Dark mode background EXACTLY like supervision cards
-   ========================================================= */
-
+/* Dark mode border refinement */
 html[data-theme="dark"] .prospective-card,
-body[data-theme="dark"] .prospective-card,
-html.dark .prospective-card,
-body.dark .prospective-card,
-html.dark-mode .prospective-card,
-body.dark-mode .prospective-card{
-  background: var(--pub-card-bg) !important;
-  border: 1px solid rgba(255,255,255,.10) !important;
+body[data-theme="dark"] .prospective-card {
+  border-color: rgba(255,255,255,.10);
 }
 
-/* =========================================================
-   Academic Glow (Same tone family as your theme blue)
-   Subtle breathing radial overlay
-   ========================================================= */
-
-.prospective-card::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  pointer-events: none;
-
-  /* Use the same academic blue tone */
-  background: radial-gradient(
-  circle at 50% 50%,
-  rgba(212,175,55,.16),   /* Academic gold */
-  rgba(212,175,55,0) 65%
-);
-
-  opacity: 0;
-  animation: academicPulse 3.8s ease-in-out infinite;
-}
-
-/* Keep content above animated layer */
-.prospective-card > *{
-  position: relative;
-  z-index: 1;
-}
-
-/* Smooth breathing animation */
-@keyframes academicPulse{
-  0%, 100%{
-    opacity: 0;
+/* Smooth breathing background animation */
+@keyframes fullPulse {
+  0%, 100% {
+    background-color: var(--pub-card-bg);
   }
-  50%{
-    opacity: 1;
+
+  50% {
+    background-color: rgba(31,119,180,0.08); /* subtle academic blue */
   }
 }
