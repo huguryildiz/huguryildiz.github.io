@@ -263,3 +263,126 @@
   opacity: 0.65;
   color: var(--mm-text-color, currentColor);
 }
+
+/* =====================================================
+   Minimal Mistakes Custom Search Overlay Styles
+   - Navbar search toggle button
+   - Fullscreen overlay search modal
+   - Result list styling
+   ===================================================== */
+
+
+/* ================================
+   1) Navbar Search Toggle (🔍)
+   ================================ */
+.mm-search-toggle{
+  border: 0;                     /* remove default button border */
+  background: transparent;       /* transparent background */
+  cursor: pointer;               /* pointer cursor on hover */
+  font-size: 18px;               /* icon size */
+  padding: 8px 10px;             /* clickable area */
+  margin-left: 6px;              /* spacing from previous nav item */
+}
+
+
+/* ================================
+   2) Overlay Background
+   ================================ */
+.mm-search-overlay{
+  position: fixed;               /* full screen overlay */
+  inset: 0;                      /* top/right/bottom/left = 0 */
+  background: rgba(0,0,0,.45);   /* dark transparent backdrop */
+  z-index: 9999;                 /* above everything */
+  display: grid;
+  place-items: start center;     /* top-centered content */
+  padding-top: 84px;             /* space below navbar */
+}
+
+
+/* ================================
+   3) Search Box Container
+   ================================ */
+.mm-search-box{
+  width: min(720px, calc(100% - 24px));  /* responsive width */
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(40,40,40,.96);        /* dark card background */
+  box-shadow: 0 18px 50px rgba(0,0,0,.6);
+  padding: 14px;
+}
+
+
+/* ================================
+   4) Search Input Field
+   ================================ */
+.mm-search-input{
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.07);
+  color: rgba(255,255,255,.95);
+  padding: 12px 44px 12px 12px;   /* right padding for close icon */
+  outline: none;                  /* remove default outline */
+}
+
+
+/* ================================
+   5) Close (X) Button
+   ================================ */
+.mm-search-close{
+  float: right;
+  margin-top: -38px;              /* position inside input */
+  margin-right: 6px;
+  border: 0;
+  background: transparent;
+  color: rgba(255,255,255,.85);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+
+/* ================================
+   6) Results Grid
+   ================================ */
+.mm-search-results{
+  margin-top: 10px;
+  display: grid;
+  gap: 10px;                      /* spacing between result items */
+}
+
+
+/* ================================
+   7) Individual Result Item
+   ================================ */
+.mm-search-item{
+  display: block;
+  text-decoration: none;          /* remove underline */
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+}
+
+
+/* Result Title */
+.mm-search-item-title{
+  font-weight: 800;
+  color: rgba(255,255,255,.95);
+}
+
+
+/* Result Snippet */
+.mm-search-item-snippet{
+  margin-top: 4px;
+  opacity: .75;
+  color: rgba(255,255,255,.85);
+  font-size: .95em;
+}
+
+
+/* Hint Text (e.g., "Type to search...") */
+.mm-search-hint{
+  opacity: .75;
+  color: rgba(255,255,255,.85);
+  padding: 6px 2px;
+}
