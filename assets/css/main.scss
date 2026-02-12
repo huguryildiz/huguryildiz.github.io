@@ -263,3 +263,9 @@
   opacity: 0.65;
   color: var(--mm-text-color, currentColor);
 }
+
+/* Make the search nav item look like an icon button */
+.masthead__menu-item a[href$="/search/"]{
+  font-size: 18px;
+  padding: 8px 10px;
+}
