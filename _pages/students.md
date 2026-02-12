@@ -43,27 +43,22 @@ custom_css:
   ![PhD Co-advisor](https://img.shields.io/badge/PhD-Co--advisor-6f42c1?style=flat-square)  
 
 - **M. Cobanlar** (2022). *Analysis of the trade-off between network lifetime and K-connectivity in wireless sensor networks*. TOBB University of Economics and Technology.  
-  ![PhD Co-advisor](https://img.shields.io/badge/PhD-Co--advisor-6f42c1?style=flat-square)  
-  [![YÖK Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=G_oJ1rKE4SgJUkomyAKpR_b66BRHX6Iu8I5xytFXfpv7OVxvt9gxQhlL5X5kvF6X)
+  ![PhD Co-advisor](https://img.shields.io/badge/PhD-Co--advisor-6f42c1?style=flat-square) [![YÖK Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=G_oJ1rKE4SgJUkomyAKpR_b66BRHX6Iu8I5xytFXfpv7OVxvt9gxQhlL5X5kvF6X)
 
 
 ## M.Sc. Students
 
 - **B. E. Un** (2021). *Design of a novel optimization framework for the analysis of the impact of critical nodes on network lifetime of underwater acoustic sensor networks utilizing private key cryptography*. TOBB University of Economics and Technology.  
-  ![MSc Co-advisor](https://img.shields.io/badge/MSc-Co--advisor-6f42c1?style=flat-square)  
-  [![YÖK Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=qVqOZFj2DwNmvdf1oGFYiPA6aYtotmnOK4EXJfFCxlc2mg4JGwOzN8dwilUNajg1)
+  ![MSc Co-advisor](https://img.shields.io/badge/MSc-Co--advisor-6f42c1?style=flat-square) [![YÖK Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=qVqOZFj2DwNmvdf1oGFYiPA6aYtotmnOK4EXJfFCxlc2mg4JGwOzN8dwilUNajg1)
 
 - **C. Aydin** (2021). *Number of depleted nodes–based network lifetime maximization in underwater wireless sensor networks*. TOBB University of Economics and Technology.  
   ![MSc Co-advisor](https://img.shields.io/badge/MSc-Co--advisor-6f42c1?style=flat-square)  
   
 - **A. Ozmen** (2021). *Modeling the tradeoff between eavesdropping and network lifetime through a mixed integer programming approach in underwater acoustic sensor networks*. TOBB University of Economics and Technology.  
-  ![MSc Co-advisor](https://img.shields.io/badge/MSc-Co--advisor-6f42c1?style=flat-square)  
-  [![YÖK Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=v7BkNnnepTnbhn8rNR77LXvYfssCwLtFHwO6QyeDzoiU-4og5S68KqSwbXXeeT31)
+  ![MSc Co-advisor](https://img.shields.io/badge/MSc-Co--advisor-6f42c1?style=flat-square) [![YÖK Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=v7BkNnnepTnbhn8rNR77LXvYfssCwLtFHwO6QyeDzoiU-4og5S68KqSwbXXeeT31)
 
 - **Y. Karakurt** (2018). *Eavesdropping potential in wireless sensor networks and modeling and analysis of network life time recovery*. TOBB University of Economics and Technology.  
-  ![MSc Co-advisor](https://img.shields.io/badge/MSc-Co--advisor-6f42c1?style=flat-square)  
-  [![YÖK Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=vbVkXe1KChYWNElr1MuLZk7iD5LqiauQM_0h3VZ7ultdWdGKzp4EHgQC9HFbDZh7)
+  ![MSc Co-advisor](https://img.shields.io/badge/MSc-Co--advisor-6f42c1?style=flat-square) [![YÖK Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=vbVkXe1KChYWNElr1MuLZk7iD5LqiauQM_0h3VZ7ultdWdGKzp4EHgQC9HFbDZh7)
 
 - **C. Tantur** (2017). *Optimal transmission power level sets for lifetime maximization in wireless sensor networks*. TOBB University of Economics and Technology.  
-  ![MSc Co-advisor](https://img.shields.io/badge/MSc-Co--advisor-6f42c1?style=flat-square)  
-  [![YÖK Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=7lOJX8w_8PRQU1mSHU6-jsVenDOUCZCo0clBp85eRPM90kEZ3qTRNVKtZESSi3wO)
+  ![MSc Co-advisor](https://img.shields.io/badge/MSc-Co--advisor-6f42c1?style=flat-square) [![YÖK Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=7lOJX8w_8PRQU1mSHU6-jsVenDOUCZCo0clBp85eRPM90kEZ3qTRNVKtZESSi3wO)
