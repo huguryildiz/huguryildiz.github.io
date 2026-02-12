@@ -173,7 +173,7 @@ details[open] {
 
 .prospective-card {
   padding: 22px 24px;
-  margin: 24px 0 36px 0;
+  margin: 18px 0 12px 0;
 
   border-radius: 16px;
   border: 1px solid rgba(0,0,0,.08);
@@ -182,29 +182,11 @@ details[open] {
   color: var(--pub-text);
 
   box-shadow:
-    0 8px 24px rgba(0,0,0,.08),
-    0 0 0 1px rgba(31,119,180,.04);
-
-  transition: all 0.25s ease;
+    0 8px 24px rgba(0,0,0,.08);
 }
 
-/* Hover'da hafif research glow */
-.prospective-card:hover {
-  transform: translateY(-2px);
-
-  box-shadow:
-    0 14px 36px rgba(0,0,0,.12),
-    0 0 24px rgba(31,119,180,.18);
-}
-
-.prospective-card {
-  border: 1px solid rgba(31,119,180,.25);
-}
-
-.prospective-card:hover {
-  box-shadow:
-    0 16px 40px rgba(0,0,0,.15),
-    0 0 28px rgba(31,119,180,.25);
+.prospective-card p {
+  margin: 0;
 }
 
 /* =====================================================
