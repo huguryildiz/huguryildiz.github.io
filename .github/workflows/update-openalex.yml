@@ -1,63 +1,41 @@
-name: Update OpenAlex Metrics
+name: Update Research Metrics
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: "12 2 * * 1"   # Every Monday 02:12 UTC
-
-permissions:
-  contents: write
+    - cron: "0 3 * * 1"   # Her Pazartesi 03:00 UTC
+  workflow_dispatch:        # Elle de çalıştırılabilir
 
 jobs:
-  update:
+  fetch:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo (master)
-        uses: actions/checkout@v4
-        with:
-          ref: master
-          persist-credentials: true
+    permissions:
+      contents: write
 
-      - name: Setup Python
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install deps
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests
+      - name: Install dependencies
+        run: pip install requests
 
       - name: Fetch OpenAlex metrics
         env:
-          OPENALEX_AUTHOR_ID: "A5085505896"
-          OPENALEX_MAILTO: "hugur.yildiz@tedu.edu.tr"
-        run: |
-          python scripts/fetch_openalex_metrics.py
-          echo "---- Generated JSON ----"
-          cat _data/research_metrics.json
+          # Repo → Settings → Secrets → Actions → New repository secret
+          # Name:  OPENALEX_AUTHOR_ID
+          # Value: A5085505896
+          OPENALEX_AUTHOR_ID: ${{ secrets.OPENALEX_AUTHOR_ID }}
+          OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO }}   # opsiyonel, e-posta
+        run: python fetch_metrics.py
 
-      - name: Check ignore (debug)
+      - name: Commit & push if changed
         run: |
-          git check-ignore -v _data/research_metrics.json || echo "Not ignored"
-
-      - name: Commit metrics if changed
-        run: |
-          git config user.name "github-actions[bot]"
+          git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-
           git add _data/research_metrics.json
-
-          echo "---- Git status ----"
-          git status --porcelain
-
-          echo "---- Git diff (staged) ----"
-          git diff --cached || true
-
-          if git diff --cached --quiet; then
-            echo "No changes."
-            exit 0
-          fi
-
-          git commit -m "chore: update OpenAlex research metrics"
+          git diff --cached --quiet || git commit -m "chore: update research metrics [skip ci]"
           git push
