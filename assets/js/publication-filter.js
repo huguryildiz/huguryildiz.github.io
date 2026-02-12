@@ -1,21 +1,48 @@
-/*!
- * publications-filter.js
- * Filters publication list items by Type + Year on /publications/
- * - Adds data-type and data-year to <li> items
- * - Populates Year dropdown
- * - Shows/hides sections based on visible items
- */
+/* ===========================================================
+   publications-filter.js
+   - Default: show "Showing TOTAL publications"
+   - Then enable Type/Year filtering
+   - Debug-friendly + fallback selectors
+   =========================================================== */
+
+window.__PUB_FILTER_LOADED__ = true;
 
 (function () {
-  // Run when DOM is ready
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);
   } else {
     init();
   }
 
+  function collectLisUntilNextHeading(headingId) {
+    var h = document.getElementById(headingId);
+    if (!h) return [];
+
+    var lis = [];
+    var el = h.nextElementSibling;
+
+    while (el) {
+      if (el.tagName === "H2" || el.tagName === "H3") break;
+      if (el.querySelectorAll) {
+        var found = el.querySelectorAll("li");
+        for (var i = 0; i < found.length; i++) lis.push(found[i]);
+      }
+      el = el.nextElementSibling;
+    }
+    return lis;
+  }
+
   function init() {
-    // Section anchors (IDs on headings)
+    var typeSelect = document.getElementById("pubType");
+    var yearSelect = document.getElementById("pubYear");
+    var applyBtn = document.getElementById("pubApply");
+    var resetBtn = document.getElementById("pubReset");
+    var countDiv = document.getElementById("pubCount");
+
+    // If the filter UI block isn't on the page, do nothing.
+    if (!typeSelect || !yearSelect || !countDiv) return;
+
+    // --- Collect items from your four sections (preferred) ---
     var headings = {
       journal: document.getElementById("journal-papers"),
       editorial: document.getElementById("editorials"),
@@ -23,110 +50,96 @@
       "conf-nat": document.getElementById("conference-papers-national-turkish"),
     };
 
-    // Filter controls
-    var typeSelect = document.getElementById("pubType");
-    var yearSelect = document.getElementById("pubYear");
-    var applyBtn = document.getElementById("pubApply");
-    var resetBtn = document.getElementById("pubReset");
-    var countDiv = document.getElementById("pubCount");
-
-    // If this page doesn't have the filter UI, do nothing
-    if (!typeSelect || !yearSelect) return;
-
-    // Collect all publication list items
     var allItems = [];
 
-    for (var type in headings) {
-      var heading = headings[type];
-      if (!heading) continue;
+    Object.keys(headings).forEach(function (type) {
+      var h = headings[type];
+      if (!h) return;
+      var lis = collectLisUntilNextHeading(h.id);
 
-      // Find the first UL/OL after the heading
-      var el = heading.nextElementSibling;
-      while (el && el.tagName !== "UL" && el.tagName !== "OL") {
-        el = el.nextElementSibling;
-      }
-      if (!el) continue;
-
-      var items = el.getElementsByTagName("li");
-      for (var i = 0; i < items.length; i++) {
-        var li = items[i];
+      for (var i = 0; i < lis.length; i++) {
+        var li = lis[i];
         li.setAttribute("data-type", type);
 
-        // Extract year: first "(YYYY)" occurrence
         var match = li.textContent.match(/\((\d{4})\)/);
         if (match) li.setAttribute("data-year", match[1]);
 
         allItems.push(li);
       }
-    }
-
-    // Build Year dropdown
-    var years = {};
-    for (var i = 0; i < allItems.length; i++) {
-      var y = allItems[i].getAttribute("data-year");
-      if (y) years[y] = true;
-    }
-
-    var yearList = Object.keys(years).sort(function (a, b) {
-      return Number(b) - Number(a);
     });
 
-    // Avoid duplicates if the script is loaded twice
-    // Keep the first "All" option and remove anything else
-    while (yearSelect.options.length > 1) yearSelect.remove(1);
-
-    for (var i = 0; i < yearList.length; i++) {
-      var opt = document.createElement("option");
-      opt.value = yearList[i];
-      opt.textContent = yearList[i];
-      yearSelect.appendChild(opt);
+    // --- Fallback: if headings not found, just count all publication list items ---
+    if (allItems.length === 0) {
+      // Try a broad-but-safe fallback: list items after "## Publications" area
+      // If your page has other lists, this might overcount, but it's better than showing nothing.
+      allItems = Array.prototype.slice.call(document.querySelectorAll(".page__content li"));
     }
+
+    var TOTAL = allItems.length;
+
+    // Always show the default text immediately (this is what you want back)
+    countDiv.textContent = "Showing " + TOTAL + " publications";
+
+    // Populate years (only if we extracted any)
+    var years = {};
+    allItems.forEach(function (li) {
+      var m = li.textContent.match(/\((\d{4})\)/);
+      if (m) years[m[1]] = true;
+    });
+
+    var yearList = Object.keys(years).sort(function (a, b) { return b - a; });
+
+    // Clear and repopulate year dropdown
+    yearSelect.innerHTML = '<option value="all">All</option>';
+    yearList.forEach(function (y) {
+      var opt = document.createElement("option");
+      opt.value = y;
+      opt.textContent = y;
+      yearSelect.appendChild(opt);
+    });
 
     function applyFilter() {
       var selectedType = typeSelect.value;
       var selectedYear = yearSelect.value;
 
-      var visibleCount = 0;
-      var counts = { journal: 0, editorial: 0, "conf-int": 0, "conf-nat": 0 };
+      var visible = 0;
+      var sectionCounts = { journal: 0, editorial: 0, "conf-int": 0, "conf-nat": 0 };
 
-      for (var i = 0; i < allItems.length; i++) {
-        var item = allItems[i];
-        var itemType = item.getAttribute("data-type");
-        var itemYear = item.getAttribute("data-year");
+      allItems.forEach(function (li) {
+        var itemType = li.getAttribute("data-type");
+        var itemYear = li.getAttribute("data-year") || (li.textContent.match(/\((\d{4})\)/) || [])[1];
 
-        var typeMatch = selectedType === "all" || itemType === selectedType;
-        var yearMatch = selectedYear === "all" || itemYear === selectedYear;
-
+        var typeMatch = (selectedType === "all" || itemType === selectedType);
+        var yearMatch = (selectedYear === "all" || itemYear === selectedYear);
         var show = typeMatch && yearMatch;
-        item.style.display = show ? "" : "none";
+
+        li.style.display = show ? "" : "none";
 
         if (show) {
-          visibleCount++;
-          counts[itemType]++;
+          visible++;
+          if (sectionCounts[itemType] != null) sectionCounts[itemType]++;
         }
-      }
+      });
 
-      // Show/hide section headings
-      for (var type in headings) {
-        if (!headings[type]) continue;
-        headings[type].style.display = counts[type] > 0 ? "" : "none";
-      }
+      // Show/hide headings only if we have the real headings
+      Object.keys(headings).forEach(function (type) {
+        if (!headings[type]) return;
+        headings[type].style.display = (selectedType !== "all" && selectedType !== type)
+          ? "none"
+          : (sectionCounts[type] > 0 ? "" : "none");
+      });
 
-      // Count message
-      if (countDiv) {
-        var total = allItems.length;
-        countDiv.textContent =
-          visibleCount === total
-            ? "Showing all " + total + " publications"
-            : "Showing " + visibleCount + " of " + total + " publications";
-      }
+      countDiv.textContent = "Showing " + visible + " of " + TOTAL + " publications";
     }
 
-    // Events
+    // Default state: All / All
+    typeSelect.value = "all";
+    yearSelect.value = "all";
+
     typeSelect.addEventListener("change", applyFilter);
     yearSelect.addEventListener("change", applyFilter);
-
     if (applyBtn) applyBtn.addEventListener("click", applyFilter);
+
     if (resetBtn) {
       resetBtn.addEventListener("click", function () {
         typeSelect.value = "all";
@@ -135,7 +148,7 @@
       });
     }
 
-    // Initial run
+    // Initial run (enables filtering)
     applyFilter();
   }
 })();
