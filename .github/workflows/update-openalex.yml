@@ -11,30 +11,36 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
+      - name: Install deps
         run: |
           python -m pip install --upgrade pip
           pip install requests
 
+      - name: Debug env
+        run: |
+          echo "OPENALEX_AUTHOR_ID=$OPENALEX_AUTHOR_ID"
+
       - name: Fetch OpenAlex metrics
         env:
           OPENALEX_AUTHOR_ID: "A5085505896"
+          OPENALEX_MAILTO: "hugur.yildiz@tedu.edu.tr"
         run: |
           python scripts/fetch_openalex_metrics.py
           echo "---- Generated JSON ----"
           cat _data/research_metrics.json
 
-      - name: Commit & Push if changed
+      - name: Commit metrics if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -43,6 +49,9 @@ jobs:
 
           echo "---- Git status ----"
           git status --porcelain
+
+          echo "---- Git diff (staged) ----"
+          git diff --cached || true
 
           if git diff --cached --quiet; then
             echo "No changes."
