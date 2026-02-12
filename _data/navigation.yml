@@ -9,10 +9,13 @@ main:
     url: "/research/"
 
   - title: "Service"
-    url: "/service/"  
+    url: "/service/"
 
   - title: "Students"
     url: "/students/"
 
   - title: "Teaching"
     url: "/teaching/"
+
+  - title: "&#128269;"
+    url: "/search/"
