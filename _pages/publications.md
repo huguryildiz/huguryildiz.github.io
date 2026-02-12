@@ -58,7 +58,6 @@ author_profile: true
 
 {% include research-metrics.html %}
 
----
 
 ## Publications
 
