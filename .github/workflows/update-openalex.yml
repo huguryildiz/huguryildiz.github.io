@@ -2,7 +2,7 @@ name: Update Research Metrics
 
 on:
   schedule:
-    - cron: "0 3 * * 1"   # Her Pazartesi 03:00 UTC
+    - cron: "0 3 * * *"   # Her gün 03:00 UTC
   workflow_dispatch:        # Elle de çalıştırılabilir
 
 jobs:

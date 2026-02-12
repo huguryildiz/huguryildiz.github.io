@@ -1,21 +1,26 @@
-<div class="research-metrics">
+div class="research-metrics">
   <div class="metric">
     <span class="metric-value">{{ site.data.research_metrics.citations }}</span>
     <span class="metric-label">Citations</span>
   </div>
-
   <div class="metric">
     <span class="metric-value">{{ site.data.research_metrics.h_index }}</span>
     <span class="metric-label">h-index</span>
   </div>
-
   <div class="metric">
     <span class="metric-value">{{ site.data.research_metrics.works }}</span>
     <span class="metric-label">Publications</span>
   </div>
-
   <div class="metric-footer">
-    <a href="{{ site.data.research_metrics.profile_url }}">OpenAlex Profile</a>
-    <span>• Updated {{ site.data.research_metrics.updated_utc }}</span>
+    <a href="{{ site.data.research_metrics.profile_url }}" target="_blank" rel="noopener">
+      <img
+        src="https://openalex.org/img/openalex-logo.png"
+        alt="OpenAlex"
+        style="height: 16px; vertical-align: middle; margin-right: 4px;"
+        onerror="this.style.display='none'"
+      />
+      OpenAlex
+    </a>
+    <span>• Updated {{ site.data.research_metrics.updated_utc | date: "%b %d, %Y" }}</span>
   </div>
 </div>
