@@ -58,6 +58,10 @@ author_profile: true
 
 {% include research-metrics.html %}
 
+{% include scopus-metrics.html %}
+
+---
+
 ## Publications
 
 {::nomarkdown}
