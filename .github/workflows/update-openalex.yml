@@ -12,9 +12,10 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: Checkout repo (master)
         uses: actions/checkout@v4
         with:
+          ref: master
           persist-credentials: true
 
       - name: Setup Python
@@ -27,10 +28,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
 
-      - name: Debug env
-        run: |
-          echo "OPENALEX_AUTHOR_ID=$OPENALEX_AUTHOR_ID"
-
       - name: Fetch OpenAlex metrics
         env:
           OPENALEX_AUTHOR_ID: "A5085505896"
@@ -39,6 +36,10 @@ jobs:
           python scripts/fetch_openalex_metrics.py
           echo "---- Generated JSON ----"
           cat _data/research_metrics.json
+
+      - name: Check ignore (debug)
+        run: |
+          git check-ignore -v _data/research_metrics.json || echo "Not ignored"
 
       - name: Commit metrics if changed
         run: |
