@@ -117,6 +117,8 @@ author:
   github           : "huguryildiz"
   linkedin         : "huguryildiz"
 
+openalex_author_id: "A5085505896"
+
   links:
     - label: "DBLP"
       icon: "ai ai-dblp"
