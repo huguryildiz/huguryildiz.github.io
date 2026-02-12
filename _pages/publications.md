@@ -3,6 +3,13 @@ layout: single
 title: "Publications"
 permalink: /publications/
 author_profile: true
+
+custom_css:
+  - pub-chart
+
+custom_js:
+  - pub-chart
+  - publications-filter
 ---
 
 ## Metrics
@@ -43,10 +50,6 @@ author_profile: true
 -->
 
 <!-- Auto-generated publication count and journal Q distribution charts -->
-{::nomarkdown}
-<link rel="stylesheet" href="{{ '/assets/css/pub-chart.css' | relative_url }}">
-<script defer src="{{ '/assets/js/pub-chart.js' | relative_url }}"></script>
-{:/nomarkdown}
 
 {::nomarkdown}
 <div class="pub-donuts-2col">
@@ -56,8 +59,8 @@ author_profile: true
 {:/nomarkdown}
 
 <!-- Open Alex Citation Report -->
+<!--  _includes/research-metrics.html -->
 {% include research-metrics.html %}
-
 
 ## Publications
 
@@ -248,8 +251,3 @@ author_profile: true
 
 - **Yildiz, H. U.**, Tavli, B., & Kahjogh, B. O. (2017, May). *Assessment of wireless sensor network lifetime reduction due to elimination of critical node sets*. In *2017 25th SIU* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2017.7960228) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/15euPq5RHnGhSFm788StYStlpDJEYPMBA/view?usp=sharing)  
-
-
-<script type="text/javascript">
-(function(){if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}function init(){var allItems=[];var headings={'journal':document.getElementById('journal-papers'),'editorial':document.getElementById('editorials'),'conf-int':document.getElementById('conference-papers-international'),'conf-nat':document.getElementById('conference-papers-national-turkish')};for(var type in headings){var heading=headings[type];if(!heading)continue;var el=heading.nextElementSibling;while(el&&el.tagName!=='UL'&&el.tagName!=='OL'){el=el.nextElementSibling}if(el){var items=el.getElementsByTagName('li');for(var i=0;i<items.length;i++){items[i].setAttribute('data-type',type);var match=items[i].textContent.match(/\((\d{4})\)/);if(match){items[i].setAttribute('data-year',match[1])}allItems.push(items[i])}}}var typeSelect=document.getElementById('pubType');var yearSelect=document.getElementById('pubYear');var applyBtn=document.getElementById('pubApply');var resetBtn=document.getElementById('pubReset');var countDiv=document.getElementById('pubCount');if(!typeSelect||!yearSelect)return;var years={};for(var i=0;i<allItems.length;i++){var y=allItems[i].getAttribute('data-year');if(y)years[y]=true}var yearList=Object.keys(years).sort(function(a,b){return b-a});for(var i=0;i<yearList.length;i++){var opt=document.createElement('option');opt.value=yearList[i];opt.textContent=yearList[i];yearSelect.appendChild(opt)}function applyFilter(){var selectedType=typeSelect.value;var selectedYear=yearSelect.value;var visibleCount=0;var counts={journal:0,editorial:0,'conf-int':0,'conf-nat':0};for(var i=0;i<allItems.length;i++){var item=allItems[i];var itemType=item.getAttribute('data-type');var itemYear=item.getAttribute('data-year');var typeMatch=(selectedType==='all'||itemType===selectedType);var yearMatch=(selectedYear==='all'||itemYear===selectedYear);var show=typeMatch&&yearMatch;item.style.display=show?'':'none';if(show){visibleCount++;counts[itemType]++}}for(var type in headings){if(headings[type]){headings[type].style.display=(counts[type]>0)?'':'none'}}if(countDiv){var msg=visibleCount===allItems.length?'Showing all '+allItems.length+' publications':'Showing '+visibleCount+' of '+allItems.length+' publications';countDiv.textContent=msg}}if(typeSelect)typeSelect.addEventListener('change',applyFilter);if(yearSelect)yearSelect.addEventListener('change',applyFilter);if(applyBtn)applyBtn.addEventListener('click',applyFilter);if(resetBtn){resetBtn.addEventListener('click',function(){typeSelect.value='all';yearSelect.value='all';applyFilter()})}applyFilter()}})();
-</script>
