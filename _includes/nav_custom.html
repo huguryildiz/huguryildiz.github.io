@@ -1,0 +1,97 @@
+<button class="mm-search-toggle" type="button" aria-label="Search" aria-expanded="false">
+  <span aria-hidden="true">🔍</span>
+</button>
+
+<div class="mm-search-overlay" hidden>
+  <div class="mm-search-box" role="dialog" aria-label="Site search">
+    <input class="mm-search-input" type="search" placeholder="Search…" autocomplete="off" />
+    <button class="mm-search-close" type="button" aria-label="Close">✕</button>
+    <div class="mm-search-results"></div>
+  </div>
+</div>
+
+<script>
+(function () {
+  const btn = document.querySelector(".mm-search-toggle");
+  const overlay = document.querySelector(".mm-search-overlay");
+  const input = document.querySelector(".mm-search-input");
+  const closeBtn = document.querySelector(".mm-search-close");
+  const results = document.querySelector(".mm-search-results");
+
+  if (!btn || !overlay || !input || !closeBtn || !results) return;
+
+  function openSearch() {
+    overlay.hidden = false;
+    btn.setAttribute("aria-expanded", "true");
+    setTimeout(() => input.focus(), 0);
+  }
+
+  function closeSearch() {
+    overlay.hidden = true;
+    btn.setAttribute("aria-expanded", "false");
+    input.value = "";
+    results.innerHTML = "";
+  }
+
+  function escapeHtml(s){
+    return (s || "").replace(/[&<>"']/g, m => ({
+      "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+    })[m]);
+  }
+
+  let indexPromise = null;
+  async function loadIndex(){
+    try{
+      const r = await fetch("{{ '/search.json' | relative_url }}", { cache: "no-store" });
+      if(!r.ok) return null;
+      return await r.json();
+    }catch(e){ return null; }
+  }
+
+  async function doSearch(){
+    const q = input.value.trim().toLowerCase();
+    if(!q){ results.innerHTML = ""; return; }
+
+    if(!indexPromise) indexPromise = loadIndex();
+    const data = await indexPromise;
+    if(!data){
+      results.innerHTML = "<div class='mm-search-hint'>Search index not found.</div>";
+      return;
+    }
+
+    const hits = data.filter(item => {
+      const hay = ((item.title||"") + " " + (item.content||"") + " " + (item.excerpt||"")).toLowerCase();
+      return hay.includes(q);
+    }).slice(0, 8);
+
+    if(!hits.length){
+      results.innerHTML = "<div class='mm-search-hint'>No results.</div>";
+      return;
+    }
+
+    results.innerHTML = hits.map(h => {
+      const url = h.url || "#";
+      const title = escapeHtml(h.title || url);
+      const snippet = escapeHtml((h.excerpt || "").slice(0, 160));
+      return `
+        <a class="mm-search-item" href="${url}">
+          <div class="mm-search-item-title">${title}</div>
+          ${snippet ? `<div class="mm-search-item-snippet">${snippet}</div>` : ""}
+        </a>
+      `;
+    }).join("");
+  }
+
+  btn.addEventListener("click", openSearch);
+  closeBtn.addEventListener("click", closeSearch);
+  overlay.addEventListener("click", (e) => { if(e.target === overlay) closeSearch(); });
+  input.addEventListener("input", doSearch);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeSearch();
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k"){
+      e.preventDefault(); openSearch();
+    }
+  });
+})();
+</script>

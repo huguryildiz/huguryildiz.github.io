@@ -1,6 +1,6 @@
 ---
-layout: search
 title: "Search"
+layout: search
 permalink: /search/
-author_profile: false
+sitemap: false
 ---
