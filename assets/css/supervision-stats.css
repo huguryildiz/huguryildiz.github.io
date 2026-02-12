@@ -39,8 +39,8 @@
 }
 
 /* =========================================
-   Prospective Card – Full Background Pulse
-   Subtle academic breathing effect
+   Prospective Card – Full Gold Pulse
+   Subtle academic gold breathing effect
    ========================================= */
 
 .prospective-card {
@@ -55,7 +55,7 @@
   border: 1px solid rgba(0,0,0,.08);
   box-shadow: 0 10px 26px rgba(0,0,0,.10);
 
-  animation: fullPulse 3.8s ease-in-out infinite;
+  animation: goldPulse 3.6s ease-in-out infinite;
 }
 
 /* Dark mode border refinement */
@@ -64,13 +64,14 @@ body[data-theme="dark"] .prospective-card {
   border-color: rgba(255,255,255,.10);
 }
 
-/* Smooth breathing background animation */
-@keyframes fullPulse {
+/* Smooth gold breathing animation */
+@keyframes goldPulse {
+
   0%, 100% {
     background-color: var(--pub-card-bg);
   }
 
   50% {
-    background-color: rgba(31,119,180,0.08); /* subtle academic blue */
+    background-color: rgba(212,175,55,0.10); /* academic gold */
   }
 }
