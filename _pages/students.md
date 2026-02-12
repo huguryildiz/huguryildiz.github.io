@@ -30,15 +30,11 @@ custom_css:
 ## Prospective Students
 
 <div class="prospective-card">
-  <h3 class="prospective-title">Prospective Students</h3>
 
   <p>
     I am interested in supervising highly motivated M.Sc. and Ph.D. students working at the intersection of operations research, mathematical optimization, and machine learning for next-generation networked systems, including wireless and underwater communication networks. Interested candidates are encouraged to contact me via email with their CV, transcript, and a concise statement of research interests.
   </p>
 
-  <a href="mailto:hugur.yildiz@tedu.edu.tr" class="prospective-btn">
-    Contact Me
-  </a>
 </div>
 
 ## Ph.D. Students
