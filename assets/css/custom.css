@@ -167,10 +167,6 @@ details[open] {
   }
 }
 
-/* =========================
-   Prospective Students Card
-   ========================= */
-
 .prospective-card {
   padding: 22px 24px;
   margin: 18px 0 12px 0;
@@ -181,14 +177,32 @@ details[open] {
   background: var(--pub-card-bg);
   color: var(--pub-text);
 
-  box-shadow:
-    0 8px 24px rgba(0,0,0,.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+
+  animation: researchPulse 4s ease-in-out infinite;
 }
 
-.prospective-card p {
-  margin: 0;
-}
+/* Soft breathing glow */
+@keyframes researchPulse {
 
+  0% {
+    box-shadow:
+      0 8px 24px rgba(0,0,0,.08),
+      0 0 0 rgba(31,119,180,0);
+  }
+
+  50% {
+    box-shadow:
+      0 12px 30px rgba(0,0,0,.12),
+      0 0 30px rgba(31,119,180,.20);
+  }
+
+  100% {
+    box-shadow:
+      0 8px 24px rgba(0,0,0,.08),
+      0 0 0 rgba(31,119,180,0);
+  }
+}
 /* =====================================================
    Research Metrics Footer
    - OpenAlex logo alignment
