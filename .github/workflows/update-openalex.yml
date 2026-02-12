@@ -3,7 +3,7 @@ name: Update OpenAlex Metrics
 on:
   workflow_dispatch:
   schedule:
-    - cron: "12 2 * * 1"   # Her Pazartesi 02:12 UTC
+    - cron: "12 2 * * 1"   # Every Monday 02:12 UTC
 
 permissions:
   contents: write
@@ -25,6 +25,8 @@ jobs:
         run: pip install requests
 
       - name: Fetch OpenAlex metrics
+        env:
+          OPENALEX_AUTHOR_ID: "A5085505896"
         run: python scripts/fetch_openalex_metrics.py
 
       - name: Commit & Push if changed
