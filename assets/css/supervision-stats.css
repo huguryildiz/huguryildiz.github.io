@@ -97,8 +97,8 @@ body.dark-mode .prospective-card{
 
   /* Use the same academic blue tone */
   background: radial-gradient(
-    circle at 25% 25%,
-    rgba(31,119,180,.16),  /* academic blue */
+    circle at 50% 50%,
+    rgba(31,119,180,.22) /* academic blue */
     rgba(31,119,180,0) 65%
   );
 
