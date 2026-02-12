@@ -38,52 +38,86 @@
   color: var(--pub-muted);
 }
 
-/* =========================================
-   Prospective Students – Soft Research Glow
-   ========================================= */
+/* =========================================================
+   Prospective Students Card
+   - Matches supervision stat cards in dark mode
+   - Cool academic breathing glow
+   - Clean typography
+   ========================================================= */
 
-/* Prospective Students card */
 .prospective-card{
+  position: relative;
+  overflow: hidden;
+
   padding: 22px 24px;
   margin: 18px 0 18px 0;
 
   border-radius: 16px;
+
+  /* Default (light mode) */
+  background: var(--pub-card-bg);
+  color: var(--pub-text);
   border: 1px solid rgba(0,0,0,.08);
 
-  background: #fff;               /* light default */
-  color: #222;
-
   box-shadow: 0 10px 26px rgba(0,0,0,.10);
-
-  /* glow animation */
-  animation: researchPulse 3.6s ease-in-out infinite;
-  will-change: box-shadow;
 }
 
-/* prevent weird word spacing */
+/* Keep paragraph compact */
 .prospective-card p{
   margin: 0;
   text-align: left;
+  line-height: 1.6;
 }
 
-/* breathing glow */
-@keyframes researchPulse{
+/* =========================================================
+   Dark mode background EXACTLY like supervision cards
+   ========================================================= */
+
+html[data-theme="dark"] .prospective-card,
+body[data-theme="dark"] .prospective-card,
+html.dark .prospective-card,
+body.dark .prospective-card,
+html.dark-mode .prospective-card,
+body.dark-mode .prospective-card{
+  background: var(--pub-card-bg) !important;
+  border: 1px solid rgba(255,255,255,.10) !important;
+}
+
+/* =========================================================
+   Academic Glow (Same tone family as your theme blue)
+   Subtle breathing radial overlay
+   ========================================================= */
+
+.prospective-card::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  /* Use the same academic blue tone */
+  background: radial-gradient(
+    circle at 25% 25%,
+    rgba(31,119,180,.16),  /* academic blue */
+    rgba(31,119,180,0) 65%
+  );
+
+  opacity: 0;
+  animation: academicPulse 3.8s ease-in-out infinite;
+}
+
+/* Keep content above animated layer */
+.prospective-card > *{
+  position: relative;
+  z-index: 1;
+}
+
+/* Smooth breathing animation */
+@keyframes academicPulse{
   0%, 100%{
-    box-shadow:
-      0 10px 26px rgba(0,0,0,.10),
-      0 0 0 rgba(31,119,180,0);
+    opacity: 0;
   }
   50%{
-    box-shadow:
-      0 16px 40px rgba(0,0,0,.14),
-      0 0 42px rgba(31,119,180,.28);
+    opacity: 1;
   }
-}
-
-/* dark theme support (if you ever enable it) */
-html[data-theme="dark"] .prospective-card,
-body[data-theme="dark"] .prospective-card{
-  background: rgba(255,255,255,.08);
-  color: rgba(255,255,255,.95);
-  border-color: rgba(255,255,255,.14);
 }
