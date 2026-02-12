@@ -368,7 +368,7 @@ html.theme-dark, body.theme-dark{
 }
 
 .research-metrics .metric-logo{
-  height: 25px;     /* burayı değiştir */
+  height: 50px;     /* burayı değiştir */
   width: auto;      /* oranı korur */
   display: block;
 }
