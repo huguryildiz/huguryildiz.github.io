@@ -64,13 +64,16 @@ body.theme-dark{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
-  align-items: start;
+  align-items: stretch;   /* cards stretch to same height */
   margin: 10px 0 18px 0;
 }
 @media (max-width: 900px){
   .pub-donuts-2col{ grid-template-columns: 1fr; }
 }
 
+.pub-donuts-2col .pub-chart{
+  height: 100%;
+}
 
 /* =========================
    2) DONUT CARD
@@ -83,6 +86,8 @@ body.theme-dark{
   box-shadow: var(--pub-shadow);
   color: var(--pub-text);
 }
+
+
 
 .pub-chart__title{
   font-size: 1.05rem;
@@ -346,4 +351,18 @@ html.theme-dark, body.theme-dark{
   background: var(--pub-card-bg) !important;
   box-shadow: var(--pub-shadow);
   color: var(--pub-text);
+}
+
+/* Reduce vertical whitespace inside Research Impact */
+.research-metrics .metrics-title{
+  margin: 0 0 8px 0 !important;
+}
+
+.research-metrics .metrics-row{
+  margin: 0 !important;
+  gap: 26px;
+}
+
+.research-metrics .metric-footer{
+  margin-top: 8px !important;
 }
