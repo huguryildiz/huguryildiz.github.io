@@ -9,33 +9,29 @@ nav: main
 
 ## Professional Experience
 
-- **Department Chair** <br>
-Department of Electrical and Electronics Engineering <br>
-TED University, Ankara, Turkey <br>
-Jul 2021 – Jul 2024
-  - Directed academic governance, accreditation (MUDEK), program development, faculty recruitment, and laboratory expansion while supervising 200+ students and leading departmental strategic growth.
+### TED University, Ankara, Turkey
 
-- **Associate Professor** <br>
-Department of Electrical and Electronics Engineering <br>
-TED University, Ankara, Turkey <br>
-Mar 2021 – Present
-  - Represent associate professors on the Faculty Board, teach core undergraduate courses, design and optimize 40+ mathematical programming models for wireless and underwater sensor networks, and publish, supervise, review, and mentor across research activities.
-  
-- **Assistant Professor** <br>
-Department of Electrical and Electronics Engineering <br>
-TED University, Ankara, Turkey <br>
-Sep 2016 – Mar 2021
-- Taught six undergraduate courses, conducted wireless sensor network optimization research, and published 12 journal and 9 conference papers while supervising theses and mentoring 100+ students.
+**Department Chair** | Jul 2021 – Jul 2024  
+- Led academic operations for 100+ students and 12 faculty members, overseeing budgeting, accreditation (MUDEK), curriculum development, and departmental strategic planning.
 
-- **Avionics Design Engineer** <br>
-Turkish Aerospace Industries (TAI), Ankara, Turkey <br>
-Dec 2015 – Aug 2016
-- Contributed to the ANKA UAV network architecture by configuring 20+ Cisco devices and implementing redundancy and secure IP multicasting across 3 ground stations and 5 aerial vehicles.
+**Associate Professor** | Mar 2021 – Present  
+- Designed 40+ network flow–based optimization models and conducted large-scale simulations to enhance wireless and underwater network performance, resulting in 20+ peer-reviewed publications (14 IEEE).
+- Taught 15+ undergraduate courses; mentored 25+ senior design teams and supervised 6 graduate theses using active learning methodologies.
 
-- **Senior Network Engineer** <br>
-Turk Telekom, Ankara, Turkey <br>
-Dec 2010 – Nov 2015
-  - Contributed to the design and deployment of the Safer Internet Service (serving 5M+ subscribers), implementing DPI-based content filtering across 100+ Cisco and Procera devices and developing child (whitelist) and family (blacklist) protection profiles. 
+**Assistant Professor** | Sep 2016 – Mar 2021  
+
+
+### Turkish Aerospace Industries (TAI), Ankara, Turkey
+
+**Avionics Design Engineer** | Dec 2015 – Aug 2016  
+- Built and configured the network infrastructure for 3 ground stations and 5 UAVs in the [ANKA](https://www.tusas.com/en/products/uav/operative-strategic-uav-systems/anka) program.
+- Designed a high-availability UAV communication network with 20+ Cisco devices using VRRP, IPsec, and multicast, enabling secure 24/7 mission readiness.
+
+### Turk Telekom, Ankara, Turkey
+
+**Senior Network Engineer** | Dec 2010 – Nov 2015  
+- Designed and maintained the [Safer Internet Service](https://www.guvenlinet.org.tr/) for 5M+ subscribers, leveraging Cisco and Procera DPI systems to block harmful web content.
+- Monitored and optimized 100+ DPI appliances, ensuring 99.9% service availability and compliance with national content regulation policies.
 
 ## Education
 
