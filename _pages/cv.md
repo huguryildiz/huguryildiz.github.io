@@ -19,19 +19,23 @@ Jul 2021 – Jul 2024
 Department of Electrical and Electronics Engineering <br>
 TED University, Ankara, Turkey <br>
 Mar 2021 – Present
-
+  - Represent associate professors on the Faculty Board, teach core undergraduate courses, design and optimize 40+ mathematical programming models for wireless and underwater sensor networks, and publish, supervise, review, and mentor across research activities.
+  
 - **Assistant Professor** <br>
 Department of Electrical and Electronics Engineering <br>
 TED University, Ankara, Turkey <br>
 Sep 2016 – Mar 2021
+- Taught six undergraduate courses, conducted wireless sensor network optimization research, and published 12 journal and 9 conference papers while supervising theses and mentoring 100+ students.
 
 - **Avionics Design Engineer** <br>
 Turkish Aerospace Industries (TAI), Ankara, Turkey <br>
 Dec 2015 – Aug 2016
+- Contributed to the ANKA UAV network architecture by configuring 20+ Cisco devices and implementing redundancy and secure IP multicasting across 3 ground stations and 5 aerial vehicles.
 
 - **Senior Network Engineer** <br>
 Turk Telekom, Ankara, Turkey <br>
 Dec 2010 – Nov 2015
+  - Contributed to the design and deployment of the Safer Internet Service (serving 5M+ subscribers), implementing DPI-based content filtering across 100+ Cisco and Procera devices and developing child (whitelist) and family (blacklist) protection profiles. 
 
 ## Education
 
