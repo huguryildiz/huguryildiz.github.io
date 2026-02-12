@@ -74,7 +74,7 @@ author_profile: true
     <h3 style="margin:0 0 8px 0;">EE 304 – Probability and Random Variables</h3>
 
     <p style="margin:0 0 12px 0;">
-      A third-year undergraduate core course covering probability models, discrete and continuous random variables, joint and conditional distributions, correlation, covariance, and expectation.
+      A third-year undergraduate course covering probability models, discrete and continuous random variables, joint and conditional distributions, correlation, covariance, and expectation.
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-304" target="_blank" rel="noopener" style="margin-right:6px; text-decoration: none;">
@@ -101,7 +101,7 @@ author_profile: true
     <h3 style="margin:0 0 8px 0;">EE 311 – Signals and Systems</h3>
 
     <p style="margin:0 0 12px 0;">
-      A third-year undergraduate core course covering continuous-time and discrete-time signals, linear systems, Fourier analysis, and sampling theory.
+      A third-year undergraduate course covering continuous-time and discrete-time signals, linear systems, Fourier analysis, and sampling theory.
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-311" target="_blank" rel="noopener" style="margin-right:6px; text-decoration: none;">
@@ -218,7 +218,7 @@ author_profile: true
     <h3 style="margin:0 0 8px 0;">EE 205 – Software Tools for Electrical Engineering</h3>
 
     <p style="margin:0 0 12px 0;">
-      A compulsory undergraduate course introducing MATLAB-based software tools and computational methods for electrical engineering applications.
+      A second-year undergraduate course introducing MATLAB-based software tools and computational methods for electrical engineering applications.
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-205" target="_blank" rel="noopener" style="margin-right:6px; text-decoration: none;">
@@ -245,7 +245,7 @@ author_profile: true
     <h3 style="margin:0 0 8px 0;">EE 312 – Communication Systems I</h3>
 
     <p style="margin:0 0 12px 0;">
-      A compulsory undergraduate course covering communication systems, modulation techniques, and noise analysis.
+      A third-year undergraduate course covering communication systems, modulation techniques, and noise analysis.
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-312" target="_blank" rel="noopener" style="margin-right:6px; text-decoration: none;">
@@ -272,7 +272,7 @@ author_profile: true
     <h3 style="margin:0 0 8px 0;">EE 462 – Power System Analysis</h3>
 
     <p style="margin:0 0 12px 0;">
-      An undergraduate elective covering power system modeling, load flow, fault analysis, smart grids, and renewables.
+      A senior-level undergraduate course covering power system modeling, load flow, fault analysis, smart grids, and renewables.
     </p>
 
     <a href="https://www.tedu.edu.tr/ee-462" target="_blank" rel="noopener" style="margin-right:6px; text-decoration: none;">
@@ -287,7 +287,7 @@ author_profile: true
 
 ---
 
-Course materials, including lecture notes and supplementary resources, are available through the [TEDU LMS](https://lms.tedu.edu.tr/).
+Course materials, including lecture notes and supplementary resources, are available through the <i class="ai ai-moodle"></i> [TEDU LMS](https://lms.tedu.edu.tr/).
 
 ## Teaching Philosophy
 
