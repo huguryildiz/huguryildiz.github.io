@@ -166,3 +166,67 @@ details[open] {
     opacity: 1 !important;
   }
 }
+
+/* =========================
+   Prospective Students Card
+   ========================= */
+
+.prospective-card{
+  margin: 18px 0 28px 0;
+  padding: 18px 20px;
+
+  border: 1px solid var(--pub-border);
+  border-radius: 14px;
+
+  background: var(--pub-card-bg);
+  box-shadow: var(--pub-shadow);
+
+  color: var(--pub-text);
+}
+
+/* Title */
+.prospective-title{
+  margin: 0 0 10px 0;
+  font-size: 1.05rem;
+  font-weight: 850;
+  color: var(--pub-text);
+}
+
+/* Paragraph */
+.prospective-card p{
+  margin: 0 0 14px 0;
+  line-height: 1.6;
+  color: var(--pub-text);
+}
+
+/* Button */
+.prospective-btn{
+  display: inline-block;
+  padding: 8px 14px;
+
+  border-radius: 10px;
+  text-decoration: none;
+
+  background-color: #007ec7;
+  border: 1px solid #007ec7;
+  color: #ffffff;
+
+  font-weight: 600;
+  font-size: 0.9rem;
+
+  transition: all 0.2s ease;
+}
+
+.prospective-btn:hover{
+  background-color: #0069a8;
+  border-color: #0069a8;
+  color: #ffffff;
+}
+
+/* Dark mode automatically matches pub-card colors */
+html[data-theme="dark"] .prospective-card,
+body[data-theme="dark"] .prospective-card,
+html.dark .prospective-card,
+body.dark .prospective-card{
+  background: var(--pub-card-bg);
+}
