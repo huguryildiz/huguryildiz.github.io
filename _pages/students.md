@@ -41,28 +41,26 @@ custom_css:
 
 - **C. Tantur Karagul** (2025). *Network lifetime optimization in underwater wireless sensor networks with variable k-connectivity*. TOBB University of Economics and Technology.  
   ![PhD Co-advisor](https://img.shields.io/badge/PhD-Co--advisor-6f42c1?style=flat-square)  
-  [![YÖK Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)]()
 
-- **M. Cobanlar** (2022). *Examination of the relationship between k-connectivity and network lifetime in underwater acoustic sensor networks*. TOBB University of Economics and Technology.  
+- **M. Cobanlar** (2022). *Analysis of the trade-off between network lifetime and K-connectivity in wireless sensor networks*. TOBB University of Economics and Technology.  
   ![PhD Co-advisor](https://img.shields.io/badge/PhD-Co--advisor-6f42c1?style=flat-square)  
   [![YÖK Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=G_oJ1rKE4SgJUkomyAKpR_b66BRHX6Iu8I5xytFXfpv7OVxvt9gxQhlL5X5kvF6X)
 
 
 ## M.Sc. Students
 
-- **B. E. Un** (2021). *Investigation of the effects of critical nodes on the lifetime of underwater acoustic sensor networks using private key encryption via a unique optimization framework*. TOBB University of Economics and Technology.  
+- **B. E. Un** (2021). *Design of a novel optimization framework for the analysis of the impact of critical nodes on network lifetime of underwater acoustic sensor networks utilizing private key cryptography*. TOBB University of Economics and Technology.  
   ![MSc Co-advisor](https://img.shields.io/badge/MSc-Co--advisor-6f42c1?style=flat-square)  
   [![YÖK Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=qVqOZFj2DwNmvdf1oGFYiPA6aYtotmnOK4EXJfFCxlc2mg4JGwOzN8dwilUNajg1)
 
 - **C. Aydin** (2021). *Number of depleted nodes–based network lifetime maximization in underwater wireless sensor networks*. TOBB University of Economics and Technology.  
   ![MSc Co-advisor](https://img.shields.io/badge/MSc-Co--advisor-6f42c1?style=flat-square)  
-  [![YÖK Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)]()
-
-- **A. Ozmen** (2021). *Modeling and exploring eavesdropping risk minimization and network lifetime maximization trade-offs in underwater acoustic sensor networks using a mixed integer programming approach*. TOBB University of Economics and Technology.  
+  
+- **A. Ozmen** (2021). *Modeling the tradeoff between eavesdropping and network lifetime through a mixed integer programming approach in underwater acoustic sensor networks*. TOBB University of Economics and Technology.  
   ![MSc Co-advisor](https://img.shields.io/badge/MSc-Co--advisor-6f42c1?style=flat-square)  
   [![YÖK Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=v7BkNnnepTnbhn8rNR77LXvYfssCwLtFHwO6QyeDzoiU-4og5S68KqSwbXXeeT31)
 
-- **Y. Karakurt** (2018). *Eavesdropping potential in wireless sensor networks and modeling and analysis of network lifetime recovery*. TOBB University of Economics and Technology.  
+- **Y. Karakurt** (2018). *Eavesdropping potential in wireless sensor networks and modeling and analysis of network life time recovery*. TOBB University of Economics and Technology.  
   ![MSc Co-advisor](https://img.shields.io/badge/MSc-Co--advisor-6f42c1?style=flat-square)  
   [![YÖK Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=vbVkXe1KChYWNElr1MuLZk7iD5LqiauQM_0h3VZ7ultdWdGKzp4EHgQC9HFbDZh7)
 
