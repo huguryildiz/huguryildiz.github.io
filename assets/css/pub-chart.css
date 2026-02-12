@@ -1,12 +1,10 @@
 /* =========================================================
-   pub-chart.css (CLEAN FULL)
+   pub-chart.css
    - Single source of truth for tokens (light + dark)
    - Donut center text + legend always readable
    - Legend below donut
-   - Filter card is NOT sticky
    - Research metrics card matches donut cards
    ========================================================= */
-
 
 /* =========================================================
    0) THEME TOKENS (LIGHT DEFAULT)
@@ -329,4 +327,17 @@ body.theme-dark{
 .research-metrics .metric-source-link{
   display: inline-flex;
   align-items: center;
+}
+
+/* =====================================================
+   Most Cited Paper - Blink Effect
+   ===================================================== */
+
+.most-cited-badge img {
+  animation: citedBlink 1.6s infinite;
+}
+
+@keyframes citedBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .35; }
 }

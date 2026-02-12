@@ -120,7 +120,7 @@ custom_js:
 - **Yildiz, H. U.** (2023). *Joint effects of void region size and sink architecture on underwater WSNs lifetime*. *IEEE Sensors Journal, 23*(10), 11046–11056.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2023_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JSEN.2023.3264159)
 
-- Cobanlar, M., **Yildiz, H. U.**, Akram, V. K., Dagdeviren, O., & Tavli, B. (2022). *On the trade-off between network lifetime and k-connectivity-based reliability in UWSNs*. *IEEE Internet of Things Journal, 9*(23), 24444–24452.  
+- Cobanlar, M., **Yildiz, H. U.**, Akram, V. K., Dagdeviren, O., & Tavli, B. (2022). *On the tradeoff between network lifetime and k-connectivity-based reliability in UWSNs*. *IEEE Internet of Things Journal, 9*(23), 24444–24452.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2022_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JIOT.2022.3188558)
 
 - Carsancakli, M. F., Al Imran, M. A., **Yildiz, H. U.**, Kara, A., & Tavli, B. (2022). *Reliability of linear WSNs: A complementary overview and analysis of impact of cascaded failures on network lifetime*. *Ad Hoc Networks, 131*, 102839.  
@@ -129,7 +129,7 @@ custom_js:
 - Tekin, N., **Yildiz, H. U.**, & Gungor, V. C. (2021). *Node-level error control strategies for prolonging the lifetime of wireless sensor networks*. *IEEE Sensors Journal, 21*(13), 15386–15397.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2021_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JSEN.2021.3073889)
 
-- **Yildiz, H. U.**, Kurt, S., & Tavli, B. (2019). *Comparative analysis of transmission power level and packet size optimization strategies for wireless sensor networks in smart grid applications*. *IEEE Systems Journal, 13*(3), 2264–2274.  
+- **Yildiz, H. U.**, Kurt, S., & Tavli, B. (2019). *Comparative analysis of transmission power level and packet size optimization strategies for WSNs*. *IEEE Systems Journal, 13*(3), 2264–2274.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2019_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JSYST.2018.2864941)
 
 - **Yildiz, H. U.** (2019). *Maximization of underwater sensor networks lifetime via fountain codes*. *IEEE Transactions on Industrial Informatics, 15*(8), 4602–4613.  
@@ -144,14 +144,14 @@ custom_js:
 - Sayit, M., Cetinkaya, C., **Yildiz, H. U.**, & Tavli, B. (2019). *DASH–QoS: A scalable network layer service differentiation architecture for DASH over SDN*. *Computer Networks, 154*, 12–25.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2019_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1016/j.comnet.2019.02.015)
 
-- **Yildiz, H. U.** (2019). *Investigation of network lifetime and delay trade-off in underwater acoustic sensor networks*. *International Journal of Communication Systems, 32*(7), e3924.  
+- **Yildiz, H. U.** (2019). *Investigation of maximum lifetime and minimum delay trade-off in underwater sensor networks*. *International Journal of Communication Systems, 32*(7), e3924.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q2](https://img.shields.io/badge/2019_Rank-Q2-green?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1002/dac.3924)
 
 - **Yildiz, H. U.**, Gungor, V. C., & Tavli, B. (2019). *Packet size optimization for lifetime maximization in underwater acoustic sensor networks*. *IEEE Transactions on Industrial Informatics, 15*(2), 719–729.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2019_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/TII.2018.2841830)
 
 - **Yildiz, H. U.** (2018). *The impact of transmission power levels set size on lifetime of wireless sensor networks in smart grids*. *Turkish Journal of Electrical Engineering & Computer Sciences, 26*(6), 3057–3071.  
-![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q3](https://img.shields.io/badge/2018_Rank-Q3-orange?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://journals.tubitak.gov.tr/elektrik/issues/elk-18-26-6/elk-26-6-23-1803-189.pdf)
+![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q3](https://img.shields.io/badge/2018_Rank-Q3-orange?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://journals.tubitak.gov.tr/elektrik/vol26/iss6/23/)
 
 - Yigit, M., **Yildiz, H. U.**, Kurt, S., Tavli, B., & Gungor, V. C. (2018). *A survey on packet size optimization for terrestrial, underwater, underground, and body area sensor networks*. *International Journal of Communication Systems, 31*(11), e3572.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q2](https://img.shields.io/badge/2018_Rank-Q2-green?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1002/dac.3572)
@@ -163,12 +163,13 @@ custom_js:
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2017_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/LWC.2017.2679744)
 
 - Kurt, S., **Yildiz, H. U.**, Yigit, M., Tavli, B., & Gungor, V. C. (2017). *Packet size optimization in wireless sensor networks for smart grid applications*. *IEEE Transactions on Industrial Electronics, 64*(3), 2392–2401.  
-![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2017_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/TIE.2016.2619319)
+![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2017_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/TIE.2016.2619319) ![Most Cited](https://img.shields.io/badge/Most_Cited_Paper-Top_Impact-ffcc00?style=flat-square)
+{: .most-cited-badge }
 
 - Akbas, A., **Yildiz, H. U.**, Tavli, B., & Uludag, S. (2016). *Joint optimization of transmission power level and packet size for WSN lifetime maximization*. *IEEE Sensors Journal, 16*(12), 5084–5094.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2016_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JSEN.2016.2548661)
 
-- **Yildiz, H. U.**, Bicakci, K., Tavli, B., Gultekin, H., & Incebacak, D. (2016). *Maximizing wireless sensor network lifetime by communication/computation energy optimization: Node level versus network level strategies*. *Ad Hoc Networks, 37*(2), 301–323.  
+- **Yildiz, H. U.**, Bicakci, K., Tavli, B., Gultekin, H., & Incebacak, D. (2016). *Maximizing Wireless Sensor Network lifetime by communication/computation energy optimization of non-repudiation security service: Node level versus network level strategies*. *Ad Hoc Networks, 37*(2), 301–323.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2016_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1016/j.adhoc.2015.08.026)
 
 - **Yildiz, H. U.**, Tavli, & Yanikomeroglu, H. (2016). *Transmission power control for link–level handshaking in wireless sensor networks*. *IEEE Sensors Journal, 16*(2), 561–576.  
