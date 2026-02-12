@@ -18,25 +18,22 @@
     </div>
   </div>
 
-<div class="metric-footer">
+  <div class="metric-footer">
+    <a href="{{ site.data.research_metrics.profile_url }}"
+       target="_blank"
+       rel="noopener"
+       class="metric-source-link"
+       aria-label="OpenAlex Profile">
 
-  <a href="{{ site.data.research_metrics.profile_url }}"
-     target="_blank"
-     rel="noopener"
-     class="metric-source-link"
-     aria-label="OpenAlex Profile">
+      <img
+        src="{{ '/images/icons/openalex.png' | relative_url }}"
+        alt="OpenAlex"
+        class="metric-logo"
+      />
+    </a>
 
-    <img
-      src="{{ '/images/icons/openalex.png' | relative_url }}"
-      alt="OpenAlex"
-      width="100"
-      height="50"
-    />
-
-  </a>
-
-  <span class="metric-updated">
-    • Updated {{ site.data.research_metrics.updated_utc | date: "%b %d, %Y at %H:%M" }}
-  </span>
-
+    <span class="metric-updated">
+      • Updated {{ site.data.research_metrics.updated_utc | date: "%b %d, %Y at %H:%M" }}
+    </span>
+  </div>
 </div>

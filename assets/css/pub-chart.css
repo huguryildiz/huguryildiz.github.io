@@ -365,29 +365,15 @@ html.theme-dark, body.theme-dark{
 
 .research-metrics .metric-footer{
   margin-top: 8px !important;
-
-
-  .metric-footer{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
 }
 
-.metric-source-link{
+.research-metrics .metric-logo{
+  height: 75px;     /* burayı değiştir */
+  width: auto;      /* oranı korur */
+  display: block;
+}
+
+.research-metrics .metric-source-link{
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--pub-text);
-}
-
-.metric-source-link:hover{
-  text-decoration: underline;
-  opacity: .85;
-}
-
-.metric-updated{
-  color: var(--pub-muted);
 }
