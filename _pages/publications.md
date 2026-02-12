@@ -43,13 +43,18 @@ author_profile: true
 -->
 
 <!-- Auto-generated publication count and journal Q distribution charts -->
+{::nomarkdown}
 <link rel="stylesheet" href="{{ '/assets/css/pub-chart.css' | relative_url }}">
 <script defer src="{{ '/assets/js/pub-chart.js' | relative_url }}"></script>
+{:/nomarkdown}
 
+{::nomarkdown}
 <div class="pub-donuts-2col">
   <div id="pubCountDonut" class="pub-chart" style="display:none;"></div>
   <div id="journalQDonut" class="pub-chart" style="display:none;"></div>
 </div>
+{:/nomarkdown}
+
 
 {% include research-metrics.html %}
 
