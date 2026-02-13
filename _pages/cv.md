@@ -48,13 +48,13 @@ Aug 2005 – Aug 2009
 ## Theses
 
 - **Ph.D. Dissertation** <br>
-*Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks* <br>
+*Transmission power control for link-level handshaking in wireless sensor networks* <br>
 Advisor: [Prof. Bulent Tavli](https://scholar.google.com/citations?user=flpa7L4AAAAJ&hl=en) <br>
 [![PDF](https://img.shields.io/badge/Resource-PDF-red?style=flat-square)](/files/Yildiz_HuseyinUgur_PhD_Dissertation.pdf)
 [![Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=Br_XTptK8CZ70f0JGX9xEjZCixd1XEodCqaT6dDVvnmfvltgkE09YEFFWmk5LBx2)
 
 - **M.Sc. Thesis** <br>
-*Communication/Computation Trade-offs in Wireless Sensor Networks: Comparing Network-Level and Node-Level Strategies* <br>
+*Communication/computation trade-offs in wireless sensor networks: Comparing network-level and node-level strategies* <br>
 Advisor: [Prof. Bulent Tavli](https://scholar.google.com/citations?user=flpa7L4AAAAJ&hl=en) <br>
 Co-advisor: [Prof. Kemal Bicakci](https://scholar.google.com/citations?user=HCTygx4AAAAJ&hl=en) <br>
 [![PDF](https://img.shields.io/badge/Resource-PDF-red?style=flat-square)](/files/Yildiz_HuseyinUgur_MSc_Thesis.pdf)
@@ -68,7 +68,7 @@ Co-advisor: [Prof. Kemal Bicakci](https://scholar.google.com/citations?user=HCTy
   
 
 - **Best Paper Award (Third Place)**,
-  *Utilization of Multi-Sink Architectures for Lifetime Maximization in Underwater Sensor Networks*,
+  *Utilization of multi-sink architectures for lifetime maximization in underwater sensor networks*,
   IEEE Middle East and North Africa Communications Conference (MENACOMM) 2019, Manama, Kingdom of Bahrain <br>
   [![Award](https://img.shields.io/badge/Award-Best_Paper-gold?style=flat-square)](https://drive.google.com/file/d/1QbpfuRXmyoTQCFJAFh_H-exv3v3Q8L-t/view)
 
