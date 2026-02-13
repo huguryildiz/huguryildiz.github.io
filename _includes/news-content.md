@@ -28,7 +28,7 @@
 - <span class="news-badge">08/2017</span> [Çağla Tantur](https://www.linkedin.com/in/%C3%A7a%C4%9Fla-tantur-karag%C3%BCl-b834b0b5/) successfully defended her M.Sc. thesis at TOBB University of Economics and Technology.
 - <span class="news-badge">09/2016</span> Appointed as Assistant Professor in the Department of Electrical and Electronics Engineering at TED University.
 - <span class="news-badge">04/2016</span> Successfully defended my Ph.D. dissertation at TOBB University of Economics and Technology.
-- <span class="news-badge">12/2015</span> Appointed as Avionics Design Engineer at Turkish Aerospace Industries, working on the ANKA Unmanned Aerial Vehicle (UAV) Project.
+- <span class="news-badge">12/2015</span> Appointed as Avionics Design Engineer at Turkish Aerospace Industries.
 - <span class="news-badge">12/2014</span> Invited seminar at The University of Texas at Dallas: “The Impact of Random Power Assignment in Handshaking on Wireless Sensor Network Lifetime” (Host: Prof. Murat Torlak).
 - <span class="news-badge">01–02/2014</span> Invited seminar series at leading research universities in the USA and Canada on transmission power control and network optimization in wireless sensor networks (University of Rochester, SUNY Buffalo, USC, UC Irvine, Carleton University).
 - <span class="news-badge">09/2013</span> Successfully defended my M.Sc. thesis at TOBB University of Economics and Technology.
