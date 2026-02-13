@@ -1,6 +1,6 @@
 - <span class="news-badge pulse">12/2025</span> [Çağla Tantur Karagül](https://www.linkedin.com/in/%C3%A7a%C4%9Fla-tantur-karag%C3%BCl-b834b0b5/) successfully defended her Ph.D. dissertation at TOBB University of Economics and Technology.
 - <span class="news-badge pulse">11/2025</span> Conference paper presented at IEEE TELFOR 2025: “Non-uniform k-connectivity for energy-efficient and reliable underwater wireless sensor networks”.
-- <span class="news-badge">10/2025</span> Journal paper published in *IEEE Internet of Things Journal*: “Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity”.
+- <span class="news-badge pulse">10/2025</span> Journal paper published in *IEEE Internet of Things Journal*: “Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity”.
 
 <details markdown="1">
 <summary><strong>Archive</strong></summary>
