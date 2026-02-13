@@ -85,7 +85,7 @@ Co-advisor: [Prof. Kemal Bicakci](https://scholar.google.com/citations?user=HCTy
 [![GAMS](/images/icons/gams.jpg "GAMS – Mathematical Modeling System"){:width="36"}](https://www.gams.com)
 [![Gurobi](/images/icons/gurobi.jpg "Gurobi Optimizer – Commercial MIP/LP Solver"){:width="36"}](https://www.gurobi.com)
 [![PuLP](/images/icons/pulp.jpg "PuLP – Python Linear Programming API"){:width="36"}](https://coin-or.github.io/pulp/)
-[![Pyomo](/images/icons/pyomo.jpg "Pyomo – Python Optimization Modeling Objects"){:width="36"}](https://www.pyomo.org)
+[![Pyomo](/images/icons/pyomo.jpg "Pyomo – Python Optimization Modeling Objects"){:width="36"}](https://carl-laird-6r0j.squarespace.com/)
 
 **Development**
 
