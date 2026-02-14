@@ -1,17 +1,32 @@
 ---
 ---
-
 /*
- * This file controls what is imported from /_sass
+ * ============================================================
+ *  MAIN SCSS ENTRY FILE  (Minimal Mistakes Based Site)
+ * ============================================================
  *
- * Note that the files are processed in the order they are imported, so they are partly
-   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
+ *  This file controls what is imported from /_sass.
+ *  IMPORTANT:
+ *  - The first two lines (--- ---) are required by Jekyll.
+ *  - Imports are processed in order.
+ *  - Theme files are loaded before custom overrides.
+ *
+ *  This ensures that all custom CSS below overrides
+ *  Minimal Mistakes defaults safely.
  */
- 
+
+/* ===============================
+   Load custom partial first
+   =============================== */
 @import "custom";
+
+/* ===============================
+   Core Vendor + Theme Imports
+   =============================== */
 @import
     "vendor/breakpoint/breakpoint",
 
+    /* Theme base (light & dark modes) */
     "themes",
     "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
     "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
@@ -19,6 +34,7 @@
     "include/mixins",
     "vendor/susy/susy",
 
+    /* Layout foundation */
     "layout/reset",
     "layout/base",
 
@@ -33,34 +49,47 @@
 
     "layout/forms",
 
+    /* Page structure */
     "layout/page",
     "layout/archive",
     "layout/sidebar",
     "layout/json_cv",
 
+    /* Font Awesome */
     "vendor/font-awesome/fontawesome",
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
 
-/* ---------------------------------
-   Global content alignment
-   ---------------------------------
-   Force justified text for page content.
-   This ensures paragraphs and list items
-   are evenly aligned on both left and right edges.
-*/
+
+/* ============================================================
+   1) GLOBAL CONTENT ALIGNMENT
+   ============================================================ */
+
+/*
+ * Force justified alignment inside main content area.
+ * Applies to paragraphs and list items.
+ * !important ensures override over theme defaults.
+ */
 .page__content,
 .page__content p,
 .page__content li {
   text-align: justify !important;
 }
 
-/* =========================
-   Metrics badges
-   ========================= */
 
-.metrics-badges{
+
+/* ============================================================
+   2) METRICS BADGES (Scopus, Google Scholar, OpenAlex etc.)
+   ============================================================ */
+
+/*
+ * Badge wrapper container:
+ * - Flexible layout
+ * - Responsive wrapping
+ * - Consistent spacing
+ */
+.metrics-badges {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -68,8 +97,11 @@
   margin: 1rem 0;
 }
 
-/* Remove ALL link underline effects from theme */
-.metrics-badges a{
+/*
+ * Remove ALL default link styling inside metrics badges.
+ * This prevents theme underlines or borders.
+ */
+.metrics-badges a {
   text-decoration: none !important;
   border: 0 !important;
   border-bottom: 0 !important;
@@ -83,38 +115,50 @@
   padding: 0;
 }
 
-/* Badge images */
-.metrics-badges img{
+/* Ensure badge images render cleanly */
+.metrics-badges img {
   display: block;
   border: none !important;
 }
 
-/* =========================
-   Research Areas
-   ========================= */
 
+
+/* ============================================================
+   3) RESEARCH AREAS (Chip / Tag Layout)
+   ============================================================ */
+
+/* Container spacing */
 .ra-container { margin-top: 1.25rem; }
 .ra-section   { margin-bottom: 1.5rem; }
 
-.ra-title{
+/* Section title */
+.ra-title {
   margin-bottom: .75rem;
   font-weight: 700;
-  color: inherit;
+  color: inherit; /* Theme-aware */
 }
 
+/* Ensure headers inherit theme color */
 .ra-section h2,
 .ra-section h3,
-.ra-section h4{
+.ra-section h4 {
   color: inherit;
 }
 
-.ra-wrap{
+/* Chip layout wrapper */
+.ra-wrap {
   display: flex;
   flex-wrap: wrap;
   gap: .6rem;
 }
 
-.ra-chip{
+/*
+ * Base chip style:
+ * - Fully rounded pill
+ * - Uses CSS variables for color control
+ * - Smooth hover animation
+ */
+.ra-chip {
   padding: .45rem 1rem;
   border-radius: 999px;
   font-weight: 600;
@@ -128,54 +172,64 @@
   transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
 }
 
-.ra-chip:hover{
+/* Subtle hover elevation effect */
+.ra-chip:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,.08);
 }
 
-/* =========================
-   Color Variants
-   ========================= */
-.ra-network{ --ra-bg:#dbeafe; --ra-bd:#93c5fd; --ra-fg:#1e40af; }
-.ra-opt    { --ra-bg:#fed7aa; --ra-bd:#fdba74; --ra-fg:#c2410c; }
-.ra-ai     { --ra-bg:#d1fae5; --ra-bd:#6ee7b7; --ra-fg:#065f46; }
-.ra-quantum{ --ra-bg:#e9d5ff; --ra-bd:#c084fc; --ra-fg:#6b21a8; }
+/* -------- Color Variants (Thematic Groups) -------- */
+.ra-network  { --ra-bg:#dbeafe; --ra-bd:#93c5fd; --ra-fg:#1e40af; }
+.ra-opt      { --ra-bg:#fed7aa; --ra-bd:#fdba74; --ra-fg:#c2410c; }
+.ra-ai       { --ra-bg:#d1fae5; --ra-bd:#6ee7b7; --ra-fg:#065f46; }
+.ra-quantum  { --ra-bg:#e9d5ff; --ra-bd:#c084fc; --ra-fg:#6b21a8; }
 
-/* =========================
-   Footer Visitors (Left aligned)
-   ========================= */
 
-.footer__visitors{
+
+/* ============================================================
+   4) FOOTER VISITORS (World Map Widget)
+   ============================================================ */
+
+/* Left-aligned visitor block */
+.footer__visitors {
   margin-top: 1.5rem;
   text-align: left;
 }
 
-.footer__visitors h4{
+/* Small caption style */
+.footer__visitors h4 {
   margin-bottom: .4rem;
   font-size: .85rem;
   font-weight: 600;
   opacity: .75;
 }
 
-.footer__visitors-map{
+/* Map container */
+.footer__visitors-map {
   width: 160px;
   height: 160px;
   margin-left: 0;
   overflow: hidden;
 }
 
+/*
+ * Scale embedded map content to fit container.
+ * transform used instead of width/height override.
+ */
 .footer__visitors-map iframe,
 .footer__visitors-map canvas,
-.footer__visitors-map > div{
+.footer__visitors-map > div {
   transform: scale(0.7);
   transform-origin: top left;
 }
 
-/* =========================================================
-   Publications Donut Charts — Minimal Theme-Aligned Style
-   ========================================================= */
 
-/* Inherit theme font and color */
+
+/* ============================================================
+   5) PUBLICATIONS DONUT CHARTS (Theme-Aligned)
+   ============================================================ */
+
+/* Inherit theme typography */
 .qdonut-wrap,
 .qdonut-svg text,
 .qdonut-legend,
@@ -191,7 +245,7 @@
   margin-bottom: 0.75rem;
 }
 
-/* Legend styling */
+/* Legend */
 .qdonut-legend {
   font-size: inherit;
   font-weight: normal;
@@ -199,21 +253,21 @@
   margin-top: 0.75rem;
 }
 
-/* Segment numbers */
+/* Chart segment numbers */
 .qdonut-count {
   font-size: inherit;
   font-weight: normal;
   fill: #ffffff;
 }
 
-/* Center total (main number) */
+/* Central donut value */
 .qdonut-total {
   font-size: 1.8em;
   font-weight: normal;
   fill: currentColor;
 }
 
-/* Subtitle inside donut */
+/* Donut subtitle */
 .qdonut-sub {
   font-size: inherit;
   font-weight: normal;
@@ -221,19 +275,21 @@
   opacity: 0.8;
 }
 
-/* Legend swatches */
+/* Legend color squares */
 .qdonut-legend__swatch {
   width: 10px;
   height: 10px;
   border-radius: 3px;
 }
 
-/* =========================================
-   Research Metrics Card — Theme Aware Style
-   Compatible with Minimal Mistakes
-   ========================================= */
 
-/* Main metrics container */
+
+/* ============================================================
+   6) RESEARCH METRICS CARD
+   Minimal + Theme Aware
+   ============================================================ */
+
+/* Card container */
 .research-metrics {
   background-color: var(--mm-background-color, transparent);
   border: 1px solid var(--mm-border-color, rgba(0,0,0,0.08));
@@ -242,14 +298,14 @@
   margin: 20px 0;
 }
 
-/* Individual metric blocks */
+/* Individual metric block */
 .metric {
   display: inline-block;
   margin-right: 28px;
   margin-bottom: 6px;
 }
 
-/* Metric numeric value */
+/* Numeric value */
 .metric-value {
   font-size: 1.7rem;
   font-weight: 600;
@@ -257,15 +313,24 @@
   line-height: 1.2;
 }
 
-/* Metric label */
+/* Label */
 .metric-label {
   font-size: 0.85rem;
   opacity: 0.65;
   color: var(--mm-text-color, currentColor);
 }
 
-/* Make the search nav item look like an icon button */
-.masthead__menu-item a[href$="/search/"]{
+
+
+/* ============================================================
+   7) Navigation Search Icon Styling
+   ============================================================ */
+
+/*
+ * Makes the search navigation item
+ * look like an icon button instead of plain text.
+ */
+.masthead__menu-item a[href$="/search/"] {
   font-size: 18px;
   padding: 8px 10px;
 }
