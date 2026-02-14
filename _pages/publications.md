@@ -199,8 +199,8 @@ custom_js:
 - Ozmen, A., **Yildiz, H. U.**, & Tavli, B. (2020, November). Impact of minimizing the eavesdropping risks on lifetime of underwater acoustic sensor networks. In *2020 28th Telecommunications Forum (TELFOR)* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/TELFOR51502.2020.9306557) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/15alVG_AJGp1eepousobHjpCpnDDz3W47/view?usp=sharing)  
 
-- **Yildiz, H. U.** (2019, November). *Utilization of multi-sink architectures for lifetime maximization in underwater sensor networks*. In *2019 2nd IEEE Middle East and North Africa COMMunications Conference (MENACOMM)*.
-  ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/MENACOMM46666.2019.8988521) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16TwAEo1W8lqqKywIF9zQy7G5-Z-S53_T/view?usp=sharing)
+- **Yildiz, H. U.** (2019, November). Utilization of multi-sink architectures for lifetime maximization in underwater sensor networks. In *2019 2nd IEEE Middle East and North Africa COMMunications Conference (MENACOMM)*. <br>
+![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/MENACOMM46666.2019.8988521) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16TwAEo1W8lqqKywIF9zQy7G5-Z-S53_T/view?usp=sharing)
   <img id="most-cited-badge"
      src="https://img.shields.io/badge/Best_Paper_Award-yellow?style=flat-square"
      alt="Best paper award badge">

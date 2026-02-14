@@ -1,6 +1,14 @@
 /* =========================================================
+   custom.css  (Loaded after theme CSS)
+   - Keep ALL custom rules here.
+   - Keep main.scss imports-only.
+   ========================================================= */
+
+/* =========================================================
    1) Base typography
    ========================================================= */
+
+/* Justify paragraphs + list items inside page content */
 .page__content,
 .page__content p,
 .page__content li {
@@ -10,6 +18,10 @@
 /* =========================================================
    2) Links
    ========================================================= */
+
+/* Global link styling
+   NOTE: If this affects nav/buttons unexpectedly, scope it to:
+   .page__content a { ... } */
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
 
@@ -23,7 +35,7 @@ a:hover { text-decoration: underline; }
 }
 
 /* =========================================================
-   4) Navigation bar typography
+   4) Navigation + sidebar typography
    ========================================================= */
 .masthead,
 .masthead__menu-item {
@@ -31,16 +43,13 @@ a:hover { text-decoration: underline; }
   font-weight: 500;
 }
 
-/* =========================================================
-   5) Sidebar (profile) typography
-   ========================================================= */
 .author__content,
 .author__bio {
   font-family: "Inter", sans-serif;
 }
 
 /* =========================================================
-   6) News badge (pill)
+   5) News badge (pill)
    ========================================================= */
 .news-badge {
   display: inline-block;
@@ -53,6 +62,7 @@ a:hover { text-decoration: underline; }
   vertical-align: middle;
   white-space: nowrap;
 
+  /* Light mode */
   color: #064a57;
   background: rgba(99, 231, 255, 0.18);
   border: 1px solid rgba(99, 231, 255, 0.6);
@@ -73,7 +83,6 @@ html.dark .news-badge,
   70%  { box-shadow: 0 0 0 10px rgba(99, 231, 255, 0.00); }
   100% { box-shadow: 0 0 0 0 rgba(99, 231, 255, 0.00); }
 }
-
 .news-badge.pulse { animation: badgePulse 1.8s ease-out infinite; }
 
 @media (prefers-reduced-motion: reduce) {
@@ -81,7 +90,7 @@ html.dark .news-badge,
 }
 
 /* =========================================================
-   7) <details> styling (Older news section)
+   6) <details> styling (Older news)
    ========================================================= */
 details { margin-top: 0.6rem; }
 
@@ -92,18 +101,17 @@ details > summary {
   font-weight: 600;
   margin-bottom: 0.35rem;
 }
-
 details > summary:hover { text-decoration: underline; }
 details[open] { margin-bottom: 0.2rem; }
 
 /* =========================================================
-   8) Content list spacing
+   7) Content list spacing (e.g., News bullets)
    ========================================================= */
 .page__content ul { margin-top: 0.4rem; }
 .page__content ul li { margin-bottom: 0.35rem; }
 
 /* =========================================================
-   9) Hide page titles globally
+   8) Hide page titles globally (Minimal Mistakes)
    ========================================================= */
 .page__title,
 #page-title,
@@ -114,73 +122,208 @@ details[open] { margin-bottom: 0.2rem; }
 }
 
 /* =========================================================
-   10) Mobile nav: keep greedy-nav healthy + force hamburger visible
+   9) Metrics badges (Scopus / GS / OpenAlex images)
    ========================================================= */
-@media (max-width: 768px) {
-
-  /* IMPORTANT:
-     Do NOT hard-hide .visible-links with display:none
-     because greedy-nav JS uses it for sizing/overflow.
-     Instead, make it visually hidden and non-interactive. */
-  .greedy-nav .visible-links {
-    visibility: hidden !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-    height: 0 !important;
-    overflow: hidden !important;
-  }
-
-  /* Force hamburger toggle to always show */
-  .masthead .greedy-nav__toggle,
-  .masthead .greedy-nav__toggle.hidden {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    pointer-events: auto !important;
-
-    min-width: 42px !important;
-    min-height: 42px !important;
-    padding: 6px 10px !important;
-    border-radius: 10px !important;
-  }
-
-  /* If icon is missing/hidden, inject a fallback glyph */
-  .masthead .greedy-nav__toggle::before {
-    content: "☰";
-    font-size: 22px;
-    line-height: 1;
-    display: block;
-  }
-
-  /* Make dropdown usable/visible */
-  .greedy-nav .hidden-links {
-    position: absolute !important;
-    right: 0 !important;
-    top: 100% !important;
-    z-index: 9999 !important;
-
-    padding: .5rem 0 !important;
-    border-radius: 12px !important;
-    border: 1px solid rgba(150, 170, 190, 0.25) !important;
-    background: var(--mm-background-color, #fff) !important;
-    box-shadow: 0 14px 30px rgba(0,0,0,0.18) !important;
-  }
-
-  /* Ensure links inside dropdown look normal */
-  .greedy-nav .hidden-links a {
-    display: block !important;
-    padding: .5rem 1rem !important;
-    text-decoration: none !important;
-  }
-
-  .greedy-nav .hidden-links a:hover {
-    text-decoration: underline !important;
-  }
+.metrics-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 1rem 0;
 }
+
+/* Remove theme underline/border effects inside badges */
+.metrics-badges a {
+  text-decoration: none !important;
+  border: 0 !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  background: none !important;
+  background-image: none !important;
+
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+  padding: 0;
+}
+
+.metrics-badges img {
+  display: block;
+  border: none !important;
+}
+
 /* =========================================================
-   11) Research Metrics Footer
+   10) Research Areas (chips/tags)
+   - Locks typography to body size so pills don't inherit headings
+   ========================================================= */
+.ra-container{
+  margin-top: 1.25rem;
+  font-family: inherit;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.ra-section{ margin-bottom: 1.5rem; }
+
+.ra-title{
+  margin-bottom: .75rem;
+  font-weight: 700;
+  color: inherit;
+}
+
+.ra-section h2,
+.ra-section h3,
+.ra-section h4{ color: inherit; }
+
+.ra-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+
+  font-family: inherit;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.ra-chip{
+  padding: .45rem 1rem;
+  border-radius: 999px;
+
+  font-family: inherit;
+  font-size: 0.875rem;
+  line-height: 1.4;
+
+  font-weight: 600;
+  cursor: default;
+
+  background: var(--ra-bg);
+  border: 1px solid var(--ra-bd);
+  color: var(--ra-fg);
+
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.ra-chip:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+/* Color variants */
+.ra-network  { --ra-bg:#dbeafe; --ra-bd:#93c5fd; --ra-fg:#1e40af; }
+.ra-opt      { --ra-bg:#fed7aa; --ra-bd:#fdba74; --ra-fg:#c2410c; }
+.ra-ai       { --ra-bg:#d1fae5; --ra-bd:#6ee7b7; --ra-fg:#065f46; }
+.ra-quantum  { --ra-bg:#e9d5ff; --ra-bd:#c084fc; --ra-fg:#6b21a8; }
+
+/* =========================================================
+   11) Footer visitors (world map widget)
+   ========================================================= */
+.footer__visitors {
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.footer__visitors h4 {
+  margin-bottom: .4rem;
+  font-size: .85rem;
+  font-weight: 600;
+  opacity: .75;
+}
+
+.footer__visitors-map {
+  width: 160px;
+  height: 160px;
+  margin-left: 0;
+  overflow: hidden;
+}
+
+.footer__visitors-map iframe,
+.footer__visitors-map canvas,
+.footer__visitors-map > div {
+  transform: scale(0.7);
+  transform-origin: top left;
+}
+
+/* =========================================================
+   12) Publications donut charts (theme-aligned)
+   ========================================================= */
+.qdonut-wrap,
+.qdonut-svg text,
+.qdonut-legend,
+.pub-chart__title {
+  font-family: inherit !important;
+  color: inherit;
+}
+
+.pub-chart__title {
+  font-size: inherit;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.qdonut-legend {
+  font-size: inherit;
+  font-weight: normal;
+  line-height: 1.4;
+  margin-top: 0.75rem;
+}
+
+.qdonut-count {
+  font-size: inherit;
+  font-weight: normal;
+  fill: #ffffff;
+}
+
+.qdonut-total {
+  font-size: 1.8em;
+  font-weight: normal;
+  fill: currentColor;
+}
+
+.qdonut-sub {
+  font-size: inherit;
+  font-weight: normal;
+  fill: currentColor;
+  opacity: 0.8;
+}
+
+.qdonut-legend__swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+}
+
+/* =========================================================
+   13) Research metrics card
+   ========================================================= */
+.research-metrics {
+  background-color: var(--mm-background-color, transparent);
+  border: 1px solid var(--mm-border-color, rgba(0,0,0,0.08));
+  border-radius: 10px;
+  padding: 16px;
+  margin: 20px 0;
+}
+
+.metric {
+  display: inline-block;
+  margin-right: 28px;
+  margin-bottom: 6px;
+}
+
+.metric-value {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--mm-text-color, currentColor);
+  line-height: 1.2;
+}
+
+.metric-label {
+  font-size: 0.85rem;
+  opacity: 0.65;
+  color: var(--mm-text-color, currentColor);
+}
+
+/* =========================================================
+   14) Metrics footer (OpenAlex logo row)
    ========================================================= */
 .metric-footer {
   display: flex;
@@ -199,4 +342,96 @@ details[open] { margin-bottom: 0.2rem; }
 .metric-source-link:hover .metric-logo {
   transform: scale(1.08);
   opacity: .85;
+}
+
+/* =========================================================
+   15) Navigation search item styling
+   ========================================================= */
+.masthead__menu-item a[href$="/search/"]{
+  font-size: 18px;
+  padding: 8px 10px;
+}
+
+/* =========================================================
+   16) Home page - LinkedIn embed (moved from inline <style>)
+   ========================================================= */
+.linkedin-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+
+.linkedin-card{
+  border: 1px solid var(--mm-border-color, #e5e7eb);
+  border-radius: 10px;
+  background: var(--mm-background-color, #fff);
+  overflow: hidden;
+}
+
+.linkedin-card iframe{
+  width: 100%;
+  height: 360px;
+  border: none;
+}
+
+/* =========================================================
+   17) Mobile nav (FINAL)
+   - Keep greedy-nav JS healthy
+   - Ensure hamburger is visible
+   - Dropdown styling
+   ========================================================= */
+@media (max-width: 768px) {
+
+  /* visible-links'e dokunma: greedy-nav ölçümü ve tema davranışı bozulmasın */
+  .greedy-nav .visible-links{
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  /* Hamburger toggle görünür kalsın */
+  .masthead .greedy-nav__toggle,
+  .masthead .greedy-nav__toggle.hidden{
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+
+    min-width: 42px !important;
+    min-height: 42px !important;
+    padding: 6px 10px !important;
+    border-radius: 10px !important;
+  }
+
+  /* Dropdown */
+  .greedy-nav .hidden-links{
+    position: absolute !important;
+    right: 0 !important;
+    top: 100% !important;
+    z-index: 9999 !important;
+
+    padding: .5rem 0 !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(150, 170, 190, 0.25) !important;
+    background: var(--mm-background-color, #ffffff) !important;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.18) !important;
+  }
+
+  .greedy-nav .hidden-links a{
+    display: block !important;
+    padding: .5rem 1rem !important;
+    text-decoration: none !important;
+  }
+  .greedy-nav .hidden-links a:hover{
+    text-decoration: underline !important;
+  }
+
+  html.dark .greedy-nav .hidden-links,
+  [data-theme="dark"] .greedy-nav .hidden-links{
+    background: #0b1622 !important;
+    border-color: rgba(180, 200, 220, 0.18) !important;
+  }
 }
