@@ -1,25 +1,25 @@
-# Huseyin Ugur Yildiz
+# Huseyin Ugur Yildiz — Personal Academic Website
 
-Personal academic website built with **Jekyll** using the **AcademicPages / Minimal Mistakes** theme.
+🌐 [huguryildiz.com](https://huguryildiz.com)
 
-## About
-I am an **Associate Professor of Electrical Engineering** with research interests in **operations research, network optimization, and energy-efficient communication systems**, particularly for **wireless and underwater networks**. Recently, my work has focused on integrating **mathematical optimization with reinforcement learning**, with emerging interests in **quantum network routing**.
+Associate Professor of Electrical Engineering at TED University, Ankara, Turkey.
 
-## Website
-🌐 https://huguryildiz.com
+Research interests: operations reserach, network optimization, wireless & underwater sensor networks, drone-assited aerial networks, and reinforcement learning.
 
-## Main Sections
-- Research  
-- Publications  
-- Teaching  
-- Students  
-- Service  
+## Pages
 
-## Technologies
-- Jekyll & GitHub Pages  
-- Minimal Mistakes / AcademicPages  
-- Markdown, LaTeX  
-- Custom CSS & plugins  
+- **[CV](https://huguryildiz.com/cv/)** — Academic and professional background, education, awards, and technical toolbox.
+- **[Publications](https://huguryildiz.com/publications/)** — Journal articles, conference papers, and editorials with DOI links.
+- **[Research](https://huguryildiz.com/research/)** — Research topics spanning optimization, wireless/underwater networks, drone networks, and hybrid RL-based control.
+- **[Service](https://huguryildiz.com/service/)** — Editorial, reviewer, and committee roles.
+- **[Students](https://huguryildiz.com/students/)** — Supervised Ph.D. and M.Sc. theses.
+- **[Teaching](https://huguryildiz.com/teaching/)** — Undergraduate and graduate courses at TED University.
 
-## License
-MIT License
+## Contact
+
+- 📧 [hugur[DOT]yildiz[AT]tedu.edu.tr](mailto:hugur.yildiz@tedu.edu.tr)
+- 🎓 [Google Scholar](https://scholar.google.com/citations?user=nQwHS1gAAAAJ)
+- 💼 [LinkedIn](https://www.linkedin.com/in/huguryildiz)
+- 🐙 [GitHub](https://github.com/huguryildiz)
+
+Built with [Jekyll](https://jekyllrb.com) & [AcademicPages](https://github.com/academicpages/academicpages.github.io). MIT License.
