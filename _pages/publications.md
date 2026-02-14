@@ -161,7 +161,7 @@ custom_js:
 - Kurt, S., **Yildiz, H. U.**, Yigit, M., Tavli, B., & Gungor, V. C. (2017). Packet size optimization in wireless sensor networks for smart grid applications. *IEEE Transactions on Industrial Electronics, 64*(3), 2392–2401.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2017_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/TIE.2016.2619319) 
 <img id="most-cited-badge"
-     src="https://img.shields.io/badge/Most_Cited-red?style=flat-square"
+     src="https://img.shields.io/badge/🏆_MOST_CITED_🏆-red?style=flat-square"
      alt="Most cited paper badge">
 
 - Akbas, A., **Yildiz, H. U.**, Tavli, B., & Uludag, S. (2016). Joint optimization of transmission power level and packet size for WSN lifetime maximization. *IEEE Sensors Journal, 16*(12), 5084–5094.  
@@ -202,7 +202,7 @@ custom_js:
 - **Yildiz, H. U.** (2019, November). Utilization of multi-sink architectures for lifetime maximization in underwater sensor networks. In *2019 2nd IEEE Middle East and North Africa COMMunications Conference (MENACOMM)*. <br>
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/MENACOMM46666.2019.8988521) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16TwAEo1W8lqqKywIF9zQy7G5-Z-S53_T/view?usp=sharing)
   <img id="most-cited-badge"
-     src="https://img.shields.io/badge/Best_Paper_Award-yellow?style=flat-square"
+     src="https://img.shields.io/badge/🏆_BEST_PAPER_AWARD_🏆-yellow?style=flat-square"
      alt="Best paper award badge">
 
 - **Yildiz, H. U.** (2019, October). Prolonging the lifetime of underwater sensor networks under sinkhole attacks. In *14th International Conference on Underwater Networks & Systems (WUWNet '19)* (pp. 1–5). ACM.  
