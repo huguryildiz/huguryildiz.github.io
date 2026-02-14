@@ -217,3 +217,19 @@ details[open] {
   transform: scale(1.08);
   opacity: .85;
 }
+
+/* =========================================================
+   12 ) Mobile navigation: ensure hidden overflow links are visible
+   ========================================================= */
+@media (max-width: 768px) {
+  .greedy-nav .hidden-links {
+    display: block !important;
+    visibility: visible !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .greedy-nav .hidden-links.hidden {
+    display: none !important;
+  }
+}
