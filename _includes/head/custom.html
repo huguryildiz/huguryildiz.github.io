@@ -55,60 +55,69 @@
      ========================================================= -->
 <script>
 (function () {
-  function norm(h){ return (h || "").replace(/\/+$/, ""); }
+  function norm(h){ return (h || "").trim().replace(/\/+$/, ""); }
 
-  function rebuildHamburgerMenu() {
+  function buildHamburger() {
     if (window.matchMedia("(min-width: 769px)").matches) return;
 
     var nav = document.querySelector(".greedy-nav");
     if (!nav) return;
 
-    var visible = nav.querySelector(".visible-links");
     var hidden  = nav.querySelector(".hidden-links");
-    if (!visible || !hidden) return;
+    if (!hidden) return;
 
-    // collect both lists
-    var allLis = Array.from(nav.querySelectorAll(".visible-links > li, .hidden-links > li"));
-    if (!allLis.length) return;
+    // Nav içindeki TÜM menü item'larını yakala (visible+hidden fark etmez)
+    var allAnchors = Array.from(nav.querySelectorAll(".visible-links a, .hidden-links a"))
+      .filter(a => a && a.getAttribute("href"));
 
-    // de-dup by normalized href
     var seen = new Set();
-    var clones = [];
+    var items = [];
 
-    allLis.forEach(function(li){
-      var a = li.querySelector("a");
-      var href = a ? a.getAttribute("href") : "";
-      var key = href ? norm(href) : (li.textContent || "").trim();
-      if (!key || seen.has(key)) return;
-      seen.add(key);
-      clones.push(li.cloneNode(true));
+    allAnchors.forEach(function(a){
+      var href = norm(a.getAttribute("href"));
+      if (!href || seen.has(href)) return;
+      seen.add(href);
+
+      var li = document.createElement("li");
+      li.className = "masthead__menu-item";
+      li.appendChild(a.cloneNode(true));
+      items.push(li);
     });
 
+    // Hidden'ı yeniden yaz
     hidden.innerHTML = "";
-    clones.forEach(function(li){ hidden.appendChild(li); });
+    items.forEach(li => hidden.appendChild(li));
 
-    // Ensure CV exists (match both "/cv" and "/cv/" + baseurl variants)
-    var hasCV =
-      hidden.querySelector('a[href$="/cv/"]') ||
-      hidden.querySelector('a[href$="/cv"]');
-
+    // CV'yi GARANTİ et (son çare)
+    var hasCV = hidden.querySelector('a[href$="/cv/"], a[href$="/cv"]');
     if (!hasCV) {
       var li = document.createElement("li");
       li.className = "masthead__menu-item";
       li.innerHTML = '<a href="/cv/">CV</a>';
-      hidden.insertBefore(li, hidden.firstChild); // CV first
+      hidden.insertBefore(li, hidden.firstChild);
     }
   }
 
-  window.addEventListener("load", function(){
-    rebuildHamburgerMenu();
-    setTimeout(rebuildHamburgerMenu, 250);
-    setTimeout(rebuildHamburgerMenu, 800);
-  });
+  function init() {
+    buildHamburger();
 
-  window.addEventListener("resize", function(){
-    setTimeout(rebuildHamburgerMenu, 200);
-  });
+    // Greedy-nav / font yüklenmesi sonrası tekrar dene
+    setTimeout(buildHamburger, 200);
+    setTimeout(buildHamburger, 800);
+
+    // Menü DOM'u değişirse yeniden kur (SIRA değişse bile bozulmaz)
+    var nav = document.querySelector(".greedy-nav");
+    if (!nav) return;
+
+    var obs = new MutationObserver(function(){
+      buildHamburger();
+    });
+
+    obs.observe(nav, { childList: true, subtree: true });
+    window.addEventListener("resize", function(){ setTimeout(buildHamburger, 150); });
+  }
+
+  window.addEventListener("load", init);
 })();
 </script>
 <!-- end custom head snippets -->
