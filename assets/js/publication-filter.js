@@ -1,5 +1,7 @@
 // Publication filter script: collects list items from section headings,
 // populates a year dropdown, and filters items by type and year on demand.
+// Conference entries use "(YYYY, Month)" format; journals use "(YYYY)". Both are handled.
+// Filtering triggers automatically on dropdown change; Apply button is removed as redundant.
 
 (function () {
   // Run init after DOM is ready, or immediately if already loaded
@@ -57,7 +59,6 @@
     // Get filter UI elements
     var typeSelect = document.getElementById('pubType');
     var yearSelect = document.getElementById('pubYear');
-    var applyBtn   = document.getElementById('pubApply');
     var resetBtn   = document.getElementById('pubReset');
     var countDiv   = document.getElementById('pubCount');
 
@@ -132,10 +133,9 @@
       }
     }
 
-    // Attach event listeners to filter controls
+    // Filtering triggers automatically on dropdown change
     if (typeSelect) typeSelect.addEventListener('change', applyFilter);
     if (yearSelect) yearSelect.addEventListener('change', applyFilter);
-    if (applyBtn)   applyBtn.addEventListener('click', applyFilter);
 
     // Reset all filters and show everything
     if (resetBtn) {
