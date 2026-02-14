@@ -46,7 +46,7 @@ custom_css:
 - **[Tantur Karagul, C.](https://www.linkedin.com/in/%C3%A7a%C4%9Fla-tantur-karag%C3%BCl-b834b0b5/)** (2025). *Network lifetime optimization in underwater wireless sensor networks with variable k-connectivity*. TOBB University of Economics and Technology.  
   ![PhD Co-advisor](https://img.shields.io/badge/PhD-Co--advisor-6f42c1?style=flat-square)  
 
-- **M. Cobanlar** (2022). *Analysis of the trade-off between network lifetime and K-connectivity in wireless sensor networks*. TOBB University of Economics and Technology.  
+- **Cobanlar, M.** (2022). *Analysis of the trade-off between network lifetime and K-connectivity in wireless sensor networks*. TOBB University of Economics and Technology.  
   ![PhD Co-advisor](https://img.shields.io/badge/PhD-Co--advisor-6f42c1?style=flat-square) [![YÖK Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=G_oJ1rKE4SgJUkomyAKpR_b66BRHX6Iu8I5xytFXfpv7OVxvt9gxQhlL5X5kvF6X)
 
 
