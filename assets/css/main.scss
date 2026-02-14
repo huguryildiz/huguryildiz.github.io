@@ -131,7 +131,7 @@
 
   /* KEY FIX: lock to normal content typography */
   font-family: inherit;
-  font-size: 0.85rem;     /* prevents inheriting big heading sizes */
+  font-size: 0.875rem;     /* prevents inheriting big heading sizes */
   line-height: 1.4;
 }
 
@@ -154,7 +154,7 @@
 
   /* Explicitly normalized, not inherited */
   font-family: inherit;
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   line-height: 1.4;
 }
 
@@ -164,7 +164,7 @@
 
   /* Explicitly set to body text size, not inherited heading size */
   font-family: inherit;
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   line-height: 1.4;
 
   font-weight: 600;
