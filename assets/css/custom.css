@@ -374,15 +374,3 @@ details[open] { margin-bottom: 0.2rem; }
   height: 360px;
   border: none;
 }
-
-
-/* =========================================================
-   17) Mobile nav
-   - Greedy-nav'a dokunmuyoruz, custom menü kullanıyoruz
-   - Sadece orijinal greedy-nav toggle'ı gizle (çakışmasın)
-   ========================================================= */
-@media (max-width: 768px) {
-  .greedy-nav__toggle {
-    display: none !important;
-  }
-}
