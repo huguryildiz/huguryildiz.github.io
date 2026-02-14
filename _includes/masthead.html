@@ -21,6 +21,8 @@
               <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
             </li>
           {% endfor %}
+          <!-- Greedy-nav overflow trigger: invisible spacer -->
+          <li class="masthead__menu-item" style="width:9999px;visibility:hidden;pointer-events:none;overflow:hidden;max-width:0;padding:0;margin:0;" aria-hidden="true"></li>
           <li id="theme-toggle" class="masthead__menu-item persist tail">
             <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
           </li>
