@@ -334,3 +334,33 @@
   font-size: 18px;
   padding: 8px 10px;
 }
+
+
+
+/* ============================================================
+   8) HOME PAGE – LinkedIn Embed (moved from inline <style>)
+   ============================================================ */
+
+/*
+ * Responsive grid for embedded LinkedIn post(s).
+ * Theme-aware border/background using Minimal Mistakes CSS vars.
+ */
+.linkedin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+
+.linkedin-card {
+  border: 1px solid var(--mm-border-color, #e5e7eb);
+  border-radius: 10px;
+  background: var(--mm-background-color, #fff);
+  overflow: hidden;
+}
+
+.linkedin-card iframe {
+  width: 100%;
+  height: 360px;
+  border: none;
+}
