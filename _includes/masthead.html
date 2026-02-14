@@ -6,9 +6,6 @@
 
         <!-- CSS-only hamburger toggle (checkbox hack) -->
         <input type="checkbox" id="nav-toggle-check" class="nav-toggle-check" aria-hidden="true">
-        <label for="nav-toggle-check" class="nav-toggle-label" aria-label="Toggle menu">
-          <span class="navicon"></span>
-        </label>
 
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg persist {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}">
@@ -28,6 +25,11 @@
             <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
           </li>
         </ul>
+
+        <!-- Hamburger label: after visible-links so it appears on the right -->
+        <label for="nav-toggle-check" class="nav-toggle-label" aria-label="Toggle menu">
+          <span class="navicon"></span>
+        </label>
 
         <!-- Mobile dropdown -->
         <ul class="mobile-nav-links">
@@ -56,22 +58,35 @@
 .mobile-nav-links  { display: none; }
 
 @media (max-width: 768px) {
-  /* Hide desktop links */
+  /* Nav as flexbox: title left, hamburger right */
+  .greedy-nav {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    position: relative;
+  }
+
+  /* Hide desktop nav links */
   .greedy-nav .visible-links li:not(.persist) {
     display: none !important;
   }
 
-  /* Show hamburger label */
+  /* Hide site title's sibling persist items except the title itself */
+  .greedy-nav .visible-links .persist.tail {
+    display: none !important;
+  }
+
+  /* Show hamburger on the right */
   .nav-toggle-label {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     padding: 6px 10px;
-    order: 99;
+    flex-shrink: 0;
   }
 
-  /* Show mobile menu when checkbox checked */
+  /* Dropdown: opens below hamburger, aligned right */
   .nav-toggle-check:checked ~ .mobile-nav-links {
     display: block;
     position: absolute;
