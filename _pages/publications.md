@@ -161,7 +161,7 @@ custom_js:
 - Kurt, S., **Yildiz, H. U.**, Yigit, M., Tavli, B., & Gungor, V. C. (2017). *Packet size optimization in wireless sensor networks for smart grid applications*. *IEEE Transactions on Industrial Electronics, 64*(3), 2392–2401.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2017_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/TIE.2016.2619319) 
 <img id="most-cited-badge"
-     src="https://img.shields.io/badge/Most_Cited-yellow?style=flat-square"
+     src="https://img.shields.io/badge/Most_Cited-red?style=flat-square"
      alt="Most cited paper badge">
 
 - Akbas, A., **Yildiz, H. U.**, Tavli, B., & Uludag, S. (2016). *Joint optimization of transmission power level and packet size for WSN lifetime maximization*. *IEEE Sensors Journal, 16*(12), 5084–5094.  
