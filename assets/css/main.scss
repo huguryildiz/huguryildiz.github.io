@@ -2,60 +2,61 @@
 ---
 /*
  * ============================================================
- *  MAIN SCSS ENTRY FILE  (Minimal Mistakes Based Site)
+ *  MAIN SCSS ENTRY FILE (Minimal Mistakes / AcademicPages)
  * ============================================================
  *
- *  This file controls what is imported from /_sass.
  *  IMPORTANT:
  *  - The first two lines (--- ---) are required by Jekyll.
- *  - Imports are processed in order.
- *  - Theme files are loaded before custom overrides.
+ *  - This file should contain ONLY theme/vendor imports.
  *
- *  This ensures that all custom CSS below overrides
- *  Minimal Mistakes defaults safely.
+ *  WHY:
+ *  You are loading your custom styles from:
+ *    /assets/css/custom.css
+ *  via _includes/head/custom.html.
+ *
+ *  To avoid CSS conflicts (especially greedy-nav / hamburger),
+ *  do NOT place custom rules here.
  */
 
 /* ===============================
    Core Vendor + Theme Imports
    =============================== */
 @import
-    "vendor/breakpoint/breakpoint",
+  "vendor/breakpoint/breakpoint",
 
-    /* Theme base (light & dark modes) */
-    "themes",
-    "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
-    "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
+  /* Theme base (light & dark modes) */
+  "themes",
+  "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
+  "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
 
-    "include/mixins",
-    "vendor/susy/susy",
+  "include/mixins",
+  "vendor/susy/susy",
 
-    /* Layout foundation */
-    "layout/reset",
-    "layout/base",
+  /* Layout foundation */
+  "layout/reset",
+  "layout/base",
 
-    "include/utilities",
-    "layout/tables",
-    "layout/buttons",
-    "layout/notices",
-    "layout/masthead",
-    "layout/navigation",
-    "layout/footer",
-    "syntax",
+  "include/utilities",
+  "layout/tables",
+  "layout/buttons",
+  "layout/notices",
+  "layout/masthead",
+  "layout/navigation",
+  "layout/footer",
+  "syntax",
 
-    "layout/forms",
+  "layout/forms",
 
-    /* Page structure */
-    "layout/page",
-    "layout/archive",
-    "layout/sidebar",
-    "layout/json_cv",
+  /* Page structure */
+  "layout/page",
+  "layout/archive",
+  "layout/sidebar",
+  "layout/json_cv",
 
-    /* Font Awesome */
-    "vendor/font-awesome/fontawesome",
-    "vendor/font-awesome/solid",
-    "vendor/font-awesome/brands"
-;
-
+  /* Font Awesome */
+  "vendor/font-awesome/fontawesome",
+  "vendor/font-awesome/solid",
+  "vendor/font-awesome/brands";
 
 /* ============================================================
    1) GLOBAL CONTENT ALIGNMENT

@@ -55,69 +55,59 @@
      ========================================================= -->
 <script>
 (function () {
-  function rebuildHiddenWithAllNavItems() {
+  function norm(h){ return (h || "").replace(/\/+$/, ""); }
+
+  function rebuildHamburgerMenu() {
+    if (window.matchMedia("(min-width: 769px)").matches) return;
+
     var nav = document.querySelector(".greedy-nav");
     if (!nav) return;
 
     var visible = nav.querySelector(".visible-links");
     var hidden  = nav.querySelector(".hidden-links");
-    var toggle  = nav.querySelector(".greedy-nav__toggle");
-    if (!visible || !hidden || !toggle) return;
+    if (!visible || !hidden) return;
 
-    // Collect EVERYTHING currently in nav (both lists)
-    var all = Array.from(nav.querySelectorAll(".visible-links > li, .hidden-links > li"));
-    if (!all.length) return;
+    // collect both lists
+    var allLis = Array.from(nav.querySelectorAll(".visible-links > li, .hidden-links > li"));
+    if (!allLis.length) return;
 
-    // Rebuild hidden-links as "all items", de-duplicated by href
+    // de-dup by normalized href
     var seen = new Set();
-    function key(li) {
+    var clones = [];
+
+    allLis.forEach(function(li){
       var a = li.querySelector("a");
-      var href = a && a.getAttribute("href");
-      if (href) return href.replace(/\/+$/, "");   // normalize trailing slash
-      return (li.textContent || "").trim();
-    }
+      var href = a ? a.getAttribute("href") : "";
+      var key = href ? norm(href) : (li.textContent || "").trim();
+      if (!key || seen.has(key)) return;
+      seen.add(key);
+      clones.push(li.cloneNode(true));
+    });
 
     hidden.innerHTML = "";
-    all.forEach(function (li) {
-      var k = key(li);
-      if (!k || seen.has(k)) return;
-      seen.add(k);
-      hidden.appendChild(li.cloneNode(true));
-    });
+    clones.forEach(function(li){ hidden.appendChild(li); });
 
-    hidden.dataset.filled = "1";
+    // Ensure CV exists (match both "/cv" and "/cv/" + baseurl variants)
+    var hasCV =
+      hidden.querySelector('a[href$="/cv/"]') ||
+      hidden.querySelector('a[href$="/cv"]');
+
+    if (!hasCV) {
+      var li = document.createElement("li");
+      li.className = "masthead__menu-item";
+      li.innerHTML = '<a href="/cv/">CV</a>';
+      hidden.insertBefore(li, hidden.firstChild); // CV first
+    }
   }
 
-  function init() {
-    // Run after theme scripts settled (greedy-nav often adjusts after DOMContentLoaded)
-    rebuildHiddenWithAllNavItems();
-    setTimeout(rebuildHiddenWithAllNavItems, 250);
-    setTimeout(rebuildHiddenWithAllNavItems, 800);
+  window.addEventListener("load", function(){
+    rebuildHamburgerMenu();
+    setTimeout(rebuildHamburgerMenu, 250);
+    setTimeout(rebuildHamburgerMenu, 800);
+  });
 
-    // Keep your manual open/close (since you said this made hamburger appear)
-    var nav = document.querySelector(".greedy-nav");
-    if (!nav) return;
-
-    var hidden = nav.querySelector(".hidden-links");
-    var toggle = nav.querySelector(".greedy-nav__toggle");
-    if (!hidden || !toggle) return;
-
-    if (toggle.dataset.bound === "1") return;
-    toggle.dataset.bound = "1";
-
-    toggle.addEventListener("click", function (e) {
-      e.stopPropagation();
-      hidden.classList.toggle("hidden");
-    });
-
-    document.addEventListener("click", function () {
-      hidden.classList.add("hidden");
-    });
-  }
-
-  window.addEventListener("load", init);
-  window.addEventListener("resize", function () {
-    setTimeout(rebuildHiddenWithAllNavItems, 200);
+  window.addEventListener("resize", function(){
+    setTimeout(rebuildHamburgerMenu, 200);
   });
 })();
 </script>
