@@ -205,13 +205,13 @@ custom_js:
      src="https://img.shields.io/badge/Best_Paper_Award-yellow?style=flat-square"
      alt="Best paper award badge">
 
-- **Yildiz, H. U.** (2019, October). *Prolonging the lifetime of underwater sensor networks under sinkhole attacks*. In *14th International Conference on Underwater Networks & Systems (WUWNet '19)* (pp. 1–5). ACM.  
+- **Yildiz, H. U.** (2019, October). Prolonging the lifetime of underwater sensor networks under sinkhole attacks. In *14th International Conference on Underwater Networks & Systems (WUWNet '19)* (pp. 1–5). ACM.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1145/3366486.3366516) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16U6NPkWhqjBHdUU8XTomkTP_EdsL-GH9/view?usp=sharing)  
 
-- **Yildiz, H. U.**, Gungor, V. C., & Tavli, B. (2018, June). *A hybrid energy harvesting framework for energy efficiency in wireless sensor networks based smart grid applications*. In *2018 17th Annual Mediterranean Ad Hoc Networking Workshop (Med-Hoc-Net)* (pp. 1–6). IEEE.  
+- **Yildiz, H. U.**, Gungor, V. C., & Tavli, B. (2018, June). A hybrid energy harvesting framework for energy efficiency in wireless sensor networks based smart grid applications. In *2018 17th Annual Mediterranean Ad Hoc Networking Workshop (Med-Hoc-Net)* (pp. 1–6). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.23919/MedHocNet.2018.8407079) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/15SpGmcGRTPhGcBFtYmh1zJ0bOJWgXrSx/view?usp=sharing)  
 
-- Dagdeviren, O., Akram, V. K., Tavli, B., **Yildiz, H. U.**, & Atilgan, C. (2016, October). *Distributed detection of critical nodes in wireless sensor networks using connected dominating set*. In *2016 IEEE SENSORS* (pp. 1–3). IEEE.  
+- Dagdeviren, O., Akram, V. K., Tavli, B., **Yildiz, H. U.**, & Atilgan, C. (2016, October). Distributed detection of critical nodes in wireless sensor networks using connected dominating set. In *2016 IEEE SENSORS* (pp. 1–3). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/ICSENS.2016.7808815) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/15n6Oy9vLKkgJMUIEfWhdoGB-PG4lCLRl/view?usp=sharing)  
 
 - Tantur, C., **Yildiz, H. U.**, Kurt, S., & Tavli, B. (2016, October). *Optimal transmission power level sets for lifetime maximization in wireless sensor networks*. In *2016 IEEE SENSORS* (pp. 1–3). IEEE.  
