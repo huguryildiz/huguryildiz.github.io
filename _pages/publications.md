@@ -190,7 +190,7 @@ custom_js:
 ### Conference Papers (International)
 {: #conference-papers-international}
 
-- Tantur Karagul, C. T., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025, November). *Non-uniform k-connectivity for energy-efficient and reliable underwater wireless sensor networks*. In *2025 33rd Telecommunications Forum (TELFOR)* (pp. 1–4). IEEE.  
+- Tantur Karagul, C. T., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025, November). Non-uniform k-connectivity for energy-efficient and reliable underwater wireless sensor networks. In *2025 33rd Telecommunications Forum (TELFOR)* (pp. 1–4). IEEE. 
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/TELFOR67910.2025.11314281) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://docs.google.com/presentation/d/1K3TCWFDIhZuGReBDxBZDdtoVcevGus7G/)  
 
 - Un, B. E., **Yildiz, H. U.**, & Tavli, B. (2021, May). *Impact of critical node failures on lifetime of UWSNs with incomplete secure connectivity*. In *2021 IEEE International Black Sea Conference on Communications and Networking (BlackSeaCom)* (pp. 1–6). IEEE.  

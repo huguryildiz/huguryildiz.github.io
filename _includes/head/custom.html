@@ -55,7 +55,7 @@
      ========================================================= -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  var nav    = document.querySelector(".greedy-nav");
+  var nav = document.querySelector(".greedy-nav");
   if (!nav) return;
 
   var visible = nav.querySelector(".visible-links");
@@ -64,33 +64,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!visible || !hidden || !toggle) return;
 
-  // Clear hidden list first, then rebuild from visible
+  // Build a combined list: visible + (original) hidden
   if (hidden.dataset.filled !== "1") {
-    // Remove existing items in hidden-links to avoid duplicates
+
+    // snapshot originals BEFORE we mutate
+    var vItems = Array.from(visible.children).map(function(li){ return li.cloneNode(true); });
+    var hItems = Array.from(hidden.children).map(function(li){ return li.cloneNode(true); });
+
+    // clear and rebuild hidden as "ALL items"
     hidden.innerHTML = "";
 
-    Array.from(visible.children).forEach(function(li) {
-      var clone = li.cloneNode(true);
-      // Fix any relative hrefs
-      var links = clone.querySelectorAll("a");
-      links.forEach(function(a) {
-        var href = a.getAttribute("href");
-        if (href && href.startsWith("/")) {
-          a.setAttribute("href", window.location.origin + href);
-        }
-      });
-      hidden.appendChild(clone);
-    });
+    // de-dup by link href (prevents duplicates)
+    var seen = new Set();
+    function appendIfNew(li){
+      var a = li.querySelector("a");
+      var href = a ? a.getAttribute("href") : li.textContent.trim();
+      if (!href) return;
+      if (seen.has(href)) return;
+      seen.add(href);
+      hidden.appendChild(li);
+    }
+
+    vItems.forEach(appendIfNew);
+    hItems.forEach(appendIfNew);
+
     hidden.dataset.filled = "1";
   }
 
-  // Toggle hidden class on click
+  // Your manual open/close behavior (keeps hamburger visible for you)
   toggle.addEventListener("click", function (e) {
     e.stopPropagation();
     hidden.classList.toggle("hidden");
   });
 
-  // Close on outside click
   document.addEventListener("click", function () {
     hidden.classList.add("hidden");
   });
