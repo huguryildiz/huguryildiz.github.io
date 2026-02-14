@@ -121,48 +121,53 @@
   border: none !important;
 }
 
-
-
 /* ============================================================
    3) RESEARCH AREAS (Chip / Tag Layout)
    ============================================================ */
 
-/* Container spacing */
-.ra-container { margin-top: 1.25rem; }
-.ra-section   { margin-bottom: 1.5rem; }
+/* Container spacing + reset typography to body text size */
+.ra-container{
+  margin-top: 1.25rem;
 
-/* Section title */
-.ra-title {
-  margin-bottom: .75rem;
-  font-weight: 700;
-  color: inherit; /* Theme-aware */
+  /* KEY FIX: lock to normal content typography */
+  font-family: inherit;
+  font-size: 1rem;     /* prevents inheriting big heading sizes */
+  line-height: 1.4;
 }
 
-/* Ensure headers inherit theme color */
-.ra-section h2,
-.ra-section h3,
-.ra-section h4 {
+.ra-section{ margin-bottom: 1.5rem; }
+
+.ra-title{
+  margin-bottom: .75rem;
+  font-weight: 700;
   color: inherit;
 }
 
-/* Chip layout wrapper */
-.ra-wrap {
+.ra-section h2,
+.ra-section h3,
+.ra-section h4{ color: inherit; }
+
+.ra-wrap{
   display: flex;
   flex-wrap: wrap;
   gap: .6rem;
+
+  /* inherit from ra-container (now normalized) */
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
-/*
- * Base chip style:
- * - Fully rounded pill
- * - Uses CSS variables for color control
- * - Smooth hover animation
- */
-.ra-chip {
+.ra-chip{
   padding: .45rem 1rem;
   border-radius: 999px;
+
+  /* inherit from ra-container (now normalized) */
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+
   font-weight: 600;
-  line-height: 1;
   cursor: default;
 
   background: var(--ra-bg);
@@ -172,18 +177,16 @@
   transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
 }
 
-/* Subtle hover elevation effect */
-.ra-chip:hover {
+.ra-chip:hover{
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,.08);
 }
 
-/* -------- Color Variants (Thematic Groups) -------- */
+/* Color variants */
 .ra-network  { --ra-bg:#dbeafe; --ra-bd:#93c5fd; --ra-fg:#1e40af; }
 .ra-opt      { --ra-bg:#fed7aa; --ra-bd:#fdba74; --ra-fg:#c2410c; }
 .ra-ai       { --ra-bg:#d1fae5; --ra-bd:#6ee7b7; --ra-fg:#065f46; }
 .ra-quantum  { --ra-bg:#e9d5ff; --ra-bd:#c084fc; --ra-fg:#6b21a8; }
-
 
 
 /* ============================================================
