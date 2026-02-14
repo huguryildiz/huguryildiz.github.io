@@ -158,19 +158,19 @@ custom_js:
 - **Yildiz, H. U.**, Tavli, B., Kahjogh, B., & Dogdu, E. (2017). The impact of incapacitation of multiple critical sensor nodes on wireless sensor network lifetime. *IEEE Wireless Communications Letters, 6*(3), 306–309.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2017_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/LWC.2017.2679744)
 
-- Kurt, S., **Yildiz, H. U.**, Yigit, M., Tavli, B., & Gungor, V. C. (2017). *Packet size optimization in wireless sensor networks for smart grid applications*. *IEEE Transactions on Industrial Electronics, 64*(3), 2392–2401.  
+- Kurt, S., **Yildiz, H. U.**, Yigit, M., Tavli, B., & Gungor, V. C. (2017). Packet size optimization in wireless sensor networks for smart grid applications. *IEEE Transactions on Industrial Electronics, 64*(3), 2392–2401.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2017_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/TIE.2016.2619319) 
 <img id="most-cited-badge"
      src="https://img.shields.io/badge/Most_Cited-red?style=flat-square"
      alt="Most cited paper badge">
 
-- Akbas, A., **Yildiz, H. U.**, Tavli, B., & Uludag, S. (2016). *Joint optimization of transmission power level and packet size for WSN lifetime maximization*. *IEEE Sensors Journal, 16*(12), 5084–5094.  
+- Akbas, A., **Yildiz, H. U.**, Tavli, B., & Uludag, S. (2016). Joint optimization of transmission power level and packet size for WSN lifetime maximization. *IEEE Sensors Journal, 16*(12), 5084–5094.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2016_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JSEN.2016.2548661)
 
-- **Yildiz, H. U.**, Bicakci, K., Tavli, B., Gultekin, H., & Incebacak, D. (2016). *Maximizing wireless sensor network lifetime by communication/computation energy optimization of non-repudiation security service: Node level versus network level strategies*. *Ad Hoc Networks, 37*(2), 301–323.  
+- **Yildiz, H. U.**, Bicakci, K., Tavli, B., Gultekin, H., & Incebacak, D. (2016). Maximizing wireless sensor network lifetime by communication/computation energy optimization of non-repudiation security service: Node level versus network level strategies. *Ad Hoc Networks, 37*(2), 301–323.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2016_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1016/j.adhoc.2015.08.026)
 
-- **Yildiz, H. U.**, Tavli, & Yanikomeroglu, H. (2016). *Transmission power control for link–level handshaking in wireless sensor networks*. *IEEE Sensors Journal, 16*(2), 561–576.  
+- **Yildiz, H. U.**, Tavli, & Yanikomeroglu, H. (2016). Transmission power control for link–level handshaking in wireless sensor networks. *IEEE Sensors Journal, 16*(2), 561–576.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2016_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JSEN.2015.2486960)
 
 - **Yildiz, H. U.**, Temiz, M., & Tavli, B. (2015). *Impact of limiting hop count on the lifetime of wireless sensor networks*. *IEEE Communications Letters, 19*(4), 569–572.  
