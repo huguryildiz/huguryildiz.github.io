@@ -55,29 +55,33 @@
      ========================================================= -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+  var nav = document.querySelector(".greedy-nav");
+  if (!nav) return;
 
-  function moveAllNavItems() {
-    if (window.innerWidth > 768) return;
+  var visible = nav.querySelector(".visible-links");
+  var hidden  = nav.querySelector(".hidden-links");
+  var toggle  = nav.querySelector(".greedy-nav__toggle");
 
-    const nav = document.querySelector(".greedy-nav");
-    if (!nav) return;
+  if (!visible || !hidden || !toggle) return;
 
-    const visible = nav.querySelector(".visible-links");
-    const hidden = nav.querySelector(".hidden-links");
-    if (!visible || !hidden) return;
-
-    if (hidden.dataset.filled === "1") return;
-
-    Array.from(visible.children).forEach(li => {
+  // Clone all visible links into hidden list (once)
+  if (hidden.dataset.filled !== "1") {
+    Array.from(visible.children).forEach(function(li) {
       hidden.appendChild(li.cloneNode(true));
     });
-
     hidden.dataset.filled = "1";
   }
 
-  moveAllNavItems();
-  window.addEventListener("resize", moveAllNavItems);
+  // Override toggle click: manually add/remove "hidden" class
+  toggle.addEventListener("click", function (e) {
+    e.stopPropagation();
+    hidden.classList.toggle("hidden");
+  });
 
+  // Close menu when clicking outside
+  document.addEventListener("click", function () {
+    hidden.classList.add("hidden");
+  });
 });
 </script>
 <!-- end custom head snippets -->
