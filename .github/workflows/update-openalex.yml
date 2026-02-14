@@ -2,8 +2,8 @@ name: Update Research Metrics
 
 on:
   schedule:
-    - cron: "0 3 * * *"   # Her gün 03:00 UTC
-  workflow_dispatch:        # Elle de çalıştırılabilir
+    - cron: "0 0 1 * *"   # Every month on day 1 at 00:00 UTC
+  workflow_dispatch:
 
 jobs:
   fetch:
