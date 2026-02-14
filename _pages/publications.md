@@ -104,7 +104,7 @@ custom_js:
 ### Journal Articles
 {: #journal-papers}
 
-- Karagul Tantur, C., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025). Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity. *IEEE Internet of Things Journal, 12*(22), 47817–47826.  
+- Tantur Karagul, C., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025). Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity. *IEEE Internet of Things Journal, 12*(22), 47817–47826.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2025_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JIOT.2025.3603829)
 
 - Asci, M., Akusta Dagdeviren, Z., Akram, V. K., **Yildiz, H. U.**, Dagdeviren, O., & Tavli, B. (2025). Enhancing drone network resilience: Investigating strategies for k-connectivity restoration. *Computer Standards & Interfaces, 92*, 103941.  
@@ -173,10 +173,10 @@ custom_js:
 - **Yildiz, H. U.**, Tavli, & Yanikomeroglu, H. (2016). Transmission power control for link–level handshaking in wireless sensor networks. *IEEE Sensors Journal, 16*(2), 561–576.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2016_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JSEN.2015.2486960)
 
-- **Yildiz, H. U.**, Temiz, M., & Tavli, B. (2015). *Impact of limiting hop count on the lifetime of wireless sensor networks*. *IEEE Communications Letters, 19*(4), 569–572.  
+- **Yildiz, H. U.**, Temiz, M., & Tavli, B. (2015). Impact of limiting hop count on the lifetime of wireless sensor networks. *IEEE Communications Letters, 19*(4), 569–572.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2015_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/LCOMM.2015.2398411)
 
-- Batmaz, A. U., **Yildiz, H. U.**, & Tavli, B. (2014). *Role of unidirectionality and reverse path length on wireless sensor network lifetime*. *IEEE Sensors Journal, 14*(11), 3971–3982.  
+- Batmaz, A. U., **Yildiz, H. U.**, & Tavli, B. (2014). Role of unidirectionality and reverse path length on wireless sensor network lifetime. *IEEE Sensors Journal, 14*(11), 3971–3982.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2014_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JSEN.2014.2359156)
 
 
@@ -190,7 +190,7 @@ custom_js:
 ### Conference Papers (International)
 {: #conference-papers-international}
 
-- Karagul, C. T., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025, November). *Non-uniform k-connectivity for energy-efficient and reliable underwater wireless sensor networks*. In *2025 33rd Telecommunications Forum (TELFOR)* (pp. 1–4). IEEE.  
+- Tantur Karagul, C. T., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025, November). *Non-uniform k-connectivity for energy-efficient and reliable underwater wireless sensor networks*. In *2025 33rd Telecommunications Forum (TELFOR)* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/TELFOR67910.2025.11314281) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://docs.google.com/presentation/d/1K3TCWFDIhZuGReBDxBZDdtoVcevGus7G/)  
 
 - Un, B. E., **Yildiz, H. U.**, & Tavli, B. (2021, May). *Impact of critical node failures on lifetime of UWSNs with incomplete secure connectivity*. In *2021 IEEE International Black Sea Conference on Communications and Networking (BlackSeaCom)* (pp. 1–6). IEEE.  
