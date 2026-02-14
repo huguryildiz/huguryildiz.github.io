@@ -183,7 +183,7 @@ custom_js:
 ### Editorial
 {: #editorials}
 
-- Haytaoglu, E., Arslan, S. S., Dagdeviren, O., **Yildiz, H. U.**, & Ozturk, Y. (2025). *Editorial brief for special issue: Mass connectivity and/or communication paradigms for the internet of things*. *Internet of Things, 32*, 101625.  
+- Haytaoglu, E., Arslan, S. S., Dagdeviren, O., **Yildiz, H. U.**, & Ozturk, Y. (2025). Editorial brief for special issue: Mass connectivity and/or communication paradigms for the internet of things. *Internet of Things, 32*, 101625.  
 ![Editorial](https://img.shields.io/badge/Type-Editorial-purple?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2025_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1016/j.iot.2025.101625)
 
 
