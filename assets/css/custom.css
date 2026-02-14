@@ -382,30 +382,20 @@ details[open] { margin-bottom: 0.2rem; }
    - Dropdown styling
    ========================================================= */
 @media (max-width: 768px) {
-
-  /* visible-links'e dokunma: greedy-nav ölçümü ve tema davranışı bozulmasın */
-  .greedy-nav .visible-links{
-    opacity: 1 !important;
-    visibility: visible !important;
-    pointer-events: auto !important;
+  /* Mobilde üst sıradaki linkleri gizle (sadece hamburger) */
+  .greedy-nav .visible-links {
+    display: none !important;
   }
 
-  /* Hamburger toggle görünür kalsın */
+  /* Toggle her zaman görünsün */
   .masthead .greedy-nav__toggle,
-  .masthead .greedy-nav__toggle.hidden{
+  .masthead .greedy-nav__toggle.hidden {
     display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
     visibility: visible !important;
     opacity: 1 !important;
     pointer-events: auto !important;
-
-    min-width: 42px !important;
-    min-height: 42px !important;
-    padding: 6px 10px !important;
-    border-radius: 10px !important;
   }
-
+}
   /* Dropdown */
   .greedy-nav .hidden-links{
     position: absolute !important;
