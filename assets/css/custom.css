@@ -219,20 +219,29 @@ details[open] {
 }
 
 /* =========================================================
-   12) Mobile navigation: show CV and all overflow links in hamburger
+   12) Mobile navigation fix
    ========================================================= */
 @media (max-width: 925px) {
-  .greedy-nav__toggle {
-    display: block !important;
-  }
 
+  /* Tüm linkleri hidden-links'e taşı (greedy-nav hepsini oraya atar) */
   .greedy-nav .hidden-links {
-    display: none;
+    position: static !important;
+    border: none !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    background: transparent !important;
+    padding: 0 !important;
   }
 
-  .greedy-nav .hidden-links.is--visible {
+  /* Hamburger açıkken (hidden class kalktığında) göster */
+  .greedy-nav .hidden-links:not(.hidden) {
     display: block !important;
     visibility: visible !important;
+  }
+
+  /* Kapalıyken gizle */
+  .greedy-nav .hidden-links.hidden {
+    display: none !important;
   }
 
   .greedy-nav .hidden-links li {

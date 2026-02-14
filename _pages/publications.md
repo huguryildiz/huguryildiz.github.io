@@ -143,10 +143,10 @@ custom_js:
 - **Yildiz, H. U.** (2019). Investigation of maximum lifetime and minimum delay trade-off in underwater sensor networks. *International Journal of Communication Systems, 32*(7), e3924.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q2](https://img.shields.io/badge/2019_Rank-Q2-green?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1002/dac.3924)
 
-- **Yildiz, H. U.**, Gungor, V. C., & Tavli, B. (2019). *Packet size optimization for lifetime maximization in underwater acoustic sensor networks*. *IEEE Transactions on Industrial Informatics, 15*(2), 719–729.  
+- **Yildiz, H. U.**, Gungor, V. C., & Tavli, B. (2019). Packet size optimization for lifetime maximization in underwater acoustic sensor networks. *IEEE Transactions on Industrial Informatics, 15*(2), 719–729.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2019_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/TII.2018.2841830)
 
-- **Yildiz, H. U.** (2018). *The impact of transmission power levels set size on lifetime of wireless sensor networks in smart grids*. *Turkish Journal of Electrical Engineering & Computer Sciences, 26*(6), 3057–3071.  
+- **Yildiz, H. U.** (2018). The impact of transmission power levels set size on lifetime of wireless sensor networks in smart grids. *Turkish Journal of Electrical Engineering & Computer Sciences, 26*(6), 3057–3071.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q3](https://img.shields.io/badge/2018_Rank-Q3-orange?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://journals.tubitak.gov.tr/elektrik/vol26/iss6/23/)
 
 - Yigit, M., **Yildiz, H. U.**, Kurt, S., Tavli, B., & Gungor, V. C. (2018). *A survey on packet size optimization for terrestrial, underwater, underground, and body area sensor networks*. *International Journal of Communication Systems, 31*(11), e3572.  
