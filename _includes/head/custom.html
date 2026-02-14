@@ -2,49 +2,78 @@
 
 <!-- start custom head snippets -->
 
-<!-- custom.css (load after theme CSS) -->
+<!-- =========================
+     Stylesheets (after theme)
+     ========================= -->
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
-
-<!-- Student Supervision statistics (CV / Experience page only) -->
 <link rel="stylesheet" href="{{ '/assets/css/supervision-stats.css' | relative_url }}">
-
-<!-- Publications Metrics: Auto-generated Chart (CSS + JS) -->
 <link rel="stylesheet" href="{{ '/assets/css/pub-chart.css' | relative_url }}">
+
+<!-- =========================
+     Scripts
+     ========================= -->
 <script defer src="{{ '/assets/js/pub-chart.js' | relative_url }}"></script>
 
-<!-- Support for Academicons -->
-<link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
-<!-- Academicons (CDN) -->
+<!-- =========================
+     Academicons
+     (Local + CDN fallback)
+     ========================= -->
+<link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
-<!-- Favicons -->
+<!-- =========================
+     Favicons (single source)
+     ========================= -->
 <link rel="icon" href="{{ '/images/favicons/favicon.ico?v=3' | relative_url }}">
 <link rel="icon" type="image/svg+xml" href="{{ '/images/favicons/favicon.svg?v=3' | relative_url }}">
 <link rel="apple-touch-icon" href="{{ '/images/favicons/apple-touch-icon.png?v=3' | relative_url }}">
 
-<!-- Mobile UI color -->
+<!-- =========================
+     Mobile UI color
+     ========================= -->
 <meta name="theme-color" content="#061a2b">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-<!-- Google Fonts: Inter (headings/nav) + Lora (body) -->
+<!-- =========================
+     Fonts
+     ========================= -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- 
-  Favicon configuration
-  - SVG for modern browsers
-  - PNG (32x32, 16x16) for compatibility
-  - ICO fallback for legacy support
-  - Apple touch icon for iOS devices
--->
-<link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
-<link rel="shortcut icon" href="/favicon.ico">
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/favicon-180x180.png">
-
+<!-- =========================
+     GoatCounter analytics
+     ========================= -->
 <script data-goatcounter="https://huguryildiz.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+
+<!-- =========================================================
+     Mobile nav fix:
+     Put ALL menu items under hamburger on mobile
+     - Greedy-nav only moves "overflow" items by default
+     - This clones all visible links into hidden (hamburger) links
+     ========================================================= -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const mq = window.matchMedia("(max-width: 768px)");
+  if (!mq.matches) return;
+
+  const nav = document.querySelector(".greedy-nav");
+  if (!nav) return;
+
+  const visible = nav.querySelector(".visible-links");
+  const hidden  = nav.querySelector(".hidden-links");
+  const toggle  = nav.querySelector(".greedy-nav__toggle");
+  if (!visible || !hidden || !toggle) return;
+
+  // Populate once
+  if (hidden.dataset.alllinks === "1") return;
+
+  hidden.innerHTML = "";
+  Array.from(visible.children).forEach(li => hidden.appendChild(li.cloneNode(true)));
+
+  hidden.dataset.alllinks = "1";
+});
+</script>
 
 <!-- end custom head snippets -->
