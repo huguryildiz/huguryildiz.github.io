@@ -49,46 +49,93 @@
 
 
 <!-- =========================================================
-     Mobile nav fix: force ALL nav links into hamburger menu.
-     Uses setTimeout to run AFTER greedy-nav JS finishes.
+     Custom mobile hamburger menu (completely independent of greedy-nav)
      ========================================================= -->
-<script>
-(function () {
-  if (window.innerWidth >= 769) return;
+<style>
+#custom-mobile-nav { display: none; }
 
-  function fillHamburger() {
-    var nav = document.querySelector(".greedy-nav");
-    if (!nav) return;
-
-    var visible = nav.querySelector(".visible-links");
-    var hidden  = nav.querySelector(".hidden-links");
-    if (!visible || !hidden) return;
-
-    // navigation.yml'deki tüm linkler
-    var navLinks = [
-      { title: "CV",           url: "/cv/" },
-      { title: "Publications", url: "/publications/" },
-      { title: "Research",     url: "/research/" },
-      { title: "Service",      url: "/service/" },
-      { title: "Students",     url: "/students/" },
-      { title: "Teaching",     url: "/teaching/" }
-    ];
-
-    // hidden-links'i temizle ve yeniden yaz
-    hidden.innerHTML = "";
-    navLinks.forEach(function (item) {
-      var li = document.createElement("li");
-      li.className = "masthead__menu-item";
-      li.innerHTML = '<a href="' + item.url + '">' + item.title + '</a>';
-      hidden.appendChild(li);
-    });
+@media (max-width: 768px) {
+  #custom-mobile-nav {
+    display: block;
+    position: fixed;
+    top: 0; right: 0;
+    z-index: 99999;
+    padding: 8px;
   }
 
-  // Greedy-nav JS'inden sonra çalışsın
-  document.addEventListener("DOMContentLoaded", function () {
-    setTimeout(fillHamburger, 50);
-    setTimeout(fillHamburger, 300);
-    setTimeout(fillHamburger, 800);
+  #custom-nav-toggle {
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: inherit;
+    padding: 4px 8px;
+  }
+
+  #custom-nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 180px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    padding: 6px 0;
+    list-style: none;
+    margin: 0;
+  }
+
+  #custom-nav-links.open {
+    display: block;
+  }
+
+  #custom-nav-links li a {
+    display: block;
+    padding: 8px 20px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 15px;
+  }
+
+  #custom-nav-links li a:hover {
+    text-decoration: underline;
+  }
+
+  html.dark #custom-nav-links,
+  [data-theme="dark"] #custom-nav-links {
+    background: #0b1622;
+    border-color: rgba(180,200,220,0.2);
+  }
+}
+</style>
+
+<div id="custom-mobile-nav">
+  <button id="custom-nav-toggle" aria-label="Menu">&#9776;</button>
+  <ul id="custom-nav-links">
+    <li><a href="/cv/">CV</a></li>
+    <li><a href="/publications/">Publications</a></li>
+    <li><a href="/research/">Research</a></li>
+    <li><a href="/service/">Service</a></li>
+    <li><a href="/students/">Students</a></li>
+    <li><a href="/teaching/">Teaching</a></li>
+  </ul>
+</div>
+
+<script>
+(function () {
+  var toggle = document.getElementById("custom-nav-toggle");
+  var links  = document.getElementById("custom-nav-links");
+  if (!toggle || !links) return;
+
+  toggle.addEventListener("click", function (e) {
+    e.stopPropagation();
+    links.classList.toggle("open");
+  });
+
+  document.addEventListener("click", function () {
+    links.classList.remove("open");
   });
 })();
 </script>
