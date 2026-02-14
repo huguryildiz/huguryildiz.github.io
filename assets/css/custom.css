@@ -1,69 +1,88 @@
-/* =========================
-   Base typography tweaks
-   ========================= */
+/* =========================================================
+   1) Base typography
+   ========================================================= */
+
+/* Justify paragraphs + list items inside page content */
 .page__content,
 .page__content p,
 .page__content li {
   text-align: justify !important;
 }
 
-/* =========================
-   Quick links buttons
-   ========================= */
+
+/* =========================================================
+   2) Links
+   ========================================================= */
+
+/* Global link styling
+   NOTE: If this affects nav/buttons unexpectedly, scope it to
+   .page__content a { ... } instead of "a { ... }" */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   3) Quick links buttons
+   ========================================================= */
+
+/* Hover styling for "quick-links" button group */
 .quick-links .btn:hover {
   background-color: #5c1620;
   border-color: #5c1620;
   text-decoration: none;
 }
 
-/* =========================
-   Navigation bar typography
-   ========================= */
+
+/* =========================================================
+   4) Navigation bar typography
+   ========================================================= */
+
 .masthead,
 .masthead__menu-item {
   font-family: "Inter", sans-serif;
   font-weight: 500;
 }
 
-/* =========================
-   Sidebar (profile) typography
-   ========================= */
+
+/* =========================================================
+   5) Sidebar (profile) typography
+   ========================================================= */
+
 .author__content,
 .author__bio {
   font-family: "Inter", sans-serif;
 }
 
-/* =========================
-   Links
-   ========================= */
-a {
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
 
-/* =========================
-   News badges (pill) – FIXED
-   ========================= */
+/* =========================================================
+   6) News badge (pill)
+   ========================================================= */
+
 .news-badge {
   display: inline-block;
   padding: 0.2em 0.65em;
   margin-right: 0.5em;
+
   border-radius: 999px;
   font-size: 0.85em;
   font-weight: 700;
   line-height: 1.2;
+
   vertical-align: middle;
   white-space: nowrap;
 
-  /* LIGHT MODE */
-  color: #064a57;                      /* koyu teal */
-  background: rgba(99, 231, 255, 0.18); /* biraz daha soft */
+  /* Light mode */
+  color: #064a57;
+  background: rgba(99, 231, 255, 0.18);
   border: 1px solid rgba(99, 231, 255, 0.6);
 }
 
-/* DARK MODE */
+/* Dark mode overrides */
 html.dark .news-badge,
 [data-theme="dark"] .news-badge {
   color: #eaffff;
@@ -71,12 +90,16 @@ html.dark .news-badge,
   border: 1px solid rgba(99, 231, 255, 0.5);
 }
 
-/* Subtle hover to feel clickable (optional) */
+/* Optional hover: makes it feel clickable */
 .news-badge:hover {
   filter: brightness(1.08);
 }
 
-/* Pulse animation (for "new" items) */
+
+/* =========================================================
+   6.1) News badge pulse (for "new" items)
+   ========================================================= */
+
 @keyframes badgePulse {
   0%   { box-shadow: 0 0 0 0 rgba(99, 231, 255, 0.55); }
   70%  { box-shadow: 0 0 0 10px rgba(99, 231, 255, 0.00); }
@@ -87,16 +110,18 @@ html.dark .news-badge,
   animation: badgePulse 1.8s ease-out infinite;
 }
 
-/* Respect reduced-motion accessibility preference */
+/* Respect reduced-motion preference */
 @media (prefers-reduced-motion: reduce) {
   .news-badge.pulse {
     animation: none;
   }
 }
 
-/* =========================
-   <details> (Older news) styling
-   ========================= */
+
+/* =========================================================
+   7) <details> styling (Older news section)
+   ========================================================= */
+
 details {
   margin-top: 0.6rem;
 }
@@ -109,58 +134,54 @@ details > summary {
   margin-bottom: 0.35rem;
 }
 
-/* Make summary look slightly "link-like" on hover */
+/* Summary hover: link-like feel */
 details > summary:hover {
   text-decoration: underline;
 }
 
-/* Small spacing inside details */
 details[open] {
   margin-bottom: 0.2rem;
 }
 
-/* =========================
-   Optional: nicer spacing for News list
-   (works well with Markdown bullets)
-   ========================= */
+
+/* =========================================================
+   8) Content list spacing (e.g., News bullet list)
+   ========================================================= */
+
 .page__content ul {
   margin-top: 0.4rem;
 }
+
 .page__content ul li {
   margin-bottom: 0.35rem;
 }
 
-/* Hide page titles globally (Minimal Mistakes) */
+
+/* =========================================================
+   9) Hide page titles globally (Minimal Mistakes)
+   ========================================================= */
+
+/* Consolidated rules (remove duplicates) */
 .page__title,
 #page-title,
-.page__header {
-  display: none !important;
-}
-
-/* Hide the big page title block (Minimal Mistakes) */
+.page__header,
 .page__inner-wrap > header,
-.page__inner-wrap > h1.page__title,
-.page__title {
+.page__inner-wrap > h1.page__title {
   display: none !important;
 }
 
-/* Mobile nav fix: keep hamburger working */
-@media (max-width: 768px){
-  /* visible-links'i zorla kapatma -> greedy-nav bozuluyor */
-  .masthead__menu .visible-links{ display:flex !important; }
 
-  /* hamburger butonu her zaman görünsün */
-  .greedy-nav__toggle{
-    display:block !important;
-    visibility:visible !important;
-    opacity:1 !important;
-  }
-}
+/* =========================================================
+   10) Mobile navigation fix (hamburger visibility)
+   ========================================================= */
 
-/* FORCE hamburger to show even if theme JS fails */
-@media (max-width: 768px){
+/* NOTE:
+   Avoid forcing .visible-links display:flex !important,
+   because greedy-nav uses it for overflow behavior.
+   We only force the toggle button to remain visible. */
+@media (max-width: 768px) {
   .greedy-nav__toggle,
-  .greedy-nav__toggle.hidden{
+  .greedy-nav__toggle.hidden {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
@@ -168,38 +189,31 @@ details[open] {
 }
 
 
-/* =====================================================
-   Research Metrics Footer
+/* =========================================================
+   11) Research Metrics Footer
    - OpenAlex logo alignment
    - Hover animation
-   ===================================================== */
+   ========================================================= */
 
-/* Footer container:
-   Align logo and "Updated" text horizontally */
+/* Footer row: logo + updated text horizontally aligned */
 .metric-footer {
-  display: flex;            /* Horizontal layout */
-  align-items: center;      /* Vertically center items */
-  gap: 12px;                /* Space between logo and date */
-  margin-top: 10px;         /* Small spacing from metrics above */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
 }
 
-
-/* OpenAlex logo styling */
+/* Logo styling + smooth hover transition */
 .metric-logo {
-  height: 42px;             /* Controlled logo height */
-  width: auto;              /* Keep aspect ratio */
-  cursor: pointer;          /* Show pointer on hover */
+  height: 42px;
+  width: auto;
+  cursor: pointer;
 
-  /* Smooth hover animation */
-  transition: 
-    transform .2s ease, 
-    opacity .2s ease;
+  transition: transform .2s ease, opacity .2s ease;
 }
 
-
-/* Hover effect:
-   Slight enlargement + subtle fade */
+/* Hover: subtle zoom + fade */
 .metric-source-link:hover .metric-logo {
-  transform: scale(1.08);   /* Slight zoom effect */
-  opacity: .85;             /* Slight transparency */
+  transform: scale(1.08);
+  opacity: .85;
 }
