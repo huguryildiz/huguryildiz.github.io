@@ -3,10 +3,13 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">Toggle menu</span>
+
+        <!-- CSS-only hamburger toggle (checkbox hack) -->
+        <input type="checkbox" id="nav-toggle-check" class="nav-toggle-check" aria-hidden="true">
+        <label for="nav-toggle-check" class="nav-toggle-label" aria-label="Toggle menu">
           <span class="navicon"></span>
-        </button>
+        </label>
+
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg persist {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}">
             <a href="{{ base_path }}/">{{ site.title }}</a>
@@ -21,14 +24,85 @@
               <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
             </li>
           {% endfor %}
-          <!-- Greedy-nav overflow trigger: invisible spacer -->
-          <li class="masthead__menu-item" style="width:9999px;visibility:hidden;pointer-events:none;overflow:hidden;max-width:0;padding:0;margin:0;" aria-hidden="true"></li>
           <li id="theme-toggle" class="masthead__menu-item persist tail">
             <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
           </li>
         </ul>
+
+        <!-- Mobile dropdown -->
+        <ul class="mobile-nav-links">
+          {% for link in site.data.navigation.main %}
+            {% if link.url contains 'http' %}
+              {% assign domain = '' %}
+            {% else %}
+              {% assign domain = base_path %}
+            {% endif %}
+            <li><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+
         <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
   </div>
 </div>
+
+<style>
+/* Hide checkbox */
+.nav-toggle-check { display: none; }
+
+/* Hide toggle label and mobile menu on desktop */
+.nav-toggle-label { display: none; }
+.mobile-nav-links  { display: none; }
+
+@media (max-width: 768px) {
+  /* Hide desktop links */
+  .greedy-nav .visible-links li:not(.persist) {
+    display: none !important;
+  }
+
+  /* Show hamburger label */
+  .nav-toggle-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 6px 10px;
+    order: 99;
+  }
+
+  /* Show mobile menu when checkbox checked */
+  .nav-toggle-check:checked ~ .mobile-nav-links {
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 9999;
+    min-width: 180px;
+    background: var(--mm-background-color, #fff);
+    border: 1px solid rgba(150,170,190,0.25);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    padding: 6px 0;
+    list-style: none;
+    margin: 0;
+  }
+
+  .mobile-nav-links li a {
+    display: block;
+    padding: 8px 20px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .mobile-nav-links li a:hover {
+    text-decoration: underline;
+  }
+
+  html.dark .mobile-nav-links,
+  [data-theme="dark"] .mobile-nav-links {
+    background: #0b1622;
+    border-color: rgba(180,200,220,0.2);
+  }
+}
+</style>
