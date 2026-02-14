@@ -75,7 +75,7 @@ Integration of mathematical optimization frameworks with machine learning and re
     <p style="margin:0;">
       Design and optimization of energy-efficient routing, topology control, and
       communication strategies for terrestrial wireless ad hoc networks and
-      underwater acoustic sensor networks. Research topics span network lifetime
+      underwater acoustic sensor networks. Research topics span network lifetime & energy-efficiency
       analysis, k-connectivity–based reliability, multi-sink architectures,
       void-region mitigation, adversarial effects, and operation under harsh
       and resource-constrained environments.
