@@ -104,31 +104,31 @@ custom_js:
 ### Journal Articles
 {: #journal-papers}
 
-- Karagul, C. T., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025). *Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity*. *IEEE Internet of Things Journal, 12*(22), 47817–47826.  
+- Karagul Tantur, C., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025). Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity. *IEEE Internet of Things Journal, 12*(22), 47817–47826.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2025_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JIOT.2025.3603829)
 
-- Asci, M., Akusta Dagdeviren, Z., Khalilpour Akram, V., **Yildiz, H. U.**, Dagdeviren, O., & Tavli, B. (2025). *Enhancing drone network resilience: Investigating strategies for k-connectivity restoration*. *Computer Standards & Interfaces, 92*, 103941.  
+- Asci, M., Akusta Dagdeviren, Z., Akram, V. K., **Yildiz, H. U.**, Dagdeviren, O., & Tavli, B. (2025). Enhancing drone network resilience: Investigating strategies for k-connectivity restoration. *Computer Standards & Interfaces, 92*, 103941.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2025_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1016/j.csi.2024.103941)
 
-- Gultekin, B., Nurcan-Atceken, D., Altin-Kayhan, A., **Yildiz, H. U.**, & Tavli, B. (2023). *Exploring the tradeoff between energy dissipation, delay, and the number of backbones for broadcasting in wireless sensor networks through goal programming*. *Ad Hoc Networks, 149*, 103223.  
+- Gultekin, B., Nurcan-Atceken, D., Altin-Kayhan, A., **Yildiz, H. U.**, & Tavli, B. (2023). Exploring the tradeoff between energy dissipation, delay, and the number of backbones for broadcasting in wireless sensor networks through goal programming. *Ad Hoc Networks, 149*, 103223.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2023_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1016/j.adhoc.2023.103223)
 
-- **Yildiz, H. U.** (2023). *Joint effects of void region size and sink architecture on underwater WSNs lifetime*. *IEEE Sensors Journal, 23*(10), 11046–11056.  
+- **Yildiz, H. U.** (2023). Joint effects of void region size and sink architecture on underwater WSNs lifetime. *IEEE Sensors Journal, 23*(10), 11046–11056.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2023_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JSEN.2023.3264159)
 
-- Cobanlar, M., **Yildiz, H. U.**, Akram, V. K., Dagdeviren, O., & Tavli, B. (2022). *On the tradeoff between network lifetime and k-connectivity-based reliability in UWSNs*. *IEEE Internet of Things Journal, 9*(23), 24444–24452.  
+- Cobanlar, M., **Yildiz, H. U.**, Akram, V. K., Dagdeviren, O., & Tavli, B. (2022). On the tradeoff between network lifetime and k-connectivity-based reliability in UWSNs. *IEEE Internet of Things Journal, 9*(23), 24444–24452.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2022_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JIOT.2022.3188558)
 
-- Carsancakli, M. F., Al Imran, M. A., **Yildiz, H. U.**, Kara, A., & Tavli, B. (2022). *Reliability of linear WSNs: A complementary overview and analysis of impact of cascaded failures on network lifetime*. *Ad Hoc Networks, 131*, 102839.  
+- Carsancakli, M. F., Al Imran, M. A., **Yildiz, H. U.**, Kara, A., & Tavli, B. (2022). Reliability of linear WSNs: A complementary overview and analysis of impact of cascaded failures on network lifetime. *Ad Hoc Networks, 131*, 102839.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2022_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1016/j.adhoc.2022.102839)
 
-- Tekin, N., **Yildiz, H. U.**, & Gungor, V. C. (2021). *Node-level error control strategies for prolonging the lifetime of wireless sensor networks*. *IEEE Sensors Journal, 21*(13), 15386–15397.  
+- Tekin, N., **Yildiz, H. U.**, & Gungor, V. C. (2021). Node-level error control strategies for prolonging the lifetime of wireless sensor networks. *IEEE Sensors Journal, 21*(13), 15386–15397.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2021_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JSEN.2021.3073889)
 
-- **Yildiz, H. U.**, Kurt, S., & Tavli, B. (2019). *Comparative analysis of transmission power level and packet size optimization strategies for WSNs*. *IEEE Systems Journal, 13*(3), 2264–2274.  
+- **Yildiz, H. U.**, Kurt, S., & Tavli, B. (2019). Comparative analysis of transmission power level and packet size optimization strategies for WSNs. *IEEE Systems Journal, 13*(3), 2264–2274.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2019_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JSYST.2018.2864941)
 
-- **Yildiz, H. U.** (2019). *Maximization of underwater sensor networks lifetime via fountain codes*. *IEEE Transactions on Industrial Informatics, 15*(8), 4602–4613.  
+- **Yildiz, H. U.** (2019). Maximization of underwater sensor networks lifetime via fountain codes. *IEEE Transactions on Industrial Informatics, 15*(8), 4602–4613.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2019_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/TII.2019.2892866)
 
 - Akbas, A., **Yildiz, H. U.**, Ozbayoglu, A. M., & Tavli, B. (2019). *Neural network–based instant parameter prediction for wireless sensor network optimization models*. *Wireless Networks, 25*(6), 3405–3418.  
