@@ -81,18 +81,14 @@ custom_js:
         <option value="conf-nat">Conf. Papers (Nat.)</option>
       </select>
     </label>
-
     <label class="pub-filter-label">
       <span class="pub-filter-label-text">Year</span>
       <select id="pubYear" class="pub-filter-select">
         <option value="all">All</option>
       </select>
     </label>
-
-    <button id="pubApply" class="btn btn--small btn--primary" type="button">Apply</button>
     <button id="pubReset" class="btn btn--small" type="button">Reset</button>
   </div>
-
   <div id="pubCount" class="pub-count-text"></div>
 </div>
 {:/nomarkdown}
