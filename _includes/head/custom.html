@@ -54,26 +54,35 @@
      - This clones all visible links into hidden (hamburger) links
      ========================================================= -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const mq = window.matchMedia("(max-width: 768px)");
-  if (!mq.matches) return;
+(function () {
+  function applyMobileNav() {
+    const mq = window.matchMedia("(max-width: 768px)");
+    if (!mq.matches) return;
 
-  const nav = document.querySelector(".greedy-nav");
-  if (!nav) return;
+    const nav = document.querySelector(".greedy-nav");
+    if (!nav) return;
 
-  const visible = nav.querySelector(".visible-links");
-  const hidden  = nav.querySelector(".hidden-links");
-  const toggle  = nav.querySelector(".greedy-nav__toggle");
-  if (!visible || !hidden || !toggle) return;
+    const visible = nav.querySelector(".visible-links");
+    const hidden  = nav.querySelector(".hidden-links");
+    const toggle  = nav.querySelector(".greedy-nav__toggle");
+    if (!visible || !hidden || !toggle) return;
 
-  // Populate once
-  if (hidden.dataset.alllinks === "1") return;
+    // Force toggle visible (some themes hide it)
+    toggle.classList.remove("hidden");
+    toggle.style.display = "inline-flex";
+    toggle.style.visibility = "visible";
+    toggle.style.opacity = "1";
 
-  hidden.innerHTML = "";
-  Array.from(visible.children).forEach(li => hidden.appendChild(li.cloneNode(true)));
+    // Populate hidden-links once
+    if (hidden.dataset.alllinks === "1") return;
 
-  hidden.dataset.alllinks = "1";
-});
+    hidden.innerHTML = "";
+    Array.from(visible.children).forEach(li => hidden.appendChild(li.cloneNode(true)));
+    hidden.dataset.alllinks = "1";
+  }
+
+  document.addEventListener("DOMContentLoaded", applyMobileNav);
+  window.addEventListener("resize", applyMobileNav);
+})();
 </script>
-
 <!-- end custom head snippets -->
