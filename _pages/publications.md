@@ -197,7 +197,7 @@ custom_js:
 - Karagul, C. T., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B. (2025, November). *Non-uniform k-connectivity for energy-efficient and reliable underwater wireless sensor networks*. In *2025 33rd Telecommunications Forum (TELFOR)* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/TELFOR67910.2025.11314281) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://docs.google.com/presentation/d/1K3TCWFDIhZuGReBDxBZDdtoVcevGus7G/)  
 
-- Un, B. E., **Yildiz, H. U.**, & Tavli, B. (2021, May). *Impact of critical node failures on lifetime of UWSNs with incomplete secure connectivity*. In *2021 IEEE BlackSeaCom* (pp. 1–6). IEEE.  
+- Un, B. E., **Yildiz, H. U.**, & Tavli, B. (2021, May). *Impact of critical node failures on lifetime of UWSNs with incomplete secure connectivity*. In *2021 IEEE International Black Sea Conference on Communications and Networking (BlackSeaCom)* (pp. 1–6). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/BlackSeaCom52164.2021.9527803) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16p42o7-s9xBWWV8gUx-3SyKFfAXsvwHR/view?usp=sharing)  
 
 - Ozmen, A., **Yildiz, H. U.**, & Tavli, B. (2020, November). *Impact of minimizing the eavesdropping risks on lifetime of underwater acoustic sensor networks*. In *2020 28th Telecommunications Forum (TELFOR)* (pp. 1–4). IEEE.  
@@ -227,7 +227,7 @@ custom_js:
 - **Yildiz, H. U.**, & Tavli, B. (2014, December). *The impact of random power assignment in handshaking on wireless sensor network lifetime*. In *22014 IEEE Globecom Workshops (GC Wkshps)* (pp. 201–206). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/GLOCOMW.2014.7063431) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16Y3ol-umGpcveJLMhc_pZTuqigtw8fEP/view?usp=sharing)  
 
-- **Yildiz, H. U.**, Kurt, S., & Tavli, B. (2014, October). *The impact of near-ground path loss modeling on wireless sensor network lifetime*. In *2014 IEEE Military Communications Conference* (pp. 1114–1119). IEEE.  
+- **Yildiz, H. U.**, Kurt, S., & Tavli, B. (2014, October). *The impact of near-ground path loss modeling on wireless sensor network lifetime*. In *2014 IEEE Military Communications Conference (MILCOM)* (pp. 1114–1119). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/MILCOM.2014.188) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/15jZn25CaLQMSngx2aH00yvzvtiD3oSy9/view?usp=sharing)  
 
 - Akbas, A., **Yildiz, H. U.**, & Tavli, B. (2014, May). *Data packet length optimization for wireless sensor network lifetime maximization*. In *2014 10th International Conference on Communications (COMM)* (pp. 1–6). IEEE.  
@@ -243,7 +243,7 @@ custom_js:
 - **Yildiz, H. U.** (2019, April). *Improvement of underwater acoustic sensor networks performance with fountain codes*. In *2019 27th Signal Processing and Communications Applications Conference (SIU)* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2019.8806401) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16P_YL9_5u1bCfNzGJOZQnYrHXdjoNtZO/view?usp=sharing)  
 
-- **Yildiz, H. U.** (2018, November). *Minimum delay and maximum lifetime trade-off in underwater sensor networks*. In *2018 ELECO* (pp. 80–83). EMO.  
+- **Yildiz, H. U.** (2018, November). *Minimum delay and maximum lifetime trade-off in underwater sensor networks*. In *2018 International Conference on Electrical, Electronics and Biomedical Engineering (ELECO)* (pp. 80–83). EMO.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![PDF](https://img.shields.io/badge/PDF-Download-red?style=flat-square)](https://www.researchgate.net/publication/335083692) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16gkg1Tg8ATAHJFZv6DyxnuvCxmDf6R1k/view?usp=sharing)  
 
 - Karakurt, Y., **Yildiz, H. U.**, & Tavli, B. (2018, May). *The impact of mitigation of eavesdropping on wireless sensor networks lifetime*. In *2018 26th Signal Processing and Communications Applications Conference (SIU)* (pp. 1–4). IEEE.  
