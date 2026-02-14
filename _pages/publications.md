@@ -214,22 +214,22 @@ custom_js:
 - Dagdeviren, O., Akram, V. K., Tavli, B., **Yildiz, H. U.**, & Atilgan, C. (2016, October). Distributed detection of critical nodes in wireless sensor networks using connected dominating set. In *2016 IEEE SENSORS* (pp. 1–3). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/ICSENS.2016.7808815) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/15n6Oy9vLKkgJMUIEfWhdoGB-PG4lCLRl/view?usp=sharing)  
 
-- Tantur, C., **Yildiz, H. U.**, Kurt, S., & Tavli, B. (2016, October). *Optimal transmission power level sets for lifetime maximization in wireless sensor networks*. In *2016 IEEE SENSORS* (pp. 1–3). IEEE.  
+- Tantur, C., **Yildiz, H. U.**, Kurt, S., & Tavli, B. (2016, October). Optimal transmission power level sets for lifetime maximization in wireless sensor networks. In *2016 IEEE SENSORS* (pp. 1–3). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/ICSENS.2016.7808888) [![Poster](https://img.shields.io/badge/Resource-Poster-orange?style=flat-square)](https://drive.google.com/file/d/15V0CTjMZu6wiDMg9AyxNaJQCpaUhOcxD/view?usp=sharing)  
 
-- **Yildiz, H. U.**, & Tavli, B. (2015, December). *Prolonging wireless sensor network lifetime by optimal utilization of compressive sensing*. In *2015 IEEE Globecom Workshops (GC Wkshps)* (pp. 1–6). IEEE.  
+- **Yildiz, H. U.**, & Tavli, B. (2015, December). Prolonging wireless sensor network lifetime by optimal utilization of compressive sensing. In *2015 IEEE Globecom Workshops (GC Wkshps)* (pp. 1–6). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/GLOCOMW.2015.7414049) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16r6UKYnylhsZX8nenBAxjtg5uCnpTa52/view?usp=sharing)  
 
-- **Yildiz, H. U.**, & Tavli, B. (2014, December). *The impact of random power assignment in handshaking on wireless sensor network lifetime*. In *22014 IEEE Globecom Workshops (GC Wkshps)* (pp. 201–206). IEEE.  
+- **Yildiz, H. U.**, & Tavli, B. (2014, December). The impact of random power assignment in handshaking on wireless sensor network lifetime. In *22014 IEEE Globecom Workshops (GC Wkshps)* (pp. 201–206). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/GLOCOMW.2014.7063431) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16Y3ol-umGpcveJLMhc_pZTuqigtw8fEP/view?usp=sharing)  
 
-- **Yildiz, H. U.**, Kurt, S., & Tavli, B. (2014, October). *The impact of near-ground path loss modeling on wireless sensor network lifetime*. In *2014 IEEE Military Communications Conference (MILCOM)* (pp. 1114–1119). IEEE.  
+- **Yildiz, H. U.**, Kurt, S., & Tavli, B. (2014, October). The impact of near-ground path loss modeling on wireless sensor network lifetime. In *2014 IEEE Military Communications Conference (MILCOM)* (pp. 1114–1119). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/MILCOM.2014.188) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/15jZn25CaLQMSngx2aH00yvzvtiD3oSy9/view?usp=sharing)  
 
-- Akbas, A., **Yildiz, H. U.**, & Tavli, B. (2014, May). *Data packet length optimization for wireless sensor network lifetime maximization*. In *2014 10th International Conference on Communications (COMM)* (pp. 1–6). IEEE.  
+- Akbas, A., **Yildiz, H. U.**, & Tavli, B. (2014, May). Data packet length optimization for wireless sensor network lifetime maximization. In *2014 10th International Conference on Communications (COMM)* (pp. 1–6). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/ICComm.2014.6866706)
 
-- **Yildiz, H. U.**, Bicakci, K., & Tavli, B. (2014, January). *Communication/computation trade-offs in wireless sensor networks: Comparing network-level and node-level strategies*. In *22014 IEEE Topical Conference on Wireless Sensors and Sensor Networks (WiSNet)* (pp. 49–51). IEEE.  
+- **Yildiz, H. U.**, Bicakci, K., & Tavli, B. (2014, January). Communication/computation trade-offs in wireless sensor networks: Comparing network-level and node-level strategies. In *22014 IEEE Topical Conference on Wireless Sensors and Sensor Networks (WiSNet)* (pp. 49–51). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/WiSNet.2014.6825515) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16xQgqR0IGGUlx-9fmwTTnk1srKBS-9_w/view?usp=sharing)  
 
 

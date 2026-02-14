@@ -47,77 +47,37 @@
 <script data-goatcounter="https://huguryildiz.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
+
 <!-- =========================================================
-     Mobile nav fix:
-     Put ALL menu items under hamburger on mobile
-     - Greedy-nav only moves "overflow" items by default
-     - This clones all visible links into hidden (hamburger) links
+     Mobile nav fix: clone all visible links into hamburger menu
+     Runs once after page load, no mutation observer loop.
      ========================================================= -->
 <script>
-(function () {
-  function norm(h){ return (h || "").trim().replace(/\/+$/, ""); }
+window.addEventListener("load", function () {
+  if (window.innerWidth >= 769) return;
 
-  function buildHamburger() {
-    if (window.matchMedia("(min-width: 769px)").matches) return;
+  var nav    = document.querySelector(".greedy-nav");
+  if (!nav) return;
 
-    var nav = document.querySelector(".greedy-nav");
-    if (!nav) return;
+  var visible = nav.querySelector(".visible-links");
+  var hidden  = nav.querySelector(".hidden-links");
+  if (!visible || !hidden) return;
 
-    var hidden  = nav.querySelector(".hidden-links");
-    if (!hidden) return;
+  // Visible'daki tüm li'leri hidden'a ekle (tekrar çalışmasın)
+  if (hidden.dataset.mobileFilled === "1") return;
+  hidden.dataset.mobileFilled = "1";
 
-    // Nav içindeki TÜM menü item'larını yakala (visible+hidden fark etmez)
-    var allAnchors = Array.from(nav.querySelectorAll(".visible-links a, .hidden-links a"))
-      .filter(a => a && a.getAttribute("href"));
+  Array.from(visible.querySelectorAll("li")).forEach(function (li) {
+    hidden.insertBefore(li.cloneNode(true), hidden.firstChild);
+  });
 
-    var seen = new Set();
-    var items = [];
-
-    allAnchors.forEach(function(a){
-      var href = norm(a.getAttribute("href"));
-      if (!href || seen.has(href)) return;
-      seen.add(href);
-
-      var li = document.createElement("li");
-      li.className = "masthead__menu-item";
-      li.appendChild(a.cloneNode(true));
-      items.push(li);
-    });
-
-    // Hidden'ı yeniden yaz
-    hidden.innerHTML = "";
-    items.forEach(li => hidden.appendChild(li));
-
-    // CV'yi GARANTİ et (son çare)
-    var hasCV = hidden.querySelector('a[href$="/cv/"], a[href$="/cv"]');
-    if (!hasCV) {
-      var li = document.createElement("li");
-      li.className = "masthead__menu-item";
-      li.innerHTML = '<a href="/cv/">CV</a>';
-      hidden.insertBefore(li, hidden.firstChild);
-    }
+  // CV garantisi
+  if (!hidden.querySelector('a[href="/cv/"]')) {
+    var li = document.createElement("li");
+    li.className = "masthead__menu-item";
+    li.innerHTML = '<a href="/cv/">CV</a>';
+    hidden.insertBefore(li, hidden.firstChild);
   }
-
-  function init() {
-    buildHamburger();
-
-    // Greedy-nav / font yüklenmesi sonrası tekrar dene
-    setTimeout(buildHamburger, 200);
-    setTimeout(buildHamburger, 800);
-
-    // Menü DOM'u değişirse yeniden kur (SIRA değişse bile bozulmaz)
-    var nav = document.querySelector(".greedy-nav");
-    if (!nav) return;
-
-    var obs = new MutationObserver(function(){
-      buildHamburger();
-    });
-
-    obs.observe(nav, { childList: true, subtree: true });
-    window.addEventListener("resize", function(){ setTimeout(buildHamburger, 150); });
-  }
-
-  window.addEventListener("load", init);
-})();
+});
 </script>
 <!-- end custom head snippets -->
