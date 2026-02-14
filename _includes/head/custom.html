@@ -49,35 +49,47 @@
 
 
 <!-- =========================================================
-     Mobile nav fix: clone all visible links into hamburger menu
-     Runs once after page load, no mutation observer loop.
+     Mobile nav fix: force ALL nav links into hamburger menu.
+     Uses setTimeout to run AFTER greedy-nav JS finishes.
      ========================================================= -->
 <script>
-window.addEventListener("load", function () {
+(function () {
   if (window.innerWidth >= 769) return;
 
-  var nav    = document.querySelector(".greedy-nav");
-  if (!nav) return;
+  function fillHamburger() {
+    var nav = document.querySelector(".greedy-nav");
+    if (!nav) return;
 
-  var visible = nav.querySelector(".visible-links");
-  var hidden  = nav.querySelector(".hidden-links");
-  if (!visible || !hidden) return;
+    var visible = nav.querySelector(".visible-links");
+    var hidden  = nav.querySelector(".hidden-links");
+    if (!visible || !hidden) return;
 
-  // Visible'daki tüm li'leri hidden'a ekle (tekrar çalışmasın)
-  if (hidden.dataset.mobileFilled === "1") return;
-  hidden.dataset.mobileFilled = "1";
+    // navigation.yml'deki tüm linkler
+    var navLinks = [
+      { title: "CV",           url: "/cv/" },
+      { title: "Publications", url: "/publications/" },
+      { title: "Research",     url: "/research/" },
+      { title: "Service",      url: "/service/" },
+      { title: "Students",     url: "/students/" },
+      { title: "Teaching",     url: "/teaching/" }
+    ];
 
-  Array.from(visible.querySelectorAll("li")).forEach(function (li) {
-    hidden.insertBefore(li.cloneNode(true), hidden.firstChild);
-  });
-
-  // CV garantisi
-  if (!hidden.querySelector('a[href="/cv/"]')) {
-    var li = document.createElement("li");
-    li.className = "masthead__menu-item";
-    li.innerHTML = '<a href="/cv/">CV</a>';
-    hidden.insertBefore(li, hidden.firstChild);
+    // hidden-links'i temizle ve yeniden yaz
+    hidden.innerHTML = "";
+    navLinks.forEach(function (item) {
+      var li = document.createElement("li");
+      li.className = "masthead__menu-item";
+      li.innerHTML = '<a href="' + item.url + '">' + item.title + '</a>';
+      hidden.appendChild(li);
+    });
   }
-});
+
+  // Greedy-nav JS'inden sonra çalışsın
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(fillHamburger, 50);
+    setTimeout(fillHamburger, 300);
+    setTimeout(fillHamburger, 800);
+  });
+})();
 </script>
 <!-- end custom head snippets -->
