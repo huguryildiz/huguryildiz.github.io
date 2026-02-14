@@ -1,4 +1,4 @@
-// Publication filter script: collects list items from section headings, 
+// Publication filter script: collects list items from section headings,
 // populates a year dropdown, and filters items by type and year on demand.
 
 (function () {
@@ -37,8 +37,14 @@
           // Tag each item with its publication type
           items[i].setAttribute('data-type', type);
 
-          // Extract 4-digit year from text, e.g. "(2023)"
-          var match = items[i].textContent.match(/\((\d{4})\)/);
+          // Extract 4-digit year from text.
+          // Handles both "(2023)" and "(2023, November)" formats used in conference entries.
+          // The month part is optional, so both journal and conference formats are matched.
+          var text = items[i].textContent;
+          var match =
+            text.match(/\((\d{4}),\s*(?:January|February|March|April|May|June|July|August|September|October|November|December)\)/) ||
+            text.match(/\((\d{4})\)/);
+
           if (match) {
             items[i].setAttribute('data-year', match[1]);
           }
