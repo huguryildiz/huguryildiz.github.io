@@ -152,20 +152,20 @@
   flex-wrap: wrap;
   gap: .6rem;
 
-  /* inherit from ra-container (now normalized) */
+  /* Explicitly normalized, not inherited */
   font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 .ra-chip{
   padding: .45rem 1rem;
   border-radius: 999px;
 
-  /* inherit from ra-container (now normalized) */
+  /* Explicitly set to body text size, not inherited heading size */
   font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
+  font-size: 1rem;
+  line-height: 1.4;
 
   font-weight: 600;
   cursor: default;
