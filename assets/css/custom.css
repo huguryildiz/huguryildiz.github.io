@@ -378,17 +378,20 @@ details[open] { margin-bottom: 0.2rem; }
 
 /* =========================================================
    17) Mobile nav (FINAL)
-   - Hamburger her zaman görünsün
-   - Tüm linkler dropdown'da görünsün
    ========================================================= */
 @media (max-width: 768px) {
 
-  /* Üst sıradaki linkleri gizle */
+  /* visible-links'i GIZLEME - greedy-nav JS hamburger'ı
+     ancak overflow varsa gösteriyor. Bunun yerine sadece
+     görsel olarak küçült ki JS her zaman hamburger göstersin */
   .greedy-nav .visible-links {
-    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    flex: none !important;
   }
 
-  /* Hamburger toggle her zaman görünsün */
+  /* Hamburger her zaman görünsün */
   .masthead .greedy-nav__toggle,
   .masthead .greedy-nav__toggle.hidden {
     display: inline-flex !important;
@@ -410,7 +413,6 @@ details[open] { margin-bottom: 0.2rem; }
     box-shadow: 0 14px 30px rgba(0,0,0,0.18) !important;
   }
 
-  /* Açıkken göster, kapalıyken gizle */
   .greedy-nav .hidden-links:not(.hidden) {
     display: block !important;
     visibility: visible !important;
@@ -420,7 +422,6 @@ details[open] { margin-bottom: 0.2rem; }
     display: none !important;
   }
 
-  /* Link item'ları */
   .greedy-nav .hidden-links a {
     display: block !important;
     padding: .5rem 1rem !important;
@@ -431,7 +432,6 @@ details[open] { margin-bottom: 0.2rem; }
     text-decoration: underline !important;
   }
 
-  /* Dark mode */
   html.dark .greedy-nav .hidden-links,
   [data-theme="dark"] .greedy-nav .hidden-links {
     background: #0b1622 !important;
