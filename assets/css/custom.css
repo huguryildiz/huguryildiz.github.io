@@ -219,17 +219,24 @@ details[open] {
 }
 
 /* =========================================================
-   12 ) Mobile navigation: ensure hidden overflow links are visible
+   12) Mobile navigation: show CV and all overflow links in hamburger
    ========================================================= */
-@media (max-width: 768px) {
-  .greedy-nav .hidden-links {
+@media (max-width: 925px) {
+  .greedy-nav__toggle {
     display: block !important;
-    visibility: visible !important;
-    max-height: none !important;
-    overflow: visible !important;
   }
 
-  .greedy-nav .hidden-links.hidden {
-    display: none !important;
+  .greedy-nav .hidden-links {
+    display: none;
+  }
+
+  .greedy-nav .hidden-links.is--visible {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .greedy-nav .hidden-links li {
+    display: block !important;
+    visibility: visible !important;
   }
 }
