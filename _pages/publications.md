@@ -239,16 +239,16 @@ custom_js:
 - **Yildiz, H. U.** (2019, April). Improvement of underwater acoustic sensor networks performance with fountain codes. In *2019 27th Signal Processing and Communications Applications Conference (SIU)* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2019.8806401) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16P_YL9_5u1bCfNzGJOZQnYrHXdjoNtZO/view?usp=sharing)  
 
-- **Yildiz, H. U.** (2018, November). *Minimum delay and maximum lifetime trade-off in underwater sensor networks*. In *2018 National Conference on Electrical, Electronics and Biomedical Engineering (ELECO)* (pp. 80–83). EMO.  
+- **Yildiz, H. U.** (2018, November). Minimum delay and maximum lifetime trade-off in underwater sensor networks. In *2018 National Conference on Electrical, Electronics and Biomedical Engineering (ELECO)* (pp. 80–83). EMO.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![PDF](https://img.shields.io/badge/PDF-Download-red?style=flat-square)](https://www.researchgate.net/publication/335083692) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16gkg1Tg8ATAHJFZv6DyxnuvCxmDf6R1k/view?usp=sharing)  
 
-- Karakurt, Y., **Yildiz, H. U.**, & Tavli, B. (2018, May). *The impact of mitigation of eavesdropping on wireless sensor networks lifetime*. In *2018 26th Signal Processing and Communications Applications Conference (SIU)* (pp. 1–4). IEEE.  
+- Karakurt, Y., **Yildiz, H. U.**, & Tavli, B. (2018, May). The impact of mitigation of eavesdropping on wireless sensor networks lifetime. In *2018 26th Signal Processing and Communications Applications Conference (SIU)* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2018.8404252) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16XhbRpe_H93KSsPHMIKzp2IgwA8Nz4b8/view?usp=sharing)  
 
-- **Yildiz, H. U.** (2018, May). *The impact of data fragmentation on network lifetime in underwater acoustic sensor networks*. In *2018 26th Signal Processing and Communications Applications Conference (SIU)* (pp. 1–4). IEEE.  
+- **Yildiz, H. U.** (2018, May). The impact of data fragmentation on network lifetime in underwater acoustic sensor networks. In *2018 26th Signal Processing and Communications Applications Conference (SIU)* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2018.8404333) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16RrXq5rQ0TfTveU8T2c0VZO_YbVGIhDx/view?usp=sharing)  
 
-- **Yildiz, H. U.**, Tavli, B., & Kahjogh, B. O. (2017, May). *Assessment of wireless sensor network lifetime reduction due to elimination of critical node sets*. In *2017 25th Signal Processing and Communications Applications Conference (SIU)* (pp. 1–4). IEEE.  
+- **Yildiz, H. U.**, Tavli, B., & Kahjogh, B. O. (2017, May). Assessment of wireless sensor network lifetime reduction due to elimination of critical node sets. In *2017 25th Signal Processing and Communications Applications Conference (SIU)* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2017.7960228) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/15euPq5RHnGhSFm788StYStlpDJEYPMBA/view?usp=sharing)
 
 <!-- Publication filter: type + year dropdown filtering for journal, editorial, and conference entries.
