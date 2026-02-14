@@ -131,16 +131,16 @@ custom_js:
 - **Yildiz, H. U.** (2019). Maximization of underwater sensor networks lifetime via fountain codes. *IEEE Transactions on Industrial Informatics, 15*(8), 4602–4613.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2019_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/TII.2019.2892866)
 
-- Akbas, A., **Yildiz, H. U.**, Ozbayoglu, A. M., & Tavli, B. (2019). *Neural network–based instant parameter prediction for wireless sensor network optimization models*. *Wireless Networks, 25*(6), 3405–3418.  
+- Akbas, A., **Yildiz, H. U.**, Ozbayoglu, A. M., & Tavli, B. (2019). Neural network–based instant parameter prediction for wireless sensor network optimization models. *Wireless Networks, 25*(6), 3405–3418.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q2](https://img.shields.io/badge/2019_Rank-Q2-green?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1007/s11276-018-1808-y)
 
-- Erdem, H. E., **Yildiz, H. U.**, & Gungor, V. C. (2019). *On the lifetime of compressive sensing–based energy harvesting in underwater sensor networks*. *IEEE Sensors Journal, 19*(12), 4680–4687.  
+- Erdem, H. E., **Yildiz, H. U.**, & Gungor, V. C. (2019). On the lifetime of compressive sensing based energy harvesting in underwater sensor networks. *IEEE Sensors Journal, 19*(12), 4680–4687.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2019_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JSEN.2019.2900427)
 
-- Sayit, M., Cetinkaya, C., **Yildiz, H. U.**, & Tavli, B. (2019). *DASH–QoS: A scalable network layer service differentiation architecture for DASH over SDN*. *Computer Networks, 154*, 12–25.  
+- Sayit, M., Cetinkaya, C., **Yildiz, H. U.**, & Tavli, B. (2019). DASH–QoS: A scalable network layer service differentiation architecture for DASH over SDN. *Computer Networks, 154*, 12–25.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2019_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1016/j.comnet.2019.02.015)
 
-- **Yildiz, H. U.** (2019). *Investigation of maximum lifetime and minimum delay trade-off in underwater sensor networks*. *International Journal of Communication Systems, 32*(7), e3924.  
+- **Yildiz, H. U.** (2019). Investigation of maximum lifetime and minimum delay trade-off in underwater sensor networks. *International Journal of Communication Systems, 32*(7), e3924.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q2](https://img.shields.io/badge/2019_Rank-Q2-green?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1002/dac.3924)
 
 - **Yildiz, H. U.**, Gungor, V. C., & Tavli, B. (2019). *Packet size optimization for lifetime maximization in underwater acoustic sensor networks*. *IEEE Transactions on Industrial Informatics, 15*(2), 719–729.  
