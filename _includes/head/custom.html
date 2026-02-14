@@ -54,35 +54,30 @@
      - This clones all visible links into hidden (hamburger) links
      ========================================================= -->
 <script>
-(function () {
-  function applyMobileNav() {
-    const mq = window.matchMedia("(max-width: 768px)");
-    if (!mq.matches) return;
+document.addEventListener("DOMContentLoaded", function () {
+
+  function moveAllNavItems() {
+    if (window.innerWidth > 768) return;
 
     const nav = document.querySelector(".greedy-nav");
     if (!nav) return;
 
     const visible = nav.querySelector(".visible-links");
-    const hidden  = nav.querySelector(".hidden-links");
-    const toggle  = nav.querySelector(".greedy-nav__toggle");
-    if (!visible || !hidden || !toggle) return;
+    const hidden = nav.querySelector(".hidden-links");
+    if (!visible || !hidden) return;
 
-    // Force toggle visible (some themes hide it)
-    toggle.classList.remove("hidden");
-    toggle.style.display = "inline-flex";
-    toggle.style.visibility = "visible";
-    toggle.style.opacity = "1";
+    if (hidden.dataset.filled === "1") return;
 
-    // Populate hidden-links once
-    if (hidden.dataset.alllinks === "1") return;
+    Array.from(visible.children).forEach(li => {
+      hidden.appendChild(li.cloneNode(true));
+    });
 
-    hidden.innerHTML = "";
-    Array.from(visible.children).forEach(li => hidden.appendChild(li.cloneNode(true)));
-    hidden.dataset.alllinks = "1";
+    hidden.dataset.filled = "1";
   }
 
-  document.addEventListener("DOMContentLoaded", applyMobileNav);
-  window.addEventListener("resize", applyMobileNav);
-})();
+  moveAllNavItems();
+  window.addEventListener("resize", moveAllNavItems);
+
+});
 </script>
 <!-- end custom head snippets -->
