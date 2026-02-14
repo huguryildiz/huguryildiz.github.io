@@ -72,6 +72,6 @@ body[data-theme="dark"] .prospective-card {
   }
 
   50% {
-    background-color: rgba(212,175,55,0.10); /* academic gold */
+    background-color: rgba(212,175,55,0.35); /* academic gold */
   }
 }
