@@ -55,7 +55,7 @@
      ========================================================= -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  var nav = document.querySelector(".greedy-nav");
+  var nav    = document.querySelector(".greedy-nav");
   if (!nav) return;
 
   var visible = nav.querySelector(".visible-links");
@@ -64,21 +64,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!visible || !hidden || !toggle) return;
 
-  // Clone all visible links into hidden list (once)
+  // Clear hidden list first, then rebuild from visible
   if (hidden.dataset.filled !== "1") {
+    // Remove existing items in hidden-links to avoid duplicates
+    hidden.innerHTML = "";
+
     Array.from(visible.children).forEach(function(li) {
-      hidden.appendChild(li.cloneNode(true));
+      var clone = li.cloneNode(true);
+      // Fix any relative hrefs
+      var links = clone.querySelectorAll("a");
+      links.forEach(function(a) {
+        var href = a.getAttribute("href");
+        if (href && href.startsWith("/")) {
+          a.setAttribute("href", window.location.origin + href);
+        }
+      });
+      hidden.appendChild(clone);
     });
     hidden.dataset.filled = "1";
   }
 
-  // Override toggle click: manually add/remove "hidden" class
+  // Toggle hidden class on click
   toggle.addEventListener("click", function (e) {
     e.stopPropagation();
     hidden.classList.toggle("hidden");
   });
 
-  // Close menu when clicking outside
+  // Close on outside click
   document.addEventListener("click", function () {
     hidden.classList.add("hidden");
   });
