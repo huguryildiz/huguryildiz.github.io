@@ -149,13 +149,13 @@ custom_js:
 - **Yildiz, H. U.** (2018). The impact of transmission power levels set size on lifetime of wireless sensor networks in smart grids. *Turkish Journal of Electrical Engineering & Computer Sciences, 26*(6), 3057–3071.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q3](https://img.shields.io/badge/2018_Rank-Q3-orange?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://journals.tubitak.gov.tr/elektrik/vol26/iss6/23/)
 
-- Yigit, M., **Yildiz, H. U.**, Kurt, S., Tavli, B., & Gungor, V. C. (2018). *A survey on packet size optimization for terrestrial, underwater, underground, and body area sensor networks*. *International Journal of Communication Systems, 31*(11), e3572.  
+- Yigit, M., **Yildiz, H. U.**, Kurt, S., Tavli, B., & Gungor, V. C. (2018). A survey on packet size optimization for terrestrial, underwater, underground, and body area sensor networks. *International Journal of Communication Systems, 31*(11), e3572.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q2](https://img.shields.io/badge/2018_Rank-Q2-green?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1002/dac.3572)
 
-- **Yildiz, H. U.**, Ciftler, B. S., Tavli, B., Bicakci, K., & Incebacak, D. (2018). *The impact of incomplete secure connectivity on the lifetime of wireless sensor networks*. *IEEE Systems Journal, 12*(1), 1042–1046.  
+- **Yildiz, H. U.**, Ciftler, B. S., Tavli, B., Bicakci, K., & Incebacak, D. (2018). The impact of incomplete secure connectivity on the lifetime of wireless sensor networks. *IEEE Systems Journal, 12*(1), 1042–1046.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2018_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JSYST.2016.2527744)
 
-- **Yildiz, H. U.**, Tavli, B., Kahjogh, B., & Dogdu, E. (2017). *The impact of incapacitation of multiple critical sensor nodes on wireless sensor network lifetime*. *IEEE Wireless Communications Letters, 6*(3), 306–309.  
+- **Yildiz, H. U.**, Tavli, B., Kahjogh, B., & Dogdu, E. (2017). The impact of incapacitation of multiple critical sensor nodes on wireless sensor network lifetime. *IEEE Wireless Communications Letters, 6*(3), 306–309.  
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2017_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/LWC.2017.2679744)
 
 - Kurt, S., **Yildiz, H. U.**, Yigit, M., Tavli, B., & Gungor, V. C. (2017). *Packet size optimization in wireless sensor networks for smart grid applications*. *IEEE Transactions on Industrial Electronics, 64*(3), 2392–2401.  

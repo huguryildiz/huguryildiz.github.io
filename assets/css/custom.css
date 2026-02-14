@@ -114,20 +114,38 @@ details[open] { margin-bottom: 0.2rem; }
 }
 
 /* =========================================================
-   10) Mobile nav: ALL items under hamburger
+   10) Mobile nav: force hamburger visible + move all items under it
    ========================================================= */
 @media (max-width: 768px) {
-  /* Hide the top-row links completely */
+
+  /* Hide top row links */
   .greedy-nav .visible-links {
     display: none !important;
   }
 
-  /* Ensure hamburger button is visible */
-  .greedy-nav__toggle,
-  .greedy-nav__toggle.hidden {
-    display: block !important;
+  /* Force hamburger toggle to always show */
+  .greedy-nav__toggle {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     visibility: visible !important;
     opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  /* Some versions add .hidden to the toggle */
+  .greedy-nav__toggle.hidden {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Ensure hidden-links is positioned properly (dropdown) */
+  .greedy-nav .hidden-links {
+    position: absolute !important;
+    right: 0 !important;
+    top: 100% !important;
+    z-index: 9999 !important;
   }
 }
 
