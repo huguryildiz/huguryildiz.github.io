@@ -70,7 +70,7 @@ Co-advisor: [Prof. Kemal Bicakci](https://scholar.google.com/citations?user=HCTy
 - **Best Paper Award (Third Place)**,
   *Utilization of multi-sink architectures for lifetime maximization in underwater sensor networks*,
   IEEE Middle East and North Africa Communications Conference (MENACOMM) 2019, Manama, Kingdom of Bahrain <br>
-  [![Award](https://img.shields.io/badge/Award-Best_Paper-gold?style=flat-square)](https://drive.google.com/file/d/1QbpfuRXmyoTQCFJAFh_H-exv3v3Q8L-t/view)
+  [![Award](https://img.shields.io/badge/Best_Paper-Certificate-gold?style=flat-square)](https://drive.google.com/file/d/1QbpfuRXmyoTQCFJAFh_H-exv3v3Q8L-t/view)
 
 ## Technical Toolbox
 
