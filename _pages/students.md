@@ -7,7 +7,7 @@ custom_css:
   - supervision-stats
 ---
 
-## Student Supervision Stats
+## Student Supervision Overview
 
 <!-- Student Supervision Stats -->
 <div class="sup-stats">
@@ -27,7 +27,7 @@ custom_css:
   </div>
 </div>
 
-## Prospective Students
+## Prospective Graduate Students
 
 {::nomarkdown}
 <link rel="stylesheet" href="{{ '/assets/css/supervision-stats.css' | relative_url }}">
@@ -41,7 +41,7 @@ custom_css:
 </div>
 {:/nomarkdown}
 
-## Ph.D. Students
+## Ph.D. Supervision
 
 - **[Tantur Karagul, C.](https://www.linkedin.com/in/%C3%A7a%C4%9Fla-tantur-karag%C3%BCl-b834b0b5/)** (2025). *Network lifetime optimization in underwater wireless sensor networks with variable k-connectivity*. TOBB University of Economics and Technology.  
   ![PhD Co-advisor](https://img.shields.io/badge/PhD-Co--advisor-6f42c1?style=flat-square)  
@@ -50,7 +50,7 @@ custom_css:
   ![PhD Co-advisor](https://img.shields.io/badge/PhD-Co--advisor-6f42c1?style=flat-square) [![YÖK Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=G_oJ1rKE4SgJUkomyAKpR_b66BRHX6Iu8I5xytFXfpv7OVxvt9gxQhlL5X5kvF6X)
 
 
-## M.Sc. Students
+## M.Sc. Supervision
 
 - **[Un, B. E.](https://www.linkedin.com/in/burak-emre-%C3%BCn-2a558892/)** (2021). *Design of a novel optimization framework for the analysis of the impact of critical nodes on network lifetime of underwater acoustic sensor networks utilizing private key cryptography*. TOBB University of Economics and Technology.  
   ![MSc Co-advisor](https://img.shields.io/badge/MSc-Co--advisor-6f42c1?style=flat-square) [![YÖK Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=qVqOZFj2DwNmvdf1oGFYiPA6aYtotmnOK4EXJfFCxlc2mg4JGwOzN8dwilUNajg1)
