@@ -8,9 +8,6 @@
 
 /* =========================================================
    0) THEME TOKENS (LIGHT DEFAULT)
-   ---------------------------------------------------------
-   Use CSS variables everywhere so all cards stay consistent.
-   Dark mode overrides are defined ONCE below.
    ========================================================= */
 :root{
   --pub-text: #222;
@@ -20,26 +17,21 @@
   --pub-card-bg: #fff;
   --pub-shadow: 0 10px 26px rgba(0,0,0,.10);
 
-  /* segment numbers on ring */
   --pub-seg-fill: #ffffff;
   --pub-seg-stroke: rgba(0,0,0,.45);
 
-  /* form controls */
   --pub-input-bg: #fff;
   --pub-input-text: #222;
   --pub-input-border: rgba(0,0,0,.18);
   --pub-focus: rgba(31,119,180,.35);
 
-  /* accent (buttons / glow etc.) */
   --pub-accent: #007ec7;
   --pub-accent-hover: #0069a8;
   --pub-accent-focus: rgba(0,126,199,.35);
 }
 
 /* =========================================================
-   Dark theme override (Minimal Mistakes + custom toggles)
-   ---------------------------------------------------------
-   IMPORTANT: Define dark tokens ONLY here (no duplicates later).
+   Dark theme override
    ========================================================= */
 [data-theme="dark"],
 html[data-theme="dark"],
@@ -52,22 +44,14 @@ html.theme-dark,
 body.theme-dark{
   --pub-text: rgba(255,255,255,.95);
   --pub-muted: rgba(255,255,255,.72);
-
-  /* Choose ONE style: solid dark card background */
   --pub-card-bg: #3f3f3f;
-
   --pub-shadow: 0 14px 34px rgba(0,0,0,.55);
   --pub-border: rgba(255,255,255,.14);
-
   --pub-input-bg: rgba(255,255,255,.10);
   --pub-input-text: rgba(255,255,255,.95);
   --pub-input-border: rgba(255,255,255,.22);
   --pub-focus: rgba(255,255,255,.18);
 }
-
-/* NOTE:
-   prefers-color-scheme fallback intentionally REMOVED.
-   We rely on your theme toggle/data-theme instead. */
 
 
 /* =========================================================
@@ -77,7 +61,7 @@ body.theme-dark{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
-  align-items: stretch;      /* equal card height */
+  align-items: stretch;
   margin: 10px 0 18px 0;
 }
 @media (max-width: 900px){
@@ -105,7 +89,6 @@ body.theme-dark{
   color: var(--pub-text);
 }
 
-/* Donut + legend stacked (legend below) */
 .qdonut-wrap{
   display: grid;
   grid-template-columns: 1fr;
@@ -113,7 +96,6 @@ body.theme-dark{
   align-items: start;
 }
 
-/* SVG: use currentColor so text follows card color */
 .qdonut-svg{
   width: 100%;
   max-width: 320px;
@@ -123,7 +105,6 @@ body.theme-dark{
   color: var(--pub-text);
 }
 
-/* Slice value labels on the ring */
 .qdonut-count{
   font-size: 18px;
   font-weight: 800;
@@ -134,7 +115,6 @@ body.theme-dark{
   stroke-linejoin: round;
 }
 
-/* Center labels */
 .qdonut-total{
   font-size: 34px;
   font-weight: 900;
@@ -147,7 +127,6 @@ body.theme-dark{
   opacity: .70;
 }
 
-/* Donut hole matches card background */
 .qdonut-hole{
   fill: var(--pub-card-bg);
 }
@@ -165,7 +144,7 @@ body.theme-dark{
   align-items: center;
   gap: 10px;
   font-size: 18px;
-  font-weight: 650;
+  font-weight: 400;    /* ← bold'dan normal'e */
   color: inherit;
 }
 .qdonut-legend__row span{ color: inherit; }
@@ -177,7 +156,6 @@ body.theme-dark{
   border: 1px solid var(--pub-border);
 }
 
-/* Only keep this safety net (minimal) */
 .pub-chart .qdonut-total,
 .pub-chart .qdonut-sub{
   fill: var(--pub-text);
@@ -185,13 +163,11 @@ body.theme-dark{
 
 
 /* =========================================================
-   3) PUBLICATIONS FILTER (REGULAR CARD - NOT STICKY)
+   3) PUBLICATIONS FILTER
    ========================================================= */
 .pub-filter-sticky{
-  /* Sticky intentionally removed */
   margin: 18px 0 26px 0;
   padding: 14px 14px 12px 14px;
-
   border: 1px solid var(--pub-border);
   border-radius: 14px;
   background: var(--pub-card-bg);
@@ -199,7 +175,6 @@ body.theme-dark{
   color: var(--pub-text);
 }
 
-/* Header */
 .pub-filter-header{
   display: flex;
   align-items: baseline;
@@ -214,7 +189,6 @@ body.theme-dark{
   color: var(--pub-text);
 }
 
-/* Controls row */
 .pub-filter{
   display: flex;
   flex-wrap: wrap;
@@ -222,7 +196,6 @@ body.theme-dark{
   align-items: flex-end;
 }
 
-/* Label blocks */
 .pub-filter-label{
   display: flex;
   flex-direction: column;
@@ -236,7 +209,6 @@ body.theme-dark{
   color: var(--pub-text);
 }
 
-/* Selects */
 .pub-filter-select{
   padding: 8px 10px;
   border-radius: 10px;
@@ -251,14 +223,12 @@ body.theme-dark{
   box-shadow: 0 0 0 3px var(--pub-focus);
 }
 
-/* Count text under controls */
 .pub-count-text{
   margin-top: 10px;
   font-style: italic;
   color: var(--pub-muted);
 }
 
-/* Mobile */
 @media (max-width: 640px){
   .pub-filter-label{ min-width: 100%; }
   .pub-filter{ align-items: stretch; }
@@ -266,7 +236,7 @@ body.theme-dark{
 
 
 /* =========================================================
-   4) FILTER BUTTONS (Apply / Reset)
+   4) FILTER BUTTONS
    ========================================================= */
 #pubApply,
 #pubReset{
@@ -294,8 +264,7 @@ body.theme-dark{
 
 
 /* =========================================================
-   5) RESEARCH IMPACT CARD (OpenAlex include)
-   - Matches donut cards exactly
+   5) RESEARCH IMPACT CARD
    ========================================================= */
 .research-metrics{
   padding: 14px;
@@ -306,7 +275,6 @@ body.theme-dark{
   color: var(--pub-text);
 }
 
-/* Reduce vertical whitespace inside Research Impact */
 .research-metrics .metrics-title{
   margin: 0 0 8px 0;
 }
@@ -318,9 +286,8 @@ body.theme-dark{
   margin-top: 8px;
 }
 
-/* Logo sizing (change here) */
 .research-metrics .metric-logo{
-  height: 50px;   /* adjust this only */
+  height: 50px;
   width: auto;
   display: block;
 }
@@ -329,11 +296,10 @@ body.theme-dark{
   align-items: center;
 }
 
-/* =====================================================
-   Most Cited Paper - Blink Effect
-   ===================================================== */
 
-/* Blink only the one badge (by ID) */
+/* =========================================================
+   Most Cited Paper - Blink Effect
+   ========================================================= */
 #most-cited-badge{
   animation: citedBlink 1.6s infinite;
 }
