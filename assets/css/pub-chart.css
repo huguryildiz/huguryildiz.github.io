@@ -143,8 +143,7 @@ body.theme-dark{
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 18px;
-  font-weight: 400;    /* ← bold'dan normal'e */
+  font-weight: 400;
   color: inherit;
 }
 .qdonut-legend__row span{ color: inherit; }
