@@ -6,32 +6,22 @@ author_profile: true
 ---
 
 
-## Professional Experience
+## Academic and Professional Appointments
 
-- **Department Chair** <br>
-Department of Electrical and Electronics Engineering <br>
-TED University, Ankara, Turkey <br>
-Jul 2021 – Jul 2024
+**TED University, Ankara, Turkey**  
+Department of Electrical and Electronics Engineering  
 
-- **Associate Professor** <br>
-Department of Electrical and Electronics Engineering <br>
-TED University, Ankara, Turkey <br>
-Mar 2021 – Present
+- **Associate Professor** (Mar 2021 – Present)  
+- **Department Chair** (Jul 2021 – Jul 2024)  
+- **Assistant Professor** (Sep 2016 – Mar 2021)  
 
-- **Assistant Professor** <br>
-Department of Electrical and Electronics Engineering <br>
-TED University, Ankara, Turkey <br>
-Sep 2016 – Mar 2021
+**Turkish Aerospace, Ankara, Turkey**  
+- **Avionics Design Engineer** (Dec 2015 – Aug 2016)  
 
-- **Avionics Design Engineer** <br>
-Turkish Aerospace, Ankara, Turkey <br>
-Dec 2015 – Aug 2016
+**Turk Telekom, Ankara, Turkey**  
+- **Senior Network Engineer** (Dec 2010 – Nov 2015)  
 
-- **Senior Network Engineer** <br>
-Turk Telekom, Ankara, Turkey <br>
-Dec 2010 – Nov 2015
-
-## Education
+## Academic Background
 
 - **Ph.D. in Electrical and Electronics Engineering** <br>
 TOBB University of Economics and Technology, Ankara, Turkey <br>
@@ -45,7 +35,7 @@ Sep 2011 – Aug 2013
 Bilkent University, Ankara, Turkey <br>
 Aug 2005 – Aug 2009
 
-## Theses
+## Graduate Theses
 
 - **Ph.D. Dissertation** <br>
 *Transmission power control for link-level handshaking in wireless sensor networks* <br>
@@ -60,7 +50,7 @@ Co-advisor: [Prof. Kemal Bicakci](https://scholar.google.com/citations?user=HCTy
 [![PDF](https://img.shields.io/badge/Resource-PDF-red?style=flat-square)](/files/Yildiz_HuseyinUgur_MSc_Thesis.pdf)
 [![Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=iTkOhwevEenJZ3onUvs52nzi419Y-02Qu4K0DuUcM1T12y2xRhF2YLzHmis2Ng60)
 
-## Awards
+## Honors & Recognition
 
 - **Elevation to IEEE Senior Member (2021)**,
   Awarded for significant professional contributions; achieved by fewer than 10% of IEEE members. <br>
