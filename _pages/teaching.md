@@ -58,7 +58,7 @@ author_profile: true
 
 ## Current Courses at TED University
 
-### Undergraduate
+### Undergraduate Courses
 
 <!-- ===================== -->
 <!-- EE 304 -->
@@ -169,7 +169,7 @@ author_profile: true
 
 </div>
 
-### Graduate
+### Graduate Courses
 
 <!-- ===================== -->
 <!-- EE 512 -->
@@ -200,9 +200,9 @@ author_profile: true
 
 ---
 
-## Past Courses at TED University
+## Previously Taught Courses at TED University
 
-### Undergraduate
+### Undergraduate Courses
 
 <!-- ===================== -->
 <!-- EE 205 -->
@@ -289,7 +289,7 @@ author_profile: true
 
 Course materials, including lecture notes and supplementary resources, are available through the <i class="ai ai-moodle"></i> [TEDU LMS](https://lms.tedu.edu.tr/).
 
-## Teaching Philosophy
+## Teaching Philosophy and Pedagogical Approach
 
 My teaching philosophy integrates **theory, practice, and active learning** to foster independent thinking and lifelong learning. I emphasize:
 
