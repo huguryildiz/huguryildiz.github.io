@@ -53,8 +53,8 @@ custom_js:
 
 {::nomarkdown}
 <div class="pub-donuts-2col">
-  <div id="pubCountDonut" class="pub-chart" style="display:none;"></div>
-  <div id="journalQDonut" class="pub-chart" style="display:none;"></div>
+  <div id="pubCountDonut" class="pub-chart" style="visibility:hidden;"></div>
+  <div id="journalQDonut" class="pub-chart" style="visibility:hidden;"></div>
 </div>
 {:/nomarkdown}
 
@@ -255,154 +255,215 @@ custom_js:
      Conference entries use "(YYYY, Month)" format; journals use "(YYYY)". Both are handled.
      Filtering triggers automatically on dropdown change; Apply button is removed as redundant. -->
 <script type="text/javascript">
-/**
- * publications-filter.js
- * Type + year dropdown filtering for journal, editorial, and conference entries.
- * Conference entries use "(YYYY, Month)" format; journals use "(YYYY)".
- * Filtering triggers automatically on dropdown change.
+/* pub-chart.js
+ * Donut charts for:
+ *  - Publication Count by Type
+ *  - Journal Quartile distribution
+ *
+ * Fixes legend issues by ensuring containers are visible before Chart init.
+ * Requires Chart.js (v3/v4).
  */
 
 (function () {
+  "use strict";
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init);
-  } else {
-    init();
+  // ---------- helpers ----------
+  function onReady(fn) {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", fn);
+    } else {
+      fn();
+    }
   }
 
-  function init() {
+  function safeParseJSON(text) {
+    try { return JSON.parse(text); } catch (e) { return null; }
+  }
 
-    /* ─── Collect all publication list items ─────────────────────── */
+  function ensureVisible(el) {
+    if (!el) return;
+    // If author set display:none inline, override it
+    if (getComputedStyle(el).display === "none") {
+      el.style.display = "block";
+    }
+    // Give it a minimum height so legend has space
+    if (!el.style.minHeight) el.style.minHeight = "320px";
+  }
 
-    var allItems = [];
+  function makeCanvasInside(container) {
+    // Clear old content
+    container.innerHTML = "";
+    var canvas = document.createElement("canvas");
+    canvas.setAttribute("role", "img");
+    canvas.style.maxWidth = "100%";
+    canvas.style.height = "auto";
+    container.appendChild(canvas);
+    return canvas;
+  }
 
-    var headings = {
-      "journal"   : document.getElementById("journal-papers"),
-      "editorial" : document.getElementById("editorials"),
-      "conf-int"  : document.getElementById("conference-papers-international"),
-      "conf-nat"  : document.getElementById("conference-papers-national-turkish"),
+  function getChartDataFromScriptTag() {
+    var tag = document.getElementById("pubChartData");
+    if (!tag) return null;
+    return safeParseJSON(tag.textContent || "");
+  }
+
+  function countFromDOM() {
+    // Uses list items that publications-filter.js already tags with data-type/data-year
+    // If publications-filter.js runs after this, you still get counts by a more direct scan.
+    var lis = document.querySelectorAll("#journal-papers ~ ul li, #editorials ~ ul li, #conference-papers-international ~ ul li, #conference-papers-national-turkish ~ ul li");
+
+    var counts = { journal: 0, editorial: 0, "conf-int": 0, "conf-nat": 0 };
+
+    for (var i = 0; i < lis.length; i++) {
+      var li = lis[i];
+      // Prefer explicit data-type if already set; else infer by section
+      var type = li.getAttribute("data-type");
+      if (!type) {
+        // infer by nearest previous heading id
+        var prev = li.previousElementSibling;
+        // Not reliable; keep a lightweight fallback:
+        // just ignore if we cannot infer
+      }
+      if (type && counts.hasOwnProperty(type)) counts[type]++;
+    }
+
+    // Journal quartiles: try to parse "Q1/Q2/Q3/Q4" from badge text inside list item
+    var q = { Q1: 0, Q2: 0, Q3: 0, Q4: 0, Other: 0 };
+    var journalLis = document.querySelectorAll("#journal-papers ~ ul li");
+    for (var j = 0; j < journalLis.length; j++) {
+      var t = journalLis[j].textContent || "";
+      // Your badges include "Q1", "Q2", etc. in alt text or badge text.
+      // We search in textContent which usually includes it.
+      if (t.indexOf("Q1") !== -1) q.Q1++;
+      else if (t.indexOf("Q2") !== -1) q.Q2++;
+      else if (t.indexOf("Q3") !== -1) q.Q3++;
+      else if (t.indexOf("Q4") !== -1) q.Q4++;
+      else q.Other++;
+    }
+
+    return {
+      pubCounts: counts,
+      journalQuartiles: q
     };
-
-    for (var type in headings) {
-      var heading = headings[type];
-      if (!heading) continue;
-
-      /* Walk siblings until we find the <ul> or <ol> */
-      var el = heading.nextElementSibling;
-      while (el && el.tagName !== "UL" && el.tagName !== "OL") {
-        el = el.nextElementSibling;
-      }
-
-      if (!el) continue;
-
-      var items = el.getElementsByTagName("li");
-
-      for (var i = 0; i < items.length; i++) {
-        var item = items[i];
-        item.setAttribute("data-type", type);
-
-        /* Extract year — conference: "(2024, November)"  journal: "(2024)" */
-        var text  = item.textContent;
-        var match =
-          text.match(/\((\d{4}),\s*(?:January|February|March|April|May|June|July|August|September|October|November|December)\)/) ||
-          text.match(/\((\d{4})\)/);
-
-        if (match) {
-          item.setAttribute("data-year", match[1]);
-        }
-
-        allItems.push(item);
-      }
-    }
-
-    /* ─── UI elements ────────────────────────────────────────────── */
-
-    var typeSelect = document.getElementById("pubType");
-    var yearSelect = document.getElementById("pubYear");
-    var resetBtn   = document.getElementById("pubReset");
-    var countDiv   = document.getElementById("pubCount");
-
-    if (!typeSelect || !yearSelect) return;
-
-    /* ─── Populate year dropdown ─────────────────────────────────── */
-
-    var years = {};
-    for (var i = 0; i < allItems.length; i++) {
-      var y = allItems[i].getAttribute("data-year");
-      if (y) years[y] = true;
-    }
-
-    var yearList = Object.keys(years).sort(function (a, b) { return b - a; });
-
-    for (var i = 0; i < yearList.length; i++) {
-      var opt = document.createElement("option");
-      opt.value       = yearList[i];
-      opt.textContent = yearList[i];
-      yearSelect.appendChild(opt);
-    }
-
-    /* ─── Filter logic ───────────────────────────────────────────── */
-
-    function applyFilter() {
-      var selectedType = typeSelect.value;
-      var selectedYear = yearSelect.value;
-      var visibleCount = 0;
-
-      var counts = {
-        "journal"   : 0,
-        "editorial" : 0,
-        "conf-int"  : 0,
-        "conf-nat"  : 0,
-      };
-
-      for (var i = 0; i < allItems.length; i++) {
-        var item     = allItems[i];
-        var itemType = item.getAttribute("data-type");
-        var itemYear = item.getAttribute("data-year");
-
-        var typeMatch = (selectedType === "all" || itemType === selectedType);
-        var yearMatch = (selectedYear === "all" || itemYear === selectedYear);
-        var show      = typeMatch && yearMatch;
-
-        item.style.display = show ? "" : "none";
-
-        if (show) {
-          visibleCount++;
-          counts[itemType]++;
-        }
-      }
-
-      /* Show/hide section headings based on visible count */
-      for (var type in headings) {
-        if (headings[type]) {
-          headings[type].style.display = (counts[type] > 0) ? "" : "none";
-        }
-      }
-
-      /* Update count text */
-      if (countDiv) {
-        countDiv.textContent = (visibleCount === allItems.length)
-          ? "Showing all " + allItems.length + " publications"
-          : "Showing " + visibleCount + " of " + allItems.length + " publications";
-      }
-    }
-
-    /* ─── Event listeners ────────────────────────────────────────── */
-
-    typeSelect.addEventListener("change", applyFilter);
-    yearSelect.addEventListener("change", applyFilter);
-
-    if (resetBtn) {
-      resetBtn.addEventListener("click", function () {
-        typeSelect.value = "all";
-        yearSelect.value = "all";
-        applyFilter();
-      });
-    }
-
-    /* Run once on page load */
-    applyFilter();
   }
+
+  function normalizePubCounts(obj) {
+    // Map your types to friendly labels in a stable order
+    return {
+      labels: ["Journal Articles", "Editorial", "Conf. Papers (Intl.)", "Conf. Papers (Nat.)"],
+      values: [
+        obj.journal || 0,
+        obj.editorial || 0,
+        obj["conf-int"] || 0,
+        obj["conf-nat"] || 0
+      ]
+    };
+  }
+
+  function normalizeQuartiles(obj) {
+    return {
+      labels: ["Q1", "Q2", "Q3", "Q4", "Other"],
+      values: [
+        obj.Q1 || 0,
+        obj.Q2 || 0,
+        obj.Q3 || 0,
+        obj.Q4 || 0,
+        obj.Other || 0
+      ]
+    };
+  }
+
+  function loadChartJS() {
+    // Chart.js must be loaded by your theme/site already.
+    // This function only checks availability and registration.
+    if (typeof Chart === "undefined") return false;
+
+    // In Chart.js v3/v4, Legend is generally included, but if using tree-shaking builds,
+    // user may need registration. We try to register if globals exist.
+    try {
+      // These globals won't exist in all builds, so we guard.
+      if (Chart && Chart.register) {
+        // If already registered, no harm. If not available, catch.
+        // Note: In "auto" bundle you don't need this, but it doesn't break.
+        if (typeof ChartLegend !== "undefined") Chart.register(ChartLegend);
+      }
+    } catch (e) { /* ignore */ }
+
+    return true;
+  }
+
+  function buildDonut(containerId, title, labels, values) {
+    var container = document.getElementById(containerId);
+    if (!container) return null;
+
+    ensureVisible(container);
+
+    // Create canvas
+    var canvas = makeCanvasInside(container);
+    var ctx = canvas.getContext("2d");
+
+    // Destroy existing instance stored on container (avoid duplicates on hot reload)
+    if (container.__chartInstance && typeof container.__chartInstance.destroy === "function") {
+      container.__chartInstance.destroy();
+      container.__chartInstance = null;
+    }
+
+    var chart = new Chart(ctx, {
+      type: "doughnut",
+      data: {
+        labels: labels,
+        datasets: [{
+          data: values
+          // IMPORTANT: No manual colors here unless you want; Chart.js will default.
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: "62%",
+        plugins: {
+          title: {
+            display: true,
+            text: title
+          },
+          legend: {
+            display: true,
+            position: "bottom",
+            labels: {
+              // improves readability on dark skins
+              boxWidth: 12,
+              padding: 14
+            }
+          },
+          tooltip: {
+            enabled: true
+          }
+        }
+      }
+    });
+
+    container.__chartInstance = chart;
+    return chart;
+  }
+
+  // ---------- main ----------
+  onReady(function () {
+    if (!loadChartJS()) {
+      // Fail silently: page still works
+      return;
+    }
+
+    // Prefer explicit data if you provide it via script tag
+    // Example format shown below in section (2).
+    var data = getChartDataFromScriptTag() || countFromDOM();
+
+    var count = normalizePubCounts(data.pubCounts || {});
+    var quart = normalizeQuartiles(data.journalQuartiles || {});
+
+    // Show chart boxes (you currently set display:none inline)
+    buildDonut("pubCountDonut", "Publications by Type", count.labels, count.values);
+    buildDonut("journalQDonut", "Journal Quartile Distribution", quart.labels, quart.values);
+  });
 
 })();
 </script>
