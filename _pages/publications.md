@@ -8,8 +8,8 @@ custom_css:
   - pub-chart
 
 custom_js:
-  - pub-chart
   - publications-filter
+  - pub-chart
 ---
 
 ## Research Metrics & Impact
@@ -251,17 +251,16 @@ custom_js:
 - **Yildiz, H. U.**, Tavli, B., & Kahjogh, B. O. (2017, May). Assessment of wireless sensor network lifetime reduction due to elimination of critical node sets. In *2017 25th Signal Processing and Communications Applications Conference (SIU)* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2017.7960228) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/15euPq5RHnGhSFm788StYStlpDJEYPMBA/view?usp=sharing)
 
-<!-- Publication filter: type + year dropdown filtering for journal, editorial, and conference entries.
-     Conference entries use "(YYYY, Month)" format; journals use "(YYYY)". Both are handled.
-     Filtering triggers automatically on dropdown change; Apply button is removed as redundant. -->
 <script type="text/javascript">
-/* pub-chart.js
+/* pub-chart.js (inline)
  * Donut charts for:
  *  - Publication Count by Type
  *  - Journal Quartile distribution
  *
- * Fixes legend issues by ensuring containers are visible before Chart init.
- * Requires Chart.js (v3/v4).
+ * Robust against:
+ *  - containers set to visibility:hidden
+ *  - Chart.js loading after this script
+ *  - zero-height containers on some themes
  */
 
 (function () {
@@ -282,21 +281,26 @@ custom_js:
 
   function ensureVisible(el) {
     if (!el) return;
+
+    var cs = getComputedStyle(el);
+
     // If author set display:none inline, override it
-    if (getComputedStyle(el).display === "none") {
-      el.style.display = "block";
-    }
-    // Give it a minimum height so legend has space
-    if (!el.style.minHeight) el.style.minHeight = "320px";
+    if (cs.display === "none") el.style.display = "block";
+
+    // Your markup uses visibility:hidden -> must be flipped
+    if (cs.visibility === "hidden") el.style.visibility = "visible";
+
+    // Give space for chart + legend
+    if (!el.style.minHeight) el.style.minHeight = "340px";
+    if (!el.style.height) el.style.height = "340px";
   }
 
   function makeCanvasInside(container) {
-    // Clear old content
     container.innerHTML = "";
     var canvas = document.createElement("canvas");
     canvas.setAttribute("role", "img");
     canvas.style.maxWidth = "100%";
-    canvas.style.height = "auto";
+    canvas.style.display = "block";
     container.appendChild(canvas);
     return canvas;
   }
@@ -308,32 +312,25 @@ custom_js:
   }
 
   function countFromDOM() {
-    // Uses list items that publications-filter.js already tags with data-type/data-year
-    // If publications-filter.js runs after this, you still get counts by a more direct scan.
-    var lis = document.querySelectorAll("#journal-papers ~ ul li, #editorials ~ ul li, #conference-papers-international ~ ul li, #conference-papers-national-turkish ~ ul li");
+    // Publication items (your headings are IDs)
+    var lis = document.querySelectorAll(
+      "#journal-papers ~ ul li, #editorials ~ ul li, #conference-papers-international ~ ul li, #conference-papers-national-turkish ~ ul li"
+    );
 
     var counts = { journal: 0, editorial: 0, "conf-int": 0, "conf-nat": 0 };
 
     for (var i = 0; i < lis.length; i++) {
       var li = lis[i];
-      // Prefer explicit data-type if already set; else infer by section
       var type = li.getAttribute("data-type");
-      if (!type) {
-        // infer by nearest previous heading id
-        var prev = li.previousElementSibling;
-        // Not reliable; keep a lightweight fallback:
-        // just ignore if we cannot infer
-      }
       if (type && counts.hasOwnProperty(type)) counts[type]++;
     }
 
-    // Journal quartiles: try to parse "Q1/Q2/Q3/Q4" from badge text inside list item
+    // Journal quartiles from text (Q1/Q2/Q3/Q4)
     var q = { Q1: 0, Q2: 0, Q3: 0, Q4: 0, Other: 0 };
     var journalLis = document.querySelectorAll("#journal-papers ~ ul li");
+
     for (var j = 0; j < journalLis.length; j++) {
       var t = journalLis[j].textContent || "";
-      // Your badges include "Q1", "Q2", etc. in alt text or badge text.
-      // We search in textContent which usually includes it.
       if (t.indexOf("Q1") !== -1) q.Q1++;
       else if (t.indexOf("Q2") !== -1) q.Q2++;
       else if (t.indexOf("Q3") !== -1) q.Q3++;
@@ -341,14 +338,10 @@ custom_js:
       else q.Other++;
     }
 
-    return {
-      pubCounts: counts,
-      journalQuartiles: q
-    };
+    return { pubCounts: counts, journalQuartiles: q };
   }
 
   function normalizePubCounts(obj) {
-    // Map your types to friendly labels in a stable order
     return {
       labels: ["Journal Articles", "Editorial", "Conf. Papers (Intl.)", "Conf. Papers (Nat.)"],
       values: [
@@ -363,33 +356,8 @@ custom_js:
   function normalizeQuartiles(obj) {
     return {
       labels: ["Q1", "Q2", "Q3", "Q4", "Other"],
-      values: [
-        obj.Q1 || 0,
-        obj.Q2 || 0,
-        obj.Q3 || 0,
-        obj.Q4 || 0,
-        obj.Other || 0
-      ]
+      values: [obj.Q1 || 0, obj.Q2 || 0, obj.Q3 || 0, obj.Q4 || 0, obj.Other || 0]
     };
-  }
-
-  function loadChartJS() {
-    // Chart.js must be loaded by your theme/site already.
-    // This function only checks availability and registration.
-    if (typeof Chart === "undefined") return false;
-
-    // In Chart.js v3/v4, Legend is generally included, but if using tree-shaking builds,
-    // user may need registration. We try to register if globals exist.
-    try {
-      // These globals won't exist in all builds, so we guard.
-      if (Chart && Chart.register) {
-        // If already registered, no harm. If not available, catch.
-        // Note: In "auto" bundle you don't need this, but it doesn't break.
-        if (typeof ChartLegend !== "undefined") Chart.register(ChartLegend);
-      }
-    } catch (e) { /* ignore */ }
-
-    return true;
   }
 
   function buildDonut(containerId, title, labels, values) {
@@ -398,11 +366,10 @@ custom_js:
 
     ensureVisible(container);
 
-    // Create canvas
     var canvas = makeCanvasInside(container);
     var ctx = canvas.getContext("2d");
 
-    // Destroy existing instance stored on container (avoid duplicates on hot reload)
+    // Destroy existing instance stored on container
     if (container.__chartInstance && typeof container.__chartInstance.destroy === "function") {
       container.__chartInstance.destroy();
       container.__chartInstance = null;
@@ -412,32 +379,20 @@ custom_js:
       type: "doughnut",
       data: {
         labels: labels,
-        datasets: [{
-          data: values
-          // IMPORTANT: No manual colors here unless you want; Chart.js will default.
-        }]
+        datasets: [{ data: values }]
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
         cutout: "62%",
         plugins: {
-          title: {
-            display: true,
-            text: title
-          },
+          title: { display: true, text: title },
           legend: {
             display: true,
             position: "bottom",
-            labels: {
-              // improves readability on dark skins
-              boxWidth: 12,
-              padding: 14
-            }
+            labels: { boxWidth: 12, padding: 14 }
           },
-          tooltip: {
-            enabled: true
-          }
+          tooltip: { enabled: true }
         }
       }
     });
@@ -446,23 +401,25 @@ custom_js:
     return chart;
   }
 
-  // ---------- main ----------
-  onReady(function () {
-    if (!loadChartJS()) {
-      // Fail silently: page still works
+  // Wait until Chart is available (covers async CDN load timing)
+  function waitForChartAndRender(tryCount) {
+    if (typeof Chart === "undefined") {
+      if (tryCount <= 0) return;
+      setTimeout(function () { waitForChartAndRender(tryCount - 1); }, 100);
       return;
     }
 
-    // Prefer explicit data if you provide it via script tag
-    // Example format shown below in section (2).
     var data = getChartDataFromScriptTag() || countFromDOM();
-
     var count = normalizePubCounts(data.pubCounts || {});
     var quart = normalizeQuartiles(data.journalQuartiles || {});
 
-    // Show chart boxes (you currently set display:none inline)
     buildDonut("pubCountDonut", "Publications by Type", count.labels, count.values);
     buildDonut("journalQDonut", "Journal Quartile Distribution", quart.labels, quart.values);
+  }
+
+  onReady(function () {
+    // up to ~3 seconds retry (30 * 100ms)
+    waitForChartAndRender(30);
   });
 
 })();
