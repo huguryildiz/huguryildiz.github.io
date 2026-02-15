@@ -124,13 +124,13 @@ custom_css:
 ![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2016_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1016/j.adhoc.2015.08.026)
 
 - **Yildiz, H. U.**, Tavli, & Yanikomeroglu, H. (2016). Transmission power control for link–level handshaking in wireless sensor networks. *IEEE Sensors Journal, 16*(2), 561–576.  
-![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2016_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JSEN.2015.2486960)
+![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2016_Rank-Q1-gold?style=flat-square) ![PDF](https://img.shields.io/badge/PDF-Download-red?style=flat-square)](/files/papers/journal/yildiz2016transmission.pdf) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JSEN.2015.2486960)
 
 - **Yildiz, H. U.**, Temiz, M., & Tavli, B. (2015). Impact of limiting hop count on the lifetime of wireless sensor networks. *IEEE Communications Letters, 19*(4), 569–572.  
-![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2015_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/LCOMM.2015.2398411)
+![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2015_Rank-Q1-gold?style=flat-square) [![PDF](https://img.shields.io/badge/PDF-Download-red?style=flat-square)](/files/papers/journal/yildiz2015impact.pdf) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/LCOMM.2015.2398411)
 
 - Batmaz, A. U., **Yildiz, H. U.**, & Tavli, B. (2014). Role of unidirectionality and reverse path length on wireless sensor network lifetime. *IEEE Sensors Journal, 14*(11), 3971–3982.  
-![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2014_Rank-Q1-gold?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JSEN.2014.2359156)
+![Journal](https://img.shields.io/badge/Type-Journal-blue?style=flat-square) ![SCIE](https://img.shields.io/badge/Indexed-SCIE-blue?style=flat-square) ![Q1](https://img.shields.io/badge/2014_Rank-Q1-gold?style=flat-square) [![PDF](https://img.shields.io/badge/PDF-Download-red?style=flat-square)](/files/papers/journal/batmaz2014role.pdf) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/JSEN.2014.2359156) 
 
 
 ### Editorial
