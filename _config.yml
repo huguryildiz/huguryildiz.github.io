@@ -120,7 +120,7 @@ author:
   openalex_author_id: "A5085505896"
 
   links:
-    - label: "Download CV"
+    - label: "CV (PDF)"
       icon: "fas fa-file-pdf"
       url: "/files/Yildiz_HuseyinUgur_CV.pdf"
 
