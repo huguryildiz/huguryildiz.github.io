@@ -375,93 +375,102 @@ custom_css:
     wrap.innerHTML = "";
     wrap.style.display = "";
 
-    /* Stil */
-    wrap.style.cssText += [
-      "background:#fff",
-      "border:1px solid #e8e8e8",
-      "border-radius:10px",
-      "padding:1rem 1.25rem 1.25rem",
-      "box-shadow:0 1px 4px rgba(0,0,0,.06)",
-      "flex:1 1 300px",
-    ].join(";");
-
-    /* Başlık */
+    /* Başlık — CSS: .pub-chart__title */
     var h = document.createElement("h3");
+    h.className   = "pub-chart__title";
     h.textContent = cfg.title;
-    h.style.cssText = "margin:0 0 .8rem;font-size:.95rem;font-weight:700;color:#222;border:none;padding:0;";
     wrap.appendChild(h);
 
-    /* SVG + Legend yan yana */
-    var row = document.createElement("div");
-    row.style.cssText = "display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;";
-    wrap.appendChild(row);
+    /* Wrapper div — CSS: .qdonut-wrap (grid, tek sütun) */
+    var wrapInner = document.createElement("div");
+    wrapInner.className = "qdonut-wrap";
+    wrap.appendChild(wrapInner);
 
-    /* SVG */
-    var S = 180, CX = 90, CY = 90, RO = 74, RI = 44;
-    var svg = svgEl("svg", { viewBox: "0 0 " + S + " " + S, width: S, height: S });
+    /* ── SVG — CSS: .qdonut-svg ── */
+    var S = 220, CX = 110, CY = 110, RO = 90, RI = 54;
+    var svg = svgEl("svg", {
+      viewBox : "0 0 " + S + " " + S,
+      class   : "qdonut-svg",
+      role    : "img",
+    });
+
+    /* Delik (hole) — CSS: .qdonut-hole */
+    svg.appendChild(svgEl("circle", {
+      cx: CX, cy: CY, r: RI,
+      class: "qdonut-hole",
+    }));
 
     var start = 0;
     cfg.slices.forEach(function (sl) {
       var sweep = sl.value / total * 360;
-      var path  = svgEl("path", {
-        d              : arc(CX, CY, (RO + RI) / 2, start, start + sweep),
-        stroke         : sl.color,
-        "stroke-width" : RO - RI,
-        fill           : "none",
+
+      /* Dilim */
+      var path = svgEl("path", {
+        d             : arc(CX, CY, (RO + RI) / 2, start, start + sweep),
+        stroke        : sl.color,
+        "stroke-width": RO - RI,
+        fill          : "none",
       });
       svg.appendChild(path);
 
-      /* Dilim üstüne sayı */
+      /* Dilim üstüne sayı — CSS: .qdonut-count */
       if (sl.value / total > 0.06) {
-        var mp = polar(CX, CY, (RO + RI) / 2, start + sweep / 2);
-        svg.appendChild(svgEl("text", {
+        var mp  = polar(CX, CY, (RO + RI) / 2, start + sweep / 2);
+        var lbl = svgEl("text", {
           x: mp.x, y: mp.y,
-          "text-anchor": "middle", "dominant-baseline": "central",
-          fill: "#fff", "font-size": "12", "font-weight": "700",
-        })).textContent = sl.value;
+          "text-anchor"       : "middle",
+          "dominant-baseline" : "central",
+          class               : "qdonut-count",
+        });
+        lbl.textContent = sl.value;
+        svg.appendChild(lbl);
       }
+
       start += sweep;
     });
 
-    /* Merkez yazı */
-    svg.appendChild(svgEl("text", {
-      x: CX, y: CY - 9,
-      "text-anchor": "middle", "dominant-baseline": "central",
-      "font-size": "22", "font-weight": "800", fill: "#222",
-    })).textContent = total;
+    /* Merkez total — CSS: .qdonut-total / .qdonut-sub */
+    var cNum = svgEl("text", {
+      x: CX, y: CY - 12,
+      "text-anchor"       : "middle",
+      "dominant-baseline" : "central",
+      class               : "qdonut-total",
+    });
+    cNum.textContent = total;
+    svg.appendChild(cNum);
 
-    svg.appendChild(svgEl("text", {
-      x: CX, y: CY + 13,
-      "text-anchor": "middle", "dominant-baseline": "central",
-      "font-size": "11", fill: "#666",
-    })).textContent = cfg.center;
+    var cSub = svgEl("text", {
+      x: CX, y: CY + 16,
+      "text-anchor"       : "middle",
+      "dominant-baseline" : "central",
+      class               : "qdonut-sub",
+    });
+    cSub.textContent = cfg.center;
+    svg.appendChild(cSub);
 
-    row.appendChild(svg);
+    wrapInner.appendChild(svg);
 
-    /* Legend */
-    var ul = document.createElement("ul");
-    ul.style.cssText = "list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.4rem;";
+    /* ── Legend — CSS: .qdonut-legend / .qdonut-legend__row / .qdonut-legend__swatch ── */
+    var legend = document.createElement("div");
+    legend.className = "qdonut-legend";
+
     cfg.slices.forEach(function (sl) {
-      var li = document.createElement("li");
-      li.style.cssText = "display:flex;align-items:center;gap:.45rem;font-size:.8rem;color:#444;";
+      var row = document.createElement("div");
+      row.className = "qdonut-legend__row";
 
       var sw = document.createElement("span");
-      sw.style.cssText = "display:inline-block;width:11px;height:11px;border-radius:3px;flex-shrink:0;background:" + sl.color + ";";
+      sw.className        = "qdonut-legend__swatch";
+      sw.style.background = sl.color;
 
       var lbl = document.createElement("span");
-      lbl.style.flex = "1";
-      lbl.textContent = sl.label;
+      lbl.textContent = sl.label + " (" + sl.value + ")";
 
-      var cnt = document.createElement("span");
-      cnt.style.cssText = "font-weight:700;color:#222;min-width:1.5rem;text-align:right;";
-      cnt.textContent = sl.value;
-
-      li.appendChild(sw);
-      li.appendChild(lbl);
-      li.appendChild(cnt);
-      ul.appendChild(li);
+      row.appendChild(sw);
+      row.appendChild(lbl);
+      legend.appendChild(row);
     });
-    row.appendChild(ul);
+
+    wrapInner.appendChild(legend);
   }
 
   /* ── Başlat ── */
@@ -469,9 +478,9 @@ custom_css:
     initFilter();
     CHARTS.forEach(buildDonut);
 
-    /* pub-donuts-2col flex container'ı da göster */
+    /* .pub-donuts-2col grid container'ı göster (display:none ile başlıyor) */
     var dc = document.querySelector(".pub-donuts-2col");
-    if (dc) dc.style.display = "flex";
+    if (dc) dc.style.display = "";
   });
 
 })();
