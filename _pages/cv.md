@@ -8,16 +8,16 @@ author_profile: true
 
 ## Academic and Professional Appointments
 
-- **TED University, Ankara, Turkey**  
-Department of Electrical and Electronics Engineering
-*Associate Professor* (Mar 2021 – Present)
-*Department Chair* (Jul 2021 – Jul 2024)
-*Assistant Professor* (Sep 2016 – Mar 2021)  
+- **TED University, Ankara, Turkey** <br>  
+Department of Electrical and Electronics Engineering <br>
+*Associate Professor* (Mar 2021 – Present) <br>
+*Department Chair* (Jul 2021 – Jul 2024) <br>
+*Assistant Professor* (Sep 2016 – Mar 2021) <br>   
 
-- **Turkish Aerospace, Ankara, Turkey**
+- **Turkish Aerospace, Ankara, Turkey** <br>
 *Avionics Design Engineer* (Dec 2015 – Aug 2016)  
 
-- **Turk Telekom, Ankara, Turkey**
+- **Turk Telekom, Ankara, Turkey** <br>
 *Senior Network Engineer* (Dec 2010 – Nov 2015)  
 
 ## Educational Background
