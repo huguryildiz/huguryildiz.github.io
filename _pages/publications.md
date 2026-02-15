@@ -62,7 +62,7 @@ custom_js:
 <!--  /_includes/research-metrics.html -->
 {% include research-metrics.html %}
 
-## Publications
+## Research Output
 
 {::nomarkdown}
 <div class="pub-filter-sticky">

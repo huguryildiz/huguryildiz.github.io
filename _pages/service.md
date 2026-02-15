@@ -55,6 +55,15 @@ author_profile: true
 - IEEE Oceanic Engineering Society (2021)
 - IEEE Communications Society (2015 – 2018)
 
+## Academic and Institutional Service
+
+- External Advisory Board Member, Department of Electrical and Electronics Engineering, Çankaya University (2022 – 2024)
+- Web Committee Member, Faculty of Engineering, TED University (2021 – Present)
+- Alumni Coordinator, Department of Electrical and Electronics Engineering, TED University (2021 – 2024)
+- Department Chair, Department of Electrical and Electronics Engineering, TED University (2021 – 2024)
+- Faculty Board Member, Faculty of Engineering, TED University (2021 – 2024)
+- Faculty Administrative Board Member (Associate Professor Representative), TED University (2021 – Present)
+
 ## Seminars and Invited Talks
 
 - **Prolonging the Lifetime of Underwater Sensor Networks Under Sinkhole Attacks** <br>
