@@ -12,7 +12,7 @@ custom_js:
   - publications-filter
 ---
 
-## Metrics
+## Research Metrics & Impact
 
 <!-- Publication Count 
 <div class="pub-stats">
