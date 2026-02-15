@@ -120,6 +120,10 @@ author:
   openalex_author_id: "A5085505896"
 
   links:
+    - label: "Download CV"
+      icon: "fas fa-file-pdf"
+      url: "/files/Huseyin_Ugur_Yildiz_CV.pdf"
+
     - label: "DBLP"
       icon: "ai ai-dblp"
       url: "https://dblp.org/pid/160/4924.html"
