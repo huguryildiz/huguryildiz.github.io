@@ -5,7 +5,7 @@ permalink: /service/
 author_profile: true
 ---
 
-## Technical Program Committee Services
+## Technical Program Committee Service
 
 - IEEE International Conference on Communications (ICC 2018–2022)
 - IEEE Wireless Communications and Networking Conference (WCNC 2019, 2021–2025)
