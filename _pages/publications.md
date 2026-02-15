@@ -255,5 +255,154 @@ custom_js:
      Conference entries use "(YYYY, Month)" format; journals use "(YYYY)". Both are handled.
      Filtering triggers automatically on dropdown change; Apply button is removed as redundant. -->
 <script type="text/javascript">
-(function(){if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}function init(){var allItems=[];var headings={'journal':document.getElementById('journal-papers'),'editorial':document.getElementById('editorials'),'conf-int':document.getElementById('conference-papers-international'),'conf-nat':document.getElementById('conference-papers-national-turkish')};for(var type in headings){var heading=headings[type];if(!heading)continue;var el=heading.nextElementSibling;while(el&&el.tagName!=='UL'&&el.tagName!=='OL'){el=el.nextElementSibling}if(el){var items=el.getElementsByTagName('li');for(var i=0;i<items.length;i++){items[i].setAttribute('data-type',type);var text=items[i].textContent;var match=text.match(/\((\d{4}),\s*(?:January|February|March|April|May|June|July|August|September|October|November|December)\)/)||text.match(/\((\d{4})\)/);if(match){items[i].setAttribute('data-year',match[1])}allItems.push(items[i])}}}var typeSelect=document.getElementById('pubType');var yearSelect=document.getElementById('pubYear');var resetBtn=document.getElementById('pubReset');var countDiv=document.getElementById('pubCount');if(!typeSelect||!yearSelect)return;var years={};for(var i=0;i<allItems.length;i++){var y=allItems[i].getAttribute('data-year');if(y)years[y]=true}var yearList=Object.keys(years).sort(function(a,b){return b-a});for(var i=0;i<yearList.length;i++){var opt=document.createElement('option');opt.value=yearList[i];opt.textContent=yearList[i];yearSelect.appendChild(opt)}function applyFilter(){var selectedType=typeSelect.value;var selectedYear=yearSelect.value;var visibleCount=0;var counts={journal:0,editorial:0,'conf-int':0,'conf-nat':0};for(var i=0;i<allItems.length;i++){var item=allItems[i];var itemType=item.getAttribute('data-type');var itemYear=item.getAttribute('data-year');var typeMatch=(selectedType==='all'||itemType===selectedType);var yearMatch=(selectedYear==='all'||itemYear===selectedYear);var show=typeMatch&&yearMatch;item.style.display=show?'':'none';if(show){visibleCount++;counts[itemType]++}}for(var type in headings){if(headings[type]){headings[type].style.display=(counts[type]>0)?'':'none'}}if(countDiv){var msg=visibleCount===allItems.length?'Showing all '+allItems.length+' publications':'Showing '+visibleCount+' of '+allItems.length+' publications';countDiv.textContent=msg}}if(typeSelect)typeSelect.addEventListener('change',applyFilter);if(yearSelect)yearSelect.addEventListener('change',applyFilter);if(resetBtn){resetBtn.addEventListener('click',function(){typeSelect.value='all';yearSelect.value='all';applyFilter()})}applyFilter()}})();
+/**
+ * publications-filter.js
+ * Type + year dropdown filtering for journal, editorial, and conference entries.
+ * Conference entries use "(YYYY, Month)" format; journals use "(YYYY)".
+ * Filtering triggers automatically on dropdown change.
+ */
+
+(function () {
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+
+  function init() {
+
+    /* ─── Collect all publication list items ─────────────────────── */
+
+    var allItems = [];
+
+    var headings = {
+      "journal"   : document.getElementById("journal-papers"),
+      "editorial" : document.getElementById("editorials"),
+      "conf-int"  : document.getElementById("conference-papers-international"),
+      "conf-nat"  : document.getElementById("conference-papers-national-turkish"),
+    };
+
+    for (var type in headings) {
+      var heading = headings[type];
+      if (!heading) continue;
+
+      /* Walk siblings until we find the <ul> or <ol> */
+      var el = heading.nextElementSibling;
+      while (el && el.tagName !== "UL" && el.tagName !== "OL") {
+        el = el.nextElementSibling;
+      }
+
+      if (!el) continue;
+
+      var items = el.getElementsByTagName("li");
+
+      for (var i = 0; i < items.length; i++) {
+        var item = items[i];
+        item.setAttribute("data-type", type);
+
+        /* Extract year — conference: "(2024, November)"  journal: "(2024)" */
+        var text  = item.textContent;
+        var match =
+          text.match(/\((\d{4}),\s*(?:January|February|March|April|May|June|July|August|September|October|November|December)\)/) ||
+          text.match(/\((\d{4})\)/);
+
+        if (match) {
+          item.setAttribute("data-year", match[1]);
+        }
+
+        allItems.push(item);
+      }
+    }
+
+    /* ─── UI elements ────────────────────────────────────────────── */
+
+    var typeSelect = document.getElementById("pubType");
+    var yearSelect = document.getElementById("pubYear");
+    var resetBtn   = document.getElementById("pubReset");
+    var countDiv   = document.getElementById("pubCount");
+
+    if (!typeSelect || !yearSelect) return;
+
+    /* ─── Populate year dropdown ─────────────────────────────────── */
+
+    var years = {};
+    for (var i = 0; i < allItems.length; i++) {
+      var y = allItems[i].getAttribute("data-year");
+      if (y) years[y] = true;
+    }
+
+    var yearList = Object.keys(years).sort(function (a, b) { return b - a; });
+
+    for (var i = 0; i < yearList.length; i++) {
+      var opt = document.createElement("option");
+      opt.value       = yearList[i];
+      opt.textContent = yearList[i];
+      yearSelect.appendChild(opt);
+    }
+
+    /* ─── Filter logic ───────────────────────────────────────────── */
+
+    function applyFilter() {
+      var selectedType = typeSelect.value;
+      var selectedYear = yearSelect.value;
+      var visibleCount = 0;
+
+      var counts = {
+        "journal"   : 0,
+        "editorial" : 0,
+        "conf-int"  : 0,
+        "conf-nat"  : 0,
+      };
+
+      for (var i = 0; i < allItems.length; i++) {
+        var item     = allItems[i];
+        var itemType = item.getAttribute("data-type");
+        var itemYear = item.getAttribute("data-year");
+
+        var typeMatch = (selectedType === "all" || itemType === selectedType);
+        var yearMatch = (selectedYear === "all" || itemYear === selectedYear);
+        var show      = typeMatch && yearMatch;
+
+        item.style.display = show ? "" : "none";
+
+        if (show) {
+          visibleCount++;
+          counts[itemType]++;
+        }
+      }
+
+      /* Show/hide section headings based on visible count */
+      for (var type in headings) {
+        if (headings[type]) {
+          headings[type].style.display = (counts[type] > 0) ? "" : "none";
+        }
+      }
+
+      /* Update count text */
+      if (countDiv) {
+        countDiv.textContent = (visibleCount === allItems.length)
+          ? "Showing all " + allItems.length + " publications"
+          : "Showing " + visibleCount + " of " + allItems.length + " publications";
+      }
+    }
+
+    /* ─── Event listeners ────────────────────────────────────────── */
+
+    typeSelect.addEventListener("change", applyFilter);
+    yearSelect.addEventListener("change", applyFilter);
+
+    if (resetBtn) {
+      resetBtn.addEventListener("click", function () {
+        typeSelect.value = "all";
+        yearSelect.value = "all";
+        applyFilter();
+      });
+    }
+
+    /* Run once on page load */
+    applyFilter();
+  }
+
+})();
 </script>
