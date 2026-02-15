@@ -5,7 +5,7 @@ permalink: /service/
 author_profile: true
 ---
 
-## Technical Program Committee Memberships
+## Technical Program Committee Service
 
 - IEEE International Conference on Communications (ICC 2018–2022)
 - IEEE Wireless Communications and Networking Conference (WCNC 2019, 2021–2025)
@@ -18,7 +18,7 @@ author_profile: true
 - IEEE INFOCOM Workshop on Wireless Communications and Networking in Extreme Environments (2018)
 - IEEE SENSORS (2017)
 
-## Session Chairing
+## Conference Chair & Moderation Roles
 
 - *PHY-II: Physical Layer Communications-II*, IEEE BlackSeaCom 2021
 - *Underwater Networking*, ACM WUWNet 2019
@@ -26,7 +26,7 @@ author_profile: true
 - *Sensor Network, Method and Evaluation*, IEEE SENSORS 2016
 - *Management of Emerging Networks*, IEEE GLOBECOM 2014 Workshop
 
-## Reviewer
+## Peer-Review Service
 
 - Ad Hoc Networks
 - Computer Networks
@@ -64,7 +64,7 @@ author_profile: true
 - Faculty Board Member, Faculty of Engineering, TED University (2021 – 2024)
 - Faculty Administrative Board Member (Associate Professor Representative), TED University (2021 – Present)
 
-## Seminars and Invited Talks
+## Invited Talks & Research Seminars
 
 - **Prolonging the Lifetime of Underwater Sensor Networks Under Sinkhole Attacks** <br>
   Georgia Institute of Technology, Atlanta, GA, USA, Oct 24, 2019, Host: Prof. Ian F. Akyildiz <br>
