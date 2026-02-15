@@ -6,55 +6,16 @@ author_profile: true
 
 custom_css:
   - pub-chart
-
-custom_js:
-  - publications-filter
-  - pub-chart
 ---
 
 ## Research Metrics & Impact
-
-<!-- Publication Count 
-<div class="pub-stats">
-  <div class="pub-stat">
-    <div class="pub-stat__num">24</div>
-    <div class="pub-stat__label">Journal Articles</div>
-  </div>
-  <div class="pub-stat">
-    <div class="pub-stat__num">13</div>
-    <div class="pub-stat__label">Conf. Proc. (Int.)</div>
-  </div>
-  <div class="pub-stat">
-    <div class="pub-stat__num">5</div>
-    <div class="pub-stat__label">Conf. Proc. (Nat.)</div>
-  </div>
-  <div class="pub-stat">
-    <div class="pub-stat__num">1</div>
-    <div class="pub-stat__label">Editorial</div>
-  </div>
-</div>
--->
-
-<!-- Citation Metrics 
-<p class="metrics-badges">
-  <a href="https://scholar.google.com.tr/citations?user=nQwHS1gAAAAJ">
-    <img src="https://img.shields.io/badge/Citations-1043-blue?style=flat-square&logo=google-scholar" alt="Citations">
-  </a>
-  <a href="https://scholar.google.com.tr/citations?user=nQwHS1gAAAAJ">
-    <img src="https://img.shields.io/badge/h--index-15-orange?style=flat-square" alt="h-index">
-  </a>
-  <a href="https://scholar.google.com.tr/citations?user=nQwHS1gAAAAJ">
-    <img src="https://img.shields.io/badge/i10--index-23-success?style=flat-square" alt="i10-index">
-  </a>
-</p>
--->
 
 <!-- Auto-generated publication count and journal Q distribution charts -->
 
 {::nomarkdown}
 <div class="pub-donuts-2col">
-  <div id="pubCountDonut" class="pub-chart" style="visibility:hidden;"></div>
-  <div id="journalQDonut" class="pub-chart" style="visibility:hidden;"></div>
+  <div id="pubCountDonut" class="pub-chart" style="display:none;"></div>
+  <div id="journalQDonut" class="pub-chart" style="display:none;"></div>
 </div>
 {:/nomarkdown}
 
@@ -93,14 +54,6 @@ custom_js:
 </div>
 {:/nomarkdown}
 
-<!-- 
-## Quick Links
-[Journal Papers](#journal-papers){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
-[Editorials](#editorials){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
-[Conf. Papers (Int.)](#conference-papers-international){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
-[Conf. Papers (Nat.)](#conference-papers-national-turkish){:style="background-color: #1f77b4; border-color: #1f77b4;" .btn .btn--primary .btn--small}
-
--->
 ### Journal Articles
 {: #journal-papers}
 
@@ -220,7 +173,7 @@ custom_js:
 - **Yildiz, H. U.**, & Tavli, B. (2015, December). Prolonging wireless sensor network lifetime by optimal utilization of compressive sensing. In *2015 IEEE Globecom Workshops (GC Wkshps)* (pp. 1–6). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/GLOCOMW.2015.7414049) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16r6UKYnylhsZX8nenBAxjtg5uCnpTa52/view?usp=sharing)  
 
-- **Yildiz, H. U.**, & Tavli, B. (2014, December). The impact of random power assignment in handshaking on wireless sensor network lifetime. In *22014 IEEE Globecom Workshops (GC Wkshps)* (pp. 201–206). IEEE.  
+- **Yildiz, H. U.**, & Tavli, B. (2014, December). The impact of random power assignment in handshaking on wireless sensor network lifetime. In *2014 IEEE Globecom Workshops (GC Wkshps)* (pp. 201–206). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/GLOCOMW.2014.7063431) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16Y3ol-umGpcveJLMhc_pZTuqigtw8fEP/view?usp=sharing)  
 
 - **Yildiz, H. U.**, Kurt, S., & Tavli, B. (2014, October). The impact of near-ground path loss modeling on wireless sensor network lifetime. In *2014 IEEE Military Communications Conference (MILCOM)* (pp. 1114–1119). IEEE.  
@@ -229,7 +182,7 @@ custom_js:
 - Akbas, A., **Yildiz, H. U.**, & Tavli, B. (2014, May). Data packet length optimization for wireless sensor network lifetime maximization. In *2014 10th International Conference on Communications (COMM)* (pp. 1–6). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/ICComm.2014.6866706)
 
-- **Yildiz, H. U.**, Bicakci, K., & Tavli, B. (2014, January). Communication/computation trade-offs in wireless sensor networks: Comparing network-level and node-level strategies. In *22014 IEEE Topical Conference on Wireless Sensors and Sensor Networks (WiSNet)* (pp. 49–51). IEEE.  
+- **Yildiz, H. U.**, Bicakci, K., & Tavli, B. (2014, January). Communication/computation trade-offs in wireless sensor networks: Comparing network-level and node-level strategies. In *2014 IEEE Topical Conference on Wireless Sensors and Sensor Networks (WiSNet)* (pp. 49–51). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/WiSNet.2014.6825515) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/16xQgqR0IGGUlx-9fmwTTnk1srKBS-9_w/view?usp=sharing)  
 
 
@@ -251,22 +204,14 @@ custom_js:
 - **Yildiz, H. U.**, Tavli, B., & Kahjogh, B. O. (2017, May). Assessment of wireless sensor network lifetime reduction due to elimination of critical node sets. In *2017 25th Signal Processing and Communications Applications Conference (SIU)* (pp. 1–4). IEEE.  
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2017.7960228) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/15euPq5RHnGhSFm788StYStlpDJEYPMBA/view?usp=sharing)
 
+<!-- ================================================================
+     INLINE SCRIPTS — filtre + donut grafikler
+     Harici JS dosyasına bağımlılık yok; timing sorunu yok.
+     ================================================================ -->
 <script type="text/javascript">
-/* pub-chart.js (inline)
- * Donut charts for:
- *  - Publication Count by Type
- *  - Journal Quartile distribution
- *
- * Robust against:
- *  - containers set to visibility:hidden
- *  - Chart.js loading after this script
- *  - zero-height containers on some themes
- */
-
 (function () {
-  "use strict";
 
-  // ---------- helpers ----------
+  /* ── Her şeyi DOM hazır olduktan sonra çalıştır ── */
   function onReady(fn) {
     if (document.readyState === "loading") {
       document.addEventListener("DOMContentLoaded", fn);
@@ -275,151 +220,258 @@ custom_js:
     }
   }
 
-  function safeParseJSON(text) {
-    try { return JSON.parse(text); } catch (e) { return null; }
-  }
+  /* ════════════════════════════════════════════════
+     1. PUBLICATION FILTER
+     ════════════════════════════════════════════════ */
+  function initFilter() {
+    var allItems = [];
 
-  function ensureVisible(el) {
-    if (!el) return;
-
-    var cs = getComputedStyle(el);
-
-    // If author set display:none inline, override it
-    if (cs.display === "none") el.style.display = "block";
-
-    // Your markup uses visibility:hidden -> must be flipped
-    if (cs.visibility === "hidden") el.style.visibility = "visible";
-
-    // Give space for chart + legend
-    if (!el.style.minHeight) el.style.minHeight = "340px";
-    if (!el.style.height) el.style.height = "340px";
-  }
-
-  function makeCanvasInside(container) {
-    container.innerHTML = "";
-    var canvas = document.createElement("canvas");
-    canvas.setAttribute("role", "img");
-    canvas.style.maxWidth = "100%";
-    canvas.style.display = "block";
-    container.appendChild(canvas);
-    return canvas;
-  }
-
-  function getChartDataFromScriptTag() {
-    var tag = document.getElementById("pubChartData");
-    if (!tag) return null;
-    return safeParseJSON(tag.textContent || "");
-  }
-
-  function countFromDOM() {
-    // Publication items (your headings are IDs)
-    var lis = document.querySelectorAll(
-      "#journal-papers ~ ul li, #editorials ~ ul li, #conference-papers-international ~ ul li, #conference-papers-national-turkish ~ ul li"
-    );
-
-    var counts = { journal: 0, editorial: 0, "conf-int": 0, "conf-nat": 0 };
-
-    for (var i = 0; i < lis.length; i++) {
-      var li = lis[i];
-      var type = li.getAttribute("data-type");
-      if (type && counts.hasOwnProperty(type)) counts[type]++;
-    }
-
-    // Journal quartiles from text (Q1/Q2/Q3/Q4)
-    var q = { Q1: 0, Q2: 0, Q3: 0, Q4: 0, Other: 0 };
-    var journalLis = document.querySelectorAll("#journal-papers ~ ul li");
-
-    for (var j = 0; j < journalLis.length; j++) {
-      var t = journalLis[j].textContent || "";
-      if (t.indexOf("Q1") !== -1) q.Q1++;
-      else if (t.indexOf("Q2") !== -1) q.Q2++;
-      else if (t.indexOf("Q3") !== -1) q.Q3++;
-      else if (t.indexOf("Q4") !== -1) q.Q4++;
-      else q.Other++;
-    }
-
-    return { pubCounts: counts, journalQuartiles: q };
-  }
-
-  function normalizePubCounts(obj) {
-    return {
-      labels: ["Journal Articles", "Editorial", "Conf. Papers (Intl.)", "Conf. Papers (Nat.)"],
-      values: [
-        obj.journal || 0,
-        obj.editorial || 0,
-        obj["conf-int"] || 0,
-        obj["conf-nat"] || 0
-      ]
+    var headings = {
+      "journal"   : document.getElementById("journal-papers"),
+      "editorial" : document.getElementById("editorials"),
+      "conf-int"  : document.getElementById("conference-papers-international"),
+      "conf-nat"  : document.getElementById("conference-papers-national-turkish"),
     };
-  }
 
-  function normalizeQuartiles(obj) {
-    return {
-      labels: ["Q1", "Q2", "Q3", "Q4", "Other"],
-      values: [obj.Q1 || 0, obj.Q2 || 0, obj.Q3 || 0, obj.Q4 || 0, obj.Other || 0]
-    };
-  }
+    /* Her bölümün altındaki <ul> içindeki <li>'leri topla */
+    for (var type in headings) {
+      var heading = headings[type];
+      if (!heading) continue;
 
-  function buildDonut(containerId, title, labels, values) {
-    var container = document.getElementById(containerId);
-    if (!container) return null;
-
-    ensureVisible(container);
-
-    var canvas = makeCanvasInside(container);
-    var ctx = canvas.getContext("2d");
-
-    // Destroy existing instance stored on container
-    if (container.__chartInstance && typeof container.__chartInstance.destroy === "function") {
-      container.__chartInstance.destroy();
-      container.__chartInstance = null;
-    }
-
-    var chart = new Chart(ctx, {
-      type: "doughnut",
-      data: {
-        labels: labels,
-        datasets: [{ data: values }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        cutout: "62%",
-        plugins: {
-          title: { display: true, text: title },
-          legend: {
-            display: true,
-            position: "bottom",
-            labels: { boxWidth: 12, padding: 14 }
-          },
-          tooltip: { enabled: true }
-        }
+      var el = heading.nextElementSibling;
+      while (el && el.tagName !== "UL" && el.tagName !== "OL") {
+        el = el.nextElementSibling;
       }
+      if (!el) continue;
+
+      var items = el.getElementsByTagName("li");
+      for (var i = 0; i < items.length; i++) {
+        var item = items[i];
+        item.setAttribute("data-type", type);
+
+        /* Yıl çıkar: "(2024, November)" veya "(2024)" */
+        var text  = item.textContent;
+        var match =
+          text.match(/\((\d{4}),\s*(?:January|February|March|April|May|June|July|August|September|October|November|December)\)/) ||
+          text.match(/\((\d{4})\)/);
+        if (match) item.setAttribute("data-year", match[1]);
+
+        allItems.push(item);
+      }
+    }
+
+    var typeSelect = document.getElementById("pubType");
+    var yearSelect = document.getElementById("pubYear");
+    var resetBtn   = document.getElementById("pubReset");
+    var countDiv   = document.getElementById("pubCount");
+
+    if (!typeSelect || !yearSelect) return;
+
+    /* Yıl dropdown'ını doldur */
+    var years = {};
+    for (var i = 0; i < allItems.length; i++) {
+      var y = allItems[i].getAttribute("data-year");
+      if (y) years[y] = true;
+    }
+    Object.keys(years).sort(function (a, b) { return b - a; }).forEach(function (yr) {
+      var opt = document.createElement("option");
+      opt.value = opt.textContent = yr;
+      yearSelect.appendChild(opt);
     });
 
-    container.__chartInstance = chart;
-    return chart;
-  }
+    /* Filtre uygula */
+    function applyFilter() {
+      var selType = typeSelect.value;
+      var selYear = yearSelect.value;
+      var visible = 0;
+      var counts  = { journal: 0, editorial: 0, "conf-int": 0, "conf-nat": 0 };
 
-  // Wait until Chart is available (covers async CDN load timing)
-  function waitForChartAndRender(tryCount) {
-    if (typeof Chart === "undefined") {
-      if (tryCount <= 0) return;
-      setTimeout(function () { waitForChartAndRender(tryCount - 1); }, 100);
-      return;
+      for (var i = 0; i < allItems.length; i++) {
+        var it   = allItems[i];
+        var show = (selType === "all" || it.getAttribute("data-type") === selType) &&
+                   (selYear === "all" || it.getAttribute("data-year") === selYear);
+        it.style.display = show ? "" : "none";
+        if (show) { visible++; counts[it.getAttribute("data-type")]++; }
+      }
+
+      /* Bölüm başlıklarını gizle/göster */
+      for (var type in headings) {
+        if (headings[type]) {
+          headings[type].style.display = counts[type] > 0 ? "" : "none";
+        }
+      }
+
+      if (countDiv) {
+        countDiv.textContent = visible === allItems.length
+          ? "Showing all " + allItems.length + " publications"
+          : "Showing " + visible + " of " + allItems.length + " publications";
+      }
     }
 
-    var data = getChartDataFromScriptTag() || countFromDOM();
-    var count = normalizePubCounts(data.pubCounts || {});
-    var quart = normalizeQuartiles(data.journalQuartiles || {});
+    typeSelect.addEventListener("change", applyFilter);
+    yearSelect.addEventListener("change", applyFilter);
+    if (resetBtn) {
+      resetBtn.addEventListener("click", function () {
+        typeSelect.value = yearSelect.value = "all";
+        applyFilter();
+      });
+    }
 
-    buildDonut("pubCountDonut", "Publications by Type", count.labels, count.values);
-    buildDonut("journalQDonut", "Journal Quartile Distribution", quart.labels, quart.values);
+    applyFilter();
   }
 
+  /* ════════════════════════════════════════════════
+     2. DONUT GRAFİKLER (saf SVG — harici kütüphane yok)
+     ════════════════════════════════════════════════ */
+  var CHARTS = [
+    {
+      id     : "pubCountDonut",
+      title  : "Publication Count",
+      center : "total",
+      slices : [
+        { label: "Journal Articles",     value: 24, color: "#4e8fc7" },
+        { label: "Conf. Papers (Intl.)", value: 13, color: "#f28c28" },
+        { label: "Conf. Papers (Nat.)",  value:  5, color: "#5aaa6e" },
+        { label: "Editorial",            value:  1, color: "#9b59b6" },
+      ],
+    },
+    {
+      id     : "journalQDonut",
+      title  : "Journal Quartiles (Q)",
+      center : "journals",
+      slices : [
+        { label: "Q1", value: 20, color: "#c9a227" },
+        { label: "Q2", value:  3, color: "#f28c28" },
+        { label: "Q3", value:  1, color: "#5aaa6e" },
+      ],
+    },
+  ];
+
+  var NS = "http://www.w3.org/2000/svg";
+
+  function svgEl(tag, attrs) {
+    var el = document.createElementNS(NS, tag);
+    for (var k in attrs) el.setAttribute(k, attrs[k]);
+    return el;
+  }
+
+  function polar(cx, cy, r, deg) {
+    var rad = (deg - 90) * Math.PI / 180;
+    return { x: cx + r * Math.cos(rad), y: cy + r * Math.sin(rad) };
+  }
+
+  function arc(cx, cy, r, s, e) {
+    if (Math.abs(e - s) >= 360) e = s + 359.9999;
+    var a = polar(cx, cy, r, s), b = polar(cx, cy, r, e);
+    return "M " + a.x + " " + a.y + " A " + r + " " + r + " 0 " + (e - s > 180 ? 1 : 0) + " 1 " + b.x + " " + b.y;
+  }
+
+  function buildDonut(cfg) {
+    var wrap = document.getElementById(cfg.id);
+    if (!wrap) return;
+
+    var total = cfg.slices.reduce(function (s, d) { return s + d.value; }, 0);
+
+    wrap.innerHTML = "";
+    wrap.style.display = "";
+
+    /* Stil */
+    wrap.style.cssText += [
+      "background:#fff",
+      "border:1px solid #e8e8e8",
+      "border-radius:10px",
+      "padding:1rem 1.25rem 1.25rem",
+      "box-shadow:0 1px 4px rgba(0,0,0,.06)",
+      "flex:1 1 300px",
+    ].join(";");
+
+    /* Başlık */
+    var h = document.createElement("h3");
+    h.textContent = cfg.title;
+    h.style.cssText = "margin:0 0 .8rem;font-size:.95rem;font-weight:700;color:#222;border:none;padding:0;";
+    wrap.appendChild(h);
+
+    /* SVG + Legend yan yana */
+    var row = document.createElement("div");
+    row.style.cssText = "display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;";
+    wrap.appendChild(row);
+
+    /* SVG */
+    var S = 180, CX = 90, CY = 90, RO = 74, RI = 44;
+    var svg = svgEl("svg", { viewBox: "0 0 " + S + " " + S, width: S, height: S });
+
+    var start = 0;
+    cfg.slices.forEach(function (sl) {
+      var sweep = sl.value / total * 360;
+      var path  = svgEl("path", {
+        d              : arc(CX, CY, (RO + RI) / 2, start, start + sweep),
+        stroke         : sl.color,
+        "stroke-width" : RO - RI,
+        fill           : "none",
+      });
+      svg.appendChild(path);
+
+      /* Dilim üstüne sayı */
+      if (sl.value / total > 0.06) {
+        var mp = polar(CX, CY, (RO + RI) / 2, start + sweep / 2);
+        svg.appendChild(svgEl("text", {
+          x: mp.x, y: mp.y,
+          "text-anchor": "middle", "dominant-baseline": "central",
+          fill: "#fff", "font-size": "12", "font-weight": "700",
+        })).textContent = sl.value;
+      }
+      start += sweep;
+    });
+
+    /* Merkez yazı */
+    svg.appendChild(svgEl("text", {
+      x: CX, y: CY - 9,
+      "text-anchor": "middle", "dominant-baseline": "central",
+      "font-size": "22", "font-weight": "800", fill: "#222",
+    })).textContent = total;
+
+    svg.appendChild(svgEl("text", {
+      x: CX, y: CY + 13,
+      "text-anchor": "middle", "dominant-baseline": "central",
+      "font-size": "11", fill: "#666",
+    })).textContent = cfg.center;
+
+    row.appendChild(svg);
+
+    /* Legend */
+    var ul = document.createElement("ul");
+    ul.style.cssText = "list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.4rem;";
+    cfg.slices.forEach(function (sl) {
+      var li = document.createElement("li");
+      li.style.cssText = "display:flex;align-items:center;gap:.45rem;font-size:.8rem;color:#444;";
+
+      var sw = document.createElement("span");
+      sw.style.cssText = "display:inline-block;width:11px;height:11px;border-radius:3px;flex-shrink:0;background:" + sl.color + ";";
+
+      var lbl = document.createElement("span");
+      lbl.style.flex = "1";
+      lbl.textContent = sl.label;
+
+      var cnt = document.createElement("span");
+      cnt.style.cssText = "font-weight:700;color:#222;min-width:1.5rem;text-align:right;";
+      cnt.textContent = sl.value;
+
+      li.appendChild(sw);
+      li.appendChild(lbl);
+      li.appendChild(cnt);
+      ul.appendChild(li);
+    });
+    row.appendChild(ul);
+  }
+
+  /* ── Başlat ── */
   onReady(function () {
-    // up to ~3 seconds retry (30 * 100ms)
-    waitForChartAndRender(30);
+    initFilter();
+    CHARTS.forEach(buildDonut);
+
+    /* pub-donuts-2col flex container'ı da göster */
+    var dc = document.querySelector(".pub-donuts-2col");
+    if (dc) dc.style.display = "flex";
   });
 
 })();
