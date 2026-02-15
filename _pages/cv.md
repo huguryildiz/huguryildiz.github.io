@@ -9,7 +9,7 @@ author_profile: true
 ## Academic and Professional Appointments
 
 - **TED University, Ankara, Turkey**  
-**Department of Electrical and Electronics Engineering** <br>
+***Department of Electrical and Electronics Engineering***<br>
 *Associate Professor* (Mar 2021 – Present) <br>
 *Department Chair* (Jul 2021 – Jul 2024) <br>
 *Assistant Professor* (Sep 2016 – Mar 2021) <br>   
