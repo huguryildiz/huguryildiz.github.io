@@ -24,7 +24,7 @@ TED University, Ankara, Turkey <br>
 Sep 2016 – Mar 2021
 
 - **Avionics Design Engineer** <br>
-Turkish Aerospace Industries (TAI), Ankara, Turkey <br>
+Turkish Aerospace, Ankara, Turkey <br>
 Dec 2015 – Aug 2016
 
 - **Senior Network Engineer** <br>
