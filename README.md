@@ -1,6 +1,6 @@
 # Huseyin Ugur Yildiz — Personal Academic Website
 
-🌐 [huguryildiz.com](https://huguryildiz.com)
+🌎 [huguryildiz.com](https://huguryildiz.com)
 
 Associate Professor of Electrical Engineering at TED University, Ankara, Turkey.
 
