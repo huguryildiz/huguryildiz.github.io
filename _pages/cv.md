@@ -20,7 +20,7 @@ Department of Electrical and Electronics Engineering
 **Turk Telekom, Ankara, Turkey**  
 - *Senior Network Engineer* (Dec 2010 – Nov 2015)  
 
-## Academic Background
+## Educational Background
 
 - **Ph.D. in Electrical and Electronics Engineering** <br>
 TOBB University of Economics and Technology, Ankara, Turkey <br>
