@@ -7,16 +7,16 @@ author_profile: true
 
 ## Technical Program Committee Memberships
 
-- 2018 IEEE 87th Vehicular Technology Conference (VTC2018-Spring),
-- 2nd IEEE Middle East and North Africa Communications Conference (MENACOMM’19),
-- IEEE International Conference on Communications (ICC 2018–2022),
-- IEEE SENSORS 2017,
-- IEEE Wireless Communications and Networking Conference (WCNC 2019, WCNC 2021–Present),
-- Int. Conf. on Innovation and Intelligence for Information, Computation, and Technology (3ICT’19, 3ICT’20),
-- Int. Conference on Network and Service Management (CNSM 2020, CNSM 2021),
-- International Balkan Conference on Communications and Networking (BalkanCom 2023–Present),
-- International Conference on Underwater Networks & Systems (WUWNet 2019–Present),
-- IEEE INFOCOM’18 Workshop on Wirel. Commun. and Netw. in Extreme Environ.
+- IEEE International Conference on Communications (ICC 2018–2022)
+- IEEE Wireless Communications and Networking Conference (WCNC 2019, 2021–2025)
+- International Balkan Conference on Communications and Networking (BalkanCom 2023–2025)
+- International Conference on Innovation and Intelligence for Information, Computation, and Technology (3ICT 2019–2020)
+- International Conference on Network and Service Management (CNSM 2020–2021)
+- IEEE Middle East and North Africa Communications Conference (MENACOMM 2019)
+- International Conference on Underwater Networks & Systems (WUWNet 2019–2025)
+- IEEE Vehicular Technology Conference (VTC 2018–Spring)
+- IEEE INFOCOM Workshop on Wireless Communications and Networking in Extreme Environments (2018)
+- IEEE SENSORS (2017)
 
 ## Session Chairing
 
