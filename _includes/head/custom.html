@@ -4,47 +4,13 @@
      ========================================================= -->
 
 <!-- =========================
-     CRITICAL: Theme Detection & Toggle Script
+     CRITICAL: Theme Detection Script (MUST BE FIRST)
+     Runs BEFORE anything else to prevent flash
      ========================= -->
 <script>
 (function () {
   const STORAGE_KEY = "theme";
-
-  /**
-   * Update Font Awesome icon
-   * Uses fa-sun / fa-moon classes
-   */
-  function updateIcon(theme) {
-    const icon = document.getElementById("theme-icon");
-    if (!icon) return;
-
-    icon.classList.remove("fa-sun", "fa-moon");
-
-    // UX logic: Show the icon of the mode user will SWITCH TO
-    if (theme === "dark") {
-      icon.classList.add("fa-sun");   // currently dark → clicking switches to light
-    } else {
-      icon.classList.add("fa-moon");  // currently light → clicking switches to dark
-    }
-  }
-
-  /**
-   * Apply theme to <html>
-   */
-  function applyTheme(theme) {
-    const root = document.documentElement;
-
-    root.classList.toggle("dark", theme === "dark");
-    root.setAttribute("data-theme", theme);
-
-    updateIcon(theme);
-  }
-
-  /**
-   * Determine initial theme:
-   * 1) localStorage (if exists)
-   * 2) system preference (prefers-color-scheme)
-   */
+  
   function getInitialTheme() {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
@@ -52,77 +18,19 @@
         return saved;
       }
     } catch (e) {
-      console.warn("localStorage read failed:", e);
+      console.warn("localStorage unavailable:", e);
     }
-
-    const prefersDark =
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
-
+    
+    // Check system preference
+    const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
     return prefersDark ? "dark" : "light";
   }
-
-  // Apply theme IMMEDIATELY to prevent flash
-  const initialTheme = getInitialTheme();
-  const root = document.documentElement;
-  root.classList.toggle("dark", initialTheme === "dark");
-  root.setAttribute("data-theme", initialTheme);
-
-  /**
-   * After DOM is ready, attach click handler and update icon
-   */
-  document.addEventListener("DOMContentLoaded", function () {
-    // Update icon on page load
-    updateIcon(initialTheme);
-    
-    const toggleButton = document.getElementById("theme-toggle");
-    if (!toggleButton) {
-      console.warn("Theme toggle button not found");
-      return;
-    }
-
-    toggleButton.addEventListener("click", function (e) {
-      e.preventDefault();
-
-      const isDark = document.documentElement.classList.contains("dark");
-      const nextTheme = isDark ? "light" : "dark";
-
-      try {
-        localStorage.setItem(STORAGE_KEY, nextTheme);
-      } catch (e) {
-        console.warn("localStorage write failed:", e);
-      }
-
-      applyTheme(nextTheme);
-    });
-  });
-
-})();
-</script>
-
-<!-- =========================
-     Mobile Navigation Fix
-     ========================= -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const visibleLinks = document.querySelector('.visible-links');
-  const hiddenLinks = document.querySelector('.hidden-links');
-  const hamburger = document.querySelector('.greedy-nav__toggle');
   
-  if (visibleLinks && hiddenLinks && hamburger) {
-    // Copy all menu items from visible-links to hidden-links
-    const items = visibleLinks.querySelectorAll('li');
-    items.forEach(item => {
-      const clone = item.cloneNode(true);
-      hiddenLinks.appendChild(clone);
-    });
-    
-    // Show hamburger on mobile
-    if (window.innerWidth <= 768) {
-      hamburger.classList.remove('hidden');
-    }
-  }
-});
+  // Apply theme IMMEDIATELY
+  const initialTheme = getInitialTheme();
+  document.documentElement.classList.toggle("dark", initialTheme === "dark");
+  document.documentElement.setAttribute("data-theme", initialTheme);
+})();
 </script>
 
 <!-- =========================
@@ -170,6 +78,129 @@ document.addEventListener('DOMContentLoaded', function() {
      ========================= -->
 <script data-goatcounter="https://huguryildiz.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+
+<!-- =========================================================
+     Theme Toggle System (Light / Dark Mode)
+     - System preference aware
+     - localStorage persistent
+     - Font Awesome icon switching
+     - Prevents flash of incorrect theme
+     ========================================================= -->
+<script>
+(function () {
+
+  const STORAGE_KEY = "theme";
+
+  /**
+   * Update Font Awesome icon
+   * Uses fa-sun / fa-moon classes
+   */
+  function updateIcon(theme) {
+    const icon = document.getElementById("theme-icon");
+    if (!icon) return;
+
+    icon.classList.remove("fa-sun", "fa-moon");
+
+    // UX logic:
+    // Show the icon of the mode user will SWITCH TO
+    if (theme === "dark") {
+      icon.classList.add("fa-sun");   // currently dark → clicking switches to light
+    } else {
+      icon.classList.add("fa-moon");  // currently light → clicking switches to dark
+    }
+  }
+
+  /**
+   * Apply theme to <html>
+   */
+  function applyTheme(theme) {
+    const root = document.documentElement;
+
+    root.classList.toggle("dark", theme === "dark");
+    root.setAttribute("data-theme", theme);
+
+    updateIcon(theme);
+  }
+
+  /**
+   * Determine initial theme:
+   * 1) localStorage (if exists)
+   * 2) system preference (prefers-color-scheme)
+   */
+  function getInitialTheme() {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved === "dark" || saved === "light") {
+        return saved;
+      }
+    } catch (e) {
+      console.warn("localStorage read failed:", e);
+    }
+
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    return prefersDark ? "dark" : "light";
+  }
+
+  // Theme already applied above - just update icon
+  const currentTheme = getInitialTheme();
+  
+  /**
+   * After DOM is ready, attach click handler
+   */
+  document.addEventListener("DOMContentLoaded", function () {
+    // Update icon on page load
+    updateIcon(currentTheme);
+    
+    const toggleButton = document.getElementById("theme-toggle");
+    if (!toggleButton) {
+      console.warn("Theme toggle button not found");
+      return;
+    }
+
+    toggleButton.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const isDark = document.documentElement.classList.contains("dark");
+      const nextTheme = isDark ? "light" : "dark";
+
+      try {
+        localStorage.setItem(STORAGE_KEY, nextTheme);
+      } catch (e) {
+        console.warn("localStorage write failed:", e);
+      }
+
+      applyTheme(nextTheme);
+    });
+  });
+
+})();
+</script>
+
+<script>
+// Mobil menüyü düzelt
+document.addEventListener('DOMContentLoaded', function() {
+  const visibleLinks = document.querySelector('.visible-links');
+  const hiddenLinks = document.querySelector('.hidden-links');
+  const hamburger = document.querySelector('.greedy-nav__toggle');
+  
+  if (visibleLinks && hiddenLinks && hamburger) {
+    // Visible-links'teki tüm menü öğelerini hidden-links'e kopyala
+    const items = visibleLinks.querySelectorAll('li');
+    items.forEach(item => {
+      const clone = item.cloneNode(true);
+      hiddenLinks.appendChild(clone);
+    });
+    
+    // Mobilde hamburger'ı göster
+    if (window.innerWidth <= 768) {
+      hamburger.classList.remove('hidden');
+    }
+  }
+});
+</script>
 
 <!-- =========================================================
      End Custom Head Snippets
