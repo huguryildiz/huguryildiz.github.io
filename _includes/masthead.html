@@ -21,22 +21,25 @@
               <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
             </li>
           {% endfor %}
+          <!-- Desktop theme toggle -->
           <li id="theme-toggle" class="masthead__menu-item persist tail">
-            <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-gear" aria-hidden="true" title="toggle theme"></i></a>
+            <a role="button" aria-label="toggle theme">
+              <i id="theme-icon" aria-hidden="true" title="toggle theme"></i>
+            </a>
           </li>
         </ul>
 
         <!-- Mobile right-side controls: gear + hamburger, always visible -->
         <div class="mobile-controls">
           <button id="theme-toggle-mobile" class="mobile-theme-btn" aria-label="Toggle theme">
-            <i id="theme-icon-mobile" class="fa-solid fa-gear" aria-hidden="true" title="toggle theme"></i>
+            <i id="theme-icon-mobile" aria-hidden="true" title="toggle theme"></i>
           </button>
           <label for="nav-toggle-check" class="nav-toggle-label" aria-label="Toggle menu">
             <span class="navicon"></span>
           </label>
         </div>
 
-        <!-- Mobile dropdown (nav links only) -->
+        <!-- Mobile dropdown -->
         <ul class="mobile-nav-links">
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
@@ -55,16 +58,28 @@
 </div>
 
 <style>
-/* Hide checkbox */
+/* ── Hide checkbox ── */
 .nav-toggle-check { display: none; }
 
-/* Desktop: hide mobile-only elements */
-.nav-toggle-label  { display: none; }
-.mobile-nav-links  { display: none; }
-.mobile-controls   { display: none; }
+/* ── Desktop: hide mobile-only elements ── */
+.nav-toggle-label { display: none; }
+.mobile-nav-links { display: none; }
+.mobile-controls  { display: none; }
 
+/* ── Theme icon base style ── */
+#theme-icon,
+#theme-icon-mobile {
+  font-family: "Font Awesome 6 Free", "Font Awesome 5 Free", "FontAwesome";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.05rem;
+  display: inline-block;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Mobile ── */
 @media (max-width: 768px) {
-  /* Nav: site title left, controls right */
   .greedy-nav {
     display: flex !important;
     align-items: center !important;
@@ -72,12 +87,11 @@
     position: relative;
   }
 
-  /* Hide desktop nav items */
+  /* Hide desktop nav items & desktop gear */
   .greedy-nav .visible-links li:not(.persist) { display: none !important; }
-  /* Hide desktop gear — mobile-controls handles it */
   .greedy-nav .visible-links .persist.tail    { display: none !important; }
 
-  /* Gear + hamburger side by side on the right */
+  /* Gear + hamburger side by side */
   .mobile-controls {
     display: flex;
     align-items: center;
@@ -85,7 +99,6 @@
     flex-shrink: 0;
   }
 
-  /* Gear button */
   .mobile-theme-btn {
     display: inline-flex;
     align-items: center;
@@ -98,10 +111,8 @@
     font-size: 1.1rem;
     line-height: 1;
   }
-
   .mobile-theme-btn:hover { opacity: 0.7; }
 
-  /* Hamburger */
   .nav-toggle-label {
     display: inline-flex;
     align-items: center;
@@ -126,14 +137,12 @@
     list-style: none;
     margin: 0;
   }
-
   .mobile-nav-links li a {
     display: block;
     padding: 8px 20px;
     text-decoration: none;
     color: inherit;
   }
-
   .mobile-nav-links li a:hover { text-decoration: underline; }
 
   html.dark .mobile-nav-links,
@@ -145,17 +154,103 @@
 </style>
 
 <script>
-(function() {
-  document.addEventListener('DOMContentLoaded', function() {
-    var mobileTrigger = document.getElementById('theme-toggle-mobile');
-    var desktopTrigger = document.getElementById('theme-toggle');
+(function () {
+  /* ────────────────────────────────────────────────
+     Theme persistence + icon rendering
+     Works whether your theme JS uses:
+       • document.documentElement.classList  ('dark')
+       • document.documentElement.setAttribute('data-theme','dark')
+       • localStorage key  'theme' | 'color-scheme' | 'darkMode'
+  ──────────────────────────────────────────────── */
 
-    // Tapping the mobile gear fires the desktop toggle's click handler
-    if (mobileTrigger && desktopTrigger) {
-      mobileTrigger.addEventListener('click', function(e) {
+  var STORAGE_KEYS = ['theme', 'color-scheme', 'colorScheme', 'darkMode'];
+
+  /* Unicode code-points so we don't depend on FA class names */
+  var ICON_GEAR  = '\uf013'; /* fa-gear / fa-cog — same glyph */
+  var ICON_SUN   = '\uf185'; /* fa-sun */
+  var ICON_MOON  = '\uf186'; /* fa-moon */
+
+  function isDarkNow() {
+    var html = document.documentElement;
+    if (html.classList.contains('dark')) return true;
+    if (html.getAttribute('data-theme') === 'dark') return true;
+    for (var i = 0; i < STORAGE_KEYS.length; i++) {
+      var v = localStorage.getItem(STORAGE_KEYS[i]);
+      if (v === 'dark' || v === 'true') return true;
+    }
+    /* Respect OS preference as fallback */
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) return true;
+    return false;
+  }
+
+  function applyTheme(dark) {
+    var html = document.documentElement;
+    if (dark) {
+      html.classList.add('dark');
+      html.setAttribute('data-theme', 'dark');
+    } else {
+      html.classList.remove('dark');
+      html.setAttribute('data-theme', 'light');
+    }
+  }
+
+  function setIcons(dark) {
+    /* Gear icon always shown on both desktop and mobile */
+    ['theme-icon', 'theme-icon-mobile'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.textContent = ICON_GEAR;
+      el.title       = dark ? 'Switch to light mode' : 'Switch to dark mode';
+    });
+  }
+
+  function toggleTheme() {
+    var dark = !isDarkNow();
+    applyTheme(dark);
+    setIcons(dark);
+    /* Persist so page reloads remember the choice */
+    STORAGE_KEYS.forEach(function (k) {
+      if (localStorage.getItem(k) !== null) {
+        localStorage.setItem(k, dark ? 'dark' : 'light');
+      }
+    });
+    /* Also write the most common key in case nothing was set yet */
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+  }
+
+  /* ── Run immediately (before paint) to avoid flash ── */
+  applyTheme(isDarkNow());
+
+  document.addEventListener('DOMContentLoaded', function () {
+    setIcons(isDarkNow());
+
+    /* Wire up BOTH toggles */
+    ['theme-toggle', 'theme-toggle-mobile'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.addEventListener('click', function (e) {
         e.preventDefault();
-        desktopTrigger.click();
+        toggleTheme();
       });
+    });
+
+    /* Watch for external theme changes (e.g. the theme's own JS) */
+    var observer = new MutationObserver(function () {
+      setIcons(isDarkNow());
+    });
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class', 'data-theme']
+    });
+
+    /* Watch OS dark mode changes */
+    if (window.matchMedia) {
+      window.matchMedia('(prefers-color-scheme: dark)')
+        .addEventListener('change', function (e) {
+          if (!localStorage.getItem('theme')) {
+            applyTheme(e.matches);
+            setIcons(e.matches);
+          }
+        });
     }
   });
 })();
