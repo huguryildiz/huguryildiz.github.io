@@ -102,76 +102,71 @@
 </style>
 
 <script>
-/**
- * Theme handling (single toggle for desktop + mobile)
- *
- * Behavior:
- * 1) On load: localStorage preference > system preference
- * 2) Toggle on click
- * 3) Update icon (sun for light, moon for dark)
- * 4) Follow system changes only if user has no saved preference
- *
- * CSS hooks used:
- * - html.dark
- * - [data-theme="dark"]
- */
+/* =========================================================
+   Force ALL nav links into hamburger on mobile (robust)
+   - Runs AFTER all theme scripts are loaded (window.load)
+   - Re-applies on resize/orientation changes
+   ========================================================= */
 (function () {
-  const KEY = "theme"; // "dark" | "light"
+  const MOBILE_MAX = 768;
 
-  function setIcon(theme) {
-    const icon = document.getElementById("theme-icon");
-    if (!icon) return;
-    icon.classList.remove("fa-sun", "fa-moon");
-    icon.classList.add(theme === "dark" ? "fa-moon" : "fa-sun");
-  }
+  function forceAllLinksIntoHamburger() {
+    const nav = document.getElementById("site-nav");
+    if (!nav) return;
 
-  function applyTheme(theme) {
-    const root = document.documentElement;
-    root.classList.toggle("dark", theme === "dark");
-    root.setAttribute("data-theme", theme);
-    setIcon(theme);
-  }
+    const visible = nav.querySelector(".visible-links");
+    const hidden  = nav.querySelector(".hidden-links");
+    const toggle  = nav.querySelector(".greedy-nav__toggle");
+    if (!visible || !hidden || !toggle) return;
 
-  function getInitialTheme() {
-    try {
-      const saved = localStorage.getItem(KEY);
-      if (saved === "dark" || saved === "light") return saved;
-    } catch (e) {}
+    const isMobile = window.innerWidth <= MOBILE_MAX;
 
-    const prefersDark =
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-    return prefersDark ? "dark" : "light";
-  }
-
-  function toggleTheme() {
-    const isDark = document.documentElement.classList.contains("dark");
-    const next = isDark ? "light" : "dark";
-    try { localStorage.setItem(KEY, next); } catch (e) {}
-    applyTheme(next);
-  }
-
-  /* Apply early to reduce flash */
-  applyTheme(getInitialTheme());
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const btn = document.querySelector("#theme-toggle a");
-    if (btn) {
-      btn.addEventListener("click", function (e) {
-        e.preventDefault();
-        toggleTheme();
+    // If not mobile: put items back (so desktop works normally)
+    if (!isMobile) {
+      // Move back only items that were moved by us
+      const movedBack = Array.from(hidden.querySelectorAll("li[data-moved='1']"));
+      movedBack.forEach(li => {
+        li.removeAttribute("data-moved");
+        // Insert before the theme toggle if it exists, otherwise append
+        const themeLi = visible.querySelector("#theme-toggle");
+        if (themeLi) visible.insertBefore(li, themeLi);
+        else visible.appendChild(li);
       });
+      nav.dataset.mobileForced = "0";
+      return;
     }
 
-    const mq = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");
-    if (mq && mq.addEventListener) {
-      mq.addEventListener("change", function (e) {
-        let saved = null;
-        try { saved = localStorage.getItem(KEY); } catch (err) {}
-        if (!saved) applyTheme(e.matches ? "dark" : "light");
-      });
-    }
+    // Mobile: prevent repeated work
+    if (nav.dataset.mobileForced === "1") return;
+    nav.dataset.mobileForced = "1";
+
+    // Ensure hamburger button is not hidden
+    toggle.classList.remove("hidden");
+
+    // Move every non-persist <li> from visible-links into hidden-links
+    const items = Array.from(visible.querySelectorAll("li"))
+      .filter(li => !li.classList.contains("persist") && li.id !== "theme-toggle");
+
+    items.forEach(li => {
+      li.setAttribute("data-moved", "1");
+      hidden.appendChild(li);
+    });
+  }
+
+  // Run after ALL scripts/resources load (greedy-nav fully initialized)
+  window.addEventListener("load", function () {
+    forceAllLinksIntoHamburger();
+  });
+
+  // Re-apply on resize/orientation changes
+  window.addEventListener("resize", function () {
+    // Small debounce
+    clearTimeout(window.__navForceTO);
+    window.__navForceTO = setTimeout(forceAllLinksIntoHamburger, 120);
+  });
+
+  window.addEventListener("orientationchange", function () {
+    setTimeout(forceAllLinksIntoHamburger, 150);
   });
 })();
 </script>

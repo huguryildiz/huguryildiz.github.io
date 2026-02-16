@@ -376,41 +376,68 @@ details[open] { margin-bottom: 0.2rem; }
 }
 
 /* =========================================================
-   17) Fix: Theme toggle visibility on mobile (sun/moon icon)
-   - This overrides common greedy-nav rules that hide the "tail" item on small screens.
-   - Keeps the toggle clickable next to the hamburger.
+   17) Mobile nav behavior (force ALL links into hamburger)
+   - On mobile, hide all non-persist visible links
+   - Keep only: site title (persist) + theme toggle (persist)
+   - Ensure hamburger toggle is visible
    ========================================================= */
+
 @media (max-width: 768px) {
-  /* 17.1) If something hides the desktop theme toggle on mobile, force it visible */
-  .greedy-nav .visible-links .persist.tail,
-  .greedy-nav .visible-links #theme-toggle {
+
+  /* Hide all normal menu items on the top bar (CV/Publications/Research/etc.) */
+  .greedy-nav .visible-links li:not(.persist) {
+    display: none !important;
+  }
+
+  /* Keep persist items visible (site title + theme toggle) */
+  .greedy-nav .visible-links li.persist {
     display: list-item !important;
     visibility: visible !important;
     opacity: 1 !important;
   }
 
-  /* 17.2) Position it near the hamburger (right side) */
-  #theme-toggle {
-    position: absolute !important;
-    right: 3.2rem;  /* leave space for the hamburger button */
-    top: 0.55rem;
-    z-index: 9999;
+  /* Force the hamburger button to show (some themes keep it hidden via .hidden) */
+  .greedy-nav__toggle {
+    display: block !important;
+  }
+  .greedy-nav__toggle.hidden {
+    display: block !important;   /* override the 'hidden' utility class */
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
-  /* 17.3) Make the hit area reliable on touch devices */
+  /* Make sure the hidden-links dropdown can appear above content */
+  .greedy-nav {
+    position: relative;
+    overflow: visible !important;
+  }
+
+  /* Place theme toggle near hamburger (left of it) */
+  #theme-toggle {
+    position: absolute !important;
+    right: 3.2rem !important; /* adjust if overlap */
+    top: 0.55rem !important;
+    z-index: 9999 !important;
+    display: list-item !important;
+  }
+
   #theme-toggle a {
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
-    padding: 6px 10px;
+    padding: 6px 10px !important;
     cursor: pointer;
     text-decoration: none !important;
   }
 
-  /* 17.4) Prevent the icon from collapsing */
   #theme-toggle i {
     display: inline-block !important;
-    width: 1.25em;
-    line-height: 1;
+    width: 1.25em !important;
+    line-height: 1 !important;
+  }
+
+  /* Optional: improve tap targets and spacing */
+  .greedy-nav__toggle {
+    padding: 6px 10px !important;
   }
 }
