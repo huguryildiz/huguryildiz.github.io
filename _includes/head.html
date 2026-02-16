@@ -13,26 +13,6 @@
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
 
-<!-- Dark mode: localStorage'dan erken oku → flash önlenir -->
-<script>
-  (function () {
-    try {
-      /* AcademicPages'in kullandığı key: 'theme' değeri: 'dark' | 'light' */
-      var stored = localStorage.getItem('theme');
-      if (stored === 'dark') {
-        document.documentElement.classList.add('dark');
-        document.documentElement.setAttribute('data-theme', 'dark');
-      } else if (!stored) {
-        /* Kullanıcı hiç seçmemişse OS tercihini kullan */
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          document.documentElement.classList.add('dark');
-          document.documentElement.setAttribute('data-theme', 'dark');
-        }
-      }
-    } catch (e) {}
-  })();
-</script>
-
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
 
