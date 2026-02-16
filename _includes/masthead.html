@@ -4,40 +4,40 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
 
-        <!-- =========================================================
-             Greedy nav visible links (Minimal Mistakes default structure)
-             ========================================================= -->
-        <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg persist {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}">
-            <a href="{{ base_path }}/">{{ site.title }}</a>
-          </li>
+        <!-- Site title -->
+        <a class="site-title" href="{{ base_path }}/">
+          {{ site.title }}
+        </a>
 
+        <!-- Primary navigation (Greedy Nav) -->
+        <ul class="visible-links">
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
             {% else %}
               {% assign domain = base_path %}
             {% endif %}
-            <li class="masthead__menu-item {% if page.url contains link.url and link.url != '/' %}selected{% endif %}">
+            <li class="masthead__menu-item{% if page.url contains link.url and link.url != '/' %} selected{% endif %}">
               <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
             </li>
           {% endfor %}
 
-          <!-- =========================================================
-               Theme toggle (SINGLE source of truth for desktop + mobile)
-               - We DO NOT create a separate mobile toggle button.
-               - On mobile, we simply reposition this icon next to the hamburger.
-               ========================================================= -->
+          <!-- Theme toggle (single toggle for desktop + mobile) -->
           <li id="theme-toggle" class="masthead__menu-item persist">
             <a href="#" role="button" aria-label="Toggle theme">
-              <!-- Icon is set by JS on load: sun (light) / moon (dark) -->
-              <i id="theme-icon" class="fas fa-sun" aria-hidden="true" title="Toggle theme"></i>
+              <i id="theme-icon" class="fas fa-sun" aria-hidden="true"></i>
             </a>
           </li>
         </ul>
 
-        <!-- Minimal Mistakes will move overflow items here -->
+        <!-- Hamburger toggle (Minimal Mistakes Greedy Nav expects this) -->
+        <button class="greedy-nav__toggle hidden" type="button" aria-label="Toggle menu">
+          <span class="navicon"></span>
+        </button>
+
+        <!-- Hidden links container (Greedy Nav JS moves overflow items here) -->
         <ul class="hidden-links hidden"></ul>
+
       </nav>
     </div>
   </div>
@@ -45,30 +45,21 @@
 
 <style>
 /* =========================================================
-   Mobile theme toggle positioning (Greedy-nav safe)
-   - Keeps Minimal Mistakes greedy-nav intact.
-   - Only repositions the existing theme toggle icon on small screens.
+   Mobile: keep theme icon visible next to hamburger
+   - We DO NOT implement our own hamburger.
+   - We reuse Minimal Mistakes greedy-nav toggle button.
    ========================================================= */
 @media (max-width: 768px) {
-  /* Ensure the nav can show the absolutely positioned icon */
   .greedy-nav {
     position: relative;
     overflow: visible;
   }
 
-  /*
-    Minimal Mistakes often hides non-persist items on mobile,
-    but our theme toggle is persist so it should remain.
-    Still, force it visible just in case other custom rules exist.
-  */
+  /* Make sure theme toggle is visible */
   #theme-toggle {
     display: list-item !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-
-    /* Place next to hamburger (adjust right/top if needed) */
     position: absolute;
-    right: 3.2rem;  /* leave space for the hamburger button */
+    right: 3.2rem; /* leave room for the hamburger button */
     top: 0.55rem;
     z-index: 9999;
   }
@@ -79,29 +70,27 @@
     justify-content: center;
     padding: 6px 10px;
     text-decoration: none !important;
-    cursor: pointer;
   }
 
   #theme-toggle i {
     display: inline-block;
     width: 1.25em;
     line-height: 1;
+    font-size: 1.15rem;
   }
 }
 </style>
 
 <script>
 /**
- * Theme handling (single toggle for desktop + mobile)
+ * Theme handling (single toggle)
  *
- * What this does:
- * 1) On first load, sets theme based on localStorage or system preference.
- * 2) Toggles theme via the single icon (#theme-toggle).
- * 3) Keeps the icon in sync (sun for light, moon for dark).
- *
- * CSS hooks used:
- * - html.dark
- * - [data-theme="dark"]
+ * - Applies theme on load: localStorage > system preference
+ * - Toggles theme on click
+ * - Updates icon (sun/moon)
+ * - Uses both selectors for compatibility:
+ *     html.dark
+ *     [data-theme="dark"]
  */
 (function () {
   const KEY = "theme"; // "dark" | "light"
@@ -152,7 +141,7 @@
       });
     }
 
-    /* Follow system theme changes ONLY if user has not saved a preference */
+    /* Follow system changes only if user hasn't saved a preference */
     const mq = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");
     if (mq && mq.addEventListener) {
       mq.addEventListener("change", function (e) {
