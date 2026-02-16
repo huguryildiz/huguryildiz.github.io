@@ -2,22 +2,14 @@
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
+      <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
 
-        <!-- =========================================================
-             Site title
-             - Keep this ALWAYS visible (persist)
-             ========================================================= -->
-        <a class="site-title persist" href="{{ base_path }}/">
+        <!-- Site title (always visible) -->
+        <a class="site-title" href="{{ base_path }}/">
           {{ site.title }}
         </a>
 
-        <!-- =========================================================
-             Primary navigation links
-             - IMPORTANT:
-             - Do NOT mark CV/Publications/Research as "persist"
-             - Greedy-nav will move overflow items into .hidden-links on mobile
-             ========================================================= -->
+        <!-- Nav links (greedy-nav will move these into hidden-links on mobile) -->
         <ul class="visible-links">
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
@@ -30,33 +22,22 @@
               <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
             </li>
           {% endfor %}
-
-          <!-- =========================================================
-               Theme toggle
-               - Keep it ALWAYS visible (persist)
-               - It should NOT go into hamburger
-               ========================================================= -->
-          <li id="theme-toggle" class="masthead__menu-item persist">
-            <a href="#" role="button" aria-label="Toggle theme">
-              <i id="theme-icon" class="fas fa-sun" aria-hidden="true" title="Toggle theme"></i>
-            </a>
-          </li>
         </ul>
 
-        <!-- =========================================================
-             Hamburger button (Minimal Mistakes Greedy Nav expects this)
-             - Greedy-nav JS toggles .hidden-links with this button
-             ========================================================= -->
-        <button class="greedy-nav__toggle hidden" type="button" aria-label="Toggle menu">
-          <span class="navicon"></span>
-        </button>
+        <!-- Right controls (theme toggle + hamburger) -->
+        <div class="masthead-controls" aria-label="Controls">
+          <a id="theme-toggle" href="#" role="button" aria-label="Toggle theme">
+            <i id="theme-icon" class="fas fa-sun" aria-hidden="true"></i>
+          </a>
 
-        <!-- =========================================================
-             Hidden links container
-             - Greedy-nav JS moves overflow items here (hamburger menu)
-             ========================================================= -->
+          <!-- Minimal Mistakes hamburger -->
+          <button class="greedy-nav__toggle hidden" type="button" aria-label="Toggle menu">
+            <span class="navicon"></span>
+          </button>
+        </div>
+
+        <!-- Greedy-nav puts overflow links here -->
         <ul class="hidden-links hidden"></ul>
-
       </nav>
     </div>
   </div>
@@ -64,109 +45,114 @@
 
 <style>
 /* =========================================================
-   Mobile: layout adjustments
-   - Ensure theme toggle stays visible next to hamburger
-   - Ensure it doesn't overlap the hamburger button
+   Fix alignment: keep theme + hamburger on same baseline
    ========================================================= */
-@media (max-width: 768px) {
-  .greedy-nav {
-    position: relative;
-    overflow: visible;
+.masthead-controls{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#theme-toggle{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+#theme-toggle i{
+  display: inline-block;
+  width: 1.25em;
+  line-height: 1;
+  font-size: 1.15rem;
+}
+
+/* =========================================================
+   Mobile behavior (NO custom menu):
+   Force greedy-nav to overflow => ALL links go into hamburger
+   ========================================================= */
+@media (max-width: 768px){
+
+  /* Make greedy-nav calculations treat visible-links as "no space" */
+  .greedy-nav .visible-links{
+    width: 0 !important;
+    flex: 0 0 0 !important;
+    overflow: hidden !important;
+    white-space: nowrap;
   }
 
-  /* Pin the theme icon near the hamburger (left of it) */
-  #theme-toggle {
-    position: absolute;
-    right: 3.3rem;  /* adjust if it overlaps hamburger */
-    top: 0.55rem;
-    z-index: 9999;
-    display: list-item !important;
-  }
-
-  #theme-toggle a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 6px 10px;
-    text-decoration: none !important;
-    cursor: pointer;
-  }
-
-  #theme-toggle i {
-    display: inline-block;
-    width: 1.25em;
-    line-height: 1;
-    font-size: 1.15rem;
+  /* Ensure hamburger is visible on mobile (even if theme adds hidden) */
+  .greedy-nav__toggle,
+  .greedy-nav__toggle.hidden{
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 }
 </style>
 
 <script>
 /* =========================================================
-   Force ALL nav links into hamburger on mobile (robust)
-   - Runs AFTER all theme scripts are loaded (window.load)
-   - Re-applies on resize/orientation changes
+   Theme toggle (sun/moon) - no dependency on mobile layout
    ========================================================= */
 (function () {
-  const MOBILE_MAX = 768;
+  const KEY = "theme"; // "dark" | "light"
 
-  function forceAllLinksIntoHamburger() {
-    const nav = document.getElementById("site-nav");
-    if (!nav) return;
-
-    const visible = nav.querySelector(".visible-links");
-    const hidden  = nav.querySelector(".hidden-links");
-    const toggle  = nav.querySelector(".greedy-nav__toggle");
-    if (!visible || !hidden || !toggle) return;
-
-    const isMobile = window.innerWidth <= MOBILE_MAX;
-
-    // If not mobile: put items back (so desktop works normally)
-    if (!isMobile) {
-      // Move back only items that were moved by us
-      const movedBack = Array.from(hidden.querySelectorAll("li[data-moved='1']"));
-      movedBack.forEach(li => {
-        li.removeAttribute("data-moved");
-        // Insert before the theme toggle if it exists, otherwise append
-        const themeLi = visible.querySelector("#theme-toggle");
-        if (themeLi) visible.insertBefore(li, themeLi);
-        else visible.appendChild(li);
-      });
-      nav.dataset.mobileForced = "0";
-      return;
-    }
-
-    // Mobile: prevent repeated work
-    if (nav.dataset.mobileForced === "1") return;
-    nav.dataset.mobileForced = "1";
-
-    // Ensure hamburger button is not hidden
-    toggle.classList.remove("hidden");
-
-    // Move every non-persist <li> from visible-links into hidden-links
-    const items = Array.from(visible.querySelectorAll("li"))
-      .filter(li => !li.classList.contains("persist") && li.id !== "theme-toggle");
-
-    items.forEach(li => {
-      li.setAttribute("data-moved", "1");
-      hidden.appendChild(li);
-    });
+  function setIcon(theme) {
+    const icon = document.getElementById("theme-icon");
+    if (!icon) return;
+    icon.classList.remove("fa-sun", "fa-moon");
+    icon.classList.add(theme === "dark" ? "fa-moon" : "fa-sun");
   }
 
-  // Run after ALL scripts/resources load (greedy-nav fully initialized)
-  window.addEventListener("load", function () {
-    forceAllLinksIntoHamburger();
-  });
+  function applyTheme(theme) {
+    const root = document.documentElement;
+    root.classList.toggle("dark", theme === "dark");
+    root.setAttribute("data-theme", theme);
+    setIcon(theme);
+  }
 
-  // Re-apply on resize/orientation changes
-  window.addEventListener("resize", function () {
-    // Small debounce
-    clearTimeout(window.__navForceTO);
-    window.__navForceTO = setTimeout(forceAllLinksIntoHamburger, 120);
-  });
+  function getInitialTheme() {
+    try {
+      const saved = localStorage.getItem(KEY);
+      if (saved === "dark" || saved === "light") return saved;
+    } catch (e) {}
 
-  window.addEventListener("orientationchange", function () {
-    setTimeout(forceAllLinksIntoHamburger, 150);
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    return prefersDark ? "dark" : "light";
+  }
+
+  function toggleTheme() {
+    const isDark = document.documentElement.classList.contains("dark");
+    const next = isDark ? "light" : "dark";
+    try { localStorage.setItem(KEY, next); } catch (e) {}
+    applyTheme(next);
+  }
+
+  applyTheme(getInitialTheme());
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        toggleTheme();
+      });
+    }
+
+    const mq = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");
+    if (mq && mq.addEventListener) {
+      mq.addEventListener("change", function (e) {
+        let saved = null;
+        try { saved = localStorage.getItem(KEY); } catch (err) {}
+        if (!saved) applyTheme(e.matches ? "dark" : "light");
+      });
+    }
   });
 })();
 </script>
