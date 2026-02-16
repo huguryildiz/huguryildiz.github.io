@@ -15,7 +15,7 @@ timezone: Europe/Istanbul
 # =========================
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 minimal_mistakes_skin: "default"
-enable_darkmode: false
+enable_darkmode: true
 
 header:
   overlay: false

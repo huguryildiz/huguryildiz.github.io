@@ -376,48 +376,37 @@ details[open] { margin-bottom: 0.2rem; }
 }
 
 /* =========================================================
-   17) Mobile nav (force links into hamburger + keep toggle visible)
+   Mobile nav: keep theme toggle + hamburger visible
+   (links are moved into hamburger via JS in custom.html)
    ========================================================= */
-@media (max-width: 768px) {
+.theme-toggle{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 6px 10px;
+}
 
+.theme-toggle #theme-icon{
+  font-size: 18px;
+  line-height: 1;
+}
+
+@media (max-width: 768px){
   .greedy-nav{
     display: flex !important;
     align-items: center !important;
     flex-wrap: nowrap !important;
   }
 
-  .greedy-nav .site-title{
-    flex: 0 0 auto !important;
-  }
-
-  /* Let greedy-nav decide what fits; allow shrink */
-  .greedy-nav .visible-links{
-    flex: 1 1 auto !important;
-    min-width: 0 !important;
-    overflow: hidden !important;
-    white-space: nowrap !important;
-  }
-
-  /* Theme toggle must stay visible */
+  /* put controls on the right */
   .theme-toggle{
-    flex: 0 0 auto !important;
-    margin-left: 8px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 6px 10px !important;
-    border: 0 !important;
-    background: transparent !important;
+    margin-left: auto !important;
   }
 
-  .theme-toggle #theme-icon{
-    font-size: 18px !important;
-    line-height: 1 !important;
-  }
-
-  /* Hamburger must stay visible */
   .greedy-nav__toggle{
-    flex: 0 0 auto !important;
     display: inline-flex !important;
     visibility: visible !important;
     opacity: 1 !important;
