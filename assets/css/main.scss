@@ -1,60 +1,11 @@
 ---
----
-/*
- * ============================================================
- *  MAIN SCSS ENTRY FILE (Minimal Mistakes / AcademicPages)
- * ============================================================
- *
- *  This file contains ONLY theme/vendor imports.
- *  All custom styles live in /assets/css/custom.css,
- *  loaded separately via _includes/head/custom.html.
- * ============================================================
- */
----
 # Only the main Sass file needs front matter (required for Jekyll to compile)
 ---
 
 @charset "utf-8";
 
-/* Load selected Minimal Mistakes skin first */
+/* Minimal Mistakes skin first */
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 
-/* Then load Minimal Mistakes core */
+/* Minimal Mistakes core */
 @import "minimal-mistakes";
-
-@import
-  "vendor/breakpoint/breakpoint",
-
-  /* Theme base (light & dark modes) */
-  "themes",
-  "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
-  "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
-
-  "include/mixins",
-  "vendor/susy/susy",
-
-  /* Layout foundation */
-  "layout/reset",
-  "layout/base",
-
-  "include/utilities",
-  "layout/tables",
-  "layout/buttons",
-  "layout/notices",
-  "layout/masthead",
-  "layout/navigation",
-  "layout/footer",
-  "syntax",
-
-  "layout/forms",
-
-  /* Page structure */
-  "layout/page",
-  "layout/archive",
-  "layout/sidebar",
-  "layout/json_cv",
-
-  /* Font Awesome */
-  "vendor/font-awesome/fontawesome",
-  "vendor/font-awesome/solid",
-  "vendor/font-awesome/brands";
