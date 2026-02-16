@@ -5,13 +5,7 @@
       <nav id="site-nav" class="greedy-nav">
 
         <!-- =========================================================
-             Mobile menu toggle (checkbox hack)
-             - Keeps the dropdown menu simple (no JS needed for menu open/close)
-             ========================================================= -->
-        <input type="checkbox" id="nav-toggle-check" class="nav-toggle-check" aria-hidden="true">
-
-        <!-- =========================================================
-             Desktop / Greedy Nav links
+             Greedy nav visible links (Minimal Mistakes default structure)
              ========================================================= -->
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg persist {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}">
@@ -29,44 +23,20 @@
             </li>
           {% endfor %}
 
-          <!-- Desktop theme toggle (will be hidden on mobile; mobile has its own button) -->
-          <li id="theme-toggle" class="masthead__menu-item persist tail">
+          <!-- =========================================================
+               Theme toggle (SINGLE source of truth for desktop + mobile)
+               - We DO NOT create a separate mobile toggle button.
+               - On mobile, we simply reposition this icon next to the hamburger.
+               ========================================================= -->
+          <li id="theme-toggle" class="masthead__menu-item persist">
             <a href="#" role="button" aria-label="Toggle theme">
+              <!-- Icon is set by JS on load: sun (light) / moon (dark) -->
               <i id="theme-icon" class="fas fa-sun" aria-hidden="true" title="Toggle theme"></i>
             </a>
           </li>
         </ul>
 
-        <!-- =========================================================
-             Mobile controls (ALWAYS visible on mobile)
-             - Theme toggle button (sun/moon)
-             - Hamburger menu button (label for checkbox)
-             ========================================================= -->
-        <div class="mobile-controls" aria-label="Mobile controls">
-          <button id="theme-toggle-mobile" class="mobile-theme-btn" aria-label="Toggle theme">
-            <i id="theme-icon-mobile" class="fas fa-sun" aria-hidden="true"></i>
-          </button>
-
-          <label for="nav-toggle-check" class="nav-toggle-label" aria-label="Toggle menu">
-            <span class="navicon"></span>
-          </label>
-        </div>
-
-        <!-- =========================================================
-             Mobile dropdown menu (nav links only)
-             ========================================================= -->
-        <ul class="mobile-nav-links">
-          {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-            {% else %}
-              {% assign domain = base_path %}
-            {% endif %}
-            <li><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
-          {% endfor %}
-        </ul>
-
-        <!-- Required by Minimal Mistakes -->
+        <!-- Minimal Mistakes will move overflow items here -->
         <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
@@ -75,122 +45,59 @@
 
 <style>
 /* =========================================================
-   Base defaults
-   ========================================================= */
-.nav-toggle-check { display: none; }
-.mobile-controls { display: none; }
-.mobile-nav-links { display: none; }
-
-/* =========================================================
-   Mobile layout (<= 768px)
+   Mobile theme toggle positioning (Greedy-nav safe)
+   - Keeps Minimal Mistakes greedy-nav intact.
+   - Only repositions the existing theme toggle icon on small screens.
    ========================================================= */
 @media (max-width: 768px) {
-  /* Make sure the nav can show overlays and controls */
+  /* Ensure the nav can show the absolutely positioned icon */
   .greedy-nav {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
     position: relative;
-    overflow: visible !important; /* prevents clipping */
+    overflow: visible;
   }
 
-  /* Hide non-persistent desktop links (greedy behavior) */
-  .greedy-nav .visible-links li:not(.persist) {
-    display: none !important;
-  }
-
-  /* Hide desktop theme toggle on mobile */
-  .greedy-nav .visible-links .persist.tail {
-    display: none !important;
-  }
-
-  /* Mobile controls: theme + hamburger on the right */
-  .mobile-controls {
-    display: inline-flex !important;
-    align-items: center;
-    gap: 4px;
-    flex-shrink: 0;
-    position: relative;
-    z-index: 10000;
+  /*
+    Minimal Mistakes often hides non-persist items on mobile,
+    but our theme toggle is persist so it should remain.
+    Still, force it visible just in case other custom rules exist.
+  */
+  #theme-toggle {
+    display: list-item !important;
     visibility: visible !important;
     opacity: 1 !important;
+
+    /* Place next to hamburger (adjust right/top if needed) */
+    position: absolute;
+    right: 3.2rem;  /* leave space for the hamburger button */
+    top: 0.55rem;
+    z-index: 9999;
   }
 
-  /* Theme button */
-  .mobile-theme-btn {
+  #theme-toggle a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: none;
-    border: none;
-    cursor: pointer;
     padding: 6px 10px;
-    color: inherit;
-    font-size: 1.1rem;
-    line-height: 1;
+    text-decoration: none !important;
+    cursor: pointer;
   }
 
-  .mobile-theme-btn i {
-    display: inline-block !important;
+  #theme-toggle i {
+    display: inline-block;
     width: 1.25em;
-    height: 1em;
     line-height: 1;
-  }
-
-  /* Hamburger */
-  .nav-toggle-label {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    padding: 6px 10px;
-  }
-
-  /* Dropdown opens below, aligned to the right */
-  .nav-toggle-check:checked ~ .mobile-nav-links {
-    display: block;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    z-index: 9999;
-    min-width: 180px;
-    background: var(--mm-background-color, #fff);
-    border: 1px solid rgba(150,170,190,0.25);
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    padding: 6px 0;
-    list-style: none;
-    margin: 0;
-  }
-
-  .mobile-nav-links li a {
-    display: block;
-    padding: 8px 20px;
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .mobile-nav-links li a:hover {
-    text-decoration: underline;
-  }
-
-  /* Dark theme dropdown styling */
-  html.dark .mobile-nav-links,
-  [data-theme="dark"] .mobile-nav-links {
-    background: #0b1622;
-    border-color: rgba(180,200,220,0.2);
   }
 }
 </style>
 
 <script>
 /**
- * Theme handling (desktop + mobile)
+ * Theme handling (single toggle for desktop + mobile)
  *
  * What this does:
  * 1) On first load, sets theme based on localStorage or system preference.
- * 2) Toggles theme via desktop icon AND mobile icon.
- * 3) Keeps both icons in sync (sun for light, moon for dark).
+ * 2) Toggles theme via the single icon (#theme-toggle).
+ * 3) Keeps the icon in sync (sun for light, moon for dark).
  *
  * CSS hooks used:
  * - html.dark
@@ -199,22 +106,18 @@
 (function () {
   const KEY = "theme"; // "dark" | "light"
 
-  function setIcons(theme) {
-    const desktopIcon = document.getElementById("theme-icon");
-    const mobileIcon  = document.getElementById("theme-icon-mobile");
-
-    [desktopIcon, mobileIcon].forEach((icon) => {
-      if (!icon) return;
-      icon.classList.remove("fa-sun", "fa-moon");
-      icon.classList.add(theme === "dark" ? "fa-moon" : "fa-sun");
-    });
+  function setIcon(theme) {
+    const icon = document.getElementById("theme-icon");
+    if (!icon) return;
+    icon.classList.remove("fa-sun", "fa-moon");
+    icon.classList.add(theme === "dark" ? "fa-moon" : "fa-sun");
   }
 
   function applyTheme(theme) {
     const root = document.documentElement;
     root.classList.toggle("dark", theme === "dark");
     root.setAttribute("data-theme", theme);
-    setIcons(theme);
+    setIcon(theme);
   }
 
   function getInitialTheme() {
@@ -237,29 +140,19 @@
     applyTheme(next);
   }
 
-  // Apply theme as early as possible (reduces "flash" on load)
+  /* Apply early to reduce flash */
   applyTheme(getInitialTheme());
 
   document.addEventListener("DOMContentLoaded", function () {
-    // Desktop click
-    const desktopBtn = document.querySelector("#theme-toggle a");
-    if (desktopBtn) {
-      desktopBtn.addEventListener("click", function (e) {
+    const btn = document.querySelector("#theme-toggle a");
+    if (btn) {
+      btn.addEventListener("click", function (e) {
         e.preventDefault();
         toggleTheme();
       });
     }
 
-    // Mobile click
-    const mobileBtn = document.getElementById("theme-toggle-mobile");
-    if (mobileBtn) {
-      mobileBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-        toggleTheme();
-      });
-    }
-
-    // Follow system theme changes ONLY if user has not saved a preference
+    /* Follow system theme changes ONLY if user has not saved a preference */
     const mq = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");
     if (mq && mq.addEventListener) {
       mq.addEventListener("change", function (e) {

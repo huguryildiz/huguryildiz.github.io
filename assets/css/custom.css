@@ -374,3 +374,43 @@ details[open] { margin-bottom: 0.2rem; }
   height: 360px;
   border: none;
 }
+
+/* =========================================================
+   17) Fix: Theme toggle visibility on mobile (sun/moon icon)
+   - This overrides common greedy-nav rules that hide the "tail" item on small screens.
+   - Keeps the toggle clickable next to the hamburger.
+   ========================================================= */
+@media (max-width: 768px) {
+  /* 17.1) If something hides the desktop theme toggle on mobile, force it visible */
+  .greedy-nav .visible-links .persist.tail,
+  .greedy-nav .visible-links #theme-toggle {
+    display: list-item !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* 17.2) Position it near the hamburger (right side) */
+  #theme-toggle {
+    position: absolute !important;
+    right: 3.2rem;  /* leave space for the hamburger button */
+    top: 0.55rem;
+    z-index: 9999;
+  }
+
+  /* 17.3) Make the hit area reliable on touch devices */
+  #theme-toggle a {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 10px;
+    cursor: pointer;
+    text-decoration: none !important;
+  }
+
+  /* 17.4) Prevent the icon from collapsing */
+  #theme-toggle i {
+    display: inline-block !important;
+    width: 1.25em;
+    line-height: 1;
+  }
+}
