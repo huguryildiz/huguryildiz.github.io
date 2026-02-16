@@ -1,58 +1,128 @@
-{% include base_path %}
-
-<!-- =========================================================
-     Masthead / Navigation (Minimal Mistakes - greedy-nav)
-     - Keeps site title always visible
-     - Adds a Light/Dark theme toggle button (Font Awesome)
-     - Keeps hamburger button in the correct DOM position
-     - hidden-links is required by greedy-nav
-     ========================================================= -->
-
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
 
-        <!-- Site title (always visible) -->
-        <a class="site-title" href="{{ base_path }}/">
+        <!-- Site title -->
+        <a class="site-title" href="{{ '/' | relative_url }}">
           {{ site.title }}
         </a>
 
-        <!-- Main nav links (greedy-nav manages these) -->
+        <!-- Main nav links -->
         <ul class="visible-links">
           {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-            {% else %}
-              {% assign domain = base_path %}
-            {% endif %}
-
-            <li class="masthead__menu-item{% if page.url contains link.url and link.url != '/' %} selected{% endif %}">
-              <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
+            {% assign url = link.url %}
+            <li class="masthead__menu-item{% if page.url contains url and url != '/' %} selected{% endif %}">
+              <a href="{{ url | relative_url }}">{{ link.title }}</a>
             </li>
           {% endfor %}
         </ul>
 
-        <!-- Theme toggle button (always visible)
-             JS in custom.html will update the icon classes (fa-sun/fa-moon). -->
-        <button id="theme-toggle"
-                class="theme-toggle"
-                type="button"
-                aria-label="Toggle theme">
-          <i id="theme-icon" class="fas fa-moon" aria-hidden="true"></i>
-        </button>
+        <!-- Controls -->
+        <div class="masthead-controls" aria-label="Controls">
+          <a id="theme-toggle" href="#" role="button" aria-label="Toggle theme">
+            <i id="theme-icon" class="fas fa-sun" aria-hidden="true"></i>
+          </a>
 
-        <!-- Hamburger toggle (MUST be directly under nav, not inside another wrapper) -->
-        <button class="greedy-nav__toggle"
-                type="button"
-                aria-label="Toggle menu">
-          <span class="navicon"></span>
-        </button>
+          <!-- Hamburger (NO 'hidden' class here) -->
+          <button class="greedy-nav__toggle" type="button" aria-label="Toggle menu">
+            <span class="navicon"></span>
+          </button>
+        </div>
 
-        <!-- Hidden menu (greedy-nav / your mobile JS will fill this) -->
+        <!-- Overflow links -->
         <ul class="hidden-links hidden"></ul>
-
       </nav>
     </div>
   </div>
 </div>
+
+<style>
+.masthead-controls{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#theme-toggle{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+#theme-toggle i{
+  display: inline-block;
+  width: 1.25em;
+  line-height: 1;
+  font-size: 1.15rem;
+}
+
+/* Mobile: force all links into hamburger */
+@media (max-width: 768px){
+  .greedy-nav .visible-links{
+    width: 0 !important;
+    flex: 0 0 0 !important;
+    overflow: hidden !important;
+    white-space: nowrap;
+  }
+
+  .greedy-nav__toggle{
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+</style>
+
+<script>
+(function () {
+  const KEY = "theme"; // "dark" | "light"
+
+  function setIcon(theme) {
+    const icon = document.getElementById("theme-icon");
+    if (!icon) return;
+    icon.classList.remove("fa-sun", "fa-moon");
+    icon.classList.add(theme === "dark" ? "fa-moon" : "fa-sun");
+  }
+
+  function applyTheme(theme) {
+    const root = document.documentElement;
+    root.classList.toggle("dark", theme === "dark");
+    root.setAttribute("data-theme", theme);
+    setIcon(theme);
+  }
+
+  function getInitialTheme() {
+    try {
+      const saved = localStorage.getItem(KEY);
+      if (saved === "dark" || saved === "light") return saved;
+    } catch (e) {}
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    return prefersDark ? "dark" : "light";
+  }
+
+  function toggleTheme() {
+    const isDark = document.documentElement.classList.contains("dark");
+    const next = isDark ? "light" : "dark";
+    try { localStorage.setItem(KEY, next); } catch (e) {}
+    applyTheme(next);
+  }
+
+  applyTheme(getInitialTheme());
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        toggleTheme();
+      });
+    }
+  });
+})();
+</script>
