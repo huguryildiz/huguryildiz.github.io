@@ -24,7 +24,8 @@
           {% endfor %}
         </ul>
 
-        <!-- Right controls (theme toggle + hamburger) -->
+        <!-- Right controls: theme toggle + hamburger -->
+        <!-- NOT inside visible-links so greedy-nav ignores them -->
         <div class="masthead-controls" aria-label="Controls">
           <a id="theme-toggle" href="#" role="button" aria-label="Toggle theme">
             <i id="theme-icon" class="fas fa-sun" aria-hidden="true"></i>
@@ -45,99 +46,146 @@
 
 <style>
 /* =========================================================
-   Fix alignment: keep theme + hamburger on same baseline
+   Masthead controls: theme toggle + hamburger side by side
    ========================================================= */
-.masthead-controls{
+.masthead-controls {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
+  /* Push to right edge, flex sibling of visible-links */
+  margin-left: auto;
+  flex-shrink: 0;       /* NEVER let controls shrink/disappear */
+  order: 99;            /* Always last in flex row */
 }
 
-#theme-toggle{
+#theme-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 6px 10px;
   text-decoration: none !important;
   cursor: pointer;
+  color: inherit;
+  flex-shrink: 0;
 }
 
-#theme-toggle i{
+#theme-toggle i {
   display: inline-block;
   width: 1.25em;
   line-height: 1;
   font-size: 1.15rem;
 }
 
-/* =========================================================
-   Mobile behavior (NO custom menu):
-   Force greedy-nav to overflow => ALL links go into hamburger
-   ========================================================= */
-@media (max-width: 768px){
+/* Make greedy-nav a flex row so masthead-controls sits at the right */
+.greedy-nav {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+}
 
-  /* Make greedy-nav calculations treat visible-links as "no space" */
-  .greedy-nav .visible-links{
-    width: 0 !important;
-    flex: 0 0 0 !important;
+/* visible-links takes remaining space */
+.greedy-nav .visible-links {
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+/* =========================================================
+   MOBILE: force ALL nav links into hamburger
+   ========================================================= */
+@media (max-width: 768px) {
+
+  /* 1. Collapse visible-links to zero so greedy-nav
+        overflow-JS sees "no room" and moves all links out */
+  .greedy-nav .visible-links {
+    max-width: 0 !important;
+    flex: 0 0 0px !important;
     overflow: hidden !important;
-    white-space: nowrap;
+    padding: 0 !important;
+    margin: 0 !important;
   }
 
-  /* Ensure hamburger is visible on mobile (even if theme adds hidden) */
-  .greedy-nav__toggle,
-  .greedy-nav__toggle.hidden{
+  /* 2. Keep controls visible and at right */
+  .masthead-controls {
     display: inline-flex !important;
     visibility: visible !important;
     opacity: 1 !important;
+    flex-shrink: 0 !important;
+    margin-left: auto !important;
+  }
+
+  /* 3. Always show hamburger on mobile */
+  .greedy-nav__toggle,
+  .greedy-nav__toggle.hidden {
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    padding: 6px 10px !important;
+  }
+
+  /* 4. Dropdown above content */
+  .greedy-nav .hidden-links {
+    z-index: 9999 !important;
+    /* Position relative to nav, not viewport */
+    position: absolute !important;
+    top: 100% !important;
+    right: 0 !important;
   }
 }
 </style>
 
 <script>
 /* =========================================================
-   Theme toggle (sun/moon) - no dependency on mobile layout
+   Theme toggle: auto-detect system preference on first visit,
+   persist choice in localStorage, toggle on click.
    ========================================================= */
 (function () {
-  const KEY = "theme"; // "dark" | "light"
+  var KEY = "theme"; // stored value: "dark" | "light"
 
+  /* --- helpers --- */
   function setIcon(theme) {
-    const icon = document.getElementById("theme-icon");
+    var icon = document.getElementById("theme-icon");
     if (!icon) return;
     icon.classList.remove("fa-sun", "fa-moon");
     icon.classList.add(theme === "dark" ? "fa-moon" : "fa-sun");
   }
 
   function applyTheme(theme) {
-    const root = document.documentElement;
-    root.classList.toggle("dark", theme === "dark");
+    var root = document.documentElement;
+    if (theme === "dark") {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
     root.setAttribute("data-theme", theme);
     setIcon(theme);
   }
 
-  function getInitialTheme() {
+  function getPreferred() {
+    // 1. Respect saved choice
     try {
-      const saved = localStorage.getItem(KEY);
+      var saved = localStorage.getItem(KEY);
       if (saved === "dark" || saved === "light") return saved;
     } catch (e) {}
-
-    const prefersDark =
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-    return prefersDark ? "dark" : "light";
+    // 2. Fall back to OS preference
+    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
   }
 
   function toggleTheme() {
-    const isDark = document.documentElement.classList.contains("dark");
-    const next = isDark ? "light" : "dark";
+    var isDark = document.documentElement.classList.contains("dark");
+    var next = isDark ? "light" : "dark";
     try { localStorage.setItem(KEY, next); } catch (e) {}
     applyTheme(next);
   }
 
-  applyTheme(getInitialTheme());
+  /* --- Apply theme IMMEDIATELY (before paint) to avoid flash --- */
+  applyTheme(getPreferred());
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const btn = document.getElementById("theme-toggle");
+  /* --- Wire up click handler after DOM is ready --- */
+  function init() {
+    var btn = document.getElementById("theme-toggle");
     if (btn) {
       btn.addEventListener("click", function (e) {
         e.preventDefault();
@@ -145,14 +193,51 @@
       });
     }
 
-    const mq = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");
+    /* Re-apply icon now that DOM exists (icon may not exist at applyTheme time above) */
+    setIcon(getPreferred());
+
+    /* Listen for OS theme changes (only applies when no saved preference) */
+    var mq = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");
     if (mq && mq.addEventListener) {
       mq.addEventListener("change", function (e) {
-        let saved = null;
+        var saved = null;
         try { saved = localStorage.getItem(KEY); } catch (err) {}
         if (!saved) applyTheme(e.matches ? "dark" : "light");
       });
     }
-  });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    /* DOM already ready (e.g. script loaded late) */
+    init();
+  }
+
+  /* =========================================================
+     MOBILE FIX: Force greedy-nav to reflow and move ALL
+     visible-links into hidden-links on small screens.
+     Greedy-nav JS measures DOM widths — we trigger it after
+     layout so it sees the collapsed visible-links container.
+     ========================================================= */
+  function triggerGreedyNav() {
+    if (window.innerWidth > 768) return;
+
+    var visLinks = document.querySelector(".greedy-nav .visible-links");
+    var nav      = document.querySelector(".greedy-nav");
+    if (!visLinks || !nav) return;
+
+    /* Fire a resize event so greedy-nav's own listener recalculates */
+    var evt;
+    try { evt = new Event("resize"); } catch (e) { evt = document.createEvent("Event"); evt.initEvent("resize", true, true); }
+    window.dispatchEvent(evt);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () { setTimeout(triggerGreedyNav, 50); });
+  } else {
+    setTimeout(triggerGreedyNav, 50);
+  }
+
 })();
 </script>

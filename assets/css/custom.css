@@ -376,34 +376,32 @@ details[open] { margin-bottom: 0.2rem; }
 }
 
 /* =========================================================
-   17) Mobile nav behavior (force ALL links into hamburger)
-   - Do NOT fight greedy-nav by absolute positioning controls.
-   - Instead: make visible-links take 0 space on mobile so greedy-nav
-     pushes ALL items into .hidden-links automatically.
-   - Keep: site title + (theme toggle) + hamburger on the top row.
+   17) Mobile nav — supplemental overrides
+   Core mobile nav rules live in masthead.html <style> block.
+   Only add SUPPLEMENTAL theme-specific tweaks here.
    ========================================================= */
 @media (max-width: 768px) {
 
-  /* 17.1) Let greedy-nav overflow everything */
+  /* 17.1) Ensure greedy-nav is a flex row */
   .greedy-nav {
     position: relative !important;
     overflow: visible !important;
     display: flex !important;
     align-items: center !important;
+    flex-wrap: nowrap !important;
   }
 
-  /* 17.2) Make visible-links take effectively no space on mobile
-          => greedy-nav will move ALL links into hidden-links */
+  /* 17.2) Collapse visible-links → greedy-nav JS moves links to hamburger */
   .greedy-nav .visible-links {
-    width: 0 !important;
-    flex: 0 0 0 !important;
+    max-width: 0 !important;
+    flex: 0 0 0px !important;
     overflow: hidden !important;
     white-space: nowrap !important;
     margin: 0 !important;
     padding: 0 !important;
   }
 
-  /* 17.3) Ensure the hamburger toggle is visible (even if it has .hidden) */
+  /* 17.3) Hamburger always visible */
   .greedy-nav__toggle,
   .greedy-nav__toggle.hidden {
     display: inline-flex !important;
@@ -414,21 +412,26 @@ details[open] { margin-bottom: 0.2rem; }
     padding: 6px 10px !important;
   }
 
-  /* 17.4) Theme toggle alignment (NO absolute positioning) */
+  /* 17.4) Controls wrapper never collapses */
+  .masthead-controls {
+    display: inline-flex !important;
+    flex-shrink: 0 !important;
+    align-items: center !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-left: auto !important;
+  }
+
+  /* 17.5) Theme toggle inside controls */
   #theme-toggle {
-    position: static !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    margin-left: auto !important;   /* pushes controls to the right */
     padding: 6px 10px !important;
-    z-index: auto !important;
-  }
-
-  #theme-toggle a,
-  #theme-toggle {
     text-decoration: none !important;
     cursor: pointer !important;
+    color: inherit !important;
+    flex-shrink: 0 !important;
   }
 
   #theme-toggle i {
@@ -438,8 +441,11 @@ details[open] { margin-bottom: 0.2rem; }
     font-size: 1.15rem !important;
   }
 
-  /* 17.5) Keep the hidden-links dropdown above content when opened */
+  /* 17.6) Dropdown above everything */
   .greedy-nav .hidden-links {
     z-index: 9999 !important;
+    position: absolute !important;
+    top: 100% !important;
+    right: 0 !important;
   }
 }
