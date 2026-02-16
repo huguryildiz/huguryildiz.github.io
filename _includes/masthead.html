@@ -22,16 +22,21 @@
             </li>
           {% endfor %}
           <li id="theme-toggle" class="masthead__menu-item persist tail">
-            <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
+            <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-gear" aria-hidden="true" title="toggle theme"></i></a>
           </li>
         </ul>
 
-        <!-- Hamburger label: after visible-links so it appears on the right -->
-        <label for="nav-toggle-check" class="nav-toggle-label" aria-label="Toggle menu">
-          <span class="navicon"></span>
-        </label>
+        <!-- Mobile right-side controls: gear + hamburger, always visible -->
+        <div class="mobile-controls">
+          <button id="theme-toggle-mobile" class="mobile-theme-btn" aria-label="Toggle theme">
+            <i id="theme-icon-mobile" class="fa-solid fa-gear" aria-hidden="true" title="toggle theme"></i>
+          </button>
+          <label for="nav-toggle-check" class="nav-toggle-label" aria-label="Toggle menu">
+            <span class="navicon"></span>
+          </label>
+        </div>
 
-        <!-- Mobile dropdown -->
+        <!-- Mobile dropdown (nav links only) -->
         <ul class="mobile-nav-links">
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
@@ -53,12 +58,13 @@
 /* Hide checkbox */
 .nav-toggle-check { display: none; }
 
-/* Hide toggle label and mobile menu on desktop */
-.nav-toggle-label { display: none; }
+/* Desktop: hide mobile-only elements */
+.nav-toggle-label  { display: none; }
 .mobile-nav-links  { display: none; }
+.mobile-controls   { display: none; }
 
 @media (max-width: 768px) {
-  /* Nav as flexbox: title left, hamburger right */
+  /* Nav: site title left, controls right */
   .greedy-nav {
     display: flex !important;
     align-items: center !important;
@@ -66,27 +72,45 @@
     position: relative;
   }
 
-  /* Hide desktop nav links */
-  .greedy-nav .visible-links li:not(.persist) {
-    display: none !important;
+  /* Hide desktop nav items */
+  .greedy-nav .visible-links li:not(.persist) { display: none !important; }
+  /* Hide desktop gear — mobile-controls handles it */
+  .greedy-nav .visible-links .persist.tail    { display: none !important; }
+
+  /* Gear + hamburger side by side on the right */
+  .mobile-controls {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    flex-shrink: 0;
   }
 
-  /* Hide site title's sibling persist items except the title itself */
-  .greedy-nav .visible-links .persist.tail {
-    display: none !important;
+  /* Gear button */
+  .mobile-theme-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px 8px;
+    color: inherit;
+    font-size: 1.1rem;
+    line-height: 1;
   }
 
-  /* Show hamburger on the right */
+  .mobile-theme-btn:hover { opacity: 0.7; }
+
+  /* Hamburger */
   .nav-toggle-label {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    padding: 6px 10px;
-    flex-shrink: 0;
+    padding: 6px 8px;
   }
 
-  /* Dropdown: opens below hamburger, aligned right */
+  /* Dropdown */
   .nav-toggle-check:checked ~ .mobile-nav-links {
     display: block;
     position: absolute;
@@ -110,9 +134,7 @@
     color: inherit;
   }
 
-  .mobile-nav-links li a:hover {
-    text-decoration: underline;
-  }
+  .mobile-nav-links li a:hover { text-decoration: underline; }
 
   html.dark .mobile-nav-links,
   [data-theme="dark"] .mobile-nav-links {
@@ -121,3 +143,20 @@
   }
 }
 </style>
+
+<script>
+(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    var mobileTrigger = document.getElementById('theme-toggle-mobile');
+    var desktopTrigger = document.getElementById('theme-toggle');
+
+    // Tapping the mobile gear fires the desktop toggle's click handler
+    if (mobileTrigger && desktopTrigger) {
+      mobileTrigger.addEventListener('click', function(e) {
+        e.preventDefault();
+        desktopTrigger.click();
+      });
+    }
+  });
+})();
+</script>
