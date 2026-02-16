@@ -4,6 +4,36 @@
      ========================================================= -->
 
 <!-- =========================
+     CRITICAL: Theme Detection Script (MUST BE FIRST)
+     Runs BEFORE anything else to prevent flash
+     ========================= -->
+<script>
+(function () {
+  const STORAGE_KEY = "theme";
+  
+  function getInitialTheme() {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved === "dark" || saved === "light") {
+        return saved;
+      }
+    } catch (e) {
+      console.warn("localStorage unavailable:", e);
+    }
+    
+    // Check system preference
+    const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    return prefersDark ? "dark" : "light";
+  }
+  
+  // Apply theme IMMEDIATELY
+  const initialTheme = getInitialTheme();
+  document.documentElement.classList.toggle("dark", initialTheme === "dark");
+  document.documentElement.setAttribute("data-theme", initialTheme);
+})();
+</script>
+
+<!-- =========================
      Custom Stylesheets
      ========================= -->
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
@@ -32,7 +62,8 @@
 <!-- =========================
      Mobile Browser UI Color
      ========================= -->
-<meta name="theme-color" content="#061a2b">
+<meta name="theme-color" content="#061a2b" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 <!-- =========================
@@ -58,7 +89,7 @@
 <script>
 (function () {
 
-  const STORAGE_KEY = "theme"; // possible values: "dark" | "light"
+  const STORAGE_KEY = "theme";
 
   /**
    * Update Font Awesome icon
@@ -102,7 +133,9 @@
       if (saved === "dark" || saved === "light") {
         return saved;
       }
-    } catch (e) {}
+    } catch (e) {
+      console.warn("localStorage read failed:", e);
+    }
 
     const prefersDark =
       window.matchMedia &&
@@ -111,16 +144,21 @@
     return prefersDark ? "dark" : "light";
   }
 
-  // Apply theme immediately (as early as possible)
-  const initialTheme = getInitialTheme();
-  applyTheme(initialTheme);
-
+  // Theme already applied above - just update icon
+  const currentTheme = getInitialTheme();
+  
   /**
    * After DOM is ready, attach click handler
    */
   document.addEventListener("DOMContentLoaded", function () {
+    // Update icon on page load
+    updateIcon(currentTheme);
+    
     const toggleButton = document.getElementById("theme-toggle");
-    if (!toggleButton) return;
+    if (!toggleButton) {
+      console.warn("Theme toggle button not found");
+      return;
+    }
 
     toggleButton.addEventListener("click", function (e) {
       e.preventDefault();
@@ -130,7 +168,9 @@
 
       try {
         localStorage.setItem(STORAGE_KEY, nextTheme);
-      } catch (e) {}
+      } catch (e) {
+        console.warn("localStorage write failed:", e);
+      }
 
       applyTheme(nextTheme);
     });
