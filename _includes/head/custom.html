@@ -1,56 +1,144 @@
-{% include base_path %}
-
-<!-- start custom head snippets -->
+<!-- =========================================================
+     Custom Head Snippets
+     Loaded after theme head
+     ========================================================= -->
 
 <!-- =========================
-     Stylesheets (after theme)
+     Custom Stylesheets
      ========================= -->
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/supervision-stats.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/pub-chart.css' | relative_url }}">
 
 <!-- =========================
-     Chart.js (Required for Donut Charts)
+     Chart.js (for donut charts)
      ========================= -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-
-<!-- =========================
-     Scripts
-     ========================= -->
 <script defer src="{{ '/assets/js/pub-chart.js' | relative_url }}"></script>
 
 <!-- =========================
      Academicons
-     (Local + CDN fallback)
      ========================= -->
-<link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css">
+<link rel="stylesheet" href="{{ '/assets/css/academicons.css' | relative_url }}">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
 <!-- =========================
-     Favicons (single source)
+     Favicons
      ========================= -->
 <link rel="icon" href="{{ '/images/favicons/favicon.ico?v=3' | relative_url }}">
 <link rel="icon" type="image/svg+xml" href="{{ '/images/favicons/favicon.svg?v=3' | relative_url }}">
 <link rel="apple-touch-icon" href="{{ '/images/favicons/apple-touch-icon.png?v=3' | relative_url }}">
 
 <!-- =========================
-     Mobile UI color
+     Mobile Browser UI Color
      ========================= -->
 <meta name="theme-color" content="#061a2b">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 <!-- =========================
-     Fonts
+     Google Fonts
      ========================= -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- =========================
-     GoatCounter analytics
+     GoatCounter Analytics
      ========================= -->
 <script data-goatcounter="https://huguryildiz.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
+<!-- =========================================================
+     Theme Toggle System (Light / Dark Mode)
+     - System preference aware
+     - localStorage persistent
+     - Font Awesome icon switching
+     - Prevents flash of incorrect theme
+     ========================================================= -->
+<script>
+(function () {
 
-<!-- end custom head snippets -->
+  const STORAGE_KEY = "theme"; // possible values: "dark" | "light"
+
+  /**
+   * Update Font Awesome icon
+   * Uses fa-sun / fa-moon classes
+   */
+  function updateIcon(theme) {
+    const icon = document.getElementById("theme-icon");
+    if (!icon) return;
+
+    icon.classList.remove("fa-sun", "fa-moon");
+
+    // UX logic:
+    // Show the icon of the mode user will SWITCH TO
+    if (theme === "dark") {
+      icon.classList.add("fa-sun");   // currently dark → clicking switches to light
+    } else {
+      icon.classList.add("fa-moon");  // currently light → clicking switches to dark
+    }
+  }
+
+  /**
+   * Apply theme to <html>
+   */
+  function applyTheme(theme) {
+    const root = document.documentElement;
+
+    root.classList.toggle("dark", theme === "dark");
+    root.setAttribute("data-theme", theme);
+
+    updateIcon(theme);
+  }
+
+  /**
+   * Determine initial theme:
+   * 1) localStorage (if exists)
+   * 2) system preference (prefers-color-scheme)
+   */
+  function getInitialTheme() {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved === "dark" || saved === "light") {
+        return saved;
+      }
+    } catch (e) {}
+
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    return prefersDark ? "dark" : "light";
+  }
+
+  // Apply theme immediately (as early as possible)
+  const initialTheme = getInitialTheme();
+  applyTheme(initialTheme);
+
+  /**
+   * After DOM is ready, attach click handler
+   */
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("theme-toggle");
+    if (!toggleButton) return;
+
+    toggleButton.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const isDark = document.documentElement.classList.contains("dark");
+      const nextTheme = isDark ? "light" : "dark";
+
+      try {
+        localStorage.setItem(STORAGE_KEY, nextTheme);
+      } catch (e) {}
+
+      applyTheme(nextTheme);
+    });
+  });
+
+})();
+</script>
+
+<!-- =========================================================
+     End Custom Head Snippets
+     ========================================================= -->

@@ -380,72 +380,47 @@ details[open] { margin-bottom: 0.2rem; }
    Core mobile nav rules live in masthead.html <style> block.
    Only add SUPPLEMENTAL theme-specific tweaks here.
    ========================================================= */
+/* ========= Mobile: all links into hamburger ========= */
 @media (max-width: 768px) {
 
-  /* 17.1) Ensure greedy-nav is a flex row */
-  .greedy-nav {
-    position: relative !important;
-    overflow: visible !important;
+  /* Greedy nav layout */
+  .greedy-nav{
     display: flex !important;
     align-items: center !important;
-    flex-wrap: nowrap !important;
   }
 
-  /* 17.2) Collapse visible-links → greedy-nav JS moves links to hamburger */
-  .greedy-nav .visible-links {
-    max-width: 0 !important;
-    flex: 0 0 0px !important;
+  /* Force visible-links to take no space => greedy-nav pushes items to hidden-links */
+  .greedy-nav .visible-links{
+    width: 0 !important;
+    flex: 0 0 0 !important;
     overflow: hidden !important;
     white-space: nowrap !important;
     margin: 0 !important;
     padding: 0 !important;
   }
 
-  /* 17.3) Hamburger always visible */
-  .greedy-nav__toggle,
-  .greedy-nav__toggle.hidden {
+  /* Ensure hamburger always visible on mobile */
+  .greedy-nav__toggle{
     display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
     visibility: visible !important;
     opacity: 1 !important;
-    padding: 6px 10px !important;
   }
 
-  /* 17.4) Controls wrapper never collapses */
-  .masthead-controls {
-    display: inline-flex !important;
-    flex-shrink: 0 !important;
-    align-items: center !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    margin-left: auto !important;
-  }
-
-  /* 17.5) Theme toggle inside controls */
-  #theme-toggle {
+  /* Theme toggle visible & aligned */
+  .theme-toggle{
+    margin-left: 8px !important;   /* controls go right */
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     padding: 6px 10px !important;
-    text-decoration: none !important;
+    background: transparent !important;
+    border: 0 !important;
     cursor: pointer !important;
-    color: inherit !important;
-    flex-shrink: 0 !important;
+    font-size: 1.05rem !important;
   }
 
-  #theme-toggle i {
-    display: inline-block !important;
-    width: 1.25em !important;
-    line-height: 1 !important;
-    font-size: 1.15rem !important;
-  }
-
-  /* 17.6) Dropdown above everything */
-  .greedy-nav .hidden-links {
+  /* Dropdown above content */
+  .greedy-nav .hidden-links{
     z-index: 9999 !important;
-    position: absolute !important;
-    top: 100% !important;
-    right: 0 !important;
   }
 }
