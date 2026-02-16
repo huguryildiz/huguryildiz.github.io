@@ -5,6 +5,11 @@ author_profile: true
 permalink: /
 ---
 
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PXWMC3P"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 ## Biography
  
 Huseyin Ugur Yildiz received the B.Sc. degree in Electrical and Electronics Engineering from [Bilkent University](https://w3.bilkent.edu.tr/bilkent/), Ankara, Turkey, in 2009, and the M.Sc. and Ph.D. degrees from [TOBB University of Economics and Technology](https://www.etu.edu.tr/en), Ankara, in 2013 and 2016, respectively.
