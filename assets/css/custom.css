@@ -379,21 +379,16 @@ details[open] { margin-bottom: 0.2rem; }
    17) Theme Toggle Button - ALL SCREENS
    ========================================================= */
 .theme-toggle {
-  display: inline-flex !important;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 8px 10px;
-  margin-left: auto;
-  margin-right: 8px;
   background: transparent;
   border: none;
   cursor: pointer;
   font-size: 1.1rem;
   color: inherit;
   transition: opacity 0.2s ease;
-  order: 2;
-  visibility: visible !important;
-  opacity: 1 !important;
 }
 
 .theme-toggle:hover {
@@ -407,11 +402,32 @@ details[open] { margin-bottom: 0.2rem; }
 }
 
 /* =========================================================
-   18) Mobile Navigation (≤768px)
+   18) DESKTOP NAVIGATION (>768px) - DEFAULT STATE
+   ========================================================= */
+@media (min-width: 769px) {
+  /* Hide hamburger on desktop */
+  .greedy-nav__toggle {
+    display: none !important;
+  }
+  
+  /* Ensure visible links are shown on desktop */
+  .greedy-nav .visible-links {
+    display: flex !important;
+    visibility: visible !important;
+  }
+  
+  /* Hide mobile dropdown on desktop */
+  .greedy-nav .hidden-links {
+    display: none !important;
+  }
+}
+
+/* =========================================================
+   19) MOBILE NAVIGATION (≤768px)
    ========================================================= */
 @media (max-width: 768px) {
 
-  /* Navigation container positioning */
+  /* Navigation container */
   .masthead__inner-wrap {
     position: relative;
   }
@@ -423,41 +439,39 @@ details[open] { margin-bottom: 0.2rem; }
     position: relative !important;
   }
 
-  /* Site title stays visible */
+  /* Site title */
   .site-title {
     order: 1;
     flex: 0 0 auto;
   }
 
-  /* Hide desktop nav links */
+  /* HIDE desktop navigation links on mobile */
   .greedy-nav .visible-links {
     display: none !important;
-    width: 0 !important;
-    overflow: hidden !important;
-    visibility: hidden !important;
   }
 
-  /* Theme toggle - always visible on mobile */
+  /* Theme toggle - visible on mobile */
   .greedy-nav .theme-toggle {
     display: inline-flex !important;
     order: 2;
     margin-left: auto;
     margin-right: 8px;
-    visibility: visible !important;
-    opacity: 1 !important;
   }
 
-  /* Hamburger menu button - always visible on mobile */
+  /* Hamburger button - visible on mobile */
   .greedy-nav .greedy-nav__toggle {
     display: inline-flex !important;
     order: 3;
-    visibility: visible !important;
-    opacity: 1 !important;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
   }
 
-  /* Dropdown menu - FORCE DISPLAY when not hidden */
+  /* Mobile dropdown menu */
   .greedy-nav .hidden-links {
-    display: block !important;
     position: absolute !important;
     top: 100% !important;
     right: 0 !important;
@@ -473,7 +487,12 @@ details[open] { margin-bottom: 0.2rem; }
     padding: 0.5rem 0 !important;
   }
 
-  /* Hidden state */
+  /* Show dropdown when NOT hidden */
+  .greedy-nav .hidden-links:not(.hidden) {
+    display: block !important;
+  }
+
+  /* Hide dropdown when .hidden class is present */
   .greedy-nav .hidden-links.hidden {
     display: none !important;
   }
@@ -489,6 +508,7 @@ details[open] { margin-bottom: 0.2rem; }
   /* Dropdown items */
   .greedy-nav .hidden-links li {
     display: block !important;
+    list-style: none !important;
     margin: 0 !important;
   }
 
@@ -510,7 +530,7 @@ details[open] { margin-bottom: 0.2rem; }
     background: rgba(255,255,255,0.05) !important;
   }
 
-  /* "Selected" styling in mobile menu */
+  /* Selected item */
   .greedy-nav .hidden-links .masthead__menu-item.selected a {
     background: rgba(0,0,0,0.08) !important;
   }
@@ -518,12 +538,5 @@ details[open] { margin-bottom: 0.2rem; }
   html.dark .greedy-nav .hidden-links .masthead__menu-item.selected a,
   [data-theme="dark"] .greedy-nav .hidden-links .masthead__menu-item.selected a {
     background: rgba(255,255,255,0.08) !important;
-  }
-}
-
-/* Desktop - hide hamburger */
-@media (min-width: 769px) {
-  .greedy-nav__toggle {
-    display: none !important;
   }
 }
