@@ -374,3 +374,56 @@ details[open] { margin-bottom: 0.2rem; }
   height: 360px;
   border: none;
 }
+
+/* =========================================================
+   17) Mobile nav (force links into hamburger + keep toggle visible)
+   ========================================================= */
+@media (max-width: 768px) {
+
+  .greedy-nav{
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .greedy-nav .site-title{
+    flex: 0 0 auto !important;
+  }
+
+  /* Let greedy-nav decide what fits; allow shrink */
+  .greedy-nav .visible-links{
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+  }
+
+  /* Theme toggle must stay visible */
+  .theme-toggle{
+    flex: 0 0 auto !important;
+    margin-left: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 6px 10px !important;
+    border: 0 !important;
+    background: transparent !important;
+  }
+
+  .theme-toggle #theme-icon{
+    font-size: 18px !important;
+    line-height: 1 !important;
+  }
+
+  /* Hamburger must stay visible */
+  .greedy-nav__toggle{
+    flex: 0 0 auto !important;
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .greedy-nav .hidden-links{
+    z-index: 9999 !important;
+  }
+}
