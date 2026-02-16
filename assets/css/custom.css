@@ -379,6 +379,13 @@ details[open] { margin-bottom: 0.2rem; }
    17) Theme Toggle Button - ALWAYS VISIBLE (All Screens)
    Desktop ve mobilde her zaman görünür
    ========================================================= */
+
+/* Greedy-nav'ı flexbox yap ve tüm elemanları ortala */
+.greedy-nav {
+  display: flex !important;
+  align-items: center !important;
+}
+
 #theme-toggle,
 .theme-toggle {
   display: inline-flex !important;
@@ -387,6 +394,7 @@ details[open] { margin-bottom: 0.2rem; }
   align-items: center;
   justify-content: center;
   padding: 8px 10px;
+  margin-left: 0.5rem;
   background: transparent;
   border: none;
   cursor: pointer;
