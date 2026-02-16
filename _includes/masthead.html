@@ -4,13 +4,20 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
 
-        <!-- CSS-only hamburger toggle (checkbox hack) -->
-        <input type="checkbox" id="nav-toggle-check" class="nav-toggle-check" aria-hidden="true">
+        <!-- Mobile menu toggle (checkbox hack). Keeps markup simple and JS-free for the dropdown. -->
+        <input
+          type="checkbox"
+          id="nav-toggle-check"
+          class="nav-toggle-check"
+          aria-hidden="true"
+        >
 
+        <!-- Desktop / Greedy Nav links -->
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg persist {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}">
             <a href="{{ base_path }}/">{{ site.title }}</a>
           </li>
+
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
@@ -21,25 +28,32 @@
               <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
             </li>
           {% endfor %}
-          <!-- Desktop theme toggle -->
+
+          <!-- Desktop theme toggle (visible on desktop, hidden on mobile) -->
           <li id="theme-toggle" class="masthead__menu-item persist tail">
-            <a role="button" aria-label="toggle theme">
-              <i id="theme-icon" class="fas fa-sun" aria-hidden="true" title="toggle theme"></i>
+            <a role="button" aria-label="Toggle theme">
+              <!-- Default icon is set by JS on load (sun for light, moon for dark) -->
+              <i id="theme-icon" class="fas fa-sun" aria-hidden="true" title="Toggle theme"></i>
             </a>
           </li>
         </ul>
 
-        <!-- Mobile: [☀] [☰] her zaman görünür, menü dışında -->
+        <!--
+          Mobile controls (ALWAYS visible on mobile):
+          - Theme toggle button (sun/moon)
+          - Hamburger menu button
+        -->
         <div class="mobile-controls">
           <button id="theme-toggle-mobile" class="mobile-theme-btn" aria-label="Toggle theme">
             <i id="theme-icon-mobile" class="fas fa-sun" aria-hidden="true"></i>
           </button>
+
           <label for="nav-toggle-check" class="nav-toggle-label" aria-label="Toggle menu">
             <span class="navicon"></span>
           </label>
         </div>
 
-        <!-- Mobile dropdown (sadece nav linkleri) -->
+        <!-- Mobile dropdown (nav links only) -->
         <ul class="mobile-nav-links">
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
@@ -51,6 +65,7 @@
           {% endfor %}
         </ul>
 
+        <!-- Minimal Mistakes requires this element; leave it intact -->
         <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
@@ -58,72 +73,108 @@
 </div>
 
 <style>
+/* =========================================================
+   Base: keep mobile-only controls hidden on desktop
+   ========================================================= */
 .nav-toggle-check { display: none; }
 
-/* Desktop: mobile elemanları gizle */
-.nav-toggle-label { display: none; }
-.mobile-nav-links { display: none; }
-.mobile-controls  { display: none; }
+/* Desktop defaults */
+.nav-toggle-label  { display: none; }
+.mobile-nav-links  { display: none; }
+.mobile-controls   { display: none; }
 
+/* =========================================================
+   Mobile layout (<= 768px)
+   ========================================================= */
 @media (max-width: 768px) {
   .greedy-nav {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
     position: relative;
+    /* Important: some themes set overflow hidden; that can clip mobile controls/dropdown */
+    overflow: visible !important;
   }
 
-  /* Desktop nav linklerini gizle */
+  /* Hide non-persistent desktop links (greedy behavior) */
   .greedy-nav .visible-links li:not(.persist) { display: none !important; }
-  /* Desktop gear'ı gizle */
-  .greedy-nav .visible-links .persist.tail    { display: none !important; }
 
-  /* [⚙] [☰] yan yana sağda */
+  /* Hide the desktop theme toggle on mobile (we show a dedicated mobile toggle instead) */
+  .greedy-nav .visible-links .persist.tail { display: none !important; }
+
+  /* Mobile controls (theme + hamburger) */
   .mobile-controls {
-    display: flex;
+    display: inline-flex !important;
     align-items: center;
     gap: 2px;
     flex-shrink: 0;
+
+    /* Ensure it stays above any overlapping nav layers */
+    position: relative;
+    z-index: 10000;
+
+    /* Ensure it is actually visible */
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
+  /* Theme button */
   .mobile-theme-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
     background: none;
     border: none;
     cursor: pointer;
+
     padding: 6px 10px;
     color: inherit;
+
     font-size: 1.1rem;
     line-height: 1;
   }
   .mobile-theme-btn:hover { opacity: 0.7; }
 
+  /* Make sure the icon is not collapsed by layout rules */
+  .mobile-theme-btn i {
+    display: inline-block !important;
+    width: 1.25em;
+    height: 1em;
+    line-height: 1;
+  }
+
+  /* Hamburger label */
   .nav-toggle-label {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
     cursor: pointer;
     padding: 6px 8px;
   }
 
-  /* Açılır menü */
+  /* Dropdown menu (shown when checkbox is checked) */
   .nav-toggle-check:checked ~ .mobile-nav-links {
     display: block;
+
     position: absolute;
     top: 100%;
     right: 0;
+
     z-index: 9999;
     min-width: 180px;
+
     background: var(--mm-background-color, #fff);
     border: 1px solid rgba(150,170,190,0.25);
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+
     padding: 6px 0;
     list-style: none;
     margin: 0;
   }
+
   .mobile-nav-links li a {
     display: block;
     padding: 8px 20px;
@@ -132,6 +183,7 @@
   }
   .mobile-nav-links li a:hover { text-decoration: underline; }
 
+  /* Dark theme dropdown styling (works with both selectors) */
   html.dark .mobile-nav-links,
   [data-theme="dark"] .mobile-nav-links {
     background: #0b1622;
@@ -141,36 +193,105 @@
 </style>
 
 <script>
-/*
-  Sadece köprü: mobil gear → desktop #theme-toggle click
-  Dark mode sistemi tamamen sitenin orijinal JS'ine bırakıldı.
-*/
+/**
+ * Theme handling for both desktop and mobile.
+ *
+ * Goals:
+ * 1) Auto-apply theme on first load based on:
+ *    - saved user preference in localStorage (if any), else
+ *    - system preference (prefers-color-scheme)
+ * 2) Let user toggle theme on both desktop + mobile buttons.
+ * 3) Keep icons in sync (sun for light, moon for dark).
+ * 4) Avoid depending on a hidden desktop button (mobile works independently).
+ *
+ * Note:
+ * Your CSS supports both selectors:
+ *   - html.dark
+ *   - [data-theme="dark"]
+ * So we set BOTH for maximum compatibility.
+ */
 (function () {
-  function mirrorIcon() {
-    var src  = document.getElementById('theme-icon');
-    var dest = document.getElementById('theme-icon-mobile');
-    if (src && dest) dest.className = src.className;
+  const KEY = "theme"; // "dark" | "light"
+
+  function setIcons(theme) {
+    const desktopIcon = document.getElementById("theme-icon");
+    const mobileIcon  = document.getElementById("theme-icon-mobile");
+
+    [desktopIcon, mobileIcon].forEach((icon) => {
+      if (!icon) return;
+      icon.classList.remove("fa-sun", "fa-moon");
+      icon.classList.add(theme === "dark" ? "fa-moon" : "fa-sun");
+    });
   }
 
-  document.addEventListener('DOMContentLoaded', function () {
-    var mobileBtn     = document.getElementById('theme-toggle-mobile');
-    var desktopToggle = document.getElementById('theme-toggle');
+  function applyTheme(theme) {
+    const root = document.documentElement;
 
-    if (mobileBtn && desktopToggle) {
-      mobileBtn.addEventListener('click', function (e) {
+    // 1) Class selector
+    root.classList.toggle("dark", theme === "dark");
+
+    // 2) Attribute selector
+    root.setAttribute("data-theme", theme);
+
+    setIcons(theme);
+  }
+
+  function getInitialTheme() {
+    try {
+      const saved = localStorage.getItem(KEY);
+      if (saved === "dark" || saved === "light") return saved;
+    } catch (e) {}
+
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    return prefersDark ? "dark" : "light";
+  }
+
+  function toggleTheme() {
+    const isDark = document.documentElement.classList.contains("dark");
+    const next = isDark ? "light" : "dark";
+
+    try { localStorage.setItem(KEY, next); } catch (e) {}
+    applyTheme(next);
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Apply theme immediately on load (based on saved pref or system pref)
+    applyTheme(getInitialTheme());
+
+    // Desktop toggle
+    const desktopBtn = document.querySelector("#theme-toggle a");
+    if (desktopBtn) {
+      desktopBtn.addEventListener("click", function (e) {
         e.preventDefault();
-        desktopToggle.click();
+        toggleTheme();
       });
     }
 
-    /* Desktop icon class değişince mobili de güncelle */
-    var srcIcon = document.getElementById('theme-icon');
-    if (srcIcon) {
-      new MutationObserver(mirrorIcon).observe(srcIcon, {
-        attributes: true, attributeFilter: ['class']
+    // Mobile toggle
+    const mobileBtn = document.getElementById("theme-toggle-mobile");
+    if (mobileBtn) {
+      mobileBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        toggleTheme();
       });
     }
-    mirrorIcon();
+
+    // If the user has NOT set a manual preference, follow system changes dynamically.
+    const mq = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");
+    if (mq && mq.addEventListener) {
+      mq.addEventListener("change", function (e) {
+        let saved = null;
+        try { saved = localStorage.getItem(KEY); } catch (err) {}
+
+        // Only auto-switch if no explicit user choice is stored
+        if (!saved) {
+          applyTheme(e.matches ? "dark" : "light");
+        }
+      });
+    }
   });
 })();
 </script>
