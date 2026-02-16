@@ -1,13 +1,24 @@
 {% include base_path %}
+
+<!-- =========================================================
+     Masthead / Navigation (Minimal Mistakes - greedy-nav)
+     - Keeps site title always visible
+     - Adds a Light/Dark theme toggle button (Font Awesome)
+     - Keeps hamburger button in the correct DOM position
+     - hidden-links is required by greedy-nav
+     ========================================================= -->
+
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
 
+        <!-- Site title (always visible) -->
         <a class="site-title" href="{{ base_path }}/">
           {{ site.title }}
         </a>
 
+        <!-- Main nav links (greedy-nav manages these) -->
         <ul class="visible-links">
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
@@ -15,23 +26,32 @@
             {% else %}
               {% assign domain = base_path %}
             {% endif %}
+
             <li class="masthead__menu-item{% if page.url contains link.url and link.url != '/' %} selected{% endif %}">
               <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
             </li>
           {% endfor %}
         </ul>
 
-        <!-- Theme toggle button -->
-        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+        <!-- Theme toggle button (always visible)
+             JS in custom.html will update the icon classes (fa-sun/fa-moon). -->
+        <button id="theme-toggle"
+                class="theme-toggle"
+                type="button"
+                aria-label="Toggle theme">
           <i id="theme-icon" class="fas fa-moon" aria-hidden="true"></i>
         </button>
 
-        <!-- Hamburger menu button -->
-        <button class="greedy-nav__toggle" type="button" aria-label="Toggle menu">
+        <!-- Hamburger toggle (MUST be directly under nav, not inside another wrapper) -->
+        <button class="greedy-nav__toggle"
+                type="button"
+                aria-label="Toggle menu">
           <span class="navicon"></span>
         </button>
 
+        <!-- Hidden menu (greedy-nav / your mobile JS will fill this) -->
         <ul class="hidden-links hidden"></ul>
+
       </nav>
     </div>
   </div>
