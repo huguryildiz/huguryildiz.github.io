@@ -4,12 +4,20 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
 
-        <!-- Site title -->
-        <a class="site-title" href="{{ base_path }}/">
+        <!-- =========================================================
+             Site title
+             - Keep this ALWAYS visible (persist)
+             ========================================================= -->
+        <a class="site-title persist" href="{{ base_path }}/">
           {{ site.title }}
         </a>
 
-        <!-- Primary navigation (Greedy Nav) -->
+        <!-- =========================================================
+             Primary navigation links
+             - IMPORTANT:
+             - Do NOT mark CV/Publications/Research as "persist"
+             - Greedy-nav will move overflow items into .hidden-links on mobile
+             ========================================================= -->
         <ul class="visible-links">
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
@@ -17,25 +25,36 @@
             {% else %}
               {% assign domain = base_path %}
             {% endif %}
+
             <li class="masthead__menu-item{% if page.url contains link.url and link.url != '/' %} selected{% endif %}">
               <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
             </li>
           {% endfor %}
 
-          <!-- Theme toggle (single toggle for desktop + mobile) -->
+          <!-- =========================================================
+               Theme toggle
+               - Keep it ALWAYS visible (persist)
+               - It should NOT go into hamburger
+               ========================================================= -->
           <li id="theme-toggle" class="masthead__menu-item persist">
             <a href="#" role="button" aria-label="Toggle theme">
-              <i id="theme-icon" class="fas fa-sun" aria-hidden="true"></i>
+              <i id="theme-icon" class="fas fa-sun" aria-hidden="true" title="Toggle theme"></i>
             </a>
           </li>
         </ul>
 
-        <!-- Hamburger toggle (Minimal Mistakes Greedy Nav expects this) -->
+        <!-- =========================================================
+             Hamburger button (Minimal Mistakes Greedy Nav expects this)
+             - Greedy-nav JS toggles .hidden-links with this button
+             ========================================================= -->
         <button class="greedy-nav__toggle hidden" type="button" aria-label="Toggle menu">
           <span class="navicon"></span>
         </button>
 
-        <!-- Hidden links container (Greedy Nav JS moves overflow items here) -->
+        <!-- =========================================================
+             Hidden links container
+             - Greedy-nav JS moves overflow items here (hamburger menu)
+             ========================================================= -->
         <ul class="hidden-links hidden"></ul>
 
       </nav>
@@ -45,9 +64,9 @@
 
 <style>
 /* =========================================================
-   Mobile: keep theme icon visible next to hamburger
-   - We DO NOT implement our own hamburger.
-   - We reuse Minimal Mistakes greedy-nav toggle button.
+   Mobile: layout adjustments
+   - Ensure theme toggle stays visible next to hamburger
+   - Ensure it doesn't overlap the hamburger button
    ========================================================= */
 @media (max-width: 768px) {
   .greedy-nav {
@@ -55,13 +74,13 @@
     overflow: visible;
   }
 
-  /* Make sure theme toggle is visible */
+  /* Pin the theme icon near the hamburger (left of it) */
   #theme-toggle {
-    display: list-item !important;
     position: absolute;
-    right: 3.2rem; /* leave room for the hamburger button */
+    right: 3.3rem;  /* adjust if it overlaps hamburger */
     top: 0.55rem;
     z-index: 9999;
+    display: list-item !important;
   }
 
   #theme-toggle a {
@@ -70,6 +89,7 @@
     justify-content: center;
     padding: 6px 10px;
     text-decoration: none !important;
+    cursor: pointer;
   }
 
   #theme-toggle i {
@@ -83,14 +103,17 @@
 
 <script>
 /**
- * Theme handling (single toggle)
+ * Theme handling (single toggle for desktop + mobile)
  *
- * - Applies theme on load: localStorage > system preference
- * - Toggles theme on click
- * - Updates icon (sun/moon)
- * - Uses both selectors for compatibility:
- *     html.dark
- *     [data-theme="dark"]
+ * Behavior:
+ * 1) On load: localStorage preference > system preference
+ * 2) Toggle on click
+ * 3) Update icon (sun for light, moon for dark)
+ * 4) Follow system changes only if user has no saved preference
+ *
+ * CSS hooks used:
+ * - html.dark
+ * - [data-theme="dark"]
  */
 (function () {
   const KEY = "theme"; // "dark" | "light"
@@ -141,7 +164,6 @@
       });
     }
 
-    /* Follow system changes only if user hasn't saved a preference */
     const mq = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");
     if (mq && mq.addEventListener) {
       mq.addEventListener("change", function (e) {
