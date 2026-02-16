@@ -1,143 +1,52 @@
-<!-- =========================================================
-     Custom head snippets
-     ========================================================= -->
+<!-- start custom head snippets -->
 
-<!-- ✅ Critical for mobile breakpoints -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- =========================
-     Stylesheets (after theme)
-     ========================= -->
+<!-- Stylesheets (after theme) -->
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/supervision-stats.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/pub-chart.css' | relative_url }}">
 
-<!-- =========================
-     Chart.js (Required for Donut Charts)
-     ========================= -->
+<!-- Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-
-<!-- =========================
-     Scripts
-     ========================= -->
 <script defer src="{{ '/assets/js/pub-chart.js' | relative_url }}"></script>
 
-<!-- =========================
-     Academicons
-     ========================= -->
-<link rel="stylesheet" href="{{ '/assets/css/academicons.css' | relative_url }}">
+<!-- Academicons (CDN) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
-<!-- =========================
-     Favicons
-     ========================= -->
+<!-- Favicons -->
 <link rel="icon" href="{{ '/images/favicons/favicon.ico?v=3' | relative_url }}">
 <link rel="icon" type="image/svg+xml" href="{{ '/images/favicons/favicon.svg?v=3' | relative_url }}">
 <link rel="apple-touch-icon" href="{{ '/images/favicons/apple-touch-icon.png?v=3' | relative_url }}">
 
-<!-- =========================
-     Mobile UI color
-     ========================= -->
 <meta name="theme-color" content="#061a2b">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-<!-- =========================
-     Fonts
-     ========================= -->
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- =========================
-     GoatCounter analytics
-     ========================= -->
+<!-- GoatCounter -->
 <script data-goatcounter="https://huguryildiz.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
-<!-- =========================================================
-     Theme (Light/Dark)
-     - Uses localStorage("theme") = "dark" | "light"
-     - Defaults to system preference (prefers-color-scheme)
-     - Applies ASAP to avoid flashing
-     - Updates Font Awesome icon (#theme-icon)
-     ========================================================= -->
 <script>
 (function () {
-  const KEY = "theme";
-
+  const KEY = "theme"; // "dark" | "light"
   function applyTheme(theme){
     const root = document.documentElement;
     root.classList.toggle("dark", theme === "dark");
     root.setAttribute("data-theme", theme);
-
-    // Show "target" icon (better UX):
-    // If currently dark => show sun (switch to light)
-    const icon = document.getElementById("theme-icon");
-    if (icon) {
-      icon.classList.remove("fa-sun", "fa-moon");
-      icon.classList.add(theme === "dark" ? "fa-sun" : "fa-moon");
-    }
   }
-
   function getInitialTheme(){
     try{
       const saved = localStorage.getItem(KEY);
-      if (saved === "dark" || saved === "light") return saved;
+      if(saved === "dark" || saved === "light") return saved;
     } catch(e){}
-    const prefersDark = window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
     return prefersDark ? "dark" : "light";
   }
-
-  // Apply before paint (best effort)
   applyTheme(getInitialTheme());
-
-  document.addEventListener("DOMContentLoaded", function(){
-    // Toggle click
-    const btn = document.getElementById("theme-toggle");
-    if (btn) {
-      btn.addEventListener("click", function(e){
-        e.preventDefault();
-        const isDark = document.documentElement.classList.contains("dark");
-        const next = isDark ? "light" : "dark";
-        try{ localStorage.setItem(KEY, next); } catch(e){}
-        applyTheme(next);
-      });
-    }
-  });
-
-  // After everything is loaded (CSS/fonts), force greedy-nav to recalc widths
-  window.addEventListener("load", function(){
-    window.dispatchEvent(new Event("resize"));
-  });
 })();
 </script>
 
-<!-- =========================================================
-     Mobile nav behavior:
-     - On <=768px, move ALL visible nav links into hamburger
-     - Keep site title + theme toggle visible
-     ========================================================= -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const mq = window.matchMedia("(max-width: 768px)");
-  if (!mq.matches) return;
-
-  const nav = document.querySelector(".greedy-nav");
-  if (!nav) return;
-
-  const visible = nav.querySelector(".visible-links");
-  const hidden  = nav.querySelector(".hidden-links");
-  const toggle  = nav.querySelector(".greedy-nav__toggle");
-  if (!visible || !hidden) return;
-
-  // Move every menu item into the hidden (hamburger) list
-  Array.from(visible.querySelectorAll("li")).forEach(li => hidden.appendChild(li));
-
-  // Ensure hamburger button is visible
-  if (toggle) toggle.classList.remove("hidden");
-
-  // Force recalculation once more after DOM manipulation
-  window.dispatchEvent(new Event("resize"));
-});
-</script>
+<!-- end custom head snippets -->
