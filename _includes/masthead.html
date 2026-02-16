@@ -24,22 +24,22 @@
           <!-- Desktop theme toggle -->
           <li id="theme-toggle" class="masthead__menu-item persist tail">
             <a role="button" aria-label="toggle theme">
-              <i id="theme-icon" aria-hidden="true" title="toggle theme"></i>
+              <i id="theme-icon" class="fas fa-cog" aria-hidden="true" title="toggle theme"></i>
             </a>
           </li>
         </ul>
 
-        <!-- Mobile right-side controls: gear + hamburger, always visible -->
+        <!-- Mobile: [⚙] [☰] her zaman görünür, menü dışında -->
         <div class="mobile-controls">
           <button id="theme-toggle-mobile" class="mobile-theme-btn" aria-label="Toggle theme">
-            <i id="theme-icon-mobile" aria-hidden="true" title="toggle theme"></i>
+            <i id="theme-icon-mobile" class="fas fa-cog" aria-hidden="true"></i>
           </button>
           <label for="nav-toggle-check" class="nav-toggle-label" aria-label="Toggle menu">
             <span class="navicon"></span>
           </label>
         </div>
 
-        <!-- Mobile dropdown -->
+        <!-- Mobile dropdown (sadece nav linkleri) -->
         <ul class="mobile-nav-links">
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
@@ -58,27 +58,13 @@
 </div>
 
 <style>
-/* ── Hide checkbox ── */
 .nav-toggle-check { display: none; }
 
-/* ── Desktop: hide mobile-only elements ── */
+/* Desktop: mobile elemanları gizle */
 .nav-toggle-label { display: none; }
 .mobile-nav-links { display: none; }
 .mobile-controls  { display: none; }
 
-/* ── Theme icon base style ── */
-#theme-icon,
-#theme-icon-mobile {
-  font-family: "Font Awesome 6 Free", "Font Awesome 5 Free", "FontAwesome";
-  font-style: normal;
-  font-weight: 900;
-  font-size: 1.05rem;
-  display: inline-block;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* ── Mobile ── */
 @media (max-width: 768px) {
   .greedy-nav {
     display: flex !important;
@@ -87,11 +73,12 @@
     position: relative;
   }
 
-  /* Hide desktop nav items & desktop gear */
+  /* Desktop nav linklerini gizle */
   .greedy-nav .visible-links li:not(.persist) { display: none !important; }
+  /* Desktop gear'ı gizle */
   .greedy-nav .visible-links .persist.tail    { display: none !important; }
 
-  /* Gear + hamburger side by side */
+  /* [⚙] [☰] yan yana sağda */
   .mobile-controls {
     display: flex;
     align-items: center;
@@ -106,7 +93,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    padding: 6px 8px;
+    padding: 6px 10px;
     color: inherit;
     font-size: 1.1rem;
     line-height: 1;
@@ -121,7 +108,7 @@
     padding: 6px 8px;
   }
 
-  /* Dropdown */
+  /* Açılır menü */
   .nav-toggle-check:checked ~ .mobile-nav-links {
     display: block;
     position: absolute;
@@ -154,104 +141,36 @@
 </style>
 
 <script>
+/*
+  Sadece köprü: mobil gear → desktop #theme-toggle click
+  Dark mode sistemi tamamen sitenin orijinal JS'ine bırakıldı.
+*/
 (function () {
-  /* ────────────────────────────────────────────────
-     Theme persistence + icon rendering
-     Works whether your theme JS uses:
-       • document.documentElement.classList  ('dark')
-       • document.documentElement.setAttribute('data-theme','dark')
-       • localStorage key  'theme' | 'color-scheme' | 'darkMode'
-  ──────────────────────────────────────────────── */
-
-  var STORAGE_KEYS = ['theme', 'color-scheme', 'colorScheme', 'darkMode'];
-
-  /* Unicode code-points so we don't depend on FA class names */
-  var ICON_GEAR  = '\uf013'; /* fa-gear / fa-cog — same glyph */
-  var ICON_SUN   = '\uf185'; /* fa-sun */
-  var ICON_MOON  = '\uf186'; /* fa-moon */
-
-  function isDarkNow() {
-    var html = document.documentElement;
-    if (html.classList.contains('dark')) return true;
-    if (html.getAttribute('data-theme') === 'dark') return true;
-    for (var i = 0; i < STORAGE_KEYS.length; i++) {
-      var v = localStorage.getItem(STORAGE_KEYS[i]);
-      if (v === 'dark' || v === 'true') return true;
-    }
-    /* Respect OS preference as fallback */
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) return true;
-    return false;
+  function mirrorIcon() {
+    var src  = document.getElementById('theme-icon');
+    var dest = document.getElementById('theme-icon-mobile');
+    if (src && dest) dest.className = src.className;
   }
-
-  function applyTheme(dark) {
-    var html = document.documentElement;
-    if (dark) {
-      html.classList.add('dark');
-      html.setAttribute('data-theme', 'dark');
-    } else {
-      html.classList.remove('dark');
-      html.setAttribute('data-theme', 'light');
-    }
-  }
-
-  function setIcons(dark) {
-    /* Gear icon always shown on both desktop and mobile */
-    ['theme-icon', 'theme-icon-mobile'].forEach(function (id) {
-      var el = document.getElementById(id);
-      if (!el) return;
-      el.textContent = ICON_GEAR;
-      el.title       = dark ? 'Switch to light mode' : 'Switch to dark mode';
-    });
-  }
-
-  function toggleTheme() {
-    var dark = !isDarkNow();
-    applyTheme(dark);
-    setIcons(dark);
-    /* Persist so page reloads remember the choice */
-    STORAGE_KEYS.forEach(function (k) {
-      if (localStorage.getItem(k) !== null) {
-        localStorage.setItem(k, dark ? 'dark' : 'light');
-      }
-    });
-    /* Also write the most common key in case nothing was set yet */
-    localStorage.setItem('theme', dark ? 'dark' : 'light');
-  }
-
-  /* ── Run immediately (before paint) to avoid flash ── */
-  applyTheme(isDarkNow());
 
   document.addEventListener('DOMContentLoaded', function () {
-    setIcons(isDarkNow());
+    var mobileBtn     = document.getElementById('theme-toggle-mobile');
+    var desktopToggle = document.getElementById('theme-toggle');
 
-    /* Wire up BOTH toggles */
-    ['theme-toggle', 'theme-toggle-mobile'].forEach(function (id) {
-      var el = document.getElementById(id);
-      if (el) el.addEventListener('click', function (e) {
+    if (mobileBtn && desktopToggle) {
+      mobileBtn.addEventListener('click', function (e) {
         e.preventDefault();
-        toggleTheme();
+        desktopToggle.click();
       });
-    });
-
-    /* Watch for external theme changes (e.g. the theme's own JS) */
-    var observer = new MutationObserver(function () {
-      setIcons(isDarkNow());
-    });
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ['class', 'data-theme']
-    });
-
-    /* Watch OS dark mode changes */
-    if (window.matchMedia) {
-      window.matchMedia('(prefers-color-scheme: dark)')
-        .addEventListener('change', function (e) {
-          if (!localStorage.getItem('theme')) {
-            applyTheme(e.matches);
-            setIcons(e.matches);
-          }
-        });
     }
+
+    /* Desktop icon class değişince mobili de güncelle */
+    var srcIcon = document.getElementById('theme-icon');
+    if (srcIcon) {
+      new MutationObserver(mirrorIcon).observe(srcIcon, {
+        attributes: true, attributeFilter: ['class']
+      });
+    }
+    mirrorIcon();
   });
 })();
 </script>
