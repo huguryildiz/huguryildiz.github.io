@@ -89,7 +89,6 @@ defaults:
       comments: false
       share: false
       related: false
-      classes: wide
 
 # =========================
 # Markdown
