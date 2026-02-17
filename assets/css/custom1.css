@@ -353,28 +353,6 @@ details[open] { margin-bottom: 0.2rem; }
 }
 
 /* =========================================================
-   15b) Mobile Navigation - Simplified approach
-   ========================================================= */
-@media screen and (max-width: 768px) {
-  /* Hide items with mobile-hide class (like CV link) */
-  .visible-links .mobile-hide {
-    display: none !important;
-  }
-  
-  /* Ensure toggle button is visible and positioned correctly */
-  #theme-toggle {
-    display: inline-block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
-  
-  /* Add spacing for better layout */
-  .greedy-nav button {
-    margin-left: 1rem !important;
-  }
-}
-
-/* =========================================================
    16) Home page - LinkedIn embed (moved from inline <style>)
    ========================================================= */
 .linkedin-grid{
