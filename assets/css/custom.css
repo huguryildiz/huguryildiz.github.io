@@ -375,24 +375,6 @@ details[open] { margin-bottom: 0.2rem; }
   border: none;
 }
 
-/* Mobile: force ALL top links (including CV) into hamburger */
-@media (max-width: 768px) {
-
-  /* Keep the site title visible, but make link area "no space" */
-  .greedy-nav .visible-links{
-    width: 0 !important;
-    flex: 0 0 0 !important;
-    overflow: hidden !important;
-    white-space: nowrap !important;
-  }
-
-  /* Ensure hamburger is visible */
-  .greedy-nav__toggle{
-    display: inline-flex !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
-}
 
 /* =========================================================
    Mobile nav: keep theme toggle + hamburger visible
@@ -414,24 +396,43 @@ details[open] { margin-bottom: 0.2rem; }
 }
 
 @media (max-width: 768px){
-  .greedy-nav{
+  /* Keep header on one line */
+  .masthead__menu .greedy-nav{
     display: flex !important;
     align-items: center !important;
     flex-wrap: nowrap !important;
   }
 
-  /* put controls on the right */
-  .theme-toggle{
+  /* Site title: single line, no wrapping */
+  .masthead__menu .site-title{
+    white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Force ALL menu items into the hamburger by giving visible-links zero space.
+     (Do NOT use display:none; greedy-nav needs widths to move items into hidden-links.) */
+  .masthead__menu .greedy-nav .visible-links{
+    width: 0 !important;
+    flex: 0 0 0 !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+  }
+
+  /* Put controls on the right (theme toggle + hamburger) */
+  .masthead__menu .theme-toggle{
     margin-left: auto !important;
   }
 
-  .greedy-nav__toggle{
+  /* Ensure hamburger stays visible */
+  .masthead__menu .greedy-nav__toggle{
     display: inline-flex !important;
     visibility: visible !important;
     opacity: 1 !important;
   }
 
-  .greedy-nav .hidden-links{
+  /* Make sure the dropdown is above everything */
+  .masthead__menu .greedy-nav .hidden-links{
     z-index: 9999 !important;
   }
 }
