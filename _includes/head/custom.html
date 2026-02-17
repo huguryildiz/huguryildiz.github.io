@@ -29,24 +29,4 @@
 <script data-goatcounter="https://huguryildiz.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
-<script>
-(function () {
-  const KEY = "theme"; // "dark" | "light"
-  function applyTheme(theme){
-    const root = document.documentElement;
-    root.classList.toggle("dark", theme === "dark");
-    root.setAttribute("data-theme", theme);
-  }
-  function getInitialTheme(){
-    try{
-      const saved = localStorage.getItem(KEY);
-      if(saved === "dark" || saved === "light") return saved;
-    } catch(e){}
-    const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-    return prefersDark ? "dark" : "light";
-  }
-  applyTheme(getInitialTheme());
-})();
-</script>
-
 <!-- end custom head snippets -->
