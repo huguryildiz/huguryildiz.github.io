@@ -397,9 +397,12 @@ details[open] { margin-bottom: 0.2rem; }
 
 @media (max-width: 768px){
 <<<<<<< HEAD
+<<<<<<< HEAD
   /* Keep header on one line */
   .masthead__menu .greedy-nav{
 =======
+=======
+>>>>>>> parent of 1e2be73 (.)
   .greedy-nav{
 >>>>>>> parent of 1e2be73 (.)
     display: flex !important;
@@ -408,6 +411,7 @@ details[open] { margin-bottom: 0.2rem; }
     position: relative !important;
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   /* Site title: single line (truncate if needed) */
   .masthead__menu .site-title{
@@ -436,11 +440,16 @@ details[open] { margin-bottom: 0.2rem; }
   /* put controls on the right */
   .theme-toggle{
 >>>>>>> parent of 1e2be73 (.)
+=======
+  /* put controls on the right */
+  .theme-toggle{
+>>>>>>> parent of 1e2be73 (.)
     margin-left: auto !important;
     display: inline-flex !important;
     align-items: center !important;
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   /* Ensure hamburger stays visible */
   .masthead__menu .greedy-nav__toggle{
@@ -450,6 +459,8 @@ details[open] { margin-bottom: 0.2rem; }
   }
   .masthead__menu .greedy-nav__toggle.hidden{
 =======
+=======
+>>>>>>> parent of 1e2be73 (.)
   .greedy-nav__toggle{
 >>>>>>> parent of 1e2be73 (.)
     display: inline-flex !important;
@@ -458,9 +469,12 @@ details[open] { margin-bottom: 0.2rem; }
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   /* Dropdown above everything */
   .masthead__menu .greedy-nav .hidden-links{
 =======
+=======
+>>>>>>> parent of 1e2be73 (.)
   .greedy-nav .hidden-links{
 >>>>>>> parent of 1e2be73 (.)
     z-index: 9999 !important;
