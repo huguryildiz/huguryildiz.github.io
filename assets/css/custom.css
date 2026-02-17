@@ -401,27 +401,35 @@ details[open] { margin-bottom: 0.2rem; }
     display: flex !important;
     align-items: center !important;
     flex-wrap: nowrap !important;
+    position: relative !important;
   }
 
-  /* Site title: single line, no wrapping */
+  /* Site title: single line (truncate if needed) */
   .masthead__menu .site-title{
     white-space: nowrap !important;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: calc(100vw - 150px) !important; /* leave room for icons */
   }
 
-  /* Force ALL menu items into the hamburger by giving visible-links zero space.
-     (Do NOT use display:none; greedy-nav needs widths to move items into hidden-links.) */
+  /* IMPORTANT: Hide visible links from layout WITHOUT display:none
+     so greedy-nav JS can still measure/move them into hidden-links. */
   .masthead__menu .greedy-nav .visible-links{
-    width: 0 !important;
-    flex: 0 0 0 !important;
-    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: 0 !important;
+    width: auto !important;
+    flex: 0 0 auto !important;
+    overflow: visible !important;
     white-space: nowrap !important;
   }
 
-  /* Put controls on the right (theme toggle + hamburger) */
+  /* Keep theme toggle + hamburger on the right */
+  .masthead__menu #theme-toggle,
   .masthead__menu .theme-toggle{
     margin-left: auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
   }
 
   /* Ensure hamburger stays visible */
@@ -430,8 +438,13 @@ details[open] { margin-bottom: 0.2rem; }
     visibility: visible !important;
     opacity: 1 !important;
   }
+  .masthead__menu .greedy-nav__toggle.hidden{
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
 
-  /* Make sure the dropdown is above everything */
+  /* Dropdown above everything */
   .masthead__menu .greedy-nav .hidden-links{
     z-index: 9999 !important;
   }
