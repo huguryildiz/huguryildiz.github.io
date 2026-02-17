@@ -353,28 +353,6 @@ details[open] { margin-bottom: 0.2rem; }
 }
 
 /* =========================================================
-   15b) Mobile Navigation - Simplified approach
-   ========================================================= */
-@media screen and (max-width: 768px) {
-  /* Hide items with mobile-hide class (like CV link) */
-  .visible-links .mobile-hide {
-    display: none !important;
-  }
-  
-  /* Ensure toggle button is visible and positioned correctly */
-  #theme-toggle {
-    display: inline-block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
-  
-  /* Add spacing for better layout */
-  .greedy-nav button {
-    margin-left: 1rem !important;
-  }
-}
-
-/* =========================================================
    16) Home page - LinkedIn embed (moved from inline <style>)
    ========================================================= */
 .linkedin-grid{
@@ -395,4 +373,71 @@ details[open] { margin-bottom: 0.2rem; }
   width: 100%;
   height: 360px;
   border: none;
+}
+
+/* =========================================================
+   17) Masthead controls + Mobile nav (ALL links in hamburger)
+   - Theme toggle ALWAYS visible
+   - All nav links (including CV) move into hamburger on mobile
+   ========================================================= */
+
+.masthead-controls{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.theme-toggle{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 6px 10px;
+}
+
+.theme-toggle #theme-icon{
+  font-size: 18px;
+  line-height: 1;
+}
+
+@media (max-width: 768px){
+
+  /* Keep header on one line */
+  .masthead__menu .greedy-nav{
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+  }
+
+  /* Title: single line, shorten with ellipsis if needed */
+  .masthead__menu .site-title{
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 58vw;  /* gerekirse 50vw / 65vw yap */
+  }
+
+  /* Force ALL menu items into hamburger by giving visible-links zero space.
+     (DO NOT use display:none; greedy-nav needs widths to move items into hidden-links.) */
+  .masthead__menu .greedy-nav .visible-links{
+    width: 0 !important;
+    flex: 0 0 0 !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+  }
+
+  /* Ensure hamburger stays visible */
+  .masthead__menu .greedy-nav__toggle{
+    display: inline-flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Dropdown above everything */
+  .masthead__menu .greedy-nav .hidden-links{
+    z-index: 9999 !important;
+  }
 }
