@@ -1,13 +1,140 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#20e0ff" stop-opacity="0.85"></stop>
+      <stop offset="35%" stop-color="#0d6ea6" stop-opacity="0.95"></stop>
+      <stop offset="70%" stop-color="#062844" stop-opacity="1"></stop>
+      <stop offset="100%" stop-color="#030a12" stop-opacity="1"></stop>
+    </radialGradient>
 
-  <!-- Rotated triangle (centered properly) -->
-  <polygon points="25,50 75,25 75,75" fill="none" stroke="#0A3D91" stroke-width="6" stroke-linejoin="round"></polygon>
+    <radialGradient id="badge" cx="50%" cy="25%" r="80%">
+      <stop offset="0%" stop-color="#10d7ff" stop-opacity="0.45"></stop>
+      <stop offset="40%" stop-color="#0a5e8f" stop-opacity="0.55"></stop>
+      <stop offset="100%" stop-color="#031a2e" stop-opacity="0.95"></stop>
+    </radialGradient>
 
-  <!-- Larger nodes with safe margin -->
-  <circle cx="25" cy="50" r="9" fill="#0A3D91"></circle>
-  <circle cx="75" cy="25" r="9" fill="#0A3D91"></circle>
-  <circle cx="75" cy="75" r="9" fill="#0A3D91"></circle>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e9fbff"></stop>
+      <stop offset="45%" stop-color="#78f0ff"></stop>
+      <stop offset="100%" stop-color="#1dd3ff"></stop>
+    </linearGradient>
 
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="b"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+
+    <filter id="nodeGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="10" result="b"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="b"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+
+    <!-- NEW: outer clip so nothing leaks outside circle -->
+    <clipPath id="clipOuter">
+      <circle cx="512" cy="512" r="430"></circle>
+    </clipPath>
+
+    <clipPath id="clipCircle">
+      <circle cx="512" cy="512" r="420"></circle>
+    </clipPath>
+  </defs>
+
+  <!-- REMOVED: outer vignette rect -->
+
+  <!-- Everything clipped to outer circle -->
+  <g clip-path="url(#clipOuter)">
+
+    <circle cx="512" cy="512" r="430" fill="url(#badge)"></circle>
+    <circle cx="512" cy="512" r="430" fill="none" stroke="#0ef" stroke-opacity="0.25" stroke-width="10"></circle>
+    <circle cx="512" cy="512" r="400" fill="none" stroke="#a8f6ff" stroke-opacity="0.15" stroke-width="6"></circle>
+
+    <!-- Bubbles -->
+    <g clip-path="url(#clipCircle)" opacity="0.55">
+      <g fill="#bff7ff" opacity="0.35">
+        <circle cx="250" cy="360" r="8"></circle><circle cx="220" cy="420" r="6"></circle>
+        <circle cx="270" cy="440" r="10"></circle><circle cx="210" cy="520" r="7"></circle>
+        <circle cx="260" cy="560" r="5"></circle><circle cx="300" cy="520" r="7"></circle>
+      </g>
+      <g fill="#bff7ff" opacity="0.30">
+        <circle cx="800" cy="380" r="9"></circle><circle cx="820" cy="450" r="6"></circle>
+        <circle cx="780" cy="500" r="10"></circle><circle cx="835" cy="560" r="7"></circle>
+        <circle cx="790" cy="610" r="5"></circle><circle cx="760" cy="560" r="7"></circle>
+      </g>
+      <g fill="#d7fbff" opacity="0.25">
+        <circle cx="420" cy="430" r="2"></circle><circle cx="470" cy="470" r="2"></circle>
+        <circle cx="560" cy="420" r="2"></circle><circle cx="610" cy="480" r="2"></circle>
+        <circle cx="520" cy="520" r="2"></circle><circle cx="450" cy="560" r="2"></circle>
+        <circle cx="590" cy="560" r="2"></circle><circle cx="650" cy="520" r="2"></circle>
+      </g>
+    </g>
+
+    <!-- WiFi -->
+    <g filter="url(#glow)" fill="none" stroke="url(#neon)" stroke-linecap="round" stroke-width="22" opacity="0.95">
+      <path d="M360 300 C430 240, 594 240, 664 300"></path>
+      <path d="M402 350 C450 310, 574 310, 622 350" stroke-width="20"></path>
+      <path d="M450 402 C480 382, 544 382, 574 402" stroke-width="18"></path>
+    </g>
+
+    <!-- Network -->
+    <g filter="url(#glow)" stroke="url(#neon)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.95">
+      <path d="M290 520 L420 430 L560 470 L740 460"></path>
+      <path d="M290 520 L520 560 L740 460"></path>
+      <path d="M420 430 L520 560 L560 470"></path>
+      <path d="M520 560 L650 610 L740 460"></path>
+      <path d="M560 470 L650 610"></path>
+    </g>
+
+    <!-- Nodes -->
+    <g>
+      <g filter="url(#nodeGlow)">
+        <circle cx="290" cy="520" r="26" fill="#e9fbff"></circle>
+        <circle cx="420" cy="430" r="22" fill="#e9fbff"></circle>
+        <circle cx="560" cy="470" r="22" fill="#e9fbff"></circle>
+        <circle cx="740" cy="460" r="26" fill="#e9fbff"></circle>
+        <circle cx="520" cy="560" r="28" fill="#e9fbff"></circle>
+        <circle cx="650" cy="610" r="22" fill="#e9fbff"></circle>
+      </g>
+      <g opacity="0.45">
+        <circle cx="290" cy="520" r="26" fill="#1dd3ff"></circle>
+        <circle cx="420" cy="430" r="22" fill="#1dd3ff"></circle>
+        <circle cx="560" cy="470" r="22" fill="#1dd3ff"></circle>
+        <circle cx="740" cy="460" r="26" fill="#1dd3ff"></circle>
+        <circle cx="520" cy="560" r="28" fill="#1dd3ff"></circle>
+        <circle cx="650" cy="610" r="22" fill="#1dd3ff"></circle>
+      </g>
+    </g>
+
+    <!-- Gear -->
+    <g transform="translate(512 720)" filter="url(#glow)" opacity="0.95">
+      <g fill="url(#neon)">
+        <rect x="-18" y="-92" width="36" height="38" rx="8"></rect>
+        <rect x="-18" y="54" width="36" height="38" rx="8"></rect>
+        <rect x="-92" y="-18" width="38" height="36" rx="8"></rect>
+        <rect x="54" y="-18" width="38" height="36" rx="8"></rect>
+        <rect x="-70" y="-70" width="34" height="34" rx="8" transform="rotate(45)"></rect>
+        <rect x="36" y="-70" width="34" height="34" rx="8" transform="rotate(45)"></rect>
+        <rect x="-70" y="36" width="34" height="34" rx="8" transform="rotate(45)"></rect>
+        <rect x="36" y="36" width="34" height="34" rx="8" transform="rotate(45)"></rect>
+      </g>
+      <circle r="92" fill="none" stroke="url(#neon)" stroke-width="18"></circle>
+      <circle r="38" fill="none" stroke="url(#neon)" stroke-width="18"></circle>
+    </g>
+
+    <!-- Leaves -->
+    <g clip-path="url(#clipCircle)" opacity="0.75" filter="url(#glow)">
+      <path d="M210 770 C260 700, 350 690, 430 740 C500 785, 560 810, 620 792 C700 768, 760 720, 820 750 C770 860, 600 905, 512 905 C380 905, 250 860, 210 770 Z" fill="#0b5f93" opacity="0.55"></path>
+      <path d="M240 785 C290 725, 360 720, 430 758 C505 800, 565 830, 640 815 C720 800, 770 760, 800 770 C740 870, 610 900, 512 900 C395 900, 285 865, 240 785 Z" fill="#1dd3ff" opacity="0.25"></path>
+      <path d="M270 800 C340 760, 380 760, 450 795" fill="none" stroke="#78f0ff" stroke-width="10" opacity="0.35" stroke-linecap="round"></path>
+      <path d="M570 815 C650 770, 705 770, 770 805" fill="none" stroke="#78f0ff" stroke-width="10" opacity="0.35" stroke-linecap="round"></path>
+    </g>
+
+  </g>
 </svg></svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
 @media (prefers-color-scheme: dark) { :root { filter: none; } }
 </style></svg>
