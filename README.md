@@ -8,7 +8,7 @@ Research interests: operations reserach, network optimization, wireless & underw
 
 ## Pages
 
-- **[CV](https://huguryildiz.com/cv/)** — Academic and professional background, education, awards, and technical toolbox.
+- **[Curriculum Vitae](https://huguryildiz.com/cv/)** — Academic and professional background, education, awards, and technical toolbox.
 - **[Publications](https://huguryildiz.com/publications/)** — Journal articles, conference papers, and editorials with DOI links.
 - **[Research](https://huguryildiz.com/research/)** — Research topics spanning optimization, wireless/underwater networks, drone networks, and hybrid RL-based control.
 - **[Service](https://huguryildiz.com/service/)** — Editorial, reviewer, and committee roles.
