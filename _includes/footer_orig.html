@@ -1,101 +1,108 @@
 {% include base_path %}
-
 <div class="footer__top">
-  <div class="footer__extras" style="display:flex; justify-content:space-between; align-items:flex-start; gap:20px; flex-wrap:wrap;">
-    <div style="display:flex; flex-direction:column; gap:10px;">
+<div class="footer__extras" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
+  <!-- Left Column: Sitemap + Follow + Listening + Visitors -->
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <!-- Sitemap -->
+    <div>
+      <strong><a href="/sitemap/" style="color: #999;">Sitemap</a></strong>
+    </div>
+    
+    <!-- Follow -->
+    {% if site.author.github or site.author.bitbucket or site.atom_feed.hide != true %}
+    <div class="page__footer-follow">
+      <ul class="social-icons">
+        {% if site.data.ui-text[site.locale].follow_label %}
+          <li><strong style="color: #999;">{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
+        {% endif %}
+        {% if site.author.github %}
+          <li><a href="https://github.com/{{ site.author.github }}" style="color: #999;"><i class="fab fa-github"></i> GitHub</a></li>
+        {% endif %}
+        {% if site.author.bitbucket %}
+          <li><a href="https://bitbucket.org/{{ site.author.bitbucket }}" style="color: #999;"><i class="fab fa-bitbucket"></i> Bitbucket</a></li>
+        {% endif %}
+        {% if site.atom_feed.hide != true %}
+          <li>
+            <a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" style="color: #999;">
+              <i class="fa fa-fw fa-rss-square"></i>
+              {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}
+            </a>
+          </li>
+        {% endif %}
+      </ul>
+    </div>
+    {% endif %}
 
-      <div>
-        <a href="/sitemap/" style="color:#999;">Sitemap</a>
-      </div>
+    <!-- Listening -->
+    <div class="page__footer-follow">
+      <ul class="social-icons">
+        <li>
+          <i class="fa-solid fa-music" style="color:#999;"></i>
+        </li>
+        <li>
+          <a href="https://open.spotify.com/playlist/0rGMcXyrxCuw5GGxl9WwXX"
+             style="color: #999; text-decoration: none;" target="_blank">
+            <i class="fab fa-spotify"></i> Jazz
+          </a>
+        </li>
+        <li>
+          <a href="https://open.spotify.com/playlist/5bOF9kW6kCyQkrXdiUTwAu"
+             style="color: #999; text-decoration: none;" target="_blank">
+            <i class="fab fa-spotify"></i> Metal
+          </a>
+        </li>
+        <li>
+          <a href="https://open.spotify.com/playlist/1cJ9WnD1JoJJV4VzdQ1K1Z"
+             style="color: #999; text-decoration: none;" target="_blank">
+            <i class="fab fa-spotify"></i> House
+          </a>
+        </li>
+      </ul>
+    </div>
 
-      {% if site.author.github or site.author.bitbucket or site.atom_feed.hide != true %}
-      <div class="page__footer-follow">
-        <ul class="social-icons">
-          {% if site.data.ui-text[site.locale].follow_label %}
-            <li style="color:#999;">{{ site.data.ui-text[site.locale].follow_label }}</li>
-          {% endif %}
-
-          {% if site.author.github %}
-            <li><a href="https://github.com/{{ site.author.github }}" style="color:#999;"><i class="fab fa-github"></i> GitHub</a></li>
-          {% endif %}
-
-          {% if site.author.bitbucket %}
-            <li><a href="https://bitbucket.org/{{ site.author.bitbucket }}" style="color:#999;"><i class="fab fa-bitbucket"></i> Bitbucket</a></li>
-          {% endif %}
-
-          {% if site.atom_feed.hide != true %}
-            <li>
-              <a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" style="color:#999;">
-                <i class="fa fa-fw fa-rss-square"></i>
-                {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}
-              </a>
-            </li>
-          {% endif %}
-        </ul>
-      </div>
-      {% endif %}
-
-      <div class="page__footer-follow">
-        <ul class="social-icons">
-          <li><i class="fa-solid fa-music" style="color:#999;"></i></li>
-          <li><a href="https://open.spotify.com/playlist/0rGMcXyrxCuw5GGxl9WwXX" style="color:#999; text-decoration:none;" target="_blank" rel="noopener"><i class="fab fa-spotify"></i> Jazz</a></li>
-          <li><a href="https://open.spotify.com/playlist/5bOF9kW6kCyQkrXdiUTwAu" style="color:#999; text-decoration:none;" target="_blank" rel="noopener"><i class="fab fa-spotify"></i> Metal</a></li>
-          <li><a href="https://open.spotify.com/playlist/1cJ9WnD1JoJJV4VzdQ1K1Z" style="color:#999; text-decoration:none;" target="_blank" rel="noopener"><i class="fab fa-spotify"></i> House</a></li>
-        </ul>
-      </div>
-
-      <div class="page__footer-visitors">
-        <span style="color:#999;">Visitors</span>
-        <div class="footer__clustrmap" style="margin-top:10px; margin-bottom:10px;">
-          <div style="width:100px; height:100px;">
-            <script type="text/javascript" id="clstr_globe"
-              src="//clustrmaps.com/globe.js?d=Ff5N5seCdUggOy-cQ08tNCYmISlt6bFGtSiHyvOpvNA">
-            </script>
-          </div>
+    <!-- Visitors map -->
+    <div class="page__footer-visitors">
+      <strong><span style="color: #999;">Visitors</span></strong>
+      <div class="footer__clustrmap" style="margin-top: 10px; margin-bottom: 20px;">
+        <div style="width: 100px; height: 100px;">
+          <script
+            type="text/javascript"
+            id="clstr_globe"
+            src="//clustrmaps.com/globe.js?d=Ff5N5seCdUggOy-cQ08tNCYmISlt6bFGtSiHyvOpvNA">
+          </script>
         </div>
       </div>
-
     </div>
   </div>
 </div>
+</div>
 
-<!-- GoatCounter tracking (load ONCE) -->
+<script>
+    var t = setInterval(function() {
+        if (window.goatcounter && window.goatcounter.visit_count) {
+            clearInterval(t)
+            window.goatcounter.visit_count({append: 'body'})
+        }
+    }, 100)
+</script>
 <script data-goatcounter="https://huguryildiz.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
-<div class="page__footer-copyright" style="color:#999;">
+<script>
+    // Append to the <body>; can use a CSS selector to append somewhere else.
+    window.goatcounter.visit_count({append: 'body'})
+</script>
+<script data-goatcounter="https://huguryildiz.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+<div class="page__footer-copyright">
   &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }},
-  Powered by
+  {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }}
   <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp;
   <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>,
   a fork of
   <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">
     Minimal Mistakes
-  </a>.
-  <br>
-  Visits: <span id="gc-visits">–</span>
-  <br>
+  </a>.<br />
   Site last updated {{ "now" | date: '%Y-%m-%d' }}
 </div>
-
-<script>
-(async function () {
-  try {
-    // GoatCounter docs: /counter/<path>.json returns { count: "..." }   [oai_citation:1‡huguryildiz.goatcounter.com](https://huguryildiz.goatcounter.com/help/visitor-counter)
-    const path =
-      (window.goatcounter && window.goatcounter.get_data)
-        ? window.goatcounter.get_data().p
-        : location.pathname;
-
-    const url = "https://huguryildiz.goatcounter.com/counter/" +
-                encodeURIComponent(path) + ".json";
-
-    const r = await fetch(url, { cache: "no-store" });
-    if (!r.ok) return;
-
-    const data = await r.json();
-    const el = document.getElementById("gc-visits");
-    if (el && data && data.count) el.textContent = data.count;
-  } catch (e) {}
-})();
-</script>
