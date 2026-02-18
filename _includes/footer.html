@@ -3,7 +3,6 @@
 <div class="footer__top">
   <div class="footer__extras" style="display:flex; justify-content:space-between; align-items:flex-start; gap:20px; flex-wrap:wrap;">
 
-    <!-- Left Column: Sitemap + Follow + Listening + Visitors + Visits -->
     <div style="display:flex; flex-direction:column; gap:10px;">
 
       <!-- Sitemap -->
@@ -15,23 +14,13 @@
       {% if site.author.github or site.author.bitbucket or site.atom_feed.hide != true %}
       <div class="page__footer-follow">
         <ul class="social-icons">
-          {% if site.data.ui-text[site.locale].follow_label %}
-            <li><strong style="color:#999;">{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
-          {% endif %}
-
           {% if site.author.github %}
             <li><a href="https://github.com/{{ site.author.github }}" style="color:#999;"><i class="fab fa-github"></i> GitHub</a></li>
           {% endif %}
-
-          {% if site.author.bitbucket %}
-            <li><a href="https://bitbucket.org/{{ site.author.bitbucket }}" style="color:#999;"><i class="fab fa-bitbucket"></i> Bitbucket</a></li>
-          {% endif %}
-
           {% if site.atom_feed.hide != true %}
             <li>
-              <a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" style="color:#999;">
-                <i class="fa fa-fw fa-rss-square"></i>
-                {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}
+              <a href="{{ base_path }}/feed.xml" style="color:#999;">
+                <i class="fa fa-fw fa-rss-square"></i> Feed
               </a>
             </li>
           {% endif %}
@@ -43,80 +32,55 @@
       <div class="page__footer-follow">
         <ul class="social-icons">
           <li><i class="fa-solid fa-music" style="color:#999;"></i></li>
-
-          <li>
-            <a href="https://open.spotify.com/playlist/0rGMcXyrxCuw5GGxl9WwXX"
-               style="color:#999; text-decoration:none;" target="_blank" rel="noopener">
-              <i class="fab fa-spotify"></i> Jazz
-            </a>
-          </li>
-
-          <li>
-            <a href="https://open.spotify.com/playlist/5bOF9kW6kCyQkrXdiUTwAu"
-               style="color:#999; text-decoration:none;" target="_blank" rel="noopener">
-              <i class="fab fa-spotify"></i> Metal
-            </a>
-          </li>
-
-          <li>
-            <a href="https://open.spotify.com/playlist/1cJ9WnD1JoJJV4VzdQ1K1Z"
-               style="color:#999; text-decoration:none;" target="_blank" rel="noopener">
-              <i class="fab fa-spotify"></i> House
-            </a>
-          </li>
+          <li><a href="https://open.spotify.com/playlist/0rGMcXyrxCuw5GGxl9WwXX" style="color:#999;" target="_blank" rel="noopener"><i class="fab fa-spotify"></i> Jazz</a></li>
+          <li><a href="https://open.spotify.com/playlist/5bOF9kW6kCyQkrXdiUTwAu" style="color:#999;" target="_blank" rel="noopener"><i class="fab fa-spotify"></i> Metal</a></li>
+          <li><a href="https://open.spotify.com/playlist/1cJ9WnD1JoJJV4VzdQ1K1Z" style="color:#999;" target="_blank" rel="noopener"><i class="fab fa-spotify"></i> House</a></li>
         </ul>
       </div>
 
       <!-- Visitors map -->
       <div class="page__footer-visitors">
         <strong><span style="color:#999;">Visitors</span></strong>
-        <div class="footer__clustrmap" style="margin-top:10px; margin-bottom:10px;">
-          <div style="width:100px; height:100px;">
-            <script
-              type="text/javascript"
-              id="clstr_globe"
-              src="//clustrmaps.com/globe.js?d=Ff5N5seCdUggOy-cQ08tNCYmISlt6bFGtSiHyvOpvNA">
-            </script>
-          </div>
+        <div style="width:100px; height:100px; margin-top:10px;">
+          <script src="//clustrmaps.com/globe.js?d=Ff5N5seCdUggOy-cQ08tNCYmISlt6bFGtSiHyvOpvNA"></script>
         </div>
-      </div>
-
-      <!-- GoatCounter visible counter (optional) -->
-      <div class="page__footer-visits" style="color:#999;">
-        <strong>Visits:</strong> <span id="gc-visits">–</span>
       </div>
 
     </div>
   </div>
 </div>
 
-<!-- GoatCounter (load ONCE) -->
+<div class="page__footer-copyright">
+  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }},
+  Powered by
+  <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp;
+  <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>,
+  a fork of
+  <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.
+  <span style="margin-left:10px; color:#999; font-size:0.85rem;">
+    | Visits: <span id="gc-visits">–</span>
+  </span>
+  <br />
+  Site last updated {{ "now" | date: '%Y-%m-%d' }}
+</div>
+
+<!-- GoatCounter (LOAD ONLY ONCE) -->
 <script data-goatcounter="https://huguryildiz.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
 <script>
-  (function () {
-    function render() {
-      if (!window.goatcounter || !window.goatcounter.visit_count) return false;
-      window.goatcounter.visit_count({
-        append: "#gc-visits",
-        no_branding: true
-      });
-      return true;
-    }
-    if (render()) return;
-    var t = setInterval(function () {
-      if (render()) clearInterval(t);
-    }, 200);
-  })();
+(function () {
+  function render() {
+    if (!window.goatcounter || !window.goatcounter.visit_count) return false;
+    window.goatcounter.visit_count({
+      append: "#gc-visits",
+      no_branding: true
+    });
+    return true;
+  }
+  if (render()) return;
+  var t = setInterval(function () {
+    if (render()) clearInterval(t);
+  }, 200);
+})();
 </script>
-
-<div class="page__footer-copyright">
-  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }},
-  {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }}
-  <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp;
-  <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>,
-  a fork of
-  <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.<br />
-  Site last updated {{ "now" | date: '%Y-%m-%d' }}
-</div>
