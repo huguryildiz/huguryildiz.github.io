@@ -102,7 +102,7 @@ permalink: /:categories/:title/
 # =========================
 author:
   name             : "Huseyin Ugur Yildiz"
-  avatar           : "profile.png"
+  avatar           : "huguryildiz.png"
   bio              : "Associate Professor of Electrical Engineering | IEEE Senior Member | Operations Research & ML/RL-Driven Network Optimization | Wireless, Underwater, and Aerial Networks"
   location         : "Ankara, Turkey"
   employer         : "TED University"
@@ -123,21 +123,21 @@ author:
       icon: "fas fa-file-pdf"
       url: "/files/Yildiz_HuseyinUgur_CV.pdf"
 
-    - label: "DBLP"
-      icon: "ai ai-dblp"
-      url: "https://dblp.org/pid/160/4924.html"
+#    - label: "DBLP"
+#      icon: "ai ai-dblp"
+#      url: "https://dblp.org/pid/160/4924.html"
 
-    - label: "ResearcherID"
-      icon: "ai ai-researcherid"
-      url: "https://www.webofscience.com/wos/author/record/S-6587-2016"
+#    - label: "ResearcherID"
+#      icon: "ai ai-researcherid"
+#      url: "https://www.webofscience.com/wos/author/record/S-6587-2016"
 
-    - label: "Scopus"
-      icon: "ai ai-scopus"
-      url: "https://www.scopus.com/authid/detail.uri?authorId=56242674200"
+#    - label: "Scopus"
+#      icon: "ai ai-scopus"
+#      url: "https://www.scopus.com/authid/detail.uri?authorId=56242674200"
 
-    - label: "IEEE"
-      icon: "ai ai-ieee"
-      url: "https://ieeexplore.ieee.org/author/37085350625"  
+#    - label: "IEEE"
+#      icon: "ai ai-ieee"
+#      url: "https://ieeexplore.ieee.org/author/37085350625"  
 
 # =========================
 # Excludes
