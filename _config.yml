@@ -97,13 +97,15 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:categories/:title/
 
+
+
 # =========================
 # Author Profile
 # =========================
 author:
   name             : "Huseyin Ugur Yildiz"
   avatar           : "huguryildiz.png"
-  bio              : "Associate Professor of Electrical Engineering | IEEE Senior Member | Operations Research & ML/RL-Driven Network Optimization | Wireless, Underwater, and Aerial Networks"
+  bio              : "Associate Professor of Electrical Engineering | IEEE Senior Member | Network Optimization | ML/RL | Wireless, Underwater & Aerial Networks | "
   location         : "Ankara, Turkey"
   employer         : "TED University"
   uri              : "https://www.tedu.edu.tr/en/huseyin-ugur-yildiz"
