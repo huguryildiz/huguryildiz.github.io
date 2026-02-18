@@ -381,18 +381,32 @@ details[open] { margin-bottom: 0.2rem; }
    - Align Listening row typography with copyright text
    - Remove bold styling from Visitors
    ========================================================= */
-/* Footer: academic divider row */
+
+/* Academic divider (top line) */
 .footer-academic{
   margin-top: 0.5rem;
   padding-top: 0.5rem;
-  border-top: 1px solid rgba(255,255,255,0.15);
-}
-
-html:not(.dark) .footer-academic,
-[data-theme="light"] .footer-academic{
   border-top: 1px solid rgba(0,0,0,0.12);
 }
 
+/* Secondary divider (before Listening) */
+.footer-sub-divider{
+  margin: 0.75rem 0;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Dark mode overrides (force light divider) */
+html.dark .footer-academic,
+[data-theme="dark"] .footer-academic{
+  border-top-color: rgba(255,255,255,0.15) !important;
+}
+
+html.dark .footer-sub-divider,
+[data-theme="dark"] .footer-sub-divider{
+  border-top-color: rgba(255,255,255,0.10) !important;
+}
+
+/* Separator between academic links ( | ) */
 .footer-sep{
   opacity: 0.6;
   margin: 0 6px;
@@ -424,5 +438,4 @@ html:not(.dark) .footer-academic,
 
 .footer-visitors-map{
   margin-top: 8px;
-}
 }
