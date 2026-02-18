@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+
+  <!-- Rotated triangle (centered properly) -->
+  <polygon points="25,50 75,25 75,75"
+           fill="none"
+           stroke="#0A3D91"
+           stroke-width="6"
+           stroke-linejoin="round"/>
+
+  <!-- Larger nodes with safe margin -->
+  <circle cx="25" cy="50" r="9" fill="#0A3D91"/>
+  <circle cx="75" cy="25" r="9" fill="#0A3D91"/>
+  <circle cx="75" cy="75" r="9" fill="#0A3D91"/>
+
+</svg>
