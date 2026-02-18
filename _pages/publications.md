@@ -205,13 +205,13 @@ custom_css:
 ![Conference](https://img.shields.io/badge/Type-Conference-lightgrey?style=flat-square) [![DOI](https://img.shields.io/badge/DOI-Available-blue?style=flat-square)](https://doi.org/10.1109/SIU.2017.7960228) [![PDF](https://img.shields.io/badge/PDF-Download-red?style=flat-square)](/files/papers/conference/national/yildiz2017assessment.pdf) [![Slides](https://img.shields.io/badge/Slides-Available-orange?style=flat-square)](https://drive.google.com/file/d/15euPq5RHnGhSFm788StYStlpDJEYPMBA/view?usp=sharing)
 
 <!-- ================================================================
-     INLINE SCRIPTS — filtre + donut grafikler
-     Harici JS dosyasına bağımlılık yok; timing sorunu yok.
+     INLINE SCRIPTS — filter + donut charts
+     No dependency on external JS files; no timing issues.
      ================================================================ -->
 <script type="text/javascript">
 (function () {
 
-  /* ── Her şeyi DOM hazır olduktan sonra çalıştır ── */
+  /* ── Run everything after DOM is ready ── */
   function onReady(fn) {
     if (document.readyState === "loading") {
       document.addEventListener("DOMContentLoaded", fn);
@@ -233,7 +233,7 @@ custom_css:
       "conf-nat"  : document.getElementById("conference-papers-national-turkish"),
     };
 
-    /* Her bölümün altındaki <ul> içindeki <li>'leri topla */
+    /* Collect all <li> elements inside the <ul> under each section */
     for (var type in headings) {
       var heading = headings[type];
       if (!heading) continue;
@@ -249,7 +249,7 @@ custom_css:
         var item = items[i];
         item.setAttribute("data-type", type);
 
-        /* Yıl çıkar: "(2024, November)" veya "(2024)" */
+        /* Extract year: "(2024, November)" or "(2024)" */
         var text  = item.textContent;
         var match =
           text.match(/\((\d{4}),\s*(?:January|February|March|April|May|June|July|August|September|October|November|December)\)/) ||
@@ -267,7 +267,7 @@ custom_css:
 
     if (!typeSelect || !yearSelect) return;
 
-    /* Yıl dropdown'ını doldur */
+    /* Populate the year dropdown */
     var years = {};
     for (var i = 0; i < allItems.length; i++) {
       var y = allItems[i].getAttribute("data-year");
@@ -279,7 +279,7 @@ custom_css:
       yearSelect.appendChild(opt);
     });
 
-    /* Filtre uygula */
+    /* Apply filter */
     function applyFilter() {
       var selType = typeSelect.value;
       var selYear = yearSelect.value;
@@ -294,7 +294,7 @@ custom_css:
         if (show) { visible++; counts[it.getAttribute("data-type")]++; }
       }
 
-      /* Bölüm başlıklarını gizle/göster */
+      /* Hide/show section headings */
       for (var type in headings) {
         if (headings[type]) {
           headings[type].style.display = counts[type] > 0 ? "" : "none";
@@ -321,7 +321,7 @@ custom_css:
   }
 
   /* ════════════════════════════════════════════════
-     2. DONUT GRAFİKLER (saf SVG — harici kütüphane yok)
+     2. DONUT CHARTS (pure SVG — no external library)
      ════════════════════════════════════════════════ */
   var CHARTS = [
     {
@@ -375,13 +375,13 @@ custom_css:
     wrap.innerHTML = "";
     wrap.style.display = "";
 
-    /* Başlık — CSS: .pub-chart__title */
+    /* Title — CSS: .pub-chart__title */
     var h = document.createElement("h3");
     h.className   = "pub-chart__title";
     h.textContent = cfg.title;
     wrap.appendChild(h);
 
-    /* Wrapper div — CSS: .qdonut-wrap (grid, tek sütun) */
+    /* Wrapper div — CSS: .qdonut-wrap (grid, single column) */
     var wrapInner = document.createElement("div");
     wrapInner.className = "qdonut-wrap";
     wrap.appendChild(wrapInner);
@@ -394,7 +394,7 @@ custom_css:
       role    : "img",
     });
 
-    /* Delik (hole) — CSS: .qdonut-hole */
+    /* Hole — CSS: .qdonut-hole */
     svg.appendChild(svgEl("circle", {
       cx: CX, cy: CY, r: RI,
       class: "qdonut-hole",
@@ -404,7 +404,7 @@ custom_css:
     cfg.slices.forEach(function (sl) {
       var sweep = sl.value / total * 360;
 
-      /* Dilim */
+      /* Slice */
       var path = svgEl("path", {
         d             : arc(CX, CY, (RO + RI) / 2, start, start + sweep),
         stroke        : sl.color,
@@ -413,7 +413,7 @@ custom_css:
       });
       svg.appendChild(path);
 
-      /* Dilim üstüne sayı — CSS: .qdonut-count */
+      /* Value label on slice — CSS: .qdonut-count */
       if (sl.value / total > 0.06) {
         var mp  = polar(CX, CY, (RO + RI) / 2, start + sweep / 2);
         var lbl = svgEl("text", {
@@ -429,7 +429,7 @@ custom_css:
       start += sweep;
     });
 
-    /* Merkez total — CSS: .qdonut-total / .qdonut-sub */
+    /* Center total — CSS: .qdonut-total / .qdonut-sub */
     var cNum = svgEl("text", {
       x: CX, y: CY - 12,
       "text-anchor"       : "middle",
@@ -473,12 +473,12 @@ custom_css:
     wrapInner.appendChild(legend);
   }
 
-  /* ── Başlat ── */
+  /* ── Initialize ── */
   onReady(function () {
     initFilter();
     CHARTS.forEach(buildDonut);
 
-    /* .pub-donuts-2col grid container'ı göster (display:none ile başlıyor) */
+    /* Show .pub-donuts-2col grid container (starts with display:none) */
     var dc = document.querySelector(".pub-donuts-2col");
     if (dc) dc.style.display = "";
   });
