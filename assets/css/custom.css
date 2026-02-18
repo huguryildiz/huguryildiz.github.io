@@ -384,8 +384,11 @@ details[open] { margin-bottom: 0.2rem; }
   font-size: inherit !important;
 }
 
-.page__footer-follow .social-icons a {
-  font-size: inherit !important;
-  font-weight: normal !important;
+/* Footer: Listening row only */
+.page__footer .footer-listening .social-icons,
+.page__footer .footer-listening .social-icons li,
+.page__footer .footer-listening .social-icons li a {
+  font-size: 1em !important;
+  font-weight: 400 !important;
   text-transform: none !important;
 }
