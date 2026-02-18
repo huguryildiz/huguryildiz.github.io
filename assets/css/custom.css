@@ -384,8 +384,13 @@ details[open] { margin-bottom: 0.2rem; }
 /* Footer: academic divider row */
 .footer-academic{
   margin-top: 0.5rem;
-  border-top: 1px solid rgba(0,0,0,0.1);
   padding-top: 0.5rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+html:not(.dark) .footer-academic,
+[data-theme="light"] .footer-academic{
+  border-top: 1px solid rgba(0,0,0,0.12);
 }
 
 .footer-sep{
