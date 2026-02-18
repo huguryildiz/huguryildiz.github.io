@@ -376,19 +376,48 @@ details[open] { margin-bottom: 0.2rem; }
 }
 
 /* =========================================================
-   17) Footer social icons typography (Listening row)
-   - Make footer "social-icons" match the copyright line
-   - Prevent forced uppercase + bold styling from theme
+   17) Footer layout & typography adjustments
+   - Clean academic divider row
+   - Align Listening row typography with copyright text
+   - Remove bold styling from Visitors
    ========================================================= */
-.page__footer-follow .social-icons {
-  font-size: inherit !important;
+/* Footer: academic divider row */
+.footer-academic{
+  margin-top: 0.5rem;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding-top: 0.5rem;
 }
 
-/* Footer: Listening row only */
+.footer-sep{
+  opacity: 0.6;
+  margin: 0 6px;
+}
+
+/* Footer: spacing block */
+.footer-blocks{
+  margin-top: 0.75rem;
+}
+
+/* Footer Listening: force same size as DBLP row */
 .page__footer .footer-listening .social-icons,
 .page__footer .footer-listening .social-icons li,
-.page__footer .footer-listening .social-icons li a {
+.page__footer .footer-listening .social-icons li a{
   font-size: 1em !important;
   font-weight: 400 !important;
   text-transform: none !important;
+}
+
+/* Visitors: not bold + same size */
+.footer-visitors{
+  margin-top: 0.75rem;
+  font-size: 1em;
+}
+
+.footer-visitors-title{
+  font-weight: 400;
+}
+
+.footer-visitors-map{
+  margin-top: 8px;
+}
 }
