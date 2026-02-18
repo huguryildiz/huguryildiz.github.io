@@ -374,3 +374,18 @@ details[open] { margin-bottom: 0.2rem; }
   height: 360px;
   border: none;
 }
+
+/* =========================================================
+   17) Footer social icons typography (Listening row)
+   - Make footer "social-icons" match the copyright line
+   - Prevent forced uppercase + bold styling from theme
+   ========================================================= */
+.page__footer-follow .social-icons {
+  font-size: inherit !important;
+}
+
+.page__footer-follow .social-icons a {
+  font-size: inherit !important;
+  font-weight: normal !important;
+  text-transform: none !important;
+}
