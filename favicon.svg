@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+
+  <!-- Rotated triangle (centered properly) -->
+  <polygon points="25,50 75,25 75,75" fill="none" stroke="#0A3D91" stroke-width="6" stroke-linejoin="round"></polygon>
+
+  <!-- Larger nodes with safe margin -->
+  <circle cx="25" cy="50" r="9" fill="#0A3D91"></circle>
+  <circle cx="75" cy="25" r="9" fill="#0A3D91"></circle>
+  <circle cx="75" cy="75" r="9" fill="#0A3D91"></circle>
+
+</svg></svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: none; } }
+</style></svg>
