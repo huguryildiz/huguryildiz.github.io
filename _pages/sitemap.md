@@ -5,7 +5,7 @@ permalink: /sitemap/
 ---
 
 - [Home](/)
-- [CV](/cv)
+- [Curriculum Vitae](/cv)
 - [Publications](/publications/)
 - [Research](/research/)
 - [Service](/service/)
