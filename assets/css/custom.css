@@ -439,3 +439,18 @@ html.dark .footer-sub-divider,
 .footer-visitors-map{
   margin-top: 8px;
 }
+
+/* Academic row spacing */
+.footer-academic {
+  margin: 1.4rem 0;
+}
+
+/* Divider spacing */
+.footer-sub-divider {
+  margin: 1.4rem 0;
+}
+
+/* Listening row spacing override */
+.page__footer-follow.footer-listening {
+  margin-top: 1.4rem !important;
+}
