@@ -17,10 +17,12 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
 
 ## Research Interests
 
+**Network Technologies & Systems**
+
 <div class="ra-container">
   <!-- Network Technologies & Systems -->
   <div class="ra-section">
-    <h3 class="ra-title">Network Technologies & Systems</h3>
+<!--     <h3 class="ra-title">Network Technologies & Systems</h3> -->
     <div class="ra-wrap">
       <span class="ra-chip ra-network">Ad Hoc Networks</span>
       <span class="ra-chip ra-network">Wireless Sensor Networks</span>
