@@ -377,25 +377,27 @@ details[open] { margin-bottom: 0.2rem; }
 
 /* =========================================================
    17) Footer layout & typography adjustments
-   - Clean academic divider row
-   - Align Listening row typography with copyright text
-   - Remove bold styling from Visitors
+   - Clean academic divider rows
+   - Compact spacing (no extra gap after the secondary divider)
+   - Keep footer link typography consistent
    ========================================================= */
 
 /* Academic divider (top line) */
 .footer-academic{
   margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
   padding-top: 0.5rem;
   border-top: 1px solid rgba(0,0,0,0.12);
 }
 
 /* Secondary divider (before Listening) */
 .footer-sub-divider{
-  margin: 0.75rem 0;
+  margin-top: 0.75rem;     /* space ABOVE the divider */
+  margin-bottom: 0;        /* remove space BELOW the divider */
   border-top: 1px solid rgba(0,0,0,0.06);
 }
 
-/* Dark mode overrides (force light divider) */
+/* Dark mode overrides (force light dividers) */
 html.dark .footer-academic,
 [data-theme="dark"] .footer-academic{
   border-top-color: rgba(255,255,255,0.15) !important;
@@ -412,12 +414,7 @@ html.dark .footer-sub-divider,
   margin: 0 6px;
 }
 
-/* Footer: spacing block */
-.footer-blocks{
-  margin-top: 0.75rem;
-}
-
-/* Footer Listening: force same size as DBLP row */
+/* Footer Listening typography (match academic row) */
 .page__footer .footer-listening .social-icons,
 .page__footer .footer-listening .social-icons li,
 .page__footer .footer-listening .social-icons li a{
@@ -426,31 +423,14 @@ html.dark .footer-sub-divider,
   text-transform: none !important;
 }
 
-/* Visitors: not bold + same size */
-.footer-visitors{
+/* IMPORTANT: override Minimal Mistakes default footer follow spacing */
+.page__footer-follow.footer-listening{
+  margin-top: 0.35rem !important; /* small gap after divider */
+}
+
+/* Optional: if you still use footer-blocks somewhere */
+.footer-blocks{
   margin-top: 0.75rem;
-  font-size: 1em;
 }
 
-.footer-visitors-title{
-  font-weight: 400;
-}
-
-.footer-visitors-map{
-  margin-top: 8px;
-}
-
-/* Academic row spacing */
-.footer-academic {
-  margin: 1.4rem 0;
-}
-
-/* Divider spacing */
-.footer-sub-divider {
-  margin: 1.4rem 0;
-}
-
-/* Listening row spacing override */
-.page__footer-follow.footer-listening {
-  margin-top: 1.4rem !important;
-}
+/* Visitors styles removed (since Visitors block is removed) */
