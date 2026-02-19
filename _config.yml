@@ -68,6 +68,7 @@ analytics:
   google:
     tracking_id: "G-FPSF7J6F4C"
     anonymize_ip: true
+google_tag_manager: "GTM-PXWMC3P"
 
 # =========================
 # Include Pages
