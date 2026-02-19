@@ -20,9 +20,7 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
 **Network Technologies & Systems**
 
 <div class="ra-container">
-  <!-- Network Technologies & Systems -->
   <div class="ra-section">
-<!--     <h3 class="ra-title">Network Technologies & Systems</h3> -->
     <div class="ra-wrap">
       <span class="ra-chip ra-network">Ad Hoc Networks</span>
       <span class="ra-chip ra-network">Wireless Sensor Networks</span>
@@ -32,12 +30,12 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
       <span class="ra-chip ra-network">Smart Grids</span>
     </div>
   </div>
+</div>
 
 **Optimization & Operations Research**
 
-  <!-- Optimization & Operations Research -->
+<div class="ra-container">
   <div class="ra-section">
-<!--     <h3 class="ra-title">Optimization & Operations Research</h3> -->
     <div class="ra-wrap">
       <span class="ra-chip ra-opt">Linear Programming</span>
       <span class="ra-chip ra-opt">Mixed-Integer Programming</span>
@@ -47,12 +45,12 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
       <span class="ra-chip ra-opt">Meta-Heuristics (SA/GA)</span>
     </div>
   </div>
+</div>
 
 **Artificial Intelligence & Machine Learning**
 
-  <!-- Artificial Intelligence & Machine Learning -->
+<div class="ra-container">
   <div class="ra-section">
- <!--     <h3 class="ra-title">Artificial Intelligence & Machine Learning</h3> -->
     <div class="ra-wrap">
       <span class="ra-chip ra-ai">Machine Learning</span>
       <span class="ra-chip ra-ai">Deep Learning</span>
@@ -61,18 +59,17 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
       <span class="ra-chip ra-ai">Proximal Policy Optimization</span>
     </div>
   </div>
+</div>
 
 **Quantum Networking**
 
-  <!-- Specialized Topics -->
+<div class="ra-container">
   <div class="ra-section">
- <!--    <h3 class="ra-title">Quantum Networking</h3> -->
     <div class="ra-wrap">
       <span class="ra-chip ra-quantum">Entanglement Routing</span>
     </div>
   </div>
 </div>
-
 ## News
 
 {% include news-content.md %}
