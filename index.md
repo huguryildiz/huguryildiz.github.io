@@ -34,6 +34,7 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
   </div>
 
 **Optimization & Operations Research**
+
   <!-- Optimization & Operations Research -->
   <div class="ra-section">
 <!--     <h3 class="ra-title">Optimization & Operations Research</h3> -->
@@ -48,6 +49,7 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
   </div>
 
 **Artificial Intelligence & Machine Learning**
+
   <!-- Artificial Intelligence & Machine Learning -->
   <div class="ra-section">
  <!--     <h3 class="ra-title">Artificial Intelligence & Machine Learning</h3> -->
@@ -61,6 +63,7 @@ He has authored over 20 peer-reviewed journal articles with more than 1,000 cita
   </div>
 
 **Quantum Networking**
+
   <!-- Specialized Topics -->
   <div class="ra-section">
  <!--    <h3 class="ra-title">Quantum Networking</h3> -->
