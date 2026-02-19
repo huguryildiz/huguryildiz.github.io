@@ -13,7 +13,7 @@ Between 2010 and 2015, he worked at [Turk Telekom](https://www.turktelekom.com.t
 
 His research applies **operations research** and **mathematical optimization** to routing, resource allocation, and energy efficiency problems in **wireless ad hoc networks**, **underwater acoustic sensor networks**, and **drone-assisted aerial networks**. Recently, he has been advancing this framework by integrating mathematical optimization with **reinforcement learning** techniques. He is particularly interested in applying these hybrid optimization–learning methodologies to emerging paradigms such as **quantum network routing**, with an emphasis on hybrid classical–quantum architectures and the impact of physical constraints, including entanglement lifetime and network reliability, on routing and control decisions.
 
-He has authored over 40 peer-reviewed journal articles and conference papers, which have received more than 1,000 citations. He received the IEEE Middle East and North Africa Communications Conference 2019 Best Paper Award and was elevated to IEEE Senior Member in 2021.
+He has authored over 40 peer-reviewed journal articles and conference papers, which have accumulated more than 1,000 citations. He received the IEEE Middle East and North Africa Communications Conference 2019 Best Paper Award and was elevated to IEEE Senior Member in 2021.
 
 ## Research Interests
 
