@@ -30,7 +30,7 @@ jobs:
           # Value: A5085505896
           OPENALEX_AUTHOR_ID: ${{ secrets.OPENALEX_AUTHOR_ID }}
           OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO }}   # opsiyonel, e-posta
-        run: python fetch_metrics.py
+        run: python scripts/fetch_metrics.py
 
       - name: Commit & push if changed
         run: |
