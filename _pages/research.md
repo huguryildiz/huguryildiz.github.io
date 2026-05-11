@@ -144,8 +144,16 @@ Integration of mathematical optimization frameworks with machine learning and re
 
 ## Software
 
-- **VERA — Visual Evaluation, Reporting & Analytics:** A modern platform for academic juries, capstone evaluations, and accreditation workflows. Jurors enter through a QR code, score projects against a configurable rubric, and administrators access real-time rankings and accreditation-ready reports the moment scoring closes.  
-  [![vera-eval.app](https://img.shields.io/badge/vera--eval.app-0f172a?style=flat-square&logo=vercel&logoColor=white)](https://vera-eval.app)
+<div style="display:flex;gap:1.5rem;align-items:flex-start;margin-bottom:1rem;flex-wrap:wrap;">
+  <a href="https://vera-eval.app" target="_blank" rel="noopener" style="flex-shrink:0;">
+    <img src="/images/vera.png" alt="VERA screenshot" style="width:260px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+  </a>
+  <div>
+    <strong>VERA — Visual Evaluation, Reporting &amp; Analytics</strong><br>
+    A modern platform for academic juries, capstone evaluations, and accreditation workflows. Jurors enter through a QR code, score projects against a configurable rubric, and administrators access real-time rankings and accreditation-ready reports the moment scoring closes.<br><br>
+    <a href="https://vera-eval.app" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/vera--eval.app-0f172a?style=flat-square&logo=vercel&logoColor=white" alt="vera-eval.app"></a>
+  </div>
+</div>
 
 ## Code & Learning Resources
 
