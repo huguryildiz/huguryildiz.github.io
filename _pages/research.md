@@ -142,6 +142,11 @@ Integration of mathematical optimization frameworks with machine learning and re
 </div>
 
 
+## Software
+
+- **VERA — Visual Evaluation, Reporting & Analytics:** A modern platform for academic juries, capstone evaluations, and accreditation workflows. Jurors enter through a QR code, score projects against a configurable rubric, and administrators access real-time rankings and accreditation-ready reports the moment scoring closes.  
+  [![vera-eval.app](https://img.shields.io/badge/vera--eval.app-0f172a?style=flat-square&logo=vercel&logoColor=white)](https://vera-eval.app)
+
 ## Code & Learning Resources
 
 - **wsn-opt-python:** A hands-on Python tutorial for network-flow–based optimization models in wireless sensor networks, intended for students and researchers.  
