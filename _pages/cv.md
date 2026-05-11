@@ -12,7 +12,7 @@ author_profile: true
 ***Department of Electrical and Electronics Engineering***<br>
 *Associate Professor* (Mar 2021 – Present) <br>
 *Department Chair* (Jul 2021 – Jul 2024) <br>
-*Assistant Professor* (Sep 2016 – Mar 2021) <br>   
+*Assistant Professor* (Sep 2016 – Mar 2021) <br>
 
 - **Turkish Aerospace, Ankara, Turkey** <br>
 *Avionics Design Engineer* (Dec 2015 – Aug 2016)  
@@ -54,7 +54,6 @@ Co-advisor: [Prof. Kemal Bicakci](https://scholar.google.com/citations?user=HCTy
 - **Elevation to IEEE Senior Member (2021)**,
   Awarded for significant professional contributions; achieved by fewer than 10% of IEEE members. <br>
   [![IEEE Senior Member 2021](https://img.shields.io/badge/IEEE-SM_Plaque-00629B?style=flat-square&logo=ieee&logoColor=white)](/images/ieee_senior_member_2021.jpg)
-  
 
 - **Best Paper Award (Third Place)**,
   *Utilization of multi-sink architectures for lifetime maximization in underwater sensor networks*,

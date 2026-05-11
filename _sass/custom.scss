@@ -26,6 +26,16 @@
 }
 
 /* =========================
+   Greedy nav: hidden state
+   ========================= */
+.greedy-nav button.hidden {
+  display: none !important;
+}
+.greedy-nav .hidden-links.hidden {
+  display: none !important;
+}
+
+/* =========================
    Sidebar (profile) typography
    ========================= */
 .author__content,

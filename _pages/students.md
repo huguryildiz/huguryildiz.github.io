@@ -56,8 +56,8 @@ custom_css:
   ![MSc Co-advisor](https://img.shields.io/badge/MSc-Co--advisor-6f42c1?style=flat-square) [![YÖK Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=qVqOZFj2DwNmvdf1oGFYiPA6aYtotmnOK4EXJfFCxlc2mg4JGwOzN8dwilUNajg1)
 
 - **Aydin, C.** (2021). *Number of depleted nodes–based network lifetime maximization in underwater wireless sensor networks*. TOBB University of Economics and Technology.  
-  ![MSc Co-advisor](https://img.shields.io/badge/MSc-Co--advisor-6f42c1?style=flat-square)  
-  
+  ![MSc Co-advisor](https://img.shields.io/badge/MSc-Co--advisor-6f42c1?style=flat-square)
+
 - **[Ozmen, A.](https://www.linkedin.com/in/alper-%C3%B6zmen-1a6232109/)** (2021). *Modeling the tradeoff between eavesdropping and network lifetime through a mixed integer programming approach in underwater acoustic sensor networks*. TOBB University of Economics and Technology.  
   ![MSc Co-advisor](https://img.shields.io/badge/MSc-Co--advisor-6f42c1?style=flat-square) [![YÖK Thesis](https://img.shields.io/badge/Repository-YÖK_Thesis-darkgreen?style=flat-square)](https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=v7BkNnnepTnbhn8rNR77LXvYfssCwLtFHwO6QyeDzoiU-4og5S68KqSwbXXeeT31)
 
