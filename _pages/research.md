@@ -144,15 +144,29 @@ Integration of mathematical optimization frameworks with machine learning and re
 
 ## Software
 
-<div style="display:flex;gap:1.5rem;align-items:flex-start;margin-bottom:1rem;flex-wrap:wrap;">
-  <a href="https://vera-eval.app" target="_blank" rel="noopener" style="flex-shrink:0;">
-    <img src="/images/vera.png" alt="VERA screenshot" style="width:260px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.15);">
-  </a>
-  <div>
-    <strong>VERA — Visual Evaluation, Reporting &amp; Analytics</strong><br>
-    A modern platform for academic juries, capstone evaluations, and accreditation workflows. Jurors enter through a QR code, score projects against a configurable rubric, and administrators access real-time rankings and accreditation-ready reports the moment scoring closes.<br><br>
-    <a href="https://vera-eval.app" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/vera--eval.app-0f172a?style=flat-square&logo=vercel&logoColor=white" alt="vera-eval.app"></a>
+<!-- ===================== -->
+<!-- VERA -->
+<!-- ===================== -->
+
+<div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
+
+  <div style="flex:1; min-width:150px;">
+    <img src="/images/vera.png" alt="VERA screenshot" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:6px;">
   </div>
+
+  <div style="flex:3;">
+    <h3 style="margin:0 0 8px 0;">VERA – Visual Evaluation, Reporting &amp; Analytics</h3>
+
+    <p style="margin:0 0 12px 0;">
+      A modern platform for academic juries, capstone evaluations, and accreditation workflows. Jurors enter through a QR code, score projects against a configurable rubric, and administrators access real-time rankings and accreditation-ready reports the moment scoring closes.
+    </p>
+
+    <a href="https://vera-eval.app" target="_blank" rel="noopener" style="margin-right:6px; text-decoration: none;">
+      <img src="https://img.shields.io/badge/vera--eval.app-1f77b4?style=flat-square&logo=vercel&logoColor=white" alt="vera-eval.app">
+    </a>
+
+  </div>
+
 </div>
 
 ## Code & Learning Resources
