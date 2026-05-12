@@ -78,6 +78,6 @@ He has authored over 40 peer-reviewed journal articles and conference papers, wh
 
 <div class="linkedin-grid">
   <div class="linkedin-card">
-    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7417308257074999296"></iframe>
+    <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7459747314929332224" height="1088" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
   </div>
 </div>
