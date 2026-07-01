@@ -169,6 +169,35 @@ Integration of mathematical optimization frameworks with machine learning and re
 
 </div>
 
+<!-- ===================== -->
+<!-- KAIROS -->
+<!-- ===================== -->
+
+<div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
+
+  <div style="flex:1; min-width:150px;">
+    <img src="/images/kairos.png" alt="KAIROS logo" style="width:100%; aspect-ratio:4/3; object-fit:contain; border-radius:6px;">
+  </div>
+
+  <div style="flex:3;">
+    <h3 style="margin:0 0 8px 0;">KAIROS – Course Timetabling</h3>
+
+    <p style="margin:0 0 12px 0;">
+      A conflict-free university course timetabling system built on OR-Tools CP-SAT. Given raw course and room data, KAIROS produces a weekly schedule with no double-booked rooms, no instructor conflicts, and every placement verified by an independent validator, then polishes it further with soft optimization for cohort idle gaps, instructor compactness, and department fairness. Available as a web app and a command-line solver for batch runs and benchmarking.
+    </p>
+
+    <a href="https://kairos.huguryildiz.com" target="_blank" rel="noopener" style="margin-right:6px; text-decoration: none;">
+      <img src="https://img.shields.io/badge/kairos.huguryildiz.com-1f77b4?style=flat-square&logo=googlechrome&logoColor=white" alt="kairos.huguryildiz.com">
+    </a>
+
+    <a href="https://github.com/huguryildiz/KAIROS" target="_blank" rel="noopener" style="text-decoration: none;">
+      <img src="https://img.shields.io/badge/GitHub_Repository-1f77b4?style=flat-square&logo=github&logoColor=white" alt="GitHub Repository">
+    </a>
+
+  </div>
+
+</div>
+
 ## Code & Learning Resources
 
 - **wsn-opt-python:** A hands-on Python tutorial for network-flow–based optimization models in wireless sensor networks, intended for students and researchers.  
