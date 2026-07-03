@@ -165,6 +165,10 @@ Integration of mathematical optimization frameworks with machine learning and re
       <img src="https://img.shields.io/badge/vera--eval.app-1f77b4?style=flat-square&logo=vercel&logoColor=white" alt="vera-eval.app">
     </a>
 
+    <a href="https://github.com/huguryildiz/VERA" target="_blank" rel="noopener" style="text-decoration: none;">
+      <img src="https://img.shields.io/badge/GitHub_Repository-1f77b4?style=flat-square&logo=github&logoColor=white" alt="GitHub Repository">
+    </a>
+
   </div>
 
 </div>
