@@ -198,6 +198,35 @@ Integration of mathematical optimization frameworks with machine learning and re
 
 </div>
 
+<!-- ===================== -->
+<!-- UWA Ray Bench -->
+<!-- ===================== -->
+
+<div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
+
+  <div style="flex:1; min-width:150px;">
+    <img src="/images/uwa-ray-bench.png" alt="Underwater Acoustic Ray Bench screenshot" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:6px;">
+  </div>
+
+  <div style="flex:3;">
+    <h3 style="margin:0 0 8px 0;">Underwater Acoustic Ray Bench</h3>
+
+    <p style="margin:0 0 12px 0;">
+      A benchmark pitting five LLMs against a genuine 3D BELLHOP3D reference solver on underwater acoustic ray tracing: given an identical prompt in isolated sessions, each model traces a fan of rays through a synthetic ocean with a depth-dependent sound-speed profile and seamounts, refracting and bouncing them off the seabed. Scoring compares each model's exported transmission-loss field against the reference solver on field accuracy, coverage, and geometry fidelity, rather than collapsing everything into a single number.
+    </p>
+
+    <a href="https://uwa-ray-bench.vercel.app/" target="_blank" rel="noopener" style="margin-right:6px; text-decoration: none;">
+      <img src="https://img.shields.io/badge/uwa--ray--bench.vercel.app-1f77b4?style=flat-square&logo=vercel&logoColor=white" alt="uwa-ray-bench.vercel.app">
+    </a>
+
+    <a href="https://github.com/huguryildiz/uwa-ray-bench" target="_blank" rel="noopener" style="text-decoration: none;">
+      <img src="https://img.shields.io/badge/GitHub_Repository-1f77b4?style=flat-square&logo=github&logoColor=white" alt="GitHub Repository">
+    </a>
+
+  </div>
+
+</div>
+
 ## Code & Learning Resources
 
 - **wsn-opt-python:** A hands-on Python tutorial for network-flow–based optimization models in wireless sensor networks, intended for students and researchers.  
