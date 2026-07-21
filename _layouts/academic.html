@@ -1,0 +1,148 @@
+---
+layout: compress
+---
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Tag Manager -->
+  <script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PXWMC3P');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  {% seo %}
+
+  <!-- Set theme before paint to avoid flash -->
+  <script>
+  (function(){try{var t=localStorage.getItem('hy-theme');
+  if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+  </script>
+
+  <link rel="stylesheet" href="{{ '/assets/css/redesign.css' | relative_url }}">
+  <link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fonts/stix_normal_latin.woff2' | relative_url }}" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fonts/sans_normal_latin.woff2' | relative_url }}" crossorigin>
+
+  <!-- Academicons (brand glyphs) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="{{ '/images/favicon/favicon.svg?v=4' | relative_url }}">
+  <link rel="alternate icon" href="{{ '/images/favicon/favicon.ico?v=4' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/images/favicon/apple-touch-icon.png' | relative_url }}">
+  <link rel="shortcut icon" href="{{ '/images/favicon/favicon.ico' | relative_url }}">
+  <meta name="apple-mobile-web-app-title" content="Huseyin Ugur Yildiz">
+  <link rel="manifest" href="{{ '/images/favicon/site.webmanifest' | relative_url }}">
+  <meta name="theme-color" content="#12314E">
+
+  <!-- Google Analytics (gtag) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FPSF7J6F4C"></script>
+  <script>
+  window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());gtag('config','G-FPSF7J6F4C',{'anonymize_ip':true});
+  </script>
+  <!-- GoatCounter -->
+  <script data-goatcounter="https://huguryildiz.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PXWMC3P"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  {% include icons.html %}
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  {%- assign u = page.url -%}
+  <header class="masthead">
+    <div class="shell masthead-in">
+      <a class="wordmark" href="{{ '/' | relative_url }}"><img class="wordmark-fav" src="{{ '/images/favicon/favicon.svg?v=4' | relative_url }}" alt="" width="22" height="22">Hüseyin Uğur Yıldız</a>
+      <button class="iconbtn" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Menu">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12"/></svg>
+      </button>
+      <nav class="primary" id="primaryNav" aria-label="Primary">
+        <ul>
+          <li><a href="{{ '/' | relative_url }}"{% if u == '/' %} aria-current="page"{% endif %}><svg class="navico" aria-hidden="true"><use href="#i-home"/></svg>Home</a></li>
+          <li><a href="{{ '/publications/' | relative_url }}"{% if u contains '/publications' %} aria-current="page"{% endif %}><svg class="navico" aria-hidden="true"><use href="#i-book"/></svg>Publications</a></li>
+          <li><a href="{{ '/research/' | relative_url }}"{% if u contains '/research' %} aria-current="page"{% endif %}><svg class="navico" aria-hidden="true"><use href="#i-layers"/></svg>Research</a></li>
+          <li><a href="{{ '/cv/' | relative_url }}"{% if u contains '/cv' %} aria-current="page"{% endif %}><svg class="navico" aria-hidden="true"><use href="#i-file"/></svg>CV</a></li>
+          <li><a href="{{ '/teaching/' | relative_url }}"{% if u contains '/teaching' %} aria-current="page"{% endif %}><svg class="navico" aria-hidden="true"><use href="#i-calendar"/></svg>Teaching</a></li>
+          <li><a href="{{ '/students/' | relative_url }}"{% if u contains '/students' %} aria-current="page"{% endif %}><svg class="navico" aria-hidden="true"><use href="#i-users"/></svg>Students</a></li>
+          <li><a href="{{ '/service/' | relative_url }}"{% if u contains '/service' %} aria-current="page"{% endif %}><svg class="navico" aria-hidden="true"><use href="#i-clipboard"/></svg>Service</a></li>
+        </ul>
+      </nav>
+      <button class="iconbtn" id="themeToggle" aria-label="Switch color theme">
+        <svg class="sun" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="3.2"/><path d="M8 1v1.8M8 13.2V15M1 8h1.8M13.2 8H15M3 3l1.3 1.3M11.7 11.7L13 13M13 3l-1.3 1.3M4.3 11.7L3 13"/></svg>
+        <svg class="moon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M13.2 9.4A5.6 5.6 0 1 1 6.6 2.8a4.4 4.4 0 0 0 6.6 6.6z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    {{ content }}
+  </main>
+
+  <footer class="site">
+    <div class="shell footer-row">
+      <span class="fcopy">© {{ 'now' | date: "%Y" }} Hüseyin Uğur Yıldız · Jekyll · GitHub Pages</span>
+      <span class="flisten">
+        <span class="flabel">Listening</span>
+        <a href="https://open.spotify.com/playlist/0rGMcXyrxCuw5GGxl9WwXX" target="_blank" rel="noopener"><svg class="licon spotify" aria-hidden="true"><use href="#i-spotify"/></svg> Jazz</a>
+        <a href="https://open.spotify.com/playlist/5bOF9kW6kCyQkrXdiUTwAu" target="_blank" rel="noopener"><svg class="licon spotify" aria-hidden="true"><use href="#i-spotify"/></svg> Metal</a>
+        <a href="https://open.spotify.com/playlist/1cJ9WnD1JoJJV4VzdQ1K1Z" target="_blank" rel="noopener"><svg class="licon spotify" aria-hidden="true"><use href="#i-spotify"/></svg> House</a>
+      </span>
+      <span class="fstats">
+        <a href="https://lookerstudio.google.com/embed/reporting/339cde21-ede4-477a-8cd5-b8a575f70acd/page/0ZGMC" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-chart"/></svg> Stats</a>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+  (function(){
+    var root=document.documentElement;
+    var tBtn=document.getElementById('themeToggle');
+    tBtn.addEventListener('click',function(){
+      var cur=root.getAttribute('data-theme')||
+        (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+      var next=cur==='dark'?'light':'dark';
+      root.setAttribute('data-theme',next);
+      try{localStorage.setItem('hy-theme',next);}catch(e){}
+    });
+    var navToggle=document.getElementById('navToggle'),nav=document.getElementById('primaryNav');
+    navToggle.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded',String(open));
+    });
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches){
+      document.querySelectorAll('video[autoplay]').forEach(function(v){v.removeAttribute('autoplay');v.pause();});
+    }
+    /* CV table-of-contents highlight */
+    var tocLinks=Array.prototype.slice.call(document.querySelectorAll('.cvtoc a'));
+    if('IntersectionObserver' in window && tocLinks.length){
+      var map=new Map();
+      tocLinks.forEach(function(a){
+        var sec=document.getElementById(a.getAttribute('href').slice(1));
+        if(sec)map.set(sec,a);
+      });
+      var io=new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if(en.isIntersecting){
+            tocLinks.forEach(function(a){a.classList.remove('current');});
+            var a=map.get(en.target);if(a)a.classList.add('current');
+          }
+        });
+      },{rootMargin:'-20% 0px -70% 0px'});
+      map.forEach(function(a,sec){io.observe(sec);});
+    }
+  })();
+  </script>
+</body>
+</html>

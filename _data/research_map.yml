@@ -1,0 +1,98 @@
+# Interactive research map — topic → publication mapping.
+# Every entry is transcribed 1:1 from _pages/publications.md (the publication record).
+# Unmapped on purpose (outside the five map areas): DASH–QoS (Computer Networks 2019),
+# editorial brief (Internet of Things 2025).
+- id: terrestrial
+  status: established
+  title: "Terrestrial ad hoc & sensor networks"
+  keywords: [lifetime, packet size, power control, security]
+  groups:
+    - name: "Network lifetime & energy"
+      pubs:
+        - {title: "Exploring the tradeoff between energy dissipation, delay, and the number of backbones for broadcasting in wireless sensor networks through goal programming", year: 2023, venue: "Ad Hoc Networks", url: "https://doi.org/10.1016/j.adhoc.2023.103223"}
+        - {title: "Reliability of linear WSNs: A complementary overview and analysis of impact of cascaded failures on network lifetime", year: 2022, venue: "Ad Hoc Networks", url: "https://doi.org/10.1016/j.adhoc.2022.102839"}
+        - {title: "Node-level error control strategies for prolonging the lifetime of wireless sensor networks", year: 2021, venue: "IEEE Sensors Journal", url: "https://doi.org/10.1109/JSEN.2021.3073889"}
+        - {title: "A hybrid energy harvesting framework for energy efficiency in wireless sensor networks based smart grid applications", year: 2018, venue: "Med-Hoc-Net", url: "https://doi.org/10.23919/MedHocNet.2018.8407079"}
+        - {title: "Impact of limiting hop count on the lifetime of wireless sensor networks", year: 2015, venue: "IEEE Communications Letters", url: "https://doi.org/10.1109/LCOMM.2015.2398411"}
+        - {title: "Prolonging wireless sensor network lifetime by optimal utilization of compressive sensing", year: 2015, venue: "IEEE Globecom Workshops", url: "https://doi.org/10.1109/GLOCOMW.2015.7414049"}
+        - {title: "Role of unidirectionality and reverse path length on wireless sensor network lifetime", year: 2014, venue: "IEEE Sensors Journal", url: "https://doi.org/10.1109/JSEN.2014.2359156"}
+        - {title: "The impact of near-ground path loss modeling on wireless sensor network lifetime", year: 2014, venue: "IEEE MILCOM", url: "https://doi.org/10.1109/MILCOM.2014.188"}
+    - name: "Packet size optimization"
+      pubs:
+        - {title: "Comparative analysis of transmission power level and packet size optimization strategies for WSNs", year: 2019, venue: "IEEE Systems Journal", url: "https://doi.org/10.1109/JSYST.2018.2864941"}
+        - {title: "A survey on packet size optimization for terrestrial, underwater, underground, and body area sensor networks", year: 2018, venue: "International Journal of Communication Systems", url: "https://doi.org/10.1002/dac.3572"}
+        - {title: "Packet size optimization in wireless sensor networks for smart grid applications", year: 2017, venue: "IEEE Transactions on Industrial Electronics", url: "https://doi.org/10.1109/TIE.2016.2619319", note: "Most cited"}
+        - {title: "Joint optimization of transmission power level and packet size for WSN lifetime maximization", year: 2016, venue: "IEEE Sensors Journal", url: "https://doi.org/10.1109/JSEN.2016.2548661"}
+        - {title: "Data packet length optimization for wireless sensor network lifetime maximization", year: 2014, venue: "COMM", url: "https://doi.org/10.1109/ICComm.2014.6866706"}
+    - name: "Transmission power control"
+      pubs:
+        - {title: "The impact of transmission power levels set size on lifetime of wireless sensor networks in smart grids", year: 2018, venue: "Turkish Journal of Electrical Engineering & Computer Sciences", url: "https://journals.tubitak.gov.tr/elektrik/vol26/iss6/23/"}
+        - {title: "Transmission power control for link-level handshaking in wireless sensor networks", year: 2016, venue: "IEEE Sensors Journal", url: "https://doi.org/10.1109/JSEN.2015.2486960"}
+        - {title: "Optimal transmission power level sets for lifetime maximization in wireless sensor networks", year: 2016, venue: "IEEE SENSORS", url: "https://doi.org/10.1109/ICSENS.2016.7808888"}
+        - {title: "The impact of random power assignment in handshaking on wireless sensor network lifetime", year: 2014, venue: "IEEE Globecom Workshops", url: "https://doi.org/10.1109/GLOCOMW.2014.7063431"}
+    - name: "Security & critical nodes"
+      pubs:
+        - {title: "The impact of incomplete secure connectivity on the lifetime of wireless sensor networks", year: 2018, venue: "IEEE Systems Journal", url: "https://doi.org/10.1109/JSYST.2016.2527744"}
+        - {title: "The impact of incapacitation of multiple critical sensor nodes on wireless sensor network lifetime", year: 2017, venue: "IEEE Wireless Communications Letters", url: "https://doi.org/10.1109/LWC.2017.2679744"}
+        - {title: "Maximizing wireless sensor network lifetime by communication/computation energy optimization of non-repudiation security service", year: 2016, venue: "Ad Hoc Networks", url: "https://doi.org/10.1016/j.adhoc.2015.08.026"}
+        - {title: "The impact of mitigation of eavesdropping on wireless sensor networks lifetime", year: 2018, venue: "SIU", url: "https://doi.org/10.1109/SIU.2018.8404252"}
+        - {title: "Assessment of wireless sensor network lifetime reduction due to elimination of critical node sets", year: 2017, venue: "SIU", url: "https://doi.org/10.1109/SIU.2017.7960228"}
+        - {title: "Distributed detection of critical nodes in wireless sensor networks using connected dominating set", year: 2016, venue: "IEEE SENSORS", url: "https://doi.org/10.1109/ICSENS.2016.7808815"}
+        - {title: "Communication/computation trade-offs in wireless sensor networks: Comparing network-level and node-level strategies", year: 2014, venue: "IEEE WiSNet", url: "https://doi.org/10.1109/WiSNet.2014.6825515"}
+
+- id: underwater
+  status: established
+  title: "Underwater acoustic networks"
+  keywords: [k-connectivity, void regions, multi-sink, attacks]
+  groups:
+    - name: "k-connectivity"
+      pubs:
+        - {title: "Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity", year: 2025, venue: "IEEE Internet of Things Journal", url: "https://doi.org/10.1109/JIOT.2025.3603829"}
+        - {title: "Non-uniform k-connectivity for energy-efficient and reliable underwater wireless sensor networks", year: 2025, venue: "TELFOR", url: "https://doi.org/10.1109/TELFOR67910.2025.11314281"}
+        - {title: "On the tradeoff between network lifetime and k-connectivity-based reliability in UWSNs", year: 2022, venue: "IEEE Internet of Things Journal", url: "https://doi.org/10.1109/JIOT.2022.3188558"}
+    - name: "Void regions"
+      pubs:
+        - {title: "Joint effects of void region size and sink architecture on underwater WSNs lifetime", year: 2023, venue: "IEEE Sensors Journal", url: "https://doi.org/10.1109/JSEN.2023.3264159"}
+    - name: "Multi-sink architectures"
+      pubs:
+        - {title: "Utilization of multi-sink architectures for lifetime maximization in underwater sensor networks", year: 2019, venue: "IEEE MENACOMM", url: "https://doi.org/10.1109/MENACOMM46666.2019.8988521", note: "Best Paper Award"}
+    - name: "Attacks & secure connectivity"
+      pubs:
+        - {title: "Impact of critical node failures on lifetime of UWSNs with incomplete secure connectivity", year: 2021, venue: "IEEE BlackSeaCom", url: "https://doi.org/10.1109/BlackSeaCom52164.2021.9527803"}
+        - {title: "Impact of minimizing the eavesdropping risks on lifetime of underwater acoustic sensor networks", year: 2020, venue: "TELFOR", url: "https://doi.org/10.1109/TELFOR51502.2020.9306557"}
+        - {title: "Prolonging the lifetime of underwater sensor networks under sinkhole attacks", year: 2019, venue: "ACM WUWNet", url: "https://doi.org/10.1145/3366486.3366516"}
+    - name: "Lifetime, coding & delay"
+      pubs:
+        - {title: "Maximization of underwater sensor networks lifetime via fountain codes", year: 2019, venue: "IEEE Transactions on Industrial Informatics", url: "https://doi.org/10.1109/TII.2019.2892866"}
+        - {title: "Packet size optimization for lifetime maximization in underwater acoustic sensor networks", year: 2019, venue: "IEEE Transactions on Industrial Informatics", url: "https://doi.org/10.1109/TII.2018.2841830"}
+        - {title: "On the lifetime of compressive sensing based energy harvesting in underwater sensor networks", year: 2019, venue: "IEEE Sensors Journal", url: "https://doi.org/10.1109/JSEN.2019.2900427"}
+        - {title: "Investigation of maximum lifetime and minimum delay trade-off in underwater sensor networks", year: 2019, venue: "International Journal of Communication Systems", url: "https://doi.org/10.1002/dac.3924"}
+        - {title: "Improvement of underwater acoustic sensor networks performance with fountain codes", year: 2019, venue: "SIU", url: "https://doi.org/10.1109/SIU.2019.8806401"}
+        - {title: "The impact of data fragmentation on network lifetime in underwater acoustic sensor networks", year: 2018, venue: "SIU", url: "https://doi.org/10.1109/SIU.2018.8404333"}
+        - {title: "Minimum delay and maximum lifetime trade-off in underwater sensor networks", year: 2018, venue: "ELECO", url: "/files/papers/conference/national/yildiz2018minimum.pdf"}
+
+- id: aerial
+  status: established
+  title: "Drone-assisted aerial networks"
+  keywords: [k-connectivity restoration, mobility cost]
+  groups:
+    - name: "k-connectivity restoration & mobility"
+      pubs:
+        - {title: "Enhancing drone network resilience: Investigating strategies for k-connectivity restoration", year: 2025, venue: "Computer Standards & Interfaces", url: "https://doi.org/10.1016/j.csi.2024.103941"}
+
+- id: ml
+  status: ongoing
+  title: "Machine learning & reinforcement learning"
+  keywords: [optimization–learning integration, parameter prediction, reinforcement learning]
+  note: "Being integrated with the optimization core — ongoing."
+  groups:
+    - name: "Optimization–learning integration"
+      pubs:
+        - {title: "Neural network–based instant parameter prediction for wireless sensor network optimization models", year: 2019, venue: "Wireless Networks", url: "https://doi.org/10.1007/s11276-018-1808-y"}
+
+- id: quantum
+  status: exploratory
+  title: "Hybrid classical–quantum routing"
+  keywords: [entanglement lifetime, reliability]
+  note: "Exploratory frontier — how entanglement lifetime and reliability constraints shape routing and control decisions. No publications yet."
+  groups: []

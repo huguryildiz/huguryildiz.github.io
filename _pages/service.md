@@ -1,102 +1,151 @@
 ---
-layout: single
+layout: academic
 title: "Service"
+description: "Professional service of Hüseyin Uğur Yıldız — technical program committees, chairing, peer review, memberships, institutional service, and invited talks."
 permalink: /service/
-author_profile: true
 ---
 
-## Technical Program Committee Service
+<div class="shell">
+  <header class="pagehead"><h1 id="service-h1">Service</h1></header>
 
-- IEEE International Conference on Communications (ICC 2018–2022)
-- IEEE Wireless Communications and Networking Conference (WCNC 2019, 2021–2025)
-- International Balkan Conference on Communications and Networking (BalkanCom 2023–2025)
-- International Conference on Innovation and Intelligence for Information, Computation, and Technology (3ICT 2019–2020)
-- International Conference on Network and Service Management (CNSM 2020–2021)
-- IEEE Middle East and North Africa Communications Conference (MENACOMM 2019)
-- International Conference on Underwater Networks & Systems (WUWNet 2019–2025)
-- IEEE Vehicular Technology Conference (VTC 2018–Spring)
-- IEEE INFOCOM Workshop on Wireless Communications and Networking in Extreme Environments (2018)
-- IEEE SENSORS (2017)
+  <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-clipboard"/></svg>Technical program committee service</h2>
+  <ul class="dotlist">
+    <li>IEEE International Conference on Communications (ICC 2018–2022)</li>
+    <li>IEEE Wireless Communications and Networking Conference (WCNC 2019, 2021–2025)</li>
+    <li>International Balkan Conference on Communications and Networking (BalkanCom 2023–2025)</li>
+    <li>International Conference on Innovation and Intelligence for Information, Computation, and Technology (3ICT 2019–2020)</li>
+    <li>International Conference on Network and Service Management (CNSM 2020–2021)</li>
+    <li>IEEE Middle East and North Africa Communications Conference (MENACOMM 2019)</li>
+    <li>International Conference on Underwater Networks &amp; Systems (WUWNet 2019–2025)</li>
+    <li>IEEE Vehicular Technology Conference (VTC 2018–Spring)</li>
+    <li>IEEE INFOCOM Workshop on Wireless Communications and Networking in Extreme Environments (2018)</li>
+    <li>IEEE SENSORS (2017)</li>
+  </ul>
 
-## Conference Chair & Moderation Roles
+  <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-users"/></svg>Conference chair &amp; moderation roles</h2>
+  <ul class="dotlist">
+    <li><i>PHY-II: Physical Layer Communications-II</i>, IEEE BlackSeaCom 2021</li>
+    <li><i>Underwater Networking</i>, ACM WUWNet 2019</li>
+    <li><i>Communication Networks II</i>, SIU 2018</li>
+    <li><i>Sensor Network, Method and Evaluation</i>, IEEE SENSORS 2016</li>
+    <li><i>Management of Emerging Networks</i>, IEEE GLOBECOM 2014 Workshop</li>
+  </ul>
 
-- *PHY-II: Physical Layer Communications-II*, IEEE BlackSeaCom 2021
-- *Underwater Networking*, ACM WUWNet 2019
-- *Communication Networks II*, SIU 2018
-- *Sensor Network, Method and Evaluation*, IEEE SENSORS 2016
-- *Management of Emerging Networks*, IEEE GLOBECOM 2014 Workshop
+  <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-check"/></svg>Peer-review service</h2>
+  <ul class="dotlist collist">
+    <li>Ad Hoc Networks</li>
+    <li>Computer Networks</li>
+    <li>IEEE Access</li>
+    <li>IEEE Communications Letters</li>
+    <li>IEEE Communications Surveys and Tutorials</li>
+    <li>IEEE International Conference on Communications (ICC)</li>
+    <li>IEEE Internet of Things Journal</li>
+    <li>IEEE WiMob 2016</li>
+    <li>IEEE PIMRC 2017</li>
+    <li>IEEE Sensors Journal</li>
+    <li>IEEE Systems Journal</li>
+    <li>IEEE Transactions on Cybernetics</li>
+    <li>IEEE Transactions on Industrial Electronics</li>
+    <li>IEEE Transactions on Industrial Informatics</li>
+    <li>IEEE Transactions on Mobile Computing</li>
+    <li>IEEE WCNC 2018–2024</li>
+    <li>IEEE Wireless Communications Letters</li>
+    <li>Internet of Things (Guest Editor)</li>
+  </ul>
 
-## Peer-Review Service
+  <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-badge"/></svg>Professional memberships</h2>
+  <ul class="dotlist">
+    <li>IEEE Senior Member (2021 – present)</li>
+    <li>IEEE Member (2016 – 2021)</li>
+    <li>IEEE Student Member (2013 – 2016)</li>
+    <li>IEEE Oceanic Engineering Society (2021)</li>
+    <li>IEEE Communications Society (2015 – 2018)</li>
+  </ul>
 
-- Ad Hoc Networks
-- Computer Networks
-- IEEE Access
-- IEEE Communications Letters
-- IEEE Communications Surveys and Tutorials
-- IEEE International Conference on Communications (ICC)
-- IEEE Internet of Things Journal
-- IEEE International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob 2016)
-- IEEE International Symposium on Personal, Indoor, and Mobile Radio Communications (PIMRC 2017)
-- IEEE Sensors Journal
-- IEEE Systems Journal
-- IEEE Transactions on Cybernetics
-- IEEE Transactions on Industrial Electronics
-- IEEE Transactions on Industrial Informatics
-- IEEE Transactions on Mobile Computing
-- IEEE Wireless Communications and Networking Conference (WCNC 2018–2024)
-- IEEE Wireless Communications Letters
-- Internet of Things (Guest Editor)
+  <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-landmark"/></svg>Academic and institutional service</h2>
+  <ul class="dotlist">
+    <li>External Advisory Board Member, Department of Electrical and Electronics Engineering, Çankaya University (2022 – 2024)</li>
+    <li>Web Committee Member, Faculty of Engineering, TED University (2021 – present)</li>
+    <li>Alumni Coordinator, Department of Electrical and Electronics Engineering, TED University (2021 – 2024)</li>
+    <li>Department Chair, Department of Electrical and Electronics Engineering, TED University (2021 – 2024)</li>
+    <li>Faculty Board Member, Faculty of Engineering, TED University (2021 – 2024)</li>
+    <li>Faculty Administrative Board Member (Associate Professor Representative), TED University (2021 – present)</li>
+  </ul>
 
-## Professional Memberships
-
-- IEEE Senior Member (2021 – Present)
-- IEEE Member (2016 – 2021)
-- IEEE Student Member (2013 – 2016)
-- IEEE Oceanic Engineering Society (2021)
-- IEEE Communications Society (2015 – 2018)
-
-## Academic and Institutional Service
-
-- External Advisory Board Member, Department of Electrical and Electronics Engineering, Çankaya University (2022 – 2024)
-- Web Committee Member, Faculty of Engineering, TED University (2021 – Present)
-- Alumni Coordinator, Department of Electrical and Electronics Engineering, TED University (2021 – 2024)
-- Department Chair, Department of Electrical and Electronics Engineering, TED University (2021 – 2024)
-- Faculty Board Member, Faculty of Engineering, TED University (2021 – 2024)
-- Faculty Administrative Board Member (Associate Professor Representative), TED University (2021 – Present)
-
-## Invited Talks & Research Seminars
-
-- **Prolonging the Lifetime of Underwater Sensor Networks Under Sinkhole Attacks** <br>
-  Georgia Institute of Technology, Atlanta, GA, USA, Oct 24, 2019, Host: Prof. Ian F. Akyildiz <br>
-  [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/14jmfAauo_CHZHZSjCTbuMjjVQVsGz1sm/view)
-
-- **Maximization of Underwater Sensor Networks Lifetime via Fountain Codes** <br>
-  SIU 2019 – Special Session on Next Generation Communication Techniques, Sivas, Turkey, Apr 25, 2019 <br>
-  [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/14bzsN_kmMONXaJet98dZsrgdQwOrFmCU/view?usp=sharing)
-
-- **Maximization of Underwater Sensor Networks Lifetime via Fountain Codes** <br>
-  ASELSAN Information and Communication Technologies Workshop, Ankara, Turkey, Feb 19, 2019 <br>
-  [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/14a3OSEhRvUTd9m0eJsiT_AUh9vqzGqZW/view?usp=sharing)
-
-- **Optimal Transmission Power Level Sets for Lifetime Maximization in Wireless Sensor Networks** <br>
-  ASELSAN Information and Communication Technologies Workshop, Ankara, Turkey, Nov 14, 2016 <br>
-  [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/16Cm8oSdQejoQQtKTkOmlRXNUYzaQfKZK/view?usp=sharing)
-
-- **The Impact of Random Power Assignment in Handshaking on Wireless Sensor Network Lifetime** <br>
-  University of Texas at Dallas, Dallas, TX, USA, Dec 3, 2014, Host: Prof. Murat Torlak <br>
-  [![Slides](https://img.shields.io/badge/Resource-Slides-orange?style=flat-square)](https://drive.google.com/file/d/14injrfacnqRUnJb9IiNEHQdvhcTARxuy/view?usp=sharing)
-
-- **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks** <br>
-  University of Rochester, Rochester, NY, USA, Feb 11, 2014, Host: Prof. Wendi Heinzelman
-
-- **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks** <br>
-  University at Buffalo, Buffalo, NY, USA, Feb 7, 2014, Host: Prof. Tommaso Melodia
-
-- **Wireless Sensor Networks, Network Optimization, and Mathematical Programming** <br>
-  Carleton University, Ottawa, ON, Canada, Feb 5, 2014, Host: Prof. Halim Yanikomeroglu
-
-- **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks** <br>
-  University of Southern California, Los Angeles, CA, USA, Jan 23, 2014, Host: Prof. Bhaskar Krishnamachari
-
-- **Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks** <br>
-  University of California, Irvine, CA, USA, Jan 22, 2014, Host: Prof. Ender Ayanoglu
+  <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-mic"/></svg>Invited talks &amp; research seminars</h2>
+  <div class="cvrow">
+    <div class="when tnum">Oct 2019</div>
+    <div class="what">
+      <div class="t">Prolonging the Lifetime of Underwater Sensor Networks Under Sinkhole Attacks</div>
+      <div class="d">Georgia Institute of Technology, Atlanta, GA, USA — host: Prof. Ian F. Akyildiz</div>
+      <div class="links"><a class="ext" href="https://drive.google.com/file/d/14jmfAauo_CHZHZSjCTbuMjjVQVsGz1sm/view" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-slides"/></svg> Slides</a></div>
+    </div>
+  </div>
+  <div class="cvrow">
+    <div class="when tnum">Apr 2019</div>
+    <div class="what">
+      <div class="t">Maximization of Underwater Sensor Networks Lifetime via Fountain Codes</div>
+      <div class="d">SIU 2019 — Special Session on Next Generation Communication Techniques, Sivas, Turkey</div>
+      <div class="links"><a class="ext" href="https://drive.google.com/file/d/14bzsN_kmMONXaJet98dZsrgdQwOrFmCU/view?usp=sharing" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-slides"/></svg> Slides</a></div>
+    </div>
+  </div>
+  <div class="cvrow">
+    <div class="when tnum">Feb 2019</div>
+    <div class="what">
+      <div class="t">Maximization of Underwater Sensor Networks Lifetime via Fountain Codes</div>
+      <div class="d">ASELSAN Information and Communication Technologies Workshop, Ankara, Turkey</div>
+      <div class="links"><a class="ext" href="https://drive.google.com/file/d/14a3OSEhRvUTd9m0eJsiT_AUh9vqzGqZW/view?usp=sharing" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-slides"/></svg> Slides</a></div>
+    </div>
+  </div>
+  <div class="cvrow">
+    <div class="when tnum">Nov 2016</div>
+    <div class="what">
+      <div class="t">Optimal Transmission Power Level Sets for Lifetime Maximization in Wireless Sensor Networks</div>
+      <div class="d">ASELSAN Information and Communication Technologies Workshop, Ankara, Turkey</div>
+      <div class="links"><a class="ext" href="https://drive.google.com/file/d/16Cm8oSdQejoQQtKTkOmlRXNUYzaQfKZK/view?usp=sharing" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-slides"/></svg> Slides</a></div>
+    </div>
+  </div>
+  <div class="cvrow">
+    <div class="when tnum">Dec 2014</div>
+    <div class="what">
+      <div class="t">The Impact of Random Power Assignment in Handshaking on Wireless Sensor Network Lifetime</div>
+      <div class="d">University of Texas at Dallas, Dallas, TX, USA — host: Prof. Murat Torlak</div>
+      <div class="links"><a class="ext" href="https://drive.google.com/file/d/14injrfacnqRUnJb9IiNEHQdvhcTARxuy/view?usp=sharing" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-slides"/></svg> Slides</a></div>
+    </div>
+  </div>
+  <div class="cvrow">
+    <div class="when tnum">Feb 2014</div>
+    <div class="what">
+      <div class="t">Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks</div>
+      <div class="d">University of Rochester, Rochester, NY, USA — host: Prof. Wendi Heinzelman</div>
+    </div>
+  </div>
+  <div class="cvrow">
+    <div class="when tnum">Feb 2014</div>
+    <div class="what">
+      <div class="t">Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks</div>
+      <div class="d">University at Buffalo, Buffalo, NY, USA — host: Prof. Tommaso Melodia</div>
+    </div>
+  </div>
+  <div class="cvrow">
+    <div class="when tnum">Feb 2014</div>
+    <div class="what">
+      <div class="t">Wireless Sensor Networks, Network Optimization, and Mathematical Programming</div>
+      <div class="d">Carleton University, Ottawa, ON, Canada — host: Prof. Halim Yanikomeroglu</div>
+    </div>
+  </div>
+  <div class="cvrow">
+    <div class="when tnum">Jan 2014</div>
+    <div class="what">
+      <div class="t">Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks</div>
+      <div class="d">University of Southern California, Los Angeles, CA, USA — host: Prof. Bhaskar Krishnamachari</div>
+    </div>
+  </div>
+  <div class="cvrow">
+    <div class="when tnum">Jan 2014</div>
+    <div class="what">
+      <div class="t">Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks</div>
+      <div class="d">University of California, Irvine, CA, USA — host: Prof. Ender Ayanoglu</div>
+    </div>
+  </div>
+</div>

@@ -1,89 +1,69 @@
-<p align="center">
-  <img src="images/favicon/favicon-96x96.png" width="72" height="72" alt="">
-</p>
+# Hüseyin Uğur Yıldız — Academic Website
 
-<h1 align="center">Huseyin Ugur Yildiz</h1>
+Source repository for the personal academic website of **Hüseyin Uğur Yıldız**, Associate Professor of Electrical Engineering at [TED University](https://www.tedu.edu.tr/), Ankara, Türkiye, and IEEE Senior Member. The site is a static publication generated with [Jekyll](https://jekyllrb.com) and served through GitHub Pages; each push to `master` triggers an automated build and deployment.
 
-<p align="center"><b>Associate Professor of Electrical Engineering · Operations Research × Network Optimization × RL.</b></p>
-<p align="center">Wireless & underwater sensor networks. Drone-assisted aerial networks. Personal academic site, built with Jekyll.</p>
+The website presents the author's scholarly record and research program, which concerns mathematical optimization, wireless and underwater sensor networks, resilient drone-assisted aerial networks, and hybrid optimization–reinforcement-learning methods.
 
-<p align="center">
-  <img alt="Associate Professor" src="https://img.shields.io/badge/ASSOCIATE_PROFESSOR-0d1b2a?style=for-the-badge">
-  <img alt="TED University" src="https://img.shields.io/badge/TED_UNIVERSITY-0d1b2a?style=for-the-badge">
-  <img alt="IEEE Senior Member" src="https://img.shields.io/badge/IEEE_SENIOR_MEMBER-0d1b2a?style=for-the-badge">
-  <img alt="Operations Research" src="https://img.shields.io/badge/OPERATIONS_RESEARCH-0d1b2a?style=for-the-badge">
-  <img alt="Network Optimization" src="https://img.shields.io/badge/NETWORK_OPTIMIZATION-0d1b2a?style=for-the-badge">
-  <img alt="Reinforcement Learning" src="https://img.shields.io/badge/REINFORCEMENT_LEARNING-0d1b2a?style=for-the-badge">
-</p>
+**Live site:** <https://huguryildiz.com>
 
-<p align="center">
-  <img alt="Jekyll" src="https://img.shields.io/badge/JEKYLL-0d1b2a?style=for-the-badge&logo=jekyll&logoColor=20e0ff">
-  <img alt="GitHub Pages" src="https://img.shields.io/badge/GITHUB_PAGES-0d1b2a?style=for-the-badge&logo=github&logoColor=20e0ff">
-  <img alt="MIT License" src="https://img.shields.io/badge/MIT_LICENSE-0d1b2a?style=for-the-badge">
-  <a href="https://huguryildiz.com"><img alt="Live site" src="https://img.shields.io/badge/huguryildiz.com-0d1b2a?style=for-the-badge&logo=googlechrome&logoColor=20e0ff"></a>
-</p>
+## Contents of the site
 
-<p align="center">
-  <a href="#pages">Pages</a> ·
-  <a href="#research">Research</a> ·
-  <a href="#contact">Contact</a> ·
-  <a href="#local-development">Local development</a> ·
-  <a href="#technical-stack">Technical stack</a>
-</p>
-
----
-
-## About
-
-Associate Professor of Electrical Engineering at [TED University](https://www.tedu.edu.tr/), Ankara, Turkey, and IEEE Senior Member. Research spans mathematical optimization, wireless and underwater sensor networks, resilient drone-assisted aerial networks, and hybrid optimization–reinforcement-learning methods.
-
-## Pages
-
-| Page | Description |
+| Section | Description |
 | --- | --- |
-| 🏠 **[Home](https://huguryildiz.com/)** | Biography, research interests, and news feed. |
-| 📄 **[Curriculum Vitae](https://huguryildiz.com/cv/)** | Academic and professional background, education, awards, and technical toolbox. |
-| 📚 **[Publications](https://huguryildiz.com/publications/)** | Journal articles, conference papers, and editorials with DOI links, PDF files, and citation metrics. |
-| 🔬 **[Research](https://huguryildiz.com/research/)** | Mathematical optimization, wireless/underwater sensor networks, resilient drone networks, hybrid optimization–RL approaches, and developed software. |
-| 🤝 **[Service](https://huguryildiz.com/service/)** | Technical program committee memberships, session chairing, reviewer roles, and invited seminars. |
-| 🎓 **[Students](https://huguryildiz.com/students/)** | Supervised Ph.D. and M.Sc. theses. |
-| 🏫 **[Teaching](https://huguryildiz.com/teaching/)** | Undergraduate and graduate courses at TED University. |
+| [Home](https://huguryildiz.com/) | Biographical summary, research interests, and recent news. |
+| [Curriculum Vitae](https://huguryildiz.com/cv/) | Education, academic appointments, honours, and technical competencies. |
+| [Publications](https://huguryildiz.com/publications/) | Journal articles, conference papers, and editorial contributions, with DOI links, full-text files, and interactive filtering. |
+| [Research](https://huguryildiz.com/research/) | Overview of the research program — optimization, sensor networks, resilient aerial networks, hybrid optimization–RL — and associated software. |
+| [Service](https://huguryildiz.com/service/) | Program-committee memberships, session chairing, peer review, and invited seminars. |
+| [Students](https://huguryildiz.com/students/) | Supervised doctoral and master's theses. |
+| [Teaching](https://huguryildiz.com/teaching/) | Undergraduate and graduate courses at TED University. |
 
-## Research
+## Associated software
 
-Active projects developed alongside the research program, documented in full on the [Research page](https://huguryildiz.com/research/):
+Research artefacts developed in support of the program and documented on the [Research page](https://huguryildiz.com/research/):
 
-- 🗳️ **[VERA](https://vera-eval.app)** — platform for academic juries, capstone evaluations, and accreditation workflows.
-- 🗓️ **[KAIROS](https://github.com/huguryildiz/KAIROS)** — conflict-free university course timetabling built on OR-Tools CP-SAT.
-- 🌊 **[wsn-opt-python](https://github.com/huguryildiz/wsn-opt-python)** — network-flow–based optimization tutorial for wireless sensor networks.
+- **[VERA](https://vera-eval.app)** — an evaluation platform for academic juries, capstone assessment, and accreditation workflows.
+- **[KAIROS](https://github.com/huguryildiz/KAIROS)** — conflict-free university course timetabling built on OR-Tools CP-SAT.
+- **[wsn-opt-python](https://github.com/huguryildiz/wsn-opt-python)** — an instructional network-flow optimization framework for wireless sensor networks.
 
-## Contact
+## Building the site locally
 
-- 📧 [hugur.yildiz@tedu.edu.tr](mailto:hugur.yildiz@tedu.edu.tr)
-- 🎓 [Google Scholar](https://scholar.google.com/citations?user=nQwHS1gAAAAJ)
-- 💼 [LinkedIn](https://www.linkedin.com/in/huguryildiz)
-
-## Local Development
+The site may be served with Docker, which requires no local Ruby installation and combines `_config.yml` with `_config_docker.yml`:
 
 ```bash
 docker compose up
 ```
 
-Opens the site at `http://localhost:4000`. No local Ruby installation needed.
-
-Native Ruby alternative:
+Alternatively, using a native Ruby toolchain:
 
 ```bash
 bundle install
 bundle exec jekyll serve
 ```
 
-## Technical Stack
+Either command serves the site at `http://localhost:4000`. There is no automated test suite; the site is validated visually in the browser.
 
-Built with [Jekyll](https://jekyllrb.com) & [AcademicPages](https://github.com/academicpages/academicpages.github.io), a fork of [Minimal Mistakes](https://mademistakes.com/work/minimal-mistakes-jekyll-theme/). Hosted on GitHub Pages, deployed automatically on every push to `master`. MIT License.
+## Repository organization
 
-Citation metrics auto-updated monthly via GitHub Actions using the [OpenAlex API](https://openalex.org).
+| Path | Purpose |
+| --- | --- |
+| `_pages/` | Page content in Markdown. |
+| `_layouts/`, `_includes/` | Layout templates and reusable partials that override the theme. |
+| `_sass/`, `assets/` | Style overrides, compiled CSS, scripts, fonts, and icons. |
+| `_data/` | Structured data — navigation, CV in JSON Resume format, and citation metrics. |
+| `scripts/` | Maintenance utilities for CV synchronization and metric retrieval. |
+| `index.md` | Home page. |
+| `_config.yml` | Site configuration. |
 
----
+The presentation is based on the [AcademicPages](https://github.com/academicpages/academicpages.github.io) theme — a derivative of [Minimal Mistakes](https://mademistakes.com/work/minimal-mistakes-jekyll-theme/) — pinned to `mmistakes/minimal-mistakes@4.24.0`. Local files under `_includes/`, `_layouts/`, and `_sass/` take precedence over their theme counterparts; the vendored theme is not modified directly. Citation and h-index statistics under `_data/` are refreshed monthly by a scheduled GitHub Actions workflow that queries the [OpenAlex API](https://openalex.org).
 
-<p align="center">© 2026 · Hüseyin Uğur Yıldız</p>
+## Contact
+
+- Email: [hugur.yildiz@tedu.edu.tr](mailto:hugur.yildiz@tedu.edu.tr)
+- ORCID: [0000-0002-1556-2634](https://orcid.org/0000-0002-1556-2634)
+- Google Scholar: <https://scholar.google.com/citations?user=nQwHS1gAAAAJ>
+- LinkedIn: <https://www.linkedin.com/in/huguryildiz>
+
+## License
+
+Released under the MIT License. © 2026 Hüseyin Uğur Yıldız.
