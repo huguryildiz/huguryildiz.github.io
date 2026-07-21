@@ -59,7 +59,6 @@ The presentation is based on the [AcademicPages](https://github.com/academicpage
 
 ## Contact
 
-- Email: [hugur.yildiz@tedu.edu.tr](mailto:hugur.yildiz@tedu.edu.tr)
 - ORCID: [0000-0002-1556-2634](https://orcid.org/0000-0002-1556-2634)
 - Google Scholar: <https://scholar.google.com/citations?user=nQwHS1gAAAAJ>
 - LinkedIn: <https://www.linkedin.com/in/huguryildiz>
