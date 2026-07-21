@@ -30,6 +30,8 @@ permalink: /stats/
   <ul class="statbars" id="secPages"></ul>
 
   <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-globe"/></svg>Countries</h2>
+  <div class="worldmap" id="worldMap"></div>
+  <p class="statnote worldmap-credit" id="mapCredit" hidden>World map: <a href="https://github.com/VictorCazanave/svg-maps" target="_blank" rel="noopener">@svg-maps/world</a> · CC BY 4.0. Countries shaded by page views (log scale).</p>
   <ul class="statbars" id="secCountries"></ul>
 
   <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-link"/></svg>Referrers</h2>
@@ -37,13 +39,13 @@ permalink: /stats/
   <p class="statnote" id="refFootnote">Direct visits (no referrer header, e.g. bookmarks, typed URLs, or most link-preview-stripped apps) are grouped as "(direct)".</p>
 
   <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-code"/></svg>Browsers</h2>
-  <ul class="statbars" id="secBrowsers"></ul>
+  <div class="donutfig" id="secBrowsers"></div>
 
   <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-network"/></svg>Operating systems</h2>
-  <ul class="statbars" id="secSystems"></ul>
+  <div class="donutfig" id="secSystems"></div>
 
   <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-image"/></svg>Screen sizes</h2>
-  <ul class="statbars" id="secSizes"></ul>
+  <div class="donutfig" id="secSizes"></div>
 
   <div id="secLanguagesWrap" hidden>
     <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-flag"/></svg>Browser languages</h2>
@@ -146,12 +148,98 @@ var STATS = {{ site.data.site_stats | jsonify }};
     }).join('');
   }
 
+  /* ---- donut chart (pure SVG, no libraries) ---- */
+  function donut(id, items, ariaLabel){
+    var host = $(id);
+    if (!host) return;
+    items = (items || []).slice().sort(function(a, b){ return b.count - a.count; });
+    if (!items.length) { host.innerHTML = '<p class="statnote">No data yet.</p>'; return; }
+    if (items.length > 6) {
+      var top = items.slice(0, 5);
+      var rest = items.slice(5).reduce(function(s, i){ return s + i.count; }, 0);
+      if (rest > 0) top.push({ name: 'Other', count: rest });
+      items = top;
+    }
+    var pal = ['var(--cc-net)', 'var(--cc-opt)', 'var(--cc-ai)', 'var(--cc-q)', 'var(--accent-strong)', 'var(--ink-faint)'];
+    var total = items.reduce(function(s, i){ return s + i.count; }, 0) || 1;
+    var R = 52, SW = 20, C = 2 * Math.PI * R, off = 0, segs = '', legend = '';
+    items.forEach(function(it, i){
+      var frac = it.count / total, len = frac * C, col = pal[i % pal.length];
+      segs += '<circle class="dseg" r="' + R + '" cx="60" cy="60" fill="none" stroke="' + col +
+        '" stroke-width="' + SW + '" stroke-dasharray="' + len.toFixed(2) + ' ' + (C - len).toFixed(2) +
+        '" stroke-dashoffset="' + (-off).toFixed(2) + '"><title>' + it.name + ': ' + fmt(it.count) +
+        ' (' + (frac * 100).toFixed(1) + '%)</title></circle>';
+      off += len;
+      legend += '<li><span class="sw" style="background:' + col + '"></span>' +
+        '<span class="ln" title="' + it.name + '">' + it.name + '</span>' +
+        '<span class="lv tnum">' + fmt(it.count) + '</span>' +
+        '<span class="lp">' + (frac * 100).toFixed(0) + '%</span></li>';
+    });
+    host.setAttribute('aria-label', ariaLabel);
+    host.innerHTML =
+      '<svg class="donutsvg" viewBox="0 0 120 120" role="img" aria-label="' + ariaLabel + '">' +
+        '<g transform="rotate(-90 60 60)">' + segs + '</g>' +
+        '<text class="dtot" x="60" y="60" text-anchor="middle" dominant-baseline="central">' + fmt(total) + '</text>' +
+      '</svg>' +
+      '<ul class="donutleg">' + legend + '</ul>';
+  }
+
+  /* ---- world choropleth (self-hosted SVG, colored by traffic) ---- */
+  function worldMap(id, countries){
+    var host = $(id);
+    if (!host || !countries || !countries.length) return;
+    var byCode = {}, counts = [];
+    countries.forEach(function(c){ if (c.code) { byCode[c.code.toLowerCase()] = c; counts.push(c.count); } });
+    if (!counts.length) return;
+    var maxc = Math.max.apply(null, counts);
+    function bucket(v){ var b = Math.ceil(Math.log(v + 1) / Math.log(maxc + 1) * 5); return Math.max(1, Math.min(5, b)); }
+    fetch('{{ "/assets/maps/world.svg" | relative_url }}').then(function(r){
+      if (!r.ok) throw new Error('map ' + r.status);
+      return r.text();
+    }).then(function(svg){
+      host.innerHTML = svg;
+      var tip = document.createElement('div');
+      tip.className = 'worldmap-tip'; tip.hidden = true;
+      host.appendChild(tip);
+      var hostRect = function(){ return host.getBoundingClientRect(); };
+      host.querySelectorAll('path[data-code]').forEach(function(p){
+        var c = byCode[(p.getAttribute('data-code') || '').toLowerCase()];
+        if (!c) return;
+        p.classList.add('wm-b' + bucket(c.count), 'wm-on');
+        p.setAttribute('tabindex', '0');
+        p.setAttribute('role', 'img');
+        p.setAttribute('aria-label', c.name + ', ' + c.count + ' views');
+        var txt = c.name + ' · ' + fmt(c.count) + ' views';
+        var moveTip = function(e){
+          tip.textContent = txt; tip.hidden = false;
+          var hr = hostRect(), x, y;
+          if (e && e.touches && e.touches[0]) { x = e.touches[0].clientX; y = e.touches[0].clientY; }
+          else { x = e.clientX; y = e.clientY; }
+          tip.style.left = (x - hr.left) + 'px'; tip.style.top = (y - hr.top) + 'px';
+        };
+        p.addEventListener('mouseenter', moveTip);
+        p.addEventListener('mousemove', moveTip);
+        p.addEventListener('mouseleave', function(){ tip.hidden = true; });
+        p.addEventListener('focus', function(){
+          tip.textContent = txt; tip.hidden = false;
+          var hr = hostRect(), pr = p.getBoundingClientRect();
+          tip.style.left = (pr.left - hr.left + pr.width / 2) + 'px';
+          tip.style.top = (pr.top - hr.top) + 'px';
+        });
+        p.addEventListener('blur', function(){ tip.hidden = true; });
+      });
+      $('#mapCredit').hidden = false;
+      host.classList.add('ready');
+    }).catch(function(){ /* bar list below remains as the fallback */ });
+  }
+
   barList('#secPages', STATS.pages, 'Top pages by views', function(p){ return p.path; });
   barList('#secCountries', STATS.countries, 'Views by country', function(c){ return c.name + ' (' + c.code + ')'; });
   barList('#secReferrers', STATS.referrers, 'Views by referrer source');
-  barList('#secBrowsers', STATS.browsers, 'Views by browser');
-  barList('#secSystems', STATS.systems, 'Views by operating system');
-  barList('#secSizes', STATS.sizes, 'Views by screen size');
+  donut('#secBrowsers', STATS.browsers, 'Views by browser');
+  donut('#secSystems', STATS.systems, 'Views by operating system');
+  donut('#secSizes', STATS.sizes, 'Views by screen size');
+  worldMap('#worldMap', STATS.countries);
   if (STATS.languages && STATS.languages.length) {
     $('#secLanguagesWrap').hidden = false;
     barList('#secLanguages', STATS.languages, 'Views by browser language');
