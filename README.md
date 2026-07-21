@@ -51,6 +51,8 @@ Either command serves the site at `http://localhost:4000`. There is no automated
 | `_layouts/`, `_includes/` | Layout templates and reusable partials that override the theme. |
 | `_sass/`, `assets/` | Style overrides, compiled CSS, scripts, fonts, and icons. |
 | `_data/` | Structured data — navigation, CV in JSON Resume format, and citation metrics. |
+| `files/` | Academic documents — CV, theses, and full-text papers — served under permanent `/files/…` URLs. |
+| `images/` | Site imagery — author photograph, research figures, course thumbnails, tool icons, and favicons. |
 | `scripts/` | Maintenance utilities for CV synchronization and metric retrieval. |
 | `index.md` | Home page. |
 | `_config.yml` | Site configuration. |
