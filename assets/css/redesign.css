@@ -666,3 +666,32 @@ footer.site a:hover .licon.spotify{color:var(--accent);}
   .statbars .lbl,.statbars .val{font-size:.84rem;}
 }
 @media (prefers-reduced-motion:reduce){ .tschart .tsline,.tschart .tsarea{transition:none;} }
+
+/* world choropleth */
+.worldmap{position:relative; margin:0 0 .5rem;}
+.worldmap-svg{display:block; width:100%; height:auto; max-height:min(64vw,480px);}
+.worldmap-svg path{fill:var(--surface); stroke:var(--hairline); stroke-width:.3px; vector-effect:non-scaling-stroke;}
+.worldmap-svg path.wm-b1{fill:color-mix(in srgb, var(--accent) 24%, var(--surface));}
+.worldmap-svg path.wm-b2{fill:color-mix(in srgb, var(--accent) 42%, var(--surface));}
+.worldmap-svg path.wm-b3{fill:color-mix(in srgb, var(--accent) 62%, var(--surface));}
+.worldmap-svg path.wm-b4{fill:color-mix(in srgb, var(--accent) 82%, var(--surface));}
+.worldmap-svg path.wm-b5{fill:var(--accent);}
+.worldmap-svg path.wm-on{cursor:pointer;}
+.worldmap-svg path.wm-on:hover,.worldmap-svg path.wm-on:focus{stroke:var(--head); stroke-width:.9px; outline:none;}
+.worldmap-tip{position:absolute; z-index:5; transform:translate(-50%,-135%); pointer-events:none;
+  background:var(--head); color:var(--bg); font-size:.8rem; line-height:1.2; padding:.24rem .5rem;
+  border-radius:5px; white-space:nowrap; font-variant-numeric:tabular-nums; box-shadow:0 4px 12px rgba(10,16,24,.18);}
+.worldmap-credit{margin:.1rem 0 .9rem;}
+
+/* donut charts */
+.donutfig{display:flex; align-items:center; gap:1.4rem; flex-wrap:wrap; margin:0 0 1.6rem;}
+.donutsvg{width:126px; height:126px; flex:0 0 auto;}
+.donutsvg .dtot{fill:var(--head); font-family:var(--serif); font-size:20px; font-weight:650; font-variant-numeric:tabular-nums;}
+.donutleg{list-style:none; margin:0; padding:0; flex:1 1 200px; min-width:170px;}
+.donutleg li{display:grid; grid-template-columns:auto minmax(0,1fr) auto auto; align-items:center;
+  gap:.55rem; padding:.24rem 0; font-size:.9rem;}
+.donutleg .sw{width:.72rem; height:.72rem; border-radius:2px;}
+.donutleg .ln{color:var(--ink); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.donutleg .lv{color:var(--ink-soft); font-variant-numeric:tabular-nums;}
+.donutleg .lp{color:var(--ink-faint); font-variant-numeric:tabular-nums; min-width:2.6em; text-align:right;}
+@media (max-width:480px){ .donutfig{gap:.9rem;} .donutsvg{width:108px; height:108px;} }
