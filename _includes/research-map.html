@@ -1,0 +1,271 @@
+<figure class="rmap" id="research-map">
+  <div class="rmap-views" role="group" aria-label="Map view">
+    <button type="button" data-view="tree" aria-pressed="true">Overview</button>
+    <button type="button" data-view="relations" aria-pressed="false">Topic relations</button>
+  </div>
+  <div class="rmap-grid" id="rmapGrid">
+    <svg class="rmap-wires" aria-hidden="true" focusable="false"></svg>
+    <div class="rmap-core" id="rmapCore">
+      <span class="t">Operations Research</span>
+      <span class="s">LP · MILP · CP · network flow · multi-objective</span>
+    </div>
+    {%- for area in site.data.research_map -%}
+    {%- assign npubs = 0 -%}
+    {%- for g in area.groups -%}{%- assign npubs = npubs | plus: g.pubs.size -%}{%- endfor -%}
+    <details class="rmap-node {{ area.status }}" id="map-{{ area.id }}">
+      <summary aria-label="{{ area.title }} — {% if npubs > 0 %}{{ npubs }} publications{% else %}exploratory, no publications yet{% endif %}">
+        <span class="rmap-title">{{ area.title }}</span>
+        {%- if area.status == 'established' -%}
+        <span class="rmap-count tnum">{{ npubs }}<span class="sr-only"> publications</span></span>
+        {%- else -%}
+        <span class="status ongoing">{{ area.status }}</span>
+        {%- endif -%}
+        <svg class="rmap-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <div class="rmap-panel">
+        {%- if area.note -%}<p class="rmap-note">{{ area.note }}</p>{%- endif -%}
+        {%- if area.groups.size > 0 -%}
+        <div class="rmap-branches">
+          {%- for g in area.groups -%}
+          <details class="rmap-sub" id="map-{{ area.id }}-{{ g.name | slugify }}">
+            <summary aria-label="{{ g.name }} — {{ g.pubs.size }} publications">
+              <span class="rmap-subtitle">{{ g.name }}</span>
+              <span class="rmap-count tnum">{{ g.pubs.size }}<span class="sr-only"> publications</span></span>
+              <svg class="rmap-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <ul class="rmap-pubs">
+              {%- for p in g.pubs -%}
+              <li>
+                <a class="ext" href="{% if p.url contains '://' %}{{ p.url }}{% else %}{{ p.url | relative_url }}{% endif %}" target="_blank" rel="noopener">{{ p.title }}</a>
+                <span class="m"><i>{{ p.venue }}</i>, {{ p.year }}{% if p.note %} · <span class="tag tag-award">{{ p.note }}</span>{% endif %}</span>
+              </li>
+              {%- endfor -%}
+            </ul>
+          </details>
+          {%- endfor -%}
+        </div>
+        {%- else -%}
+        <ul class="chiprow" aria-label="Keywords">
+          {%- for kw in area.keywords -%}<li class="chip">{{ kw }}</li>{%- endfor -%}
+        </ul>
+        {%- endif -%}
+      </div>
+    </details>
+    {%- endfor -%}
+  </div>
+  <div class="rgraph-wrap" hidden>
+    <!-- Topic-relation graph. Counts mirror _data/research_map.yml — update together. -->
+    <svg class="rgraph" viewBox="0 0 900 520" role="group" aria-label="Topic relation graph: shared research topics connecting the research areas">
+      <g class="rg-edges" aria-hidden="true">
+        <path class="rg-edge" data-e="core terrestrial" d="M380 272 C340 210 250 165 200 134"/>
+        <path class="rg-edge" data-e="core underwater" d="M520 272 C560 210 650 165 700 134"/>
+        <path class="rg-edge" data-e="core aerial" d="M520 328 C560 365 630 395 660 408"/>
+        <path class="rg-edge dashed" data-e="core ml" d="M380 328 C340 365 270 395 240 408"/>
+        <path class="rg-edge dashed" data-e="core quantum" d="M450 328 L450 446"/>
+        <path class="rg-edge" data-e="terrestrial packet" d="M240 98 C300 70 330 58 375 58"/>
+        <path class="rg-edge" data-e="underwater packet" d="M660 98 C600 70 570 58 525 58"/>
+        <path class="rg-edge" data-e="terrestrial lifetime" d="M240 110 L365 110"/>
+        <path class="rg-edge" data-e="underwater lifetime" d="M535 110 L660 110"/>
+        <path class="rg-edge" data-e="terrestrial security" d="M240 122 C300 150 330 162 365 162"/>
+        <path class="rg-edge" data-e="underwater security" d="M660 122 C600 150 570 162 535 162"/>
+        <path class="rg-edge" data-e="underwater kconn" d="M760 134 L760 250"/>
+        <path class="rg-edge" data-e="aerial kconn" d="M760 280 L760 396"/>
+        <path class="rg-edge" data-e="terrestrial power" d="M200 134 C230 158 255 175 285 190"/>
+        <path class="rg-edge" data-e="underwater voids" d="M700 134 C665 155 640 170 600 185"/>
+        <path class="rg-edge" data-e="underwater msink" d="M710 134 C660 180 640 210 600 235"/>
+        <path class="rg-edge" data-e="terrestrial param" d="M140 134 L140 250"/>
+        <path class="rg-edge" data-e="ml param" d="M140 280 L140 396"/>
+      </g>
+      <g class="rg-node core" data-id="core" tabindex="0" role="button" aria-label="Operations research and mathematical optimization — the core">
+        <rect x="350" y="272" width="200" height="56" rx="8"/>
+        <text x="450" y="296" text-anchor="middle" font-size="15" class="serif">Operations Research</text>
+        <text x="450" y="315" text-anchor="middle" font-size="9.5" class="dim">LP · MILP · CP · network flow</text>
+      </g>
+      <g class="rg-node area" data-id="terrestrial" data-open="map-terrestrial" tabindex="0" role="button" aria-label="Terrestrial ad hoc and sensor networks — open in overview map">
+        <rect x="40" y="86" width="200" height="48" rx="8"/>
+        <text x="140" y="115" text-anchor="middle" font-size="13">Terrestrial WSNs</text>
+      </g>
+      <g class="rg-node area" data-id="underwater" data-open="map-underwater" tabindex="0" role="button" aria-label="Underwater acoustic networks — open in overview map">
+        <rect x="660" y="86" width="200" height="48" rx="8"/>
+        <text x="760" y="115" text-anchor="middle" font-size="13">Underwater WSNs</text>
+      </g>
+      <g class="rg-node area" data-id="aerial" data-open="map-aerial" tabindex="0" role="button" aria-label="Drone-assisted aerial networks — open in overview map">
+        <rect x="660" y="396" width="200" height="48" rx="8"/>
+        <text x="760" y="425" text-anchor="middle" font-size="13">Aerial networks</text>
+      </g>
+      <g class="rg-node area frontier" data-id="ml" data-open="map-ml" tabindex="0" role="button" aria-label="Machine learning and reinforcement learning — ongoing — open in overview map">
+        <rect x="40" y="396" width="200" height="48" rx="8"/>
+        <text x="140" y="425" text-anchor="middle" font-size="13">Machine learning &amp; RL</text>
+      </g>
+      <g class="rg-node area frontier" data-id="quantum" data-open="map-quantum" tabindex="0" role="button" aria-label="Hybrid classical–quantum routing — exploratory — open in overview map">
+        <rect x="350" y="446" width="200" height="48" rx="8"/>
+        <text x="450" y="475" text-anchor="middle" font-size="13">Quantum routing</text>
+      </g>
+      <g class="rg-node topic" data-id="packet" data-open="map-terrestrial-packet-size-optimization map-underwater-lifetime-coding-delay" tabindex="0" role="button" aria-label="Packet size — 6 publications across terrestrial and underwater networks">
+        <rect x="375" y="43" width="150" height="30" rx="15"/>
+        <text x="450" y="62" text-anchor="middle" font-size="11.5">packet size · 6</text>
+      </g>
+      <g class="rg-node topic" data-id="lifetime" data-open="map-terrestrial-network-lifetime-energy map-underwater-lifetime-coding-delay" tabindex="0" role="button" aria-label="Network lifetime and energy — 15 publications across terrestrial and underwater networks">
+        <rect x="365" y="95" width="170" height="30" rx="15"/>
+        <text x="450" y="114" text-anchor="middle" font-size="11.5">lifetime &amp; energy · 15</text>
+      </g>
+      <g class="rg-node topic" data-id="security" data-open="map-terrestrial-security-critical-nodes map-underwater-attacks-secure-connectivity" tabindex="0" role="button" aria-label="Security and attacks — 10 publications across terrestrial and underwater networks">
+        <rect x="365" y="147" width="170" height="30" rx="15"/>
+        <text x="450" y="166" text-anchor="middle" font-size="11.5">security &amp; attacks · 10</text>
+      </g>
+      <g class="rg-node topic" data-id="kconn" data-open="map-underwater-k-connectivity map-aerial-k-connectivity-restoration-mobility" tabindex="0" role="button" aria-label="k-connectivity — 4 publications across underwater and aerial networks">
+        <rect x="685" y="250" width="150" height="30" rx="15"/>
+        <text x="760" y="269" text-anchor="middle" font-size="11.5">k-connectivity · 4</text>
+      </g>
+      <g class="rg-node topic" data-id="power" data-open="map-terrestrial-transmission-power-control" tabindex="0" role="button" aria-label="Transmission power control — 4 publications in terrestrial networks">
+        <rect x="210" y="190" width="150" height="30" rx="15"/>
+        <text x="285" y="209" text-anchor="middle" font-size="11.5">power control · 4</text>
+      </g>
+      <g class="rg-node topic" data-id="voids" data-open="map-underwater-void-regions" tabindex="0" role="button" aria-label="Void regions — 1 publication in underwater networks">
+        <rect x="525" y="185" width="150" height="30" rx="15"/>
+        <text x="600" y="204" text-anchor="middle" font-size="11.5">void regions · 1</text>
+      </g>
+      <g class="rg-node topic" data-id="msink" data-open="map-underwater-multi-sink-architectures" tabindex="0" role="button" aria-label="Multi-sink architectures — 1 publication in underwater networks">
+        <rect x="525" y="235" width="150" height="30" rx="15"/>
+        <text x="600" y="254" text-anchor="middle" font-size="11.5">multi-sink · 1</text>
+      </g>
+      <g class="rg-node topic" data-id="param" data-open="map-ml-optimization-learning-integration" tabindex="0" role="button" aria-label="Neural parameter prediction — 1 publication linking machine learning with terrestrial network optimization">
+        <rect x="50" y="250" width="180" height="30" rx="15"/>
+        <text x="140" y="269" text-anchor="middle" font-size="11.5">parameter prediction · 1</text>
+      </g>
+    </svg>
+  </div>
+  <figcaption class="cap">Solid boxes: established lines of work, evidenced by the publication record.
+    Dashed outlines: ongoing integration and exploratory directions. Select an area to see the
+    related publications; each title links to the paper. The relations view shows how shared topics
+    connect the research areas — selecting a node jumps to its publications in the overview.</figcaption>
+</figure>
+
+<script>
+(function(){
+  var grid = document.getElementById('rmapGrid');
+  if (!grid) return;
+  var svg = grid.querySelector('.rmap-wires');
+  var core = document.getElementById('rmapCore');
+  var nodes = Array.prototype.slice.call(grid.querySelectorAll('details.rmap-node'));
+  var NS = 'http://www.w3.org/2000/svg';
+
+  function anchor(el){
+    var g = grid.getBoundingClientRect(), r = el.getBoundingClientRect();
+    return {left:r.left-g.left, right:r.right-g.left, top:r.top-g.top,
+            bottom:r.bottom-g.top, cx:r.left-g.left+r.width/2, cy:r.top-g.top+r.height/2};
+  }
+  function path(d, frontier){
+    var p = document.createElementNS(NS,'path');
+    p.setAttribute('d', d);
+    if (frontier) p.setAttribute('class','frontier');
+    svg.appendChild(p);
+  }
+  function draw(){
+    if (getComputedStyle(svg).display === 'none') return;
+    var g = grid.getBoundingClientRect();
+    svg.setAttribute('viewBox','0 0 '+g.width+' '+g.height);
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    var c = anchor(core);
+    var est = nodes.filter(function(n){return n.classList.contains('established');});
+    est.forEach(function(n,i){
+      var s = anchor(n.querySelector('summary'));
+      var y0 = c.top + (c.bottom - c.top) * (0.3 + 0.2*i);
+      var mx = (c.right + s.left)/2;
+      path('M'+c.right+' '+y0+' C'+mx+' '+y0+' '+mx+' '+s.cy+' '+s.left+' '+s.cy);
+    });
+    var ml = grid.querySelector('#map-ml'), q = grid.querySelector('#map-quantum');
+    if (ml){
+      var m = anchor(ml.querySelector('summary'));
+      var my = (c.bottom + m.top)/2;
+      path('M'+c.cx+' '+c.bottom+' C'+c.cx+' '+my+' '+m.cx+' '+my+' '+m.cx+' '+m.top, true);
+      if (q){
+        var qa = anchor(q.querySelector('summary')), ma = anchor(ml);
+        path('M'+ma.right+' '+m.cy+' L'+qa.left+' '+m.cy, true);
+      }
+    }
+  }
+
+  var booting = true;
+  Array.prototype.forEach.call(grid.querySelectorAll('details'), function(n){
+    n.addEventListener('toggle', function(){
+      draw();
+      if (booting) return;
+      if (n.open) history.replaceState(null,'','#'+n.id);
+      else if (location.hash === '#'+n.id)
+        history.replaceState(null,'', location.pathname + location.search);
+    });
+  });
+  setTimeout(function(){ booting = false; }, 250);
+  if ('ResizeObserver' in window) new ResizeObserver(draw).observe(grid);
+  window.addEventListener('resize', draw);
+
+  if (location.hash){
+    var t = document.getElementById(location.hash.slice(1));
+    if (t && t.matches && t.matches('#research-map details')){
+      for (var el = t; el; el = el.parentElement && el.parentElement.closest('details'))
+        el.open = true;
+      t.scrollIntoView({block:'center'});
+    }
+  }
+  var map = document.getElementById('research-map');
+  var viewBtns = Array.prototype.slice.call(map.querySelectorAll('.rmap-views button'));
+  var relWrap = map.querySelector('.rgraph-wrap');
+  function showView(v){
+    grid.hidden = (v !== 'tree');
+    relWrap.hidden = (v !== 'relations');
+    viewBtns.forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.view === v)); });
+    if (v === 'tree') draw();
+  }
+  viewBtns.forEach(function(b){
+    b.addEventListener('click', function(){ showView(b.dataset.view); });
+  });
+
+  var rg = map.querySelector('svg.rgraph');
+  if (rg){
+    var rEdges = Array.prototype.slice.call(rg.querySelectorAll('.rg-edge'));
+    var rNodes = Array.prototype.slice.call(rg.querySelectorAll('.rg-node'));
+    function setFocus(id){
+      if (!id){
+        rg.removeAttribute('data-focus');
+        rEdges.concat(rNodes).forEach(function(el){ el.classList.remove('hl'); });
+        return;
+      }
+      rg.setAttribute('data-focus','');
+      var nb = {}; nb[id] = 1;
+      rEdges.forEach(function(e){
+        var t = e.getAttribute('data-e').split(' ');
+        var on = t.indexOf(id) > -1;
+        e.classList.toggle('hl', on);
+        if (on){ nb[t[0]] = 1; nb[t[1]] = 1; }
+      });
+      rNodes.forEach(function(n){ n.classList.toggle('hl', !!nb[n.getAttribute('data-id')]); });
+    }
+    rNodes.forEach(function(n){
+      var id = n.getAttribute('data-id');
+      n.addEventListener('mouseenter', function(){ setFocus(id); });
+      n.addEventListener('mouseleave', function(){ setFocus(null); });
+      n.addEventListener('focus', function(){ setFocus(id); });
+      n.addEventListener('blur', function(){ setFocus(null); });
+      function act(){
+        var ids = (n.getAttribute('data-open') || '').split(' ').filter(Boolean);
+        if (!ids.length) return;
+        showView('tree');
+        ids.forEach(function(i){
+          var d = document.getElementById(i);
+          if (d) for (var el = d; el; el = el.parentElement && el.parentElement.closest('details')) el.open = true;
+        });
+        var first = document.getElementById(ids[0]);
+        if (first) first.scrollIntoView({block:'center'});
+      }
+      n.addEventListener('click', act);
+      n.addEventListener('keydown', function(ev){
+        if (ev.key === 'Enter' || ev.key === ' '){ ev.preventDefault(); act(); }
+      });
+    });
+  }
+
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
+  draw();
+})();
+</script>

@@ -147,6 +147,7 @@ author:
 # =========================
 exclude:
   - README.md
+  - REDESIGN_HANDOFF.md
   - Gemfile
   - Gemfile.lock
   - node_modules
