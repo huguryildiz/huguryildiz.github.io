@@ -25,9 +25,8 @@ package-lock.json
 .vscode/
 .idea/
 
-# Claude Code
+# Claude Code (personal agent state stays local; CLAUDE.md is versioned)
 .claude/
-CLAUDE.md
 
 # Python
 scripts/__pycache__/
