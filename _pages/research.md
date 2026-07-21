@@ -209,7 +209,7 @@ Integration of mathematical optimization frameworks with machine learning and re
 <div style="display:flex; gap:20px; align-items:flex-start; margin-bottom:30px;">
 
   <div style="flex:1; min-width:150px;">
-    <video src="/assets/compare_grid_portrait.mp4" poster="/images/uwa-ray-bench.png" autoplay loop muted playsinline style="width:100%; aspect-ratio:2560/2694; object-fit:cover; border-radius:6px;"></video>
+    <img src="/images/uwa-ray-bench.png" alt="Underwater Acoustic Ray Bench screenshot" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:6px;">
   </div>
 
   <div style="flex:3;">
@@ -230,6 +230,8 @@ Integration of mathematical optimization frameworks with machine learning and re
   </div>
 
 </div>
+
+<video src="/assets/compare_grid_portrait.mp4" poster="/images/uwa-ray-bench.png" autoplay loop muted playsinline controls style="display:block; width:100%; max-width:900px; margin:0 auto 30px auto; border-radius:8px;"></video>
 
 ## Code & Learning Resources
 
