@@ -33,3 +33,6 @@ CLAUDE.md
 scripts/__pycache__/
 **/__pycache__/
 *.pyc
+
+# Local design artifacts
+design-artifacts/academic-site-redesign/
