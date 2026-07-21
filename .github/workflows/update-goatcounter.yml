@@ -1,0 +1,40 @@
+name: Update Site Stats (GoatCounter)
+
+on:
+  schedule:
+    - cron: "0 3 * * *"   # Daily at 03:00 UTC
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Fetch GoatCounter stats
+        env:
+          # Repo → Settings → Secrets → Actions → New repository secret
+          # Name:  GOATCOUNTER_API_TOKEN
+          # Value: <personal API token from the GoatCounter settings page>
+          GOATCOUNTER_API_TOKEN: ${{ secrets.GOATCOUNTER_API_TOKEN }}
+        run: python scripts/fetch_goatcounter.py
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _data/site_stats.json
+          git diff --cached --quiet || git commit -m "chore: update site stats [skip ci]"
+          git push
