@@ -172,7 +172,7 @@ main:focus{outline:none;}
 @media (prefers-reduced-motion:reduce){ *{scroll-behavior:auto !important;} }
 .pagehead{padding:clamp(2rem,5vw,3.2rem) 0 0;}
 .pagehead h1{font-size:clamp(1.7rem,3.4vw,2.25rem); font-weight:600;}
-.pagehead .lede{color:var(--ink-soft); margin-top:.6rem; font-size:1.02rem;}
+.pagehead .lede{color:var(--ink-soft); margin-top:.6rem; font-size:1.02rem; text-align:justify; hyphens:auto;}
 h2.sec{
   font-size:clamp(1.22rem,2.4vw,1.42rem); font-weight:600;
   display:flex; align-items:center; gap:.6rem;
