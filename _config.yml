@@ -147,7 +147,9 @@ author:
 # =========================
 exclude:
   - README.md
-  - REDESIGN_HANDOFF.md
+  - AGENTS.md
+  - PRODUCT.md
+  - CLAUDE.md
   - Gemfile
   - Gemfile.lock
   - node_modules
