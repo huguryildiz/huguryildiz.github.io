@@ -26,14 +26,65 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 
 <!-- Favicons -->
-<link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon/favicon.svg?v=5' | relative_url }}">
-<link rel="alternate icon" href="{{ '/assets/images/favicon/favicon.ico?v=5' | relative_url }}">
+<link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon/favicon.svg?v=6' | relative_url }}">
+<link rel="alternate icon" href="{{ '/assets/images/favicon/favicon.ico?v=6' | relative_url }}">
 <link rel="apple-touch-icon" href="{{ '/assets/images/favicon/apple-touch-icon.png' | relative_url }}">
 <link rel="shortcut icon" href="{{ '/assets/images/favicon/favicon.ico' | relative_url }}">
 <meta name="apple-mobile-web-app-title" content="Huseyin Ugur Yildiz">
 <link rel="manifest" href="{{ '/assets/images/favicon/site.webmanifest' | relative_url }}">
 <meta name="theme-color" content="#061a2b">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<!-- Animated sonar-sweep favicon: rotates the radar sweep in the tab.
+     Falls back to the static SVG above when JS is off or reduced-motion is set. -->
+<script>
+(function(){
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var NAVY="#12314E", CREAM="#F6F2EA", BLUE="#8FB8DC", TERRA="#E09A6A";
+  var NODES=[[98,38,8,TERRA],[30,82,7,CREAM],[92,92,7,BLUE]];
+  function nodeAng(n){return Math.atan2(n[1]-64,n[0]-64);}
+  var S=64, cv=document.createElement('canvas'); cv.width=cv.height=S;
+  var ctx=cv.getContext('2d');
+  function rr(x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath();}
+  function draw(theta){
+    var k=S/128, c=64*k;
+    ctx.clearRect(0,0,S,S);
+    ctx.fillStyle=NAVY; rr(0,0,S,S,28*k); ctx.fill();
+    ctx.lineWidth=4*k;
+    ctx.strokeStyle="rgba(246,242,234,.22)"; ctx.beginPath(); ctx.arc(c,c,44*k,0,7); ctx.stroke();
+    ctx.strokeStyle="rgba(143,184,220,.55)"; ctx.beginPath(); ctx.arc(c,c,28*k,0,7); ctx.stroke();
+    var R=46*k, N=10, span=1.15, i;
+    for(i=0;i<N;i++){
+      var a1=theta-span*i/N, a2=theta-span*(i+1)/N, alpha=0.5*(1-i/N);
+      ctx.beginPath(); ctx.moveTo(c,c); ctx.arc(c,c,R,a2,a1); ctx.closePath();
+      ctx.fillStyle="rgba(224,154,106,"+alpha+")"; ctx.fill();
+    }
+    ctx.strokeStyle=TERRA; ctx.lineWidth=6*k; ctx.lineCap="round";
+    ctx.beginPath(); ctx.moveTo(c,c); ctx.lineTo(c+R*Math.cos(theta), c+R*Math.sin(theta)); ctx.stroke();
+    for(i=0;i<NODES.length;i++){
+      var nd=NODES[i], d=theta-nodeAng(nd);
+      d=((d%(2*Math.PI))+2*Math.PI)%(2*Math.PI);
+      var glow=Math.max(0,1-d/1.1);
+      if(glow>0){ ctx.fillStyle="rgba(255,240,220,"+(0.5*glow)+")"; ctx.beginPath(); ctx.arc(nd[0]*k,nd[1]*k,(nd[2]+6*glow)*k,0,7); ctx.fill(); }
+      ctx.fillStyle=nd[3]; ctx.beginPath(); ctx.arc(nd[0]*k,nd[1]*k,nd[2]*k,0,7); ctx.fill();
+    }
+    ctx.fillStyle=CREAM; ctx.beginPath(); ctx.arc(c,c,12*k,0,7); ctx.fill();
+  }
+  var link=document.createElement('link'); link.rel='icon'; link.type='image/png';
+  function mountLink(){
+    var olds=document.querySelectorAll('link[rel~="icon"]');
+    for(var j=0;j<olds.length;j++) olds[j].parentNode.removeChild(olds[j]);
+    document.head.appendChild(link);
+  }
+  var t=0, timer=null;
+  function tick(){ t+=0.05; draw(t); link.href=cv.toDataURL('image/png'); }
+  function start(){ if(timer) return; mountLink(); tick(); timer=setInterval(tick,50); }
+  function stop(){ if(timer){ clearInterval(timer); timer=null; } }
+  document.addEventListener('visibilitychange', function(){ document.hidden ? stop() : start(); });
+  if(document.readyState!=='loading') start();
+  else document.addEventListener('DOMContentLoaded', start);
+})();
+</script>
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
