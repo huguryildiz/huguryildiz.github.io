@@ -12,7 +12,7 @@ permalink: /teaching/
   <h3 class="sub">Undergraduate</h3>
 
   <article class="swproject">
-    <video class="course-video" src="/assets/video/hero-ee304.mp4"
+    <video class="course-video" src="/assets/video/courses/hero-ee304.mp4"
       poster="/assets/images/courses/ee304.png" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
@@ -25,7 +25,7 @@ permalink: /teaching/
   </article>
 
   <article class="swproject">
-    <video class="course-video" src="/assets/video/hero-ee311.mp4"
+    <video class="course-video" src="/assets/video/courses/hero-ee311.mp4"
       poster="/assets/images/courses/ee311.png" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
@@ -38,7 +38,7 @@ permalink: /teaching/
   </article>
 
   <article class="swproject">
-    <video class="course-video" src="/assets/video/hero-ee413.mp4"
+    <video class="course-video" src="/assets/video/courses/hero-ee413.mp4"
       poster="/assets/images/courses/ee413.png" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
@@ -52,7 +52,7 @@ permalink: /teaching/
   </article>
 
   <article class="swproject">
-    <video class="course-video" src="/assets/video/hero-ee491.mp4"
+    <video class="course-video" src="/assets/video/courses/hero-ee491.mp4"
       poster="/assets/images/courses/ee491.png" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
@@ -72,7 +72,7 @@ permalink: /teaching/
   <h3 class="sub">Graduate</h3>
 
   <article class="swproject">
-    <video class="course-video" src="/assets/video/hero-ee512.mp4"
+    <video class="course-video" src="/assets/video/courses/hero-ee512.mp4"
       poster="/assets/images/courses/ee512.png" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
@@ -88,7 +88,9 @@ permalink: /teaching/
   <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-clock"/></svg>Previously taught courses at TED University</h2>
 
   <article class="swproject">
-    <img src="/assets/images/courses/ee205.png" alt="EE 205 course illustration" loading="lazy">
+    <video class="course-video" src="/assets/video/courses/hero-ee205.mp4"
+      poster="/assets/images/courses/ee205.png" loop muted playsinline preload="metadata"
+      aria-hidden="true"></video>
     <div>
       <h3>EE 205 — Software Tools for Electrical Engineering</h3>
       <p>A second-year undergraduate course introducing MATLAB-based software tools and
@@ -99,7 +101,9 @@ permalink: /teaching/
   </article>
 
   <article class="swproject">
-    <img src="/assets/images/courses/ee312.png" alt="EE 312 course illustration" loading="lazy">
+    <video class="course-video" src="/assets/video/courses/hero-ee312.mp4"
+      poster="/assets/images/courses/ee312.png" loop muted playsinline preload="metadata"
+      aria-hidden="true"></video>
     <div>
       <h3>EE 312 — Communication Systems I</h3>
       <p>A third-year undergraduate course covering communication systems, modulation techniques,
@@ -110,7 +114,9 @@ permalink: /teaching/
   </article>
 
   <article class="swproject">
-    <img src="/assets/images/courses/ee462.png" alt="EE 462 course illustration" loading="lazy">
+    <video class="course-video" src="/assets/video/courses/hero-ee462.mp4"
+      poster="/assets/images/courses/ee462.png" loop muted playsinline preload="metadata"
+      aria-hidden="true"></video>
     <div>
       <h3>EE 462 — Power System Analysis</h3>
       <p>A senior-level undergraduate course covering power system modeling, load flow, fault

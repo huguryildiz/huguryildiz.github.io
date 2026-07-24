@@ -1,0 +1,37 @@
+---
+layout: academic
+---
+{%- assign words = content | number_of_words -%}
+{%- assign minutes = words | divided_by: 200 | plus: 1 -%}
+<div class="shell">
+  <article class="post">
+    <header class="post-head">
+      <p class="post-back"><a href="{{ '/writing/' | relative_url }}"><svg class="hicon" aria-hidden="true"><use href="#i-pen"/></svg>Writing</a></p>
+      <h1>{{ page.title }}</h1>
+      <div class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+        <span class="dot" aria-hidden="true">·</span>
+        <span class="rt"><svg class="hicon" aria-hidden="true"><use href="#i-clock"/></svg>{{ minutes }} min read</span>
+      </div>
+      {%- if page.tags and page.tags.size > 0 -%}
+      <ul class="chiprow post-tags">
+        {%- for tag in page.tags -%}<li class="chip">{{ tag }}</li>{%- endfor -%}
+      </ul>
+      {%- endif -%}
+    </header>
+
+    <div class="post-body">
+      {{ content }}
+    </div>
+
+    {%- if page.linkedin -%}
+    <footer class="post-cite">
+      <a href="{{ page.linkedin }}" target="_blank" rel="noopener">
+        <svg class="licon" aria-hidden="true"><use href="#i-linkedin"/></svg>
+        Originally shared on LinkedIn
+        <svg class="licon go" aria-hidden="true"><use href="#i-link"/></svg>
+      </a>
+    </footer>
+    {%- endif -%}
+  </article>
+</div>
