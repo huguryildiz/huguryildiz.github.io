@@ -131,7 +131,10 @@ nav.primary a:hover .navico{color:var(--accent); opacity:1;}
 .masthead-in{display:flex; align-items:center; gap:1.25rem; min-height:3.6rem;}
 .wordmark{font-family:var(--serif); font-weight:600; font-size:1.12rem; color:var(--head); letter-spacing:.005em;
   display:inline-flex; align-items:center; gap:.5rem;}
-.wordmark-fav{width:22px; height:22px; flex:0 0 auto;}
+.wordmark-fav{width:30px; height:30px; flex:0 0 auto;}
+.wordmark-fav .wm-sweep{transform-box:view-box; transform-origin:64px 64px; animation:wm-sweep-rot 5s linear infinite;}
+@keyframes wm-sweep-rot{to{transform:rotate(360deg);}}
+@media (prefers-reduced-motion:reduce){.wordmark-fav .wm-sweep{animation:none;}}
 .wordmark:hover{text-decoration:none; color:var(--accent);}
 nav.primary{margin-left:auto;}
 nav.primary ul{list-style:none; display:flex; gap:.25rem; margin:0; padding:0;}
