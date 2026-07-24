@@ -10,28 +10,48 @@ permalink: /
     <div class="hero-id">
       <div class="idrow">
         <figure class="portrait">
-          <img src="/assets/images/huguryildiz.png" alt="Portrait of Hüseyin Uğur Yıldız" width="104" height="104">
-          <svg class="orn" viewBox="0 0 140 34" aria-hidden="true" focusable="false">
-            <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-              <path d="M61 12 C48 22 34 25 22 21 C12 17.5 10 9.5 17 6.5 C23 4 28 8.5 24.5 13.5 C22 17 17 16 16.5 12"/>
-              <path d="M79 12 C92 22 106 25 118 21 C128 17.5 130 9.5 123 6.5 C117 4 112 8.5 115.5 13.5 C118 17 123 16 123.5 12"/>
+          <img src="/assets/images/huguryildiz.png" alt="Portrait of Hüseyin Uğur Yıldız" width="126" height="126">
+          <svg class="orn" viewBox="0 0 160 160" aria-hidden="true" focusable="false">
+            <g class="oarc" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+              <path d="M17.6 116 A72 72 0 0 0 147.7 104.6"/>
+              <path d="M55.4 12.3 A72 72 0 0 1 135.2 33.7"/>
             </g>
-            <path fill="currentColor" d="M70 0 C66.2 7 66.2 14 70 20 C73.8 14 73.8 7 70 0 Z"/>
-            <circle cx="61" cy="12" r="1.7" fill="currentColor"/>
-            <circle cx="79" cy="12" r="1.7" fill="currentColor"/>
+            <g class="oping" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+              <path opacity=".35" d="M144.2 118.3 A6 6 0 0 1 138 127.2"/>
+              <path opacity=".22" d="M148.1 116.1 A10.5 10.5 0 0 1 137.2 131.6"/>
+              <path opacity=".12" d="M152 113.8 A15 15 0 0 1 136.4 136.1"/>
+            </g>
+            <g fill="currentColor">
+              <circle class="on" cx="17.6" cy="116" r="1.8"/>
+              <circle class="on" cx="55.4" cy="12.3" r="1.8"/>
+              <circle class="on" cx="135.2" cy="33.7" r="1.8"/>
+              <circle class="on onx" cx="139" cy="121.3" r="2.2"/>
+            </g>
+            <g class="osig">
+              <g fill="none" stroke="currentColor" stroke-linecap="round">
+                <path opacity=".04" stroke-width="1.5" d="M21.8 37.7 A72 72 0 0 1 37.7 21.8"/>
+                <path opacity=".08" stroke-width="2" d="M37.7 21.8 A72 72 0 0 1 57.8 11.5"/>
+                <path opacity=".16" stroke-width="2.5" d="M57.8 11.5 A72 72 0 0 1 80 8"/>
+              </g>
+              <circle cx="80" cy="8" r="2.2" fill="currentColor"/>
+            </g>
           </svg>
         </figure>
         <div class="idtext">
           <h1 id="home-h1">Hüseyin Uğur Yıldız</h1>
-          <p class="role">Associate Professor of Electrical &amp; Electronics Engineering,
-            <span class="org"><a href="https://www.tedu.edu.tr/en/huseyin-ugur-yildiz" target="_blank" rel="noopener">TED University</a></span>
-            · IEEE Senior Member</p>
+          <p class="role">
+            <span class="role-line">Associate Professor &amp; IEEE Senior Member</span>
+            <span class="role-line">Department of Electrical &amp; Electronics Engineering</span>
+            <span class="role-line"><span class="org"><a href="https://www.tedu.edu.tr/en/huseyin-ugur-yildiz" target="_blank" rel="noopener">TED University</a></span></span>
+            <a class="role-addr" href="https://share.google/AFFkStDzjSsudiC1V" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-map-pin"/></svg>
+              <span>Ankara, Turkey<span class="sr-only"> — campus location on the map (external)</span></span></a></p>
         </div>
       </div>
       <p class="prop">Optimization for resilient networked systems under physical constraints.</p>
       <p class="supporting">I develop optimization-based models for routing, resource allocation,
         and energy efficiency in wireless ad&nbsp;hoc, underwater acoustic, and drone-assisted
-        networks — increasingly combined with machine learning, reinforcement learning, and
+        networks, increasingly combined with machine learning, reinforcement learning, and
         hybrid classical–quantum network routing.</p>
     </div>
     <div class="hero-actions">
@@ -42,8 +62,10 @@ permalink: /
         <a class="btn btn-quiet" href="#home-selected">Selected publications</a>
         <a class="btn btn-quiet" href="mailto:hugur.yildiz@tedu.edu.tr">Contact</a>
       </div>
-      <details class="profiles">
-        <summary>Academic profiles</summary>
+      <div class="profiles">
+        <p class="profiles-label">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-link"/></svg>
+          Academic profiles</p>
         <ul class="profilelinks">
           <li><a href="https://scholar.google.com/citations?user=nQwHS1gAAAAJ" target="_blank" rel="noopener">
             <i class="ai ai-google-scholar" aria-hidden="true"></i>
@@ -72,11 +94,8 @@ permalink: /
           <li><a href="https://www.linkedin.com/in/huguryildiz/" target="_blank" rel="noopener">
             <svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-linkedin"/></svg>
             LinkedIn<span class="sr-only"> (external)</span></a></li>
-          <li><a href="mailto:hugur.yildiz@tedu.edu.tr">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg>
-            Email</a></li>
         </ul>
-      </details>
+      </div>
     </div>
     <section class="hero-twin" aria-label="Ocean digital twin">
       {% include hero-uwsn.html %}
@@ -213,19 +232,14 @@ permalink: /
     <li><img class="ico" src="/assets/images/icons/uwa-ray-bench-mark.png" alt="" width="22" height="22"><span class="n">UWA Ray Bench</span><span class="d">Benchmarking LLMs against a BELLHOP3D reference solver on underwater acoustic ray tracing.</span><a class="ext" href="https://uwa-ray-bench.vercel.app/" target="_blank" rel="noopener">uwa-ray-bench.vercel.app</a></li>
   </ul>
   <p class="more" style="margin-top:.7rem;"><a href="/research/">Research program &amp; software →</a></p>
-
-  <h2 class="sec" id="home-students"><svg class="hicon" aria-hidden="true"><use href="#i-users"/></svg>Prospective students</h2>
-  <div class="cta">
-    <p>I am interested in supervising highly motivated M.Sc. and Ph.D. students working at the
-      intersection of operations research, mathematical optimization, and machine learning for
-      next-generation networked systems, including wireless, underwater, and aerial communication
-      networks. Interested candidates are encouraged to contact me via email with their CV,
-      transcript, and a concise statement of research interests.</p>
-    <div class="row">
-      <a class="btn btn-primary" href="mailto:hugur.yildiz@tedu.edu.tr">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg>
-        Write to me</a>
-      <a class="btn btn-quiet" href="/students/">Supervision record</a>
-    </div>
-  </div>
 </div>
+
+<script>
+(function(){
+  var p = document.querySelector('.portrait');
+  if (!p || !('IntersectionObserver' in window)) return;
+  new IntersectionObserver(function(entries){
+    p.classList.toggle('orn-off', !entries[0].isIntersecting);
+  }).observe(p);
+})();
+</script>
