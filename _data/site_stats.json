@@ -1,11 +1,11 @@
 {
-  "updated": "2026-07-22T05:53:08Z",
+  "updated": "2026-07-24T05:52:43Z",
   "range": {
     "start": "2019-01-01",
-    "end": "2026-07-22"
+    "end": "2026-07-24"
   },
   "totals": {
-    "pageviews": 838,
+    "pageviews": 860,
     "visitors": null
   },
   "timeseries": [
@@ -11047,7 +11047,15 @@
     },
     {
       "date": "2026-07-22",
-      "views": 2
+      "views": 14
+    },
+    {
+      "date": "2026-07-23",
+      "views": 10
+    },
+    {
+      "date": "2026-07-24",
+      "views": 0
     }
   ],
   "pages": [],
@@ -11055,12 +11063,12 @@
     {
       "code": "TR",
       "name": "Turkey",
-      "count": 601
+      "count": 612
     },
     {
       "code": "US",
       "name": "United States",
-      "count": 89
+      "count": 97
     },
     {
       "code": "GB",
@@ -11241,11 +11249,11 @@
   "referrers": [
     {
       "name": "Google",
-      "count": 94
+      "count": 104
     },
     {
       "name": "www.linkedin.com",
-      "count": 27
+      "count": 28
     },
     {
       "name": "com.linkedin.android",
@@ -11280,6 +11288,10 @@
       "count": 1
     },
     {
+      "name": "lnkd.in",
+      "count": 1
+    },
+    {
       "name": "scholar.google.com.tr",
       "count": 1
     },
@@ -11295,7 +11307,7 @@
   "browsers": [
     {
       "name": "Chrome",
-      "count": 489
+      "count": 506
     },
     {
       "name": "Safari",
@@ -11303,7 +11315,7 @@
     },
     {
       "name": "Firefox",
-      "count": 5
+      "count": 7
     },
     {
       "name": "Edge",
@@ -11313,7 +11325,7 @@
   "systems": [
     {
       "name": "macOS",
-      "count": 318
+      "count": 320
     },
     {
       "name": "iOS",
@@ -11321,22 +11333,22 @@
     },
     {
       "name": "Windows",
-      "count": 119
+      "count": 125
     },
     {
       "name": "Linux",
-      "count": 75
+      "count": 83
     },
     {
       "name": "Android",
-      "count": 19
+      "count": 22
     }
   ],
   "sizes": [],
   "languages": [
     {
       "name": "(unknown)",
-      "count": 841
+      "count": 860
     }
   ]
 }
