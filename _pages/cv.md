@@ -18,7 +18,7 @@ permalink: /cv/
 
   <div class="statgrid" role="group" aria-label="At a glance">
     <div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg><b>40+</b><span>Publications</span></div>
-    <div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg><b>&gt;1,000</b><span>Citations</span></div>
+    <div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg><b>&gt;1,000</b><span>Citations<small>Google Scholar · Jul 2026</small></span></div>
     <div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-target"/></svg><b>15</b><span>h-index</span></div>
     <div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-cap"/></svg><b>7</b><span>Graduate theses supervised</span></div>
     <div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg><b>40+</b><span>Senior design teams</span></div>

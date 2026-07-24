@@ -83,11 +83,12 @@ permalink: /
     </section>
   </header>
 
+  {% assign rm = site.data.research_metrics %}
   <div class="metricsline" role="group" aria-label="Research metrics">
-    <span class="m"><b>830</b> citations</span>
-    <span class="m"><b>15</b> h-index</span>
-    <span class="m"><b>44</b> works</span>
-    <span class="src">Source: <a href="https://openalex.org/A5085505896" target="_blank" rel="noopener">OpenAlex</a> · updated Jul 1, 2026 · refreshed monthly</span>
+    <span class="m"><b>{{ rm.citations }}</b> citations</span>
+    <span class="m"><b>{{ rm.h_index }}</b> h-index</span>
+    <span class="m"><b>{{ rm.works }}</b> works</span>
+    <span class="src">Source: <a href="{{ rm.profile_url }}" target="_blank" rel="noopener">OpenAlex</a> · updated {{ rm.updated_utc | date: "%b %-d, %Y" }} · refreshed monthly</span>
   </div>
 
   <section class="home-biography" aria-labelledby="home-bio">
