@@ -27,7 +27,10 @@ permalink: /research/
   <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-layers"/></svg>Key research topics</h2>
 
   <article class="theme-item">
-    <img class="thumb" src="/images/research/network_flow_optimization.png" alt="Network flow optimization illustration" loading="lazy">
+    <video class="thumb topic-video" data-topic-video muted playsinline preload="none"
+      poster="/images/research/network_flow_optimization.png" tabindex="-1" aria-hidden="true">
+      <source src="/assets/video/topics/optimization.mp4" type="video/mp4">
+    </video>
     <div class="tbody">
       <div class="head"><h3>Operations research and mathematical optimization for networked systems</h3>
         <span class="status">Core</span></div>
@@ -44,7 +47,10 @@ permalink: /research/
   </article>
 
   <article class="theme-item">
-    <img class="thumb" src="/images/research/wireless_ad_hoc_underwater_sensor_networks.png" alt="Wireless ad hoc and underwater sensor networks illustration" loading="lazy">
+    <video class="thumb topic-video" data-topic-video muted playsinline preload="none"
+      poster="/images/research/wireless_ad_hoc_underwater_sensor_networks.png" tabindex="-1" aria-hidden="true">
+      <source src="/assets/video/topics/wireless-underwater.mp4" type="video/mp4">
+    </video>
     <div class="tbody">
       <div class="head"><h3>Wireless ad hoc and underwater acoustic sensor networks</h3>
         <span class="status">Core</span></div>
@@ -62,7 +68,10 @@ permalink: /research/
   </article>
 
   <article class="theme-item">
-    <img class="thumb" src="/images/research/drone_network_resilience.png" alt="Drone network resilience illustration" loading="lazy">
+    <video class="thumb topic-video" data-topic-video muted playsinline preload="none"
+      poster="/images/research/drone_network_resilience.png" tabindex="-1" aria-hidden="true">
+      <source src="/assets/video/topics/aerial.mp4" type="video/mp4">
+    </video>
     <div class="tbody">
       <div class="head"><h3>Resilient drone-assisted aerial networks</h3>
         <span class="status">Core</span></div>
@@ -78,7 +87,10 @@ permalink: /research/
   </article>
 
   <article class="theme-item">
-    <img class="thumb" src="/images/research/hybrid_opt_rl_networks.png" alt="Hybrid optimization and reinforcement learning illustration" loading="lazy">
+    <video class="thumb topic-video" data-topic-video muted playsinline preload="none"
+      poster="/images/research/hybrid_opt_rl_networks.png" tabindex="-1" aria-hidden="true">
+      <source src="/assets/video/topics/quantum.mp4" type="video/mp4">
+    </video>
     <div class="tbody">
       <div class="head"><h3>Hybrid optimization and learning-based network control</h3>
         <span class="status ongoing">Ongoing</span></div>
@@ -92,6 +104,31 @@ permalink: /research/
         <a href="/publications/">Neural network–based instant parameter prediction (Wireless Netw. 2019)</a></p>
     </div>
   </article>
+
+  <script>
+  (function(){
+    var videos=Array.prototype.slice.call(document.querySelectorAll('[data-topic-video]'));
+    if(!videos.length||!('IntersectionObserver' in window))return;
+    var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduced)return;
+    var observer=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        var video=entry.target;
+        if(entry.isIntersecting){
+          var playback=video.play();
+          if(playback&&playback.catch)playback.catch(function(){});
+        }else if(!video.ended){
+          video.pause();
+        }
+      });
+    },{threshold:.45});
+    videos.forEach(function(video){
+      video.muted=true;
+      video.defaultMuted=true;
+      observer.observe(video);
+    });
+  })();
+  </script>
 
   <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-code"/></svg>Software</h2>
 
@@ -143,7 +180,7 @@ permalink: /research/
   </article>
 
   <figure style="margin:1.8rem 0 0;">
-    <video class="compvid" src="/assets/compare_grid_portrait.mp4" autoplay loop muted playsinline controls
+    <video class="compvid" src="/assets/video/compare_grid_portrait.mp4" autoplay loop muted playsinline controls
       aria-label="Side-by-side comparison grid: five LLM ray-tracing outputs against the BELLHOP3D reference solver"></video>
     <figcaption class="cap" style="max-width:70ch; margin:.5rem auto 0; text-align:center;">
       UWA Ray Bench — model outputs compared against the BELLHOP3D reference solver.</figcaption>
