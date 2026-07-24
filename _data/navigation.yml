@@ -1,22 +1,22 @@
 main:
 
-  - title: "Curriculum Vitae"
-    url: "/cv/"
+  - title: "Research"
+    url: "/research/"
 
   - title: "Publications"
     url: "/publications/"
 
-  - title: "Research"
-    url: "/research/"
-
   - title: "Writing"
     url: "/writing/"
 
-  - title: "Service"
-    url: "/service/"
+  - title: "Teaching"
+    url: "/teaching/"
 
   - title: "Students"
     url: "/students/"
 
-  - title: "Teaching"
-    url: "/teaching/"
+  - title: "Service"
+    url: "/service/"
+
+  - title: "Curriculum Vitae"
+    url: "/cv/"
