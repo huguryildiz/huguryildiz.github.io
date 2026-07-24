@@ -7,60 +7,71 @@ permalink: /
 
 <div class="shell">
   <header class="hero">
-    <div class="idrow">
-      <figure class="portrait">
-        <img src="/images/huguryildiz.png" alt="Portrait of Hüseyin Uğur Yıldız" width="480" height="480">
-      </figure>
-      <div class="idtext">
-        <h1 id="home-h1">Hüseyin Uğur Yıldız</h1>
-        <p class="role">Associate Professor of Electrical &amp; Electronics Engineering,
-          <span class="org"><a href="https://www.tedu.edu.tr/en/huseyin-ugur-yildiz" target="_blank" rel="noopener">TED University</a></span>
-          · IEEE Senior Member</p>
+    <div class="hero-id">
+      <div class="idrow">
+        <figure class="portrait">
+          <img src="/images/huguryildiz.png" alt="Portrait of Hüseyin Uğur Yıldız" width="76" height="76">
+        </figure>
+        <div class="idtext">
+          <h1 id="home-h1">Hüseyin Uğur Yıldız</h1>
+          <p class="role">Associate Professor of Electrical &amp; Electronics Engineering,
+            <span class="org"><a href="https://www.tedu.edu.tr/en/huseyin-ugur-yildiz" target="_blank" rel="noopener">TED University</a></span>
+            · IEEE Senior Member</p>
+        </div>
       </div>
+      <p class="prop">Optimization for resilient networked systems under physical constraints.</p>
+      <p class="supporting">I develop optimization-based models for routing, resource allocation,
+        and energy efficiency in wireless ad&nbsp;hoc, underwater acoustic, and drone-assisted
+        networks — increasingly combined with machine learning, reinforcement learning, and
+        hybrid classical–quantum network routing.</p>
     </div>
-    <div class="herobody">
-      <p class="focusline">I am an associate professor specializing in operations research and
-        networked communication systems, developing optimization-based models for routing, resource
-        allocation, and energy efficiency in wireless ad&nbsp;hoc, underwater acoustic, and
-        drone-assisted networks. More recently, I combine mathematical optimization with machine
-        learning and reinforcement learning, extending toward hybrid classical–quantum network
-        routing under physical constraints such as entanglement lifetime and network reliability.</p>
-      <ul class="profilelinks">
-        <li><a class="primarylink" href="/files/Yildiz_HuseyinUgur_CV.pdf" target="_blank" rel="noopener">
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8m0 0L5 7m3 3l3-3M3 13h10"/></svg>
-          CV (PDF)</a></li>
-        <li><a href="https://scholar.google.com/citations?user=nQwHS1gAAAAJ" target="_blank" rel="noopener">
-          <i class="ai ai-google-scholar" aria-hidden="true"></i>
-          Google Scholar<span class="sr-only"> (external)</span></a></li>
-        <li><a href="https://orcid.org/0000-0002-1556-2634" target="_blank" rel="noopener">
-          <i class="ai ai-orcid" aria-hidden="true"></i>
-          ORCID<span class="sr-only"> (external)</span></a></li>
-        <li><a href="https://www.researchgate.net/profile/Huseyin-Yildiz-3" target="_blank" rel="noopener">
-          <i class="ai ai-researchgate" aria-hidden="true"></i>
-          ResearchGate<span class="sr-only"> (external)</span></a></li>
-        <li><a href="https://dblp.org/pid/160/4924.html" target="_blank" rel="noopener">
-          <i class="ai ai-dblp" aria-hidden="true"></i>
-          DBLP<span class="sr-only"> (external)</span></a></li>
-        <li><a href="https://www.webofscience.com/wos/author/record/S-6587-2016" target="_blank" rel="noopener">
-          <i class="ai ai-researcherid" aria-hidden="true"></i>
-          ResearcherID<span class="sr-only"> (external)</span></a></li>
-        <li><a href="https://www.scopus.com/authid/detail.uri?authorId=56242674200" target="_blank" rel="noopener">
-          <i class="ai ai-scopus" aria-hidden="true"></i>
-          Scopus<span class="sr-only"> (external)</span></a></li>
-        <li><a href="https://ieeexplore.ieee.org/author/37085350625" target="_blank" rel="noopener">
-          <i class="ai ai-ieee" aria-hidden="true"></i>
-          IEEE<span class="sr-only"> (external)</span></a></li>
-        <li><a href="https://github.com/huguryildiz" target="_blank" rel="noopener">
-          <svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-github"/></svg>
-          GitHub<span class="sr-only"> (external)</span></a></li>
-        <li><a href="https://www.linkedin.com/in/huguryildiz/" target="_blank" rel="noopener">
-          <svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-linkedin"/></svg>
-          LinkedIn<span class="sr-only"> (external)</span></a></li>
-        <li><a href="mailto:hugur.yildiz@tedu.edu.tr">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg>
-          Email</a></li>
-      </ul>
+    <div class="hero-actions">
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="/files/Yildiz_HuseyinUgur_CV.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-download"/></svg>
+          CV (PDF)</a>
+        <a class="btn btn-quiet" href="#home-selected">Selected publications</a>
+        <a class="btn btn-quiet" href="mailto:hugur.yildiz@tedu.edu.tr">Contact</a>
+      </div>
+      <details class="profiles">
+        <summary>Academic profiles</summary>
+        <ul class="profilelinks">
+          <li><a href="https://scholar.google.com/citations?user=nQwHS1gAAAAJ" target="_blank" rel="noopener">
+            <i class="ai ai-google-scholar" aria-hidden="true"></i>
+            Google Scholar<span class="sr-only"> (external)</span></a></li>
+          <li><a href="https://orcid.org/0000-0002-1556-2634" target="_blank" rel="noopener">
+            <i class="ai ai-orcid" aria-hidden="true"></i>
+            ORCID<span class="sr-only"> (external)</span></a></li>
+          <li><a href="https://www.researchgate.net/profile/Huseyin-Yildiz-3" target="_blank" rel="noopener">
+            <i class="ai ai-researchgate" aria-hidden="true"></i>
+            ResearchGate<span class="sr-only"> (external)</span></a></li>
+          <li><a href="https://dblp.org/pid/160/4924.html" target="_blank" rel="noopener">
+            <i class="ai ai-dblp" aria-hidden="true"></i>
+            DBLP<span class="sr-only"> (external)</span></a></li>
+          <li><a href="https://www.webofscience.com/wos/author/record/S-6587-2016" target="_blank" rel="noopener">
+            <i class="ai ai-researcherid" aria-hidden="true"></i>
+            ResearcherID<span class="sr-only"> (external)</span></a></li>
+          <li><a href="https://www.scopus.com/authid/detail.uri?authorId=56242674200" target="_blank" rel="noopener">
+            <i class="ai ai-scopus" aria-hidden="true"></i>
+            Scopus<span class="sr-only"> (external)</span></a></li>
+          <li><a href="https://ieeexplore.ieee.org/author/37085350625" target="_blank" rel="noopener">
+            <i class="ai ai-ieee" aria-hidden="true"></i>
+            IEEE<span class="sr-only"> (external)</span></a></li>
+          <li><a href="https://github.com/huguryildiz" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-github"/></svg>
+            GitHub<span class="sr-only"> (external)</span></a></li>
+          <li><a href="https://www.linkedin.com/in/huguryildiz/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-linkedin"/></svg>
+            LinkedIn<span class="sr-only"> (external)</span></a></li>
+          <li><a href="mailto:hugur.yildiz@tedu.edu.tr">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg>
+            Email</a></li>
+        </ul>
+      </details>
     </div>
+    <section class="hero-twin" aria-label="Ocean digital twin">
+      {% include hero-uwsn.html %}
+    </section>
   </header>
 
   <div class="metricsline" role="group" aria-label="Research metrics">
@@ -70,10 +81,9 @@ permalink: /
     <span class="src">Source: <a href="https://openalex.org/A5085505896" target="_blank" rel="noopener">OpenAlex</a> · updated Jul 1, 2026 · refreshed monthly</span>
   </div>
 
-  <div class="home-intro-grid">
-    <section class="home-biography" aria-labelledby="home-bio">
-      <h2 class="sec" id="home-bio"><svg class="hicon" aria-hidden="true"><use href="#i-user"/></svg>Biography</h2>
-      <div class="fullw">
+  <section class="home-biography" aria-labelledby="home-bio">
+    <h2 class="sec" id="home-bio"><svg class="hicon" aria-hidden="true"><use href="#i-user"/></svg>Biography</h2>
+    <div class="fullw">
         <p>Huseyin Ugur Yildiz received the B.Sc. degree in Electrical and Electronics Engineering from
           <a href="https://w3.bilkent.edu.tr/bilkent/" target="_blank" rel="noopener">Bilkent University</a>, Ankara, Turkey, in 2009,
           and the M.Sc. and Ph.D. degrees from
@@ -89,20 +99,41 @@ permalink: /
         <p>He has authored over 40 peer-reviewed journal articles and conference papers, which have accumulated
           more than 1,000 citations. He received the IEEE Middle East and North Africa Communications Conference
           2019 Best Paper Award and was elevated to IEEE Senior Member in 2021.</p>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="home-digital-twin" aria-labelledby="home-digital-twin">
-      <h2 class="sec" id="home-digital-twin"><svg class="hicon" aria-hidden="true"><use href="#i-wave"/></svg>Ocean Digital Twin</h2>
-      <figure class="hero-uwsn-wrap">
-        {% include hero-uwsn.html %}
-        <figcaption>
-          Interactive ocean digital twin — an underwater acoustic sensor network monitoring
-          security, habitat, and seismic events on shared infrastructure. Simulated scenario;
-          drag to orbit, click objects for details.
-        </figcaption>
-      </figure>
-    </section>
+  <h2 class="sec" id="home-focus"><svg class="hicon" aria-hidden="true"><use href="#i-target"/></svg>Current research program</h2>
+  <div class="focusgrid">
+    <div>
+      <h3><svg class="ficon fi-net" aria-hidden="true"><use href="#i-network"/></svg>Network technologies &amp; systems</h3>
+      <ul class="chiprow">
+        <li class="chip chip-net">Ad hoc networks</li><li class="chip chip-net">Wireless sensor networks</li>
+        <li class="chip chip-net">Underwater acoustic sensor networks</li><li class="chip chip-net">Internet of Things</li>
+        <li class="chip chip-net">Drone networks</li><li class="chip chip-net">Smart grids</li>
+      </ul>
+    </div>
+    <div>
+      <h3><svg class="ficon fi-opt" aria-hidden="true"><use href="#i-optimize"/></svg>Optimization &amp; operations research</h3>
+      <ul class="chiprow">
+        <li class="chip chip-opt">Linear programming</li><li class="chip chip-opt">Mixed-integer programming</li>
+        <li class="chip chip-opt">Constraint programming</li><li class="chip chip-opt">Multi-objective optimization</li>
+        <li class="chip chip-opt">Network flow programming</li><li class="chip chip-opt">Meta-heuristics (SA/GA)</li>
+      </ul>
+    </div>
+    <div>
+      <h3><svg class="ficon fi-ai" aria-hidden="true"><use href="#i-neural"/></svg>Artificial intelligence &amp; machine learning</h3>
+      <ul class="chiprow">
+        <li class="chip chip-ai">Machine learning</li><li class="chip chip-ai">Deep learning</li>
+        <li class="chip chip-ai">Reinforcement learning</li><li class="chip chip-ai">Neural networks</li>
+        <li class="chip chip-ai">Proximal policy optimization</li><li class="chip chip-ai">Graph neural networks</li>
+      </ul>
+    </div>
+    <div>
+      <h3><svg class="ficon fi-q" aria-hidden="true"><use href="#i-atom"/></svg>Quantum networking</h3>
+      <ul class="chiprow">
+        <li class="chip chip-q">Entanglement routing</li>
+      </ul>
+    </div>
   </div>
 
   <h2 class="sec" id="home-news"><svg class="hicon" aria-hidden="true"><use href="#i-bell"/></svg>News</h2>
@@ -139,40 +170,6 @@ permalink: /
       <li><time>Apr 2016</time><span>Successfully defended my Ph.D. dissertation at TOBB University of Economics and Technology.</span></li>
     </ul>
   </details>
-
-  <h2 class="sec" id="home-focus"><svg class="hicon" aria-hidden="true"><use href="#i-target"/></svg>Research focus</h2>
-  <div class="focusgrid">
-    <div>
-      <h3><svg class="ficon fi-net" aria-hidden="true"><use href="#i-network"/></svg>Network technologies &amp; systems</h3>
-      <ul class="chiprow">
-        <li class="chip chip-net">Ad hoc networks</li><li class="chip chip-net">Wireless sensor networks</li>
-        <li class="chip chip-net">Underwater acoustic sensor networks</li><li class="chip chip-net">Internet of Things</li>
-        <li class="chip chip-net">Drone networks</li><li class="chip chip-net">Smart grids</li>
-      </ul>
-    </div>
-    <div>
-      <h3><svg class="ficon fi-opt" aria-hidden="true"><use href="#i-optimize"/></svg>Optimization &amp; operations research</h3>
-      <ul class="chiprow">
-        <li class="chip chip-opt">Linear programming</li><li class="chip chip-opt">Mixed-integer programming</li>
-        <li class="chip chip-opt">Constraint programming</li><li class="chip chip-opt">Multi-objective optimization</li>
-        <li class="chip chip-opt">Network flow programming</li><li class="chip chip-opt">Meta-heuristics (SA/GA)</li>
-      </ul>
-    </div>
-    <div>
-      <h3><svg class="ficon fi-ai" aria-hidden="true"><use href="#i-neural"/></svg>Artificial intelligence &amp; machine learning</h3>
-      <ul class="chiprow">
-        <li class="chip chip-ai">Machine learning</li><li class="chip chip-ai">Deep learning</li>
-        <li class="chip chip-ai">Reinforcement learning</li><li class="chip chip-ai">Neural networks</li>
-        <li class="chip chip-ai">Proximal policy optimization</li><li class="chip chip-ai">Graph neural networks</li>
-      </ul>
-    </div>
-    <div>
-      <h3><svg class="ficon fi-q" aria-hidden="true"><use href="#i-atom"/></svg>Quantum networking</h3>
-      <ul class="chiprow">
-        <li class="chip chip-q">Entanglement routing</li>
-      </ul>
-    </div>
-  </div>
 
   <h2 class="sec" id="home-selected"><svg class="hicon" aria-hidden="true"><use href="#i-book"/></svg>Selected publications</h2>
   <article class="homepub">
