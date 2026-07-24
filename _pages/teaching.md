@@ -13,7 +13,7 @@ permalink: /teaching/
 
   <article class="swproject">
     <video class="course-video" src="/assets/video/hero-ee304.mp4"
-      poster="/images/courses/ee304.png" loop muted playsinline preload="metadata"
+      poster="/assets/images/courses/ee304.png" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
       <h3>EE 304 — Probability and Random Variables</h3>
@@ -26,7 +26,7 @@ permalink: /teaching/
 
   <article class="swproject">
     <video class="course-video" src="/assets/video/hero-ee311.mp4"
-      poster="/images/courses/ee311.png" loop muted playsinline preload="metadata"
+      poster="/assets/images/courses/ee311.png" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
       <h3>EE 311 — Signals and Systems</h3>
@@ -39,7 +39,7 @@ permalink: /teaching/
 
   <article class="swproject">
     <video class="course-video" src="/assets/video/hero-ee413.mp4"
-      poster="/images/courses/ee413.png" loop muted playsinline preload="metadata"
+      poster="/assets/images/courses/ee413.png" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
       <h3>EE 413 — Communication Systems II</h3>
@@ -53,7 +53,7 @@ permalink: /teaching/
 
   <article class="swproject">
     <video class="course-video" src="/assets/video/hero-ee491.mp4"
-      poster="/images/courses/ee491.png" loop muted playsinline preload="metadata"
+      poster="/assets/images/courses/ee491.png" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
       <h3>EE 491 / EE 492 — Senior Design Project I &amp; II</h3>
@@ -73,7 +73,7 @@ permalink: /teaching/
 
   <article class="swproject">
     <video class="course-video" src="/assets/video/hero-ee512.mp4"
-      poster="/images/courses/ee512.png" loop muted playsinline preload="metadata"
+      poster="/assets/images/courses/ee512.png" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
       <h3>EE 512 — Optimization for Communication Networks</h3>
@@ -88,7 +88,7 @@ permalink: /teaching/
   <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-clock"/></svg>Previously taught courses at TED University</h2>
 
   <article class="swproject">
-    <img src="/images/courses/ee205.png" alt="EE 205 course illustration" loading="lazy">
+    <img src="/assets/images/courses/ee205.png" alt="EE 205 course illustration" loading="lazy">
     <div>
       <h3>EE 205 — Software Tools for Electrical Engineering</h3>
       <p>A second-year undergraduate course introducing MATLAB-based software tools and
@@ -99,7 +99,7 @@ permalink: /teaching/
   </article>
 
   <article class="swproject">
-    <img src="/images/courses/ee312.png" alt="EE 312 course illustration" loading="lazy">
+    <img src="/assets/images/courses/ee312.png" alt="EE 312 course illustration" loading="lazy">
     <div>
       <h3>EE 312 — Communication Systems I</h3>
       <p>A third-year undergraduate course covering communication systems, modulation techniques,
@@ -110,7 +110,7 @@ permalink: /teaching/
   </article>
 
   <article class="swproject">
-    <img src="/images/courses/ee462.png" alt="EE 462 course illustration" loading="lazy">
+    <img src="/assets/images/courses/ee462.png" alt="EE 462 course illustration" loading="lazy">
     <div>
       <h3>EE 462 — Power System Analysis</h3>
       <p>A senior-level undergraduate course covering power system modeling, load flow, fault
