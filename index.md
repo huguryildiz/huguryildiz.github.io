@@ -53,6 +53,14 @@ permalink: /
         and energy efficiency in wireless ad&nbsp;hoc, underwater acoustic, and drone-assisted
         networks, increasingly combined with machine learning, reinforcement learning, and
         hybrid classical–quantum network routing.</p>
+      <ul class="chiprow hero-chips" aria-label="Research areas">
+        <li class="chip chip-opt">Operations Research</li>
+        <li class="chip chip-opt">Network Optimization</li>
+        <li class="chip chip-ai">ML&nbsp;/&nbsp;RL</li>
+        <li class="chip chip-net">Wireless</li>
+        <li class="chip chip-net">Underwater</li>
+        <li class="chip chip-net">Aerial Networks</li>
+      </ul>
     </div>
     <div class="hero-actions">
       <div class="hero-cta">

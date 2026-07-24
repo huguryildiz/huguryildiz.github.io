@@ -317,6 +317,7 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
 .uw-plaque{
   position:relative; z-index:3;
   margin:-26px 14px 0; padding:12px 16px 11px;
+  transition:margin-top .25s ease;
   background:var(--surface-raise); border:1px solid var(--hairline-strong); border-radius:10px;
   box-shadow:0 10px 26px rgba(10,16,24,.10);
   font-family:var(--sans);
@@ -338,7 +339,10 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
 .uw-plaque .pctl button:hover{color:var(--head); border-color:var(--ink-soft); background:var(--surface);}
 .uw-plaque .pctl button[aria-pressed="true"]{background:var(--head); color:var(--btn-ink); border-color:var(--head);}
 .uw-plaque .psim{font-size:.72rem; color:var(--ink-faint); letter-spacing:.03em;}
-@media (prefers-reduced-motion:reduce){ .uw-plaque .ptext{transition:none;} }
+/* Explore mode reveals the timebar at the hero's bottom edge; drop the plaque
+   so its card no longer overlaps and hides those controls. */
+#uwsn-hero.uw-explore + .uw-plaque{margin-top:12px;}
+@media (prefers-reduced-motion:reduce){ .uw-plaque .ptext, .uw-plaque{transition:none;} }
 
 .metricsline{
   border-block:1px solid var(--hairline); padding:.8rem 0;
@@ -485,12 +489,46 @@ ol.publist{list-style:none; margin:0; padding:0;}
 .stat span small{display:block; font-size:.68rem; font-weight:450; color:var(--ink-faint); margin-top:.15rem;}
 .stat.wide{grid-column:span 2; justify-content:flex-end;}
 .statnote{font-size:.82rem; color:var(--ink-faint); margin:.7rem 0 0; max-width:none;}
-.yearchart{flex:none;}
-.yearchart svg{display:block;}
-.yearchart .bar{fill:var(--ink-faint); opacity:.55;}
-.yearchart .bar.hi{fill:var(--accent); opacity:1;}
+.yearchart{width:100%;}
+.yearchart svg{display:block; width:100%;}
+.yearchart .axline{stroke:var(--hairline-strong); stroke-width:1;}
+.yearchart .axtick{stroke:var(--ink-faint); stroke-width:1; opacity:.55;}
+.yearchart .axyr{fill:var(--ink-faint); font-family:var(--sans); font-size:9px;
+  font-variant-numeric:tabular-nums;}
+.yearchart .bar{fill:var(--ink-faint); opacity:.5; cursor:pointer;
+  transition:opacity .12s ease, fill .12s ease;}
+.yearchart .bar.hi{fill:var(--accent); opacity:.85;}
+.yearchart .bar:hover{opacity:1;}
+.yearchart .bar:focus-visible{outline:none; stroke:var(--accent); stroke-width:1.5;}
+.yearchart .bar.sel{fill:var(--accent); opacity:1;}
+.yearchart svg.hasSel .bar:not(.sel){opacity:.28;}
 .yearchart text{fill:var(--ink-faint); font-family:var(--sans); font-size:9.5px;}
-.yearchart .cap{font-size:.74rem; color:var(--ink-faint); margin-top:.2rem;}
+.yearchart .blab{fill:var(--ink-soft); font-size:8px; font-weight:600;
+  font-variant-numeric:tabular-nums;}
+.yearchart .blab.hi{fill:var(--accent);}
+.yearchart svg.hasSel .blab.hi{fill:var(--ink-soft);}
+.yearchart .cap{font-size:.74rem; color:var(--ink-faint); margin-top:.2rem;
+  font-variant-numeric:tabular-nums;}
+
+/* Quartile distribution mini-chart (clickable → filters the list) */
+.qchart{display:flex; flex-direction:column; gap:.34rem; width:100%;}
+.qrow{display:grid; grid-template-columns:1.5rem 1fr auto; align-items:center; gap:.55rem;
+  width:100%; padding:.12rem 0; background:none; border:0; border-radius:5px;
+  font:inherit; text-align:left; cursor:pointer; transition:opacity .12s ease;}
+.qrow .ql{font-family:var(--sans); font-size:.78rem; font-weight:650; color:var(--ink-soft);
+  font-variant-numeric:tabular-nums;}
+.qrow .qtrack{height:9px; background:var(--accent-wash); border-radius:5px; overflow:hidden;}
+.qrow .qbar{display:block; height:100%; border-radius:5px; background:var(--accent);
+  transition:width .35s cubic-bezier(.2,.7,.2,1);}
+.qrow .qbar.q2{background:color-mix(in srgb, var(--accent) 60%, var(--surface));}
+.qrow .qbar.q3{background:color-mix(in srgb, var(--accent) 38%, var(--surface));}
+.qrow .qn{font-size:.9rem; font-weight:650; color:var(--head); text-align:right; min-width:1.4ch;
+  font-variant-numeric:tabular-nums;}
+.qrow:hover .ql,.qrow:hover .qn,.qrow.sel .ql,.qrow.sel .qn{color:var(--accent);}
+.qrow:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+.qchart.hasSel .qrow:not(.sel){opacity:.38;}
+.qchart .cap{font-size:.74rem; color:var(--ink-faint); margin-top:.28rem;
+  font-variant-numeric:tabular-nums;}
 
 @media (max-width:600px){
   .pub{grid-template-columns:1fr; gap:0;}

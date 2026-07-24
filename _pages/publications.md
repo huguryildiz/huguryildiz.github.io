@@ -16,6 +16,9 @@ permalink: /publications/
   <div class="statgrid" role="group" aria-label="Publication metrics">
     <div id="statTiles" style="display:contents"></div>
     <div class="stat wide">
+      <div class="qchart" id="qChart"></div>
+    </div>
+    <div class="stat wide">
       <div class="yearchart" id="yearChart"></div>
     </div>
   </div>
@@ -125,44 +128,79 @@ var PUBS = [
   var tiles = [
     ["link", "830", "Citations"],
     ["target", "15", "h-index"],
-    ["layers", "44", "Works (OpenAlex)"],
     ["file", PUBS.length, "Publications listed"],
     ["book", n("journal"), "Journal articles"],
     ["pen", n("editorial"), "Editorial"],
     ["globe", n("confint"), "Conf. papers (intl.)"],
-    ["flag", n("confnat"), "Conf. papers (natl.)"],
-    ["award", nq("Q1"), "Q1 journal articles"]
+    ["flag", n("confnat"), "Conf. papers (natl.)"]
   ];
   $("#statTiles").innerHTML = tiles.map(function(t){
     return '<div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-' + t[0] +
     '"/></svg><b>' + t[1] + '</b><span>' + t[2] + '</span></div>';}).join("");
   $("#pubBreakdown").innerHTML =
-    "Journal quartiles at publication year: <b>" + nq("Q1") + "</b> Q1 · <b>" + nq("Q2") +
-    "</b> Q2 · <b>" + nq("Q3") + "</b> Q3. Citations, h-index, and works: OpenAlex, updated Jul 1, 2026 — refreshed monthly.";
+    "Journal quartiles reflect the journal's rank in the publication year. " +
+    "Citations, h-index, and works: OpenAlex, updated Jul 1, 2026 — refreshed monthly. " +
+    "Select a bar or quartile below to filter the list.";
 
+  /* Quartile distribution — clickable rows that drive the quartile filter. */
+  var qCounts = {Q1: nq("Q1"), Q2: nq("Q2"), Q3: nq("Q3")};
+  (function(){
+    var qmax = Math.max(qCounts.Q1, qCounts.Q2, qCounts.Q3) || 1;
+    var rows = ["Q1", "Q2", "Q3"].map(function(q){
+      var c = qCounts[q];
+      var w = c ? Math.max(6, Math.round(c / qmax * 100)) : 0;
+      return '<button type="button" class="qrow" data-q="' + q + '" aria-pressed="false" ' +
+        'aria-label="' + q + ' journal articles: ' + c + '. Filter to ' + q + '.">' +
+        '<span class="ql">' + q + '</span>' +
+        '<span class="qtrack"><span class="qbar ' + q.toLowerCase() + '" style="width:' + w + '%"></span></span>' +
+        '<span class="qn">' + c + '</span></button>';
+    }).join("");
+    $("#qChart").innerHTML = rows + '<div class="cap" id="qCap">Journal articles by quartile</div>';
+  })();
+
+  /* Publications per year — clickable bars that drive the year filter. */
+  var yearCounts = {}, yMeta = {};
   (function(){
     var years = PUBS.map(function(p){return p.year;});
-    var y0 = Math.min.apply(null, years), y1 = Math.max.apply(null, years);
-    var counts = {}, y;
-    for (y = y0; y <= y1; y++) counts[y] = 0;
-    years.forEach(function(yy){counts[yy]++;});
-    var max = Math.max.apply(null, Object.keys(counts).map(function(k){return counts[k];}));
-    var bw = 13, gap = 4, H = 44, W = (y1 - y0 + 1) * (bw + gap);
-    var bars = "";
+    var y0 = Math.min.apply(null, years), y1 = Math.max.apply(null, years), y;
+    for (y = y0; y <= y1; y++) yearCounts[y] = 0;
+    years.forEach(function(yy){yearCounts[yy]++;});
+    yMeta.y0 = y0; yMeta.y1 = y1;
+    yMeta.max = Math.max.apply(null, Object.keys(yearCounts).map(function(k){return yearCounts[k];}));
+  })();
+
+  /* Draw (or redraw) the year chart to fill the given pixel width. */
+  function drawYearChart(W){
+    var y0 = yMeta.y0, y1 = yMeta.y1, max = yMeta.max, nb = y1 - y0 + 1, y;
+    var LT = 12, plotH = 34, base = LT + plotH, H = base + 16;
+    var pitch = W / nb, gap = Math.max(4, Math.min(18, pitch * 0.3)), bw = pitch - gap;
+    var body = '<line class="axline" x1="0" y1="' + base + '" x2="' + W + '" y2="' + base + '"/>';
     for (y = y0; y <= y1; y++){
-      var h = counts[y] ? Math.max(3, Math.round(counts[y] / max * (H - 12))) : 1.5;
-      var x = (y - y0) * (bw + gap);
-      bars += '<rect class="bar' + (counts[y] === max ? " hi" : "") + '" x="' + x +
-        '" y="' + (H - 12 - h) + '" width="' + bw + '" height="' + h + '"><title>' +
-        y + ": " + counts[y] + '</title></rect>';
+      var c = yearCounts[y];
+      var h = c ? Math.max(3, Math.round(c / max * plotH)) : 1.5;
+      var cx = (y - y0) * pitch + pitch / 2, x = (cx - bw / 2).toFixed(1), top = base - h;
+      body += '<rect class="bar' + (c === max ? " hi" : "") + '" data-year="' + y +
+        '" tabindex="0" role="button" aria-pressed="false" aria-label="' + y + ": " + c +
+        " publication" + (c === 1 ? "" : "s") + '. Filter to this year." x="' + x +
+        '" y="' + top + '" width="' + bw.toFixed(1) + '" height="' + h + '"><title>' +
+        y + ": " + c + '</title></rect>';
+      body += '<text class="blab' + (c === max ? " hi" : "") + '" x="' + cx.toFixed(1) +
+        '" y="' + (top - 3) + '" text-anchor="middle">' + c + '</text>';
+      if ((y - y0) % 2 === 0 || y === y1){
+        body += '<line class="axtick" x1="' + cx.toFixed(1) + '" y1="' + base +
+          '" x2="' + cx.toFixed(1) + '" y2="' + (base + 3) + '"/>';
+        body += '<text class="axyr" x="' + cx.toFixed(1) + '" y="' + (H - 3) +
+          '" text-anchor="middle">' + y + '</text>';
+      }
     }
     $("#yearChart").innerHTML =
-      '<svg width="' + W + '" height="' + H + '" role="img" aria-label="Publications per year, ' +
-      y0 + " to " + y1 + '. Peak year: highest bar.">' + bars +
-      '<text x="0" y="' + (H - 1) + '">' + y0 + '</text>' +
-      '<text x="' + W + '" y="' + (H - 1) + '" text-anchor="end">' + y1 + '</text></svg>' +
-      '<div class="cap">Publications per year</div>';
-  })();
+      '<svg width="' + W + '" height="' + H + '" viewBox="0 0 ' + W + " " + H +
+      '" role="group" aria-label="Publications per year, ' + y0 + " to " + y1 +
+      '. Select a bar to filter.">' + body + '</svg>' +
+      '<div class="cap" id="yearCap">Publications per year</div>';
+  }
+  var lastYW = Math.round($("#yearChart").clientWidth) || 480;
+  drawYearChart(lastYW);
 
   var yearSel = $("#yearSel"), qSel = $("#qSel");
   var uniqueYears = PUBS.map(function(p){return p.year;}).filter(function(v,i,a){return a.indexOf(v)===i;}).sort(function(a,b){return b - a;});
@@ -218,20 +256,77 @@ var PUBS = [
     var isDefault = state.type === "all" && state.year === "all" && state.q === "all";
     $("#resetBtn").disabled = isDefault;
   }
+  /* Repaint every control (selects, segment, charts) from the current state, then render. */
+  function paintCharts(){
+    var svg = $("#yearChart svg");
+    if (svg) svg.classList.toggle("hasSel", state.year !== "all");
+    $$("#yearChart .bar").forEach(function(b){
+      var on = state.year !== "all" && b.dataset.year === String(state.year);
+      b.classList.toggle("sel", on);
+      b.setAttribute("aria-pressed", String(on));
+    });
+    var yCap = $("#yearCap");
+    if (yCap){
+      if (state.year !== "all"){
+        var yc = yearCounts[state.year] || 0;
+        yCap.textContent = state.year + " · " + yc + " publication" + (yc === 1 ? "" : "s");
+      } else yCap.textContent = "Publications per year";
+    }
+    var qc = $("#qChart");
+    if (qc) qc.classList.toggle("hasSel", state.q !== "all");
+    $$("#qChart .qrow").forEach(function(r){
+      var on = state.q !== "all" && r.dataset.q === state.q;
+      r.classList.toggle("sel", on);
+      r.setAttribute("aria-pressed", String(on));
+    });
+    var qCap = $("#qCap");
+    if (qCap){
+      if (state.q !== "all"){
+        var qn = qCounts[state.q] || 0;
+        qCap.textContent = state.q + " · " + qn + " journal article" + (qn === 1 ? "" : "s");
+      } else qCap.textContent = "Journal articles by quartile";
+    }
+  }
+  function sync(){
+    yearSel.value = state.year;
+    qSel.value = state.q;
+    $$("#typeSeg button").forEach(function(x){x.setAttribute("aria-pressed", String(x.dataset.type === state.type));});
+    paintCharts();
+    render();
+  }
+
   $$("#typeSeg button").forEach(function(b){b.addEventListener("click", function(){
-    state.type = b.dataset.type;
-    $$("#typeSeg button").forEach(function(x){x.setAttribute("aria-pressed", String(x === b));});
-    render();
+    state.type = b.dataset.type; sync();
   });});
-  yearSel.addEventListener("change", function(){ state.year = yearSel.value; render(); });
-  qSel.addEventListener("change", function(){ state.q = qSel.value; render(); });
+  yearSel.addEventListener("change", function(){ state.year = yearSel.value; sync(); });
+  qSel.addEventListener("change", function(){ state.q = qSel.value; sync(); });
+
+  function pickYear(y){ state.year = (String(state.year) === String(y)) ? "all" : String(y); sync(); }
+  $("#yearChart").addEventListener("click", function(e){
+    var b = e.target.closest(".bar"); if (b) pickYear(b.dataset.year);
+  });
+  $("#yearChart").addEventListener("keydown", function(e){
+    if (e.key !== "Enter" && e.key !== " ") return;
+    var b = e.target.closest(".bar"); if (!b) return;
+    e.preventDefault(); pickYear(b.dataset.year);
+  });
+  $("#qChart").addEventListener("click", function(e){
+    var r = e.target.closest(".qrow"); if (!r) return;
+    state.q = (state.q === r.dataset.q) ? "all" : r.dataset.q; sync();
+  });
+
   window.resetFilters = function(){
-    state.type = "all"; state.year = "all"; state.q = "all";
-    yearSel.value = "all"; qSel.value = "all";
-    $$("#typeSeg button").forEach(function(x){x.setAttribute("aria-pressed", String(x.dataset.type === "all"));});
-    render();
+    state.type = "all"; state.year = "all"; state.q = "all"; sync();
   };
   $("#resetBtn").addEventListener("click", window.resetFilters);
-  render();
+
+  if (window.ResizeObserver){
+    var ro = new ResizeObserver(function(){
+      var w = Math.round($("#yearChart").clientWidth);
+      if (w && w !== lastYW){ lastYW = w; drawYearChart(w); paintCharts(); }
+    });
+    ro.observe($("#yearChart"));
+  }
+  sync();
 })();
 </script>

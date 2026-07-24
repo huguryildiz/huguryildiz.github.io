@@ -179,13 +179,6 @@ permalink: /research/
     </div>
   </article>
 
-  <figure style="margin:1.8rem 0 0;">
-    <video class="compvid" src="/assets/video/compare_grid_portrait.mp4" autoplay loop muted playsinline controls
-      aria-label="Side-by-side comparison grid: five LLM ray-tracing outputs against the BELLHOP3D reference solver"></video>
-    <figcaption class="cap" style="max-width:70ch; margin:.5rem auto 0; text-align:center;">
-      UWA Ray Bench — model outputs compared against the BELLHOP3D reference solver.</figcaption>
-  </figure>
-
   <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-book"/></svg>Code &amp; learning resources</h2>
   <ul class="resourcelist">
     <li><span class="n">wsn-opt-python</span> — a hands-on Python tutorial for network-flow–based

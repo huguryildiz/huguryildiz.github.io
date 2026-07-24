@@ -94,9 +94,27 @@
 
 <style>
 #uwsn-hero{position:relative;width:100%;height:clamp(430px,44vw,600px);
-  border:1px solid var(--hairline,#27333F);border-radius:14px;overflow:hidden;
+  border:1px solid rgba(110,190,220,0.32);border-radius:14px;overflow:hidden;
   background:linear-gradient(180deg,#0D2F42 0%,#071A28 45%,#040E18 100%);contain:content;
+  box-shadow:
+    inset 0 0 14px rgba(95,195,230,0.10),
+    inset 0 0 70px rgba(60,150,190,0.07),
+    0 0 22px rgba(60,170,210,0.18),
+    0 0 60px rgba(40,130,170,0.10);
   font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;}
+/* light theme: keep the inner rim light, swap the cyan halo for a plain shadow */
+:root[data-theme="light"] #uwsn-hero{
+  box-shadow:
+    inset 0 0 14px rgba(95,195,230,0.10),
+    inset 0 0 70px rgba(60,150,190,0.07),
+    0 8px 28px rgba(15,45,65,0.22);}
+@media (prefers-color-scheme:light){
+  :root:not([data-theme]) #uwsn-hero{
+    box-shadow:
+      inset 0 0 14px rgba(95,195,230,0.10),
+      inset 0 0 70px rgba(60,150,190,0.07),
+      0 8px 28px rgba(15,45,65,0.22);}
+}
 #uwsn-hero canvas{position:absolute;inset:0;width:100%;height:100%;display:block;
   touch-action:pan-y;cursor:grab;}
 #uwsn-hero canvas.uw-drag{cursor:grabbing;}
@@ -295,54 +313,96 @@ function distM(a,b){var dx=(a.x-b.x)*CONFIG.kmX*1000,dz=(a.z-b.z)*CONFIG.kmX*100
   return Math.sqrt(dx*dx+dz*dz+dy*dy);}
 function distW(a,b){var dx=a.x-b.x,dz=a.z-b.z;return Math.sqrt(dx*dx+dz*dz);}
 
-/* ================= 2. bathymetry ================= */
+/* ================= 2. bathymetry =================
+   Composed seafloor: an undulating continental shelf (east) breaks at the
+   FZ-1 scarp into a deeper basin (west); a soft sedimentary fold crosses the
+   shelf. The finite domain never shows a cut edge: past the sensor field the
+   seabed eases down and fades into the water column along an irregular,
+   noise-warped rim, so it reads as a visibility limit rather than a slab. */
 function faultX(z){return -0.18+0.11*Math.sin(z*1.5+0.6);}
 function fault2X(z){return 0.44+0.10*Math.sin(z*1.2-0.4);}
+/* normalized distance to the domain rim, warped so the boundary is soft */
+function rimD(x,z){
+  var eu=Math.abs(x)/1.80,ev=z<0?-z/1.51:z/1.24;
+  return (eu>ev?eu:ev)+0.06*noise(x*1.7+63,z*1.7+21);
+}
+function edgeF(x,z){return 1-ss(0.28,rimD(x,z)-0.66);}
 function depthAt(x,z){
   /* domain warp breaks the visible alignment of octaves */
-  var wx=x+0.14*noise(x*0.9+31,z*0.9+7),wz=z+0.14*noise(x*1.1+53,z*1.1+17);
+  var wx=x+0.16*noise(x*0.8+31,z*0.8+7),wz=z+0.16*noise(x*1.0+53,z*1.0+17);
+  /* signed distance west of the scarp, eroded along strike */
+  var fx=faultX(z)-x+0.05*noise(wz*2.2+71,wx*1.4+13);
+  /* shelf: broad seaward tilt + long undulation */
+  var d=0.36+0.10*ss(2.2,0.5-x)
+    +0.030*noise(wx*1.3+5,wz*1.1+2);
+  /* primary scarp: height and width vary along strike */
+  d+=(0.20+0.06*n2(z*1.1+11,3.0))*ss(0.20+0.14*n2(z*1.6+4.2,7.7),fx);
+  /* gradual ramp from the scarp base into the basin */
+  d+=0.16*ss(0.90,fx-0.15);
+  /* secondary sedimentary fold: gentle ridge with a soft west-side sag */
+  var r2=(fault2X(z)-x)/0.20;
+  d-=0.032*Math.exp(-r2*r2)*(0.7+0.5*n2(z*1.3+9,5.5));
+  d+=0.040*ss(0.55,fault2X(z)-x-0.05);
+  /* gullies carved into the mid-slope, elongated downslope */
+  var sl=ss(0.30,fx+0.10)*(1-ss(0.55,fx-0.35));
+  d+=sl*0.032*(1-ss(0.09,Math.abs(noise(wz*3.0+9,wx*1.1+44))));
+  /* rocky knobs, strongest on the scarp shoulder */
   var rocky=Math.abs(noise(wx*3.4+41,wz*3.4+29));
-  return 0.34+0.14*(1-x)*0.5
-    +0.26*ss(0.22,faultX(z)-x)
-    +0.09*ss(0.16,fault2X(z)-x)
-    +noise(wx*1.8,wz*1.8)*0.05
-    +noise(wx*5.2+3,wz*5.2+9)*0.020
-    +rocky*rocky*0.030
-    +0.022*Math.sin(wx*3.1+0.8)*Math.sin(wz*2.2+0.5);
+  d+=rocky*rocky*0.026*(0.35+0.65*sl);
+  /* fine sediment grain: texture, not silhouette */
+  d+=noise(wx*5.6+3,wz*5.6+9)*0.012;
+  /* seabed eases down into dark water at the domain rim (gentle: the alpha
+     fade does most of the work, so no terraced side ever shows) */
+  return d+0.16*ss(0.34,rimD(x,z)-0.62);
 }
-var GX=48,GZ=34,gw=[],gsx=new Float32Array(GX*GZ),gsy=new Float32Array(GX*GZ);
+var GX=56,GZ=40,gw=[],gsx=new Float32Array(GX*GZ),gsy=new Float32Array(GX*GZ);
 (function(){
   var i,j;
   for(j=0;j<GZ;j++){for(i=0;i<GX;i++){
-    var x=-1.15+2.30*i/(GX-1),z=-1.0+2.0*j/(GZ-1);
+    /* cubic stretch: node density stays high over the sensor field, the
+       faded rim gets coarser cells for free */
+    var u=-1+2*i/(GX-1),v=-1+2*j/(GZ-1);
+    /* asymmetric stretch: far/back rows reach out most, near-camera front
+       rows stay dense so no facets show close up */
+    var x=u*(1.15+0.65*u*u),z=v*(1.02+(v<0?0.42:0.24)*v*v)-0.05;
+    var d=depthAt(x,z);
+    /* init-time concavity term: hollows darken, crests lift (restrained AO) */
+    var ao=clamp((d-(depthAt(x+0.05,z)+depthAt(x-0.05,z)
+      +depthAt(x,z+0.05)+depthAt(x,z-0.05))*0.25)*12,-0.5,0.8);
     var moist=n2(x*2.6+13,z*2.6+27);
-    gw.push({x:x,z:z,d:depthAt(x,z),m:moist,jit:(hsh(i*3,j*7)-0.5)*1.6});
+    gw.push({x:x,z:z,d:d,m:moist,ef:edgeF(x,z),ao:ao,jit:(hsh(i*3,j*7)-0.5)*1.2});
   }}
 })();
 /* hillshaded soil grain, rendered once and texture-mapped each frame */
 var NTEX=(function(){
-  var c=document.createElement('canvas');c.width=640;c.height=640;
-  var g=c.getContext('2d');var im=g.createImageData(640,640);var dd=im.data;
+  var TS=768;
+  var c=document.createElement('canvas');c.width=TS;c.height=TS;
+  var g=c.getContext('2d');var im=g.createImageData(TS,TS);var dd=im.data;
   function oct(u,v){return n2(u,v)*0.55+n2(u*2.7+11,v*2.7+5)*0.30+n2(u*6.1+23,v*6.1+17)*0.15;}
   var y,x2;
-  for(y=0;y<640;y++){for(x2=0;x2<640;x2++){
+  for(y=0;y<TS;y++){for(x2=0;x2<TS;x2++){
     var u=x2/7.5,v=y/7.5;
     var h0=oct(u,v),h1=oct(u+0.16,v);
     var sh=128+(h1-h0)*760+(h0-0.5)*26;
     if(sh<0){sh=0;}if(sh>255){sh=255;}
-    var o=(y*640+x2)*4;dd[o]=sh;dd[o+1]=sh;dd[o+2]=sh;dd[o+3]=255;
+    var o=(y*TS+x2)*4;dd[o]=sh;dd[o+1]=sh;dd[o+2]=sh;dd[o+3]=255;
   }}
   g.putImageData(im,0,0);
   return c;
 })();
-/* scattered rocks on steep/rocky cells */
+/* scattered rocks on steep/rocky cells (slope normalized by real spacing;
+   only inside the fully visible interior) */
 var ROCKS=(function(){
   var out=[],i,j;
   for(j=2;j<GZ-2;j+=1){for(i=2;i<GX-2;i+=1){
-    var idx=j*GX+i,slope=Math.abs(gw[idx+1].d-gw[idx].d)+Math.abs(gw[idx+GX].d-gw[idx].d);
+    var idx=j*GX+i,p0=gw[idx];
+    if(p0.ef<0.9){continue;}
+    var slope=Math.abs((gw[idx+1].d-p0.d)/(gw[idx+1].x-p0.x))
+      +Math.abs((gw[idx+GX].d-p0.d)/(gw[idx+GX].z-p0.z));
     var h=hsh(i*13,j*17);
-    if((slope>0.055&&h>0.82)||h>0.988){
-      out.push({x:gw[idx].x+(h-0.5)*0.04,z:gw[idx].z+(hsh(i,j)-0.5)*0.05,
+    if((slope>1.15&&h>0.82)||h>0.988){
+      var rx2=p0.x+(h-0.5)*0.04,rz2=p0.z+(hsh(i,j)-0.5)*0.05;
+      out.push({x:rx2,z:rz2,y:depthAt(rx2,rz2)-0.004,
         s:1.4+h*2.6,sh:0.14+hsh(j,i)*0.22});
     }
   }}
@@ -459,13 +519,16 @@ var BLADES=(function(){
   }
   return out;
 })();
-/* fault trace: irregular en-echelon strands following the scarp */
+/* fault trace: irregular en-echelon strands following the scarp. The
+   physical crack runs past the mapped extent and dissolves with the terrain;
+   the digital overlay (dashes, ticks, label) stays on the surveyed core. */
 var FAULTPTS=(function(){
-  var out=[],k;
-  for(k=0;k<=40;k++){
-    var z=-1+2*k/40;
+  var out=[],k,N=52;
+  for(k=0;k<=N;k++){
+    var z=-1.35+2.70*k/N;
     var x=faultX(z)+noise(z*4.1+7,3.3)*0.028;
-    out.push({x:x,z:z,y:depthAt(x,z)-0.004,gap:hsh(k,61)>0.82});
+    out.push({x:x,z:z,y:depthAt(x,z)-0.004,gap:hsh(k,61)>0.82,
+      core:z>=-1.02&&z<=1.02});
   }
   return out;
 })();
@@ -907,8 +970,13 @@ var NETBOX=(function(){
     if(pts[k].z<z0){z0=pts[k].z;}if(pts[k].z>z1){z1=pts[k].z;}
   }
   x0-=0.10;x1+=0.10;z0-=0.10;z1+=0.10;
-  var yb=Math.max(depthAt(x0,z0),depthAt(x0,z1),depthAt(x1,z0),depthAt(x1,z1),
-    depthAt(x0,(z0+z1)/2))+0.05;
+  var yb=0,f2;
+  for(k=0;k<12;k++){
+    f2=k/11;
+    yb=Math.max(yb,depthAt(x0,z0+(z1-z0)*f2),depthAt(x1,z0+(z1-z0)*f2),
+      depthAt(x0+(x1-x0)*f2,z0),depthAt(x0+(x1-x0)*f2,z1));
+  }
+  yb+=0.05;
   return {x0:x0,x1:x1,z0:z0,z1:z1,yb:yb};
 })();
 function drawNetBox(){
@@ -956,53 +1024,90 @@ function drawTerrain(){
     var far=1-j2/(GZ-2);
     for(i2=0;i2<GX-1;i2++){
       idx=j2*GX+i2;
-      var q0=gw[idx];
-      var d00=q0.d,d10=gw[idx+1].d,d11=gw[idx+GX+1].d,d01=gw[idx+GX].d;
-      var dA=(d00+d10+d11+d01)*0.25;
-      var lit=clamp(((d00-d10)*18+(d00-d01)*5)*0.8,-0.6,1.1);
-      /* sediment hue drifts with a moisture field; basins run cold and dark */
-      var deep=ss(0.25,dA-0.52);
-      var hue=lerp(33+q0.m*8,205,deep*0.5);
-      var sat=lerp(23+q0.m*6,12,deep);
-      var L=55-40*dA+lit*9+q0.jit;
-      var al=(0.90-far*0.22).toFixed(3);
-      ctx.fillStyle='hsla('+hue.toFixed(0)+','+sat.toFixed(0)+'%,'+L.toFixed(1)+'%,'+al+')';
+      var q0=gw[idx],q1=gw[idx+1],q2=gw[idx+GX],q3=gw[idx+GX+1];
+      /* rim quads fade out into the water column: no drawn edge, no wall */
+      var e0=q0.ef,e1=q1.ef,e2=q2.ef,e3=q3.ef;
+      var eMax=Math.max(e0,e1,e2,e3);
+      if(eMax<0.02){continue;}
+      var eMin=Math.min(e0,e1,e2,e3),ef=(e0+e1+e2+e3)*0.25;
+      var d00=q0.d,dA=(d00+q1.d+gw[idx+GX+1].d+q2.d)*0.25;
+      /* slope-aware light (normalized by real spacing), from the upper east */
+      var sx2=(d00-q1.d)/(q1.x-q0.x),sz2=(d00-q2.d)/(q2.z-q0.z);
+      var lit=clamp(sx2*0.85+sz2*0.24,-0.6,1.1);
+      /* sediment hue drifts with a moisture field; basins run cold and dark;
+         steep faces read as bare rock, hollows keep restrained occlusion */
+      var deep=ss(0.30,dA-0.50);
+      var rockF=ss(0.9,Math.abs(sx2)-0.45);
+      /* sediment hue holds until the basin, then swings to cold blue through
+         a desaturated gray midpoint — never through terrestrial green */
+      var bf=ss(0.55,deep-0.30);
+      var hue=lerp(36+q0.m*10,208,bf);
+      var sat=lerp(21+q0.m*7,14,deep)*(1-0.35*rockF)*(1-0.62*Math.sin(3.1416*bf));
+      var L=54-38*dA+lit*8-q0.ao*7-rockF*5+q0.jit;
+      L=lerp(L,26,far*0.28);
+      var cpre='hsla('+hue.toFixed(0)+','+sat.toFixed(0)+'%,'+L.toFixed(1)+'%,';
+      var aBase=0.93-far*0.25;
+      if(eMax-eMin>0.10){
+        /* smooth alpha ramp along the dominant fade axis; edge-midpoint
+           anchors keep neighboring quads' ramps aligned (no herringbone) */
+        var c0=idx,c1=idx+1,c2=idx+GX+1,c3=idx+GX;
+        var eL=(e0+e2)*0.5,eR=(e1+e3)*0.5,eT=(e0+e1)*0.5,eB=(e2+e3)*0.5;
+        var gr;
+        if(Math.abs(eL-eR)>=Math.abs(eT-eB)){
+          gr=ctx.createLinearGradient((gsx[c0]+gsx[c3])*0.5,(gsy[c0]+gsy[c3])*0.5,
+            (gsx[c1]+gsx[c2])*0.5,(gsy[c1]+gsy[c2])*0.5);
+          gr.addColorStop(0,cpre+(aBase*eL).toFixed(3)+')');
+          gr.addColorStop(1,cpre+(aBase*eR).toFixed(3)+')');
+        }else{
+          gr=ctx.createLinearGradient((gsx[c0]+gsx[c1])*0.5,(gsy[c0]+gsy[c1])*0.5,
+            (gsx[c3]+gsx[c2])*0.5,(gsy[c3]+gsy[c2])*0.5);
+          gr.addColorStop(0,cpre+(aBase*eT).toFixed(3)+')');
+          gr.addColorStop(1,cpre+(aBase*eB).toFixed(3)+')');
+        }
+        ctx.fillStyle=gr;
+      }else{
+        ctx.fillStyle=cpre+(aBase*ef).toFixed(3)+')';
+      }
       ctx.beginPath();
       ctx.moveTo(gsx[idx],gsy[idx]);ctx.lineTo(gsx[idx+1],gsy[idx+1]);
       ctx.lineTo(gsx[idx+GX+1],gsy[idx+GX+1]);ctx.lineTo(gsx[idx+GX],gsy[idx+GX]);
       ctx.closePath();ctx.fill();
     }
   }
-  /* warm crest light on steep scarp edges */
+  /* warm crest light on steep scarp edges (slope per world unit) */
   ctx.lineWidth=1.1;
   for(j2=0;j2<GZ;j2++){
     for(i2=0;i2<GX-1;i2++){
       idx=j2*GX+i2;
-      var dh=gw[idx+1].d-gw[idx].d;
-      if(dh<-0.05){
-        var st=Math.min(1,(-dh-0.05)/0.05);
+      if(gw[idx].ef<0.5){continue;}
+      var dh=(gw[idx+1].d-gw[idx].d)/(gw[idx+1].x-gw[idx].x);
+      if(dh<-0.9){
+        var st=Math.min(1,(-dh-0.9)/0.9);
         ctx.strokeStyle='rgba(238,200,148,'+(0.03+st*0.08).toFixed(3)+')';
         ctx.beginPath();ctx.moveTo(gsx[idx],gsy[idx]);ctx.lineTo(gsx[idx+1],gsy[idx+1]);ctx.stroke();
       }
     }
   }
   if(CONFIG.q.tex[qt]){
+    /* clip to an interior ring where the terrain is still fully opaque, so
+       the soft-light grain never lands on bare water past the faded rim */
+    var IN=4,ei0=IN,ei1=GX-1-IN,ej0=IN,ej1=GZ-1-IN;
     ctx.save();
     ctx.beginPath();
-    ctx.moveTo(gsx[0],gsy[0]);
-    for(i2=1;i2<GX;i2++){ctx.lineTo(gsx[i2],gsy[i2]);}
-    for(j2=1;j2<GZ;j2++){ctx.lineTo(gsx[j2*GX+GX-1],gsy[j2*GX+GX-1]);}
-    for(i2=GX-2;i2>=0;i2--){ctx.lineTo(gsx[(GZ-1)*GX+i2],gsy[(GZ-1)*GX+i2]);}
-    for(j2=GZ-2;j2>=1;j2--){ctx.lineTo(gsx[j2*GX],gsy[j2*GX]);}
+    ctx.moveTo(gsx[ej0*GX+ei0],gsy[ej0*GX+ei0]);
+    for(i2=ei0+1;i2<=ei1;i2++){ctx.lineTo(gsx[ej0*GX+i2],gsy[ej0*GX+i2]);}
+    for(j2=ej0+1;j2<=ej1;j2++){ctx.lineTo(gsx[j2*GX+ei1],gsy[j2*GX+ei1]);}
+    for(i2=ei1-1;i2>=ei0;i2--){ctx.lineTo(gsx[ej1*GX+i2],gsy[ej1*GX+i2]);}
+    for(j2=ej1-1;j2>ej0;j2--){ctx.lineTo(gsx[j2*GX+ei0],gsy[j2*GX+ei0]);}
     ctx.closePath();ctx.clip();
     var TY0=TY+0.56*DH;
-    var ta=2.30*yawC*S/640,tb=2.30*yawS*S*PT/640;
-    var tc=-2.00*yawS*S/640,td=2.00*yawC*S*PT/640;
-    var te=CX+(-1.15*yawC+1.00*yawS)*S;
-    var tf=TY0+(-1.15*yawS-1.00*yawC)*S*PT;
+    var ta=3.60*yawC*S/768,tb=3.60*yawS*S*PT/768;
+    var tc=-2.70*yawS*S/768,td=2.70*yawC*S*PT/768;
+    var te=CX+(-1.80*yawC+1.49*yawS)*S;
+    var tf=TY0+(-1.80*yawS-1.49*yawC)*S*PT;
     ctx.setTransform(DPR*ta,DPR*tb,DPR*tc,DPR*td,DPR*te,DPR*tf);
     ctx.globalCompositeOperation='soft-light';
-    ctx.globalAlpha=0.38;
+    ctx.globalAlpha=0.32;
     ctx.drawImage(NTEX,0,0);
     ctx.restore();
   }
@@ -1010,7 +1115,7 @@ function drawTerrain(){
   var k;
   for(k=0;k<ROCKS.length;k++){
     var rk=ROCKS[k];
-    proj(rk.x,depthAt(rk.x,rk.z)-0.004,rk.z,A);
+    proj(rk.x,rk.y,rk.z,A);
     var rs=rk.s*SC;
     ctx.fillStyle='rgba(18,22,28,'+rk.sh.toFixed(2)+')';
     ctx.beginPath();ctx.ellipse(A.x,A.y,rs,rs*0.55,0,0,6.2832);ctx.fill();
@@ -1023,9 +1128,9 @@ function drawTerrain(){
   var amb=ctx.createRadialGradient(A.x,A.y,0,A.x,A.y,W*0.34);
   amb.addColorStop(0,'rgba(26,95,120,0.08)');amb.addColorStop(1,'rgba(26,95,120,0)');
   ctx.fillStyle=amb;ctx.fillRect(0,0,W,H);
-  var fog=ctx.createLinearGradient(0,H*0.45,0,H);
-  fog.addColorStop(0,'rgba(5,15,24,0)');fog.addColorStop(1,'rgba(5,15,24,0.52)');
-  ctx.fillStyle=fog;ctx.fillRect(0,H*0.45,W,H*0.55);
+  var fog=ctx.createLinearGradient(0,H*0.42,0,H);
+  fog.addColorStop(0,'rgba(5,15,24,0)');fog.addColorStop(1,'rgba(5,15,24,0.60)');
+  ctx.fillStyle=fog;ctx.fillRect(0,H*0.42,W,H*0.58);
 }
 function drawFault(){
   /* physical crack: two en-echelon strands, gaps, scarp ticks */
@@ -1046,24 +1151,28 @@ function drawFault(){
   }
   for(k=2;k<FAULTPTS.length-2;k+=4){
     var f2=FAULTPTS[k];
+    if(!f2.core){continue;}
     proj(f2.x,f2.y,f2.z,A);proj(f2.x-0.035,f2.y+0.012,f2.z,B);
     ctx.strokeStyle='rgba(232,205,160,0.10)';ctx.lineWidth=1;
     ctx.beginPath();ctx.moveTo(A.x,A.y);ctx.lineTo(B.x,B.y);ctx.stroke();
   }
-  /* digital overlay: analysis band + label, seismic layer only */
+  /* digital overlay: analysis band + label, seismic layer only,
+     restricted to the surveyed core of the trace */
   if(!layers.seismic){return;}
   ctx.globalAlpha=emA('seismic');
   ctx.strokeStyle='rgba('+CONFIG.col.sei+',0.30)';
   ctx.lineWidth=1;
   ctx.setLineDash([3,6]);
   ctx.beginPath();
+  var pen2=false;
   for(k=0;k<FAULTPTS.length;k++){
+    if(!FAULTPTS[k].core){pen2=false;continue;}
     proj(FAULTPTS[k].x,FAULTPTS[k].y-0.006,FAULTPTS[k].z,A);
-    if(k===0){ctx.moveTo(A.x,A.y);}else{ctx.lineTo(A.x,A.y);}
+    if(!pen2){ctx.moveTo(A.x,A.y);pen2=true;}else{ctx.lineTo(A.x,A.y);}
   }
   ctx.stroke();
   ctx.setLineDash([]);
-  proj(FAULTPTS[3].x,FAULTPTS[3].y-0.02,FAULTPTS[3].z,A);
+  proj(FAULTPTS[10].x,FAULTPTS[10].y-0.02,FAULTPTS[10].z,A);
   ctx.font='600 9px '+MONO;
   ctx.fillStyle='rgba(255,178,126,0.6)';
   ctx.textAlign='left';ctx.textBaseline='middle';
