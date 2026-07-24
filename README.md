@@ -6,7 +6,8 @@
 Source code and scholarly content for [huguryildiz.com](https://huguryildiz.com),
 the academic website of Hüseyin Uğur Yıldız. The site presents publications,
 research projects, teaching, graduate supervision, professional service, and a
-web and PDF curriculum vitae.
+web and PDF curriculum vitae. It also preserves research notes and
+announcements and publishes an aggregated, privacy-conscious site-reach report.
 
 The website is generated with Jekyll and deployed to GitHub Pages from the
 `master` branch. It uses a custom academic interface alongside a retained
@@ -16,13 +17,15 @@ Minimal Mistakes path for utility pages.
 
 | Section | Content |
 | --- | --- |
-| [Home](https://huguryildiz.com/) | Academic profile, research focus, news, and an interactive underwater-network illustration |
+| [Home](https://huguryildiz.com/) | Academic profile, research focus, news, and an interactive ocean digital twin |
 | [Publications](https://huguryildiz.com/publications/) | Publication catalogue with type, year, and quartile filters; DOI and local full-text links |
 | [Research](https://huguryildiz.com/research/) | Research program, interactive topic map, software, and learning resources |
+| [Writing](https://huguryildiz.com/writing/) | Notes, announcements, and longer pieces retained as part of the scholarly record |
 | [CV](https://huguryildiz.com/cv/) | Web curriculum vitae and the downloadable PDF version |
 | [Teaching](https://huguryildiz.com/teaching/) | Undergraduate and graduate courses |
 | [Students](https://huguryildiz.com/students/) | Graduate supervision and information for prospective students |
 | [Service](https://huguryildiz.com/service/) | Reviewing, committee, chairing, institutional, and invited-talk activities |
+| [Site Reach](https://huguryildiz.com/stats/) | Aggregated GoatCounter page-view, content, geographic, and referral summaries with explicit data limitations |
 
 ## Rendering architecture
 
@@ -31,7 +34,7 @@ before changing layouts, navigation, styles, or scripts.
 
 | Path | Pages | Rendering chain |
 | --- | --- | --- |
-| Primary academic interface | Home, publications, research, CV, teaching, students, and service | Page → `_layouts/academic.html` → `_layouts/compress.html` → `assets/css/redesign.css` |
+| Primary academic interface | Home, publications, research, writing, posts, CV, teaching, students, service, and site reach | Page → `_layouts/academic.html` → `_layouts/compress.html` → `assets/css/redesign.css`; posts first pass through `_layouts/post.html` |
 | Minimal Mistakes interface | 404, search, terms, and other pages without `layout: academic` | Local layouts and includes → `assets/css/main.scss`, `assets/css/custom.css`, and `_sass/` |
 
 The primary navigation is defined directly in `_layouts/academic.html`.
@@ -43,17 +46,21 @@ The primary navigation is defined directly in `_layouts/academic.html`.
 | --- | --- |
 | `index.md` | Home-page content |
 | `_pages/` | Main and utility pages |
+| `_posts/` | Dated writing entries published under `/writing/:title/` |
 | `_layouts/academic.html` | Primary navigation, page shell, footer, theme control, and shared interactions |
-| `_includes/hero-uwsn.html` | Interactive underwater sensor-network hero |
+| `_layouts/post.html` | Writing-entry metadata, reading time, tags, and optional source link |
+| `_includes/hero-uwsn.html` | Interactive ocean digital twin and underwater acoustic-network scenario |
 | `_includes/research-map.html` | Interactive research map rendered from `_data/research_map.yml` |
 | `assets/css/redesign.css` | Primary academic-interface styles |
 | `_layouts/`, `_includes/`, `_sass/`, `assets/css/main.scss` | Local Minimal Mistakes rendering and overrides |
 | `_data/research_metrics.json` | OpenAlex metrics snapshot |
+| `_data/site_stats.json` | Sanitized GoatCounter snapshot rendered by `_pages/stats.md` |
 | `files/` | CV, theses, papers, and other downloadable scholarly documents |
 | `assets/images/` | Portraits, research graphics, course images, project images, and favicons |
-| `scripts/` | OpenAlex retrieval and optional CV-conversion utilities |
+| `assets/video/courses/`, `assets/video/topics/` | Course and research-topic media |
+| `scripts/` | OpenAlex and GoatCounter retrieval plus optional CV-conversion utilities |
 | `_config.yml` | Jekyll, theme, metadata, analytics, and plugin configuration |
-| `PRODUCT.md` | Design and accessibility contract for the UWSN hero |
+| `PRODUCT.md` | Product, data-honesty, design, and accessibility contract for the ocean digital twin |
 
 Generated output under `_site/` is not a source and should not be edited.
 
@@ -100,6 +107,8 @@ separate artifacts; changing one does not update the others automatically.
   and local PDF paths together.
 - Research-map content belongs in `_data/research_map.yml`; its labels and
   counts must remain consistent with `_includes/research-map.html`.
+- The writing index is `_pages/writing.md`; dated entries live in `_posts/`.
+  Post URLs follow `/writing/:title/`, as configured in `_config.yml`.
 - Do not infer or hand-edit bibliometric values without a source. To refresh
   the OpenAlex snapshot locally, run:
 
@@ -109,6 +118,12 @@ separate artifacts; changing one does not update the others automatically.
 
   The script requires Python's `requests` package and writes
   `_data/research_metrics.json`. `OPENALEX_MAILTO` is optional.
+- `_pages/stats.md` renders the sanitized snapshot in
+  `_data/site_stats.json`. The daily GitHub Actions workflow runs
+  `scripts/fetch_goatcounter.py` with the `GOATCOUNTER_API_TOKEN` repository
+  secret. The token must never be placed in client-side code or committed
+  data. The public report does not infer visitors, sessions, bounce rate, or
+  other measures unavailable from the source API.
 
 The CV conversion scripts are optional maintenance utilities, not an active
 site-generation pipeline. Use `scripts/update_cv_json.sh` only when JSON Resume
@@ -138,6 +153,10 @@ with Ruby 3.1 and deploys it to GitHub Pages. The custom domain is declared in
 `.github/workflows/update-openalex.yml` runs monthly and can also be triggered
 manually. It retrieves the configured OpenAlex author record and commits an
 updated `_data/research_metrics.json` only when the snapshot changes.
+
+`.github/workflows/update-goatcounter.yml` runs daily and can also be triggered
+manually. It retrieves aggregated analytics with a repository secret and
+commits `_data/site_stats.json` only when the snapshot changes.
 
 ## License
 
