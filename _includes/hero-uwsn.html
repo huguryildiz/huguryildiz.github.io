@@ -9,6 +9,7 @@
   <div class="uw-ui">
     <div class="uw-topleft">
       <span class="uw-chip uw-chip-sim">SIMULATED SCENARIO</span>
+      <span class="uw-chip uw-chip-state" id="uw-state">STANDBY</span>
       <div class="uw-layers" role="group" aria-label="Data layers">
         <button type="button" data-layer="all" aria-pressed="true">All</button>
         <button type="button" data-layer="network" aria-pressed="true"><i class="uw-dot uw-dot-net"></i>Network</button>
@@ -75,8 +76,24 @@
   </div>
 </div>
 
+<div class="uw-plaque">
+  <div class="ptop">
+    <span class="ptag live">OBSERVATORY</span>
+    <span class="ptitle" id="uw-plq-title">Standing by</span>
+    <span class="ptag">SIMULATED SCENARIO</span>
+  </div>
+  <p class="ptext" id="uw-plq-text">Acoustic sensor field deployed on the fault-zone shelf.
+    Awaiting synchronization pulse from surface gateway BS-1.</p>
+  <div class="pctl">
+    <button type="button" id="uw-plq-pause" aria-pressed="false"><span>Pause</span></button>
+    <button type="button" id="uw-plq-explore" aria-pressed="false" aria-expanded="false"
+      aria-controls="uwsn-hero">Explore the twin</button>
+    <span class="psim">Drag to orbit · click objects for details</span>
+  </div>
+</div>
+
 <style>
-#uwsn-hero{position:relative;width:100%;height:clamp(400px,30vw,450px);
+#uwsn-hero{position:relative;width:100%;height:clamp(430px,44vw,600px);
   border:1px solid var(--hairline,#27333F);border-radius:14px;overflow:hidden;
   background:linear-gradient(180deg,#0D2F42 0%,#071A28 45%,#040E18 100%);contain:content;
   font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;}
@@ -108,6 +125,13 @@
   padding:4px 8px;border-radius:5px;}
 #uwsn-hero .uw-chip-sim{color:#F5CE8A;border:1px solid rgba(240,178,70,.55);
   background:rgba(30,22,8,.55);}
+#uwsn-hero .uw-chip-state{color:#A9CDDC;border:1px solid rgba(140,190,210,.35);
+  background:rgba(6,20,31,.62);letter-spacing:.06em;}
+/* progressive disclosure: advanced controls appear in Explore mode only */
+#uwsn-hero:not(.uw-explore) .uw-layers,
+#uwsn-hero:not(.uw-explore) .uw-topright,
+#uwsn-hero:not(.uw-explore) .uw-zoom,
+#uwsn-hero:not(.uw-explore) .uw-timebar{display:none;}
 #uwsn-hero .uw-layers{display:flex;gap:5px;flex-wrap:wrap;max-width:100%;}
 #uwsn-hero .uw-dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px;
   vertical-align:-0.5px;}
@@ -249,6 +273,12 @@ var layers={network:true,security:true,habitat:true,seismic:true};
 var layerFail={};                 /* draw-layer error fuse: fail once, skip after */
 var qt=0;                         /* quality tier 0 high / 1 med / 2 low     */
 
+/* ---- acoustic network awakening + guided observation state ---- */
+var awPhase=REDUCED?'done':'pre'; /* pre → run → done                        */
+var awT0=-1,routeAlpha=REDUCED?1:0;
+var SPOTS=['network','security','habitat','seismic'];
+var spotIdx=-1,spotT0=-1,cycleFrom=-1,exploring=false,hovering=false,em=0;
+
 /* ================= 1. helpers ================= */
 function hsh(ix,iz){var s=Math.sin(ix*127.1+iz*311.7)*43758.5453;return s-Math.floor(s);}
 function n2(x,z){
@@ -375,6 +405,29 @@ function treeEdges(){
   return out;
 }
 function segKey(a,b){return a.id<b.id?a.id+'|'+b.id:b.id+'|'+a.id;}
+
+/* awakening order: gateway outward through the convergecast tree */
+var AW={pulse:0.55,t0:0.45,stag:0.088,end:0};
+var awAt={};
+(function(){
+  var arr=allNodes.slice();
+  arr.sort(function(a,b){
+    var ha=treePath(a).length,hb=treePath(b).length;
+    return ha!==hb?ha-hb:d2(a,BS)-d2(b,BS);
+  });
+  for(var k=0;k<arr.length;k++){awAt[arr[k].id]=AW.t0+k*AW.stag;}
+  AW.end=AW.t0+arr.length*AW.stag+0.20;
+})();
+function nodeOn(n){
+  if(awPhase==='done'){return 1;}
+  if(awPhase==='pre'||awT0<0){return 0;}
+  return ss(0.28,(t-awT0)-(awAt[n.id]||AW.t0));
+}
+/* spotlight emphasis: the active layer stays at 1, the rest dim softly */
+function emA(cat){
+  if(spotIdx<0){return 1;}
+  return cat===SPOTS[spotIdx]?1:1-0.55*em;
+}
 
 /* ================= 4. habitat zones + fault trace ================= */
 function mkZone(cx,cz,r,seed,name){
@@ -705,6 +758,20 @@ function stepPackets(dt){
 
 /* ================= 10. sim step ================= */
 function step(dt){
+  /* awakening holds the scenario at T+0 until the field is synchronized */
+  if(awPhase!=='done'){
+    liveT0=performance.now()/1000;
+    if(awPhase==='run'){
+      if(t-awT0>=1.6){routeAlpha=Math.min(1,routeAlpha+dt*1.5);}
+      if(t-awT0>=AW.end){
+        awPhase='done';routeAlpha=1;
+        cycleFrom=t+3.5;
+        ringAt(BS,0.08,1.4,CONFIG.col.net);
+        setPlaque('synced');
+        announce('Network synchronized. All '+allNodes.length+' sensors reporting.');
+      }
+    }
+  }
   prevSimT=simT;
   if(mode==='live'){
     var ln=((performance.now()/1000-liveT0)%CONFIG.loop+CONFIG.loop)%CONFIG.loop;
@@ -715,7 +782,7 @@ function step(dt){
     if(simT>=CONFIG.loop){simT-=CONFIG.loop;resetTransients();}
   }
   computeState();
-  if(mode!=='pause'&&!scrubbing){
+  if(mode!=='pause'&&!scrubbing&&awPhase==='done'){
     stepSpawns();
     stepPackets(mode==='live'?dt:dt*speed);
   }
@@ -730,11 +797,17 @@ function step(dt){
     }
     if(ev.expiresAt>prevSimT&&ev.expiresAt<=simT&&prevSimT<=simT){logDirty=true;}
   }
+  /* guided observation cycle (replaces the old idle yaw drift):
+     every 8 s spotlight one layer; any interaction, selection, pause,
+     replay or explore mode suspends automatic cycling immediately */
+  if(!REDUCED&&awPhase==='done'&&mode==='live'&&!sel&&!exploring&&!hovering
+     &&t-lastInteract>6){
+    if(spotIdx<0){if(cycleFrom>0&&t>=cycleFrom){enterSpot(0);}}
+    else if(t-spotT0>8){enterSpot((spotIdx+1)%SPOTS.length);}
+  }
+  if(spotIdx>=0&&em<1){em=Math.min(1,em+dt*2.8);}
   /* camera smoothing */
   var f=Math.min(1,dt*4);
-  if(!REDUCED&&t-lastInteract>6&&mode!=='pause'&&!sel){
-    camYawT=-0.45+0.05*Math.sin(t*0.05);
-  }
   camYaw+=(camYawT-camYaw)*f;
   camPitch+=(camPitchT-camPitch)*f;
   camZoom+=(camZoomT-camZoom)*f;
@@ -979,6 +1052,7 @@ function drawFault(){
   }
   /* digital overlay: analysis band + label, seismic layer only */
   if(!layers.seismic){return;}
+  ctx.globalAlpha=emA('seismic');
   ctx.strokeStyle='rgba('+CONFIG.col.sei+',0.30)';
   ctx.lineWidth=1;
   ctx.setLineDash([3,6]);
@@ -994,6 +1068,7 @@ function drawFault(){
   ctx.fillStyle='rgba(255,178,126,0.6)';
   ctx.textAlign='left';ctx.textBaseline='middle';
   ctx.fillText('FZ-1 · active fault',A.x+8,A.y);
+  ctx.globalAlpha=1;
 }
 function drawZones(){
   var k;
@@ -1024,6 +1099,7 @@ function drawZones(){
     ctx.stroke();
   }
   if(!layers.habitat){return;}
+  ctx.globalAlpha=emA('habitat');
   var zs=[ZCORAL,ZGRASS],zi;
   for(zi=0;zi<zs.length;zi++){
     var zn=zs[zi];
@@ -1044,6 +1120,7 @@ function drawZones(){
     ctx.textAlign='center';ctx.textBaseline='middle';
     ctx.fillText(zn.name,A.x,A.y);
   }
+  ctx.globalAlpha=1;
 }
 function drawLinks(){
   var edges=treeEdges(),k;
@@ -1061,9 +1138,12 @@ function drawLinks(){
       ctx.lineWidth=4;
       ctx.beginPath();ctx.moveTo(ax,ay);ctx.lineTo(A.x,A.y);ctx.stroke();
     }else{
-      ctx.strokeStyle='rgba(150,200,215,'+(stOff[a.id]?0.03:0.09)+')';
-      ctx.lineWidth=1;
-      ctx.beginPath();ctx.moveTo(ax,ay);ctx.lineTo(A.x,A.y);ctx.stroke();
+      var lk=(stOff[a.id]?0.03:0.09)*Math.min(nodeOn(a),nodeOn(b));
+      if(lk>0.004){
+        ctx.strokeStyle='rgba(150,200,215,'+lk.toFixed(3)+')';
+        ctx.lineWidth=1;
+        ctx.beginPath();ctx.moveTo(ax,ay);ctx.lineTo(A.x,A.y);ctx.stroke();
+      }
     }
   }
   /* fault array chain polyline */
@@ -1118,6 +1198,7 @@ function drawMines(){
     ctx.beginPath();ctx.ellipse(A.x,A.y+r*0.55,r*1.35,r*0.45,0,0,6.2832);ctx.fill();
     /* threat rings, phase-offset, security layer only */
     if(layers.security){
+      ctx.globalAlpha=emA('security');
       if(REDUCED){
         groundEllipse(m,CONFIG.r.mine,'rgba('+CONFIG.col.threat+',0.20)',1.2,[4,5]);
       }else{
@@ -1128,6 +1209,7 @@ function drawMines(){
         var q2=(q+0.5)%1;
         groundEllipse(m,CONFIG.r.mine*q2,'rgba('+CONFIG.col.threat+','+(0.22*(1-q2)).toFixed(3)+')',1);
       }
+      ctx.globalAlpha=1;
     }
     /* hull: shaded steel sphere with horns and a base skirt */
     var sg=ctx.createRadialGradient(A.x-r*0.4,A.y-r*0.5,r*0.15,A.x,A.y,r*1.15);
@@ -1168,6 +1250,29 @@ function drawSensors(){
   for(k=0;k<allNodes.length;k++){
     var n=allNodes[k],st=stSensor[n.id]||{primary:'normal',badges:[]};
     proj(n.x,n.y,n.z,A);
+    /* awakening: nodes render muted until the sync pulse reaches them */
+    var on=nodeOn(n);
+    if(on<0.999){
+      var s0=SC*(0.72+0.28*(on*on*(3-2*on)));
+      ctx.globalAlpha=0.45+0.55*on;
+      ctx.strokeStyle='rgba(120,130,140,0.4)';
+      ctx.lineWidth=1;
+      ctx.beginPath();
+      ctx.moveTo(A.x-3.4*s0,A.y+3*s0);ctx.lineTo(A.x,A.y-1.5*s0);
+      ctx.lineTo(A.x+3.4*s0,A.y+3*s0);
+      ctx.moveTo(A.x,A.y-1.5*s0);ctx.lineTo(A.x,A.y+3*s0);
+      ctx.stroke();
+      ctx.fillStyle='#5A646E';
+      ctx.beginPath();ctx.arc(A.x,A.y-2.2*s0,2.2*s0,0,6.2832);ctx.fill();
+      ctx.globalAlpha=1;
+      if(on>0){
+        ctx.strokeStyle='rgba('+CONFIG.col.net+','+(0.5*(1-on)).toFixed(3)+')';
+        ctx.lineWidth=1.2;
+        ctx.beginPath();ctx.ellipse(A.x,A.y-1.2*s0,(4+10*on)*s0,(4+10*on)*s0*0.55,0,0,6.2832);ctx.stroke();
+      }
+      pick(A.x,A.y-1.5*s0,10*s0,{kind:'sensor',ref:n,id:n.id});
+      continue;
+    }
     var off=st.primary==='offline';
     var halo=0.5+0.5*Math.sin(t*1.4+k*1.3);
     /* physical instrument: tripod frame + housing */
@@ -1287,9 +1392,11 @@ function drawVehicles(){
     ctx.globalAlpha=s.fade;
     /* position uncertainty area precedes the icon: no false precision */
     if(layers.security){
+      ctx.globalAlpha=s.fade*emA('security');
       var ur=(0.05+(1-s.conf)*0.16);
       groundEllipse(s,ur,'rgba('+CONFIG.col.threat+',0.28)',1,[3,4],
         'rgba('+CONFIG.col.threat+',0.06)');
+      ctx.globalAlpha=s.fade;
     }
     var statusCol=s.cls==='Suspicious'?'rgba(233,86,70,'+(REDUCED?0.9:0.3+0.7*Math.max(0,Math.sin(t*2.2))).toFixed(2)+')':
       'rgba(240,178,70,'+(REDUCED?0.9:0.3+0.7*Math.max(0,Math.sin(t*2.2))).toFixed(2)+')';
@@ -1390,6 +1497,7 @@ function drawPackets(){
     if(p.col===CONFIG.col.sei&&!layers.seismic){continue;}
     var a2=p.pts[p.seg],b2=p.pts[p.seg+1];
     if(!b2){continue;}
+    ctx.globalAlpha=emA(p.alarm?'security':(p.col===CONFIG.col.sei?'seismic':'network'));
     var ue=p.u*p.u*(3-2*p.u);
     var wx=a2.x+(b2.x-a2.x)*ue,wy=a2.y+(b2.y-a2.y)*ue,wz=a2.z+(b2.z-a2.z)*ue;
     proj(wx,wy,wz,A);
@@ -1408,6 +1516,7 @@ function drawPackets(){
     ctx.fillStyle='rgba('+p.col+','+al.toFixed(2)+')';
     ctx.beginPath();ctx.arc(A.x,A.y,2.2,0,6.2832);ctx.fill();
   }
+  ctx.globalAlpha=1;
 }
 function drawRings(){
   var k;
@@ -1421,10 +1530,26 @@ function drawRings(){
     var ra=(rg2.wide?0.20:0.28)*(1-q);
     if(ra<=0){continue;}
     proj(rg2.x,rg2.y,rg2.z,A);
+    ctx.globalAlpha=emA(rg2.col===CONFIG.col.threat?'security':
+      rg2.col===CONFIG.col.sei?'seismic':'network');
     ctx.strokeStyle='rgba('+(rg2.col||CONFIG.col.netDim)+','+ra.toFixed(3)+')';
     ctx.lineWidth=1.1;
     ctx.beginPath();ctx.ellipse(A.x,A.y,rr,rr*PT,0,0,6.2832);ctx.stroke();
   }
+  ctx.globalAlpha=1;
+}
+/* single restrained sync pulse from the gateway at the start of awakening */
+function drawAwaken(){
+  if(awPhase!=='run'){return;}
+  var age=t-awT0;
+  if(age>AW.pulse+0.3){return;}
+  var q=clamp(age/AW.pulse,0,1),e=1-Math.pow(1-q,4);
+  proj(BS.x,0,BS.z,A);
+  ctx.strokeStyle='rgba('+CONFIG.col.net+','+(0.5*(1-e)).toFixed(3)+')';
+  ctx.lineWidth=1.6;
+  ctx.beginPath();ctx.ellipse(A.x,A.y,e*0.24*S,e*0.24*S*PT,0,0,6.2832);ctx.stroke();
+  ctx.strokeStyle='rgba('+CONFIG.col.net+','+(0.28*(1-e)).toFixed(3)+')';
+  ctx.beginPath();ctx.ellipse(A.x,A.y,e*0.15*S,e*0.15*S*PT,0,0,6.2832);ctx.stroke();
 }
 function drawSeismicWave(){
   if(!layers.seismic){return;}
@@ -1603,12 +1728,22 @@ function drawHUD(){
 var LAYER_DRAWS=[
   ['env',function(){drawSurface();drawTerrain();drawFault();}],
   ['habitatZ',drawZones],
-  ['network',function(){if(layers.network){drawNetBox();drawLinks();drawPaths();}}],
-  ['security',function(){drawJam();}],
+  ['network',function(){
+    if(!layers.network){return;}
+    var ga=emA('network');
+    if(ga<=0.02){return;}
+    ctx.globalAlpha=ga;
+    drawLinks();
+    if(routeAlpha>0.01){ctx.globalAlpha=ga*routeAlpha;drawNetBox();drawPaths();}
+    ctx.globalAlpha=1;
+  }],
+  ['security',function(){ctx.globalAlpha=emA('security');drawJam();ctx.globalAlpha=1;}],
   ['objects',function(){drawMines();drawSensors();}],
   ['creatures',drawCreatures],
   ['vehicles',drawVehicles],
-  ['fx',function(){drawParticles();drawPackets();drawRings();drawSeismicWave();}],
+  ['fx',function(){drawParticles();drawPackets();drawRings();
+    ctx.globalAlpha=emA('seismic');drawSeismicWave();ctx.globalAlpha=1;
+    drawAwaken();}],
   ['buoy',drawBuoy],
   ['ui',function(){drawSelection();drawVignette();drawHUD();}]
 ];
@@ -1650,6 +1785,61 @@ var panelEl=document.getElementById('uw-panel'),
     annEl=document.getElementById('uw-announce');
 var panelKey='',panelTick=0;
 function announce(msg){if(annEl){annEl.textContent=msg;}}
+
+/* ---- spotlight plaque ---- */
+var plqTitle=document.getElementById('uw-plq-title'),
+    plqText=document.getElementById('uw-plq-text'),
+    btnPlqPause=document.getElementById('uw-plq-pause'),
+    btnPlqExplore=document.getElementById('uw-plq-explore'),
+    stEl=document.getElementById('uw-state');
+var PLQ={
+  pre:['Standing by','Acoustic sensor field deployed on the fault-zone shelf. Awaiting synchronization pulse from surface gateway BS-1.'],
+  awaken:['Synchronizing','Acoustic sync pulse from gateway BS-1 propagating through the relay topology…'],
+  synced:['Network synchronized','All 21 sensors reporting to surface gateway BS-1 over the convergecast topology. Guided observation begins shortly.'],
+  network:['Network topology','Data packets follow the convergecast routes to gateway BS-1. Solid cyan: primary route · dashed: backup route (k = 2).'],
+  security:['Security picture','Tracked contacts are shown with positional-uncertainty regions — never as exact points. Charted mines hold red threat radii.'],
+  habitat:['Habitat observation','Coral-ridge and seagrass observation areas monitored by sensors H-301–H-303 (temperature, dissolved O₂, turbidity).'],
+  seismic:['Seismic monitoring','Microquake wavefronts propagate along fault FZ-1; arrival order across the seafloor array constrains the epicentre.'],
+  reduced:['Network overview','Static view (reduced motion): full topology with primary and backup routes, security contacts, habitat areas, and the FZ-1 fault trace. Use Explore for layer controls and the timeline.']
+};
+var plqTimer=0;
+function setPlaque(key){
+  var it=PLQ[key];
+  if(!it||!plqTitle){return;}
+  if(REDUCED){plqTitle.textContent=it[0];plqText.textContent=it[1];return;}
+  plqText.classList.add('fading');
+  clearTimeout(plqTimer);
+  plqTimer=setTimeout(function(){
+    plqTitle.textContent=it[0];plqText.textContent=it[1];
+    plqText.classList.remove('fading');
+  },210);
+}
+var SPOT_FOCUS={
+  network:{x:0.35,z:0.05,y:0.25,zoom:1.0},
+  security:{x:-0.66,z:0.05,y:0.3,zoom:1.15},
+  habitat:{x:0.62,z:0.15,y:0.3,zoom:1.15},
+  seismic:{x:EPI.x,z:EPI.z,y:EPI.y*0.7,zoom:1.1}
+};
+function enterSpot(idx){
+  spotIdx=idx;spotT0=t;em=0;
+  var s=SPOTS[idx],F=SPOT_FOCUS[s];
+  camZoomT=F.zoom;
+  proj(F.x,F.y,F.z,A);
+  panXT=clamp(panX+(W*0.5-A.x)*0.5,-W*0.25,W*0.25);
+  panYT=clamp(panY+(H*0.47-A.y)*0.35,-H*0.2,H*0.2);
+  setPlaque(s);
+  announce('Spotlight: '+PLQ[s][0]+'. '+PLQ[s][1]);
+}
+function stateLine(){
+  if(REDUCED){return 'STATIC · REDUCED MOTION';}
+  if(mode==='pause'){return 'PAUSED';}
+  if(sel){return 'SELECTED: '+String(sel.id||sel.kind).toUpperCase();}
+  if(awPhase==='pre'){return 'STANDBY';}
+  if(awPhase==='run'){return 'SYNC IN PROGRESS';}
+  if(mode==='play'){return 'REPLAY ×'+speed;}
+  if(spotIdx>=0&&!exploring&&t-lastInteract>6){return 'AUTO · SPOTLIGHT: '+SPOTS[spotIdx].toUpperCase();}
+  return 'LIVE';
+}
 function select(o,msg){
   sel=o;
   if(!o){
@@ -1927,6 +2117,10 @@ function setMode(m){
   btnPlay.textContent=m==='pause'?'Play':'Pause';
   modeEl.textContent=m==='live'?'LIVE':m==='play'?'PLAY ×'+speed:'PAUSED';
   modeEl.className='uw-mode'+(m==='play'?' m-play':m==='pause'?' m-paused':'');
+  if(btnPlqPause){
+    btnPlqPause.setAttribute('aria-pressed',String(m==='pause'));
+    btnPlqPause.querySelector('span').textContent=m==='pause'?'Resume':'Pause';
+  }
 }
 function setSim(v){
   simT=clamp(v,0,CONFIG.loop-0.01);
@@ -1978,6 +2172,31 @@ btnLast.addEventListener('click',function(){
   }
 });
 document.getElementById('uw-close').addEventListener('click',function(){select(null);cv.focus();});
+/* plaque controls: pause/resume + explore progressive disclosure */
+if(btnPlqPause){
+  btnPlqPause.addEventListener('click',function(){
+    if(mode==='pause'){setMode('live');announce('Motion resumed');}
+    else{setMode('pause');announce('All motion paused');}
+    renderIfIdle();
+  });
+}
+if(btnPlqExplore){
+  btnPlqExplore.addEventListener('click',function(){
+    exploring=!exploring;
+    host.classList.toggle('uw-explore',exploring);
+    btnPlqExplore.setAttribute('aria-pressed',String(exploring));
+    btnPlqExplore.setAttribute('aria-expanded',String(exploring));
+    announce(exploring?'Explore mode: layer filters, legend, timeline and zoom available. Automatic spotlighting paused.'
+      :'Explore mode closed. Automatic spotlighting resumes.');
+    lastInteract=t;
+    renderIfIdle();
+  });
+}
+/* any interaction inside the twin suspends the automatic spotlight cycle */
+cv.addEventListener('pointerenter',function(){hovering=true;});
+cv.addEventListener('pointerleave',function(){hovering=false;});
+host.addEventListener('click',function(){lastInteract=t;},true);
+cv.addEventListener('keydown',function(){lastInteract=t;});
 document.getElementById('uw-zin').addEventListener('click',function(){camZoomT=clamp(camZoomT*1.25,CONFIG.cam.zoomMin,CONFIG.cam.zoomMax);renderIfIdle();});
 document.getElementById('uw-zout').addEventListener('click',function(){camZoomT=clamp(camZoomT/1.25,CONFIG.cam.zoomMin,CONFIG.cam.zoomMax);renderIfIdle();});
 
@@ -2062,6 +2281,10 @@ function updateDOM(){
   if(!tlActive){tl.value=simT.toFixed(1);}
   var c=fmtT(simT);
   if(clockEl.textContent!==c){clockEl.textContent=c;}
+  if(stEl){
+    var sl=stateLine();
+    if(stEl.textContent!==sl){stEl.textContent=sl;}
+  }
   if(logDirty){rebuildLog();}
   refreshPanel(false);
 }
@@ -2110,11 +2333,14 @@ if(REDUCED){
   /* static-but-scrubbable: land on an informative moment, controls re-render */
   setMode('pause');
   btnLive.hidden=true;btnPlay.hidden=true;btnStep.hidden=false;
+  if(btnPlqPause){btnPlqPause.hidden=true;}
+  setPlaque('reduced');
   simT=27;prevSimT=27;
   computeState();
   resize();
 }else{
   setMode('live');
+  setPlaque('pre');
   computeState();
   resize();
   document.addEventListener('visibilitychange',function(){vis=!document.hidden;setRunning();});
@@ -2122,6 +2348,18 @@ if(REDUCED){
     new IntersectionObserver(function(en){inView=en[0].isIntersecting;setRunning();},{threshold:0.04}).observe(host);
   }
   setRunning();
+  /* start the awakening once the page is idle; the muted pre-sync scene is
+     already complete and meaningful before this fires */
+  var kick=function(){
+    setTimeout(function(){
+      if(awPhase!=='pre'){return;}
+      awPhase='run';awT0=t;
+      setPlaque('awaken');
+      announce('Acoustic synchronization pulse transmitted from gateway BS-1.');
+    },700);
+  };
+  if('requestIdleCallback' in window){requestIdleCallback(kick,{timeout:1500});}
+  else{kick();}
 }
 syncLayerBtns();
 rebuildLog();
