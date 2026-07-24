@@ -50,7 +50,7 @@ The primary navigation is defined directly in `_layouts/academic.html`.
 | `_layouts/`, `_includes/`, `_sass/`, `assets/css/main.scss` | Local Minimal Mistakes rendering and overrides |
 | `_data/research_metrics.json` | OpenAlex metrics snapshot |
 | `files/` | CV, theses, papers, and other downloadable scholarly documents |
-| `images/` | Portraits, research graphics, course images, project images, and favicons |
+| `assets/images/` | Portraits, research graphics, course images, project images, and favicons |
 | `scripts/` | OpenAlex retrieval and optional CV-conversion utilities |
 | `_config.yml` | Jekyll, theme, metadata, analytics, and plugin configuration |
 | `PRODUCT.md` | Design and accessibility contract for the UWSN hero |

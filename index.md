@@ -10,7 +10,7 @@ permalink: /
     <div class="hero-id">
       <div class="idrow">
         <figure class="portrait">
-          <img src="/images/huguryildiz.png" alt="Portrait of Hüseyin Uğur Yıldız" width="76" height="76">
+          <img src="/assets/images/huguryildiz.png" alt="Portrait of Hüseyin Uğur Yıldız" width="76" height="76">
         </figure>
         <div class="idtext">
           <h1 id="home-h1">Hüseyin Uğur Yıldız</h1>
@@ -198,9 +198,9 @@ permalink: /
 
   <h2 class="sec" id="home-software"><svg class="hicon" aria-hidden="true"><use href="#i-code"/></svg>Software</h2>
   <ul class="software-strip">
-    <li><img class="ico" src="/images/icons/vera-mark.png" alt="" width="22" height="22"><span class="n">VERA</span><span class="d">Visual evaluation, reporting &amp; analytics for academic juries and accreditation workflows.</span><a class="ext" href="https://vera-eval.app" target="_blank" rel="noopener">vera-eval.app</a></li>
-    <li><img class="ico" src="/images/icons/kairos-mark.png" alt="" width="22" height="22"><span class="n">KAIROS</span><span class="d">Conflict-free university course timetabling on OR-Tools CP-SAT.</span><a class="ext" href="https://kairos.huguryildiz.com" target="_blank" rel="noopener">kairos.huguryildiz.com</a></li>
-    <li><img class="ico" src="/images/icons/uwa-ray-bench-mark.png" alt="" width="22" height="22"><span class="n">UWA Ray Bench</span><span class="d">Benchmarking LLMs against a BELLHOP3D reference solver on underwater acoustic ray tracing.</span><a class="ext" href="https://uwa-ray-bench.vercel.app/" target="_blank" rel="noopener">uwa-ray-bench.vercel.app</a></li>
+    <li><img class="ico" src="/assets/images/icons/vera-mark.png" alt="" width="22" height="22"><span class="n">VERA</span><span class="d">Visual evaluation, reporting &amp; analytics for academic juries and accreditation workflows.</span><a class="ext" href="https://vera-eval.app" target="_blank" rel="noopener">vera-eval.app</a></li>
+    <li><img class="ico" src="/assets/images/icons/kairos-mark.png" alt="" width="22" height="22"><span class="n">KAIROS</span><span class="d">Conflict-free university course timetabling on OR-Tools CP-SAT.</span><a class="ext" href="https://kairos.huguryildiz.com" target="_blank" rel="noopener">kairos.huguryildiz.com</a></li>
+    <li><img class="ico" src="/assets/images/icons/uwa-ray-bench-mark.png" alt="" width="22" height="22"><span class="n">UWA Ray Bench</span><span class="d">Benchmarking LLMs against a BELLHOP3D reference solver on underwater acoustic ray tracing.</span><a class="ext" href="https://uwa-ray-bench.vercel.app/" target="_blank" rel="noopener">uwa-ray-bench.vercel.app</a></li>
   </ul>
   <p class="more" style="margin-top:.7rem;"><a href="/research/">Research program &amp; software →</a></p>
 

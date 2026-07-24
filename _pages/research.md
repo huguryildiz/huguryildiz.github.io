@@ -28,7 +28,7 @@ permalink: /research/
 
   <article class="theme-item">
     <video class="thumb topic-video" data-topic-video muted playsinline preload="none"
-      poster="/images/research/network_flow_optimization.png" tabindex="-1" aria-hidden="true">
+      poster="/assets/images/research/network_flow_optimization.png" tabindex="-1" aria-hidden="true">
       <source src="/assets/video/topics/optimization.mp4" type="video/mp4">
     </video>
     <div class="tbody">
@@ -48,7 +48,7 @@ permalink: /research/
 
   <article class="theme-item">
     <video class="thumb topic-video" data-topic-video muted playsinline preload="none"
-      poster="/images/research/wireless_ad_hoc_underwater_sensor_networks.png" tabindex="-1" aria-hidden="true">
+      poster="/assets/images/research/wireless_ad_hoc_underwater_sensor_networks.png" tabindex="-1" aria-hidden="true">
       <source src="/assets/video/topics/wireless-underwater.mp4" type="video/mp4">
     </video>
     <div class="tbody">
@@ -69,7 +69,7 @@ permalink: /research/
 
   <article class="theme-item">
     <video class="thumb topic-video" data-topic-video muted playsinline preload="none"
-      poster="/images/research/drone_network_resilience.png" tabindex="-1" aria-hidden="true">
+      poster="/assets/images/research/drone_network_resilience.png" tabindex="-1" aria-hidden="true">
       <source src="/assets/video/topics/aerial.mp4" type="video/mp4">
     </video>
     <div class="tbody">
@@ -88,7 +88,7 @@ permalink: /research/
 
   <article class="theme-item">
     <video class="thumb topic-video" data-topic-video muted playsinline preload="none"
-      poster="/images/research/hybrid_opt_rl_networks.png" tabindex="-1" aria-hidden="true">
+      poster="/assets/images/research/hybrid_opt_rl_networks.png" tabindex="-1" aria-hidden="true">
       <source src="/assets/video/topics/quantum.mp4" type="video/mp4">
     </video>
     <div class="tbody">
@@ -133,7 +133,7 @@ permalink: /research/
   <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-code"/></svg>Software</h2>
 
   <article class="swproject">
-    <img src="/images/vera.png" alt="VERA evaluation platform screenshot" loading="lazy">
+    <img src="/assets/images/vera.png" alt="VERA evaluation platform screenshot" loading="lazy">
     <div>
       <h3>VERA — Visual Evaluation, Reporting &amp; Analytics</h3>
       <p>A modern platform for academic juries, capstone evaluations, and accreditation workflows.
@@ -148,7 +148,7 @@ permalink: /research/
   </article>
 
   <article class="swproject">
-    <img src="/images/kairos.png" alt="KAIROS course timetabling logo" loading="lazy" style="object-fit:contain;">
+    <img src="/assets/images/kairos.png" alt="KAIROS course timetabling logo" loading="lazy" style="object-fit:contain;">
     <div>
       <h3>KAIROS — Course timetabling</h3>
       <p>A conflict-free university course timetabling system built on OR-Tools CP-SAT. Given raw
@@ -164,7 +164,7 @@ permalink: /research/
   </article>
 
   <article class="swproject">
-    <img src="/images/uwa-ray-bench.png" alt="Underwater Acoustic Ray Bench transmission-loss field visualization" loading="lazy">
+    <img src="/assets/images/uwa-ray-bench.png" alt="Underwater Acoustic Ray Bench transmission-loss field visualization" loading="lazy">
     <div>
       <h3>Underwater Acoustic Ray Bench</h3>
       <p>A benchmark pitting five LLMs against a genuine 3D BELLHOP3D reference solver on underwater
