@@ -87,6 +87,13 @@ h1,h2,h3,h4{color:var(--head); font-family:var(--serif); line-height:1.22; text-
 p{margin:0 0 1em; text-wrap:pretty;}
 a{color:var(--accent); text-decoration:none;}
 a:hover{color:var(--accent-strong); text-decoration:underline; text-underline-offset:.18em;}
+/* WCAG link-in-text-block: links inside body prose must be distinguishable by
+   more than colour, so they carry a persistent underline. Heading/nav/card links
+   (publication titles, "→" more-links, software strip) opt back out below. */
+.shell p a, .shell .newslist a{text-decoration:underline; text-underline-offset:.16em;
+  text-decoration-color:color-mix(in srgb, var(--accent) 42%, transparent);}
+.shell p.more a, .shell .homepub .t a, .shell .pub .t a,
+.shell .software-strip a, .shell .rmap-pubs a, .shell p a.btn{text-decoration:none;}
 :focus-visible{outline:2px solid var(--focus); outline-offset:2px; border-radius:2px;}
 img{max-width:100%; height:auto; display:block;}
 figure{margin:0;}
@@ -868,4 +875,11 @@ footer.site a:hover .licon.spotify{color:var(--accent);}
   .post-card-link{flex-direction:column; gap:1rem; padding:1.15rem 1.2rem;}
   .post-card-cover{width:100%;}
   .post-card-cover img{aspect-ratio:16/7;}
+}
+
+/* ---------- TOUCH TARGETS ---------- */
+/* On touch pointers, grow the small pill controls to the 44px WCAG 2.2 best-
+   practice minimum without inflating them for precise mouse pointers. */
+@media (pointer:coarse){
+  .seg button, .rmap-views button, .uw-plaque .pctl button{min-height:44px;}
 }
