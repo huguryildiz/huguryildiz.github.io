@@ -10,7 +10,16 @@ permalink: /
     <div class="hero-id">
       <div class="idrow">
         <figure class="portrait">
-          <img src="/assets/images/huguryildiz.png" alt="Portrait of Hüseyin Uğur Yıldız" width="76" height="76">
+          <img src="/assets/images/huguryildiz.png" alt="Portrait of Hüseyin Uğur Yıldız" width="104" height="104">
+          <svg class="orn" viewBox="0 0 140 34" aria-hidden="true" focusable="false">
+            <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M61 12 C48 22 34 25 22 21 C12 17.5 10 9.5 17 6.5 C23 4 28 8.5 24.5 13.5 C22 17 17 16 16.5 12"/>
+              <path d="M79 12 C92 22 106 25 118 21 C128 17.5 130 9.5 123 6.5 C117 4 112 8.5 115.5 13.5 C118 17 123 16 123.5 12"/>
+            </g>
+            <path fill="currentColor" d="M70 0 C66.2 7 66.2 14 70 20 C73.8 14 73.8 7 70 0 Z"/>
+            <circle cx="61" cy="12" r="1.7" fill="currentColor"/>
+            <circle cx="79" cy="12" r="1.7" fill="currentColor"/>
+          </svg>
         </figure>
         <div class="idtext">
           <h1 id="home-h1">Hüseyin Uğur Yıldız</h1>
@@ -203,14 +212,6 @@ permalink: /
     <li><img class="ico" src="/assets/images/icons/uwa-ray-bench-mark.png" alt="" width="22" height="22"><span class="n">UWA Ray Bench</span><span class="d">Benchmarking LLMs against a BELLHOP3D reference solver on underwater acoustic ray tracing.</span><a class="ext" href="https://uwa-ray-bench.vercel.app/" target="_blank" rel="noopener">uwa-ray-bench.vercel.app</a></li>
   </ul>
   <p class="more" style="margin-top:.7rem;"><a href="/research/">Research program &amp; software →</a></p>
-
-  <h2 class="sec" id="home-linkedin"><svg class="hicon" aria-hidden="true"><use href="#i-linkedin"/></svg>On LinkedIn</h2>
-  <div class="lifeed">
-    <iframe class="liframe" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7482402530447220736" height="820" width="504" frameborder="0" allowfullscreen="" title="Embedded LinkedIn post" loading="lazy"></iframe>
-    <iframe class="liframe" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7477905194815590401" height="820" width="504" frameborder="0" allowfullscreen="" title="Embedded LinkedIn post" loading="lazy"></iframe>
-    <iframe class="liframe" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7459747314929332224" height="820" width="504" frameborder="0" allowfullscreen="" title="Embedded LinkedIn post" loading="lazy"></iframe>
-  </div>
-  <p class="more" style="margin-top:.7rem;"><a href="https://www.linkedin.com/in/huguryildiz/" target="_blank" rel="noopener">See all activity on LinkedIn →</a></p>
 
   <h2 class="sec" id="home-students"><svg class="hicon" aria-hidden="true"><use href="#i-users"/></svg>Prospective students</h2>
   <div class="cta">
