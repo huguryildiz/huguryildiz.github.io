@@ -12,7 +12,9 @@ permalink: /teaching/
   <h3 class="sub">Undergraduate</h3>
 
   <article class="swproject">
-    <img src="/images/courses/ee304.png" alt="EE 304 course illustration" loading="lazy">
+    <video class="course-video" src="/assets/video/hero-ee304.mp4"
+      poster="/images/courses/ee304.png" loop muted playsinline preload="metadata"
+      aria-hidden="true"></video>
     <div>
       <h3>EE 304 — Probability and Random Variables</h3>
       <p>A third-year undergraduate course covering probability models, discrete and continuous
@@ -23,7 +25,9 @@ permalink: /teaching/
   </article>
 
   <article class="swproject">
-    <img src="/images/courses/ee311.png" alt="EE 311 course illustration" loading="lazy">
+    <video class="course-video" src="/assets/video/hero-ee311.mp4"
+      poster="/images/courses/ee311.png" loop muted playsinline preload="metadata"
+      aria-hidden="true"></video>
     <div>
       <h3>EE 311 — Signals and Systems</h3>
       <p>A third-year undergraduate course covering continuous-time and discrete-time signals,
@@ -34,7 +38,9 @@ permalink: /teaching/
   </article>
 
   <article class="swproject">
-    <img src="/images/courses/ee413.png" alt="EE 413 course illustration" loading="lazy">
+    <video class="course-video" src="/assets/video/hero-ee413.mp4"
+      poster="/images/courses/ee413.png" loop muted playsinline preload="metadata"
+      aria-hidden="true"></video>
     <div>
       <h3>EE 413 — Communication Systems II</h3>
       <p>A senior-level undergraduate course covering digital communication systems, sampling,
@@ -46,7 +52,9 @@ permalink: /teaching/
   </article>
 
   <article class="swproject">
-    <img src="/images/courses/ee491.png" alt="EE 491 and EE 492 senior design course illustration" loading="lazy">
+    <video class="course-video" src="/assets/video/hero-ee491.mp4"
+      poster="/images/courses/ee491.png" loop muted playsinline preload="metadata"
+      aria-hidden="true"></video>
     <div>
       <h3>EE 491 / EE 492 — Senior Design Project I &amp; II</h3>
       <p>A two-semester capstone sequence focused on the design and implementation of an electrical
@@ -64,7 +72,9 @@ permalink: /teaching/
   <h3 class="sub">Graduate</h3>
 
   <article class="swproject">
-    <img src="/images/courses/ee512.png" alt="EE 512 course illustration" loading="lazy">
+    <video class="course-video" src="/assets/video/hero-ee512.mp4"
+      poster="/images/courses/ee512.png" loop muted playsinline preload="metadata"
+      aria-hidden="true"></video>
     <div>
       <h3>EE 512 — Optimization for Communication Networks</h3>
       <p>Graduate-level course covering optimization techniques for communication networks,
@@ -127,3 +137,27 @@ permalink: /teaching/
   <p style="margin-top:1em;">My goal is to create an engaging and supportive learning environment
     that helps students develop strong analytical and problem-solving skills.</p>
 </div>
+
+<script>
+(function(){
+  var videos=document.querySelectorAll('.course-video');
+  var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)');
+  function syncPlayback(){
+    videos.forEach(function(video){
+      video.muted=true;
+      if(reduced&&reduced.matches){
+        video.pause();
+        video.currentTime=0;
+      }else{
+        var playback=video.play();
+        if(playback&&playback.catch) playback.catch(function(){});
+      }
+    });
+  }
+  syncPlayback();
+  if(reduced){
+    if(reduced.addEventListener) reduced.addEventListener('change',syncPlayback);
+    else if(reduced.addListener) reduced.addListener(syncPlayback);
+  }
+})();
+</script>
