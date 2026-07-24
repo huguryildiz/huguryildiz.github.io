@@ -38,4 +38,4 @@ scripts/__pycache__/
 *.pyc
 
 # Local design artifacts
-design-artifacts/academic-site-redesign/
+design-artifacts/
