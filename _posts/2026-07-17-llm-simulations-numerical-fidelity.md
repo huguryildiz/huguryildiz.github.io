@@ -3,7 +3,7 @@ title: "Visually convincing LLM simulations can conceal substantial differences 
 date: 2026-07-17
 excerpt: "Five frontier models built the same 3D underwater-acoustic solver in isolation. Judged against BELLHOP3D by numerical output rather than screenshots, visually convincing simulations concealed large gaps in fidelity."
 tags: [LLM Evaluation, Underwater Acoustics, Computational Physics]
-linkedin: "https://www.linkedin.com/in/huguryildiz/"
+linkedin: "https://www.linkedin.com/posts/huguryildiz_ai-chatgpt-claude-activity-7483143363265978369-GMuW"
 ---
 
 GPT 5.6 Sol Ultra, Sakana Fugu Ultra, Fable 5 Max, Opus 4.8 Max, and Gemini 3.1 Pro High each received the same prompt in a separate, isolated session:

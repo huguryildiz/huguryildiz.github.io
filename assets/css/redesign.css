@@ -219,6 +219,7 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
 .chip-net{--cc:var(--cc-net);} .chip-opt{--cc:var(--cc-opt);}
 .chip-ai{--cc:var(--cc-ai);} .chip-q{--cc:var(--cc-q);}
 .chiprow{display:flex; flex-wrap:wrap; gap:.4rem; margin:.35rem 0 0; padding:0; list-style:none;}
+.hero-chips{margin-top:.85rem;}
 .chip:has(.clogo){display:inline-flex; align-items:center; gap:.42em; padding-left:.42rem;}
 .chip .clogo{width:1.15em; height:1.15em; border-radius:3px; object-fit:contain;
   background:#fff; padding:1px; flex:none;}
@@ -879,6 +880,20 @@ footer.site a:hover .licon.spotify{color:var(--accent);}
 .post-figure figcaption{
   margin-top:.7rem; font-family:var(--sans); font-size:.85rem; color:var(--ink-faint);
   line-height:1.5; max-width:52ch; margin-inline:auto;
+}
+.carousel{
+  display:flex; gap:.9rem; overflow-x:auto; scroll-snap-type:x mandatory;
+  max-width:820px; margin:1.9rem auto .5rem; padding-bottom:.7rem;
+  scroll-behavior:smooth; -webkit-overflow-scrolling:touch;
+}
+.carousel img{
+  flex:none; width:min(90%,620px); scroll-snap-align:center;
+  border-radius:12px; border:1px solid var(--hairline);
+  box-shadow:0 4px 18px -12px rgba(0,0,0,.35);
+}
+.carousel-hint{
+  font-family:var(--sans); font-size:.8rem; color:var(--ink-faint);
+  text-align:center; margin:.1rem 0 1.4rem;
 }
 .post-body ul,.post-body ol{margin:0 0 1.1rem; padding-left:1.3rem;}
 .post-body li{margin:.3rem 0;}
