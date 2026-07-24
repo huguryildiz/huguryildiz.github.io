@@ -139,34 +139,34 @@ permalink: /cv/
         <div>
           <h3 class="sub">Programming &amp; scientific computing</h3>
           <ul class="chiprow">
-            <li class="chip"><img class="clogo" src="/images/icons/python.jpg" alt="" aria-hidden="true">Python</li>
-            <li class="chip"><img class="clogo" src="/images/icons/matlab.jpg" alt="" aria-hidden="true">MATLAB</li>
-            <li class="chip"><img class="clogo" src="/images/icons/simulink.png" alt="" aria-hidden="true">Simulink</li>
-            <li class="chip"><img class="clogo" src="/images/icons/latex.svg" alt="" aria-hidden="true">LaTeX</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/python.jpg" alt="" aria-hidden="true">Python</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/matlab.jpg" alt="" aria-hidden="true">MATLAB</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/simulink.png" alt="" aria-hidden="true">Simulink</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/latex.svg" alt="" aria-hidden="true">LaTeX</li>
           </ul>
         </div>
         <div>
           <h3 class="sub">Optimization &amp; modeling</h3>
           <ul class="chiprow">
-            <li class="chip"><img class="clogo" src="/images/icons/gams.jpg" alt="" aria-hidden="true">GAMS</li>
-            <li class="chip"><img class="clogo" src="/images/icons/gurobi.jpg" alt="" aria-hidden="true">Gurobi</li>
-            <li class="chip"><img class="clogo" src="/images/icons/cplex.svg" alt="" aria-hidden="true">CPLEX</li>
-            <li class="chip"><img class="clogo" src="/images/icons/xpress.png" alt="" aria-hidden="true">Xpress</li>
-            <li class="chip"><img class="clogo" src="/images/icons/pulp.jpg" alt="" aria-hidden="true">PuLP</li>
-            <li class="chip"><img class="clogo" src="/images/icons/pyomo.jpg" alt="" aria-hidden="true">Pyomo</li>
-            <li class="chip"><img class="clogo" src="/images/icons/ortools.svg" alt="" aria-hidden="true">OR-Tools</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/gams.jpg" alt="" aria-hidden="true">GAMS</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/gurobi.jpg" alt="" aria-hidden="true">Gurobi</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/cplex.svg" alt="" aria-hidden="true">CPLEX</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/xpress.png" alt="" aria-hidden="true">Xpress</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/pulp.jpg" alt="" aria-hidden="true">PuLP</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/pyomo.jpg" alt="" aria-hidden="true">Pyomo</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/ortools.svg" alt="" aria-hidden="true">OR-Tools</li>
           </ul>
         </div>
         <div>
           <h3 class="sub">Development</h3>
           <ul class="chiprow">
-            <li class="chip"><img class="clogo" src="/images/icons/github.jpg" alt="" aria-hidden="true">GitHub</li>
-            <li class="chip"><img class="clogo" src="/images/icons/jupyter.jpg" alt="" aria-hidden="true">Jupyter</li>
-            <li class="chip"><img class="clogo" src="/images/icons/pycharm.jpg" alt="" aria-hidden="true">PyCharm</li>
-            <li class="chip"><img class="clogo" src="/images/icons/spyder.jpg" alt="" aria-hidden="true">Spyder</li>
-            <li class="chip"><img class="clogo" src="/images/icons/vscode.jpg" alt="" aria-hidden="true">VS Code</li>
-            <li class="chip"><img class="clogo" src="/images/icons/cursor.jpg" alt="" aria-hidden="true">Cursor</li>
-            <li class="chip"><img class="clogo" src="/images/icons/docker.svg" alt="" aria-hidden="true">Docker</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/github.jpg" alt="" aria-hidden="true">GitHub</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/jupyter.jpg" alt="" aria-hidden="true">Jupyter</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/pycharm.jpg" alt="" aria-hidden="true">PyCharm</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/spyder.jpg" alt="" aria-hidden="true">Spyder</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/vscode.jpg" alt="" aria-hidden="true">VS Code</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/cursor.jpg" alt="" aria-hidden="true">Cursor</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/docker.svg" alt="" aria-hidden="true">Docker</li>
           </ul>
         </div>
       </div>
