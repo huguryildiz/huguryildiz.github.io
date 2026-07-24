@@ -10,7 +10,6 @@ permalink: /
     <div class="idrow">
       <figure class="portrait">
         <img src="/images/huguryildiz.png" alt="Portrait of Hüseyin Uğur Yıldız" width="480" height="480">
-        <figcaption>TED University · Ankara, Türkiye</figcaption>
       </figure>
       <div class="idtext">
         <h1 id="home-h1">Hüseyin Uğur Yıldız</h1>
@@ -64,20 +63,46 @@ permalink: /
     </div>
   </header>
 
-  <figure class="hero-uwsn-wrap" style="margin:1.4rem 0 0.4rem;">
-    {% include hero-uwsn.html %}
-    <figcaption style="margin-top:.5rem;font-size:.85rem;color:var(--ink-faint);">
-      Interactive ocean digital twin — an underwater acoustic sensor network monitoring
-      security, habitat, and seismic events on shared infrastructure. Simulated scenario;
-      drag to orbit, click objects for details.
-    </figcaption>
-  </figure>
-
   <div class="metricsline" role="group" aria-label="Research metrics">
     <span class="m"><b>830</b> citations</span>
     <span class="m"><b>15</b> h-index</span>
     <span class="m"><b>44</b> works</span>
     <span class="src">Source: <a href="https://openalex.org/A5085505896" target="_blank" rel="noopener">OpenAlex</a> · updated Jul 1, 2026 · refreshed monthly</span>
+  </div>
+
+  <div class="home-intro-grid">
+    <section class="home-biography" aria-labelledby="home-bio">
+      <h2 class="sec" id="home-bio"><svg class="hicon" aria-hidden="true"><use href="#i-user"/></svg>Biography</h2>
+      <div class="fullw">
+        <p>Huseyin Ugur Yildiz received the B.Sc. degree in Electrical and Electronics Engineering from
+          <a href="https://w3.bilkent.edu.tr/bilkent/" target="_blank" rel="noopener">Bilkent University</a>, Ankara, Turkey, in 2009,
+          and the M.Sc. and Ph.D. degrees from
+          <a href="https://www.etu.edu.tr/en" target="_blank" rel="noopener">TOBB University of Economics and Technology</a>,
+          Ankara, in 2013 and 2016, respectively.</p>
+        <p>Between 2010 and 2015, he worked at Turk Telekom, where he contributed to the design and operation
+          of the Safer Internet Service, a nationwide content-filtering and parental-control platform used by
+          more than five million subscribers. From 2015 to 2016, he was with Turkish Aerospace, where he was
+          involved in the development and integration of communication and network architectures for ANKA
+          unmanned aerial vehicle systems. He joined the Department of Electrical and Electronics Engineering
+          at TED University in 2016, where he has been serving as an Associate Professor since 2021 and held
+          the position of Department Chair from 2021 to 2024.</p>
+        <p>He has authored over 40 peer-reviewed journal articles and conference papers, which have accumulated
+          more than 1,000 citations. He received the IEEE Middle East and North Africa Communications Conference
+          2019 Best Paper Award and was elevated to IEEE Senior Member in 2021.</p>
+      </div>
+    </section>
+
+    <section class="home-digital-twin" aria-labelledby="home-digital-twin">
+      <h2 class="sec" id="home-digital-twin"><svg class="hicon" aria-hidden="true"><use href="#i-wave"/></svg>Ocean Digital Twin</h2>
+      <figure class="hero-uwsn-wrap">
+        {% include hero-uwsn.html %}
+        <figcaption>
+          Interactive ocean digital twin — an underwater acoustic sensor network monitoring
+          security, habitat, and seismic events on shared infrastructure. Simulated scenario;
+          drag to orbit, click objects for details.
+        </figcaption>
+      </figure>
+    </section>
   </div>
 
   <h2 class="sec" id="home-news"><svg class="hicon" aria-hidden="true"><use href="#i-bell"/></svg>News</h2>
@@ -114,25 +139,6 @@ permalink: /
       <li><time>Apr 2016</time><span>Successfully defended my Ph.D. dissertation at TOBB University of Economics and Technology.</span></li>
     </ul>
   </details>
-
-  <h2 class="sec" id="home-bio"><svg class="hicon" aria-hidden="true"><use href="#i-user"/></svg>Biography</h2>
-  <div class="fullw">
-    <p>Huseyin Ugur Yildiz received the B.Sc. degree in Electrical and Electronics Engineering from
-      <a href="https://w3.bilkent.edu.tr/bilkent/" target="_blank" rel="noopener">Bilkent University</a>, Ankara, Turkey, in 2009,
-      and the M.Sc. and Ph.D. degrees from
-      <a href="https://www.etu.edu.tr/en" target="_blank" rel="noopener">TOBB University of Economics and Technology</a>,
-      Ankara, in 2013 and 2016, respectively.</p>
-    <p>Between 2010 and 2015, he worked at Turk Telekom, where he contributed to the design and operation
-      of the Safer Internet Service, a nationwide content-filtering and parental-control platform used by
-      more than five million subscribers. From 2015 to 2016, he was with Turkish Aerospace, where he was
-      involved in the development and integration of communication and network architectures for ANKA
-      unmanned aerial vehicle systems. He joined the Department of Electrical and Electronics Engineering
-      at TED University in 2016, where he has been serving as an Associate Professor since 2021 and held
-      the position of Department Chair from 2021 to 2024.</p>
-    <p>He has authored over 40 peer-reviewed journal articles and conference papers, which have accumulated
-      more than 1,000 citations. He received the IEEE Middle East and North Africa Communications Conference
-      2019 Best Paper Award and was elevated to IEEE Senior Member in 2021.</p>
-  </div>
 
   <h2 class="sec" id="home-focus"><svg class="hicon" aria-hidden="true"><use href="#i-target"/></svg>Research focus</h2>
   <div class="focusgrid">

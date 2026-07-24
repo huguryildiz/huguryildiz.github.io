@@ -25,6 +25,9 @@ package-lock.json
 .vscode/
 .idea/
 
+# Playwright CLI local state
+.playwright-cli/
+
 # Claude Code (personal agent state and CLAUDE.md stay local)
 .claude/
 CLAUDE.md
