@@ -2,7 +2,7 @@ name: Update Research Metrics (OpenAlex, manual only)
 
 # Dormant fallback. The site's citation counts, h-index, and work count come from
 # Google Scholar via .github/workflows/update-scholar.yml; no page renders
-# _data/research_metrics.json. The schedule is intentionally removed so this never
+# _data/openalex_metrics.json. The schedule is intentionally removed so this never
 # fetches on its own — the snapshot is kept as a second source and can be refreshed
 # by hand from the Actions tab if the Scholar path ever has to be abandoned.
 on:
@@ -33,12 +33,12 @@ jobs:
           # Value: A5085505896
           OPENALEX_AUTHOR_ID: ${{ secrets.OPENALEX_AUTHOR_ID }}
           OPENALEX_MAILTO: ${{ secrets.OPENALEX_MAILTO }}   # opsiyonel, e-posta
-        run: python scripts/fetch_metrics.py
+        run: python scripts/fetch_openalex.py
 
       - name: Commit & push if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add _data/research_metrics.json
+          git add _data/openalex_metrics.json
           git diff --cached --quiet || git commit -m "chore: update research metrics [skip ci]"
           git push
