@@ -75,6 +75,9 @@ permalink: /
           <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-link"/></svg>
           Academic profiles</p>
         <ul class="profilelinks">
+          <li><a href="https://www.tedu.edu.tr/en/huseyin-ugur-yildiz" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tedu"/></svg>
+            TED University<span class="sr-only"> (external)</span></a></li>
           <li><a href="https://scholar.google.com/citations?user=nQwHS1gAAAAJ" target="_blank" rel="noopener">
             <i class="ai ai-google-scholar" aria-hidden="true"></i>
             Google Scholar<span class="sr-only"> (external)</span></a></li>
@@ -111,12 +114,48 @@ permalink: /
   </header>
 
   {% assign sm = site.data.scholar_metrics %}
-  <div class="metricsline" role="group" aria-label="Research metrics">
-    <span class="m"><b>{{ sm.citations_display }}</b> citations</span>
-    <span class="m"><b>{{ sm.h_index }}</b> h-index</span>
-    <span class="m"><b>{{ sm.works }}</b> works</span>
-    <span class="src">Source: <a href="{{ sm.profile_url }}" target="_blank" rel="noopener">Google Scholar</a> · updated {{ sm.updated_utc | date: "%b %-d, %Y" }} · refreshed monthly</span>
-  </div>
+  <section class="scholar-kpi" aria-labelledby="kpi-heading">
+    <h2 class="sr-only" id="kpi-heading">Research metrics</h2>
+    <dl class="kpi-row">
+      <div><dt>Citations</dt><dd data-kpi="{{ sm.citations }}">{{ sm.citations_display }}</dd></div>
+      <div><dt>h-index</dt><dd data-kpi="{{ sm.h_index }}">{{ sm.h_index }}</dd></div>
+      <div><dt>i10-index</dt><dd data-kpi="{{ sm.i10_index }}">{{ sm.i10_index }}</dd></div>
+      <div><dt>Works</dt><dd data-kpi="{{ sm.works }}">{{ sm.works }}</dd></div>
+    </dl>
+    <p class="kpi-src">Source: <a href="{{ sm.profile_url }}" target="_blank" rel="noopener">Google Scholar</a> · updated {{ sm.updated_utc | date: "%b %-d, %Y" }} · refreshed weekly</p>
+  </section>
+  <script>
+  /* Count-up for the Scholar metrics. Values are already rendered server-side,
+     so a page without JS (or with reduced motion) simply shows the final number. */
+  (function(){
+    var row = document.querySelector('.kpi-row');
+    if (!row || !window.IntersectionObserver) { return; }
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { return; }
+    var cells = Array.prototype.slice.call(row.querySelectorAll('[data-kpi]'));
+    if (!cells.length) { return; }
+    cells.forEach(function(cell){ cell.textContent = '0'; });
+    var run = function(){
+      var start = null, dur = 1100;
+      var step = function(now){
+        if (start === null) { start = now; }
+        var t = Math.min((now - start) / dur, 1);
+        var eased = 1 - Math.pow(1 - t, 3);
+        cells.forEach(function(cell){
+          var target = parseInt(cell.getAttribute('data-kpi'), 10) || 0;
+          cell.textContent = Math.round(target * eased).toLocaleString('en-US');
+        });
+        if (t < 1) { requestAnimationFrame(step); }
+      };
+      requestAnimationFrame(step);
+    };
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) { io.disconnect(); run(); }
+      });
+    }, {threshold: 0.4});
+    io.observe(row);
+  })();
+  </script>
 
   <section class="home-biography" aria-labelledby="home-bio">
     <h2 class="sec" id="home-bio"><svg class="hicon" aria-hidden="true"><use href="#i-user"/></svg>Biography</h2>

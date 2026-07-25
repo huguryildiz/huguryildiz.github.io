@@ -165,7 +165,7 @@ A push to `master` starts `.github/workflows/jekyll.yml`, which builds the site
 with Ruby 3.1 and deploys it to GitHub Pages. The custom domain is declared in
 `CNAME`.
 
-`.github/workflows/update-scholar.yml` runs monthly and can also be triggered
+`.github/workflows/update-scholar.yml` runs weekly and can also be triggered
 manually. It reads the Google Scholar profile through SerpApi and commits an
 updated `_data/scholar_metrics.json` only when the snapshot changes. It needs the
 `SERPAPI_KEY` and `SCHOLAR_AUTHOR_ID` repository secrets.
