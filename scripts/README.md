@@ -124,3 +124,16 @@ converter only when JSON Resume output is explicitly requested, and review the r
 rather than assuming the parser preserved the hand-authored CV.
 
 Requires PyYAML in addition to `requests`.
+
+## One-off utility — already run, kept for provenance
+
+| Script | Purpose | Status |
+| --- | --- | --- |
+| `convert_pubs_to_yaml.py` | Parsed the old `var PUBS = [...]` JS array literal in `_pages/publications.md` into `_data/publications.yml` | Ran once; do not re-run |
+
+`_data/publications.yml` is now the hand-maintained source for publication records;
+`_pages/publications.md` renders it via `{{ site.data.publications | jsonify }}`. Re-running
+this script would overwrite any manual edits made to the YAML since the conversion — add or
+edit publication records directly in `_data/publications.yml` instead.
+
+Requires PyYAML.
