@@ -16,7 +16,7 @@ permalink: /teaching/
       poster="/assets/images/courses/ee304.png" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
-      <h3>EE 304 — Probability and Random Variables</h3>
+      {% assign course = site.data.cv.courses | where: "code", "EE 304" | first %}<h3>{{ course.code }} — {{ course.name }}</h3>
       <p>A third-year undergraduate course covering probability models, discrete and continuous
         random variables, joint and conditional distributions, correlation, covariance, and expectation.</p>
       <div class="links"><span class="tag">Spring 2017 — present</span>
@@ -29,7 +29,7 @@ permalink: /teaching/
       poster="/assets/images/courses/ee311.png" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
-      <h3>EE 311 — Signals and Systems</h3>
+      {% assign course = site.data.cv.courses | where: "code", "EE 311" | first %}<h3>{{ course.code }} — {{ course.name }}</h3>
       <p>A third-year undergraduate course covering continuous-time and discrete-time signals,
         linear systems, Fourier analysis, and sampling theory.</p>
       <div class="links"><span class="tag">Fall 2016 — present</span>
@@ -42,7 +42,7 @@ permalink: /teaching/
       poster="/assets/images/courses/ee413.png" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
-      <h3>EE 413 — Communication Systems II</h3>
+      {% assign course = site.data.cv.courses | where: "code", "EE 413" | first %}<h3>{{ course.code }} — {{ course.name }}</h3>
       <p>A senior-level undergraduate course covering digital communication systems, sampling,
         quantization, digital modulation, receiver design, noise effects, and introductory
         information theory concepts.</p>
@@ -76,7 +76,7 @@ permalink: /teaching/
       poster="/assets/images/courses/ee512.png" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
-      <h3>EE 512 — Optimization for Communication Networks</h3>
+      {% assign course = site.data.cv.courses | where: "code", "EE 512" | first %}<h3>{{ course.code }} — {{ course.name }}</h3>
       <p>Graduate-level course covering optimization techniques for communication networks,
         including linear, integer, mixed-integer programming, network flows, and wireless network
         applications.</p>
@@ -92,7 +92,7 @@ permalink: /teaching/
       poster="/assets/images/courses/ee205.png" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
-      <h3>EE 205 — Software Tools for Electrical Engineering</h3>
+      {% assign course = site.data.cv.courses | where: "code", "EE 205" | first %}<h3>{{ course.code }} — {{ course.name }}</h3>
       <p>A second-year undergraduate course introducing MATLAB-based software tools and
         computational methods for electrical engineering applications.</p>
       <div class="links"><span class="tag">Fall 2016</span>
@@ -105,7 +105,7 @@ permalink: /teaching/
       poster="/assets/images/courses/ee312.png" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
-      <h3>EE 312 — Communication Systems I</h3>
+      {% assign course = site.data.cv.courses | where: "code", "EE 312" | first %}<h3>{{ course.code }} — {{ course.name }}</h3>
       <p>A third-year undergraduate course covering communication systems, modulation techniques,
         and noise analysis.</p>
       <div class="links"><span class="tag">Spring 2017, 2018</span>
@@ -118,7 +118,7 @@ permalink: /teaching/
       poster="/assets/images/courses/ee462.png" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
-      <h3>EE 462 — Power System Analysis</h3>
+      {% assign course = site.data.cv.courses | where: "code", "EE 462" | first %}<h3>{{ course.code }} — {{ course.name }}</h3>
       <p>A senior-level undergraduate course covering power system modeling, load flow, fault
         analysis, smart grids, and renewables.</p>
       <div class="links"><span class="tag">Spring 2017</span>
