@@ -110,12 +110,12 @@ permalink: /
     </section>
   </header>
 
-  {% assign rm = site.data.research_metrics %}
+  {% assign sm = site.data.scholar_metrics %}
   <div class="metricsline" role="group" aria-label="Research metrics">
-    <span class="m"><b>{{ rm.citations }}</b> citations</span>
-    <span class="m"><b>{{ rm.h_index }}</b> h-index</span>
-    <span class="m"><b>{{ rm.works }}</b> works</span>
-    <span class="src">Source: <a href="{{ rm.profile_url }}" target="_blank" rel="noopener">OpenAlex</a> · updated {{ rm.updated_utc | date: "%b %-d, %Y" }} · refreshed monthly</span>
+    <span class="m"><b>{{ sm.citations_display }}</b> citations</span>
+    <span class="m"><b>{{ sm.h_index }}</b> h-index</span>
+    <span class="m"><b>{{ sm.works }}</b> works</span>
+    <span class="src">Source: <a href="{{ sm.profile_url }}" target="_blank" rel="noopener">Google Scholar</a> · updated {{ sm.updated_utc | date: "%b %-d, %Y" }} · refreshed monthly</span>
   </div>
 
   <section class="home-biography" aria-labelledby="home-bio">
