@@ -16,6 +16,7 @@ person:
   website: "huguryildiz.com"
   linkedin: "huguryildiz"
   location: "Ankara, Turkey"
+  location_maps_url: "https://goo.gl/maps/vU69BadSTiav3s3B9"   # main.tex:82 header — wraps the location text in an \href, not represented anywhere else
 
 identifiers:
   orcid: "0000-0002-1556-2634"
@@ -58,6 +59,10 @@ appointments:
       - { title: "Assistant Professor", period: "Sep 2016 – Mar 2021" }
     # DIVERGED — web bullets render on /cv/; tex bullets (main.tex:124-127) differ in
     # content and order (4 bullets, includes a VERA-platform bullet not on the web page).
+    # NOTE: bullets_tex uses inline Markdown-style links [text](url) wherever main.tex has
+    # an embedded \href — main.tex wraps every \href target in \underline{}, so
+    # scripts/render_cv_tex.py should convert [text](url) -> \href{url}{\underline{text}}
+    # uniformly for every occurrence, not just this one.
     bullets_web:
       - "Founded the department's IEEE Student Branch, established a new teaching laboratory, and launched the M.Sc. program."
       - "Led academic operations for 100+ students and 12 faculty members; oversaw accreditation and curriculum development."
@@ -65,7 +70,7 @@ appointments:
     bullets_tex:
       - "Conducted research on network flow–based optimization to enhance wireless sensor network performance; authored 20+ peer-reviewed publications, including 14 articles in IEEE journals."
       - "Led academic operations for 100+ students and 12 faculty members; oversaw accreditation and curriculum, established a new teaching laboratory, launched an M.Sc. program, and founded the IEEE Student Branch."
-      - "Developed VERA, a web-based capstone jury evaluation platform supporting secure juror access, rubric-based scoring, progress tracking, analytics, and report exports."
+      - "Developed [VERA](https://vera-eval.app/), a web-based capstone jury evaluation platform supporting secure juror access, rubric-based scoring, progress tracking, analytics, and report exports."
       - "Taught undergraduate and graduate courses in communications, signal processing, and probability using active learning methodologies; mentored 40+ senior design teams and supervised 7 graduate theses."
   - years: "2015 – 2016"
     org: "Turkish Aerospace"
@@ -78,7 +83,7 @@ appointments:
     bullets_web:
       - "Developed and integrated network architectures for the ANKA UAV program; designed high-availability Cisco systems for 24/7 operational readiness."
     bullets_tex:
-      - "Involved in development and integration of network architectures for the ANKA UAV program; built and configured UAV network infrastructure and designed high-availability Cisco systems ensuring 24/7 readiness."
+      - "Involved in development and integration of network architectures for the [ANKA](https://www.tusas.com/en/products/uav/operative-strategic-uav-systems/anka) UAV program; built and configured UAV network infrastructure and designed high-availability Cisco systems ensuring 24/7 readiness."
   - years: "2010 – 2015"
     org: "Turk Telekom"
     org_url: "https://www.turktelekom.com.tr/en"
@@ -89,7 +94,7 @@ appointments:
     bullets_web:
       - "Contributed to the design and operation of the Safer Internet Service, a nationwide content-filtering platform serving 5M+ users; managed 100+ Cisco/Procera DPI systems at 99.9% uptime."
     bullets_tex:
-      - "Contributed to design and operation of the Safer Internet Service, a nationwide content-filtering platform serving 5M+ users; managed 100+ Cisco/Procera DPI systems, ensuring 99.9% uptime and regulatory compliance."
+      - "Contributed to design and operation of the [Safer Internet Service](https://www.guvenlinet.org.tr/), a nationwide content-filtering platform serving 5M+ users; managed 100+ Cisco/Procera DPI systems, ensuring 99.9% uptime and regulatory compliance."
 
 education:
   - { years: "2014 – 2016", degree: "Ph.D., Electrical and Electronics Engineering",
