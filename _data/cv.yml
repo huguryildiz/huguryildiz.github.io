@@ -119,6 +119,11 @@ theses_own:                                 # kendi tezleri (/cv/ Graduate these
   - year: 2013
     kind: "M.Sc. thesis"
     title: "Communication/computation trade-offs in wireless sensor networks: Comparing network-level and node-level strategies"
+    # main.tex Education section links this thesis under an abbreviated title (main.tex:162),
+    # distinct from the full title above — restored verbatim from the confirmed-canonical
+    # reference, not invented. DOI is cross-referenced from _data/publications.yml (record J4),
+    # not duplicated here (see scripts/render_cv_tex.py).
+    title_tex: "Commun./comput. trade-offs in WSNs: Comparing network-level and node-level strategies"
     advisor: "Prof. Bulent Tavli"
     co_advisor: "Prof. Kemal Bicakci"
     pdf: "/files/Yildiz_HuseyinUgur_MSc_Thesis.pdf"
@@ -321,6 +326,11 @@ talks:
       kind: "Invited talk" }
   - { date_web: "Feb 2014", date_tex: "2014, February 5",
       title: "Wireless Sensor Networks, Network Optimization, and Mathematical Programming",
+      # DIVERGED — main.tex:404 titles this "A seminar on wireless sensor networks, network
+      # optimization, and mathematical programming" (extra leading words + sentence case);
+      # title above is the web (Title Case) form rendered by _pages/service.md. Restored
+      # verbatim from the confirmed-canonical reference, not invented.
+      title_tex: "A seminar on wireless sensor networks, network optimization, and mathematical programming",
       venue: "Carleton University, Ottawa, ON, Canada", host: "Prof. Halim Yanikomeroglu",
       kind: "Invited seminar" }
   - { date_web: "Jan 2014", date_tex: "2014, January 23",

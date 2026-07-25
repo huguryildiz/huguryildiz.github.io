@@ -1,0 +1,446 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Author: Huseyin Ugur Yildiz
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% GENERATED — do not edit main.tex by hand. Edit _data/cv.yml and
+% _data/publications.yml, then regenerate with scripts/render_cv_tex.py.
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\usepackage{ragged2e}
+\usepackage{bold-extra}
+\usepackage[english]{babel}
+\usepackage{fontawesome5}
+\pagenumbering{arabic}
+\usepackage{lastpage}
+\usepackage{comment}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[R]{\vspace{10pt} \makebox[\columnwidth]{\today \hfill Huseyin Ugur Yildiz \hfill \thepage/\pageref{LastPage}}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1in}
+
+%\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\Large\bf\scshape 
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------CV STARTS HERE------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{center}
+{\huge \scshape \textbf{{ '{' }}{{ cv.person.name_ascii }}, Ph.D.}} \\ \vspace{5pt}
+
+{\scshape \small Associate Professor of Electrical Engineering | IEEE Senior Member | Operations Research \\ · Network Optimization · ML/RL | Wireless, Underwater \& Aerial Networks} \\ \vspace{5pt}
+
+
+%{\scshape \small Operations Research Scientist | Expert in MILP, Heuristics, Network Flow | Ph.D. in Electrical Engineering | IEEE Senior Member
+%} \\ \vspace{5pt}
+
+%{\scshape \small Researcher with 10+ Years of Experience Applying Operations Research Techniques to Terrestrial and Underwater Acoustic Wireless Sensor Networks, IEEE Senior Member
+%} \\ \vspace{5pt}
+
+\small \raisebox{-0.1\height}\faPhone~{{ cv.person.phone }}~\textbar~
+\href{mailto:{{ cv.person.email }}}{\raisebox{-0.2\height}\faEnvelope~\underline{{ '{' }}{{ cv.person.email }}}} ~\textbar~
+\href{https://www.linkedin.com/in/{{ cv.person.linkedin }}/}{\raisebox{-0.2\height}\faLinkedinIn~\underline{{ '{' }}{{ cv.person.linkedin }}}} ~\textbar~
+\href{https://www.{{ cv.person.website }}/}{\raisebox{-0.2\height}\faGlobeAmericas~\underline{{ '{' }}{{ cv.person.website }}}} ~\textbar~
+\href{{ '{' }}{{ cv.person.location_maps_url }}}{\raisebox{-0.2\height}{\faMapMarker*}~{{ cv.person.location }}}
+%\faOrcid~\href{https://orcid.org/0000-0002-1556-2634}{0000-0002-1556-2634} ~\textbar~
+%\faResearchgate~\href{https://www.researchgate.net/profile/Huseyin-Yildiz-3}{ResearchGate}
+
+\end{center}
+\vspace{-5pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------SUMMARY--------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-10pt}
+\section{\faUser~Summary}
+\justify
+{{ tex(cv.summary_tex) }}
+\begin{comment}
+\begin{itemize}[leftmargin=*]
+\setlength\itemsep{-0.4em}
+\item \noindent Ph.D. in Electrical and Electronics Engineering, specializing in operations research for wireless sensor networks.
+\item \noindent 10+ years of experience in optimizing terrestrial and underwater acoustic wireless sensor networks.
+\item \noindent 6+ years of teaching experience in courses such as signal processing, probability, and communication systems.
+\item \noindent 5+ years of industry experience in network design, operations, and security.
+\item \noindent Author of 20+ journal articles (14 in IEEE), 10+ conference papers, with over 20 first-author contributions. 
+\item \noindent IEEE Senior Member ($<$ 10\% of the total IEEE membership achieves this grade).
+%\item \noindent Experience with presenting, briefing, or communicating analytical research material in industry or academia.
+\end{itemize}
+
+\end{comment}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------EXPERIENCE-------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-10pt}
+\section{\faIndustry~Professional Experience}
+\justify
+
+\noindent \textbf{\href{{ '{' }}{{ cv.appointments[0].org_url }}}{{ '{' }}{{ esc(cv.appointments[0].org) }}}} \hfill {{ '{' }}{{ esc(cv.appointments[0].location) }}} \\
+\noindent {Associate Professor of Electrical and Electronics Engineering} \hfill {03/2021 -- Present} \\
+\noindent {Chair of the Electrical and Electronics Engineering Department} \hfill {07/2021 -- 07/2024} \\
+\noindent {Assistant Professor of Electrical and Electronics Engineering} \hfill {09/2016 -- 03/2021} \\
+\vspace{-20pt}
+\begin{itemize}[leftmargin=*]
+\setlength\itemsep{-0.5em}
+{% for b in cv.appointments[0].bullets_tex %}
+\item \noindent {{ tex(b) }}
+{% endfor %}
+\end{itemize}
+
+\noindent \textbf{\href{{ '{' }}{{ cv.appointments[1].org_url }}}{{ '{' }}{{ esc(cv.appointments[1].org) }}}} \hfill {{ '{' }}{{ esc(cv.appointments[1].location) }}} \\
+\noindent {Avionics Design Engineer, Unmanned Aerial Vehicles} \hfill {12/2015 -- 08/2016} \\
+\vspace{-20pt}
+\begin{itemize}[leftmargin=*]
+\setlength\itemsep{-0.5em}
+{% for b in cv.appointments[1].bullets_tex %}
+\item \noindent {{ tex(b) }}
+{% endfor %}
+\end{itemize}
+
+\noindent \textbf{\href{{ '{' }}{{ cv.appointments[2].org_url }}}{{ '{' }}{{ esc(cv.appointments[2].org) }}}} \hfill {{ '{' }}{{ esc(cv.appointments[2].location) }}} \\
+\noindent {Senior Network Engineer, Deep Packet Inspection} \hfill {12/2010 -- 11/2015} \\
+\vspace{-20pt}
+\begin{itemize}[leftmargin=*]
+\setlength\itemsep{-0.5em}
+{% for b in cv.appointments[2].bullets_tex %}
+\item \noindent {{ tex(b) }}
+{% endfor %}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------EDUCATION--------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-10pt}
+\section{\faGraduationCap~Education}
+\justify
+
+\noindent \textbf{\href{https://www.etu.edu.tr/en}{TOBB University of Economics and Technology (ETU)}} \hfill {Ankara, Turkey} \\
+\noindent {Ph.D., Electrical and Electronics Engineering} \hfill  {01/2014 -- 04/2016} \\
+\noindent \emph{Dissertation Title:} \href{{ '{' }}{{ journals_by_id['J3'].doi }}}{\underline{{ '{' }}{{ tex(journals_by_id['J3'].title) }}}} \\
+%\noindent \emph{Doctoral Advisor:} Prof. Bulent Tavli\\
+
+\vspace{-10pt}
+
+\noindent \textbf{\href{https://www.etu.edu.tr/en}{TOBB University of Economics and Technology}} \hfill {Ankara, Turkey} \\
+\noindent {M.Sc., Electrical and Electronics Engineering} \hfill {09/2011 -- 09/2013} \\
+\noindent \emph{Thesis Title:} \href{{ '{' }}{{ journals_by_id['J4'].doi }}}{\underline{{ '{' }}{{ esc(cv.theses_own[1].title_tex) }}}} \\
+%\noindent \emph{Advisor:} Prof. Bulent Tavli, \emph{Co-Advisor:} Prof. Kemal Bicakci \\
+
+\vspace{-10pt}
+
+\noindent \textbf{\href{https://w3.bilkent.edu.tr/bilkent/}{Bilkent University}} \hfill {Ankara, Turkey} \\
+\noindent {B.Sc., Electrical and Electronics Engineering} \hfill {08/2005 -- 08/2009}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------TECHNICAL SKILLS-------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-10pt}
+\section{\faCogs~Technical Skills}
+\justify
+
+\begin{itemize}[leftmargin=*]
+\setlength\itemsep{-0.5em}
+\item \noindent \textbf{Optimization \& Operations Research:} 
+Linear Programming (LP), Mixed-Integer Programming (MIP), Multi-Objective Optimization, Network Flow Programming, Constraint Programming, Metaheuristics; GAMS, Gurobi, CPLEX, XPRESS, PuLP, Pyomo.
+\item \noindent \textbf{Machine Learning \& Reinforcement Learning:} 
+Supervised and Unsupervised Learning, Regression and Classification Models, Decision Trees, Neural Networks, Markov Decision Processes (MDPs), Q-Learning, Proximal Policy Optimization (PPO), Deep Reinforcement Learning.
+\item \noindent \textbf{Programming \& Scientific Computing:} 
+Python (NumPy, Pandas, Scikit-Learn, Matplotlib), MATLAB/Octave, Simulink, \LaTeX.
+\item \noindent \textbf{Development Tools:} 
+PyCharm, Jupyter Notebook, VS Code, Spyder, Cursor.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------CERTIFICATES-------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-10pt}
+\section{\faTrophy~Certificates}
+\justify
+
+\begin{itemize}[leftmargin=*]
+\setlength\itemsep{-0.5em}
+{% for c in cv.certificates %}
+\item \noindent \textbf{{ '{' }}{{ esc(c.title) }}}, {{ esc(c.org | replace(" (Coursera)", "")) }} -- Coursera, {{ c.year }} (\href{{ '{' }}{{ c.url }}}{\underline{Credential}})
+{% endfor %}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------SOFT SKILLS-------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-10pt}
+\section{\faUsers~Soft Skills}
+\justify
+
+Leadership, Team Management, Communication \& Collaboration, Problem-Solving, Decision-Making, Mentoring, Teaching, Adaptability, Time Management
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------AWARDS-------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-10pt}
+\section{\faMedal~Honors \& Awards}
+\justify
+
+\noindent [A2] \textbf{Elevation to the IEEE Senior Member grade,} an honor recognizing significant contributions to the profession (achieved by less than 10\% of IEEE members), 2021.
+
+\vspace{5pt}
+
+\noindent [A1] \textbf{The best paper award (3rd place),} ``\emph{Utilization of multi-sink architectures for lifetime maximization in underwater sensor networks,}'' 2nd IEEE Middle East \& North Africa Communications Conference (MENACOMM'19), Manama, Bahrain, 2019.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------RESEARCH INTERESTS-----------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-10pt}
+\section{\faMicroscope~Research Areas}
+\justify
+
+{{ research_areas_tex }}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------PUBLICATIONS-------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-10pt}
+\section{\faBookOpen~Publications}
+\justify
+
+\subsection*{(1) \underline{Journal Articles:}}
+
+{% for p in journals %}
+\noindent [J{{ p.num }}] {{ p.authors_tex }} ({{ p.date_tex }}). {{ p.title_tex }}. \emph{{ '{' }}{{ p.venue_tex }}, {{ p.vol_tex }}}{{ p.detail_rest_tex }}.
+{% if not loop.last %}
+\vspace{5pt}
+
+{% endif %}
+{% endfor %}
+\vspace{-10pt}
+\subsection*{(2) \underline{Editorial:}}
+
+{% for p in editorials %}
+\noindent [E{{ p.num }}] {{ p.authors_tex }} ({{ p.date_tex }}). {{ p.title_tex }}. \emph{{ '{' }}{{ p.venue_tex }}, {{ p.vol_tex }}}{{ p.detail_rest_tex }}.
+{% endfor %}
+\vspace{-10pt}
+\subsection*{(3) \underline{Conference Proceedings:}}
+
+{% for p in confints %}
+\noindent [C{{ p.num }}] {{ p.authors_tex }} ({{ p.date_tex }}). {{ p.title_tex }}. In \emph{{ '{' }}{{ p.venue_tex }}} ({{ p.pages_tex }}). {{ p.publisher_tex }}.
+{% if not loop.last %}
+\vspace{5pt}
+
+{% endif %}
+{% endfor %}
+\vspace{-10pt}
+\subsection*{(4) \underline{Conference Proceedings (in Turkish):}}
+
+{% for p in confnats %}
+\noindent [CT{{ p.num }}] {{ p.authors_tex }} ({{ p.date_tex }}). {{ p.title_tex }}. In \emph{{ '{' }}{{ p.venue_tex }}} ({{ p.pages_tex }}). {{ p.publisher_tex }}.
+{% if not loop.last %}
+\vspace{5pt}
+
+{% endif %}
+{% endfor %}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------CITATIONS-------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-10pt}
+\section{\faChartBar~Citations}
+\justify
+\noindent $\bullet$ Total \href{https://scholar.google.com/citations?user={{ cv.identifiers.scholar }}}{\underline{Google Scholar}} Citations $>$ 1K,
+\noindent $\bullet$ \textbf{h-index:} 15
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------SERVICES-------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-10pt}
+\section{\faSuitcase~Professional Activities and Service}
+\justify
+
+\subsection*{(1) \underline{Technical Program Committee Member:}}
+\begin{itemize}[leftmargin=*]
+\setlength\itemsep{-0.4em}
+{% for t in cv.service.tpc %}
+\item \noindent {{ esc(t) }}{% if not loop.last %},{% else %}.{% endif %}
+
+{% endfor %}
+\end{itemize}
+
+\vspace{-20pt}
+
+\subsection*{(2) \underline{Reviewer:}}
+{% for r in cv.service.reviewing %}
+$\bullet$ {{ esc(r) }},
+{% endfor %}
+
+\vspace{-10pt}
+\subsection*{(3) \underline{Session Chair:}}
+
+\begin{itemize}[leftmargin=*]
+\setlength\itemsep{-0.4em}
+{% for c in cv.service.chairing %}
+\item \noindent ``{{ esc(c.session) }}'' -- {{ esc(c.venue) }}{% if not loop.last %},{% else %}.{% endif %}
+
+{% endfor %}
+\end{itemize}
+
+%\vspace{-20pt}
+%\subsection*{(4) \underline{Editor:}}
+%\begin{itemize}[leftmargin=*]
+%\setlength\itemsep{-0.4em}
+%\item \noindent Computer Standards \& Interfaces, Special Issue on ``Resilience and Security in Next-Generation Wireless Sensor Networks'' (Elsevier, 2025).
+%\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------COURSES TAUGHT----------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-15pt}
+\section{\faChalkboardTeacher~Courses Taught}
+\justify
+\subsection*{(1) \underline{TED University:}}
+\begin{itemize}[leftmargin=*]
+\setlength\itemsep{-0.4em}
+{% for c in cv.courses %}
+\item \noindent {{ esc(c.code) }} -- {{ esc(c.name) }} ({{ esc(c.terms) }}){% if not loop.last and not loop.index == 6 %},{% else %}.{% endif %}
+
+{% endfor %}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------TALKS-------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-15pt}
+\section{\faUsers~Seminars and Invited Talks}
+\justify
+
+{% for t in cv.talks %}
+\noindent \textbf{Yildiz, H. U.} ({{ t.date_tex }}). \emph{{ '{' }}{{ t.title_tex if t.title_tex else sentence_case(esc(t.title)) }}} [{{ esc(t.kind) }}]. {{ esc(t.venue) }}.{% if t.host %} Hosted by {{ esc(host_initials(t.host)) }}.{% endif %}
+
+{% if not loop.last %}
+\vspace{5pt}
+
+{% endif %}
+{% endfor %}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-------THESES SUPERVISED-*--------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-10pt}
+\section{\faUserGraduate~Theses Supervised}
+\justify
+
+{% for t in cv.theses_supervised %}
+\noindent [{{ t.id }}] {{ esc(t.student) }} ({{ t.year }}). \textit{{ '{' }}{{ esc(t.title) }}} ({{ esc(t.kind) }}). {{ esc(t.org) }}, {{ esc(t.location) }}.
+
+{% if not loop.last %}
+\vspace{5pt}
+
+{% endif %}
+{% endfor %}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------LANGUAGES----------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-10pt}
+\section{\faLanguage~Languages}
+\justify
+
+\noindent $\bullet$ \textbf{English:} Business and academic proficiency. %(TOEFL iBT: 101/120). %(YOKDIL: 91.25/100, Aug. 2021),
+\noindent $\bullet$ \textbf{Turkish:} Native.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------ORGANIZATIONS----------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-10pt}
+\section{\faNetworkWired~Professional Memberships}
+\justify
+
+\begin{itemize}[leftmargin=*]
+\setlength\itemsep{-0.5em}
+\item \noindent IEEE Senior Member (2021--Cont.), IEEE Commun. Society (2015--2018), IEEE Oceanic Society (2021).
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------BIOGRAPHY--------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\vspace{-10pt}
+%\section{\faEnvira~Biographical Sketch}
+%\justify
+
+%Huseyin Ugur Yildiz received his B.Sc. degree from Bilkent University, Ankara, Turkey, in 2009; M.Sc. and Ph.D. degrees from TOBB University of Economics and Technology, Ankara, in 2013 and 2016, all in electrical and electronics engineering, respectively. He worked for Turk Telekom (in 2010-2015) and Turkish Aerospace Industries (in 2015-2016), Ankara, where he designed the network architectures of Safer Internet Service and the ANKA unmanned aerial vehicle. He is currently an associate professor of the electrical and electronics engineering department at TED University, Ankara, Turkey. His research focuses on modeling and solving mathematical optimization problems for wireless ad hoc \& sensor networks, underwater acoustic networks, and smart grids. He is a senior member of the IEEE.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------REFERENCES----------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+\vspace{-10pt}
+\section{\faAddressCard[regular]~References}
+\justify
+\begin{itemize}[leftmargin=*]
+\setlength\itemsep{-0.5em}
+\item \noindent 
+\textbf{Bulent Tavli} $\vert$
+Professor of Electrical and Electronics Engineering $\vert$
+TOBB University of Economics and Technology $\vert$
+\faMapMarker* Sogutozu Caddesi No:43, 06560, Ankara, Turkey $\vert$
+\faPhone +90 (312) 292 40 74 $\vert$
+\faEnvelope~ \href{mailto:btavli@etu.edu.tr}{\underline{btavli@etu.edu.tr}}.
+
+\item \noindent 
+\textbf{Vehbi Cagri Gungor} $\vert$
+Professor of Computer Engineering $\vert$
+Abdullah Gul University $\vert$
+\faMapMarker* Sumer Kampusu, 38080 Kayseri, Turkey $\vert$
+\faPhone +90 (352) 224 88 00  $\vert$
+\faEnvelope~ \href{mailto:cagri.gungor@agu.edu.tr}{\underline{cagri.gungor@agu.edu.tr}}.
+
+\item \noindent
+\textbf{Halim Yanikomeroglu} $\vert$
+Professor of Systems and Computer Engineering $\vert$
+Carleton University $\vert$
+\faMapMarker* 1125 Colonel By Dr, Ottawa, ON, Canada $\vert$
+\faPhone +1 (613) 520-5734 $\vert$
+\faEnvelope~\href{mailto:halim@sce.carleton.ca}{\underline{halim@sce.carleton.ca}}.
+\end{itemize}
+\end{comment}
+%\vspace{20pt}
+%\noindent Last updated on \today.
+
+\end{document}
