@@ -61,7 +61,6 @@ The primary navigation is defined directly in `_layouts/academic.html`.
 | `assets/images/` | Portraits, research graphics, course images, project images, and favicons |
 | `assets/video/courses/`, `assets/video/topics/` | Course and research-topic media |
 | `scripts/` | Google Scholar, OpenAlex, and GoatCounter retrieval plus optional CV-conversion utilities; excluded from the build (see `scripts/README.md`) |
-| `images/` | Compatibility copies of two social-card images at their historical `/images/...` URLs; not the canonical image location |
 | `_config.yml` | Jekyll, theme, metadata, analytics, and plugin configuration |
 | `PRODUCT.md` | Product, data-honesty, design, and accessibility contract for the ocean digital twin |
 
