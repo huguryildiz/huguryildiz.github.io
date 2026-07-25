@@ -110,6 +110,26 @@ through SerpApi's `google_scholar_author` endpoint:
   the key: `/publications/` hides the chart when the key is missing rather than inventing one.
 - `SCHOLAR_AUTHOR_ID` accepts either the bare profile ID or a full profile URL.
 
+## Manual — generates the LaTeX CV, not yet wired to CI
+
+| Script | Purpose | Writes | Requires |
+| --- | --- | --- | --- |
+| `render_cv_tex.py` | Renders `cv-latex/cv.tex.j2` against `_data/cv.yml` + `_data/publications.yml` to produce `main.tex`, the LaTeX source of the downloadable PDF CV | `main.tex` (generated artifact, not committed — pass `--out`) | PyYAML, Jinja2 |
+
+`cv-latex/cv.tex.j2` is excluded from the Jekyll build (`_config.yml`) so it never becomes
+a public URL. `main.tex` is compiled to PDF with `pdflatex` (two passes, for
+`\pageref{LastPage}`) and is itself never committed — it is a build output, same as the PDF.
+Publication numbering (`J24`, `C13`, `CT5`, `E1`, …) is computed at render time, per type, in
+descending year order; it is never stored in `_data/publications.yml`. Tests:
+`python3 -m unittest scripts/test_render_cv_tex` (stdlib only, no network, no LaTeX
+toolchain required — it only covers the pure text-transform helpers).
+
+Two publication fields exist only for this script, not for the website: `month` on
+`confint`/`confnat`/`editorial` records (the LaTeX citation format includes the month;
+`_pages/publications.md` does not) and `title_tex`/`org_tex`-style overrides in `_data/cv.yml`
+wherever the PDF's citation-style text diverges from the web copy (see the `DIVERGED`
+comments next to those fields). Requires PyYAML, Jinja2.
+
 ## Dormant — manual, output is not part of the site
 
 | Script | Purpose | Status |

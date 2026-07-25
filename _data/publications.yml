@@ -253,6 +253,7 @@
   pdf: /files/papers/editorial/haytaoglu2025editorial.pdf
 - type: confint
   year: 2025
+  month: November
   authors: Tantur Karagul, C. T., Akgun, M. B., **Yildiz, H. U.**, & Tavli, B.
   title: Non-uniform k-connectivity for energy-efficient and reliable underwater wireless sensor networks
   venue: 2025 33rd Telecommunications Forum (TELFOR)
@@ -262,6 +263,7 @@
   slides: https://docs.google.com/presentation/d/1K3TCWFDIhZuGReBDxBZDdtoVcevGus7G/
 - type: confint
   year: 2021
+  month: May
   authors: Un, B. E., **Yildiz, H. U.**, & Tavli, B.
   title: Impact of critical node failures on lifetime of UWSNs with incomplete secure connectivity
   venue: 2021 IEEE International Black Sea Conference on Communications and Networking (BlackSeaCom)
@@ -271,6 +273,7 @@
   slides: https://drive.google.com/file/d/16p42o7-s9xBWWV8gUx-3SyKFfAXsvwHR/view
 - type: confint
   year: 2020
+  month: November
   authors: Ozmen, A., **Yildiz, H. U.**, & Tavli, B.
   title: Impact of minimizing the eavesdropping risks on lifetime of underwater acoustic sensor networks
   venue: 2020 28th Telecommunications Forum (TELFOR)
@@ -280,16 +283,18 @@
   slides: https://drive.google.com/file/d/15alVG_AJGp1eepousobHjpCpnDDz3W47/view
 - type: confint
   year: 2019
+  month: November
   authors: '**Yildiz, H. U.**'
   title: Utilization of multi-sink architectures for lifetime maximization in underwater sensor networks
   venue: 2019 2nd IEEE Middle East and North Africa COMMunications Conference (MENACOMM)
-  detail: IEEE
+  detail: pp. 1–5, IEEE
   doi: https://doi.org/10.1109/MENACOMM46666.2019.8988521
   pdf: /files/papers/conference/international/yildiz2019utilization.pdf
   slides: https://drive.google.com/file/d/16TwAEo1W8lqqKywIF9zQy7G5-Z-S53_T/view
   award: Best Paper Award
 - type: confint
   year: 2019
+  month: October
   authors: '**Yildiz, H. U.**'
   title: Prolonging the lifetime of underwater sensor networks under sinkhole attacks
   venue: 14th International Conference on Underwater Networks & Systems (WUWNet '19)
@@ -299,6 +304,7 @@
   slides: https://drive.google.com/file/d/16U6NPkWhqjBHdUU8XTomkTP_EdsL-GH9/view
 - type: confint
   year: 2018
+  month: June
   authors: '**Yildiz, H. U.**, Gungor, V. C., & Tavli, B.'
   title: A hybrid energy harvesting framework for energy efficiency in wireless sensor networks based smart grid applications
   venue: 2018 17th Annual Mediterranean Ad Hoc Networking Workshop (Med-Hoc-Net)
@@ -308,6 +314,7 @@
   slides: https://drive.google.com/file/d/15SpGmcGRTPhGcBFtYmh1zJ0bOJWgXrSx/view
 - type: confint
   year: 2016
+  month: October
   authors: Dagdeviren, O., Akram, V. K., Tavli, B., **Yildiz, H. U.**, & Atilgan, C.
   title: Distributed detection of critical nodes in wireless sensor networks using connected dominating set
   venue: 2016 IEEE SENSORS
@@ -317,6 +324,7 @@
   slides: https://drive.google.com/file/d/15n6Oy9vLKkgJMUIEfWhdoGB-PG4lCLRl/view
 - type: confint
   year: 2016
+  month: October
   authors: Tantur, C., **Yildiz, H. U.**, Kurt, S., & Tavli, B.
   title: Optimal transmission power level sets for lifetime maximization in wireless sensor networks
   venue: 2016 IEEE SENSORS
@@ -326,6 +334,7 @@
   poster: https://drive.google.com/file/d/15V0CTjMZu6wiDMg9AyxNaJQCpaUhOcxD/view
 - type: confint
   year: 2015
+  month: December
   authors: '**Yildiz, H. U.**, & Tavli, B.'
   title: Prolonging wireless sensor network lifetime by optimal utilization of compressive sensing
   venue: 2015 IEEE Globecom Workshops (GC Wkshps)
@@ -335,6 +344,7 @@
   slides: https://drive.google.com/file/d/16r6UKYnylhsZX8nenBAxjtg5uCnpTa52/view
 - type: confint
   year: 2014
+  month: December
   authors: '**Yildiz, H. U.**, & Tavli, B.'
   title: The impact of random power assignment in handshaking on wireless sensor network lifetime
   venue: 2014 IEEE Globecom Workshops (GC Wkshps)
@@ -344,6 +354,7 @@
   slides: https://drive.google.com/file/d/16Y3ol-umGpcveJLMhc_pZTuqigtw8fEP/view
 - type: confint
   year: 2014
+  month: October
   authors: '**Yildiz, H. U.**, Kurt, S., & Tavli, B.'
   title: The impact of near-ground path loss modeling on wireless sensor network lifetime
   venue: 2014 IEEE Military Communications Conference (MILCOM)
@@ -353,6 +364,7 @@
   slides: https://drive.google.com/file/d/15jZn25CaLQMSngx2aH00yvzvtiD3oSy9/view
 - type: confint
   year: 2014
+  month: May
   authors: Akbas, A., **Yildiz, H. U.**, & Tavli, B.
   title: Data packet length optimization for wireless sensor network lifetime maximization
   venue: 2014 10th International Conference on Communications (COMM)
@@ -361,6 +373,7 @@
   pdf: /files/papers/conference/international/akbas2014data.pdf
 - type: confint
   year: 2014
+  month: January
   authors: '**Yildiz, H. U.**, Bicakci, K., & Tavli, B.'
   title: 'Communication/computation trade-offs in wireless sensor networks: Comparing network-level and node-level strategies'
   venue: 2014 IEEE Topical Conference on Wireless Sensors and Sensor Networks (WiSNet)
@@ -370,6 +383,7 @@
   slides: https://drive.google.com/file/d/16xQgqR0IGGUlx-9fmwTTnk1srKBS-9_w/view
 - type: confnat
   year: 2019
+  month: April
   authors: '**Yildiz, H. U.**'
   title: Improvement of underwater acoustic sensor networks performance with fountain codes
   venue: 2019 27th Signal Processing and Communications Applications Conference (SIU)
@@ -379,6 +393,7 @@
   slides: https://drive.google.com/file/d/16P_YL9_5u1bCfNzGJOZQnYrHXdjoNtZO/view
 - type: confnat
   year: 2018
+  month: November
   authors: '**Yildiz, H. U.**'
   title: Minimum delay and maximum lifetime trade-off in underwater sensor networks
   venue: 2018 National Conference on Electrical, Electronics and Biomedical Engineering (ELECO)
@@ -387,6 +402,7 @@
   slides: https://drive.google.com/file/d/16gkg1Tg8ATAHJFZv6DyxnuvCxmDf6R1k/view
 - type: confnat
   year: 2018
+  month: May
   authors: Karakurt, Y., **Yildiz, H. U.**, & Tavli, B.
   title: The impact of mitigation of eavesdropping on wireless sensor networks lifetime
   venue: 2018 26th Signal Processing and Communications Applications Conference (SIU)
@@ -396,6 +412,7 @@
   slides: https://drive.google.com/file/d/16XhbRpe_H93KSsPHMIKzp2IgwA8Nz4b8/view
 - type: confnat
   year: 2018
+  month: May
   authors: '**Yildiz, H. U.**'
   title: The impact of data fragmentation on network lifetime in underwater acoustic sensor networks
   venue: 2018 26th Signal Processing and Communications Applications Conference (SIU)
@@ -405,6 +422,7 @@
   slides: https://drive.google.com/file/d/16RrXq5rQ0TfTveU8T2c0VZO_YbVGIhDx/view
 - type: confnat
   year: 2017
+  month: May
   authors: '**Yildiz, H. U.**, Tavli, B., & Kahjogh, B. O.'
   title: Assessment of wireless sensor network lifetime reduction due to elimination of critical node sets
   venue: 2017 25th Signal Processing and Communications Applications Conference (SIU)
