@@ -173,6 +173,9 @@ var PUBS = [
     years.forEach(function(yy){yearCounts[yy]++;});
     yMeta.y0 = y0; yMeta.y1 = y1;
     yMeta.max = Math.max.apply(null, Object.keys(yearCounts).map(function(k){return yearCounts[k];}));
+    yMeta.cum = [];
+    var run = 0;
+    for (y = y0; y <= y1; y++){ run += yearCounts[y]; yMeta.cum.push(run); }
   })();
 
   /* Shared bar geometry for both per-year charts. o.pick marks the bars as filter
@@ -212,13 +215,38 @@ var PUBS = [
       '" role="' + (o.pick ? "group" : "img") + '" aria-label="' + o.aria + '">' + body + '</svg>';
   }
 
-  /* Draw (or redraw) the year chart to fill the given pixel width. */
+  function fmt(v){ return v.toLocaleString("en-US"); }
+  /* Per-year / cumulative switch shared by both charts. */
+  function segHTML(label, cum){
+    return '<div class="chartseg" role="group" aria-label="' + label + '">' +
+      '<button type="button" data-mode="year" aria-pressed="' + String(!cum) + '">Per year</button>' +
+      '<button type="button" data-mode="cum" aria-pressed="' + String(cum) + '">Cumulative</button>' +
+      '</div>';
+  }
+
+  /* Draw (or redraw) the year chart to fill the given pixel width. Only the per-year bars
+     drive the filter — a cumulative bar spans every year up to it, so there is no single
+     year to select. */
+  var pubMode = "year";
   function drawYearChart(W){
-    $("#yearChart").innerHTML = barsSVG(W, yMeta.y0, yMeta.y1,
-      function(y){return yearCounts[y];}, yMeta.max,
-      {pick:true, noun:"publication",
-       aria:"Publications per year, " + yMeta.y0 + " to " + yMeta.y1 + ". Select a bar to filter."}) +
-      '<div class="cap" id="yearCap">Publications per year</div>';
+    var cum = pubMode === "cum", total = yMeta.cum[yMeta.cum.length - 1];
+    var svg = cum
+      ? barsSVG(W, yMeta.y0, yMeta.y1, function(y){return yMeta.cum[y - yMeta.y0];}, total,
+          {pick:false, noun:"publication", sparse:true,
+           title:function(y, c){return "Through " + y + ": " + c + " publications";},
+           aria:"Cumulative publications through each year, " + yMeta.y0 + " to " + yMeta.y1 +
+                ", ending at " + total + "."})
+      : barsSVG(W, yMeta.y0, yMeta.y1, function(y){return yearCounts[y];}, yMeta.max,
+          {pick:true, noun:"publication",
+           aria:"Publications per year, " + yMeta.y0 + " to " + yMeta.y1 +
+                ". Select a bar to filter."});
+    /* Kept so paintCharts can restore it when the year filter is cleared. */
+    yMeta.capHTML = "Publications" +
+      (cum ? ' <span class="capnote">· ' + total + ' total</span>' : "");
+    $("#yearChart").classList.toggle("static", cum);
+    $("#yearChart").innerHTML = svg +
+      '<div class="capline"><div class="cap" id="yearCap">' + yMeta.capHTML + '</div>' +
+      segHTML("Publication chart scale", cum) + '</div>';
   }
   var lastYW = Math.round($("#yearChart").clientWidth) || 480;
   drawYearChart(lastYW);
@@ -250,7 +278,6 @@ var PUBS = [
     for (i = 0; i < CITES.length; i++){ run += CITES[i].citations; cMeta.cum.push(run); }
   })();
   var citeMode = "year";
-  function fmt(v){ return v.toLocaleString("en-US"); }
   function drawCiteChart(W){
     var cum = citeMode === "cum", total = cMeta.cum[cMeta.cum.length - 1];
     var svg = cum
@@ -267,11 +294,7 @@ var PUBS = [
     citeHost.innerHTML = svg +
       '<div class="capline"><div class="cap">Citations' +
       (cum ? ' <span class="capnote">· ' + fmt(total) + ' total</span>' : "") +
-      '</div>' +
-      '<div class="chartseg" role="group" aria-label="Citation chart scale">' +
-      '<button type="button" data-mode="year" aria-pressed="' + String(!cum) + '">Per year</button>' +
-      '<button type="button" data-mode="cum" aria-pressed="' + String(cum) + '">Cumulative</button>' +
-      '</div></div>';
+      '</div>' + segHTML("Citation chart scale", cum) + '</div>';
   }
   if (citeHost && CITES.length){
     lastCW = Math.round(citeHost.clientWidth) || 480;
@@ -341,19 +364,22 @@ var PUBS = [
   }
   /* Repaint every control (selects, segment, charts) from the current state, then render. */
   function paintCharts(){
+    /* Cumulative bars carry no single year, so the selection highlight and the
+       year caption only apply in per-year mode. */
+    var sel = pubMode === "year" && state.year !== "all";
     var svg = $("#yearChart svg");
-    if (svg) svg.classList.toggle("hasSel", state.year !== "all");
+    if (svg) svg.classList.toggle("hasSel", sel);
     $$("#yearChart .bar").forEach(function(b){
-      var on = state.year !== "all" && b.dataset.year === String(state.year);
+      var on = sel && b.dataset.year === String(state.year);
       b.classList.toggle("sel", on);
       b.setAttribute("aria-pressed", String(on));
     });
     var yCap = $("#yearCap");
     if (yCap){
-      if (state.year !== "all"){
+      if (sel){
         var yc = yearCounts[state.year] || 0;
         yCap.textContent = state.year + " · " + yc + " publication" + (yc === 1 ? "" : "s");
-      } else yCap.textContent = "Publications per year";
+      } else yCap.innerHTML = yMeta.capHTML;
     }
     var qc = $("#qChart");
     if (qc) qc.classList.toggle("hasSel", state.q !== "all");
@@ -386,11 +412,22 @@ var PUBS = [
 
   function pickYear(y){ state.year = (String(state.year) === String(y)) ? "all" : String(y); sync(); }
   $("#yearChart").addEventListener("click", function(e){
-    var b = e.target.closest(".bar"); if (b) pickYear(b.dataset.year);
+    var s = e.target.closest(".chartseg button");
+    if (s){
+      if (s.dataset.mode === pubMode) return;
+      pubMode = s.dataset.mode;
+      drawYearChart(lastYW);
+      paintCharts();
+      $('#yearChart .chartseg button[data-mode="' + pubMode + '"]').focus();
+      return;
+    }
+    var b = e.target.closest(".bar");
+    if (b && b.dataset.year) pickYear(b.dataset.year);
   });
   $("#yearChart").addEventListener("keydown", function(e){
     if (e.key !== "Enter" && e.key !== " ") return;
-    var b = e.target.closest(".bar"); if (!b) return;
+    var b = e.target.closest(".bar");
+    if (!b || !b.dataset.year) return;
     e.preventDefault(); pickYear(b.dataset.year);
   });
   $("#qChart").addEventListener("click", function(e){
