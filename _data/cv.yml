@@ -332,18 +332,19 @@ talks:
       venue: "University of California, Irvine, CA, USA", host: "Prof. Ender Ayanoglu",
       kind: "Invited talk" }
 
-courses:                                    # main.tex Courses Taught (7) — terms main.tex biçiminde; current main.tex "Present" ile teaching.md gruplaması eşleşiyor
+courses:                                    # main.tex Courses Taught (7) — current main.tex "Present" ile teaching.md gruplaması eşleşiyor
+                                             # terms: LaTeX biçimi (Task 4 → main.tex). terms_web: _pages/teaching.md'nin <span class="tag"> metni (birebir, uydurulmadı).
   - { code: "EE 205", name: "Software Tools for Electrical Engineering", level: "undergraduate",
-      terms: "Fall'16", current: false }
+      terms: "Fall'16", terms_web: "Fall 2016", current: false }
   - { code: "EE 304", name: "Probability and Random Variables", level: "undergraduate",
-      terms: "Spring'17 – Present", current: true }
+      terms: "Spring'17 – Present", terms_web: "Spring 2017 — present", current: true }
   - { code: "EE 311", name: "Signals and Systems", level: "undergraduate",
-      terms: "Fall'16 – Present", current: true }
+      terms: "Fall'16 – Present", terms_web: "Fall 2016 — present", current: true }
   - { code: "EE 312", name: "Communication Systems I", level: "undergraduate",
-      terms: "Spring'17, Spring'18", current: false }
+      terms: "Spring'17, Spring'18", terms_web: "Spring 2017, 2018", current: false }
   - { code: "EE 413", name: "Communication Systems II", level: "undergraduate",
-      terms: "Fall'16 – Present", current: true }
+      terms: "Fall'16 – Present", terms_web: "Fall 2016 — present", current: true }
   - { code: "EE 462", name: "Power System Analysis", level: "undergraduate",
-      terms: "Spring'17", current: false }
+      terms: "Spring'17", terms_web: "Spring 2017", current: false }
   - { code: "EE 512", name: "Optimization for Communication Networks", level: "graduate",
-      terms: "Spring'26", current: true }
+      terms: "Spring'26", terms_web: "Spring 2026", current: true }

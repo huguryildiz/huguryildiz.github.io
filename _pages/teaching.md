@@ -19,7 +19,7 @@ permalink: /teaching/
       {% assign course = site.data.cv.courses | where: "code", "EE 304" | first %}<h3>{{ course.code }} — {{ course.name }}</h3>
       <p>A third-year undergraduate course covering probability models, discrete and continuous
         random variables, joint and conditional distributions, correlation, covariance, and expectation.</p>
-      <div class="links"><span class="tag">Spring 2017 — present</span>
+      <div class="links"><span class="tag">{{ course.terms_web }}</span>
         <a class="ext" href="https://www.tedu.edu.tr/ee-304" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-link"/></svg> Course catalog</a></div>
     </div>
   </article>
@@ -32,7 +32,7 @@ permalink: /teaching/
       {% assign course = site.data.cv.courses | where: "code", "EE 311" | first %}<h3>{{ course.code }} — {{ course.name }}</h3>
       <p>A third-year undergraduate course covering continuous-time and discrete-time signals,
         linear systems, Fourier analysis, and sampling theory.</p>
-      <div class="links"><span class="tag">Fall 2016 — present</span>
+      <div class="links"><span class="tag">{{ course.terms_web }}</span>
         <a class="ext" href="https://www.tedu.edu.tr/ee-311" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-link"/></svg> Course catalog</a></div>
     </div>
   </article>
@@ -46,7 +46,7 @@ permalink: /teaching/
       <p>A senior-level undergraduate course covering digital communication systems, sampling,
         quantization, digital modulation, receiver design, noise effects, and introductory
         information theory concepts.</p>
-      <div class="links"><span class="tag">Fall 2016 — present</span>
+      <div class="links"><span class="tag">{{ course.terms_web }}</span>
         <a class="ext" href="https://www.tedu.edu.tr/ee-413" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-link"/></svg> Course catalog</a></div>
     </div>
   </article>
@@ -80,7 +80,7 @@ permalink: /teaching/
       <p>Graduate-level course covering optimization techniques for communication networks,
         including linear, integer, mixed-integer programming, network flows, and wireless network
         applications.</p>
-      <div class="links"><span class="tag">Spring 2026</span>
+      <div class="links"><span class="tag">{{ course.terms_web }}</span>
         <a class="ext" href="https://www.tedu.edu.tr/ee-512" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-link"/></svg> Course catalog</a></div>
     </div>
   </article>
@@ -95,7 +95,7 @@ permalink: /teaching/
       {% assign course = site.data.cv.courses | where: "code", "EE 205" | first %}<h3>{{ course.code }} — {{ course.name }}</h3>
       <p>A second-year undergraduate course introducing MATLAB-based software tools and
         computational methods for electrical engineering applications.</p>
-      <div class="links"><span class="tag">Fall 2016</span>
+      <div class="links"><span class="tag">{{ course.terms_web }}</span>
         <a class="ext" href="https://www.tedu.edu.tr/ee-205" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-link"/></svg> Course catalog</a></div>
     </div>
   </article>
@@ -108,7 +108,7 @@ permalink: /teaching/
       {% assign course = site.data.cv.courses | where: "code", "EE 312" | first %}<h3>{{ course.code }} — {{ course.name }}</h3>
       <p>A third-year undergraduate course covering communication systems, modulation techniques,
         and noise analysis.</p>
-      <div class="links"><span class="tag">Spring 2017, 2018</span>
+      <div class="links"><span class="tag">{{ course.terms_web }}</span>
         <a class="ext" href="https://www.tedu.edu.tr/ee-312" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-link"/></svg> Course catalog</a></div>
     </div>
   </article>
@@ -121,7 +121,7 @@ permalink: /teaching/
       {% assign course = site.data.cv.courses | where: "code", "EE 462" | first %}<h3>{{ course.code }} — {{ course.name }}</h3>
       <p>A senior-level undergraduate course covering power system modeling, load flow, fault
         analysis, smart grids, and renewables.</p>
-      <div class="links"><span class="tag">Spring 2017</span>
+      <div class="links"><span class="tag">{{ course.terms_web }}</span>
         <a class="ext" href="https://www.tedu.edu.tr/ee-462" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-link"/></svg> Course catalog</a></div>
     </div>
   </article>
