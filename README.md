@@ -10,8 +10,8 @@ web and PDF curriculum vitae. It also preserves research notes and
 announcements and publishes an aggregated, privacy-conscious site-reach report.
 
 The website is generated with Jekyll and deployed to GitHub Pages from the
-`master` branch. It uses a custom academic interface alongside a retained
-Minimal Mistakes path for utility pages.
+`master` branch. It uses no theme: every page renders through a single custom
+academic interface.
 
 ## Site sections
 
@@ -29,16 +29,17 @@ Minimal Mistakes path for utility pages.
 
 ## Rendering architecture
 
-The repository has two active presentation paths. Check a page's front matter
-before changing layouts, navigation, styles, or scripts.
+The repository has one presentation path. Every page uses it.
 
 | Path | Pages | Rendering chain |
 | --- | --- | --- |
-| Primary academic interface | Home, publications, research, writing, posts, CV, teaching, students, service, and site reach | Page → `_layouts/academic.html` → `_layouts/compress.html` → `assets/css/redesign.css`; posts first pass through `_layouts/post.html` |
-| Minimal Mistakes interface | 404, terms, and other pages without `layout: academic` | Local layouts and includes → `assets/css/main.scss`, `assets/css/custom.css`, and `_sass/` |
+| Academic interface | All of them — home, publications, research, writing, posts, CV, teaching, students, service, site reach, terms, and 404 | Page → `_layouts/academic.html` → `_layouts/compress.html` → `assets/css/redesign.css`; posts first pass through `_layouts/post.html` |
 
-The primary navigation is defined directly in `_layouts/academic.html`.
-`_data/navigation.yml` affects the retained Minimal Mistakes interface only.
+The primary navigation is defined directly in `_layouts/academic.html`; there is
+no navigation data file. The Minimal Mistakes remote theme and its local
+overrides were removed — no `_sass/`, no `main.scss`/`custom.css`, no
+`default.html`/`single.html`. Extend `assets/css/redesign.css` rather than
+reintroducing a theme.
 
 ## Repository map
 
@@ -49,19 +50,18 @@ The primary navigation is defined directly in `_layouts/academic.html`.
 | `_posts/` | Dated writing entries published under `/writing/:title/` |
 | `_layouts/academic.html` | Primary navigation, page shell, footer, theme control, and shared interactions |
 | `_layouts/post.html` | Writing-entry metadata, reading time, tags, and optional source link |
-| `_includes/_shared/` | Head fragments shared by both rendering paths: favicon markup and animation, GTM, GoatCounter |
+| `_includes/_shared/` | Head fragments: favicon markup and animation, GTM, GA4, GoatCounter |
 | `_includes/hero-uwsn.html` | Interactive ocean digital twin and underwater acoustic-network scenario |
 | `_includes/research-map.html` | Interactive research map rendered from `_data/research_map.yml` |
-| `assets/css/redesign.css` | Primary academic-interface styles |
-| `_layouts/`, `_includes/`, `_sass/`, `assets/css/main.scss` | Local Minimal Mistakes rendering and overrides |
+| `assets/css/redesign.css` | All site styles |
 | `_data/scholar_metrics.json` | Google Scholar metrics snapshot; rendered by `index.md` and `_pages/cv.md` |
-| `_data/research_metrics.json` | OpenAlex metrics snapshot; dormant fallback, not rendered |
+| `_data/openalex_metrics.json` | OpenAlex metrics snapshot; dormant fallback, not rendered |
 | `_data/site_stats.json` | Sanitized GoatCounter snapshot rendered by `_pages/stats.md` |
 | `files/` | CV, theses, papers, and other downloadable scholarly documents |
 | `assets/images/` | Portraits, research graphics, course images, project images, and favicons |
 | `assets/video/courses/`, `assets/video/topics/` | Course and research-topic media |
 | `scripts/` | Google Scholar, OpenAlex, and GoatCounter retrieval plus optional CV-conversion utilities; excluded from the build (see `scripts/README.md`) |
-| `_config.yml` | Jekyll, theme, metadata, analytics, and plugin configuration |
+| `_config.yml` | Jekyll, metadata, SEO, and plugin configuration |
 | `PRODUCT.md` | Product, data-honesty, design, and accessibility contract for the ocean digital twin |
 
 Generated output under `_site/` is not a source and should not be edited.
@@ -129,7 +129,7 @@ separate artifacts; changing one does not update the others automatically.
   embed it in browser code, or commit it. To refresh the OpenAlex snapshot, run:
 
   ```bash
-  OPENALEX_AUTHOR_ID=A5085505896 python3 scripts/fetch_metrics.py
+  OPENALEX_AUTHOR_ID=A5085505896 python3 scripts/fetch_openalex.py
   ```
 
   Both scripts require Python's `requests` package. `OPENALEX_MAILTO` is optional.
@@ -157,7 +157,7 @@ There is no automated test suite. Before publishing a change:
 7. Confirm that affected internal links and local assets resolve.
 
 Changes to shared layouts, navigation, CSS, or theme behavior should be checked
-on every primary academic page and at least one Minimal Mistakes page.
+on every academic page — which is now every page on the site.
 
 ## Deployment and metrics
 
@@ -171,7 +171,7 @@ updated `_data/scholar_metrics.json` only when the snapshot changes. It needs th
 `SERPAPI_KEY` and `SCHOLAR_AUTHOR_ID` repository secrets.
 
 `.github/workflows/update-openalex.yml` is a dormant fallback: manual dispatch
-only, no schedule. `_data/research_metrics.json` is retained as a second
+only, no schedule. `_data/openalex_metrics.json` is retained as a second
 bibliometric source but is not rendered by any page and is not refreshed
 automatically.
 
