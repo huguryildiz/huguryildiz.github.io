@@ -64,7 +64,7 @@ _data/publications.yml ┤                                          ├─→ _s
 1. **Yazar vurgusu.** `publications.md`'de `authors` alanı `<b>Yildiz, H. U.</b>` HTML'i içeriyor. YAML'da nötr `**Yildiz, H. U.**` işareti kullanılır; Liquid `<b>`'ye, Python `\textbf{}`'ye çevirir.
 2. **LaTeX kaçışı.** `&`, `%`, `_`, `#`, `$` gibi LaTeX özel karakterleri `render_cv_tex.py` içinde kaçışlanır. Kaynakta halihazırda `Computer Standards \& Interfaces` gibi kaçışlı metinler var; YAML'a taşınırken kaçışsız yazılır, kaçış tek yerde (üretimde) yapılır. Türkçe karakterler kaçış gerektirmez — preamble'da `inputenc[utf8]` ve `fontenc[T1]` mevcut, doğrudan yazılabilirler.
 
-3. **Mevcut `main.tex`'teki encoding bozuklukları.** Kaynak dosyada mojibake var: `Â·` (ayraç), `linkâlevel`, `optimizationâlearning`, `47817â47826` (en dash), `network flowâbased`. Bunlar UTF-8 içeriğin latin-1 olarak okunmasından kaynaklanıyor. YAML'a taşınırken doğru karakterler (`·`, `-`, `–`) yazılır, dolayısıyla üretilen `main.tex`'te kendiliğinden düzelirler. Bu düzeltmeler aşağıdaki doğrulama kriteri 1'deki "kabul edilmiş farklar" listesine dahildir.
+3. **Encoding — düzeltilmiş tespit.** Bu spec ilk yazıldığında kaynak dosyada mojibake olduğu sanılmıştı (`Â·`, `linkâlevel`, `47817â47826`). Task 2 sırasında kanonik dosya (`~/Downloads/main.tex`) doğrudan incelendi: dosya **temiz UTF-8**, gerçek karakterler en dash (`link–level`, `47817–47826`, `network flow–based`, `optimization–learning`) ve `·`. Mojibake, dosyanın sohbete ek olarak aktarılırken latin-1 yorumlanmasının artefaktıydı. Sonuç: YAML'a bu karakterler **olduğu gibi** taşınır ve doğrulama kriteri 1'de mojibake düzeltmesi **beklenmez** — üretilen `main.tex` referansla karşılaştırıldığında içerik farkı çıkmamalıdır.
 
 ## Otomasyon
 
