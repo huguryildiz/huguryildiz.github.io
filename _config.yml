@@ -11,46 +11,21 @@ repository: "huguryildiz/huguryildiz.github.io"
 timezone: Europe/Istanbul
 
 # =========================
-# Theme
+# Plugins
 # =========================
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "default"
-enable_darkmode: true
-
-header:
-  overlay: false
-
-# =========================
-# UI Settings
-# =========================
-# Search is off. The theme's lunr index only covers _posts — the nine academic pages are
-# plain pages, not a collection, so they were never searchable. The /search/ page and its
-# nav toggle are removed rather than kept as a control that returns almost nothing.
-search: false
-
-breadcrumbs: false
-enable_copy_code_button: false
-read_time: false
-related: false
-comments: false
-share: false
-
-# =========================
-# Feed (ON)
-# =========================
-atom_feed:
-  hide: false
-
-# =========================
-# SEO (ON)
-# =========================
+# There is no theme. Every page renders through _layouts/academic.html, styled by
+# assets/css/redesign.css. Search is off by design: it only ever indexed _posts,
+# so the academic pages were never searchable.
 plugins:
-  - jekyll-remote-theme
-  - jekyll-include-cache
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
 
+# =========================
+# SEO
+# =========================
+# jekyll-seo-tag reads `social` for the JSON-LD Person block and `title_separator`
+# for page titles. It is invoked as {% seo %} in _layouts/academic.html.
 title_separator: "|"
 
 social:
@@ -62,14 +37,23 @@ social:
     - "https://scholar.google.com/citations?user=nQwHS1gAAAAJ"
 
 # =========================
-# Google Analytics (ON)
+# Author
 # =========================
-analytics:
-  provider: "google-gtag"
-  google:
-    tracking_id: "G-FPSF7J6F4C"
-    anonymize_ip: true
-google_tag_manager: "GTM-PXWMC3P"
+# jekyll-seo-tag reads `name`. The remaining keys are reference values for the
+# metrics scripts and maintainers; nothing renders them.
+author:
+  name: "Huseyin Ugur Yildiz"
+  email: "hugur.yildiz@tedu.edu.tr"
+  uri: "https://www.tedu.edu.tr/en/huseyin-ugur-yildiz"
+  googlescholar: "https://scholar.google.com/citations?user=nQwHS1gAAAAJ"
+  orcid: "https://orcid.org/0000-0002-1556-2634"
+  openalex_author_id: "A5085505896"
+
+# =========================
+# Analytics
+# =========================
+# GTM, GA4 and GoatCounter are hardcoded in _includes/_shared/site-analytics.html.
+# The IDs live there and nowhere else.
 
 # =========================
 # Include Pages
@@ -85,21 +69,12 @@ defaults:
       path: ""
       type: pages
     values:
-      layout: single
-      author_profile: true
-      read_time: false
-      comments: false
-      share: false
-      related: false
+      layout: academic
   - scope:
       path: ""
       type: posts
     values:
       layout: post
-      author_profile: false
-      comments: false
-      share: false
-      related: false
 
 # =========================
 # Markdown
@@ -107,50 +82,6 @@ defaults:
 markdown: kramdown
 highlighter: rouge
 permalink: /writing/:title/
-
-
-
-# =========================
-# Author Profile
-# =========================
-author:
-  name             : "Huseyin Ugur Yildiz"
-  avatar           : "huguryildiz.png"
-  bio              : "Associate Professor of Electrical Engineering | IEEE Senior Member | Operations Research · Network Optimization · ML/RL | Wireless, Underwater & Aerial Networks"
-  location         : "Ankara, Turkey"
-  employer         : "TED University"
-  uri              : "https://www.tedu.edu.tr/en/huseyin-ugur-yildiz"
-  email            : "hugur.yildiz@tedu.edu.tr"
-
-  googlescholar    : "https://scholar.google.com/citations?user=nQwHS1gAAAAJ"
-  orcid            : "https://orcid.org/0000-0002-1556-2634"
-  researchgate     : "https://www.researchgate.net/profile/Huseyin-Yildiz-3"
-
-  github           : "huguryildiz"
-  linkedin         : "huguryildiz"
-
-  openalex_author_id: "A5085505896"
-
-  links:
-    - label: "CV (PDF)"
-      icon: "fas fa-file-pdf"
-      url: "/files/Yildiz_HuseyinUgur_CV.pdf"
-
-#    - label: "DBLP"
-#      icon: "ai ai-dblp"
-#      url: "https://dblp.org/pid/160/4924.html"
-
-#    - label: "ResearcherID"
-#      icon: "ai ai-researcherid"
-#      url: "https://www.webofscience.com/wos/author/record/S-6587-2016"
-
-#    - label: "Scopus"
-#      icon: "ai ai-scopus"
-#      url: "https://www.scopus.com/authid/detail.uri?authorId=56242674200"
-
-#    - label: "IEEE"
-#      icon: "ai ai-ieee"
-#      url: "https://ieeexplore.ieee.org/author/37085350625"  
 
 # =========================
 # Excludes
