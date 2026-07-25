@@ -36,5 +36,9 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add _data/site_stats.json
-          git diff --cached --quiet || git commit -m "chore: update site stats [skip ci]"
+          # The commit message deliberately carries no CI-skip tag: /stats/ states that the
+          # figures are refreshed daily, so this commit has to trigger a Pages rebuild —
+          # otherwise the snapshot advances in the repository while the published report
+          # keeps serving the previous day's series.
+          git diff --cached --quiet || git commit -m "chore: update site stats"
           git push

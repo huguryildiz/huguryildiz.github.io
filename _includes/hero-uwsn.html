@@ -78,16 +78,18 @@
 
 <div class="uw-plaque">
   <div class="ptop">
-    <span class="ptag live">OBSERVATORY</span>
+    <span class="ptag live">OCEAN DIGITAL TWIN</span>
     <span class="ptitle" id="uw-plq-title">Standing by</span>
     <span class="ptag">SIMULATED SCENARIO</span>
   </div>
   <p class="ptext" id="uw-plq-text">Acoustic sensor field deployed on the fault-zone shelf.
     Awaiting synchronization pulse from surface gateway BS-1.</p>
   <div class="pctl">
-    <button type="button" id="uw-plq-pause" aria-pressed="false"><span>Pause</span></button>
+    <button type="button" id="uw-plq-pause" aria-pressed="false"><svg class="licon"
+      aria-hidden="true"><use href="#i-pause"/></svg><span>Pause</span></button>
     <button type="button" id="uw-plq-explore" aria-pressed="false" aria-expanded="false"
-      aria-controls="uwsn-hero">Explore the twin</button>
+      aria-controls="uwsn-hero"><svg class="licon"
+      aria-hidden="true"><use href="#i-layers"/></svg><span>Explore the twin</span></button>
     <span class="psim">Drag to orbit · click objects for details</span>
   </div>
 </div>
@@ -2448,6 +2450,8 @@ function setMode(m){
   if(btnPlqPause){
     btnPlqPause.setAttribute('aria-pressed',String(m==='pause'));
     btnPlqPause.querySelector('span').textContent=m==='pause'?'Resume':'Pause';
+    var pIcon=btnPlqPause.querySelector('use');
+    if(pIcon){pIcon.setAttribute('href',m==='pause'?'#i-play':'#i-pause');}
   }
 }
 function setSim(v){

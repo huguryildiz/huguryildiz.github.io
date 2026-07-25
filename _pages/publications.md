@@ -1,7 +1,7 @@
 ---
 layout: academic
 title: "Publications"
-description: "Peer-reviewed journal articles, an editorial, and international and national conference papers by Hüseyin Uğur Yıldız. Metrics from Google Scholar, refreshed monthly."
+description: "Peer-reviewed journal articles, an editorial, and international and national conference papers by Hüseyin Uğur Yıldız. Metrics from Google Scholar, refreshed weekly."
 permalink: /publications/
 ---
 
@@ -11,7 +11,7 @@ permalink: /publications/
     <h1 id="pubs-h1">Publications</h1>
     <p class="lede">Peer-reviewed journal articles, an editorial, and international and national
       conference papers. Metrics are sourced from
-      <a href="{{ sm.profile_url }}" target="_blank" rel="noopener">Google Scholar</a> and refreshed monthly.</p>
+      <a href="{{ sm.profile_url }}" target="_blank" rel="noopener">Google Scholar</a> and refreshed weekly.</p>
   </header>
 
   <div class="statgrid" role="group" aria-label="Publication metrics">
@@ -22,6 +22,11 @@ permalink: /publications/
     <div class="stat wide">
       <div class="yearchart" id="yearChart"></div>
     </div>
+    {%- if sm.citations_per_year %}
+    <div class="stat wide">
+      <div class="yearchart static" id="citeChart"></div>
+    </div>
+    {%- endif %}
   </div>
   <p class="statnote" id="pubBreakdown"></p>
 </div>
@@ -140,8 +145,8 @@ var PUBS = [
     '"/></svg><b>' + t[1] + '</b><span>' + t[2] + '</span></div>';}).join("");
   $("#pubBreakdown").innerHTML =
     "Journal quartiles reflect the journal's rank in the publication year. " +
-    "Citations and h-index: Google Scholar, updated {{ sm.updated_utc | date: '%b %-d, %Y' }} — refreshed monthly. " +
-    "Select a bar or quartile below to filter the list.";
+    "Citations, h-index, and the per-year citation counts: Google Scholar, updated {{ sm.updated_utc | date: '%b %-d, %Y' }} — refreshed weekly; the current year is still accruing. " +
+    "Select a publication-year bar or a quartile below to filter the list.";
 
   /* Quartile distribution — clickable rows that drive the quartile filter. */
   var qCounts = {Q1: nq("Q1"), Q2: nq("Q2"), Q3: nq("Q3")};
@@ -170,38 +175,115 @@ var PUBS = [
     yMeta.max = Math.max.apply(null, Object.keys(yearCounts).map(function(k){return yearCounts[k];}));
   })();
 
-  /* Draw (or redraw) the year chart to fill the given pixel width. */
-  function drawYearChart(W){
-    var y0 = yMeta.y0, y1 = yMeta.y1, max = yMeta.max, nb = y1 - y0 + 1, y;
+  /* Shared bar geometry for both per-year charts. o.pick marks the bars as filter
+     controls; without it they are plain marks with a hover title only. o.title overrides
+     the tooltip text, and o.sparse labels only every other bar (plus the last) so wide
+     running totals do not collide. */
+  function barsSVG(W, y0, y1, valueOf, max, o){
+    var nb = y1 - y0 + 1, y;
     var LT = 12, plotH = 34, base = LT + plotH, H = base + 16;
     var pitch = W / nb, gap = Math.max(4, Math.min(18, pitch * 0.3)), bw = pitch - gap;
     var body = '<line class="axline" x1="0" y1="' + base + '" x2="' + W + '" y2="' + base + '"/>';
     for (y = y0; y <= y1; y++){
-      var c = yearCounts[y];
+      var c = valueOf(y), i = y - y0, edge = (i % 2 === 0 || y === y1);
       var h = c ? Math.max(3, Math.round(c / max * plotH)) : 1.5;
-      var cx = (y - y0) * pitch + pitch / 2, x = (cx - bw / 2).toFixed(1), top = base - h;
-      body += '<rect class="bar' + (c === max ? " hi" : "") + '" data-year="' + y +
-        '" tabindex="0" role="button" aria-pressed="false" aria-label="' + y + ": " + c +
-        " publication" + (c === 1 ? "" : "s") + '. Filter to this year." x="' + x +
+      var cx = i * pitch + pitch / 2, x = (cx - bw / 2).toFixed(1), top = base - h;
+      var lab = y + ": " + c + " " + o.noun + (c === 1 ? "" : "s");
+      var hit = o.pick
+        ? ' data-year="' + y + '" tabindex="0" role="button" aria-pressed="false" aria-label="' +
+          lab + '. Filter to this year."'
+        : "";
+      var hi = c === max;
+      body += '<rect class="bar' + (hi ? " hi" : "") + '"' + hit + ' x="' + x +
         '" y="' + top + '" width="' + bw.toFixed(1) + '" height="' + h + '"><title>' +
-        y + ": " + c + '</title></rect>';
-      body += '<text class="blab' + (c === max ? " hi" : "") + '" x="' + cx.toFixed(1) +
-        '" y="' + (top - 3) + '" text-anchor="middle">' + c + '</text>';
-      if ((y - y0) % 2 === 0 || y === y1){
+        (o.title ? o.title(y, c) : lab) + '</title></rect>';
+      if (!o.sparse || edge){
+        body += '<text class="blab' + (hi ? " hi" : "") + '" x="' + cx.toFixed(1) +
+          '" y="' + (top - 3) + '" text-anchor="middle">' + c.toLocaleString("en-US") + '</text>';
+      }
+      if (edge){
         body += '<line class="axtick" x1="' + cx.toFixed(1) + '" y1="' + base +
           '" x2="' + cx.toFixed(1) + '" y2="' + (base + 3) + '"/>';
         body += '<text class="axyr" x="' + cx.toFixed(1) + '" y="' + (H - 3) +
           '" text-anchor="middle">' + y + '</text>';
       }
     }
-    $("#yearChart").innerHTML =
-      '<svg width="' + W + '" height="' + H + '" viewBox="0 0 ' + W + " " + H +
-      '" role="group" aria-label="Publications per year, ' + y0 + " to " + y1 +
-      '. Select a bar to filter.">' + body + '</svg>' +
+    return '<svg width="' + W + '" height="' + H + '" viewBox="0 0 ' + W + " " + H +
+      '" role="' + (o.pick ? "group" : "img") + '" aria-label="' + o.aria + '">' + body + '</svg>';
+  }
+
+  /* Draw (or redraw) the year chart to fill the given pixel width. */
+  function drawYearChart(W){
+    $("#yearChart").innerHTML = barsSVG(W, yMeta.y0, yMeta.y1,
+      function(y){return yearCounts[y];}, yMeta.max,
+      {pick:true, noun:"publication",
+       aria:"Publications per year, " + yMeta.y0 + " to " + yMeta.y1 + ". Select a bar to filter."}) +
       '<div class="cap" id="yearCap">Publications per year</div>';
   }
   var lastYW = Math.round($("#yearChart").clientWidth) || 480;
   drawYearChart(lastYW);
+
+  /* Citations per year — Google Scholar's own profile histogram, verbatim. It is a
+     sliding window and its last year is still accruing, so the bars are read-only:
+     the year filter above works on publication year, which is a different quantity. */
+  var CITES = {{ sm.citations_per_year | jsonify }} || [];
+  var citeHost = $("#citeChart"), lastCW = 0, cMeta = {};
+  (function(){
+    if (!citeHost || !CITES.length) return;
+    var i, sum = 0;
+    cMeta.y0 = CITES[0].year;
+    cMeta.y1 = CITES[CITES.length - 1].year;
+    cMeta.byYear = {};
+    for (i = 0; i < CITES.length; i++){
+      cMeta.byYear[CITES[i].year] = CITES[i].citations;
+      sum += CITES[i].citations;
+    }
+    cMeta.max = Math.max.apply(null, CITES.map(function(d){return d.citations;})) || 1;
+    /* Scholar's histogram is a sliding window, so it can start above zero. The running
+       total is offset by the citations earned before the window, which is what the
+       profile total minus the window sum leaves. If the two disagree the other way, the
+       offset is dropped and the line shows the window's own running total. */
+    var offset = {{ sm.citations }} - sum;
+    cMeta.pre = offset > 0 ? offset : 0;
+    cMeta.cum = [];
+    var run = cMeta.pre;
+    for (i = 0; i < CITES.length; i++){ run += CITES[i].citations; cMeta.cum.push(run); }
+  })();
+  var citeMode = "year";
+  function fmt(v){ return v.toLocaleString("en-US"); }
+  function drawCiteChart(W){
+    var cum = citeMode === "cum", total = cMeta.cum[cMeta.cum.length - 1];
+    var svg = cum
+      ? barsSVG(W, cMeta.y0, cMeta.y1, function(y){return cMeta.cum[y - cMeta.y0];}, total,
+          {pick:false, noun:"citation", sparse:true,
+           title:function(y, c){return "Through " + y + ": " + fmt(c) + " citations";},
+           aria:"Cumulative citations through each year, " + cMeta.y0 + " to " + cMeta.y1 +
+                ", ending at " + fmt(total) + "."})
+      : barsSVG(W, cMeta.y0, cMeta.y1, function(y){return cMeta.byYear[y] || 0;}, cMeta.max,
+          {pick:false, noun:"citation",
+           title:function(y, c){return y + ": " + c + " citations · " +
+             fmt(cMeta.cum[y - cMeta.y0]) + " cumulative";},
+           aria:"Citations per year from Google Scholar, " + cMeta.y0 + " to " + cMeta.y1 + "."});
+    citeHost.innerHTML = svg +
+      '<div class="capline"><div class="cap">Citations' +
+      (cum ? ' <span class="capnote">· ' + fmt(total) + ' total</span>' : "") +
+      '</div>' +
+      '<div class="chartseg" role="group" aria-label="Citation chart scale">' +
+      '<button type="button" data-mode="year" aria-pressed="' + String(!cum) + '">Per year</button>' +
+      '<button type="button" data-mode="cum" aria-pressed="' + String(cum) + '">Cumulative</button>' +
+      '</div></div>';
+  }
+  if (citeHost && CITES.length){
+    lastCW = Math.round(citeHost.clientWidth) || 480;
+    drawCiteChart(lastCW);
+    citeHost.addEventListener("click", function(e){
+      var b = e.target.closest(".chartseg button");
+      if (!b || b.dataset.mode === citeMode) return;
+      citeMode = b.dataset.mode;
+      drawCiteChart(lastCW);
+      citeHost.querySelector('.chartseg button[data-mode="' + citeMode + '"]').focus();
+    });
+  }
 
   var yearSel = $("#yearSel"), qSel = $("#qSel");
   var uniqueYears = PUBS.map(function(p){return p.year;}).filter(function(v,i,a){return a.indexOf(v)===i;}).sort(function(a,b){return b - a;});
@@ -327,6 +409,13 @@ var PUBS = [
       if (w && w !== lastYW){ lastYW = w; drawYearChart(w); paintCharts(); }
     });
     ro.observe($("#yearChart"));
+    if (citeHost && CITES.length){
+      var cro = new ResizeObserver(function(){
+        var w = Math.round(citeHost.clientWidth);
+        if (w && w !== lastCW){ lastCW = w; drawCiteChart(w); }
+      });
+      cro.observe(citeHost);
+    }
   }
   sync();
 })();

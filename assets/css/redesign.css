@@ -342,21 +342,27 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
 }
 .uw-plaque .pctl button:hover{color:var(--head); border-color:var(--ink-soft); background:var(--surface);}
 .uw-plaque .pctl button[aria-pressed="true"]{background:var(--head); color:var(--btn-ink); border-color:var(--head);}
+.uw-plaque .pctl button .licon{width:1.05em; height:1.05em; flex:none; opacity:.8;}
+.uw-plaque .pctl button:hover .licon,
+.uw-plaque .pctl button[aria-pressed="true"] .licon{opacity:1;}
 .uw-plaque .psim{font-size:.72rem; color:var(--ink-faint); letter-spacing:.03em;}
 /* Explore mode reveals the timebar at the hero's bottom edge; drop the plaque
    so its card no longer overlaps and hides those controls. */
 #uwsn-hero.uw-explore + .uw-plaque{margin-top:12px;}
 @media (prefers-reduced-motion:reduce){ .uw-plaque .ptext, .uw-plaque{transition:none;} }
 
-.metricsline{
-  border-block:1px solid var(--hairline); padding:.8rem 0;
-  display:flex; flex-wrap:wrap; align-items:baseline; gap:.4rem 2.2rem;
-  font-size:.92rem; color:var(--ink-soft);
-}
-.metricsline .m b{font-size:1.28rem; font-weight:650; color:var(--head); font-variant-numeric:tabular-nums; margin-right:.35rem;}
-.metricsline .src{margin-left:auto; font-size:.8rem; color:var(--ink-faint);}
-.metricsline .src a{color:inherit; text-decoration:underline; text-underline-offset:.16em;}
-.metricsline .src a:hover{color:var(--accent);}
+/* Scholar KPI strip — same typographic language as .reach-metrics on the stats page. */
+.scholar-kpi{border-block:1px solid var(--hairline); padding:clamp(1.1rem,2.6vw,1.75rem) 0 clamp(.95rem,2vw,1.35rem);}
+.kpi-row{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); margin:0;}
+.kpi-row > div{padding:0 clamp(1rem,3vw,2.4rem); border-right:1px solid var(--hairline);}
+.kpi-row > div:first-child{padding-left:0;}
+.kpi-row > div:last-child{border-right:0; padding-right:0;}
+.kpi-row dt{color:var(--ink-faint); font-size:.75rem; font-weight:650; letter-spacing:.055em; text-transform:uppercase;}
+.kpi-row dd{margin:.35rem 0 0; color:var(--head); font-family:var(--serif); font-size:clamp(1.7rem,3.6vw,2.6rem);
+  font-weight:600; font-variant-numeric:tabular-nums; letter-spacing:-.025em; line-height:1;}
+.kpi-src{margin:clamp(.95rem,2vw,1.3rem) 0 0; font-size:.8rem; color:var(--ink-faint);}
+.kpi-src a{color:inherit; text-decoration:underline; text-underline-offset:.16em;}
+.kpi-src a:hover{color:var(--accent);}
 
 .focusgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(255px,1fr)); gap:1.4rem 2.6rem; margin-top:.4rem;}
 .focusgrid h3{font-family:var(--sans); font-size:.95rem; font-weight:700; color:var(--ink); margin:0 0 .5rem;
@@ -417,7 +423,9 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
   .hero h1{font-size:1.65rem;}
   .hero .role{margin-top:.2rem; font-size:.95rem; line-height:1.5;}
   .uw-plaque{margin:-20px 8px 0;}
-  .metricsline .src{margin-left:0; flex-basis:100%;}
+  .kpi-row{grid-template-columns:repeat(2,minmax(0,1fr)); row-gap:1.35rem;}
+  .kpi-row > div:nth-child(2n){border-right:0; padding-right:0;}
+  .kpi-row > div:nth-child(2n+1){padding-left:0;}
 }
 @media (max-width:400px){
   .hero .idrow{gap:1rem;}
@@ -513,6 +521,22 @@ ol.publist{list-style:none; margin:0; padding:0;}
 .yearchart svg.hasSel .blab.hi{fill:var(--ink-soft);}
 .yearchart .cap{font-size:.74rem; color:var(--ink-faint); margin-top:.2rem;
   font-variant-numeric:tabular-nums;}
+.yearchart .capnote{opacity:.75;}
+/* Caption row shared with the per-year / cumulative switch. */
+.yearchart .capline{display:flex; align-items:center; justify-content:space-between;
+  gap:.5rem; flex-wrap:wrap;}
+.chartseg{display:inline-flex; gap:1px; padding:1px; border:1px solid var(--hairline);
+  border-radius:999px;}
+.chartseg button{font:inherit; font-size:.66rem; font-weight:600; line-height:1;
+  padding:.24rem .5rem; border:0; border-radius:999px; background:none;
+  color:var(--ink-faint); cursor:pointer; transition:background .12s ease, color .12s ease;}
+.chartseg button:hover{color:var(--accent);}
+.chartseg button[aria-pressed="true"]{background:var(--accent-wash); color:var(--accent);}
+.chartseg button:focus-visible{outline:2px solid var(--accent); outline-offset:1px;}
+/* Read-only variant: the citation histogram drives no filter. */
+.yearchart.static .bar{cursor:default;}
+.yearchart.static .bar:hover{opacity:.5;}
+.yearchart.static .bar.hi:hover{opacity:.85;}
 
 /* Quartile distribution mini-chart (clickable → filters the list) */
 .qchart{display:flex; flex-direction:column; gap:.34rem; width:100%;}
@@ -755,6 +779,7 @@ footer.site .footer-row{display:flex; flex-wrap:wrap; gap:.5rem 1.6rem; align-it
 footer.site .fcopy{font-variant-numeric:tabular-nums;}
 footer.site .flisten{display:inline-flex; flex-wrap:wrap; align-items:center; gap:.3rem 1rem; margin-left:auto;}
 footer.site .flabel{font-size:.7rem; font-weight:650; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-faint);}
+footer.site .fstats{display:inline-flex; flex-wrap:wrap; align-items:center; gap:.3rem 1rem;}
 footer.site a{color:var(--ink-soft); font-weight:550; display:inline-flex; align-items:center; gap:.35rem;}
 footer.site a:hover{color:var(--accent);}
 footer.site .licon.spotify{color:var(--ink-faint);}

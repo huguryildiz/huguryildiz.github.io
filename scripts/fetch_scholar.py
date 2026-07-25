@@ -60,6 +60,20 @@ def row_all(i):
 
 cites, h_index, i10_index = row_all(0), row_all(1), row_all(2)
 
+# cited_by.graph is the per-year histogram Scholar draws on the profile page. It is a
+# sliding window (roughly the last decade) and its final year is partial, so it is stored
+# verbatim rather than reconciled with anything else. Comes in the same request — no extra
+# API call. If the shape ever changes, the key is left out and the chart disappears rather
+# than rendering a number that is not Scholar's.
+graph = (data.get("cited_by") or {}).get("graph") or []
+per_year = [
+    {"year": int(g["year"]), "citations": int(g.get("citations") or 0)}
+    for g in graph
+    if isinstance(g, dict) and str(g.get("year", "")).isdigit()
+]
+if not per_year:
+    print(f"[WARN] cited_by.graph missing or unreadable: {json.dumps(graph)[:200]}")
+
 # The profile's work count is not exposed as a field, so the article pages are walked.
 # One request covers 100 works; the cap is a runaway guard, not an expected limit.
 works = len(data.get("articles") or [])
@@ -70,6 +84,9 @@ while len(page.get("articles") or []) == PAGE and works < 1000:
 
 name = (data.get("author") or {}).get("name", "")
 print(f"[OK] {name}: citations={cites}, h_index={h_index}, i10_index={i10_index}, works={works}")
+if per_year:
+    span = f"{per_year[0]['year']}-{per_year[-1]['year']}"
+    print(f"[OK] citations per year: {len(per_year)} years ({span})")
 
 if cites == 0 and h_index == 0:
     sys.exit("ERROR: All metrics are zero. Check the Scholar author ID.")
@@ -86,6 +103,8 @@ metrics = {
     "profile_url":       f"https://scholar.google.com/citations?user={AUTHOR_ID}",
     "display_name":      name,
 }
+if per_year:
+    metrics["citations_per_year"] = per_year
 
 os.makedirs("_data", exist_ok=True)
 with open("_data/scholar_metrics.json", "w", encoding="utf-8") as f:
