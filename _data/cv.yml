@@ -1,0 +1,344 @@
+# Tek kaynak. Elle düzenlenir.
+# Tüketiciler: _pages/cv.md, _pages/service.md (Task 3), _pages/teaching.md (Task 3),
+#              scripts/render_cv_tex.py (Task 4, → main.tex → PDF)
+#
+# Web/LaTeX metinleri ayrışmış olan alanlarda HER İKİ metin de korunur
+# (ör. summary_web/summary_tex, bullets_web/bullets_tex, detail_web/detail_tex).
+# Hangisinin tek metin olarak kalacağına kullanıcı karar verecek; o karar gelene
+# kadar hiçbir metin uydurulmadı veya birleştirilmedi.
+
+person:
+  name_display: "Hüseyin Uğur Yıldız"     # web
+  name_ascii: "Huseyin Ugur Yildiz"       # LaTeX ve metadata
+  title: "Associate Professor of Electrical and Electronics Engineering"
+  phone: "+90 (312) 585 02 21"
+  email: "hugur.yildiz@tedu.edu.tr"
+  website: "huguryildiz.com"
+  linkedin: "huguryildiz"
+  location: "Ankara, Turkey"
+
+identifiers:
+  orcid: "0000-0002-1556-2634"
+  scopus: "56242674200"
+  researcherid: "S-6587-2016"
+  scholar: "nQwHS1gAAAAJ"
+
+# DIVERGED — bkz. task-2-report.md. Web sürümü /cv/ sayfasında render edilir;
+# LaTeX sürümü yalnızca veri olarak tutulur (main.tex Summary bölümü, main.tex:95).
+summary_web: >-
+  Associate Professor specializing in operations research and mathematical optimization for
+  wireless, underwater, and drone-assisted communication systems. Over a decade of research
+  developing optimization-based models for routing, resource allocation, reliability, and energy
+  efficiency in complex networked systems, increasingly integrating reinforcement learning for
+  dynamic and large-scale environments. Current interests extend to hybrid optimization–learning
+  methodologies for next-generation paradigms, including quantum network routing. Active as
+  editor, reviewer, and technical program committee member, alongside teaching, curriculum
+  development, accreditation, and academic leadership.
+summary_tex: >-
+  Associate Professor of Electrical and Electronics Engineering with a Ph.D. specializing in
+  operations research and optimization for wireless, underwater, and aerial communication
+  systems. Over 10 years of research experience, I develop mathematical optimization models for
+  routing, resource allocation, reliability, and energy efficiency across complex networked
+  systems, integrating reinforcement learning techniques for dynamic and large-scale
+  environments. My current interests include hybrid optimization–learning methodologies for
+  next-generation network paradigms, including quantum communication systems. I have authored
+  40+ peer-reviewed journal and conference publications and actively serve as editor, reviewer,
+  and TPC member. I also teach probability, signals and systems, and communication networks,
+  contributing to curriculum development, accreditation, and academic leadership.
+
+appointments:
+  - years: "2016 – present"
+    org: "TED University"
+    org_url: "https://www.tedu.edu.tr/en"
+    location: "Ankara, Turkey"
+    unit: "Department of Electrical and Electronics Engineering"
+    roles:
+      - { title: "Associate Professor", period: "Mar 2021 – present" }
+      - { title: "Department Chair", period: "Jul 2021 – Jul 2024" }
+      - { title: "Assistant Professor", period: "Sep 2016 – Mar 2021" }
+    # DIVERGED — web bullets render on /cv/; tex bullets (main.tex:124-127) differ in
+    # content and order (4 bullets, includes a VERA-platform bullet not on the web page).
+    bullets_web:
+      - "Founded the department's IEEE Student Branch, established a new teaching laboratory, and launched the M.Sc. program."
+      - "Led academic operations for 100+ students and 12 faculty members; oversaw accreditation and curriculum development."
+      - "Authored 20+ peer-reviewed publications (14 in IEEE journals); supervised 7 graduate theses and 40+ senior design teams."
+    bullets_tex:
+      - "Conducted research on network flow–based optimization to enhance wireless sensor network performance; authored 20+ peer-reviewed publications, including 14 articles in IEEE journals."
+      - "Led academic operations for 100+ students and 12 faculty members; oversaw accreditation and curriculum, established a new teaching laboratory, launched an M.Sc. program, and founded the IEEE Student Branch."
+      - "Developed VERA, a web-based capstone jury evaluation platform supporting secure juror access, rubric-based scoring, progress tracking, analytics, and report exports."
+      - "Taught undergraduate and graduate courses in communications, signal processing, and probability using active learning methodologies; mentored 40+ senior design teams and supervised 7 graduate theses."
+  - years: "2015 – 2016"
+    org: "Turkish Aerospace"
+    org_url: "https://www.tusas.com/en"
+    location: "Ankara, Turkey"
+    roles:
+      - { title: "Avionics Design Engineer", period: "Dec 2015 – Aug 2016" }
+    # DIVERGED — tex title/bullet (main.tex:130-136) add "Unmanned Aerial Vehicles" role
+    # qualifier and extra "built and configured UAV network infrastructure" detail.
+    bullets_web:
+      - "Developed and integrated network architectures for the ANKA UAV program; designed high-availability Cisco systems for 24/7 operational readiness."
+    bullets_tex:
+      - "Involved in development and integration of network architectures for the ANKA UAV program; built and configured UAV network infrastructure and designed high-availability Cisco systems ensuring 24/7 readiness."
+  - years: "2010 – 2015"
+    org: "Turk Telekom"
+    org_url: "https://www.turktelekom.com.tr/en"
+    location: "Ankara, Turkey"
+    roles:
+      - { title: "Senior Network Engineer", period: "Dec 2010 – Nov 2015" }
+    # DIVERGED — tex bullet (main.tex:138-144) adds "and regulatory compliance".
+    bullets_web:
+      - "Contributed to the design and operation of the Safer Internet Service, a nationwide content-filtering platform serving 5M+ users; managed 100+ Cisco/Procera DPI systems at 99.9% uptime."
+    bullets_tex:
+      - "Contributed to design and operation of the Safer Internet Service, a nationwide content-filtering platform serving 5M+ users; managed 100+ Cisco/Procera DPI systems, ensuring 99.9% uptime and regulatory compliance."
+
+education:
+  - { years: "2014 – 2016", degree: "Ph.D., Electrical and Electronics Engineering",
+      org: "TOBB University of Economics and Technology", org_url: "https://www.etu.edu.tr/en",
+      location: "Ankara, Turkey" }
+  - { years: "2011 – 2013", degree: "M.Sc., Electrical and Electronics Engineering",
+      org: "TOBB University of Economics and Technology", org_url: "https://www.etu.edu.tr/en",
+      location: "Ankara, Turkey" }
+  - { years: "2005 – 2009", degree: "B.Sc., Electrical and Electronics Engineering",
+      org: "Bilkent University", org_url: "https://w3.bilkent.edu.tr/bilkent/",
+      location: "Ankara, Turkey" }
+
+theses_own:                                 # kendi tezleri (/cv/ Graduate theses)
+  - year: 2016
+    kind: "Ph.D. dissertation"
+    title: "Transmission power control for link-level handshaking in wireless sensor networks"
+    advisor: "Prof. Bulent Tavli"
+    pdf: "/files/Yildiz_HuseyinUgur_PhD_Dissertation.pdf"
+    pdf_goatcounter: "thesis-pdf/phd-dissertation"
+    pdf_goatcounter_title: "PhD dissertation (PDF)"
+    yok_url: "https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=Br_XTptK8CZ70f0JGX9xEjZCixd1XEodCqaT6dDVvnmfvltgkE09YEFFWmk5LBx2"
+  - year: 2013
+    kind: "M.Sc. thesis"
+    title: "Communication/computation trade-offs in wireless sensor networks: Comparing network-level and node-level strategies"
+    advisor: "Prof. Bulent Tavli"
+    co_advisor: "Prof. Kemal Bicakci"
+    pdf: "/files/Yildiz_HuseyinUgur_MSc_Thesis.pdf"
+    pdf_goatcounter: "thesis-pdf/msc-thesis"
+    pdf_goatcounter_title: "MSc thesis (PDF)"
+    yok_url: "https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=iTkOhwevEenJZ3onUvs52nzi419Y-02Qu4K0DuUcM1T12y2xRhF2YLzHmis2Ng60"
+
+theses_supervised:                          # main.tex Theses Supervised [TH1]…[TH7] — LaTeX-only, not yet rendered on any page
+  - { id: "TH7", year: 2025, student: "Tantur Karagul, C.",
+      title: "Network lifetime optimization in underwater wireless sensor networks with variable k-connectivity",
+      kind: "Doctoral dissertation", org: "TOBB University of Economics and Technology", location: "Ankara, Turkey" }
+  - { id: "TH6", year: 2022, student: "Cobanlar, M.",
+      title: "Analysis of the trade-off between network lifetime and k-connectivity in wireless sensor networks",
+      kind: "Doctoral dissertation", org: "TOBB University of Economics and Technology", location: "Ankara, Turkey" }
+  - { id: "TH5", year: 2021, student: "Un, B. E.",
+      title: "Design of a novel optimization framework for analyzing the impact of critical nodes on the network lifetime of underwater acoustic sensor networks using private key cryptography",
+      kind: "Master's thesis", org: "TOBB University of Economics and Technology", location: "Ankara, Turkey" }
+  - { id: "TH4", year: 2021, student: "Aydin, C.",
+      title: "Network lifetime maximization in underwater wireless sensor networks based on the number of depleted nodes",
+      kind: "Master's thesis", org: "TOBB University of Economics and Technology", location: "Ankara, Turkey" }
+  - { id: "TH3", year: 2021, student: "Ozmen, A.",
+      title: "Modeling the trade-off between eavesdropping and network lifetime using a mixed-integer programming approach in underwater acoustic sensor networks",
+      kind: "Master's thesis", org: "TOBB University of Economics and Technology", location: "Ankara, Turkey" }
+  - { id: "TH2", year: 2018, student: "Karakurt, Y.",
+      title: "Eavesdropping potential in wireless sensor networks and modeling and analysis of network lifetime recovery",
+      kind: "Master's thesis", org: "TOBB University of Economics and Technology", location: "Ankara, Turkey" }
+  - { id: "TH1", year: 2017, student: "Tantur, C.",
+      title: "Optimal transmission power level sets for lifetime maximization in wireless sensor networks",
+      kind: "Master's thesis", org: "TOBB University of Economics and Technology", location: "Ankara, Turkey" }
+
+honors:
+  - id: "A2"
+    year: 2021
+    title: "IEEE Senior Member"
+    icon: "ieee"
+    # DIVERGED — tex wording (main.tex:219) differs from web.
+    detail_web: "Awarded for significant professional contributions; achieved by fewer than 10% of IEEE members."
+    detail_tex: "Elevation to the IEEE Senior Member grade, an honor recognizing significant contributions to the profession (achieved by less than 10% of IEEE members), 2021."
+  - id: "A1"
+    year: 2019
+    title: "Best Paper Award (third place), IEEE MENACOMM"
+    # DIVERGED — tex wording (main.tex:223) includes the full conference name/edition; web
+    # wording is shorter and links to a certificate PDF instead.
+    detail_web: "“Utilization of multi-sink architectures for lifetime maximization in underwater sensor networks”, Manama, Kingdom of Bahrain."
+    detail_tex: "The best paper award (3rd place), “Utilization of multi-sink architectures for lifetime maximization in underwater sensor networks,” 2nd IEEE Middle East & North Africa Communications Conference (MENACOMM'19), Manama, Bahrain, 2019."
+    certificate_pdf: "/files/Yildiz_HuseyinUgur_BestPaperAward_MENACOMM_2019.pdf"
+
+toolbox:                                    # /cv/ Technical toolbox — LaTeX'te düz metin (main.tex Technical Skills)
+  - group: "Programming & scientific computing"
+    items:
+      - { name: "Python", icon: "python.jpg" }
+      - { name: "NumPy", icon: "numpy.svg" }
+      - { name: "SciPy", icon: "scipy.svg" }
+      - { name: "pandas", icon: "pandas.svg" }
+      - { name: "PyTorch", icon: "pytorch.svg" }
+      - { name: "Streamlit", icon: "streamlit.svg" }
+      - { name: "MATLAB", icon: "matlab.jpg" }
+      - { name: "Simulink", icon: "simulink.png" }
+      - { name: "LaTeX", icon: "latex.svg" }
+  - group: "Optimization & modeling"
+    items:
+      - { name: "GAMS", icon: "gams.jpg" }
+      - { name: "Gurobi", icon: "gurobi.jpg" }
+      - { name: "CPLEX", icon: "cplex.svg" }
+      - { name: "Xpress", icon: "xpress.png" }
+      - { name: "PuLP", icon: "pulp.jpg" }
+      - { name: "Pyomo", icon: "pyomo.jpg" }
+      - { name: "OR-Tools", icon: "ortools.svg" }
+  - group: "Development"
+    items:
+      - { name: "GitHub", icon: "github.jpg" }
+      - { name: "Jupyter", icon: "jupyter.jpg" }
+      - { name: "PyCharm", icon: "pycharm.jpg" }
+      - { name: "Spyder", icon: "spyder.jpg" }
+      - { name: "VS Code", icon: "vscode.jpg" }
+      - { name: "Cursor", icon: "cursor.jpg" }
+      - { name: "Docker", icon: "docker.svg" }
+      - { name: "Obsidian", icon: "obsidian.svg" }
+      - { name: "Notion", icon: "notion.svg" }
+  - group: "Networking"
+    items:
+      - { name: "Cisco IOS", icon: "cisco.svg" }
+      - { name: "Wireshark", icon: "wireshark.svg" }
+  - group: "AI & LLM tooling"
+    items:
+      - { name: "Claude", icon: "claude.svg" }
+      - { name: "Claude Code", icon: "claude.svg" }
+      - { name: "ChatGPT", icon: "openai.svg" }
+      - { name: "Codex", icon: "openai.svg" }
+      - { name: "Gemini", icon: "gemini.svg" }
+      - { name: "Sakana Fugu", icon: "sakana-fugu.png" }
+      - { name: "GitHub Copilot", icon: "githubcopilot.svg" }
+      - { name: "Antigravity", icon: "antigravity.png" }
+
+certificates:                               # /cv/ Professional development — main.tex Certificates
+  - { year: 2025, title: "Reinforcement Learning Specialization", org: "University of Alberta (Coursera)",
+      url: "https://www.coursera.org/account/accomplishments/specialization/26BOL8LTVD7S" }
+  - { year: 2025, title: "Deep Learning Specialization", org: "DeepLearning.AI (Coursera)",
+      url: "https://www.coursera.org/account/accomplishments/specialization/JGGZ4NGSKTQZ" }
+  - { year: 2025, title: "Machine Learning Specialization", org: "DeepLearning.AI (Coursera)",
+      url: "https://www.coursera.org/account/accomplishments/specialization/FGT2PNQ9NYVL" }
+
+languages:
+  # DIVERGED — web uses "&"; tex uses "and" (main.tex:590).
+  - { name: "English", level_web: "Business & academic proficiency", level_tex: "Business and academic proficiency" }
+  - { name: "Turkish", level_web: "Native", level_tex: "Native" }
+
+research_areas:                             # main.tex Research Areas — yalnızca LaTeX, henüz hiçbir sayfada render edilmiyor
+  - "Wireless Ad Hoc and Sensor Networks"
+  - "Underwater Acoustic Sensor Networks"
+  - "Internet of Things"
+  - "Drone Networks"
+  - "Smart Grids"
+  - "Operations Research"
+  - "Metaheuristics"
+  - "Neural Networks"
+  - "Reinforcement Learning"
+
+# Aşağıdaki bölümler (service, talks, courses) Task 3'ün /service/ ve /teaching/ sayfalarını
+# besleyecek; bu turda yalnızca veri olarak dolduruldu, hiçbir sayfa onlardan render etmiyor.
+service:
+  tpc:
+    - "IEEE International Conference on Communications (ICC 2018–2022)"
+    - "IEEE Wireless Communications and Networking Conference (WCNC 2019, 2021–2025)"
+    - "International Balkan Conference on Communications and Networking (BalkanCom 2023–2025)"
+    - "International Conference on Innovation and Intelligence for Information, Computation, and Technology (3ICT 2019–2020)"
+    - "International Conference on Network and Service Management (CNSM 2020–2021)"
+    - "IEEE Middle East and North Africa Communications Conference (MENACOMM 2019)"
+    - "International Conference on Underwater Networks & Systems (WUWNet 2019–2025)"
+    - "IEEE Vehicular Technology Conference (VTC 2018–Spring)"
+    - "IEEE INFOCOM Workshop on Wireless Communications and Networking in Extreme Environments (2018)"
+    - "IEEE SENSORS (2017)"
+  chairing:
+    - { session: "PHY-II: Physical Layer Communications-II", venue: "IEEE BlackSeaCom 2021" }
+    - { session: "Underwater Networking", venue: "ACM WUWNet 2019" }
+    - { session: "Communication Networks II", venue: "SIU 2018" }
+    - { session: "Sensor Network, Method and Evaluation", venue: "IEEE SENSORS 2016" }
+    - { session: "Management of Emerging Networks", venue: "IEEE GLOBECOM 2014 Workshop" }
+  reviewing:
+    - "Ad Hoc Networks"
+    - "Computer Networks"
+    - "IEEE Access"
+    - "IEEE Communications Letters"
+    - "IEEE Communications Surveys and Tutorials"
+    - "IEEE International Conference on Communications (ICC)"
+    - "IEEE Internet of Things Journal"
+    - "IEEE WiMob 2016"
+    - "IEEE PIMRC 2017"
+    - "IEEE Sensors Journal"
+    - "IEEE Systems Journal"
+    - "IEEE Transactions on Cybernetics"
+    - "IEEE Transactions on Industrial Electronics"
+    - "IEEE Transactions on Industrial Informatics"
+    - "IEEE Transactions on Mobile Computing"
+    - "IEEE WCNC 2018–2024"
+    - "IEEE Wireless Communications Letters"
+    - "Internet of Things (Guest Editor)"
+  memberships:
+    - { name: "IEEE Senior Member", period: "2021 – present" }
+    - { name: "IEEE Member", period: "2016 – 2021" }
+    - { name: "IEEE Student Member", period: "2013 – 2016" }
+    - { name: "IEEE Oceanic Engineering Society", period: "2021" }
+    - { name: "IEEE Communications Society", period: "2015 – 2018" }
+  institutional:                            # yalnızca web — main.tex'te bir "institutional service" bölümü yok
+    - { role: "External Advisory Board Member", org: "Department of Electrical and Electronics Engineering, Çankaya University", period: "2022 – 2024" }
+    - { role: "Web Committee Member", org: "Faculty of Engineering, TED University", period: "2021 – present" }
+    - { role: "Alumni Coordinator", org: "Department of Electrical and Electronics Engineering, TED University", period: "2021 – 2024" }
+    - { role: "Department Chair", org: "Department of Electrical and Electronics Engineering, TED University", period: "2021 – 2024" }
+    - { role: "Faculty Board Member", org: "Faculty of Engineering, TED University", period: "2021 – 2024" }
+    - { role: "Faculty Administrative Board Member (Associate Professor Representative)", org: "TED University", period: "2021 – present" }
+
+talks:
+  - { date_web: "Oct 2019", date_tex: "2019, October 24",
+      title: "Prolonging the Lifetime of Underwater Sensor Networks Under Sinkhole Attacks",
+      venue: "Georgia Institute of Technology, Atlanta, GA, USA", host: "Prof. Ian F. Akyildiz",
+      kind: "Invited talk", slides: "https://drive.google.com/file/d/14jmfAauo_CHZHZSjCTbuMjjVQVsGz1sm/view" }
+  - { date_web: "Apr 2019", date_tex: "2019, April 25",
+      title: "Maximization of Underwater Sensor Networks Lifetime via Fountain Codes",
+      venue: "SIU 2019 — Special Session on Next Generation Communication Techniques, Sivas, Turkey",
+      kind: "Conference presentation", slides: "https://drive.google.com/file/d/14bzsN_kmMONXaJet98dZsrgdQwOrFmCU/view?usp=sharing" }
+  - { date_web: "Feb 2019", date_tex: "2019, February 19",
+      title: "Maximization of Underwater Sensor Networks Lifetime via Fountain Codes",
+      venue: "ASELSAN Information and Communication Technologies Workshop, Ankara, Turkey",
+      kind: "Invited talk", slides: "https://drive.google.com/file/d/14a3OSEhRvUTd9m0eJsiT_AUh9vqzGqZW/view?usp=sharing" }
+  - { date_web: "Nov 2016", date_tex: "2016, November 14",
+      title: "Optimal Transmission Power Level Sets for Lifetime Maximization in Wireless Sensor Networks",
+      venue: "ASELSAN Information and Communication Technologies Workshop, Ankara, Turkey",
+      kind: "Invited talk", slides: "https://drive.google.com/file/d/16Cm8oSdQejoQQtKTkOmlRXNUYzaQfKZK/view?usp=sharing" }
+  - { date_web: "Dec 2014", date_tex: "2014, December 3",
+      title: "The Impact of Random Power Assignment in Handshaking on Wireless Sensor Network Lifetime",
+      venue: "University of Texas at Dallas, Dallas, TX, USA", host: "Prof. Murat Torlak",
+      kind: "Invited talk", slides: "https://drive.google.com/file/d/14injrfacnqRUnJb9IiNEHQdvhcTARxuy/view?usp=sharing" }
+  - { date_web: "Feb 2014", date_tex: "2014, February 11",
+      title: "Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks",
+      venue: "University of Rochester, Rochester, NY, USA", host: "Prof. Wendi Heinzelman",
+      kind: "Invited talk" }
+  - { date_web: "Feb 2014", date_tex: "2014, February 7",
+      title: "Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks",
+      venue: "University at Buffalo, Buffalo, NY, USA", host: "Prof. Tommaso Melodia",
+      kind: "Invited talk" }
+  - { date_web: "Feb 2014", date_tex: "2014, February 5",
+      title: "Wireless Sensor Networks, Network Optimization, and Mathematical Programming",
+      venue: "Carleton University, Ottawa, ON, Canada", host: "Prof. Halim Yanikomeroglu",
+      kind: "Invited seminar" }
+  - { date_web: "Jan 2014", date_tex: "2014, January 23",
+      title: "Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks",
+      venue: "University of Southern California, Los Angeles, CA, USA", host: "Prof. Bhaskar Krishnamachari",
+      kind: "Invited talk" }
+  - { date_web: "Jan 2014", date_tex: "2014, January 22",
+      title: "Transmission Power Control for Link-Level Handshaking in Wireless Sensor Networks",
+      venue: "University of California, Irvine, CA, USA", host: "Prof. Ender Ayanoglu",
+      kind: "Invited talk" }
+
+courses:                                    # main.tex Courses Taught (7) — terms main.tex biçiminde; current main.tex "Present" ile teaching.md gruplaması eşleşiyor
+  - { code: "EE 205", name: "Software Tools for Electrical Engineering", level: "undergraduate",
+      terms: "Fall'16", current: false }
+  - { code: "EE 304", name: "Probability and Random Variables", level: "undergraduate",
+      terms: "Spring'17 – Present", current: true }
+  - { code: "EE 311", name: "Signals and Systems", level: "undergraduate",
+      terms: "Fall'16 – Present", current: true }
+  - { code: "EE 312", name: "Communication Systems I", level: "undergraduate",
+      terms: "Spring'17, Spring'18", current: false }
+  - { code: "EE 413", name: "Communication Systems II", level: "undergraduate",
+      terms: "Fall'16 – Present", current: true }
+  - { code: "EE 462", name: "Power System Analysis", level: "undergraduate",
+      terms: "Spring'17", current: false }
+  - { code: "EE 512", name: "Optimization for Communication Networks", level: "graduate",
+      terms: "Spring'26", current: true }
