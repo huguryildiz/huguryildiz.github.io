@@ -99,6 +99,8 @@ exclude:
   - node_modules
   - vendor
   - scripts/
+  - analytics-archive/
+  - docs/
   - Dockerfile
   - docker-compose.yaml
   - design-artifacts/

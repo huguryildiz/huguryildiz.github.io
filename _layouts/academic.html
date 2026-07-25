@@ -16,6 +16,11 @@ layout: compress
   <script>
   (function(){try{var t=localStorage.getItem('hy-theme');
   if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+  /* Metric tiles count up from zero; hide the rendered value until the counter takes
+     over so the final number never flashes first. Without JS, or with reduced motion,
+     the attribute is absent and the numbers paint normally. */
+  (function(){if(!matchMedia('(prefers-reduced-motion: reduce)').matches)
+  document.documentElement.setAttribute('data-statcount','');})();
   </script>
 
   <link rel="stylesheet" href="{{ '/assets/css/redesign.css' | relative_url }}">
@@ -119,6 +124,31 @@ layout: compress
         });
       },{rootMargin:'-20% 0px -70% 0px'});
       map.forEach(function(a,sec){io.observe(sec);});
+    }
+    /* Metric tiles count up from zero on load. Any prefix or suffix around the
+       digits ("40+") is preserved, and the run ends on the value the page rendered. */
+    if(document.documentElement.hasAttribute('data-statcount')){
+      var runs=[];
+      document.querySelectorAll('.stat b, .kpi-strip dd').forEach(function(el){
+        var m=/^(\D*)([\d,]+)(\D*)$/.exec(el.textContent.trim());
+        if(!m)return;
+        var target=parseInt(m[2].replace(/,/g,''),10);
+        if(!target)return;
+        runs.push({el:el,pre:m[1],post:m[3],target:target,grouped:m[2].indexOf(',')>-1});
+      });
+      var draw=function(r,v){
+        r.el.textContent=r.pre+(r.grouped?v.toLocaleString('en-US'):String(v))+r.post;
+      };
+      runs.forEach(function(r){draw(r,0);});
+      document.documentElement.removeAttribute('data-statcount');
+      var t0=null;
+      var step=function(ts){
+        if(t0===null)t0=ts;
+        var p=Math.min(1,(ts-t0)/1100),e=1-Math.pow(1-p,3);
+        runs.forEach(function(r){draw(r,Math.round(r.target*e));});
+        if(p<1)requestAnimationFrame(step);
+      };
+      if(runs.length)requestAnimationFrame(step);
     }
   })();
   </script>

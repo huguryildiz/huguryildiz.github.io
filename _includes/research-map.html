@@ -149,17 +149,21 @@
   var core = document.getElementById('rmapCore');
   var nodes = Array.prototype.slice.call(grid.querySelectorAll('details.rmap-node'));
   var NS = 'http://www.w3.org/2000/svg';
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var revealed = reduce, wiresDrawn = reduce, hlId = null;
 
   function anchor(el){
     var g = grid.getBoundingClientRect(), r = el.getBoundingClientRect();
     return {left:r.left-g.left, right:r.right-g.left, top:r.top-g.top,
             bottom:r.bottom-g.top, cx:r.left-g.left+r.width/2, cy:r.top-g.top+r.height/2};
   }
-  function path(d, frontier){
+  function path(d, frontier, key){
     var p = document.createElementNS(NS,'path');
     p.setAttribute('d', d);
     if (frontier) p.setAttribute('class','frontier');
+    if (key) p.setAttribute('data-k', key);
     svg.appendChild(p);
+    return p;
   }
   function draw(){
     if (getComputedStyle(svg).display === 'none') return;
@@ -172,18 +176,100 @@
       var s = anchor(n.querySelector('summary'));
       var y0 = c.top + (c.bottom - c.top) * (0.3 + 0.2*i);
       var mx = (c.right + s.left)/2;
-      path('M'+c.right+' '+y0+' C'+mx+' '+y0+' '+mx+' '+s.cy+' '+s.left+' '+s.cy);
+      path('M'+c.right+' '+y0+' C'+mx+' '+y0+' '+mx+' '+s.cy+' '+s.left+' '+s.cy, false, n.id);
     });
     var ml = grid.querySelector('#map-ml'), q = grid.querySelector('#map-quantum');
     if (ml){
       var m = anchor(ml.querySelector('summary'));
       var my = (c.bottom + m.top)/2;
-      path('M'+c.cx+' '+c.bottom+' C'+c.cx+' '+my+' '+m.cx+' '+my+' '+m.cx+' '+m.top, true);
+      path('M'+c.cx+' '+c.bottom+' C'+c.cx+' '+my+' '+m.cx+' '+my+' '+m.cx+' '+m.top, true, 'map-ml');
       if (q){
         var qa = anchor(q.querySelector('summary')), ma = anchor(ml);
-        path('M'+ma.right+' '+m.cy+' L'+qa.left+' '+m.cy, true);
+        path('M'+ma.right+' '+m.cy+' L'+qa.left+' '+m.cy, true, 'map-ml map-quantum');
       }
     }
+    if (!wiresDrawn) armWires();
+    applyHl();
+  }
+
+  /* Wires start fully retracted and draw themselves once the map scrolls into view. */
+  function armWires(){
+    Array.prototype.forEach.call(svg.querySelectorAll('path'), function(p){
+      var L = p.getTotalLength() || 1;
+      p.style.strokeDasharray = L + ' ' + L;
+      p.style.strokeDashoffset = L;
+    });
+    if (revealed) runWires();
+  }
+  var wireRun = 0;
+  function runWires(){
+    var ps = Array.prototype.slice.call(svg.querySelectorAll('path'));
+    if (!ps.length) return;   /* wires are display:none on narrow screens; arm them if they come back */
+    var run = ++wireRun;
+    ps.forEach(function(p,i){
+      p.style.transition = 'stroke-dashoffset .7s cubic-bezier(.3,0,.2,1) ' + (i*90) + 'ms';
+      p.getBoundingClientRect();
+      p.style.strokeDashoffset = '0';
+    });
+    setTimeout(function(){
+      if (run !== wireRun) return;
+      wiresDrawn = true;
+      Array.prototype.forEach.call(svg.querySelectorAll('path'), function(p){
+        p.style.transition = ''; p.style.strokeDasharray = ''; p.style.strokeDashoffset = '';
+      });
+      grid.classList.add('rm-lit');
+    }, 760 + ps.length*90);
+  }
+
+  function applyHl(){
+    Array.prototype.forEach.call(svg.querySelectorAll('path'), function(p){
+      var keys = (p.getAttribute('data-k') || '').split(' ');
+      p.classList.toggle('hl', !!hlId && keys.indexOf(hlId) > -1);
+    });
+  }
+  function setHl(id){
+    hlId = id;
+    if (id) grid.setAttribute('data-hl',''); else grid.removeAttribute('data-hl');
+    nodes.forEach(function(n){ n.classList.toggle('is-hl', n.id === id); });
+    applyHl();
+  }
+  nodes.forEach(function(n){
+    var s = n.querySelector('summary');
+    s.addEventListener('mouseenter', function(){ setHl(n.id); });
+    s.addEventListener('mouseleave', function(){ setHl(null); });
+    s.addEventListener('focus', function(){ setHl(n.id); });
+    s.addEventListener('blur', function(){ setHl(null); });
+  });
+
+  /* Publication counts tick up with the cards, once. */
+  function countUp(el){
+    var t = el.firstChild, target = parseInt(t.nodeValue, 10);
+    if (!target || target < 2) return;
+    var t0 = null;
+    function step(now){
+      if (t0 === null) t0 = now;
+      var k = Math.min(1, (now - t0) / 900), e = 1 - Math.pow(1 - k, 3);
+      t.nodeValue = String(Math.round(target * e));
+      if (k < 1) requestAnimationFrame(step);
+    }
+    t.nodeValue = '0';
+    requestAnimationFrame(step);
+  }
+
+  var cards = [core].concat(nodes);
+  if (!reduce) cards.forEach(function(el){ el.classList.add('rm-pre'); });
+  function reveal(){
+    if (revealed) return;
+    revealed = true;
+    cards.forEach(function(el,i){
+      el.style.setProperty('--d', (i*70) + 'ms');
+      el.classList.remove('rm-pre');
+      el.classList.add('rm-in');
+    });
+    Array.prototype.forEach.call(grid.querySelectorAll('.rmap-node > summary .rmap-count'), function(el,i){
+      setTimeout(function(){ countUp(el); }, 260 + i*70);
+    });
+    setTimeout(runWires, 220);
   }
 
   var booting = true;
@@ -211,11 +297,20 @@
   var map = document.getElementById('research-map');
   var viewBtns = Array.prototype.slice.call(map.querySelectorAll('.rmap-views button'));
   var relWrap = map.querySelector('.rgraph-wrap');
+  var animateGraph = null, curView = 'tree';
   function showView(v){
+    var changed = (v !== curView);
+    curView = v;
     grid.hidden = (v !== 'tree');
     relWrap.hidden = (v !== 'relations');
     viewBtns.forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.view === v)); });
     if (v === 'tree') draw();
+    if (!changed || reduce) return;
+    var shown = (v === 'tree') ? grid : relWrap;
+    shown.classList.remove('v-in');
+    shown.getBoundingClientRect();
+    shown.classList.add('v-in');
+    if (v === 'relations' && animateGraph) animateGraph();
   }
   viewBtns.forEach(function(b){
     b.addEventListener('click', function(){ showView(b.dataset.view); });
@@ -263,6 +358,47 @@
         if (ev.key === 'Enter' || ev.key === ' '){ ev.preventDefault(); act(); }
       });
     });
+
+    /* Entering the relations view: nodes pop in, edges draw between them. */
+    var gRun = 0;
+    animateGraph = function(){
+      var run = ++gRun;
+      rg.classList.remove('rg-flow');
+      rNodes.forEach(function(n){ n.classList.remove('rg-in'); });
+      rEdges.forEach(function(e){
+        e.style.transition = ''; e.style.strokeDasharray = ''; e.style.strokeDashoffset = '';
+      });
+      rg.getBoundingClientRect();
+      rNodes.forEach(function(n,i){
+        n.style.setProperty('--d', (i*30) + 'ms');
+        n.classList.add('rg-in');
+      });
+      rEdges.forEach(function(e,i){
+        var L = e.getTotalLength() || 1;
+        e.style.strokeDasharray = L + ' ' + L;
+        e.style.strokeDashoffset = L;
+        e.getBoundingClientRect();
+        e.style.transition = 'stroke-dashoffset .55s ease-out ' + (i*25) + 'ms';
+        e.style.strokeDashoffset = '0';
+      });
+      setTimeout(function(){
+        if (run !== gRun) return;
+        rNodes.forEach(function(n){ n.classList.remove('rg-in'); n.style.removeProperty('--d'); });
+        rEdges.forEach(function(e){
+          e.style.transition = ''; e.style.strokeDasharray = ''; e.style.strokeDashoffset = '';
+        });
+        rg.classList.add('rg-flow');
+      }, 600 + rEdges.length*25);
+    };
+  }
+
+  if ('IntersectionObserver' in window && !reduce){
+    var io = new IntersectionObserver(function(en){
+      if (en[0].isIntersecting){ io.disconnect(); reveal(); }
+    }, {threshold:0.12});
+    io.observe(grid);
+  } else {
+    reveal();
   }
 
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);

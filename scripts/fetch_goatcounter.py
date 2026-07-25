@@ -39,14 +39,16 @@ WINDOWS = [
     ("all", "All time", None, 0),
 ]
 
-# JSON key -> API path
+# JSON key -> API path. /stats/hits is absent on purpose: it carries pages,
+# events and the hour-of-day profile in a single response, so fetch_window
+# handles it separately rather than fetching it once per derived list.
 DIMENSIONS = [
-    ("pages", "/stats/hits"),
     ("countries", "/stats/locations"),
     ("referrers", "/stats/toprefs"),
     ("browsers", "/stats/browsers"),
     ("systems", "/stats/systems"),
     ("sizes", "/stats/sizes"),
+    ("languages", "/stats/languages"),
 ]
 
 # Ranked lists are truncated for page weight; the map needs every country.
@@ -54,6 +56,10 @@ LIST_CAP = 12
 UNCAPPED = {"countries"}
 # How many of the busiest countries get a region lookup (one request each).
 REGION_COUNTRIES = 5
+# How many of the busiest pages get their own referrer lookup (one request each).
+REF_PAGES = 5
+# How many pages get their own daily series stored (all-time window only).
+SERIES_PAGES = 6
 # List endpoints that reject an `offset` parameter (see stats_list).
 NO_OFFSET = {"/stats/hits"}
 
@@ -91,7 +97,7 @@ def get(path, start, end, params=None):
     return None
 
 
-def stats_list(path, start, end, limit=100, max_pages=10):
+def stats_list(path, start, end, limit=100, max_pages=10, extra=None):
     """Fetch a /stats/<x> list endpoint, paginating while the API reports
     `more: true`.
 
@@ -104,12 +110,16 @@ def stats_list(path, start, end, limit=100, max_pages=10):
     out, offset = [], 0
     for _ in range(max_pages if paged else 1):
         params = {"limit": limit}
+        params.update(extra or {})
         if paged:
             params["offset"] = offset
         data = get(path, start, end, params)
         if data is None:
             break
-        items = data.get("stats") or data.get("hits") or []
+        # Each list endpoint names its payload differently: `stats` for the
+        # dimension breakdowns, `hits` for pages, `refs` for the per-page
+        # referrer detail.
+        items = data.get("stats") or data.get("hits") or data.get("refs") or []
         if not items:
             # A 200 with nothing readable means the payload keys differ from
             # what we look for; print them so the next run can be diagnosed.
@@ -125,7 +135,13 @@ def stats_list(path, start, end, limit=100, max_pages=10):
 def normalize(key, items):
     """Reduce an API list to the {name/path, count} shape the report reads."""
     if key == "pages":
-        rows = [{"path": i.get("path"), "count": int(i.get("count") or 0)}
+        # `event` separates a real page from a tracked interaction (a CV
+        # download, a DOI click); both arrive in the same /stats/hits list and
+        # are split apart by the caller. `title` is the page title GoatCounter
+        # recorded, which spares the report a hand-maintained path->label map.
+        rows = [{"path": i.get("path"), "title": (i.get("title") or "").strip(),
+                 "path_id": i.get("path_id"), "event": bool(i.get("event")),
+                 "count": int(i.get("count") or 0)}
                 for i in items if i.get("path")]
     elif key == "countries":
         rows = [{"code": i.get("id"), "name": i.get("name"), "count": int(i.get("count") or 0)}
@@ -150,6 +166,105 @@ def window_bounds(days, offset):
     return max(TRACKING_START, end - timedelta(days=days - 1)), end
 
 
+def hour_profile(hits):
+    """Fold the per-path hourly buckets into one 24-slot hour-of-day profile.
+
+    /stats/hits returns hourly buckets unless `group` is set, so the numbers
+    are already in the response used for the page ranking and this costs no
+    extra request. The hours are in the site's own time zone as configured in
+    GoatCounter — recorded alongside the profile so the report can name it
+    instead of leaving the reader to guess.
+    """
+    hours = [0] * 24
+    for hit in hits:
+        for day in hit.get("stats") or []:
+            for i, value in enumerate((day.get("hourly") or [])[:24]):
+                hours[i] += int(value or 0)
+    return hours
+
+
+def attach_refs(pages, start, end):
+    """Per-page referrer breakdown for the busiest pages.
+
+    The site-wide referrer list answers "who links to the site"; this answers
+    "who links to *this page*", which is the more useful question when one
+    page dominates the ranking. Best-effort: a page without a stored path_id,
+    or one the endpoint has nothing for, simply carries no `refs` key and the
+    report omits its disclosure row.
+    """
+    for page in pages[:REF_PAGES]:
+        path_id = page.get("path_id")
+        if not path_id:
+            continue
+        refs = [{"name": r.get("name"), "count": int(r.get("count") or 0)}
+                for r in stats_list("/stats/hits/%s" % path_id, start, end)
+                if r.get("name")]
+        refs.sort(key=lambda r: r["count"], reverse=True)
+        refs = [r for r in refs if r["count"]][:5]
+        if refs:
+            page["refs"] = refs
+    return pages
+
+
+def fetch_page_series(start, end):
+    """Daily series per page, stored once for the all-time window.
+
+    The site-wide trend says when the site was busy; this says which page was
+    busy then, which is what makes a spike interpretable. Requested with
+    `group=day` because the default hourly buckets would be ~24x the rows for
+    a resolution the chart never draws.
+    """
+    out = []
+    for hit in stats_list("/stats/hits", start, end, extra={"group": "day"}):
+        if hit.get("event") or not hit.get("path"):
+            continue
+        points = [{"date": d.get("day"), "views": int(d.get("daily") or 0)}
+                  for d in (hit.get("stats") or []) if d.get("day")]
+        if not points:
+            continue
+        out.append({"path": hit["path"], "title": (hit.get("title") or "").strip(),
+                    "count": int(hit.get("count") or 0), "stats": points})
+    out.sort(key=lambda r: r["count"], reverse=True)
+    return out[:SERIES_PAGES]
+
+
+def fetch_site_meta():
+    """Site time zone, first recorded hit and retention setting.
+
+    The hour-of-day panel is unreadable without knowing which clock it is on,
+    and `data_retention` is worth publishing next to it: it states how long
+    GoatCounter keeps the raw hits this report is derived from. All of it is
+    optional — the API shape here is thinner than the stats endpoints, so a
+    miss degrades to an absent field rather than a failed run.
+    """
+    meta = {}
+    # Not routed through get(): that helper always sends start/end, and this
+    # endpoint rejects an unknown query parameter with a 400 rather than
+    # ignoring it — the same trap documented on /stats/hits and `offset`.
+    try:
+        r = requests.get(BASE + "/sites", headers=HEADERS, timeout=30)
+        data = r.json() if r.status_code == 200 else {}
+    except (requests.RequestException, ValueError) as e:
+        print("[WARN] /sites: %s" % e)
+        return meta
+    sites = (data or {}).get("sites") or []
+    site = next((s for s in sites if s.get("code") == SITE_NAME), sites[0] if sites else None)
+    if not site:
+        return meta
+    zone = ((site.get("user_defaults") or {}).get("timezone") or {}).get("Zone")
+    if zone:
+        meta["timezone"] = zone
+    if site.get("first_hit_at"):
+        meta["first_hit_at"] = site["first_hit_at"]
+    # The field is misspelled "setttings" in the API response, and has been
+    # for as long as the v0 schema has existed; both spellings are read so a
+    # future correction upstream does not silently blank the panel.
+    settings = site.get("setttings") or site.get("settings") or {}
+    if settings.get("data_retention") is not None:
+        meta["data_retention_days"] = int(settings["data_retention"])
+    return meta
+
+
 def fetch_window(label, days, offset):
     """Build one window block. Returns (block, raw_total) or (None, None)."""
     start, end = window_bounds(days, offset)
@@ -163,6 +278,18 @@ def fetch_window(label, days, offset):
         "end": end.isoformat(),
         "pageviews": int(total.get("total") or 0),
     }
+
+    # One /stats/hits response feeds three panels: the page ranking, the
+    # tracked-interaction ranking, and the hour-of-day profile.
+    hits = stats_list("/stats/hits", start, end)
+    rows = normalize("pages", hits)
+    pages = [r for r in rows if not r["event"]]
+    events = [r for r in rows if r["event"]]
+    block["pages_total"] = len(pages)
+    block["pages"] = attach_refs(pages[:LIST_CAP], start, end)
+    block["events_total"] = len(events)
+    block["events"] = events[:LIST_CAP]
+    block["hourly"] = hour_profile(hits)
 
     for key, path in DIMENSIONS:
         rows = normalize(key, stats_list(path, start, end))
@@ -234,6 +361,10 @@ out = {
     "window_order": [key for key, _, _, _ in WINDOWS if key in windows],
     "windows": windows,
     "timeseries": timeseries,
+    # Per-page daily series, stored once: the panel that draws it always
+    # plots the full tracked period, so a copy per window would be dead weight.
+    "page_series": fetch_page_series(*window_bounds(None, 0)),
+    "site": fetch_site_meta(),
     # Flat mirror of the all-time window, kept for anything reading the
     # pre-window shape of this file.
     "totals": {"pageviews": all_win["pageviews"], "visitors": None},
@@ -255,7 +386,9 @@ with open("_data/site_stats.json", "w", encoding="utf-8") as f:
 for key in out["window_order"]:
     w = windows[key]
     print(f"[OK] {key:>4}: views={w['pageviews']} pages={w['pages_total']} "
-          f"countries={w['countries_total']} refs={w['referrers_total']} "
-          f"browsers={w['browsers_total']} systems={w['systems_total']} sizes={w['sizes_total']}")
+          f"events={w['events_total']} countries={w['countries_total']} refs={w['referrers_total']} "
+          f"browsers={w['browsers_total']} systems={w['systems_total']} sizes={w['sizes_total']} "
+          f"langs={w['languages_total']}")
 print(f"[OK] tracked since {tracked_since}, {len(timeseries)} days of series")
+print(f"[OK] per-page series for {len(out['page_series'])} pages; site meta: {out['site'] or 'unavailable'}")
 print("[OK] Saved _data/site_stats.json")

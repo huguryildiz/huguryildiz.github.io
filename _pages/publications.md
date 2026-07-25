@@ -321,22 +321,44 @@ var PUBS = [
     if (state.q !== "all" && p.q !== state.q) return false;
     return true;
   }
+  /* Outbound-click tracking. GoatCounter records a click on any element
+     carrying data-goatcounter-click as an event, whose "path" is the value
+     below and whose title is shown beside it in the report. A stable key per
+     publication is what makes "which paper was opened" answerable at all; the
+     shared prefix keeps the events grouped. Escaped because both values land
+     in an HTML attribute built by string concatenation. */
+  function esc(s){
+    return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/"/g, "&quot;")
+      .replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+  function pubKey(p){
+    if (p.pdf) return p.pdf.split("/").pop().replace(/\.pdf$/i, "");
+    if (p.doi) return p.doi.replace(/^https?:\/\/(dx\.)?doi\.org\//i, "");
+    return String(p.year) + "-" + p.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").slice(0, 40);
+  }
+  function track(kind, p){
+    return ' data-goatcounter-click="' + esc(kind + "/" + pubKey(p)) +
+           '" data-goatcounter-title="' + esc(p.title) + '"';
+  }
   function linkRow(p){
     var out = "";
-    if (p.q) out += '<span class="tag" title="Journal quartile in publication year">' + p.q + '</span>';
-    if (p.scie) out += '<span class="tag" title="Indexed in Science Citation Index Expanded">SCIE</span>';
+    if (p.q) out += '<span class="tag-q ' + String(p.q).toLowerCase() + '" title="Journal quartile in publication year">' + p.q + '</span>';
+    if (p.scie) out += '<span class="tag-scie" title="Indexed in Science Citation Index Expanded">SCIE</span>';
     if (p.award) out += '<span class="tag tag-award">' + p.award + '</span>';
     if (p.mostCited) out += '<span class="tag tag-award">Most cited</span>';
-    if (p.doi) out += '<a class="publink ext" href="' + p.doi + '" target="_blank" rel="noopener"><i class="ai ai-doi" aria-hidden="true"></i> DOI<span class="sr-only"> (external)</span></a>';
-    if (p.pdf) out += '<a class="publink ext" href="' + SITE + p.pdf + '" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-file"/></svg> PDF<span class="sr-only"> (external)</span></a>';
-    if (p.slides) out += '<a class="publink ext" href="' + p.slides + '" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-slides"/></svg> Slides<span class="sr-only"> (external)</span></a>';
-    if (p.poster) out += '<a class="publink ext" href="' + p.poster + '" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-image"/></svg> Poster<span class="sr-only"> (external)</span></a>';
+    if (p.doi) out += '<a class="publink ext"' + track("doi", p) + ' href="' + p.doi + '" target="_blank" rel="noopener"><i class="ai ai-doi" aria-hidden="true"></i> DOI<span class="sr-only"> (external)</span></a>';
+    if (p.pdf) out += '<a class="publink ext"' + track("pdf", p) + ' href="' + SITE + p.pdf + '" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-file"/></svg> PDF<span class="sr-only"> (external)</span></a>';
+    if (p.slides) out += '<a class="publink ext"' + track("slides", p) + ' href="' + p.slides + '" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-slides"/></svg> Slides<span class="sr-only"> (external)</span></a>';
+    if (p.poster) out += '<a class="publink ext"' + track("poster", p) + ' href="' + p.poster + '" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-image"/></svg> Poster<span class="sr-only"> (external)</span></a>';
     return out;
   }
   function entry(p){
     var href = p.doi || (p.pdf ? SITE + p.pdf : null);
+    /* The heading points at the same destination as the DOI or PDF button, so
+       it reports the same event: the question is which paper was opened, not
+       which of the two controls did it. */
     var title = href
-      ? '<a href="' + href + '" target="_blank" rel="noopener">' + p.title + '</a>'
+      ? '<a' + track(p.doi ? "doi" : "pdf", p) + ' href="' + href + '" target="_blank" rel="noopener">' + p.title + '</a>'
       : p.title;
     return '<li class="pub"><span class="year tnum" aria-hidden="true">' + p.year + '</span>' +
       '<div><p class="t">' + title + '</p>' +
@@ -357,6 +379,10 @@ var PUBS = [
         items.map(entry).join("") + '</ol></div>';
     });
     host.innerHTML = html;
+    /* count.js binds click handlers once, on load. This list is rebuilt on
+       every filter change, so the new links would carry the attribute and
+       report nothing without rebinding. It skips elements it already bound. */
+    if (window.goatcounter && window.goatcounter.bind_events) window.goatcounter.bind_events();
     $("#pubEmpty").hidden = shown !== 0;
     $("#pubCount").textContent = "Showing " + shown + " of " + PUBS.length;
     var isDefault = state.type === "all" && state.year === "all" && state.q === "all";

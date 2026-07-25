@@ -116,6 +116,41 @@ permalink: /stats/
     <div class="reach-stacks" id="reachEnvironment"></div>
   </section>
 
+  <section class="reach-panel reach-events" aria-labelledby="events-title" id="reachEventsPanel" hidden>
+    <header class="reach-section-head">
+      <div>
+        <p class="reach-index">06 / Interactions</p>
+        <h2 id="events-title">What readers acted on</h2>
+      </div>
+      <span class="reach-unit">Clicks</span>
+    </header>
+    <div id="reachEvents"></div>
+    <p class="reach-note">Counted only where the page could record the click: a download, a DOI, or a link out. These are clicks, not completed downloads, and they are missing wherever scripts were blocked—so they read as a floor, not a total.</p>
+  </section>
+
+  <section class="reach-panel reach-hours" aria-labelledby="hours-title" id="reachHoursPanel" hidden>
+    <header class="reach-section-head">
+      <div>
+        <p class="reach-index">07 / Daily rhythm</p>
+        <h2 id="hours-title">When the site is read</h2>
+      </div>
+      <span class="reach-unit" id="reachHoursZone">By hour</span>
+    </header>
+    <div id="reachHours"></div>
+  </section>
+
+  <section class="reach-panel reach-trails" aria-labelledby="trails-title" id="reachTrailsPanel" hidden>
+    <header class="reach-section-head">
+      <div>
+        <p class="reach-index">08 / Page trends</p>
+        <h2 id="trails-title">How each page trended</h2>
+      </div>
+      <span class="reach-unit">Whole tracked period</span>
+    </header>
+    <div id="reachTrails"></div>
+    <p class="reach-note">Each line covers the entire tracked period rather than the selected range, so the panels can be compared with one another and with the trend at the top of the page.</p>
+  </section>
+
   <aside class="reach-method" aria-labelledby="method-title">
     <p class="reach-index">Method note</p>
     <h2 id="method-title">How to read this report</h2>
@@ -124,7 +159,9 @@ permalink: /stats/
       <p>The date-range control re-slices one stored daily snapshot. Page-view totals, averages and period-over-period changes are computed from that daily series, so they are exact for any range, including one picked from the calendar. A change is shown only when the whole preceding period of equal length falls inside the tracked window—otherwise it is omitted rather than compared against partial data.</p>
       <p>The ranked breakdowns (pages, countries, sources, and reading environment) are a different case: GoatCounter aggregates them server-side, so only the preset ranges carry their own figures. Choosing a custom range leaves those panels showing all-time totals, and each one says so rather than implying the numbers match the selected dates.</p>
       <p>The trend can be read two ways. <strong>Raw</strong> plots the page views recorded in each day or week on its own; <strong>Cumulative</strong> adds them up as the range progresses, so the final point equals the range total shown above. Neither adds information the other lacks—the axis label states which one is on screen.</p>
-      <p>Browser, operating-system, and screen-class shares are reported as coarse aggregates over page views. They carry no per-visitor detail and are not linked to any other dimension in this report. Maintenance and measurement paths such as <code>/404.html</code> and <code>/stats/</code> are excluded from the public content ranking without altering the source data.</p>
+      <p>Browser, operating-system, screen-class, and language shares are reported as coarse aggregates over page views. They carry no per-visitor detail and are not linked to any other dimension in this report. Language is the preference the browser sent, which is a setting rather than a statement about the reader. Maintenance and measurement paths such as <code>/404.html</code> and <code>/stats/</code> are excluded from the public content ranking without altering the source data.</p>
+      <p>Interactions are counted separately from page views and are never added to them. A click on a download, a DOI, or an outbound link is recorded by the page itself, which means it is missing wherever scripts did not run, and it records the click rather than whether the file finished downloading or the destination loaded. Read those figures as a lower bound. The same applies to the referrer line under a page in the readership panel: it splits that page's own arrivals, so it does not sum to the site-wide discovery ranking.</p>
+      <p>The hour-of-day panel is in the site's configured time zone, named in the panel header, not in the reader's own clock and not in UTC. It aggregates every day in the selected range into twenty-four buckets, so it describes a typical day across that range rather than any particular one.</p>
       <p>This statement describes the source of the figures on this page only. It is not a site-wide claim about every analytics service loaded by huguryildiz.com.</p>
     </div>
   </aside>
@@ -464,11 +501,21 @@ permalink: /stats/
       bar.appendChild(el('i'));
       li.appendChild(bar);
       var strong = el('strong', null, fmt(row.count));
-      strong.appendChild(el('span', 'sr-only', ' page views'));
+      strong.appendChild(el('span', 'sr-only', ' ' + (opts.unit || 'page view') + (row.count === 1 ? '' : 's')));
       li.appendChild(strong);
+      /* An optional second line under the bar — used for the per-page
+         referrer split, which qualifies the row it sits under. */
+      if (row.meta) li.appendChild(el('p', 'reach-subrow', row.meta));
       list.appendChild(li);
     });
     host.replaceChildren(list);
+  }
+
+  /* GoatCounter stores the page title it saw; it is the better label whenever
+     the curated map has no entry, and it keeps new pages from showing up as
+     bare paths until someone remembers to add them here. */
+  function pageLabel(row){
+    return PAGE_LABELS[row.path] || row.title || row.path;
   }
 
   function renderPages(key){
@@ -476,14 +523,208 @@ permalink: /stats/
     var info = breakdown(key, 'pages');
     var rows = info.rows.filter(function(r){ return !HIDDEN_PAGES[r.path]; }).slice(0, 5)
       .map(function(r){
-        var label = PAGE_LABELS[r.path] || r.path;
         var href = r.path === '/' ? '/' : (r.path.charAt(r.path.length - 1) === '/' ? r.path : r.path + '/');
-        return { name:label, count:r.count, href:href };
+        var meta = null;
+        if (r.refs && r.refs.length) {
+          meta = 'Reached via ' + r.refs.slice(0, 3).map(function(ref){
+            return ref.name + ' ' + fmt(ref.count);
+          }).join(' · ');
+        }
+        return { name:pageLabel(r), count:r.count, href:href, meta:meta };
       });
     barList(host, rows, { label:'Most viewed content pages',
       emptyTitle:'No page ranking available',
       emptyBody:'Content rankings will appear after the next successful data refresh.' });
     staleNote(host, info);
+  }
+
+  /* ---- tracked interactions ------------------------------------------------ */
+  function renderEvents(key){
+    var panel = document.getElementById('reachEventsPanel');
+    var host = document.getElementById('reachEvents');
+    if (!panel || !host) return;
+    var info = breakdown(key, 'events');
+    /* The panel is hidden rather than shown empty: until something is
+       instrumented and clicked, an "interactions" heading over a blank box
+       claims a measurement that does not exist yet. */
+    if (!info.rows.length) { panel.hidden = true; return; }
+    panel.hidden = false;
+    barList(host, info.rows.slice(0, 6).map(function(r){
+      return { name:r.title || r.path, count:r.count };
+    }), { label:'Most clicked downloads and outbound links', unit:'clicks',
+          emptyTitle:'', emptyBody:'' });
+    staleNote(host, info);
+  }
+
+  /* ---- hour-of-day profile ------------------------------------------------- */
+  function renderHours(key){
+    var panel = document.getElementById('reachHoursPanel');
+    var host = document.getElementById('reachHours');
+    if (!panel || !host) return;
+    var block = windowBlock(key) || windowBlock('all');
+    var hours = (block && block.hourly) || [];
+    var sum = hours.reduce(function(t, v){ return t + (Number(v) || 0); }, 0);
+    if (hours.length !== 24 || !sum) { panel.hidden = true; return; }
+    panel.hidden = false;
+
+    var zone = (DATA.site || {}).timezone;
+    var zoneLabel = document.getElementById('reachHoursZone');
+    if (zoneLabel) zoneLabel.textContent = zone ? 'Hours, ' + zone : 'By hour of day';
+
+    var peak = hours.indexOf(Math.max.apply(null, hours));
+    var max = hours[peak] || 1;
+    /* The viewBox tracks the rendered width so one user unit stays one CSS
+       pixel: a fixed wide box would shrink the hour labels to a few pixels on
+       a phone, and a fixed narrow one would balloon them on a desktop. */
+    var W = Math.max(320, Math.round(host.clientWidth) || 720);
+    var H = Math.round(Math.min(210, Math.max(150, W / 7.5)));
+    var left = 8, right = 8, top = 14, bottom = 34;
+    var plotW = W - left - right, plotH = H - top - bottom;
+    var band = plotW / 24;
+
+    var svg = svgEl('svg', { viewBox:'0 0 ' + W + ' ' + H, role:'img',
+                             'aria-labelledby':'reachHoursTitle reachHoursDesc' });
+    svg.appendChild(svgEl('title', { id:'reachHoursTitle' }, 'Page views by hour of day'));
+    svg.appendChild(svgEl('desc', { id:'reachHoursDesc' },
+      'Busiest hour: ' + hourLabel(peak) + ' with ' + fmt(hours[peak]) + ' of ' + fmt(sum) +
+      ' page views' + (zone ? ', in ' + zone : '') + '.'));
+
+    var bars = hours.map(function(value, hour){
+      var h = Math.max(1, plotH * (value / max));
+      var bar = svgEl('rect', { class:'reach-hour-bar' + (hour === peak ? ' is-peak' : ''),
+        x:(left + band * hour + band * 0.15).toFixed(1), y:(top + plotH - h).toFixed(1),
+        width:(band * 0.7).toFixed(1), height:h.toFixed(1), rx:2 });
+      /* Labelled rather than titled: a native <title> tooltip would race the
+         styled one below, and every bar is reachable by keyboard. */
+      bar.setAttribute('tabindex', '0');
+      bar.setAttribute('role', 'img');
+      bar.setAttribute('aria-label', hourLabel(hour) + ', ' + plural(value, 'page view'));
+      svg.appendChild(bar);
+      return bar;
+    });
+    [0, 6, 12, 18].forEach(function(hour){
+      svg.appendChild(svgEl('text', { class:'reach-chart-x', x:(left + band * hour + band / 2).toFixed(1),
+        y:H - 8, 'text-anchor':'middle' }, hourLabel(hour)));
+    });
+    host.replaceChildren(svg);
+
+    var tip = el('div', 'reach-tip'); tip.hidden = true;
+    host.appendChild(tip);
+    var hovered = null;
+    function showHour(hour){
+      if (hovered) hovered.classList.remove('is-hover');
+      hovered = bars[hour];
+      hovered.classList.add('is-hover');
+      tip.replaceChildren(el('strong', null, plural(hours[hour], 'view')),
+                          el('span', null, 'at ' + hourLabel(hour)));
+      tip.hidden = false;
+      var box = svg.getBoundingClientRect();
+      var h = Math.max(1, plotH * (hours[hour] / max));
+      tip.style.left = ((left + band * hour + band / 2) / W * box.width) + 'px';
+      tip.style.top = ((top + plotH - h) / H * box.height) + 'px';
+    }
+    function hideHour(){
+      if (hovered) hovered.classList.remove('is-hover');
+      hovered = null;
+      tip.hidden = true;
+    }
+    svg.addEventListener('pointermove', function(e){
+      var box = svg.getBoundingClientRect();
+      var x = (e.clientX - box.left) / box.width * W;
+      showHour(Math.max(0, Math.min(23, Math.floor((x - left) / band))));
+    });
+    svg.addEventListener('pointerleave', hideHour);
+    bars.forEach(function(bar, hour){
+      bar.addEventListener('focus', function(){ showHour(hour); });
+      bar.addEventListener('blur', hideHour);
+    });
+
+    host.appendChild(el('p', 'reach-chart-summary',
+      'Busiest hour ' + hourLabel(peak) + ' · ' + Math.round(hours[peak] / sum * 100) + '% of views in this range'));
+  }
+  function hourLabel(hour){ return (hour < 10 ? '0' : '') + hour + ':00'; }
+
+  /* ---- per-page trend lines ------------------------------------------------ */
+  function renderTrails(){
+    var panel = document.getElementById('reachTrailsPanel');
+    var host = document.getElementById('reachTrails');
+    if (!panel || !host) return;
+    var series = (DATA.page_series || []).filter(function(s){
+      return s.stats && s.stats.length && !HIDDEN_PAGES[s.path];
+    });
+    if (!series.length) { panel.hidden = true; return; }
+    panel.hidden = false;
+
+    /* One shared vertical scale across all the small charts: drawing each to
+       its own peak would make a 3-view page look like a 60-view one. */
+    var peak = 1;
+    series.forEach(function(s){
+      s.stats.forEach(function(p){ peak = Math.max(peak, Number(p.views) || 0); });
+    });
+
+    var blocks = series.slice(0, 6).map(function(s){
+      var wrap = el('article', 'reach-trail');
+      var head = el('div', 'reach-trail-head');
+      head.appendChild(el('h3', null, pageLabel(s)));
+      head.appendChild(el('span', 'reach-trail-total', plural(s.count, 'view')));
+      wrap.appendChild(head);
+
+      var W = 320, H = 54, pad = 3;
+      var points = s.stats.map(function(p){ return Number(p.views) || 0; });
+      var stepX = points.length > 1 ? (W - pad * 2) / (points.length - 1) : 0;
+      var yAt = function(v){ return pad + (H - pad * 2) * (1 - v / peak); };
+      var d = points.map(function(v, i){
+        return (i ? 'L' : 'M') + (pad + stepX * i).toFixed(1) + ' ' + yAt(v).toFixed(1);
+      }).join(' ');
+
+      var best = points.indexOf(Math.max.apply(null, points));
+      var svg = svgEl('svg', { viewBox:'0 0 ' + W + ' ' + H, class:'reach-spark',
+                               preserveAspectRatio:'none', role:'img',
+                               'aria-label':pageLabel(s) + ': ' + plural(s.count, 'page view') +
+                                 ' over ' + plural(points.length, 'day') + ', busiest ' +
+                                 shortDate(s.stats[best].date) + ' with ' + fmt(points[best]) + '.' });
+      svg.appendChild(svgEl('path', { class:'reach-spark-area',
+        d:d + ' L' + (pad + stepX * (points.length - 1)).toFixed(1) + ' ' + (H - pad) +
+          ' L' + pad + ' ' + (H - pad) + ' Z' }));
+      svg.appendChild(svgEl('path', { class:'reach-spark-line', d:d, 'vector-effect':'non-scaling-stroke' }));
+      /* Same crosshair-and-tooltip idiom as the main trend chart, so a reader
+         who has learned one chart on this page has learned all of them. */
+      var cross = svgEl('line', { class:'reach-chart-cross', x1:0, y1:pad, x2:0, y2:H - pad });
+      cross.setAttribute('opacity', '0');
+      var dot = svgEl('circle', { class:'reach-chart-dot', r:3.5, cx:0, cy:0 });
+      dot.setAttribute('opacity', '0');
+      svg.appendChild(cross); svg.appendChild(dot);
+      wrap.appendChild(svg);
+
+      var tip = el('div', 'reach-tip'); tip.hidden = true;
+      wrap.appendChild(tip);
+      svg.addEventListener('pointermove', function(e){
+        var box = svg.getBoundingClientRect();
+        var i = Math.round((e.clientX - box.left) / box.width * (points.length - 1));
+        i = Math.max(0, Math.min(points.length - 1, i));
+        cross.setAttribute('x1', (pad + stepX * i).toFixed(1));
+        cross.setAttribute('x2', (pad + stepX * i).toFixed(1));
+        cross.setAttribute('opacity', '1');
+        dot.setAttribute('cx', (pad + stepX * i).toFixed(1));
+        dot.setAttribute('cy', yAt(points[i]).toFixed(1));
+        dot.setAttribute('opacity', '1');
+        tip.replaceChildren(el('strong', null, plural(points[i], 'view')),
+                            el('span', null, shortDate(s.stats[i].date)));
+        tip.hidden = false;
+        tip.style.left = ((pad + stepX * i) / W * box.width) + 'px';
+        tip.style.top = (yAt(points[i]) / H * box.height) + 'px';
+      });
+      svg.addEventListener('pointerleave', function(){
+        cross.setAttribute('opacity', '0');
+        dot.setAttribute('opacity', '0');
+        tip.hidden = true;
+      });
+
+      wrap.appendChild(el('p', 'reach-trail-foot',
+        'Busiest ' + shortDate(s.stats[best].date) + ' · ' + fmt(points[best])));
+      return wrap;
+    });
+    host.replaceChildren.apply(host, blocks);
   }
 
   function renderReferrers(key){
@@ -595,7 +836,8 @@ permalink: /stats/
   var STACKS = [
     { key:'browsers', title:'Browsers' },
     { key:'systems', title:'Operating systems' },
-    { key:'sizes', title:'Screen classes' }
+    { key:'sizes', title:'Screen classes' },
+    { key:'languages', title:'Browser languages' }
   ];
   var SLOTS = 4; /* four brand hues, then a neutral "Other" */
 
@@ -707,6 +949,14 @@ permalink: /stats/
   document.addEventListener('click', closeStackTips);
   document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeStackTips(); });
   window.addEventListener('resize', closeStackTips);   /* a placed tip would otherwise drift */
+
+  /* The hour profile sizes its viewBox from the rendered width, so it is the
+     one panel that has to be redrawn when that width changes. */
+  var hoursRedraw = null;
+  window.addEventListener('resize', function(){
+    clearTimeout(hoursRedraw);
+    hoursRedraw = setTimeout(function(){ renderHours(current); }, 150);
+  });
 
   /* ---- date-range picker: presets first, calendar behind the hairline ------ */
   var scope = document.getElementById('reachScope');
@@ -1031,10 +1281,13 @@ permalink: /stats/
     renderCountries(current);
     renderReferrers(current);
     renderStacks(current);
+    renderEvents(current);
+    renderHours(current);
   }
 
   toolbar.hidden = false;
   apply();
+  renderTrails();
   loadMap(function(){ renderCountries(current); });
 })();
 </script>
