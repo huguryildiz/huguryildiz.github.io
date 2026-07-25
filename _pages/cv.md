@@ -16,10 +16,11 @@ permalink: /cv/
     </div>
   </header>
 
+  {% assign sm = site.data.scholar_metrics %}
   <div class="statgrid" role="group" aria-label="At a glance">
     <div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg><b>40+</b><span>Publications</span></div>
-    <div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg><b>&gt;1,000</b><span>Citations<small>Google Scholar · Jul 2026</small></span></div>
-    <div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-target"/></svg><b>15</b><span>h-index</span></div>
+    <div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg><b>{{ sm.citations_display }}</b><span>Citations<small>Google Scholar · {{ sm.updated_utc | date: "%b %Y" }}</small></span></div>
+    <div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-target"/></svg><b>{{ sm.h_index }}</b><span>h-index<small>Google Scholar · {{ sm.updated_utc | date: "%b %Y" }}</small></span></div>
     <div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-cap"/></svg><b>7</b><span>Graduate theses supervised</span></div>
     <div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg><b>40+</b><span>Senior design teams</span></div>
   </div>
@@ -130,7 +131,7 @@ permalink: /cv/
         <div class="when tnum">2019</div>
         <div class="what">
           <div class="t"><svg class="licon" aria-hidden="true" style="color:var(--accent);"><use href="#i-award"/></svg> Best Paper Award (third place), IEEE MENACOMM</div>
-          <div class="d">“Utilization of multi-sink architectures for lifetime maximization in underwater sensor networks”, Manama, Kingdom of Bahrain.</div>
+          <div class="d">“Utilization of multi-sink architectures for lifetime maximization in underwater sensor networks”, Manama, Kingdom of Bahrain. <a href="{{ '/files/Yildiz_HuseyinUgur_BestPaperAward_MENACOMM_2019.pdf' | relative_url }}">Certificate (PDF)</a></div>
         </div>
       </div>
 

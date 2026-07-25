@@ -25,7 +25,7 @@ Minimal Mistakes path for utility pages.
 | [Teaching](https://huguryildiz.com/teaching/) | Undergraduate and graduate courses |
 | [Students](https://huguryildiz.com/students/) | Graduate supervision and information for prospective students |
 | [Service](https://huguryildiz.com/service/) | Reviewing, committee, chairing, institutional, and invited-talk activities |
-| [Site Reach](https://huguryildiz.com/stats/) | Aggregated GoatCounter page-view, content, geographic, and referral summaries with explicit data limitations |
+| [Site Reach](https://huguryildiz.com/stats/) | Aggregated GoatCounter page-view, content, geographic, referral, and reading-environment summaries, selectable by date range, with explicit data limitations |
 
 ## Rendering architecture
 
@@ -35,7 +35,7 @@ before changing layouts, navigation, styles, or scripts.
 | Path | Pages | Rendering chain |
 | --- | --- | --- |
 | Primary academic interface | Home, publications, research, writing, posts, CV, teaching, students, service, and site reach | Page → `_layouts/academic.html` → `_layouts/compress.html` → `assets/css/redesign.css`; posts first pass through `_layouts/post.html` |
-| Minimal Mistakes interface | 404, search, terms, and other pages without `layout: academic` | Local layouts and includes → `assets/css/main.scss`, `assets/css/custom.css`, and `_sass/` |
+| Minimal Mistakes interface | 404, terms, and other pages without `layout: academic` | Local layouts and includes → `assets/css/main.scss`, `assets/css/custom.css`, and `_sass/` |
 
 The primary navigation is defined directly in `_layouts/academic.html`.
 `_data/navigation.yml` affects the retained Minimal Mistakes interface only.
@@ -49,20 +49,28 @@ The primary navigation is defined directly in `_layouts/academic.html`.
 | `_posts/` | Dated writing entries published under `/writing/:title/` |
 | `_layouts/academic.html` | Primary navigation, page shell, footer, theme control, and shared interactions |
 | `_layouts/post.html` | Writing-entry metadata, reading time, tags, and optional source link |
+| `_includes/_shared/` | Head fragments shared by both rendering paths: favicon markup and animation, GTM, GoatCounter |
 | `_includes/hero-uwsn.html` | Interactive ocean digital twin and underwater acoustic-network scenario |
 | `_includes/research-map.html` | Interactive research map rendered from `_data/research_map.yml` |
 | `assets/css/redesign.css` | Primary academic-interface styles |
 | `_layouts/`, `_includes/`, `_sass/`, `assets/css/main.scss` | Local Minimal Mistakes rendering and overrides |
-| `_data/research_metrics.json` | OpenAlex metrics snapshot |
+| `_data/scholar_metrics.json` | Google Scholar metrics snapshot; rendered by `index.md` and `_pages/cv.md` |
+| `_data/research_metrics.json` | OpenAlex metrics snapshot; dormant fallback, not rendered |
 | `_data/site_stats.json` | Sanitized GoatCounter snapshot rendered by `_pages/stats.md` |
 | `files/` | CV, theses, papers, and other downloadable scholarly documents |
 | `assets/images/` | Portraits, research graphics, course images, project images, and favicons |
 | `assets/video/courses/`, `assets/video/topics/` | Course and research-topic media |
-| `scripts/` | OpenAlex and GoatCounter retrieval plus optional CV-conversion utilities |
+| `scripts/` | Google Scholar, OpenAlex, and GoatCounter retrieval plus optional CV-conversion utilities; excluded from the build (see `scripts/README.md`) |
+| `images/` | Compatibility copies of two social-card images at their historical `/images/...` URLs; not the canonical image location |
 | `_config.yml` | Jekyll, theme, metadata, analytics, and plugin configuration |
 | `PRODUCT.md` | Product, data-honesty, design, and accessibility contract for the ocean digital twin |
 
 Generated output under `_site/` is not a source and should not be edited.
+
+What reaches the public site is decided by `exclude` in `_config.yml`, not by
+`.gitignore`. Jekyll skips dot- and underscore-prefixed paths automatically; any other
+tracked path is copied into `_site/` and served. Before adding a file at the repository
+root, decide whether it should become a public URL.
 
 ## Local development
 
@@ -109,15 +117,23 @@ separate artifacts; changing one does not update the others automatically.
   counts must remain consistent with `_includes/research-map.html`.
 - The writing index is `_pages/writing.md`; dated entries live in `_posts/`.
   Post URLs follow `/writing/:title/`, as configured in `_config.yml`.
-- Do not infer or hand-edit bibliometric values without a source. To refresh
-  the OpenAlex snapshot locally, run:
+- Do not infer or hand-edit bibliometric values without a source. The citation
+  counts, h-index, and work count shown on the home page and the CV come from
+  `_data/scholar_metrics.json`. To refresh that snapshot locally, run:
+
+  ```bash
+  SERPAPI_KEY=... SCHOLAR_AUTHOR_ID=nQwHS1gAAAAJ python3 scripts/fetch_scholar.py
+  ```
+
+  Google Scholar has no public API, so the script reads the profile through
+  SerpApi's Google Scholar Author endpoint. The key is a secret: never print it,
+  embed it in browser code, or commit it. To refresh the OpenAlex snapshot, run:
 
   ```bash
   OPENALEX_AUTHOR_ID=A5085505896 python3 scripts/fetch_metrics.py
   ```
 
-  The script requires Python's `requests` package and writes
-  `_data/research_metrics.json`. `OPENALEX_MAILTO` is optional.
+  Both scripts require Python's `requests` package. `OPENALEX_MAILTO` is optional.
 - `_pages/stats.md` renders the sanitized snapshot in
   `_data/site_stats.json`. The daily GitHub Actions workflow runs
   `scripts/fetch_goatcounter.py` with the `GOATCOUNTER_API_TOKEN` repository
@@ -150,9 +166,15 @@ A push to `master` starts `.github/workflows/jekyll.yml`, which builds the site
 with Ruby 3.1 and deploys it to GitHub Pages. The custom domain is declared in
 `CNAME`.
 
-`.github/workflows/update-openalex.yml` runs monthly and can also be triggered
-manually. It retrieves the configured OpenAlex author record and commits an
-updated `_data/research_metrics.json` only when the snapshot changes.
+`.github/workflows/update-scholar.yml` runs monthly and can also be triggered
+manually. It reads the Google Scholar profile through SerpApi and commits an
+updated `_data/scholar_metrics.json` only when the snapshot changes. It needs the
+`SERPAPI_KEY` and `SCHOLAR_AUTHOR_ID` repository secrets.
+
+`.github/workflows/update-openalex.yml` is a dormant fallback: manual dispatch
+only, no schedule. `_data/research_metrics.json` is retained as a second
+bibliometric source but is not rendered by any page and is not refreshed
+automatically.
 
 `.github/workflows/update-goatcounter.yml` runs daily and can also be triggered
 manually. It retrieves aggregated analytics with a repository secret and
