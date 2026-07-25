@@ -8,7 +8,6 @@
 
   <div class="uw-ui">
     <div class="uw-topleft">
-      <span class="uw-chip uw-chip-sim">SIMULATED SCENARIO</span>
       <span class="uw-chip uw-chip-state" id="uw-state">STANDBY</span>
       <div class="uw-layers" role="group" aria-label="Data layers">
         <button type="button" data-layer="all" aria-pressed="true">All</button>
@@ -144,15 +143,24 @@
 #uwsn-hero .uw-ui button:focus-visible{outline:2px solid #7FDCF2;outline-offset:1px;}
 #uwsn-hero .uw-ui button[aria-pressed="true"]{color:#06222F;background:#8ADAF2;border-color:#8ADAF2;font-weight:600;}
 
-/* top-left: sim chip + layer bar */
+/* top-left: state chip + layer bar */
 #uwsn-hero .uw-topleft{position:absolute;top:10px;left:10px;display:flex;flex-direction:column;
   gap:7px;align-items:flex-start;max-width:70%;}
 #uwsn-hero .uw-chip{display:inline-block;font-size:9.5px;letter-spacing:.08em;font-weight:600;
   padding:4px 8px;border-radius:5px;}
-#uwsn-hero .uw-chip-sim{color:#F5CE8A;border:1px solid rgba(240,178,70,.55);
-  background:rgba(30,22,8,.55);}
 #uwsn-hero .uw-chip-state{color:#A9CDDC;border:1px solid rgba(140,190,210,.35);
   background:rgba(6,20,31,.62);letter-spacing:.06em;}
+/* status LED: pseudo-element so the state text can be replaced without losing it.
+   0.45 Hz — deliberately far below the 3 Hz flash threshold. */
+#uwsn-hero .uw-chip-state::before{content:"";display:inline-block;width:5px;height:5px;
+  border-radius:50%;margin:0 7px 1px 0;vertical-align:middle;background:#6FD2F0;
+  box-shadow:0 0 5px rgba(111,210,240,.9);animation:uw-blip 2.2s ease-in-out infinite;}
+#uwsn-hero .uw-chip-state[data-st="idle"]::before{background:#8FA9B8;box-shadow:none;animation:none;}
+@keyframes uw-blip{0%,100%{opacity:1;box-shadow:0 0 5px rgba(111,210,240,.9);}
+  50%{opacity:.3;box-shadow:0 0 1px rgba(111,210,240,.25);}}
+@media (prefers-reduced-motion:reduce){
+  #uwsn-hero .uw-chip-state::before{animation:none;}
+}
 /* progressive disclosure: advanced controls appear in Explore mode only */
 #uwsn-hero:not(.uw-explore) .uw-layers,
 #uwsn-hero:not(.uw-explore) .uw-topright,
@@ -2616,6 +2624,8 @@ function updateDOM(){
   if(stEl){
     var sl=stateLine();
     if(stEl.textContent!==sl){stEl.textContent=sl;}
+    var st=(REDUCED||mode==='pause')?'idle':'live';
+    if(stEl.getAttribute('data-st')!==st){stEl.setAttribute('data-st',st);}
   }
   if(logDirty){rebuildLog();}
   refreshPanel(false);
