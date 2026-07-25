@@ -29,14 +29,7 @@ permalink: /cv/
   <div class="cvlayout" style="margin-top:1rem;">
     <div>
       <h2 class="sec" id="cv-summary"><svg class="hicon" aria-hidden="true"><use href="#i-user"/></svg>Summary</h2>
-      <p>Associate Professor specializing in operations research and mathematical optimization for
-        wireless, underwater, and drone-assisted communication systems. Over a decade of research
-        developing optimization-based models for routing, resource allocation, reliability, and energy
-        efficiency in complex networked systems, increasingly integrating reinforcement learning for
-        dynamic and large-scale environments. Current interests extend to hybrid optimization–learning
-        methodologies for next-generation paradigms, including quantum network routing. Active as
-        editor, reviewer, and technical program committee member, alongside teaching, curriculum
-        development, accreditation, and academic leadership.</p>
+      <p>{{ site.data.cv.summary_web }}</p>
 
       <h2 class="sec" id="cv-ids"><svg class="hicon" aria-hidden="true"><use href="#i-badge"/></svg>Persistent identifiers</h2>
       <ul class="profilelinks">
@@ -55,192 +48,80 @@ permalink: /cv/
       </ul>
 
       <h2 class="sec" id="cv-appointments"><svg class="hicon" aria-hidden="true"><use href="#i-briefcase"/></svg>Academic &amp; professional appointments</h2>
+      {% for a in site.data.cv.appointments %}
       <div class="cvrow">
-        <div class="when tnum">2016 – present</div>
+        <div class="when tnum">{{ a.years }}</div>
         <div class="what">
-          <div class="t"><a class="instlink" href="https://www.tedu.edu.tr/en" target="_blank" rel="noopener">TED University</a>, Ankara, Turkey</div>
-          <div class="w">Department of Electrical and Electronics Engineering</div>
-          <div class="d">Associate Professor (Mar 2021 – present) · Department Chair (Jul 2021 – Jul 2024) · Assistant Professor (Sep 2016 – Mar 2021)</div>
+          <div class="t"><a class="instlink" href="{{ a.org_url }}" target="_blank" rel="noopener">{{ a.org }}</a>, {{ a.location }}</div>
+          {% if a.unit %}<div class="w">{{ a.unit }}</div>{% endif %}
+          <div class="d">{% for r in a.roles %}{{ r.title }} ({{ r.period }}){% unless forloop.last %} · {% endunless %}{% endfor %}</div>
           <ul class="dotlist">
-            <li>Founded the department's IEEE Student Branch, established a new teaching laboratory, and launched the M.Sc. program.</li>
-            <li>Led academic operations for 100+ students and 12 faculty members; oversaw accreditation and curriculum development.</li>
-            <li>Authored 20+ peer-reviewed publications (14 in IEEE journals); supervised 7 graduate theses and 40+ senior design teams.</li>
-          </ul>
+            {% for b in a.bullets_web %}<li>{{ b }}</li>
+            {% endfor %}</ul>
         </div>
       </div>
-      <div class="cvrow">
-        <div class="when tnum">2015 – 2016</div>
-        <div class="what">
-          <div class="t"><a class="instlink" href="https://www.tusas.com/en" target="_blank" rel="noopener">Turkish Aerospace</a>, Ankara, Turkey</div>
-          <div class="d">Avionics Design Engineer (Dec 2015 – Aug 2016)</div>
-          <ul class="dotlist">
-            <li>Developed and integrated network architectures for the ANKA UAV program; designed high-availability Cisco systems for 24/7 operational readiness.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="cvrow">
-        <div class="when tnum">2010 – 2015</div>
-        <div class="what">
-          <div class="t"><a class="instlink" href="https://www.turktelekom.com.tr/en" target="_blank" rel="noopener">Turk Telekom</a>, Ankara, Turkey</div>
-          <div class="d">Senior Network Engineer (Dec 2010 – Nov 2015)</div>
-          <ul class="dotlist">
-            <li>Contributed to the design and operation of the Safer Internet Service, a nationwide content-filtering platform serving 5M+ users; managed 100+ Cisco/Procera DPI systems at 99.9% uptime.</li>
-          </ul>
-        </div>
-      </div>
+      {% endfor %}
 
       <h2 class="sec" id="cv-education"><svg class="hicon" aria-hidden="true"><use href="#i-cap"/></svg>Education</h2>
+      {% for e in site.data.cv.education %}
       <div class="cvrow">
-        <div class="when tnum">2014 – 2016</div>
+        <div class="when tnum">{{ e.years }}</div>
         <div class="what">
-          <div class="t">Ph.D., Electrical and Electronics Engineering</div>
-          <div class="w"><a class="instlink" href="https://www.etu.edu.tr/en" target="_blank" rel="noopener">TOBB University of Economics and Technology</a>, Ankara, Turkey</div>
+          <div class="t">{{ e.degree }}</div>
+          <div class="w"><a class="instlink" href="{{ e.org_url }}" target="_blank" rel="noopener">{{ e.org }}</a>, {{ e.location }}</div>
         </div>
       </div>
-      <div class="cvrow">
-        <div class="when tnum">2011 – 2013</div>
-        <div class="what">
-          <div class="t">M.Sc., Electrical and Electronics Engineering</div>
-          <div class="w"><a class="instlink" href="https://www.etu.edu.tr/en" target="_blank" rel="noopener">TOBB University of Economics and Technology</a>, Ankara, Turkey</div>
-        </div>
-      </div>
-      <div class="cvrow">
-        <div class="when tnum">2005 – 2009</div>
-        <div class="what">
-          <div class="t">B.Sc., Electrical and Electronics Engineering</div>
-          <div class="w"><a class="instlink" href="https://w3.bilkent.edu.tr/bilkent/" target="_blank" rel="noopener">Bilkent University</a>, Ankara, Turkey</div>
-        </div>
-      </div>
+      {% endfor %}
 
       <h2 class="sec" id="cv-theses"><svg class="hicon" aria-hidden="true"><use href="#i-file"/></svg>Graduate theses</h2>
+      {% for t in site.data.cv.theses_own %}
       <div class="cvrow">
-        <div class="when tnum">2016</div>
+        <div class="when tnum">{{ t.year }}</div>
         <div class="what">
-          <div class="t">Ph.D. dissertation</div>
-          <div class="d"><i>Transmission power control for link-level handshaking in wireless sensor networks</i> — advisor: Prof. Bulent Tavli</div>
+          <div class="t">{{ t.kind }}</div>
+          <div class="d"><i>{{ t.title }}</i> — advisor: {{ t.advisor }}{% if t.co_advisor %} · co-advisor: {{ t.co_advisor }}{% endif %}</div>
           <div class="links">
-            <a class="ext" href="/files/Yildiz_HuseyinUgur_PhD_Dissertation.pdf" target="_blank" rel="noopener" data-goatcounter-click="thesis-pdf/phd-dissertation" data-goatcounter-title="PhD dissertation (PDF)"><svg class="licon" aria-hidden="true"><use href="#i-file"/></svg> PDF</a>
-            <a class="ext" href="https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=Br_XTptK8CZ70f0JGX9xEjZCixd1XEodCqaT6dDVvnmfvltgkE09YEFFWmk5LBx2" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-archive"/></svg> YÖK thesis record</a>
+            <a class="ext" href="{{ t.pdf }}" target="_blank" rel="noopener" data-goatcounter-click="{{ t.pdf_goatcounter }}" data-goatcounter-title="{{ t.pdf_goatcounter_title }}"><svg class="licon" aria-hidden="true"><use href="#i-file"/></svg> PDF</a>
+            <a class="ext" href="{{ t.yok_url }}" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-archive"/></svg> YÖK thesis record</a>
           </div>
         </div>
       </div>
-      <div class="cvrow">
-        <div class="when tnum">2013</div>
-        <div class="what">
-          <div class="t">M.Sc. thesis</div>
-          <div class="d"><i>Communication/computation trade-offs in wireless sensor networks: Comparing network-level and node-level strategies</i> — advisor: Prof. Bulent Tavli · co-advisor: Prof. Kemal Bicakci</div>
-          <div class="links">
-            <a class="ext" href="/files/Yildiz_HuseyinUgur_MSc_Thesis.pdf" target="_blank" rel="noopener" data-goatcounter-click="thesis-pdf/msc-thesis" data-goatcounter-title="MSc thesis (PDF)"><svg class="licon" aria-hidden="true"><use href="#i-file"/></svg> PDF</a>
-            <a class="ext" href="https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=iTkOhwevEenJZ3onUvs52nzi419Y-02Qu4K0DuUcM1T12y2xRhF2YLzHmis2Ng60" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-archive"/></svg> YÖK thesis record</a>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
 
       <h2 class="sec" id="cv-honors"><svg class="hicon" aria-hidden="true"><use href="#i-award"/></svg>Honors &amp; recognition</h2>
+      {% for h in site.data.cv.honors %}
       <div class="cvrow">
-        <div class="when tnum">2021</div>
+        <div class="when tnum">{{ h.year }}</div>
         <div class="what">
-          <div class="t"><i class="ai ai-ieee" aria-hidden="true" style="color:var(--accent);"></i> IEEE Senior Member</div>
-          <div class="d">Awarded for significant professional contributions; achieved by fewer than 10% of IEEE members.</div>
+          <div class="t">{% if h.icon %}<i class="ai ai-{{ h.icon }}" aria-hidden="true" style="color:var(--accent);"></i>{% else %}<svg class="licon" aria-hidden="true" style="color:var(--accent);"><use href="#i-award"/></svg>{% endif %} {{ h.title }}</div>
+          <div class="d">{{ h.detail_web }}{% if h.certificate_pdf %} <a href="{{ h.certificate_pdf | relative_url }}">Certificate (PDF)</a>{% endif %}</div>
         </div>
       </div>
-      <div class="cvrow">
-        <div class="when tnum">2019</div>
-        <div class="what">
-          <div class="t"><svg class="licon" aria-hidden="true" style="color:var(--accent);"><use href="#i-award"/></svg> Best Paper Award (third place), IEEE MENACOMM</div>
-          <div class="d">“Utilization of multi-sink architectures for lifetime maximization in underwater sensor networks”, Manama, Kingdom of Bahrain. <a href="{{ '/files/Yildiz_HuseyinUgur_BestPaperAward_MENACOMM_2019.pdf' | relative_url }}">Certificate (PDF)</a></div>
-        </div>
-      </div>
+      {% endfor %}
 
       <h2 class="sec" id="cv-toolbox"><svg class="hicon" aria-hidden="true"><use href="#i-tool"/></svg>Technical toolbox</h2>
       <div class="toolgroups">
+        {% for g in site.data.cv.toolbox %}
         <div>
-          <h3 class="sub">Programming &amp; scientific computing</h3>
+          <h3 class="sub">{{ g.group | replace: '&', '&amp;' }}</h3>
           <ul class="chiprow">
-            <li class="chip"><img class="clogo" src="/assets/images/icons/python.jpg" alt="" aria-hidden="true">Python</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/numpy.svg" alt="" aria-hidden="true">NumPy</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/scipy.svg" alt="" aria-hidden="true">SciPy</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/pandas.svg" alt="" aria-hidden="true">pandas</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/pytorch.svg" alt="" aria-hidden="true">PyTorch</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/streamlit.svg" alt="" aria-hidden="true">Streamlit</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/matlab.jpg" alt="" aria-hidden="true">MATLAB</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/simulink.png" alt="" aria-hidden="true">Simulink</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/latex.svg" alt="" aria-hidden="true">LaTeX</li>
-          </ul>
+            {% for it in g.items %}<li class="chip"><img class="clogo" src="/assets/images/icons/{{ it.icon }}" alt="" aria-hidden="true">{{ it.name }}</li>
+            {% endfor %}</ul>
         </div>
-        <div>
-          <h3 class="sub">Optimization &amp; modeling</h3>
-          <ul class="chiprow">
-            <li class="chip"><img class="clogo" src="/assets/images/icons/gams.jpg" alt="" aria-hidden="true">GAMS</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/gurobi.jpg" alt="" aria-hidden="true">Gurobi</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/cplex.svg" alt="" aria-hidden="true">CPLEX</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/xpress.png" alt="" aria-hidden="true">Xpress</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/pulp.jpg" alt="" aria-hidden="true">PuLP</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/pyomo.jpg" alt="" aria-hidden="true">Pyomo</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/ortools.svg" alt="" aria-hidden="true">OR-Tools</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="sub">Development</h3>
-          <ul class="chiprow">
-            <li class="chip"><img class="clogo" src="/assets/images/icons/github.jpg" alt="" aria-hidden="true">GitHub</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/jupyter.jpg" alt="" aria-hidden="true">Jupyter</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/pycharm.jpg" alt="" aria-hidden="true">PyCharm</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/spyder.jpg" alt="" aria-hidden="true">Spyder</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/vscode.jpg" alt="" aria-hidden="true">VS Code</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/cursor.jpg" alt="" aria-hidden="true">Cursor</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/docker.svg" alt="" aria-hidden="true">Docker</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/obsidian.svg" alt="" aria-hidden="true">Obsidian</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/notion.svg" alt="" aria-hidden="true">Notion</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="sub">Networking</h3>
-          <ul class="chiprow">
-            <li class="chip"><img class="clogo" src="/assets/images/icons/cisco.svg" alt="" aria-hidden="true">Cisco IOS</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/wireshark.svg" alt="" aria-hidden="true">Wireshark</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="sub">AI &amp; LLM tooling</h3>
-          <ul class="chiprow">
-            <li class="chip"><img class="clogo" src="/assets/images/icons/claude.svg" alt="" aria-hidden="true">Claude</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/claude.svg" alt="" aria-hidden="true">Claude Code</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/openai.svg" alt="" aria-hidden="true">ChatGPT</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/openai.svg" alt="" aria-hidden="true">Codex</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/gemini.svg" alt="" aria-hidden="true">Gemini</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/sakana-fugu.png" alt="" aria-hidden="true">Sakana Fugu</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/githubcopilot.svg" alt="" aria-hidden="true">GitHub Copilot</li>
-            <li class="chip"><img class="clogo" src="/assets/images/icons/antigravity.png" alt="" aria-hidden="true">Antigravity</li>
-          </ul>
-        </div>
+        {% endfor %}
       </div>
 
       <h2 class="sec" id="cv-development"><svg class="hicon" aria-hidden="true"><use href="#i-check"/></svg>Professional development</h2>
+      {% for c in site.data.cv.certificates %}
       <div class="cvrow">
-        <div class="when tnum">2025</div>
+        <div class="when tnum">{{ c.year }}</div>
         <div class="what">
-          <div class="t">Reinforcement Learning Specialization</div>
-          <div class="w">University of Alberta (Coursera)</div>
-          <div class="links"><a class="ext" href="https://www.coursera.org/account/accomplishments/specialization/26BOL8LTVD7S" target="_blank" rel="noopener"><i class="ai ai-coursera" aria-hidden="true"></i> Credential</a></div>
+          <div class="t">{{ c.title }}</div>
+          <div class="w">{{ c.org }}</div>
+          <div class="links"><a class="ext" href="{{ c.url }}" target="_blank" rel="noopener"><i class="ai ai-coursera" aria-hidden="true"></i> Credential</a></div>
         </div>
       </div>
-      <div class="cvrow">
-        <div class="when tnum">2025</div>
-        <div class="what">
-          <div class="t">Deep Learning Specialization</div>
-          <div class="w">DeepLearning.AI (Coursera)</div>
-          <div class="links"><a class="ext" href="https://www.coursera.org/account/accomplishments/specialization/JGGZ4NGSKTQZ" target="_blank" rel="noopener"><i class="ai ai-coursera" aria-hidden="true"></i> Credential</a></div>
-        </div>
-      </div>
-      <div class="cvrow">
-        <div class="when tnum">2025</div>
-        <div class="what">
-          <div class="t">Machine Learning Specialization</div>
-          <div class="w">DeepLearning.AI (Coursera)</div>
-          <div class="links"><a class="ext" href="https://www.coursera.org/account/accomplishments/specialization/FGT2PNQ9NYVL" target="_blank" rel="noopener"><i class="ai ai-coursera" aria-hidden="true"></i> Credential</a></div>
-        </div>
-      </div>
+      {% endfor %}
 
       <h2 class="sec" id="cv-languages"><svg class="hicon" aria-hidden="true"><use href="#i-globe"/></svg>Languages</h2>
       <p><b style="color:var(--head);">English</b> — Business &amp; academic proficiency &nbsp;·&nbsp;
