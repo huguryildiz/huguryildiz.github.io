@@ -14,7 +14,7 @@ permalink: /stats/
     <p class="lede">The figures published here come from GoatCounter and are refreshed daily when the data pipeline is available. This report presents aggregated page-view activity—not individual visitors—and reflects the measurement coverage and limitations stated below.</p>
 
     <dl class="reach-meta" aria-label="Report metadata">
-      <div><dt>Last updated</dt><dd>{% if stats.updated %}{{ stats.updated | date: "%d %b %Y, %H:%M UTC" }}{% else %}Awaiting refresh{% endif %}</dd></div>
+      <div><dt>Last updated</dt><dd>{% if stats.updated %}<time id="reachUpdated" datetime="{{ stats.updated }}">{{ stats.updated | date: "%d %b %Y, %H:%M UTC" }}</time>{% else %}Awaiting refresh{% endif %}</dd></div>
       <div><dt>Tracked since</dt><dd>{% if stats.range.start %}{{ stats.range.start | date: "%d %b %Y" }}{% else %}Not available{% endif %}</dd></div>
       <div><dt>Source</dt><dd><a href="https://www.goatcounter.com/" target="_blank" rel="noopener">GoatCounter<span class="sr-only"> (opens in a new tab)</span></a></dd></div>
     </dl>
@@ -134,6 +134,20 @@ permalink: /stats/
 <script>
 (function(){
   'use strict';
+
+  /* The snapshot timestamp is stamped in UTC; show it in the reader's own
+     clock, keeping the rendered UTC string when the browser cannot format it. */
+  var stamp = document.getElementById('reachUpdated');
+  if (stamp) {
+    var when = new Date(stamp.getAttribute('datetime'));
+    if (!isNaN(when.getTime())) {
+      try {
+        stamp.textContent = when.toLocaleString('en-GB', { day:'numeric', month:'short', year:'numeric',
+                                                           hour:'2-digit', minute:'2-digit', timeZoneName:'short' });
+      } catch (e) { /* keep the server-rendered UTC string */ }
+    }
+  }
+
   var host = document.getElementById('reachData');
   if (!host) return;
   var DATA;
@@ -620,6 +634,19 @@ permalink: /stats/
       head.appendChild(el('span', 'reach-stack-total', fmt(sum) + ' views'));
       wrap.appendChild(head);
 
+      var plot = el('div', 'reach-stack-plot');
+      var tip = el('div', 'reach-tip'); tip.hidden = true;
+      var pinned = null;
+      var showTip = function(seg, s){
+        tip.textContent = s.name + ' · ' + (s.count / sum * 100).toFixed(1) + '% · ' + fmt(s.count) + ' views';
+        tip.hidden = false;
+        var box = plot.getBoundingClientRect(), mark = seg.getBoundingClientRect();
+        var x = mark.left - box.left + mark.width / 2;
+        var half = tip.getBoundingClientRect().width / 2;
+        tip.style.left = Math.min(Math.max(x, half), Math.max(box.width - half, half)) + 'px';
+      };
+      var hideTip = function(){ tip.hidden = true; pinned = null; };
+
       var track = el('div', 'reach-stack-track');
       track.setAttribute('role', 'img');
       track.setAttribute('aria-label', stack.title + ': ' + segments.map(function(s){
@@ -631,9 +658,23 @@ permalink: /stats/
         seg.setAttribute('tabindex', '0');
         seg.setAttribute('role', 'button');
         seg.setAttribute('aria-label', s.name + ', ' + fmt(s.count) + ' views, ' + (s.count / sum * 100).toFixed(1) + ' percent');
+        seg.addEventListener('click', function(e){
+          e.stopPropagation();
+          var again = pinned === seg;
+          closeStackTips();            /* only one tooltip stays open at a time */
+          if (again) return;
+          pinned = seg; showTip(seg, s);
+        });
+        seg.addEventListener('mouseenter', function(){ if (!pinned) showTip(seg, s); });
+        seg.addEventListener('mouseleave', function(){ if (!pinned) tip.hidden = true; });
+        seg.addEventListener('focus', function(){ showTip(seg, s); });
+        seg.addEventListener('blur', function(){ if (pinned !== seg) tip.hidden = true; });
         track.appendChild(seg);
       });
-      wrap.appendChild(track);
+      plot.appendChild(track);
+      plot.appendChild(tip);
+      wrap.appendChild(plot);
+      wrap.__closeTip = hideTip;
 
       /* The legend carries every value, so nothing is gated behind hover. */
       var legend = el('ul', 'reach-legend');
@@ -658,6 +699,14 @@ permalink: /stats/
     }
     host.replaceChildren.apply(host, blocks);
   }
+
+  /* A pinned tooltip closes on the next click elsewhere, or on Escape. */
+  function closeStackTips(){
+    document.querySelectorAll('.reach-stack').forEach(function(w){ if (w.__closeTip) w.__closeTip(); });
+  }
+  document.addEventListener('click', closeStackTips);
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeStackTips(); });
+  window.addEventListener('resize', closeStackTips);   /* a placed tip would otherwise drift */
 
   /* ---- date-range picker: presets first, calendar behind the hairline ------ */
   var scope = document.getElementById('reachScope');

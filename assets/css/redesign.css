@@ -765,7 +765,7 @@ footer.site a:hover .licon.spotify{color:var(--accent);}
 .reach-report{container-type:inline-size;}
 .reach-head{padding-top:clamp(2.8rem,7vw,5.4rem);}
 .reach-head h1{font-size:clamp(2.35rem,5vw,4.3rem); letter-spacing:-.025em;}
-.reach-head .lede{max-width:76ch; font-size:clamp(1.02rem,1.7vw,1.15rem); line-height:1.65;}
+.reach-head .lede{max-width:none; font-size:clamp(1.02rem,1.7vw,1.15rem); line-height:1.65;}
 .reach-kicker,.reach-index{
   margin:0 0 .4rem; color:var(--accent); font-size:.72rem; font-weight:700;
   letter-spacing:.12em; line-height:1.35; text-transform:uppercase;
@@ -931,8 +931,12 @@ footer.site a:hover .licon.spotify{color:var(--accent);}
 .reach-stack-head{display:flex; justify-content:space-between; gap:1rem; align-items:baseline; margin-bottom:.7rem;}
 .reach-stack-head h3{margin:0; font-family:var(--sans); font-size:.95rem; font-weight:650;}
 .reach-stack-total{color:var(--ink-faint); font-size:.78rem; font-variant-numeric:tabular-nums;}
+.reach-stack-plot{position:relative;}
 .reach-stack-track{display:flex; gap:2px; height:14px; overflow:hidden;}
-.reach-seg{flex:0 1 var(--reach-share); min-width:2px; background:var(--hairline-strong); cursor:default;}
+.reach-tip{position:absolute; top:0; z-index:5; transform:translate(-50%,-118%); pointer-events:none;
+  background:var(--head); color:var(--bg); font-size:.78rem; line-height:1.2; padding:.24rem .5rem;
+  border-radius:5px; white-space:nowrap; font-variant-numeric:tabular-nums; box-shadow:0 4px 12px rgba(10,16,24,.18);}
+.reach-seg{flex:0 1 var(--reach-share); min-width:2px; background:var(--hairline-strong); cursor:pointer;}
 .reach-seg:first-child{border-radius:3px 0 0 3px;}
 .reach-seg:last-child{border-radius:0 3px 3px 0;}
 .reach-seg:hover,.reach-seg:focus-visible{filter:brightness(1.18); outline:none;}
