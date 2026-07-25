@@ -22,6 +22,48 @@ date, which is how this repository previously published a `/stats/` report one d
 own committed data. Do not reintroduce the marker to reduce build noise without also removing
 the cadence claim from the affected page.
 
+`fetch_goatcounter.py` notes — the snapshot is a *rewritten mirror* of GoatCounter's
+server-side aggregates, not an accumulating archive: every run replaces the file with what the
+API reports now. What each run collects, beyond the totals and the daily series:
+
+- **Pages and events come from one `/stats/hits` response.** GoatCounter returns both in the
+  same list, distinguished by the `event` flag, and the script splits them. Events are the
+  clicks instrumented with `data-goatcounter-click` (CV and thesis PDFs, publication DOI/PDF
+  links, the LinkedIn footer on posts). Because that same response carries hourly buckets, the
+  hour-of-day profile costs no extra request.
+- **Per-page referrers** are one `/stats/hits/<path_id>` call for each of the five busiest
+  pages, per window, and land on `pages[].refs`.
+- **Page titles** ride along on the same response, so `/stats/` labels a new page sensibly
+  before anyone adds it to the curated label map.
+- **Per-page daily series** (`page_series`) is fetched once, for the all-time window only,
+  with `group=day`.
+- **Site metadata** (`site`) carries the time zone the hour-of-day panel is labelled with,
+  plus GoatCounter's own `data_retention` setting. It comes from `/sites`, which — like
+  `/stats/hits` and `offset` — rejects an unexpected query parameter with a 400, so it is
+  requested without the date range every other call sends.
+
+`/stats/sizes` currently returns nothing for this site: screen-size collection is off in the
+GoatCounter site settings (`collect`), so the "Screen classes" panel is absent rather than
+broken. The same setting governs language collection, so check it there first if the new
+"Browser languages" panel stays empty after a refresh.
+
+## Permanent archive — manual, append-only
+
+| Script | Trigger | Writes | Requires |
+| --- | --- | --- | --- |
+| `fetch_goatcounter_export.py` | none — run by hand | `analytics-archive/goatcounter/` | `GOATCOUNTER_API_TOKEN`; Python `requests` |
+
+This is the counterweight to the rewritten snapshot above. It requests GoatCounter's raw hit
+export starting just after the last hit already archived, and writes it as a new gzipped CSV
+named for the hit-id span it covers. Files are never rewritten and the cursor lives in
+`analytics-archive/goatcounter/state.json`; a run whose export does not advance the cursor
+aborts rather than duplicating rows. `analytics-archive/` is in `_config.yml`'s `exclude`, so
+it is never published, and it is deliberately outside `_data/` so Jekyll does not parse it on
+every build.
+
+Run it when you want a durable checkpoint of the underlying hits — the aggregates the site
+renders only exist for as long as GoatCounter keeps them, and only in the shapes it computes.
+
 ## Dormant fallback — manual dispatch only
 
 | Script | Trigger | Writes | Requires |
@@ -41,6 +83,7 @@ requests:
 SERPAPI_KEY=... SCHOLAR_AUTHOR_ID=nQwHS1gAAAAJ python3 scripts/fetch_scholar.py
 OPENALEX_AUTHOR_ID=A5085505896              python3 scripts/fetch_openalex.py
 GOATCOUNTER_API_TOKEN=...                   python3 scripts/fetch_goatcounter.py
+GOATCOUNTER_API_TOKEN=...                   python3 scripts/fetch_goatcounter_export.py
 ```
 
 The SerpApi key and the GoatCounter token are secrets: never print them, embed them in

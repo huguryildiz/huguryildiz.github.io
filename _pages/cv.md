@@ -9,7 +9,8 @@ permalink: /cv/
   <header class="pagehead">
     <h1 id="cv-h1">Curriculum Vitae</h1>
     <div class="cvhead-actions">
-      <a class="btn btn-primary" href="/files/Yildiz_HuseyinUgur_CV.pdf" target="_blank" rel="noopener">
+      <a class="btn btn-primary" href="/files/Yildiz_HuseyinUgur_CV.pdf" target="_blank" rel="noopener"
+         data-goatcounter-click="cv-pdf" data-goatcounter-title="CV (PDF), from the CV page">
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8m0 0L5 7m3 3l3-3M3 13h10"/></svg>
         Download PDF</a>
       <a class="btn btn-quiet" href="/publications/">Publication list</a>
@@ -36,6 +37,22 @@ permalink: /cv/
         methodologies for next-generation paradigms, including quantum network routing. Active as
         editor, reviewer, and technical program committee member, alongside teaching, curriculum
         development, accreditation, and academic leadership.</p>
+
+      <h2 class="sec" id="cv-ids"><svg class="hicon" aria-hidden="true"><use href="#i-badge"/></svg>Persistent identifiers</h2>
+      <ul class="profilelinks">
+        <li><a href="https://orcid.org/0000-0002-1556-2634" target="_blank" rel="noopener">
+          <i class="ai ai-orcid" aria-hidden="true"></i>
+          ORCID <span class="tnum">0000-0002-1556-2634</span><span class="sr-only"> (external)</span></a></li>
+        <li><a href="https://www.scopus.com/authid/detail.uri?authorId=56242674200" target="_blank" rel="noopener">
+          <i class="ai ai-scopus" aria-hidden="true"></i>
+          Scopus Author ID <span class="tnum">56242674200</span><span class="sr-only"> (external)</span></a></li>
+        <li><a href="https://www.webofscience.com/wos/author/record/S-6587-2016" target="_blank" rel="noopener">
+          <i class="ai ai-researcherid" aria-hidden="true"></i>
+          ResearcherID <span class="tnum">S-6587-2016</span><span class="sr-only"> (external)</span></a></li>
+        <li><a href="https://scholar.google.com/citations?user=nQwHS1gAAAAJ" target="_blank" rel="noopener">
+          <i class="ai ai-google-scholar" aria-hidden="true"></i>
+          Google Scholar <span class="tnum">nQwHS1gAAAAJ</span><span class="sr-only"> (external)</span></a></li>
+      </ul>
 
       <h2 class="sec" id="cv-appointments"><svg class="hicon" aria-hidden="true"><use href="#i-briefcase"/></svg>Academic &amp; professional appointments</h2>
       <div class="cvrow">
@@ -102,7 +119,7 @@ permalink: /cv/
           <div class="t">Ph.D. dissertation</div>
           <div class="d"><i>Transmission power control for link-level handshaking in wireless sensor networks</i> — advisor: Prof. Bulent Tavli</div>
           <div class="links">
-            <a class="ext" href="/files/Yildiz_HuseyinUgur_PhD_Dissertation.pdf" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-file"/></svg> PDF</a>
+            <a class="ext" href="/files/Yildiz_HuseyinUgur_PhD_Dissertation.pdf" target="_blank" rel="noopener" data-goatcounter-click="thesis-pdf/phd-dissertation" data-goatcounter-title="PhD dissertation (PDF)"><svg class="licon" aria-hidden="true"><use href="#i-file"/></svg> PDF</a>
             <a class="ext" href="https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=Br_XTptK8CZ70f0JGX9xEjZCixd1XEodCqaT6dDVvnmfvltgkE09YEFFWmk5LBx2" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-archive"/></svg> YÖK thesis record</a>
           </div>
         </div>
@@ -113,7 +130,7 @@ permalink: /cv/
           <div class="t">M.Sc. thesis</div>
           <div class="d"><i>Communication/computation trade-offs in wireless sensor networks: Comparing network-level and node-level strategies</i> — advisor: Prof. Bulent Tavli · co-advisor: Prof. Kemal Bicakci</div>
           <div class="links">
-            <a class="ext" href="/files/Yildiz_HuseyinUgur_MSc_Thesis.pdf" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-file"/></svg> PDF</a>
+            <a class="ext" href="/files/Yildiz_HuseyinUgur_MSc_Thesis.pdf" target="_blank" rel="noopener" data-goatcounter-click="thesis-pdf/msc-thesis" data-goatcounter-title="MSc thesis (PDF)"><svg class="licon" aria-hidden="true"><use href="#i-file"/></svg> PDF</a>
             <a class="ext" href="https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=iTkOhwevEenJZ3onUvs52nzi419Y-02Qu4K0DuUcM1T12y2xRhF2YLzHmis2Ng60" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-archive"/></svg> YÖK thesis record</a>
           </div>
         </div>
@@ -141,6 +158,11 @@ permalink: /cv/
           <h3 class="sub">Programming &amp; scientific computing</h3>
           <ul class="chiprow">
             <li class="chip"><img class="clogo" src="/assets/images/icons/python.jpg" alt="" aria-hidden="true">Python</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/numpy.svg" alt="" aria-hidden="true">NumPy</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/scipy.svg" alt="" aria-hidden="true">SciPy</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/pandas.svg" alt="" aria-hidden="true">pandas</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/pytorch.svg" alt="" aria-hidden="true">PyTorch</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/streamlit.svg" alt="" aria-hidden="true">Streamlit</li>
             <li class="chip"><img class="clogo" src="/assets/images/icons/matlab.jpg" alt="" aria-hidden="true">MATLAB</li>
             <li class="chip"><img class="clogo" src="/assets/images/icons/simulink.png" alt="" aria-hidden="true">Simulink</li>
             <li class="chip"><img class="clogo" src="/assets/images/icons/latex.svg" alt="" aria-hidden="true">LaTeX</li>
@@ -168,6 +190,28 @@ permalink: /cv/
             <li class="chip"><img class="clogo" src="/assets/images/icons/vscode.jpg" alt="" aria-hidden="true">VS Code</li>
             <li class="chip"><img class="clogo" src="/assets/images/icons/cursor.jpg" alt="" aria-hidden="true">Cursor</li>
             <li class="chip"><img class="clogo" src="/assets/images/icons/docker.svg" alt="" aria-hidden="true">Docker</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/obsidian.svg" alt="" aria-hidden="true">Obsidian</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/notion.svg" alt="" aria-hidden="true">Notion</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="sub">Networking</h3>
+          <ul class="chiprow">
+            <li class="chip"><img class="clogo" src="/assets/images/icons/cisco.svg" alt="" aria-hidden="true">Cisco IOS</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/wireshark.svg" alt="" aria-hidden="true">Wireshark</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="sub">AI &amp; LLM tooling</h3>
+          <ul class="chiprow">
+            <li class="chip"><img class="clogo" src="/assets/images/icons/claude.svg" alt="" aria-hidden="true">Claude</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/claude.svg" alt="" aria-hidden="true">Claude Code</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/openai.svg" alt="" aria-hidden="true">ChatGPT</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/openai.svg" alt="" aria-hidden="true">Codex</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/gemini.svg" alt="" aria-hidden="true">Gemini</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/sakana-fugu.png" alt="" aria-hidden="true">Sakana Fugu</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/githubcopilot.svg" alt="" aria-hidden="true">GitHub Copilot</li>
+            <li class="chip"><img class="clogo" src="/assets/images/icons/antigravity.png" alt="" aria-hidden="true">Antigravity</li>
           </ul>
         </div>
       </div>
@@ -205,13 +249,15 @@ permalink: /cv/
       <h2 class="sec" id="cv-elsewhere"><svg class="hicon" aria-hidden="true"><use href="#i-link"/></svg>Elsewhere on this site</h2>
       <p style="font-size:.95rem;">The full publication list lives on <a href="/publications/">Publications</a>;
         teaching history on <a href="/teaching/">Teaching</a>; supervision on <a href="/students/">Students</a>;
-        and committee, review, and editorial activity on <a href="/service/">Service</a>.</p>
+        and committee, review, and editorial activity — together with invited talks and research
+        seminars — on <a href="/service/">Service</a>.</p>
     </div>
 
     <nav class="cvtoc" aria-label="CV sections">
       <div class="toctitle">On this page</div>
       <ul>
         <li><a href="#cv-summary">Summary</a></li>
+        <li><a href="#cv-ids">Identifiers</a></li>
         <li><a href="#cv-appointments">Appointments</a></li>
         <li><a href="#cv-education">Education</a></li>
         <li><a href="#cv-theses">Theses</a></li>
