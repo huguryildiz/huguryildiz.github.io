@@ -54,35 +54,59 @@ LIST_CAP = 12
 UNCAPPED = {"countries"}
 # How many of the busiest countries get a region lookup (one request each).
 REGION_COUNTRIES = 5
+# List endpoints that reject an `offset` parameter (see stats_list).
+NO_OFFSET = {"/stats/hits"}
 
 
 def get(path, start, end, params=None):
     """GET an API path for a date range. Returns parsed JSON, or None on any
-    failure so a single bad endpoint never aborts the whole run."""
+    failure so a single bad endpoint never aborts the whole run.
+
+    Transient failures (connection errors, 5xx, rate limiting) are retried:
+    a single blip used to abort the whole run and skip that day's snapshot.
+    A 4xx is a request we got wrong, so it is not retried.
+    """
     q = {"start": start.isoformat(), "end": end.isoformat()}
     q.update(params or {})
-    try:
-        r = requests.get(f"{BASE}{path}", headers=HEADERS, params=q, timeout=30)
-    except requests.RequestException as e:
-        print(f"[WARN] {path} [{start}..{end}]: request failed ({e})")
-        return None
-    time.sleep(0.25)  # stay well inside GoatCounter's rate limit
-    if r.status_code != 200:
+    url = f"{BASE}{path}"
+
+    for attempt in range(3):
+        if attempt:
+            time.sleep(2 ** attempt)
+        try:
+            r = requests.get(url, headers=HEADERS, params=q, timeout=30)
+        except requests.RequestException as e:
+            print(f"[WARN] {path} [{start}..{end}]: request failed ({e})")
+            continue
+        time.sleep(0.25)  # stay well inside GoatCounter's rate limit
+        if r.status_code == 200:
+            try:
+                return r.json()
+            except ValueError:
+                print(f"[WARN] {path} [{start}..{end}]: non-JSON response, skipping")
+                return None
         print(f"[WARN] {path} [{start}..{end}]: HTTP {r.status_code} - {r.text[:200]}")
-        return None
-    try:
-        return r.json()
-    except ValueError:
-        print(f"[WARN] {path} [{start}..{end}]: non-JSON response, skipping")
-        return None
+        if r.status_code < 500 and r.status_code != 429:
+            return None
+    return None
 
 
 def stats_list(path, start, end, limit=100, max_pages=10):
     """Fetch a /stats/<x> list endpoint, paginating while the API reports
-    `more: true`."""
+    `more: true`.
+
+    /stats/hits is the one list endpoint that takes no `offset`, and
+    GoatCounter rejects an unknown query parameter with a 400 rather than
+    ignoring it — sending one there returned an HTML error page and left the
+    "most viewed pages" panel empty. It is fetched as a single page instead.
+    """
+    paged = path not in NO_OFFSET
     out, offset = [], 0
-    for _ in range(max_pages):
-        data = get(path, start, end, {"limit": limit, "offset": offset})
+    for _ in range(max_pages if paged else 1):
+        params = {"limit": limit}
+        if paged:
+            params["offset"] = offset
+        data = get(path, start, end, params)
         if data is None:
             break
         items = data.get("stats") or data.get("hits") or []
