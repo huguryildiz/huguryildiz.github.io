@@ -345,14 +345,6 @@ details[open] { margin-bottom: 0.2rem; }
 }
 
 /* =========================================================
-   15) Navigation search item styling
-   ========================================================= */
-.masthead__menu-item a[href$="/search/"]{
-  font-size: 18px;
-  padding: 8px 10px;
-}
-
-/* =========================================================
    16) Home page - LinkedIn embed (moved from inline <style>)
    ========================================================= */
 .linkedin-grid{

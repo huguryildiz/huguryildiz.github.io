@@ -1,8 +1,11 @@
-name: Update Research Metrics
+name: Update Research Metrics (OpenAlex, manual only)
 
+# Dormant fallback. The site's citation counts, h-index, and work count come from
+# Google Scholar via .github/workflows/update-scholar.yml; no page renders
+# _data/research_metrics.json. The schedule is intentionally removed so this never
+# fetches on its own — the snapshot is kept as a second source and can be refreshed
+# by hand from the Actions tab if the Scholar path ever has to be abandoned.
 on:
-  schedule:
-    - cron: "0 0 1 * *"   # Every month on day 1 at 00:00 UTC
   workflow_dispatch:
 
 jobs:

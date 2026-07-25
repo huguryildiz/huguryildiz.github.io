@@ -1,16 +1,17 @@
 ---
 layout: academic
 title: "Publications"
-description: "Peer-reviewed journal articles, an editorial, and international and national conference papers by Hüseyin Uğur Yıldız. Metrics from OpenAlex, refreshed monthly."
+description: "Peer-reviewed journal articles, an editorial, and international and national conference papers by Hüseyin Uğur Yıldız. Metrics from Google Scholar, refreshed monthly."
 permalink: /publications/
 ---
 
+{% assign sm = site.data.scholar_metrics %}
 <div class="shell">
   <header class="pagehead">
     <h1 id="pubs-h1">Publications</h1>
     <p class="lede">Peer-reviewed journal articles, an editorial, and international and national
       conference papers. Metrics are sourced from
-      <a href="https://openalex.org/A5085505896" target="_blank" rel="noopener">OpenAlex</a> and refreshed monthly.</p>
+      <a href="{{ sm.profile_url }}" target="_blank" rel="noopener">Google Scholar</a> and refreshed monthly.</p>
   </header>
 
   <div class="statgrid" role="group" aria-label="Publication metrics">
@@ -126,8 +127,8 @@ var PUBS = [
   var nq = function(q){return PUBS.filter(function(p){return p.type === "journal" && p.q === q;}).length;};
 
   var tiles = [
-    ["link", "830", "Citations"],
-    ["target", "15", "h-index"],
+    ["link", "{{ sm.citations_display }}", "Citations"],
+    ["target", "{{ sm.h_index }}", "h-index"],
     ["file", PUBS.length, "Publications listed"],
     ["book", n("journal"), "Journal articles"],
     ["pen", n("editorial"), "Editorial"],
@@ -139,7 +140,7 @@ var PUBS = [
     '"/></svg><b>' + t[1] + '</b><span>' + t[2] + '</span></div>';}).join("");
   $("#pubBreakdown").innerHTML =
     "Journal quartiles reflect the journal's rank in the publication year. " +
-    "Citations, h-index, and works: OpenAlex, updated Jul 1, 2026 — refreshed monthly. " +
+    "Citations and h-index: Google Scholar, updated {{ sm.updated_utc | date: '%b %-d, %Y' }} — refreshed monthly. " +
     "Select a bar or quartile below to filter the list.";
 
   /* Quartile distribution — clickable rows that drive the quartile filter. */
