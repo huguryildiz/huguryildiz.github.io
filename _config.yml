@@ -99,6 +99,7 @@ exclude:
   - node_modules
   - vendor
   - scripts/
+  - cv-latex/
   - analytics-archive/
   - docs/
   - Dockerfile
