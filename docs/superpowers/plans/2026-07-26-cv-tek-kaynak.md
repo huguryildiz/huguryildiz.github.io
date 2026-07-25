@@ -621,10 +621,13 @@ diff "$SCRATCH/main.reference.tex" "$SCRATCH/main.generated.tex" | tee "$SCRATCH
 wc -l "$SCRATCH/tex.diff"
 ```
 
+**Referans dosya:** `~/Downloads/main.tex` — kanonik sürüm, **temiz UTF-8** (651 satır). Task 2'de doğrudan incelendi. Bu planın ilk sürümünde "mojibake var" denmişti; yanlıştı — o bozulma dosyanın sohbete ek olarak aktarılmasının artefaktıydı. Gerçek karakterler en dash: `link–level`, `47817–47826`, `network flow–based`, `optimization–learning`.
+
 **Yalnızca şu farklar kabul edilir:**
-1. Mojibake düzeltmeleri: `Â·` → `·`, `linkâlevel` → `link-level`, `optimizationâlearning` → `optimization-learning`, `47817â47826` → `47817–47826`, `network flowâbased` → `network flow-based`, `3405â3418` → `3405–3418`
-2. Dosya başına eklenen "GENERATED — edit `_data/cv.yml`" uyarı yorumu
-3. Boşluk/satır sonu normalizasyonu
+1. Dosya başına eklenen "GENERATED — edit `_data/cv.yml`" uyarı yorumu
+2. Boşluk/satır sonu normalizasyonu
+
+**İçerik farkı beklenmiyor.** En dash gibi karakterler YAML'a olduğu gibi taşındığı için üretilen çıktıda da olduğu gibi görünmelidir. Karakter değişimi çıkarsa bu bir kaçış/encoding hatasıdır, kabul edilmiş fark değildir.
 
 **Başka her fark task'ı reddeder.** Özellikle: kaybolan yayın, değişen sıra, bozulan LaTeX komutu, kaçmış `\&`. Diff'in tamamı kullanıcıya sunulur.
 
