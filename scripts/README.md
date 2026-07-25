@@ -20,9 +20,9 @@ Both workflows commit only when the snapshot actually changed, and tag the commi
 
 | Script | Trigger | Writes | Requires |
 | --- | --- | --- | --- |
-| `fetch_metrics.py` | `.github/workflows/update-openalex.yml` — **no schedule**; run by hand from the Actions tab | `_data/research_metrics.json` | `OPENALEX_AUTHOR_ID` (repo secret); `OPENALEX_MAILTO` optional; Python `requests` |
+| `fetch_openalex.py` | `.github/workflows/update-openalex.yml` — **no schedule**; run by hand from the Actions tab | `_data/openalex_metrics.json` | `OPENALEX_AUTHOR_ID` (repo secret); `OPENALEX_MAILTO` optional; Python `requests` |
 
-The site's bibliometrics come from Google Scholar. `_data/research_metrics.json` is kept as
+The site's bibliometrics come from Google Scholar. `_data/openalex_metrics.json` is kept as
 a second source in case the Scholar path has to be abandoned, but no page parses it and
 nothing refreshes it automatically. Google Scholar and OpenAlex legitimately disagree —
 Scholar indexes more venue types, so its counts run higher. Never present a value from one
@@ -33,7 +33,7 @@ requests:
 
 ```bash
 SERPAPI_KEY=... SCHOLAR_AUTHOR_ID=nQwHS1gAAAAJ python3 scripts/fetch_scholar.py
-OPENALEX_AUTHOR_ID=A5085505896              python3 scripts/fetch_metrics.py
+OPENALEX_AUTHOR_ID=A5085505896              python3 scripts/fetch_openalex.py
 GOATCOUNTER_API_TOKEN=...                   python3 scripts/fetch_goatcounter.py
 ```
 

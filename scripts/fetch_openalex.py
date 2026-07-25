@@ -44,8 +44,8 @@ metrics = {
 }
 
 os.makedirs("_data", exist_ok=True)
-with open("_data/research_metrics.json", "w", encoding="utf-8") as f:
+with open("_data/openalex_metrics.json", "w", encoding="utf-8") as f:
     json.dump(metrics, f, indent=2)
 
-print("[OK] Saved _data/research_metrics.json")
+print("[OK] Saved _data/openalex_metrics.json")
 print(json.dumps(metrics, indent=2))
