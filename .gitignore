@@ -39,6 +39,13 @@ AGENTS.md
 scripts/__pycache__/
 **/__pycache__/
 *.pyc
+.venv/
+
+# Secrets. The metrics scripts read SERPAPI_KEY, SCHOLAR_AUTHOR_ID, and
+# GOATCOUNTER_API_TOKEN from the environment; a local .env is the obvious place
+# to stash them, and committing one would leak a live token.
+.env
+.env.*
 
 # Local design artifacts
 design-artifacts/
