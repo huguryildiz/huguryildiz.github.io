@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-24T05:52:43Z",
+  "updated": "2026-07-25T19:15:04Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-07-24"
+    "end": "2026-07-25"
   },
   "window_order": [
     "today",
@@ -14,24 +14,1068 @@
     "all"
   ],
   "windows": {
-    "all": {
-      "label": "All time",
-      "start": "2026-02-05",
-      "end": "2026-07-24",
-      "pageviews": 860,
+    "today": {
+      "label": "Today",
+      "start": "2026-07-25",
+      "end": "2026-07-25",
+      "pageviews": 0,
       "pages_total": 0,
       "pages": [],
+      "countries_total": 1,
+      "countries": [
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 18
+        }
+      ],
+      "referrers_total": 0,
+      "referrers": [],
+      "browsers_total": 2,
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 14
+        },
+        {
+          "name": "Safari",
+          "count": 4
+        }
+      ],
+      "systems_total": 2,
+      "systems": [
+        {
+          "name": "macOS",
+          "count": 15
+        },
+        {
+          "name": "iOS",
+          "count": 3
+        }
+      ],
+      "sizes_total": 0,
+      "sizes": [],
+      "regions_total": 0,
+      "regions": []
+    },
+    "yesterday": {
+      "label": "Yesterday",
+      "start": "2026-07-24",
+      "end": "2026-07-24",
+      "pageviews": 0,
+      "pages_total": 0,
+      "pages": [],
+      "countries_total": 2,
+      "countries": [
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 15
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 1
+        }
+      ],
+      "referrers_total": 0,
+      "referrers": [],
+      "browsers_total": 2,
+      "browsers": [
+        {
+          "name": "Safari",
+          "count": 10
+        },
+        {
+          "name": "Chrome",
+          "count": 6
+        }
+      ],
+      "systems_total": 3,
+      "systems": [
+        {
+          "name": "iOS",
+          "count": 10
+        },
+        {
+          "name": "macOS",
+          "count": 5
+        },
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
+      "sizes_total": 0,
+      "sizes": [],
+      "regions_total": 1,
+      "regions": [
+        {
+          "name": "Texas",
+          "country": "United States",
+          "code": null,
+          "count": 1
+        }
+      ]
+    },
+    "7d": {
+      "label": "Last 7 days",
+      "start": "2026-07-19",
+      "end": "2026-07-25",
+      "pageviews": 77,
+      "pages_total": 11,
+      "pages": [
+        {
+          "path": "/cv",
+          "count": 37
+        },
+        {
+          "path": "/",
+          "count": 15
+        },
+        {
+          "path": "/publications",
+          "count": 6
+        },
+        {
+          "path": "/service",
+          "count": 5
+        },
+        {
+          "path": "/research",
+          "count": 4
+        },
+        {
+          "path": "/students",
+          "count": 3
+        },
+        {
+          "path": "/404.html",
+          "count": 2
+        },
+        {
+          "path": "/teaching",
+          "count": 2
+        },
+        {
+          "path": "/writing/kairos-university-timetabling",
+          "count": 1
+        },
+        {
+          "path": "/writing",
+          "count": 1
+        },
+        {
+          "path": "/stats",
+          "count": 1
+        }
+      ],
+      "countries_total": 4,
+      "countries": [
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 60
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 31
+        },
+        {
+          "code": "GB",
+          "name": "United Kingdom",
+          "count": 3
+        },
+        {
+          "code": "DE",
+          "name": "Germany",
+          "count": 1
+        }
+      ],
+      "referrers_total": 4,
+      "referrers": [
+        {
+          "name": "Google",
+          "count": 33
+        },
+        {
+          "name": "lnkd.in",
+          "count": 1
+        },
+        {
+          "name": "www.linkedin.com",
+          "count": 1
+        },
+        {
+          "name": "avesis.tedu.edu.tr",
+          "count": 1
+        }
+      ],
+      "browsers_total": 3,
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 73
+        },
+        {
+          "name": "Safari",
+          "count": 20
+        },
+        {
+          "name": "Firefox",
+          "count": 2
+        }
+      ],
+      "systems_total": 5,
+      "systems": [
+        {
+          "name": "Linux",
+          "count": 35
+        },
+        {
+          "name": "macOS",
+          "count": 30
+        },
+        {
+          "name": "iOS",
+          "count": 19
+        },
+        {
+          "name": "Windows",
+          "count": 8
+        },
+        {
+          "name": "Android",
+          "count": 3
+        }
+      ],
+      "sizes_total": 0,
+      "sizes": [],
+      "regions_total": 7,
+      "regions": [
+        {
+          "name": "California",
+          "country": "United States",
+          "code": null,
+          "count": 3
+        },
+        {
+          "name": "Texas",
+          "country": "United States",
+          "code": null,
+          "count": 3
+        },
+        {
+          "name": "Virginia",
+          "country": "United States",
+          "code": null,
+          "count": 3
+        },
+        {
+          "name": "Illinois",
+          "country": "United States",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "Maryland",
+          "country": "United States",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "New York",
+          "country": "United States",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "North Carolina",
+          "country": "United States",
+          "code": null,
+          "count": 1
+        }
+      ]
+    },
+    "30d": {
+      "label": "Last 30 days",
+      "start": "2026-06-26",
+      "end": "2026-07-25",
+      "pageviews": 171,
+      "pages_total": 11,
+      "pages": [
+        {
+          "path": "/cv",
+          "count": 66
+        },
+        {
+          "path": "/",
+          "count": 54
+        },
+        {
+          "path": "/publications",
+          "count": 15
+        },
+        {
+          "path": "/research",
+          "count": 9
+        },
+        {
+          "path": "/404.html",
+          "count": 8
+        },
+        {
+          "path": "/service",
+          "count": 7
+        },
+        {
+          "path": "/students",
+          "count": 5
+        },
+        {
+          "path": "/teaching",
+          "count": 4
+        },
+        {
+          "path": "/writing/kairos-university-timetabling",
+          "count": 1
+        },
+        {
+          "path": "/writing",
+          "count": 1
+        },
+        {
+          "path": "/stats",
+          "count": 1
+        }
+      ],
+      "countries_total": 21,
+      "countries": [
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 92
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 68
+        },
+        {
+          "code": "SA",
+          "name": "Saudi Arabia",
+          "count": 6
+        },
+        {
+          "code": "DE",
+          "name": "Germany",
+          "count": 3
+        },
+        {
+          "code": "GB",
+          "name": "United Kingdom",
+          "count": 3
+        },
+        {
+          "code": "AU",
+          "name": "Australia",
+          "count": 2
+        },
+        {
+          "code": "AT",
+          "name": "Austria",
+          "count": 1
+        },
+        {
+          "code": "BD",
+          "name": "Bangladesh",
+          "count": 1
+        },
+        {
+          "code": "CN",
+          "name": "China",
+          "count": 1
+        },
+        {
+          "code": "CY",
+          "name": "Cyprus",
+          "count": 1
+        },
+        {
+          "code": "DZ",
+          "name": "Algeria",
+          "count": 1
+        },
+        {
+          "code": "EC",
+          "name": "Ecuador",
+          "count": 1
+        },
+        {
+          "code": "ID",
+          "name": "Indonesia",
+          "count": 1
+        },
+        {
+          "code": "IL",
+          "name": "Israel",
+          "count": 1
+        },
+        {
+          "code": "KR",
+          "name": "South Korea",
+          "count": 1
+        },
+        {
+          "code": "MY",
+          "name": "Malaysia",
+          "count": 1
+        },
+        {
+          "code": "NL",
+          "name": "Netherlands",
+          "count": 1
+        },
+        {
+          "code": "PL",
+          "name": "Poland",
+          "count": 1
+        },
+        {
+          "code": "RO",
+          "name": "Romania",
+          "count": 1
+        },
+        {
+          "code": "TH",
+          "name": "Thailand",
+          "count": 1
+        },
+        {
+          "code": "VE",
+          "name": "Venezuela",
+          "count": 1
+        }
+      ],
+      "referrers_total": 8,
+      "referrers": [
+        {
+          "name": "Google",
+          "count": 66
+        },
+        {
+          "name": "www.linkedin.com",
+          "count": 6
+        },
+        {
+          "name": "bing.com",
+          "count": 2
+        },
+        {
+          "name": "github.com",
+          "count": 2
+        },
+        {
+          "name": "duckduckgo.com",
+          "count": 1
+        },
+        {
+          "name": "lnkd.in",
+          "count": 1
+        },
+        {
+          "name": "chatgpt.com",
+          "count": 1
+        },
+        {
+          "name": "avesis.tedu.edu.tr",
+          "count": 1
+        }
+      ],
+      "browsers_total": 4,
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 152
+        },
+        {
+          "name": "Safari",
+          "count": 33
+        },
+        {
+          "name": "Edge",
+          "count": 2
+        },
+        {
+          "name": "Firefox",
+          "count": 2
+        }
+      ],
+      "systems_total": 5,
+      "systems": [
+        {
+          "name": "Linux",
+          "count": 66
+        },
+        {
+          "name": "macOS",
+          "count": 60
+        },
+        {
+          "name": "iOS",
+          "count": 30
+        },
+        {
+          "name": "Windows",
+          "count": 27
+        },
+        {
+          "name": "Android",
+          "count": 6
+        }
+      ],
+      "sizes_total": 0,
+      "sizes": [],
+      "regions_total": 13,
+      "regions": [
+        {
+          "name": "California",
+          "country": "United States",
+          "code": null,
+          "count": 6
+        },
+        {
+          "name": "Colorado",
+          "country": "United States",
+          "code": null,
+          "count": 6
+        },
+        {
+          "name": "Virginia",
+          "country": "United States",
+          "code": null,
+          "count": 5
+        },
+        {
+          "name": "Texas",
+          "country": "United States",
+          "code": null,
+          "count": 4
+        },
+        {
+          "name": "Iowa",
+          "country": "United States",
+          "code": null,
+          "count": 3
+        },
+        {
+          "name": "New York",
+          "country": "United States",
+          "code": null,
+          "count": 3
+        },
+        {
+          "name": "Oregon",
+          "country": "United States",
+          "code": null,
+          "count": 2
+        },
+        {
+          "name": "Pennsylvania",
+          "country": "United States",
+          "code": null,
+          "count": 2
+        },
+        {
+          "name": "Florida",
+          "country": "United States",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "Illinois",
+          "country": "United States",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "Maryland",
+          "country": "United States",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "North Carolina",
+          "country": "United States",
+          "code": null,
+          "count": 1
+        }
+      ]
+    },
+    "90d": {
+      "label": "Last 90 days",
+      "start": "2026-04-27",
+      "end": "2026-07-25",
+      "pageviews": 376,
+      "pages_total": 11,
+      "pages": [
+        {
+          "path": "/",
+          "count": 161
+        },
+        {
+          "path": "/cv",
+          "count": 85
+        },
+        {
+          "path": "/publications",
+          "count": 39
+        },
+        {
+          "path": "/research",
+          "count": 29
+        },
+        {
+          "path": "/service",
+          "count": 20
+        },
+        {
+          "path": "/students",
+          "count": 17
+        },
+        {
+          "path": "/teaching",
+          "count": 14
+        },
+        {
+          "path": "/404.html",
+          "count": 8
+        },
+        {
+          "path": "/writing/kairos-university-timetabling",
+          "count": 1
+        },
+        {
+          "path": "/writing",
+          "count": 1
+        },
+        {
+          "path": "/stats",
+          "count": 1
+        }
+      ],
+      "countries_total": 34,
+      "countries": [
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 211
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 77
+        },
+        {
+          "code": "GB",
+          "name": "United Kingdom",
+          "count": 30
+        },
+        {
+          "code": "SA",
+          "name": "Saudi Arabia",
+          "count": 13
+        },
+        {
+          "code": "IN",
+          "name": "India",
+          "count": 9
+        },
+        {
+          "code": "NL",
+          "name": "Netherlands",
+          "count": 7
+        },
+        {
+          "code": "DE",
+          "name": "Germany",
+          "count": 5
+        },
+        {
+          "code": "AU",
+          "name": "Australia",
+          "count": 4
+        },
+        {
+          "code": "CA",
+          "name": "Canada",
+          "count": 3
+        },
+        {
+          "code": "DZ",
+          "name": "Algeria",
+          "count": 3
+        },
+        {
+          "code": "TW",
+          "name": "Taiwan",
+          "count": 3
+        },
+        {
+          "code": "BD",
+          "name": "Bangladesh",
+          "count": 2
+        },
+        {
+          "code": "IT",
+          "name": "Italy",
+          "count": 2
+        },
+        {
+          "code": "JP",
+          "name": "Japan",
+          "count": 2
+        },
+        {
+          "code": "KZ",
+          "name": "Kazakhstan",
+          "count": 2
+        },
+        {
+          "code": "PK",
+          "name": "Pakistan",
+          "count": 2
+        },
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "count": 2
+        },
+        {
+          "code": "AT",
+          "name": "Austria",
+          "count": 1
+        },
+        {
+          "code": "BR",
+          "name": "Brazil",
+          "count": 1
+        },
+        {
+          "code": "CN",
+          "name": "China",
+          "count": 1
+        },
+        {
+          "code": "CY",
+          "name": "Cyprus",
+          "count": 1
+        },
+        {
+          "code": "EC",
+          "name": "Ecuador",
+          "count": 1
+        },
+        {
+          "code": "FR",
+          "name": "France",
+          "count": 1
+        },
+        {
+          "code": "ID",
+          "name": "Indonesia",
+          "count": 1
+        },
+        {
+          "code": "IL",
+          "name": "Israel",
+          "count": 1
+        },
+        {
+          "code": "KR",
+          "name": "South Korea",
+          "count": 1
+        },
+        {
+          "code": "MY",
+          "name": "Malaysia",
+          "count": 1
+        },
+        {
+          "code": "PH",
+          "name": "Philippines",
+          "count": 1
+        },
+        {
+          "code": "PL",
+          "name": "Poland",
+          "count": 1
+        },
+        {
+          "code": "RO",
+          "name": "Romania",
+          "count": 1
+        },
+        {
+          "code": "RU",
+          "name": "Russia",
+          "count": 1
+        },
+        {
+          "code": "TH",
+          "name": "Thailand",
+          "count": 1
+        },
+        {
+          "code": "UA",
+          "name": "Ukraine",
+          "count": 1
+        },
+        {
+          "code": "VE",
+          "name": "Venezuela",
+          "count": 1
+        }
+      ],
+      "referrers_total": 12,
+      "referrers": [
+        {
+          "name": "Google",
+          "count": 87
+        },
+        {
+          "name": "www.linkedin.com",
+          "count": 25
+        },
+        {
+          "name": "com.linkedin.android",
+          "count": 8
+        },
+        {
+          "name": "github.com",
+          "count": 3
+        },
+        {
+          "name": "chatgpt.com",
+          "count": 3
+        },
+        {
+          "name": "bing.com",
+          "count": 2
+        },
+        {
+          "name": "scholar.google.com",
+          "count": 2
+        },
+        {
+          "name": "avesis.tedu.edu.tr",
+          "count": 2
+        },
+        {
+          "name": "duckduckgo.com",
+          "count": 1
+        },
+        {
+          "name": "lnkd.in",
+          "count": 1
+        },
+        {
+          "name": "scholar.google.com.tr",
+          "count": 1
+        },
+        {
+          "name": "www.bing.com",
+          "count": 1
+        }
+      ],
+      "browsers_total": 4,
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 283
+        },
+        {
+          "name": "Safari",
+          "count": 107
+        },
+        {
+          "name": "Edge",
+          "count": 2
+        },
+        {
+          "name": "Firefox",
+          "count": 2
+        }
+      ],
+      "systems_total": 5,
+      "systems": [
+        {
+          "name": "macOS",
+          "count": 165
+        },
+        {
+          "name": "iOS",
+          "count": 81
+        },
+        {
+          "name": "Linux",
+          "count": 72
+        },
+        {
+          "name": "Windows",
+          "count": 59
+        },
+        {
+          "name": "Android",
+          "count": 17
+        }
+      ],
+      "sizes_total": 0,
+      "sizes": [],
+      "regions_total": 15,
+      "regions": [
+        {
+          "name": "California",
+          "country": "United States",
+          "code": null,
+          "count": 8
+        },
+        {
+          "name": "Colorado",
+          "country": "United States",
+          "code": null,
+          "count": 6
+        },
+        {
+          "name": "Virginia",
+          "country": "United States",
+          "code": null,
+          "count": 5
+        },
+        {
+          "name": "Iowa",
+          "country": "United States",
+          "code": null,
+          "count": 4
+        },
+        {
+          "name": "Texas",
+          "country": "United States",
+          "code": null,
+          "count": 4
+        },
+        {
+          "name": "Georgia",
+          "country": "United States",
+          "code": null,
+          "count": 3
+        },
+        {
+          "name": "New York",
+          "country": "United States",
+          "code": null,
+          "count": 3
+        },
+        {
+          "name": "Oregon",
+          "country": "United States",
+          "code": null,
+          "count": 3
+        },
+        {
+          "name": "Illinois",
+          "country": "United States",
+          "code": null,
+          "count": 2
+        },
+        {
+          "name": "Pennsylvania",
+          "country": "United States",
+          "code": null,
+          "count": 2
+        },
+        {
+          "name": "Arizona",
+          "country": "United States",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "Florida",
+          "country": "United States",
+          "code": null,
+          "count": 1
+        }
+      ]
+    },
+    "12m": {
+      "label": "Last 12 months",
+      "start": "2025-07-26",
+      "end": "2026-07-25",
+      "pageviews": 876,
+      "pages_total": 15,
+      "pages": [
+        {
+          "path": "/",
+          "count": 340
+        },
+        {
+          "path": "/cv",
+          "count": 133
+        },
+        {
+          "path": "/publications",
+          "count": 117
+        },
+        {
+          "path": "/research",
+          "count": 76
+        },
+        {
+          "path": "/service",
+          "count": 58
+        },
+        {
+          "path": "/teaching",
+          "count": 57
+        },
+        {
+          "path": "/students",
+          "count": 51
+        },
+        {
+          "path": "/404.html",
+          "count": 19
+        },
+        {
+          "path": "/experience",
+          "count": 14
+        },
+        {
+          "path": "/sitemap",
+          "count": 4
+        },
+        {
+          "path": "/search",
+          "count": 2
+        },
+        {
+          "path": "/services",
+          "count": 2
+        }
+      ],
       "countries_total": 37,
       "countries": [
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 612
+          "count": 645
         },
         {
           "code": "US",
           "name": "United States",
-          "count": 97
+          "count": 98
         },
         {
           "code": "GB",
@@ -264,11 +1308,11 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 506
+          "count": 526
         },
         {
           "name": "Safari",
-          "count": 345
+          "count": 359
         },
         {
           "name": "Firefox",
@@ -283,15 +1327,15 @@
       "systems": [
         {
           "name": "macOS",
-          "count": 320
+          "count": 340
         },
         {
           "name": "iOS",
-          "count": 310
+          "count": 323
         },
         {
           "name": "Windows",
-          "count": 125
+          "count": 126
         },
         {
           "name": "Linux",
@@ -303,7 +1347,497 @@
         }
       ],
       "sizes_total": 0,
-      "sizes": []
+      "sizes": [],
+      "regions_total": 15,
+      "regions": [
+        {
+          "name": "California",
+          "country": "United States",
+          "code": null,
+          "count": 11
+        },
+        {
+          "name": "Colorado",
+          "country": "United States",
+          "code": null,
+          "count": 10
+        },
+        {
+          "name": "Oregon",
+          "country": "United States",
+          "code": null,
+          "count": 9
+        },
+        {
+          "name": "Iowa",
+          "country": "United States",
+          "code": null,
+          "count": 7
+        },
+        {
+          "name": "Virginia",
+          "country": "United States",
+          "code": null,
+          "count": 6
+        },
+        {
+          "name": "Texas",
+          "country": "United States",
+          "code": null,
+          "count": 5
+        },
+        {
+          "name": "Georgia",
+          "country": "United States",
+          "code": null,
+          "count": 4
+        },
+        {
+          "name": "New York",
+          "country": "United States",
+          "code": null,
+          "count": 3
+        },
+        {
+          "name": "Florida",
+          "country": "United States",
+          "code": null,
+          "count": 2
+        },
+        {
+          "name": "Illinois",
+          "country": "United States",
+          "code": null,
+          "count": 2
+        },
+        {
+          "name": "Pennsylvania",
+          "country": "United States",
+          "code": null,
+          "count": 2
+        },
+        {
+          "name": "Arizona",
+          "country": "United States",
+          "code": null,
+          "count": 1
+        }
+      ]
+    },
+    "all": {
+      "label": "All time",
+      "start": "2019-01-01",
+      "end": "2026-07-25",
+      "pageviews": 876,
+      "pages_total": 15,
+      "pages": [
+        {
+          "path": "/",
+          "count": 340
+        },
+        {
+          "path": "/cv",
+          "count": 133
+        },
+        {
+          "path": "/publications",
+          "count": 117
+        },
+        {
+          "path": "/research",
+          "count": 76
+        },
+        {
+          "path": "/service",
+          "count": 58
+        },
+        {
+          "path": "/teaching",
+          "count": 57
+        },
+        {
+          "path": "/students",
+          "count": 51
+        },
+        {
+          "path": "/404.html",
+          "count": 19
+        },
+        {
+          "path": "/experience",
+          "count": 14
+        },
+        {
+          "path": "/sitemap",
+          "count": 4
+        },
+        {
+          "path": "/search",
+          "count": 2
+        },
+        {
+          "path": "/services",
+          "count": 2
+        }
+      ],
+      "countries_total": 37,
+      "countries": [
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 645
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 98
+        },
+        {
+          "code": "GB",
+          "name": "United Kingdom",
+          "count": 37
+        },
+        {
+          "code": "NL",
+          "name": "Netherlands",
+          "count": 25
+        },
+        {
+          "code": "SA",
+          "name": "Saudi Arabia",
+          "count": 13
+        },
+        {
+          "code": "CA",
+          "name": "Canada",
+          "count": 9
+        },
+        {
+          "code": "IN",
+          "name": "India",
+          "count": 9
+        },
+        {
+          "code": "DE",
+          "name": "Germany",
+          "count": 7
+        },
+        {
+          "code": "RU",
+          "name": "Russia",
+          "count": 7
+        },
+        {
+          "code": "AU",
+          "name": "Australia",
+          "count": 4
+        },
+        {
+          "code": "DZ",
+          "name": "Algeria",
+          "count": 4
+        },
+        {
+          "code": "KZ",
+          "name": "Kazakhstan",
+          "count": 3
+        },
+        {
+          "code": "TW",
+          "name": "Taiwan",
+          "count": 3
+        },
+        {
+          "code": "BD",
+          "name": "Bangladesh",
+          "count": 2
+        },
+        {
+          "code": "FR",
+          "name": "France",
+          "count": 2
+        },
+        {
+          "code": "IT",
+          "name": "Italy",
+          "count": 2
+        },
+        {
+          "code": "JP",
+          "name": "Japan",
+          "count": 2
+        },
+        {
+          "code": "PK",
+          "name": "Pakistan",
+          "count": 2
+        },
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "count": 2
+        },
+        {
+          "code": "AL",
+          "name": "Albania",
+          "count": 1
+        },
+        {
+          "code": "AT",
+          "name": "Austria",
+          "count": 1
+        },
+        {
+          "code": "BR",
+          "name": "Brazil",
+          "count": 1
+        },
+        {
+          "code": "CN",
+          "name": "China",
+          "count": 1
+        },
+        {
+          "code": "CY",
+          "name": "Cyprus",
+          "count": 1
+        },
+        {
+          "code": "EC",
+          "name": "Ecuador",
+          "count": 1
+        },
+        {
+          "code": "ID",
+          "name": "Indonesia",
+          "count": 1
+        },
+        {
+          "code": "IL",
+          "name": "Israel",
+          "count": 1
+        },
+        {
+          "code": "KR",
+          "name": "South Korea",
+          "count": 1
+        },
+        {
+          "code": "MY",
+          "name": "Malaysia",
+          "count": 1
+        },
+        {
+          "code": "PH",
+          "name": "Philippines",
+          "count": 1
+        },
+        {
+          "code": "PL",
+          "name": "Poland",
+          "count": 1
+        },
+        {
+          "code": "RO",
+          "name": "Romania",
+          "count": 1
+        },
+        {
+          "code": "SC",
+          "name": "Seychelles",
+          "count": 1
+        },
+        {
+          "code": "SM",
+          "name": "San Marino",
+          "count": 1
+        },
+        {
+          "code": "TH",
+          "name": "Thailand",
+          "count": 1
+        },
+        {
+          "code": "UA",
+          "name": "Ukraine",
+          "count": 1
+        },
+        {
+          "code": "VE",
+          "name": "Venezuela",
+          "count": 1
+        }
+      ],
+      "referrers_total": 14,
+      "referrers": [
+        {
+          "name": "Google",
+          "count": 104
+        },
+        {
+          "name": "www.linkedin.com",
+          "count": 28
+        },
+        {
+          "name": "com.linkedin.android",
+          "count": 8
+        },
+        {
+          "name": "avesis.tedu.edu.tr",
+          "count": 7
+        },
+        {
+          "name": "Yandex",
+          "count": 4
+        },
+        {
+          "name": "github.com",
+          "count": 3
+        },
+        {
+          "name": "chatgpt.com",
+          "count": 3
+        },
+        {
+          "name": "bing.com",
+          "count": 2
+        },
+        {
+          "name": "scholar.google.com",
+          "count": 2
+        },
+        {
+          "name": "duckduckgo.com",
+          "count": 1
+        },
+        {
+          "name": "lnkd.in",
+          "count": 1
+        },
+        {
+          "name": "scholar.google.com.tr",
+          "count": 1
+        }
+      ],
+      "browsers_total": 4,
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 526
+        },
+        {
+          "name": "Safari",
+          "count": 359
+        },
+        {
+          "name": "Firefox",
+          "count": 7
+        },
+        {
+          "name": "Edge",
+          "count": 2
+        }
+      ],
+      "systems_total": 5,
+      "systems": [
+        {
+          "name": "macOS",
+          "count": 340
+        },
+        {
+          "name": "iOS",
+          "count": 323
+        },
+        {
+          "name": "Windows",
+          "count": 126
+        },
+        {
+          "name": "Linux",
+          "count": 83
+        },
+        {
+          "name": "Android",
+          "count": 22
+        }
+      ],
+      "sizes_total": 0,
+      "sizes": [],
+      "regions_total": 15,
+      "regions": [
+        {
+          "name": "California",
+          "country": "United States",
+          "code": null,
+          "count": 11
+        },
+        {
+          "name": "Colorado",
+          "country": "United States",
+          "code": null,
+          "count": 10
+        },
+        {
+          "name": "Oregon",
+          "country": "United States",
+          "code": null,
+          "count": 9
+        },
+        {
+          "name": "Iowa",
+          "country": "United States",
+          "code": null,
+          "count": 7
+        },
+        {
+          "name": "Virginia",
+          "country": "United States",
+          "code": null,
+          "count": 6
+        },
+        {
+          "name": "Texas",
+          "country": "United States",
+          "code": null,
+          "count": 5
+        },
+        {
+          "name": "Georgia",
+          "country": "United States",
+          "code": null,
+          "count": 4
+        },
+        {
+          "name": "New York",
+          "country": "United States",
+          "code": null,
+          "count": 3
+        },
+        {
+          "name": "Florida",
+          "country": "United States",
+          "code": null,
+          "count": 2
+        },
+        {
+          "name": "Illinois",
+          "country": "United States",
+          "code": null,
+          "count": 2
+        },
+        {
+          "name": "Pennsylvania",
+          "country": "United States",
+          "code": null,
+          "count": 2
+        },
+        {
+          "name": "Arizona",
+          "country": "United States",
+          "code": null,
+          "count": 1
+        }
+      ]
     }
   },
   "timeseries": [
@@ -985,24 +2519,77 @@
     },
     {
       "date": "2026-07-24",
-      "views": 0
+      "views": 15
+    },
+    {
+      "date": "2026-07-25",
+      "views": 1
     }
   ],
   "totals": {
-    "pageviews": 860,
+    "pageviews": 876,
     "visitors": null
   },
-  "pages": [],
+  "pages": [
+    {
+      "path": "/",
+      "count": 340
+    },
+    {
+      "path": "/cv",
+      "count": 133
+    },
+    {
+      "path": "/publications",
+      "count": 117
+    },
+    {
+      "path": "/research",
+      "count": 76
+    },
+    {
+      "path": "/service",
+      "count": 58
+    },
+    {
+      "path": "/teaching",
+      "count": 57
+    },
+    {
+      "path": "/students",
+      "count": 51
+    },
+    {
+      "path": "/404.html",
+      "count": 19
+    },
+    {
+      "path": "/experience",
+      "count": 14
+    },
+    {
+      "path": "/sitemap",
+      "count": 4
+    },
+    {
+      "path": "/search",
+      "count": 2
+    },
+    {
+      "path": "/services",
+      "count": 2
+    }
+  ],
   "countries": [
     {
       "code": "TR",
       "name": "Turkey",
-      "count": 612
+      "count": 645
     },
     {
       "code": "US",
       "name": "United States",
-      "count": 97
+      "count": 98
     },
     {
       "code": "GB",
@@ -1233,11 +2820,11 @@
   "browsers": [
     {
       "name": "Chrome",
-      "count": 506
+      "count": 526
     },
     {
       "name": "Safari",
-      "count": 345
+      "count": 359
     },
     {
       "name": "Firefox",
@@ -1251,15 +2838,15 @@
   "systems": [
     {
       "name": "macOS",
-      "count": 320
+      "count": 340
     },
     {
       "name": "iOS",
-      "count": 310
+      "count": 323
     },
     {
       "name": "Windows",
-      "count": 125
+      "count": 126
     },
     {
       "name": "Linux",
