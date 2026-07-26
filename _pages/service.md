@@ -1,6 +1,6 @@
 ---
 layout: academic
-title: "Service"
+title: "Professional Service – Hüseyin Uğur Yıldız"
 description: "Professional service of Hüseyin Uğur Yıldız — technical program committees, chairing, peer review, memberships, institutional service, and invited talks."
 permalink: /service/
 ---

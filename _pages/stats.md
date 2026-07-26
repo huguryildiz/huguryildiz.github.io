@@ -1,6 +1,6 @@
 ---
 layout: academic
-title: "Site Reach"
+title: "Site Analytics – huguryildiz.com"
 description: "An aggregated public report of page views, geographic reach and reading environment for huguryildiz.com."
 permalink: /stats/
 ---

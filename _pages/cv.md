@@ -1,6 +1,6 @@
 ---
 layout: academic
-title: "Curriculum Vitae"
+title: "CV – Hüseyin Uğur Yıldız"
 description: "Curriculum vitae of Hüseyin Uğur Yıldız — appointments, education, theses, honors, technical toolbox, and professional development."
 permalink: /cv/
 ---

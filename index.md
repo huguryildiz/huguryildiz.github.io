@@ -182,12 +182,14 @@ permalink: /
           and the M.Sc. and Ph.D. degrees from
           <a href="https://www.etu.edu.tr/en" target="_blank" rel="noopener">TOBB University of Economics and Technology<span class="sr-only"> (external)</span></a>,
           Ankara, in 2013 and 2016, respectively.</p>
-        <p>Between 2010 and 2015, he worked at Turk Telekom, where he contributed to the design and operation
+        <p>Between 2010 and 2015, he worked at
+          <a href="https://www.turktelekom.com.tr/en" target="_blank" rel="noopener">Turk Telekom<span class="sr-only"> (external)</span></a>, where he contributed to the design and operation
           of the Safer Internet Service, a nationwide content-filtering and parental-control platform used by
-          more than five million subscribers. From 2015 to 2016, he was with Turkish Aerospace, where he was
+          more than five million subscribers. From 2015 to 2016, he was with
+          <a href="https://www.tusas.com/en" target="_blank" rel="noopener">Turkish Aerospace<span class="sr-only"> (external)</span></a>, where he was
           involved in the development and integration of communication and network architectures for ANKA
           unmanned aerial vehicle systems. He joined the Department of Electrical and Electronics Engineering
-          at TED University in 2016, where he has been serving as an Associate Professor since 2021 and held
+          at <a href="https://www.tedu.edu.tr/en" target="_blank" rel="noopener">TED University<span class="sr-only"> (external)</span></a> in 2016, where he has been serving as an Associate Professor since 2021 and held
           the position of Department Chair from 2021 to 2024.</p>
         <p>He has authored over 40 peer-reviewed journal articles and conference papers, which have accumulated
           more than 1,000 citations. He received the IEEE Middle East and North Africa Communications Conference

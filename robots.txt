@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /design-artifacts/
+
+Sitemap: https://huguryildiz.com/sitemap.xml

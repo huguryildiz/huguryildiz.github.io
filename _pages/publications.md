@@ -1,6 +1,6 @@
 ---
 layout: academic
-title: "Publications"
+title: "Publications & Papers – Hüseyin Uğur Yıldız"
 description: "Peer-reviewed journal articles, an editorial, and international and national conference papers by Hüseyin Uğur Yıldız. Metrics from Google Scholar, refreshed weekly."
 permalink: /publications/
 ---
@@ -17,7 +17,17 @@ permalink: /publications/
   </header>
 
   <div class="statgrid" role="group" aria-label="Publication metrics">
-    <div id="statTiles" style="display:contents"></div>
+    <div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg><b>{{ sm.citations_display }}</b><span>Citations</span></div>
+    <div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-target"/></svg><b>{{ sm.h_index }}</b><span>h-index</span></div>
+    <div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-file"/></svg><b>{{ site.data.publications | size }}</b><span>Publications listed</span></div>
+    {%- assign j = site.data.publications | where: "type", "journal" | size -%}
+    {%- assign e = site.data.publications | where: "type", "editorial" | size -%}
+    {%- assign ci = site.data.publications | where: "type", "confint" | size -%}
+    {%- assign cn = site.data.publications | where: "type", "confnat" | size -%}
+    <div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg><b>{{ j }}</b><span>Journal articles</span></div>
+    <div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-pen"/></svg><b>{{ e }}</b><span>Editorial</span></div>
+    <div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg><b>{{ ci }}</b><span>Conf. papers (intl.)</span></div>
+    <div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-flag"/></svg><b>{{ cn }}</b><span>Conf. papers (natl.)</span></div>
     <div class="stat wide">
       <div class="qchart" id="qChart"></div>
     </div>
@@ -30,7 +40,7 @@ permalink: /publications/
     </div>
     {%- endif %}
   </div>
-  <p class="statnote" id="pubBreakdown"></p>
+  <p class="statnote">Journal quartiles reflect the journal's rank in the publication year. Citations, h-index, and the per-year citation counts: Google Scholar, updated {{ sm.updated_utc | date: "%b %-d, %Y" }} — refreshed weekly; the current year is still accruing. Select a publication-year bar or a quartile below to filter the list.</p>
 </div>
 
 <div class="filters">
@@ -150,25 +160,7 @@ var PUBS = {{ site.data.publications | jsonify }};
   var $$ = function(s){return Array.prototype.slice.call(document.querySelectorAll(s));};
 
   var state = {type:"all", year:"all", q:"all"};
-  var n = function(t){return PUBS.filter(function(p){return p.type === t;}).length;};
   var nq = function(q){return PUBS.filter(function(p){return p.type === "journal" && p.q === q;}).length;};
-
-  var tiles = [
-    ["link", "{{ sm.citations_display }}", "Citations"],
-    ["target", "{{ sm.h_index }}", "h-index"],
-    ["file", PUBS.length, "Publications listed"],
-    ["book", n("journal"), "Journal articles"],
-    ["pen", n("editorial"), "Editorial"],
-    ["globe", n("confint"), "Conf. papers (intl.)"],
-    ["flag", n("confnat"), "Conf. papers (natl.)"]
-  ];
-  $("#statTiles").innerHTML = tiles.map(function(t){
-    return '<div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-' + t[0] +
-    '"/></svg><b>' + t[1] + '</b><span>' + t[2] + '</span></div>';}).join("");
-  $("#pubBreakdown").innerHTML =
-    "Journal quartiles reflect the journal's rank in the publication year. " +
-    "Citations, h-index, and the per-year citation counts: Google Scholar, updated {{ sm.updated_utc | date: '%b %-d, %Y' }} — refreshed weekly; the current year is still accruing. " +
-    "Select a publication-year bar or a quartile below to filter the list.";
 
   /* Quartile distribution — clickable rows that drive the quartile filter. */
   var qCounts = {Q1: nq("Q1"), Q2: nq("Q2"), Q3: nq("Q3")};

@@ -1,6 +1,6 @@
 ---
 layout: academic
-title: "Students"
+title: "Graduate Students & Supervision – Hüseyin Uğur Yıldız"
 description: "Graduate supervision record of Hüseyin Uğur Yıldız — Ph.D. and M.Sc. theses in wireless and underwater sensor network optimization — and information for prospective students."
 permalink: /students/
 ---

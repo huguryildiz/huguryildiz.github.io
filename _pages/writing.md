@@ -1,6 +1,6 @@
 ---
 layout: academic
-title: "Writing"
+title: "Writing & Essays – Hüseyin Uğur Yıldız"
 description: "Notes, announcements, and longer pieces on operations research, network optimization, and machine learning for wireless, underwater, and aerial networks."
 permalink: /writing/
 ---
