@@ -92,7 +92,11 @@ def get(path, start, end, params=None):
                 print(f"[WARN] {path} [{start}..{end}]: non-JSON response, skipping")
                 return None
         print(f"[WARN] {path} [{start}..{end}]: HTTP {r.status_code} - {r.text[:200]}")
-        if r.status_code < 500 and r.status_code != 429:
+        # 404 is normally "we got the path wrong", but GoatCounter intermittently
+        # answers a valid stats path with its HTML 404 page around the scheduled
+        # run time; those runs aborted while a manual re-run minutes later
+        # succeeded. It is retried like a 5xx, and still gives up after three.
+        if r.status_code < 500 and r.status_code not in (404, 429):
             return None
     return None
 
@@ -251,8 +255,13 @@ def fetch_site_meta():
     site = next((s for s in sites if s.get("code") == SITE_NAME), sites[0] if sites else None)
     if not site:
         return meta
-    zone = ((site.get("user_defaults") or {}).get("timezone") or {}).get("Zone")
-    if zone:
+    # `timezone` used to be an object with a `Zone` field; the API now returns
+    # the zone name as a plain string. Both shapes are read so neither a stale
+    # nor a current response blanks the panel — and so a shape change cannot
+    # crash the run again.
+    tz = (site.get("user_defaults") or {}).get("timezone")
+    zone = tz.get("Zone") if isinstance(tz, dict) else tz
+    if zone and isinstance(zone, str):
         meta["timezone"] = zone
     if site.get("first_hit_at"):
         meta["first_hit_at"] = site["first_hit_at"]
