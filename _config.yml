@@ -100,6 +100,13 @@ exclude:
   - vendor
   - scripts/
   - cv-latex/
+  # Üretilen CV artefaktları — kaynak değil, build sırasında oluşur.
+  # Yerelde kalmış bir kopya huguryildiz.com/main.tex olarak yayına girmesin.
+  - main.tex
+  - main.pdf
+  - main.aux
+  - main.log
+  - main.out
   - analytics-archive/
   - docs/
   - Dockerfile
