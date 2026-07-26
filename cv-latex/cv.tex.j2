@@ -221,11 +221,13 @@ Leadership, Team Management, Communication \& Collaboration, Problem-Solving, De
 \section{\faMedal~Honors \& Awards}
 \justify
 
-\noindent [A2] \textbf{Elevation to the IEEE Senior Member grade,} an honor recognizing significant contributions to the profession (achieved by less than 10\% of IEEE members), 2021.
-
+{% for h in cv.honors %}
+\noindent [{{ h.id }}] {{ tex(h.detail_tex) }}
+{% if not loop.last %}
 \vspace{5pt}
 
-\noindent [A1] \textbf{The best paper award (3rd place),} ``\emph{Utilization of multi-sink architectures for lifetime maximization in underwater sensor networks,}'' 2nd IEEE Middle East \& North Africa Communications Conference (MENACOMM'19), Manama, Bahrain, 2019.
+{% endif %}
+{% endfor %}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %-----------RESEARCH INTERESTS-----------
@@ -351,7 +353,7 @@ $\bullet$ {{ esc(r) }},
 \justify
 
 {% for t in cv.talks %}
-\noindent \textbf{Yildiz, H. U.} ({{ t.date_tex }}). \emph{{ '{' }}{{ t.title_tex if t.title_tex else sentence_case(esc(t.title)) }}} [{{ esc(t.kind) }}]. {{ esc(t.venue) }}.{% if t.host %} Hosted by {{ esc(host_initials(t.host)) }}.{% endif %}
+\noindent \textbf{Yildiz, H. U.} ({{ t.date_tex }}). \emph{{ '{' }}{{ tex(t.title_tex) if t.title_tex else sentence_case(esc(t.title)) }}} [{{ esc(t.kind) }}]. {{ esc(t.venue) }}.{% if t.host %} Hosted by {{ esc(host_initials(t.host)) }}.{% endif %}
 
 {% if not loop.last %}
 \vspace{5pt}
@@ -382,8 +384,9 @@ $\bullet$ {{ esc(r) }},
 \section{\faLanguage~Languages}
 \justify
 
-\noindent $\bullet$ \textbf{English:} Business and academic proficiency. %(TOEFL iBT: 101/120). %(YOKDIL: 91.25/100, Aug. 2021),
-\noindent $\bullet$ \textbf{Turkish:} Native.
+{% for l in cv.languages %}
+\noindent $\bullet$ \textbf{{ '{' }}{{ esc(l.name) }}:} {{ tex(l.level_tex) }}.
+{% endfor %}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %-----------ORGANIZATIONS----------------
@@ -394,7 +397,7 @@ $\bullet$ {{ esc(r) }},
 
 \begin{itemize}[leftmargin=*]
 \setlength\itemsep{-0.5em}
-\item \noindent IEEE Senior Member (2021--Cont.), IEEE Commun. Society (2015--2018), IEEE Oceanic Society (2021).
+\item \noindent {% for m in cv.service.memberships %}{{ esc(m.name) }} ({{ esc(m.period) }}){% if not loop.last %}, {% endif %}{% endfor %}.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

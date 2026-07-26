@@ -106,8 +106,20 @@ def load_data():
 
 def numbered_by_type(pubs, pub_type, prefix):
     """Verilen type için yıla göre azalan sırada [PREFIX<n>] numaralarını hesaplar.
-    En yeni kayıt en yüksek numarayı alır (örn. 24 kayıttan en yeni [J24])."""
+    En yeni kayıt en yüksek numarayı alır (örn. 24 kayıttan en yeni [J24]).
+
+    Numaralama, _data/publications.yml içindeki kayıtların ZATEN azalan yıl
+    sırasında olduğunu varsayar (dosya konumuna göre numaralandırır, yılı
+    yeniden sıralamaz). Bu varsayım bozulursa -- örn. sıra dışı bir kayıt
+    eklenirse -- sessizce yanlış numaralandırmak yerine burada yüksek sesle
+    patlar; assertion'ı bastırıp sessizce yeniden sıralamayın."""
     items = [p for p in pubs if p["type"] == pub_type]
+    for a, b in zip(items, items[1:]):
+        assert a["year"] >= b["year"], (
+            f"_data/publications.yml: {prefix} entries must stay in descending-year "
+            f"order (numbering assumes file order == year order); found year "
+            f"{a['year']} immediately before year {b['year']}"
+        )
     n = len(items)
     numbered = []
     for i, p in enumerate(items):

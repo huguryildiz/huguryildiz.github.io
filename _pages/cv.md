@@ -124,8 +124,8 @@ permalink: /cv/
       {% endfor %}
 
       <h2 class="sec" id="cv-languages"><svg class="hicon" aria-hidden="true"><use href="#i-globe"/></svg>Languages</h2>
-      <p><b style="color:var(--head);">English</b> — Business &amp; academic proficiency &nbsp;·&nbsp;
-        <b style="color:var(--head);">Turkish</b> — Native</p>
+      <p>{% for l in site.data.cv.languages %}<b style="color:var(--head);">{{ l.name }}</b> — {{ l.level_web | replace: '&', '&amp;' }}{% unless forloop.last %} &nbsp;·&nbsp;
+        {% endunless %}{% endfor %}</p>
 
       <h2 class="sec" id="cv-elsewhere"><svg class="hicon" aria-hidden="true"><use href="#i-link"/></svg>Elsewhere on this site</h2>
       <p style="font-size:.95rem;">The full publication list lives on <a href="/publications/">Publications</a>;

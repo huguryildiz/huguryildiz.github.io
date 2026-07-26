@@ -68,7 +68,7 @@ permalink: /publications/
 </div>
 
 <script>
-/* Publication data — transcribed 1:1 from the publication record (43 entries). */
+/* Publication data — sourced from _data/publications.yml (43 entries), injected via jsonify. */
 var SITE = "https://huguryildiz.com";
 var PUBS = {{ site.data.publications | jsonify }};
 /* **...** vurgusunu <b>...</b> etiketine çevir (kaynak nötr işaret tutar) */
