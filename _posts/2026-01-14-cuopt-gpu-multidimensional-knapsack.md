@@ -4,6 +4,7 @@ date: 2026-01-14
 excerpt: "NVIDIA cuOpt on a large-scale Multi-Dimensional Knapsack Problem — 30K binary variables, 10 knapsack constraints, ~300k nonzeros. Solved on a Tesla T4 under a 10-second limit to a ~0.035% relative MIP gap."
 tags: [Operations Research, GPU Optimization, Integer Programming]
 linkedin: "https://www.linkedin.com/feed/update/urn:li:share:7417308257074999296/"
+image: /assets/images/writing/covers/cuopt-gpu-multidimensional-knapsack.jpg
 ---
 
 **NVIDIA cuOpt** was evaluated on a large-scale **Multi-Dimensional Knapsack Problem (MKP)** with **30K binary variables** and **10 knapsack constraints** (~300k nonzeros).

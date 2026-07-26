@@ -4,6 +4,7 @@ date: 2026-07-23
 excerpt: "Phillip Kerger reports a near-quadratic oracle-complexity lower bound for derivative-free convex optimization — open since Protasov's 1996 upper bound — drafted in a single 2.5-hour model session and formalized in Lean 4 with no remaining `sorry`."
 tags: [Optimization, AI for Mathematics, Formal Verification]
 linkedin: "https://www.linkedin.com/posts/huguryildiz_check-out-this-chat-activity-7485680080925601793-iGWk"
+image: /assets/images/writing/covers/ai-assisted-proof-derivative-free-optimization.jpg
 ---
 
 A result worth reading carefully if you work in optimization theory, and worth reading twice if you follow what large models can and cannot do in mathematics.

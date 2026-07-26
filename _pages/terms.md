@@ -6,7 +6,7 @@ permalink: /terms/
 modified: 2026-07-24
 ---
 
-<div class="shell">
+<div class="shell prose-wide">
   <header class="pagehead">
     <h1>Terms and Privacy Policy</h1>
     <p class="lede">The privacy of visitors to this site is important. This page explains what limited information is collected and how it is used. I will never sell or share your personal information, and the site has no login, no comment system, and no contact form — so no personal details are collected directly from you.</p>
