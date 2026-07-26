@@ -8,8 +8,6 @@ permalink: /research/
 <div class="shell">
   <header class="pagehead">
     <h1 id="research-h1">Research</h1>
-    <p class="lede">One program: optimization-based models for networked systems, extended with
-      learning where scale and uncertainty demand it.</p>
   </header>
 
   <div class="program">
