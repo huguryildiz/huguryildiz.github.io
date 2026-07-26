@@ -1,6 +1,6 @@
 ---
 layout: academic
-title: "Terms and Privacy Policy"
+title: "Privacy & Terms – huguryildiz.com"
 description: "What limited information huguryildiz.com collects, how it is used, and how to opt out."
 permalink: /terms/
 modified: 2026-07-24
