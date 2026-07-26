@@ -61,7 +61,7 @@ layout: compress
           <li><a href="{{ '/cv/' | relative_url }}"{% if u contains '/cv' %} aria-current="page"{% endif %}><svg class="navico" aria-hidden="true"><use href="#i-file"/></svg>CV</a></li>
         </ul>
       </nav>
-      <button class="iconbtn" id="themeToggle" aria-label="Switch color theme">
+      <button class="iconbtn" id="themeToggle" aria-pressed="false" aria-label="Switch to dark theme">
         <svg class="sun" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="3.2"/><path d="M8 1v1.8M8 13.2V15M1 8h1.8M13.2 8H15M3 3l1.3 1.3M11.7 11.7L13 13M13 3l-1.3 1.3M4.3 11.7L3 13"/></svg>
         <svg class="moon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M13.2 9.4A5.6 5.6 0 1 1 6.6 2.8a4.4 4.4 0 0 0 6.6 6.6z"/></svg>
       </button>
@@ -92,12 +92,31 @@ layout: compress
   (function(){
     var root=document.documentElement;
     var tBtn=document.getElementById('themeToggle');
-    tBtn.addEventListener('click',function(){
-      var cur=root.getAttribute('data-theme')||
+    /* The control is a two-state toggle, so it reports that state rather than a
+       static "switch color theme": aria-pressed says which theme is on, and the
+       label names the theme the next press would bring. The markup ships the
+       light-theme wording, so the state is re-derived on load — the theme can
+       come from localStorage or from the OS preference, neither of which the
+       server knew about. */
+    var themeState=function(theme){
+      tBtn.setAttribute('aria-pressed',theme==='dark'?'true':'false');
+      tBtn.setAttribute('aria-label',theme==='dark'?'Switch to light theme':'Switch to dark theme');
+    };
+    var currentTheme=function(){
+      return root.getAttribute('data-theme')||
         (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
-      var next=cur==='dark'?'light':'dark';
+    };
+    themeState(currentTheme());
+    tBtn.addEventListener('click',function(){
+      var next=currentTheme()==='dark'?'light':'dark';
       root.setAttribute('data-theme',next);
+      themeState(next);
       try{localStorage.setItem('hy-theme',next);}catch(e){}
+    });
+    /* An OS-level theme switch changes the button's meaning too, but only while
+       the reader has not pinned a theme of their own. */
+    matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(){
+      if(!root.hasAttribute('data-theme'))themeState(currentTheme());
     });
     var navToggle=document.getElementById('navToggle'),nav=document.getElementById('primaryNav');
     navToggle.addEventListener('click',function(){
