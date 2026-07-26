@@ -161,14 +161,14 @@ honors:
     icon: "ieee"
     # DIVERGED — tex wording (main.tex:219) differs from web.
     detail_web: "Awarded for significant professional contributions; achieved by fewer than 10% of IEEE members."
-    detail_tex: "Elevation to the IEEE Senior Member grade, an honor recognizing significant contributions to the profession (achieved by less than 10% of IEEE members), 2021."
+    detail_tex: "**Elevation to the IEEE Senior Member grade,** an honor recognizing significant contributions to the profession (achieved by less than 10% of IEEE members), 2021."
   - id: "A1"
     year: 2019
     title: "Best Paper Award (third place), IEEE MENACOMM"
     # DIVERGED — tex wording (main.tex:223) includes the full conference name/edition; web
     # wording is shorter and links to a certificate PDF instead.
     detail_web: "“Utilization of multi-sink architectures for lifetime maximization in underwater sensor networks”, Manama, Kingdom of Bahrain."
-    detail_tex: "The best paper award (3rd place), “Utilization of multi-sink architectures for lifetime maximization in underwater sensor networks,” 2nd IEEE Middle East & North Africa Communications Conference (MENACOMM'19), Manama, Bahrain, 2019."
+    detail_tex: "**The best paper award (3rd place),** “Utilization of multi-sink architectures for lifetime maximization in underwater sensor networks,” 2nd IEEE Middle East & North Africa Communications Conference (MENACOMM'19), Manama, Bahrain, 2019."
     certificate_pdf: "/files/Yildiz_HuseyinUgur_BestPaperAward_MENACOMM_2019.pdf"
 
 toolbox:                                    # /cv/ Technical toolbox — LaTeX'te düz metin (main.tex Technical Skills)
