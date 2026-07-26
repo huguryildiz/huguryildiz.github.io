@@ -11,7 +11,7 @@ the browser, so those numbers can never disagree between windows.
 Requires GOATCOUNTER_API_TOKEN. Run by .github/workflows/update-goatcounter.yml.
 """
 
-import os, sys, json, time, requests
+import os, sys, json, time, unicodedata, requests
 from datetime import date, datetime, timedelta, timezone
 
 TOKEN = os.getenv("GOATCOUNTER_API_TOKEN", "").strip()
@@ -56,6 +56,41 @@ LIST_CAP = 12
 UNCAPPED = {"countries"}
 # How many of the busiest countries get a region lookup (one request each).
 REGION_COUNTRIES = 5
+
+# Turkish provinces, keyed by the licence-plate number that doubles as the
+# ISO 3166-2:TR suffix (TR-34) and as the `data-code` on assets/maps/turkey.svg.
+# GoatCounter resolves regions through MaxMind GeoLite2, which returns the
+# transliterated ISO name ("Istanbul", "Sanliurfa"); province_key() folds those
+# onto the Turkish spellings below, so the map and the ranked list can share one
+# canonical name instead of showing "Sanliurfa" beside "Şanlıurfa".
+TR_PROVINCES = {
+    "01": "Adana", "02": "Adıyaman", "03": "Afyonkarahisar", "04": "Ağrı",
+    "05": "Amasya", "06": "Ankara", "07": "Antalya", "08": "Artvin",
+    "09": "Aydın", "10": "Balıkesir", "11": "Bilecik", "12": "Bingöl",
+    "13": "Bitlis", "14": "Bolu", "15": "Burdur", "16": "Bursa",
+    "17": "Çanakkale", "18": "Çankırı", "19": "Çorum", "20": "Denizli",
+    "21": "Diyarbakır", "22": "Edirne", "23": "Elazığ", "24": "Erzincan",
+    "25": "Erzurum", "26": "Eskişehir", "27": "Gaziantep", "28": "Giresun",
+    "29": "Gümüşhane", "30": "Hakkâri", "31": "Hatay", "32": "Isparta",
+    "33": "Mersin", "34": "İstanbul", "35": "İzmir", "36": "Kars",
+    "37": "Kastamonu", "38": "Kayseri", "39": "Kırklareli", "40": "Kırşehir",
+    "41": "Kocaeli", "42": "Konya", "43": "Kütahya", "44": "Malatya",
+    "45": "Manisa", "46": "Kahramanmaraş", "47": "Mardin", "48": "Muğla",
+    "49": "Muş", "50": "Nevşehir", "51": "Niğde", "52": "Ordu",
+    "53": "Rize", "54": "Sakarya", "55": "Samsun", "56": "Siirt",
+    "57": "Sinop", "58": "Sivas", "59": "Tekirdağ", "60": "Tokat",
+    "61": "Trabzon", "62": "Tunceli", "63": "Şanlıurfa", "64": "Uşak",
+    "65": "Van", "66": "Yozgat", "67": "Zonguldak", "68": "Aksaray",
+    "69": "Bayburt", "70": "Karaman", "71": "Kırıkkale", "72": "Batman",
+    "73": "Şırnak", "74": "Bartın", "75": "Ardahan", "76": "Iğdır",
+    "77": "Yalova", "78": "Karabük", "79": "Kilis", "80": "Osmaniye",
+    "81": "Düzce",
+}
+
+# Names that do not fold onto a province by transliteration alone: renamed
+# provinces (Içel became Mersin in 2002) and the short forms GeoLite2 has been
+# seen to use.
+TR_ALIASES = {"icel": "33", "afyon": "03", "urfa": "63", "kmaras": "46"}
 # How many of the busiest pages get their own referrer lookup (one request each).
 REF_PAGES = 5
 # How many pages get their own daily series stored (all-time window only).
@@ -161,6 +196,21 @@ def normalize(key, items):
                 for i in items if i.get("name")]
     rows.sort(key=lambda r: r["count"], reverse=True)
     return rows
+
+
+def province_key(name):
+    """Fold a province name to a comparison key: lower-case, unaccented, and
+    stripped of spaces and punctuation. 'Şanlıurfa', 'Sanliurfa' and
+    'SANLIURFA' all reduce to 'sanliurfa'. The dotted capital İ needs the
+    explicit substitution because casefolding it leaves a combining dot that
+    NFKD then splits into its own character."""
+    flat = unicodedata.normalize("NFKD", name.replace("İ", "I").replace("ı", "i"))
+    flat = "".join(c for c in flat if not unicodedata.combining(c))
+    return "".join(c for c in flat.lower() if c.isalnum())
+
+
+TR_BY_KEY = {province_key(n): c for c, n in TR_PROVINCES.items()}
+TR_BY_KEY.update(TR_ALIASES)
 
 
 def window_bounds(days, offset):
@@ -309,9 +359,13 @@ def fetch_window(label, days, offset):
         block[key + "_total"] = len(rows)
         block[key] = rows if key in UNCAPPED else rows[:LIST_CAP]
 
-    regions = fetch_regions(block["countries"], start, end)
+    regions, unmatched = fetch_regions(block["countries"], start, end)
     block["regions_total"] = len(regions)
-    block["regions"] = regions[:LIST_CAP]
+    # Turkish rows are kept in full because the province map paints every one of
+    # them; the rest of the world stays capped, as only the ranked list reads it.
+    block["regions"] = regions[:LIST_CAP] + [
+        r for r in regions[LIST_CAP:] if r["country_code"] == "TR" and r["code"]]
+    block["regions_unmatched"] = unmatched
 
     return block, total
 
@@ -324,13 +378,19 @@ def fetch_regions(countries, start, end):
     issue 850). For Turkey a region is a province, which is the closest this
     source gets to a city breakdown. The detail endpoint is best-effort: if it
     returns nothing, the report simply omits the panel.
+
+    Returns (rows, unmatched). GoatCounter sends no ISO code for a region, only
+    a name, so Turkish rows are matched to a province code by name; whatever
+    fails to match is returned alongside rather than dropped, so a name the
+    table does not know shows up in the snapshot instead of silently vanishing
+    from the map.
     """
-    out = []
+    out, unmatched = [], []
     for country in countries[:REGION_COUNTRIES]:
-        code = country.get("code")
-        if not code:
+        cc = country.get("code")
+        if not cc:
             continue
-        for item in stats_list(f"/stats/locations/{code}", start, end):
+        for item in stats_list(f"/stats/locations/{cc}", start, end):
             name = (item.get("name") or item.get("id") or "").strip()
             count = int(item.get("count") or 0)
             if not name or not count:
@@ -338,10 +398,18 @@ def fetch_regions(countries, start, end):
             # The detail endpoint repeats the country row itself; skip it.
             if name == country.get("name"):
                 continue
+            code = item.get("id")
+            if cc == "TR":
+                code = TR_BY_KEY.get(province_key(name))
+                if code:
+                    name = TR_PROVINCES[code]
+                else:
+                    unmatched.append({"name": name, "country": cc, "count": count})
             out.append({"name": name, "country": country.get("name"),
-                        "code": item.get("id"), "count": count})
+                        "country_code": cc, "code": code, "count": count})
     out.sort(key=lambda r: r["count"], reverse=True)
-    return out
+    unmatched.sort(key=lambda r: r["count"], reverse=True)
+    return out, unmatched
 
 
 windows, all_raw = {}, None
