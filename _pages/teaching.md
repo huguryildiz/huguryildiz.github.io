@@ -1,6 +1,6 @@
 ---
 layout: academic
-title: "Teaching"
+title: "Courses & Teaching – Hüseyin Uğur Yıldız"
 description: "Courses taught at TED University by Hüseyin Uğur Yıldız — probability, signals and systems, communication systems, optimization for networks — and teaching philosophy."
 permalink: /teaching/
 ---

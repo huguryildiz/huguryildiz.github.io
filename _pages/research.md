@@ -1,6 +1,6 @@
 ---
 layout: academic
-title: "Research"
+title: "Research Program – Hüseyin Uğur Yıldız"
 description: "One research program: optimization-based models for networked systems, extended with learning where scale and uncertainty demand it. Software: VERA, KAIROS, UWA Ray Bench."
 permalink: /research/
 ---
