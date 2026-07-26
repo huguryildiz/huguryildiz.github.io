@@ -38,3 +38,29 @@ layout: academic
     {%- endif -%}
   </article>
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.excerpt | strip_html | jsonify }},
+  "image": {{ page.image | default: '/assets/images/og-default.jpg' | prepend: site.url | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": "Hüseyin Uğur Yıldız",
+    "url": "{{ site.url }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hüseyin Uğur Yıldız",
+    "url": "{{ site.url }}"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url }}"
+  }
+}
+</script>
