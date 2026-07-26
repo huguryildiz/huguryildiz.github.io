@@ -155,21 +155,21 @@
 \section{\faGraduationCap~Education}
 \justify
 
-\noindent \textbf{\href{https://www.etu.edu.tr/en}{TOBB University of Economics and Technology (ETU)}} \hfill {Ankara, Turkey} \\
+\noindent \textbf{\href{https://www.etu.edu.tr/en}{TOBB University of Economics and Technology (ETU)}} \hfill {{ '{' }}{{ esc(cv.education[0].location) }}} \\
 \noindent {Ph.D., Electrical and Electronics Engineering} \hfill  {01/2014 -- 04/2016} \\
 \noindent \emph{Dissertation Title:} \href{{ '{' }}{{ journals_by_id['J3'].doi }}}{\underline{{ '{' }}{{ tex(journals_by_id['J3'].title) }}}} \\
 %\noindent \emph{Doctoral Advisor:} Prof. Bulent Tavli\\
 
 \vspace{-10pt}
 
-\noindent \textbf{\href{https://www.etu.edu.tr/en}{TOBB University of Economics and Technology}} \hfill {Ankara, Turkey} \\
+\noindent \textbf{\href{https://www.etu.edu.tr/en}{TOBB University of Economics and Technology}} \hfill {{ '{' }}{{ esc(cv.education[1].location) }}} \\
 \noindent {M.Sc., Electrical and Electronics Engineering} \hfill {09/2011 -- 09/2013} \\
 \noindent \emph{Thesis Title:} \href{{ '{' }}{{ journals_by_id['J4'].doi }}}{\underline{{ '{' }}{{ esc(cv.theses_own[1].title_tex) }}}} \\
 %\noindent \emph{Advisor:} Prof. Bulent Tavli, \emph{Co-Advisor:} Prof. Kemal Bicakci \\
 
 \vspace{-10pt}
 
-\noindent \textbf{\href{https://w3.bilkent.edu.tr/bilkent/}{Bilkent University}} \hfill {Ankara, Turkey} \\
+\noindent \textbf{\href{https://w3.bilkent.edu.tr/bilkent/}{Bilkent University}} \hfill {{ '{' }}{{ esc(cv.education[2].location) }}} \\
 \noindent {B.Sc., Electrical and Electronics Engineering} \hfill {08/2005 -- 08/2009}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -338,7 +338,7 @@ $\bullet$ {{ esc(r) }},
 \begin{itemize}[leftmargin=*]
 \setlength\itemsep{-0.4em}
 {% for c in cv.courses %}
-\item \noindent {{ esc(c.code) }} -- {{ esc(c.name) }} ({{ esc(c.terms) }}){% if not loop.last and not loop.index == 6 %},{% else %}.{% endif %}
+\item \noindent {{ esc(c.code) }} -- {{ esc(c.name) }} ({{ esc(c.terms) }}){% if not loop.last %},{% else %}.{% endif %}
 
 {% endfor %}
 \end{itemize}
