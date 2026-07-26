@@ -186,7 +186,7 @@ Linear Programming (LP), Mixed-Integer Programming (MIP), Multi-Objective Optimi
 \item \noindent \textbf{Machine Learning \& Reinforcement Learning:} 
 Supervised and Unsupervised Learning, Regression and Classification Models, Decision Trees, Neural Networks, Markov Decision Processes (MDPs), Q-Learning, Proximal Policy Optimization (PPO), Deep Reinforcement Learning.
 \item \noindent \textbf{Programming \& Scientific Computing:} 
-Python (NumPy, Pandas, Scikit-Learn, Matplotlib), MATLAB/Octave, Simulink, \LaTeX.
+Python (NumPy, Pandas, Scikit-Learn, Matplotlib), MATLAB-Octave, Simulink, \LaTeX.
 \item \noindent \textbf{Development Tools:} 
 PyCharm, Jupyter Notebook, VS Code, Spyder, Cursor.
 \end{itemize}
@@ -248,7 +248,7 @@ Leadership, Team Management, Communication \& Collaboration, Problem-Solving, De
 \subsection*{(1) \underline{Journal Articles:}}
 
 {% for p in journals %}
-\noindent [J{{ p.num }}] {{ p.authors_tex }} ({{ p.date_tex }}). {{ p.title_tex }}. \emph{{ '{' }}{{ p.venue_tex }}, {{ p.vol_tex }}}{{ p.detail_rest_tex }}.
+\noindent [J{{ p.num }}] {{ p.authors_tex }} ({{ p.date_tex }}). {{ p.title_tex }}. \emph{{ '{' }}{{ p.venue_tex }}, {{ p.vol_tex }}\nocorr}{{ p.detail_rest_tex }}.
 {% if not loop.last %}
 \vspace{5pt}
 
@@ -258,7 +258,7 @@ Leadership, Team Management, Communication \& Collaboration, Problem-Solving, De
 \subsection*{(2) \underline{Editorial:}}
 
 {% for p in editorials %}
-\noindent [E{{ p.num }}] {{ p.authors_tex }} ({{ p.date_tex }}). {{ p.title_tex }}. \emph{{ '{' }}{{ p.venue_tex }}, {{ p.vol_tex }}}{{ p.detail_rest_tex }}.
+\noindent [E{{ p.num }}] {{ p.authors_tex }} ({{ p.date_tex }}). {{ p.title_tex }}. \emph{{ '{' }}{{ p.venue_tex }}, {{ p.vol_tex }}\nocorr}{{ p.detail_rest_tex }}.
 {% endfor %}
 \vspace{-10pt}
 \subsection*{(3) \underline{Conference Proceedings:}}
