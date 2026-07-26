@@ -21,7 +21,12 @@
   --surface-raise:#FFFFFF;
   --ink:#232B33;
   --ink-soft:#49535D;
-  --ink-faint:#66707B;
+  /* Faint ink has to clear 4.5:1 on the darkest surface it ever sits on, not just
+     on the page background: the CV stat cards paint --surface behind a 10.9px
+     <small>, where the previous #66707B measured 4.39:1. Light: 5.11 on --bg,
+     4.72 on --surface, 5.42 on --surface-raise. (Dark's #93989E already clears
+     5.27:1 on its own worst case, --surface-raise, so it stays put.) */
+  --ink-faint:#616B76;
   --head:#12314E;
   --hairline:#DCD7CC;
   --hairline-strong:#C2BCB0;
@@ -66,7 +71,7 @@
 }
 :root[data-theme="light"]{
   --bg:#FAF8F4; --surface:#F2EFE8; --surface-raise:#FFFFFF;
-  --ink:#232B33; --ink-soft:#49535D; --ink-faint:#66707B;
+  --ink:#232B33; --ink-soft:#49535D; --ink-faint:#616B76;
   --head:#12314E; --hairline:#DCD7CC; --hairline-strong:#C2BCB0;
   --accent:#A0451C; --accent-strong:#7F3512;
   --accent-wash:rgba(160,69,28,.08);
@@ -92,10 +97,12 @@ a:hover{color:var(--accent-strong); text-decoration:underline; text-underline-of
 /* WCAG link-in-text-block: links inside body prose must be distinguishable by
    more than colour, so they carry a persistent underline. Heading/nav/card links
    (publication titles, "→" more-links, software strip) opt back out below. */
-.shell p a, .shell .newslist a{text-decoration:underline; text-underline-offset:.16em;
+.shell p a, .shell .newslist a,
+.shell .dotlist a, .shell .resourcelist a{text-decoration:underline; text-underline-offset:.16em;
   text-decoration-color:color-mix(in srgb, var(--accent) 42%, transparent);}
 .shell p.more a, .shell .homepub .t a, .shell .pub .t a,
-.shell .software-strip a, .shell .rmap-pubs a, .shell p a.btn{text-decoration:none;}
+.shell .software-strip a, .shell .rmap-pubs a,
+.shell p a.btn, .shell .dotlist a.btn{text-decoration:none;}
 :focus-visible{outline:2px solid var(--focus); outline-offset:2px; border-radius:2px;}
 img{max-width:100%; height:auto; display:block;}
 figure{margin:0;}
@@ -164,8 +171,10 @@ nav.primary a[aria-current="page"]{color:var(--head); font-weight:650; box-shado
   :root:not([data-theme]) #themeToggle .sun{display:none;}
 }
 
-/* Mobile nav */
-@media (max-width:820px){
+/* Mobile nav. The breakpoint is in em, not px: the same 820/16 threshold, but it
+   also fires under text-only zoom, where the viewport stays 1280px wide while the
+   root font doubles and the horizontal nav would otherwise overflow the page. */
+@media (max-width:51.25em){
   #navToggle{display:inline-flex; margin-left:auto;}
   nav.primary{
     display:none; position:absolute; left:0; right:0; top:100%;
@@ -183,7 +192,10 @@ nav.primary a[aria-current="page"]{color:var(--head); font-weight:650; box-shado
 
 /* ---------- SECTION GRAMMAR ---------- */
 main{display:block;}
-main:focus{outline:none;}
+/* The skip link focuses main via tabindex="-1"; suppressing the ring outright left
+   that jump silent, so only the programmatic/pointer case loses it — arriving by
+   keyboard still gets the global :focus-visible ring. */
+main:focus:not(:focus-visible){outline:none;}
 @media (prefers-reduced-motion:reduce){ *{scroll-behavior:auto !important;} }
 .pagehead{padding:clamp(2rem,5vw,3.2rem) 0 0;}
 .pagehead h1{font-size:clamp(1.7rem,3.4vw,2.25rem); font-weight:600;}
@@ -572,7 +584,9 @@ ol.publist{list-style:none; margin:0; padding:0;}
 .pub .venue i{font-family:var(--serif); font-size:1.02em;}
 .pub .row{display:flex; flex-wrap:wrap; align-items:center; gap:.4rem .9rem; margin-top:.5rem;}
 .pub .row .tag{font-variant-numeric:tabular-nums;}
-.publink{font-size:.86rem; font-weight:650;}
+/* Standalone link row (DOI · PDF · Slides), not links inside a sentence, so the
+   inline exception does not apply: at .86rem the line box lands on 23.1px. */
+.publink{font-size:.86rem; font-weight:650; display:inline-flex; align-items:center; min-height:24px;}
 .emptystate{
   border:1px dashed var(--hairline-strong); border-radius:10px;
   padding:2.4rem 1.5rem; text-align:center; margin:2.2rem 0; color:var(--ink-soft);
@@ -620,6 +634,7 @@ ol.publist{list-style:none; margin:0; padding:0;}
   border-radius:999px;}
 .chartseg button{font:inherit; font-size:.66rem; font-weight:600; line-height:1;
   padding:.24rem .5rem; border:0; border-radius:999px; background:none;
+  display:inline-flex; align-items:center; min-height:24px;
   color:var(--ink-faint); cursor:pointer; transition:background .12s ease, color .12s ease;}
 .chartseg button:hover{color:var(--accent);}
 .chartseg button[aria-pressed="true"]{background:var(--accent-wash); color:var(--accent);}
@@ -631,7 +646,7 @@ ol.publist{list-style:none; margin:0; padding:0;}
 
 /* Quartile distribution mini-chart (clickable → filters the list) */
 .qchart{display:flex; flex-direction:column; gap:.34rem; width:100%;}
-.qrow{display:grid; grid-template-columns:1.5rem 1fr auto; align-items:center; gap:.55rem;
+.qrow{display:grid; grid-template-columns:1.5rem 1fr auto; align-items:center; gap:.55rem; min-height:24px;
   width:100%; padding:.12rem 0; background:none; border:0; border-radius:5px;
   font:inherit; text-align:left; cursor:pointer; transition:opacity .12s ease;}
 .qrow .ql{font-family:var(--sans); font-size:.78rem; font-weight:650; color:var(--ink-soft);
@@ -875,11 +890,19 @@ ol.publist{list-style:none; margin:0; padding:0;}
 .cvrow .what .w{color:var(--ink-soft); font-size:.94rem;}
 .cvrow .what .d{color:var(--ink-soft); font-size:.92rem; margin-top:.2rem;}
 .cvrow .what .links{margin-top:.35rem; display:flex; gap:.9rem; flex-wrap:wrap; font-size:.87rem; font-weight:650; align-items:center;}
+/* Standalone link rows are their own targets, not links inside a sentence, so the
+   WCAG 2.2 inline exception does not cover them: at .87rem the line box lands on
+   23.4px. The box only grows downward from the text's own leading, so nothing moves. */
+.cvrow .what .links a, .swproject .links a{display:inline-flex; align-items:center; min-height:24px;}
 @media (max-width:640px){
   .cvrow{grid-template-columns:1fr; gap:0;}
   .cvrow .when{order:-1; padding:0 0 .1rem;}
 }
-.toolgroups{display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:1.6rem 2.4rem;}
+/* min(…,100%) rather than a bare 320px: below a 320px viewport the column can no
+   longer reach its own floor, so the track stops shrinking and the whole page
+   scrolls sideways. The children's min-content width is ~100px, so the floor was
+   arbitrary anyway and giving it up costs nothing above the fold. */
+.toolgroups{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr)); gap:1.6rem 2.4rem;}
 
 /* ---------- STUDENTS / TEACHING / SERVICE ---------- */
 .supstats{display:flex; flex-wrap:wrap; gap:.4rem 2.6rem; margin:.8rem 0 0; padding:.8rem 0;
@@ -932,7 +955,8 @@ footer.site .fcopy{font-variant-numeric:tabular-nums;}
 footer.site .flisten{display:inline-flex; flex-wrap:wrap; align-items:center; gap:.3rem 1rem; margin-left:auto;}
 footer.site .flabel{font-size:.7rem; font-weight:650; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-faint);}
 footer.site .fstats{display:inline-flex; flex-wrap:wrap; align-items:center; gap:.3rem 1rem;}
-footer.site a{color:var(--ink-soft); font-weight:550; display:inline-flex; align-items:center; gap:.35rem;}
+footer.site a{color:var(--ink-soft); font-weight:550; display:inline-flex; align-items:center; gap:.35rem;
+  min-height:24px;}
 footer.site a:hover{color:var(--accent);}
 footer.site .licon.spotify{color:var(--ink-faint);}
 footer.site a:hover .licon.spotify{color:var(--accent);}
@@ -1351,4 +1375,10 @@ footer.site a:hover .licon.spotify{color:var(--accent);}
    practice minimum without inflating them for precise mouse pointers. */
 @media (pointer:coarse){
   .seg button, .rmap-views button, .uw-plaque .pctl button{min-height:44px;}
+  /* The masthead pair draws at 34.4px — over WCAG's 24px floor, under the 44px
+     ergonomic one. The hit area grows through ::before so the drawn button keeps
+     its size; enlarging the box itself would make the masthead taller on every phone. */
+  .iconbtn{position:relative;}
+  .iconbtn::before{content:""; position:absolute; left:50%; top:50%;
+    transform:translate(-50%,-50%); width:44px; height:44px;}
 }
