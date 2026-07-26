@@ -1,6 +1,7 @@
 ---
 title: "Airport gate assignment, revisited as a multi-objective mixed-integer program"
 date: 2026-01-06
+description: "A mixed-integer airport gate assignment model balances remote-stand penalties and passenger loads under time-overlap and gate-capacity constraints."
 excerpt: "A mixed-integer formulation of the airport gate assignment problem: time-overlap constraints via slot discretization, passenger-based gate capacities derived from historic utilization, and an objective that trades remote-stand penalties against passenger load balance."
 tags: [Operations Research, Multi-Objective Optimization, Integer Programming]
 linkedin: "https://www.linkedin.com/posts/huguryildiz_multiobjectiveoptimization-operationsresearch-activity-7414284495715037185-1emD"

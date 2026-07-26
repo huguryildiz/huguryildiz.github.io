@@ -1,6 +1,7 @@
 ---
 title: "A 30-year gap in derivative-free convex optimization, closed with AI assistance and verified in Lean 4"
 date: 2026-07-23
+description: "A reported near-quadratic lower bound closes a long-standing gap in derivative-free convex optimization, with an AI-assisted proof formalized in Lean 4."
 excerpt: "Phillip Kerger reports a near-quadratic oracle-complexity lower bound for derivative-free convex optimization — open since Protasov's 1996 upper bound — drafted in a single 2.5-hour model session and formalized in Lean 4 with no remaining `sorry`."
 tags: [Optimization, AI for Mathematics, Formal Verification]
 linkedin: "https://www.linkedin.com/posts/huguryildiz_check-out-this-chat-activity-7485680080925601793-iGWk"

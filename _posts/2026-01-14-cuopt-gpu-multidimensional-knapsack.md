@@ -1,6 +1,7 @@
 ---
 title: "A 30,000-variable knapsack, solved on a GPU in ten seconds"
 date: 2026-01-14
+description: "A 30,000-variable multidimensional knapsack model solved with NVIDIA cuOpt on a Tesla T4 in ten seconds, reaching an approximately 0.035% relative MIP gap."
 excerpt: "NVIDIA cuOpt on a large-scale Multi-Dimensional Knapsack Problem — 30K binary variables, 10 knapsack constraints, ~300k nonzeros. Solved on a Tesla T4 under a 10-second limit to a ~0.035% relative MIP gap."
 tags: [Operations Research, GPU Optimization, Integer Programming]
 linkedin: "https://www.linkedin.com/feed/update/urn:li:share:7417308257074999296/"

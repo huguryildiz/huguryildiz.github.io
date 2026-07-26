@@ -42,9 +42,6 @@ social:
     - "https://github.com/huguryildiz"
     - "https://www.researchgate.net/profile/Huseyin-Yildiz-3"
 
-twitter:
-  card: summary_large_image
-
 # =========================
 # Author
 # =========================
@@ -53,6 +50,7 @@ twitter:
 author:
   name: "Huseyin Ugur Yildiz"
   email: "hugur.yildiz@tedu.edu.tr"
+  url: "https://huguryildiz.com/#person"
   uri: "https://www.tedu.edu.tr/en/huseyin-ugur-yildiz"
   googlescholar: "https://scholar.google.com/citations?user=nQwHS1gAAAAJ"
   orcid: "https://orcid.org/0000-0002-1556-2634"
