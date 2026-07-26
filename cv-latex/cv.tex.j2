@@ -12,6 +12,16 @@
 \usepackage{enumitem}
 \usepackage{fancyhdr}
 \usepackage[hidelinks]{hyperref}
+% Document properties: without these the PDF reaches a jury or a funding panel with an
+% empty Title/Author, so a reader's file manager and PDF viewer label it by filename.
+\hypersetup{
+  pdftitle={Curriculum Vitae --- {{ cv.person.name_ascii }}},
+  pdfauthor={{ '{' }}{{ cv.person.name_ascii }}},
+  pdfsubject={Academic curriculum vitae: appointments, education, publications, teaching, supervision and service},
+  pdfkeywords={{ '{' }}{{ research_areas_tex }}},
+  pdfcreator={{ '{' }}pdflatex (generated from repository data, not hand-edited)},
+  pdflang={en}
+}
 \usepackage{ragged2e}
 \usepackage{bold-extra}
 \usepackage[english]{babel}
