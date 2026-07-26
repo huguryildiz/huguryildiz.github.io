@@ -61,7 +61,8 @@ jobs:
       - name: Render main.tex from _data/cv.yml
         run: python scripts/render_cv_tex.py --out main.tex
       - name: Compile CV PDF
-        uses: xu-cheng/latex-action@v3
+        # https://github.com/xu-cheng/latex-action/releases/tag/v3
+        uses: xu-cheng/latex-action@e2f99d4b3685b0da93f97e1b86ad8fab81105098
         with:
           root_file: main.tex
           latexmk_use_xelatex: false
