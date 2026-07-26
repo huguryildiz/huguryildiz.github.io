@@ -54,7 +54,10 @@ appointments:
     location: "Ankara, Türkiye"
     unit: "Department of Electrical and Electronics Engineering"
     roles:
-      - { title: "Associate Professor", period: "Mar 2021 – present" }
+      # The institutional post starts Mar 2021; the associate professorship itself was
+      # conferred by ÜAK in Nov 2020. The home page News entry states the earlier date,
+      # so the note travels with the record and keeps web CV and PDF CV consistent.
+      - { title: "Associate Professor", period: "Mar 2021 – present", note: "ÜAK associate professorship: Nov 2020" }
       - { title: "Department Chair", period: "Jul 2021 – Jul 2024" }
       - { title: "Assistant Professor", period: "Sep 2016 – Mar 2021" }
     # DIVERGED — web bullets render on /cv/; tex bullets (main.tex:124-127) differ in

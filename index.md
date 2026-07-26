@@ -136,6 +136,8 @@ permalink: /
       <div><dt>Works</dt><dd data-kpi="{{ sm.works }}">{{ sm.works }}</dd></div>
     </dl>
     <p class="kpi-src">Source: <a href="{{ sm.profile_url }}" target="_blank" rel="noopener">Google Scholar</a> · updated {{ sm.updated_utc | date: "%b %-d, %Y" }} · refreshed weekly</p>
+    <p class="kpi-src">Works counts every record Google Scholar indexes; this site lists
+      <a href="{{ '/publications/' | relative_url }}">{{ site.data.publications | size }} curated publications</a>.</p>
   </section>
   <script>
   /* Count-up for the Scholar metrics. Values are already rendered server-side,
