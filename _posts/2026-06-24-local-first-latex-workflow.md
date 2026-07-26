@@ -4,6 +4,7 @@ date: 2026-06-24
 excerpt: "I stopped a while ago. VS Code + LaTeX Workshop + Claude Code — files on disk, version control in Git, compilation on my own machine. Overleaf still wins on real-time collaboration; local control wins for solo, code-heavy work."
 tags: [LaTeX, Scientific Writing, Research Workflow]
 linkedin: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7475571468345434112/"
+image: /assets/images/writing/covers/local-first-latex-workflow.jpg
 ---
 
 My usual workflow is **VS Code + LaTeX Workshop + Claude Code**: files on my disk, version control in Git, compilation on my own machine. No sync wait, no cloud queue.
