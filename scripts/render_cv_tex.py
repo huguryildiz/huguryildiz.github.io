@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
-"""_data/cv.yml + _data/publications.yml -> main.tex
+"""_data/cv.yml + _data/publications.yml + _data/scholar_metrics.json -> main.tex
 
-GENERATED FILE: main.tex is not edited by hand. Source: _data/cv.yml and
-_data/publications.yml. Regenerate with:
+GENERATED FILE: main.tex is not edited by hand. Source: _data/cv.yml,
+_data/publications.yml and _data/scholar_metrics.json. Regenerate with:
 
     python3 scripts/render_cv_tex.py --out main.tex
 """
 import argparse
+import json
 import re
+from datetime import datetime
 from pathlib import Path
 
 import yaml
@@ -17,6 +19,12 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 TEMPLATE_DIR = REPO_ROOT / "cv-latex"
 CV_YML = REPO_ROOT / "_data" / "cv.yml"
 PUBLICATIONS_YML = REPO_ROOT / "_data" / "publications.yml"
+SCHOLAR_JSON = REPO_ROOT / "_data" / "scholar_metrics.json"
+
+# The PDF's citation section must quote the same snapshot the web pages quote.
+# Anything missing here is a hard failure rather than a silently omitted number:
+# a CV that prints "h-index:" with nothing after it is worse than no build.
+SCHOLAR_REQUIRED = ("citations_display", "h_index", "i10_index", "updated_utc", "profile_url")
 
 _ESCAPES = {
     "\\": r"\textbackslash{}",
@@ -98,6 +106,33 @@ def tex_text(text: str) -> str:
     return "".join(out)
 
 
+def load_scholar():
+    """Google Scholar anlık görüntüsünü okur ve şablona hazırlar.
+
+    Fail-closed: dosya yoksa, bozuksa ya da beklenen anahtarlardan biri
+    eksikse render'ı düşürür. Sessizce boş bir metrik basmaktansa Actions
+    derlemesinin kırılıp bir önceki PDF'in canlı kalması yeğdir (jekyll.yml
+    içindeki `test -s` guard'ıyla aynı felsefe)."""
+    try:
+        data = json.loads(SCHOLAR_JSON.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        raise SystemExit(f"render_cv_tex: {SCHOLAR_JSON} bulunamadı; CV metrikleri "
+                         f"tek kaynaktan gelmek zorunda, elle yazılamaz.")
+    except json.JSONDecodeError as exc:
+        raise SystemExit(f"render_cv_tex: {SCHOLAR_JSON} okunamadı ({exc}).")
+    missing = [k for k in SCHOLAR_REQUIRED if not data.get(k)]
+    if missing:
+        raise SystemExit(f"render_cv_tex: {SCHOLAR_JSON} içinde eksik alan(lar): "
+                         f"{', '.join(missing)}.")
+    data["updated_display"] = scholar_date(data["updated_utc"])
+    return data
+
+
+def scholar_date(updated_utc: str) -> str:
+    """'2026-07-25T19:45:11Z' -> 'Jul 2026' — web sayfalarındaki `%b %Y` ile aynı."""
+    return datetime.strptime(updated_utc, "%Y-%m-%dT%H:%M:%SZ").strftime("%b %Y")
+
+
 def load_data():
     cv = yaml.safe_load(CV_YML.read_text(encoding="utf-8"))
     pubs = yaml.safe_load(PUBLICATIONS_YML.read_text(encoding="utf-8"))
@@ -166,7 +201,7 @@ def prepare_publication(p):
     return out
 
 
-def build_context(cv, pubs):
+def build_context(cv, pubs, scholar):
     journals = [prepare_publication(p) for p in numbered_by_type(pubs, "journal", "J")]
     editorials = [prepare_publication(p) for p in numbered_by_type(pubs, "editorial", "E")]
     confints = [prepare_publication(p) for p in numbered_by_type(pubs, "confint", "C")]
@@ -177,6 +212,7 @@ def build_context(cv, pubs):
 
     return {
         "cv": cv,
+        "scholar": scholar,
         "tex": tex_text,
         "esc": tex_escape,
         "host_initials": host_initials,
@@ -190,7 +226,7 @@ def build_context(cv, pubs):
     }
 
 
-def render(cv: dict, pubs: list, out_path: Path) -> None:
+def render(cv: dict, pubs: list, scholar: dict, out_path: Path) -> None:
     env = Environment(
         loader=FileSystemLoader(str(TEMPLATE_DIR)),
         trim_blocks=True,
@@ -198,7 +234,7 @@ def render(cv: dict, pubs: list, out_path: Path) -> None:
         keep_trailing_newline=True,
     )
     template = env.get_template("cv.tex.j2")
-    ctx = build_context(cv, pubs)
+    ctx = build_context(cv, pubs, scholar)
     out_path.write_text(template.render(**ctx), encoding="utf-8")
 
 
@@ -207,7 +243,7 @@ def main():
     parser.add_argument("--out", type=Path, default=REPO_ROOT / "main.tex")
     args = parser.parse_args()
     cv, pubs = load_data()
-    render(cv, pubs, args.out)
+    render(cv, pubs, load_scholar(), args.out)
     print(f"wrote {args.out}")
 
 
