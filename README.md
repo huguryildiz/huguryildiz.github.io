@@ -54,6 +54,8 @@ reintroducing a theme.
 | `_includes/hero-uwsn.html` | Interactive ocean digital twin and underwater acoustic-network scenario |
 | `_includes/research-map.html` | Interactive research map rendered from `_data/research_map.yml` |
 | `assets/css/redesign.css` | All site styles |
+| `_data/cv.yml` | CV data — the source for `_pages/cv.md`, `_pages/service.md`, `_pages/teaching.md`, and the downloadable PDF |
+| `_data/publications.yml` | Publication records — the source for `_pages/publications.md` and the downloadable PDF |
 | `_data/scholar_metrics.json` | Google Scholar metrics snapshot; rendered by `index.md` and `_pages/cv.md` |
 | `_data/openalex_metrics.json` | OpenAlex metrics snapshot; dormant fallback, not rendered |
 | `_data/site_stats.json` | Sanitized GoatCounter snapshot rendered by `_pages/stats.md` |
@@ -104,14 +106,17 @@ A change to `_config.yml` requires restarting the development server.
 
 ## Content maintenance
 
-The website, downloadable CV, and publication catalogue are maintained as
-separate artifacts; changing one does not update the others automatically.
+The web CV, the downloadable PDF, and the publication catalogue share one
+source of truth: `_data/cv.yml` and `_data/publications.yml`.
 
-- Edit the web CV in `_pages/cv.md` and replace
-  `files/Yildiz_HuseyinUgur_CV.pdf` separately when the PDF changes.
-- Publication records and filtering logic currently live in
-  `_pages/publications.md`. Verify metadata, totals, year groupings, DOI links,
-  and local PDF paths together.
+- Updating the CV means editing `_data/cv.yml`. `_pages/cv.md`,
+  `_pages/service.md`, and `_pages/teaching.md` render it directly, and the
+  PDF regenerates from the same file on every deploy via
+  `scripts/render_cv_tex.py` — never edit `files/Yildiz_HuseyinUgur_CV.pdf` or
+  `main.tex` by hand.
+- Publication records live in `_data/publications.yml`; `_pages/publications.md`
+  renders them and also drives the PDF's publication list. Verify metadata,
+  DOI links, and local PDF paths when adding a record.
 - Research-map content belongs in `_data/research_map.yml`; its labels and
   counts must remain consistent with `_includes/research-map.html`.
 - The writing index is `_pages/writing.md`; dated entries live in `_posts/`.
@@ -161,9 +166,13 @@ on every academic page — which is now every page on the site.
 
 ## Deployment and metrics
 
-A push to `master` starts `.github/workflows/jekyll.yml`, which builds the site
-with Ruby 3.1 and deploys it to GitHub Pages. The custom domain is declared in
-`CNAME`.
+A push to `master`, a daily schedule, or manual dispatch starts
+`.github/workflows/jekyll.yml`, which builds the site with Ruby 3.1, renders
+and compiles the CV PDF from `_data/cv.yml` + `_data/publications.yml` with
+`scripts/render_cv_tex.py` and `pdflatex`, places it at
+`_site/files/Yildiz_HuseyinUgur_CV.pdf`, and deploys to GitHub Pages. A failed
+or empty PDF fails the build so the previously deployed site stays live. The
+custom domain is declared in `CNAME`.
 
 `.github/workflows/update-scholar.yml` runs weekly and can also be triggered
 manually. It reads the Google Scholar profile through SerpApi and commits an
