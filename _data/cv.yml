@@ -15,7 +15,7 @@ person:
   email: "hugur.yildiz@tedu.edu.tr"
   website: "huguryildiz.com"
   linkedin: "huguryildiz"
-  location: "Ankara, Turkey"
+  location: "Ankara, Türkiye"
   location_maps_url: "https://goo.gl/maps/vU69BadSTiav3s3B9"   # main.tex:82 header — wraps the location text in an \href, not represented anywhere else
 
 identifiers:
@@ -51,7 +51,7 @@ appointments:
   - years: "2016 – present"
     org: "TED University"
     org_url: "https://www.tedu.edu.tr/en"
-    location: "Ankara, Turkey"
+    location: "Ankara, Türkiye"
     unit: "Department of Electrical and Electronics Engineering"
     roles:
       - { title: "Associate Professor", period: "Mar 2021 – present" }
@@ -75,7 +75,7 @@ appointments:
   - years: "2015 – 2016"
     org: "Turkish Aerospace"
     org_url: "https://www.tusas.com/en"
-    location: "Ankara, Turkey"
+    location: "Ankara, Türkiye"
     roles:
       - { title: "Avionics Design Engineer", period: "Dec 2015 – Aug 2016" }
     # DIVERGED — tex title/bullet (main.tex:130-136) add "Unmanned Aerial Vehicles" role
@@ -87,7 +87,7 @@ appointments:
   - years: "2010 – 2015"
     org: "Turk Telekom"
     org_url: "https://www.turktelekom.com.tr/en"
-    location: "Ankara, Turkey"
+    location: "Ankara, Türkiye"
     roles:
       - { title: "Senior Network Engineer", period: "Dec 2010 – Nov 2015" }
     # DIVERGED — tex bullet (main.tex:138-144) adds "and regulatory compliance".
@@ -99,13 +99,13 @@ appointments:
 education:
   - { years: "2014 – 2016", degree: "Ph.D., Electrical and Electronics Engineering",
       org: "TOBB University of Economics and Technology", org_url: "https://www.etu.edu.tr/en",
-      location: "Ankara, Turkey" }
+      location: "Ankara, Türkiye" }
   - { years: "2011 – 2013", degree: "M.Sc., Electrical and Electronics Engineering",
       org: "TOBB University of Economics and Technology", org_url: "https://www.etu.edu.tr/en",
-      location: "Ankara, Turkey" }
+      location: "Ankara, Türkiye" }
   - { years: "2005 – 2009", degree: "B.Sc., Electrical and Electronics Engineering",
       org: "Bilkent University", org_url: "https://w3.bilkent.edu.tr/bilkent/",
-      location: "Ankara, Turkey" }
+      location: "Ankara, Türkiye" }
 
 theses_own:                                 # kendi tezleri (/cv/ Graduate theses)
   - year: 2016
@@ -134,25 +134,25 @@ theses_own:                                 # kendi tezleri (/cv/ Graduate these
 theses_supervised:                          # main.tex Theses Supervised [TH1]…[TH7] — LaTeX-only, not yet rendered on any page
   - { id: "TH7", year: 2025, student: "Tantur Karagul, C.",
       title: "Network lifetime optimization in underwater wireless sensor networks with variable k-connectivity",
-      kind: "Doctoral dissertation", org: "TOBB University of Economics and Technology", location: "Ankara, Turkey" }
+      kind: "Doctoral dissertation", org: "TOBB University of Economics and Technology", location: "Ankara, Türkiye" }
   - { id: "TH6", year: 2022, student: "Cobanlar, M.",
       title: "Analysis of the trade-off between network lifetime and k-connectivity in wireless sensor networks",
-      kind: "Doctoral dissertation", org: "TOBB University of Economics and Technology", location: "Ankara, Turkey" }
+      kind: "Doctoral dissertation", org: "TOBB University of Economics and Technology", location: "Ankara, Türkiye" }
   - { id: "TH5", year: 2021, student: "Un, B. E.",
       title: "Design of a novel optimization framework for analyzing the impact of critical nodes on the network lifetime of underwater acoustic sensor networks using private key cryptography",
-      kind: "Master's thesis", org: "TOBB University of Economics and Technology", location: "Ankara, Turkey" }
+      kind: "Master's thesis", org: "TOBB University of Economics and Technology", location: "Ankara, Türkiye" }
   - { id: "TH4", year: 2021, student: "Aydin, C.",
       title: "Network lifetime maximization in underwater wireless sensor networks based on the number of depleted nodes",
-      kind: "Master's thesis", org: "TOBB University of Economics and Technology", location: "Ankara, Turkey" }
+      kind: "Master's thesis", org: "TOBB University of Economics and Technology", location: "Ankara, Türkiye" }
   - { id: "TH3", year: 2021, student: "Ozmen, A.",
       title: "Modeling the trade-off between eavesdropping and network lifetime using a mixed-integer programming approach in underwater acoustic sensor networks",
-      kind: "Master's thesis", org: "TOBB University of Economics and Technology", location: "Ankara, Turkey" }
+      kind: "Master's thesis", org: "TOBB University of Economics and Technology", location: "Ankara, Türkiye" }
   - { id: "TH2", year: 2018, student: "Karakurt, Y.",
       title: "Eavesdropping potential in wireless sensor networks and modeling and analysis of network lifetime recovery",
-      kind: "Master's thesis", org: "TOBB University of Economics and Technology", location: "Ankara, Turkey" }
+      kind: "Master's thesis", org: "TOBB University of Economics and Technology", location: "Ankara, Türkiye" }
   - { id: "TH1", year: 2017, student: "Tantur, C.",
       title: "Optimal transmission power level sets for lifetime maximization in wireless sensor networks",
-      kind: "Master's thesis", org: "TOBB University of Economics and Technology", location: "Ankara, Turkey" }
+      kind: "Master's thesis", org: "TOBB University of Economics and Technology", location: "Ankara, Türkiye" }
 
 honors:
   - id: "A2"
@@ -302,15 +302,15 @@ talks:
       kind: "Invited talk", slides: "https://drive.google.com/file/d/14jmfAauo_CHZHZSjCTbuMjjVQVsGz1sm/view" }
   - { date_web: "Apr 2019", date_tex: "2019, April 25",
       title: "Maximization of Underwater Sensor Networks Lifetime via Fountain Codes",
-      venue: "SIU 2019 — Special Session on Next Generation Communication Techniques, Sivas, Turkey",
+      venue: "SIU 2019 — Special Session on Next Generation Communication Techniques, Sivas, Türkiye",
       kind: "Conference presentation", slides: "https://drive.google.com/file/d/14bzsN_kmMONXaJet98dZsrgdQwOrFmCU/view?usp=sharing" }
   - { date_web: "Feb 2019", date_tex: "2019, February 19",
       title: "Maximization of Underwater Sensor Networks Lifetime via Fountain Codes",
-      venue: "ASELSAN Information and Communication Technologies Workshop, Ankara, Turkey",
+      venue: "ASELSAN Information and Communication Technologies Workshop, Ankara, Türkiye",
       kind: "Invited talk", slides: "https://drive.google.com/file/d/14a3OSEhRvUTd9m0eJsiT_AUh9vqzGqZW/view?usp=sharing" }
   - { date_web: "Nov 2016", date_tex: "2016, November 14",
       title: "Optimal Transmission Power Level Sets for Lifetime Maximization in Wireless Sensor Networks",
-      venue: "ASELSAN Information and Communication Technologies Workshop, Ankara, Turkey",
+      venue: "ASELSAN Information and Communication Technologies Workshop, Ankara, Türkiye",
       kind: "Invited talk", slides: "https://drive.google.com/file/d/16Cm8oSdQejoQQtKTkOmlRXNUYzaQfKZK/view?usp=sharing" }
   - { date_web: "Dec 2014", date_tex: "2014, December 3",
       title: "The Impact of Random Power Assignment in Handshaking on Wireless Sensor Network Lifetime",

@@ -1,7 +1,7 @@
 """scripts/test_render_cv_tex.py — stdlib unittest, harici bağımlılık yok."""
 import unittest
 
-from render_cv_tex import emphasise, host_initials, mdlink_to_href, sentence_case, tex_escape
+from render_cv_tex import emphasise, host_initials, mdlink_to_href, sentence_case, tex_escape, tex_text
 
 
 class TestTexEscape(unittest.TestCase):
@@ -75,6 +75,26 @@ class TestSentenceCase(unittest.TestCase):
 
     def test_single_word_unchanged(self):
         self.assertEqual(sentence_case("Networks"), "Networks")
+
+
+class TestTexText(unittest.TestCase):
+    def test_link_url_with_special_chars_not_escaped(self):
+        """A URL containing & and _ must survive \\href verbatim — tex_escape
+        must never touch the url portion of [text](url), only the link text
+        and the surrounding prose. Regression for the naive
+        mdlink_to_href(emphasise(tex_escape(text))) composition, which
+        escaped the whole string — including the url — before converting
+        the link syntax, corrupting any url with LaTeX special characters."""
+        result = tex_text("[VERA](https://vera-eval.app/some_path?x=1&y=2)")
+        self.assertEqual(
+            result,
+            r"\href{https://vera-eval.app/some_path?x=1&y=2}{\underline{VERA}}")
+
+    def test_prose_around_link_still_escaped(self):
+        result = tex_text("A & B [C](https://x.com/) D & E")
+        self.assertEqual(
+            result,
+            r"A \& B \href{https://x.com/}{\underline{C}} D \& E")
 
 
 if __name__ == "__main__":
