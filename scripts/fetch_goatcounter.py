@@ -261,6 +261,10 @@ def fetch_site_meta():
     # crash the run again.
     tz = (site.get("user_defaults") or {}).get("timezone")
     zone = tz.get("Zone") if isinstance(tz, dict) else tz
+    # The string form carries GoatCounter's country prefix ("TR.Europe/Istanbul");
+    # the panel prints this verbatim, so only the IANA name is kept.
+    if isinstance(zone, str) and "." in zone and "/" in zone:
+        zone = zone.split(".", 1)[1]
     if zone and isinstance(zone, str):
         meta["timezone"] = zone
     if site.get("first_hit_at"):
