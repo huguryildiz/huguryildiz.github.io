@@ -627,7 +627,16 @@ wc -l "$SCRATCH/tex.diff"
 1. Dosya başına eklenen "GENERATED — edit `_data/cv.yml`" uyarı yorumu
 2. Boşluk/satır sonu normalizasyonu
 
-**İçerik farkı beklenmiyor.** En dash gibi karakterler YAML'a olduğu gibi taşındığı için üretilen çıktıda da olduğu gibi görünmelidir. Karakter değişimi çıkarsa bu bir kaçış/encoding hatasıdır, kabul edilmiş fark değildir.
+**KAPI DEĞİŞTİRİLDİ (Task 4 uygulaması sırasında, kullanıcı kararıyla).** Yukarıdaki "içerik farkı beklenmiyor" kriteri gerçekçi değildi ve terk edildi. Sebep: `_data/cv.yml` verisi web sayfalarından türetildi ve referans `.tex`'ten sistematik olarak ayrışıyor — PDF'te konferans adları baskı için kısaltılmış, hizmet listesi web'de güncellenmiş ama `.tex`'te eski kalmış, tipografi konvansiyonu farklı (`–` ↔ `--`), ayrıca referansta düzeltilmiş yazım hataları var. Bu ayrışma Task 2'de 7 metin çifti olarak zaten görülmüştü; venue ve hizmet düzeyinde de mevcutmuş.
+
+**Yürürlükteki kabul kriteri:** üretilen `main.tex`, referansı taklit etmek yerine **tek kaynaktaki güncel veriyi doğru yansıtmalıdır**. Kullanıcı kararı: güncel veri kazanır. PDF bir kerelik değişir, sonrasında kaynakla kalıcı senkron olur.
+
+Buna göre doğrulama:
+1. **Preamble birebir korunmuş** — `\documentclass`…`\pdfgentounicode=1`, `\titleformat`, `\fancyfoot` (`\today` dahil), margin ayarları, bölüm ikonları, `\vspace` değerleri karakter karakter aynı
+2. **Veri kaybı yok** — 43 yayın, tür başına doğru numaralandırma (J24/E1/C13/CT5), tüm bölümler, `\begin{comment}` blokları korunmuş
+3. **Uydurma veri yok** — çıktıdaki her kayıt `cv.yml`, `publications.yml` veya referansa izlenebilir
+4. **PDF derleniyor** — iki geçiş, 6 sayfa (mevcutla aynı), uyarı sayısı referansı derlemekle karşılaştırılabilir
+5. Kalan farklar kategorize edilmiş ve her biri gerekçelendirilmiş olmalı
 
 **Başka her fark task'ı reddeder.** Özellikle: kaybolan yayın, değişen sıra, bozulan LaTeX komutu, kaçmış `\&`. Diff'in tamamı kullanıcıya sunulur.
 
