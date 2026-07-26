@@ -631,6 +631,9 @@ ol.publist{list-style:none; margin:0; padding:0;}
 .stat span small{display:block; font-size:.68rem; font-weight:450; color:var(--ink-faint); margin-top:.15rem;}
 .stat.wide{grid-column:span 2; justify-content:flex-end;}
 .statnote{font-size:.82rem; color:var(--ink-faint); margin:.7rem 0 0; max-width:none;}
+/* Editorial criterion above a curated list: says on what grounds four papers stand
+   in for forty-three, so the selection is not read as a ranking. */
+.seln{font-size:.86rem; color:var(--ink-faint); margin:-.35rem 0 1.1rem;}
 .yearchart{width:100%;}
 .yearchart svg{display:block; width:100%;}
 .yearchart .axline{stroke:var(--hairline-strong); stroke-width:1;}

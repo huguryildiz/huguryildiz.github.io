@@ -228,7 +228,15 @@ permalink: /
   </div>
 
   <h2 class="sec" id="home-news"><svg class="hicon" aria-hidden="true"><use href="#i-bell"/></svg>News</h2>
+  {%- comment -%}
+    The hand-written entries below carry academic events and are edited by hand, so the
+    list is only as fresh as the last edit. The Writing entries are pulled from _posts,
+    which means the newest date on this page updates itself whenever a piece is published.
+  {%- endcomment -%}
   <ul class="newslist">
+    {%- for post in site.posts limit: 2 %}
+    <li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time><svg class="nicon" aria-hidden="true"><use href="#i-pen"/></svg><span>Writing: <a href="{{ post.url | relative_url }}">{{ post.title }}</a>.</span></li>
+    {%- endfor %}
     <li><time>Dec 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span><a href="https://www.linkedin.com/in/%C3%A7a%C4%9Fla-tantur-karag%C3%BCl-b834b0b5/" target="_blank" rel="noopener">Çağla Tantur Karagül</a> successfully defended her Ph.D. dissertation at TOBB University of Economics and Technology.</span></li>
     <li><time>Nov 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-mic"/></svg><span>Conference paper presented at IEEE TELFOR 2025: “Non-uniform k-connectivity for energy-efficient and reliable underwater wireless sensor networks”.</span></li>
     <li><time>Oct 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-book"/></svg><span>Journal paper published in <i>IEEE Internet of Things Journal</i>: “Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity”.</span></li>
@@ -263,6 +271,9 @@ permalink: /
   </details>
 
   <h2 class="sec" id="home-selected"><svg class="hicon" aria-hidden="true"><use href="#i-book"/></svg>Selected publications</h2>
+  <p class="seln">Selected for citation impact, external recognition, fit with the research
+    program, and recency. The <a href="{{ '/publications/' | relative_url }}">full list</a> is
+    unfiltered.</p>
   <article class="homepub">
     <p class="t"><a href="https://doi.org/10.1109/TIE.2016.2619319" target="_blank" rel="noopener">Packet size optimization in wireless sensor networks for smart grid applications</a></p>
     <p class="m">Kurt, S., <b>Yildiz, H. U.</b>, Yigit, M., Tavli, B., &amp; Gungor, V. C. ·
