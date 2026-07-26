@@ -35,6 +35,15 @@ if works == 0 and cites == 0 and h_index == 0:
     sys.exit("ERROR: All metrics are zero. Check your Author ID.")
 
 metrics = {
+    # Kayıt, dosyanın kendi içinde: bu anlık görüntü hiçbir sayfada render
+    # edilmiyor ve Scholar'ınkiyle materyal olarak çelişiyor (OpenAlex daha az
+    # venue türü indeksliyor). Depoyu inceleyen biri iki farklı atıf sayısı
+    # gördüğünde hangisinin canlı olduğunu buradan anlasın.
+    "_status": ("dormant fallback — no page renders this file; the live figures come from "
+                "_data/scholar_metrics.json. Kept so the site has a second bibliometric "
+                "source if the SerpApi/Scholar path ever has to be abandoned. Never present "
+                "an OpenAlex value under Google Scholar's name: the two count different "
+                "venue types and legitimately disagree."),
     "citations":    cites,
     "works":        works,
     "h_index":      h_index,

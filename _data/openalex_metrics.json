@@ -1,8 +1,9 @@
 {
+  "_status": "dormant fallback — no page renders this file; the live figures come from _data/scholar_metrics.json. Kept so the site has a second bibliometric source if the SerpApi/Scholar path ever has to be abandoned. Never present an OpenAlex value under Google Scholar's name: the two count different venue types and legitimately disagree.",
   "citations": 830,
   "works": 44,
   "h_index": 15,
   "updated_utc": "2026-07-01T02:48:03Z",
   "profile_url": "https://openalex.org/A5085505896",
-  "display_name": "H\u00fcseyin U\u011fur Y\u0131ld\u0131z"
+  "display_name": "Hüseyin Uğur Yıldız"
 }
