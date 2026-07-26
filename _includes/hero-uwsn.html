@@ -400,7 +400,12 @@ function depthAt(x,z){
      does most of the work. */
   return d+0.095*ss(0.30,rimD(x,z)-0.70);
 }
-var GX=105,GZ=77,gw=[],gsx=new Float32Array(GX*GZ),gsy=new Float32Array(GX*GZ);
+/* A phone paints roughly one third of the desktop canvas area. Building the
+   desktop mesh there only delays first contentful work without exposing more
+   useful geometry, so mobile starts with the medium spatial tier. */
+var MOBILE_MESH=window.matchMedia&&matchMedia('(max-width: 640px)').matches;
+var GX=MOBILE_MESH?65:105,GZ=MOBILE_MESH?49:77;
+var gw=[],gsx=new Float32Array(GX*GZ),gsy=new Float32Array(GX*GZ);
 (function(){
   var i,j,idx;
   for(j=0;j<GZ;j++){for(i=0;i<GX;i++){
