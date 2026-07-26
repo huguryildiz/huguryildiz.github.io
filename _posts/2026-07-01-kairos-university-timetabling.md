@@ -4,6 +4,7 @@ date: 2026-07-01
 excerpt: "KAIROS is a CP-SAT university timetabling engine that drove every hard-constraint category to zero across two live TED University terms — cutting within-day idle time ~75% and capacity waste ~29% per room-hour."
 tags: [Operations Research, Constraint Programming, University Timetabling]
 linkedin: "https://www.linkedin.com/posts/huguryildiz_kairos-zero-conflict-university-timetabling-activity-7477983095242211329-2Zcz"
+image: /assets/images/writing/covers/kairos-university-timetabling.jpg
 ---
 
 One instructor booked in two rooms. One lab section with no valid slot. By week three, the schedule isn't a plan anymore; it's exception management.

@@ -4,6 +4,7 @@ date: 2026-01-06
 excerpt: "A mixed-integer formulation of the airport gate assignment problem: time-overlap constraints via slot discretization, passenger-based gate capacities derived from historic utilization, and an objective that trades remote-stand penalties against passenger load balance."
 tags: [Operations Research, Multi-Objective Optimization, Integer Programming]
 linkedin: "https://www.linkedin.com/posts/huguryildiz_multiobjectiveoptimization-operationsresearch-activity-7414284495715037185-1emD"
+image: /assets/images/writing/covers/airport-gate-assignment-multiobjective.jpg
 ---
 
 I revisited the **Airport Gate Assignment Problem (GAP)** from a **multi-objective optimization** perspective.

@@ -132,6 +132,9 @@ h1,h2,h3,[id]{scroll-margin-top:5.2rem;}
    Justification goes with it — it opens word gaps at narrow widths (visible at
    320px) and hyphens:auto was breaking terms mid-word. */
 p{max-width:90ch; text-align:left; hyphens:none;}
+/* Opt-out for pages where the 90ch cap left paragraphs short of the lists,
+   cards, and figures beside them, so one column read as two widths. */
+.prose-wide p{max-width:none;}
 /* Display lines and console UI text stay left-aligned */
 .hero .prop, .ptext, .uw-pstatus{text-align:left; hyphens:none;}
 
@@ -602,8 +605,9 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
 .pubgroup h2.sec{margin-top:2.4rem;}
 /* The publications table of contents shares the CV's markup, but here the sticky
    filter bar sits below the header, so both the sticky offset and the anchor
-   landing point clear it instead of the header alone. */
-#pubToc{top:9.6rem;}
+   landing point clear it instead of the header alone. The margin gives the same
+   breathing room at the top of the page, before sticky positioning takes over. */
+#pubToc{top:9.6rem; margin-top:2.4rem;}
 .pubgroup h2.sec[id]{scroll-margin-top:8.4rem;}
 ol.publist{list-style:none; margin:0; padding:0;}
 /* .pub sets display:grid, which outranks the UA rule behind the hidden attribute —
@@ -1306,19 +1310,22 @@ footer.site a:hover .licon.spotify{color:var(--accent);}
 }
 
 /* ---------- WRITING / BLOG ---------- */
-.post-list{list-style:none; margin:2rem 0 0; padding:0; display:flex; flex-direction:column; gap:1rem;}
+/* An index, not a card grid. The rest of the site sets 43 publications and a whole CV
+   in plain typographic rows; eight writing entries were the one place that reached for
+   card chrome — raised surface, border, 14px radius, hover lift. The cover image stays,
+   because it is the one thing a reader arriving from LinkedIn recognises, but the box
+   around it goes and a hairline does the separating. */
+.post-list{list-style:none; margin:2rem 0 0; padding:0;}
+.post-card+.post-card{border-top:1px solid var(--hairline);}
 .post-card-link{
-  display:flex; gap:1.4rem; align-items:stretch;
-  background:var(--surface-raise); border:1px solid var(--hairline);
-  border-radius:14px; padding:1.35rem 1.5rem; color:inherit;
-  transition:border-color .18s ease, transform .18s ease, box-shadow .18s ease;
+  display:flex; gap:1.5rem; align-items:flex-start;
+  padding:1.5rem .25rem; color:inherit;
+  transition:background-color .16s ease;
 }
-.post-card-link:hover{
-  border-color:color-mix(in srgb, var(--accent) 45%, var(--hairline));
-  transform:translateY(-2px); box-shadow:0 6px 22px -12px rgba(0,0,0,.28);
-}
-.post-card-cover{flex:none; width:150px; border-radius:10px; overflow:hidden; align-self:center;}
-.post-card-cover img{display:block; width:100%; aspect-ratio:4/3; object-fit:cover;}
+.post-card-link:hover{background:color-mix(in srgb, var(--surface) 55%, transparent);}
+.post-card-cover{flex:none; width:132px; border-radius:8px; overflow:hidden;
+  border:1px solid var(--hairline); margin-top:.2rem;}
+.post-card-cover img{display:block; width:100%; aspect-ratio:1200/630; object-fit:cover;}
 .post-card-body{min-width:0; flex:1;}
 .post-card-meta{
   display:flex; align-items:center; gap:.5rem; flex-wrap:wrap;
@@ -1413,7 +1420,7 @@ footer.site a:hover .licon.spotify{color:var(--accent);}
 }
 
 @media (max-width:620px){
-  .post-card-link{flex-direction:column; gap:1rem; padding:1.15rem 1.2rem;}
+  .post-card-link{flex-direction:column; gap:.9rem; padding:1.35rem .25rem;}
   .post-card-cover{width:100%;}
   .post-card-cover img{aspect-ratio:16/7;}
 }

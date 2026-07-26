@@ -1,7 +1,20 @@
-# Hüseyin Uğur Yıldız — Academic Website
+<div align="center">
 
-[![Website](https://img.shields.io/badge/website-huguryildiz.com-12314e)](https://huguryildiz.com)
-[![Deploy Jekyll site to Pages](https://github.com/huguryildiz/huguryildiz.github.io/actions/workflows/jekyll.yml/badge.svg)](https://github.com/huguryildiz/huguryildiz.github.io/actions/workflows/jekyll.yml)
+<img src="assets/images/favicon/favicon.svg" width="132" height="132" alt="">
+
+# Hüseyin Uğur Yıldız
+
+**Academic Website**
+
+Publications, research, teaching, supervision, service, and a web + PDF curriculum vitae.
+
+[![Jekyll](https://img.shields.io/badge/Jekyll-4.x-12314E?style=flat-square&logo=jekyll&logoColor=white)](https://jekyllrb.com) [![Ruby](https://img.shields.io/badge/Ruby-3.3-12314E?style=flat-square&logo=ruby&logoColor=white)](https://www.ruby-lang.org) [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-12314E?style=flat-square&logo=githubpages&logoColor=white)](https://pages.github.com) [![LaTeX](https://img.shields.io/badge/LaTeX-CV%20PDF-12314E?style=flat-square&logo=latex&logoColor=white)](cv-latex/) [![GoatCounter](https://img.shields.io/badge/GoatCounter-analytics-12314E?style=flat-square&logo=googleanalytics&logoColor=white)](https://huguryildiz.com/stats/)
+
+[![huguryildiz.com](https://img.shields.io/badge/huguryildiz.com-LIVE-E09A6A?style=flat-square&labelColor=2b2b2b&logo=googlechrome&logoColor=white)](https://huguryildiz.com) [![Deploy Jekyll site to Pages](https://github.com/huguryildiz/huguryildiz.github.io/actions/workflows/jekyll.yml/badge.svg)](https://github.com/huguryildiz/huguryildiz.github.io/actions/workflows/jekyll.yml)
+
+</div>
+
+---
 
 Source code and scholarly content for [huguryildiz.com](https://huguryildiz.com),
 the academic website of Hüseyin Uğur Yıldız. The site presents publications,
