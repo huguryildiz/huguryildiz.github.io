@@ -64,7 +64,61 @@ permalink: /publications/
 <div class="shell">
   <div class="cvlayout">
     <div>
-      <div id="pubGroups"></div>
+      {%- comment -%}
+        The list is rendered here, from _data/publications.yml, and not by the script
+        below: without JavaScript the page used to be a set of empty containers, and a
+        publication record that only exists once a script runs is not a record. The
+        script's remaining job is filtering — it hides list items, it never builds them.
+        data-type/-year/-q are what it filters on.
+
+        The GoatCounter event key mirrors pubKey() in the script it replaced: PDF
+        basename, else the bare DOI, else year + slug.
+      {%- endcomment -%}
+      {%- assign gdefs = "journal;Journal articles;book;Journal articles|editorial;Editorial;pen;Editorial|confint;Conference papers (international);globe;Conf. (international)|confnat;Conference papers (national, in Turkish);flag;Conf. (national)" | split: "|" -%}
+      <div id="pubGroups">
+        {%- for gdef in gdefs -%}
+        {%- assign g = gdef | split: ";" -%}
+        {%- assign items = site.data.publications | where: "type", g[0] -%}
+        {%- if items.size > 0 -%}
+        <div class="pubgroup" data-group="{{ g[0] }}">
+          <h2 class="sec" id="pub-{{ g[0] }}"><svg class="hicon" aria-hidden="true"><use href="#i-{{ g[2] }}"/></svg>{{ g[1] }}<span class="count tnum">{{ items.size }}</span></h2>
+          <ol class="publist">
+            {%- for p in items -%}
+            {%- if p.pdf -%}{%- assign pubkey = p.pdf | split: "/" | last | split: ".pdf" | first -%}
+            {%- elsif p.doi -%}{%- assign pubkey = p.doi | remove_first: "https://doi.org/" | remove_first: "http://doi.org/" | remove_first: "https://dx.doi.org/" -%}
+            {%- else -%}{%- assign pubkey = p.year | append: "-" | append: p.title | slugify | truncate: 40, "" -%}{%- endif -%}
+            {%- if p.doi -%}{%- assign href = p.doi -%}{%- assign kind = "doi" -%}
+            {%- elsif p.pdf -%}{%- assign href = site.url | append: p.pdf -%}{%- assign kind = "pdf" -%}
+            {%- else -%}{%- assign href = nil -%}{%- endif -%}
+            <li class="pub" data-type="{{ p.type }}" data-year="{{ p.year }}"{% if p.q %} data-q="{{ p.q }}"{% endif %}>
+              <span class="year tnum" aria-hidden="true">{{ p.year }}</span>
+              <div>
+                {%- comment -%} The heading points at the same destination as the DOI or PDF
+                  button and reports the same event: the question is which paper was opened,
+                  not which of the two controls did it. {%- endcomment -%}
+                <p class="t">{% if href %}<a data-goatcounter-click="{{ kind }}/{{ pubkey }}" data-goatcounter-title="{{ p.title | escape }}" href="{{ href }}" target="_blank" rel="noopener">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</p>
+                {%- comment -%} Author lists carry neutral **…** emphasis in the data file;
+                  odd split segments are the emphasised ones. {%- endcomment -%}
+                <p class="authors">{% assign chunks = p.authors | split: "**" %}{% for chunk in chunks %}{% assign odd = forloop.index0 | modulo: 2 %}{% if odd == 1 %}<b>{{ chunk }}</b>{% else %}{{ chunk }}{% endif %}{% endfor %}</p>
+                <p class="venue"><i>{{ p.venue }}</i>{% if p.detail %}, {{ p.detail }}{% endif %} <span class="sr-only">({{ p.year }})</span></p>
+                <div class="row">
+                  {%- if p.q %}<span class="tag-q {{ p.q | downcase }}" title="Journal quartile in publication year">{{ p.q }}</span>{% endif -%}
+                  {%- if p.scie %}<span class="tag-scie" title="Indexed in Science Citation Index Expanded">SCIE</span>{% endif -%}
+                  {%- if p.award %}<span class="tag tag-award">{{ p.award }}</span>{% endif -%}
+                  {%- if p.mostCited %}<span class="tag tag-award">Most cited</span>{% endif -%}
+                  {%- if p.doi %}<a class="publink ext" data-goatcounter-click="doi/{{ pubkey }}" data-goatcounter-title="{{ p.title | escape }}" href="{{ p.doi }}" target="_blank" rel="noopener"><i class="ai ai-doi" aria-hidden="true"></i> DOI<span class="sr-only"> (external)</span></a>{% endif -%}
+                  {%- if p.pdf %}<a class="publink ext" data-goatcounter-click="pdf/{{ pubkey }}" data-goatcounter-title="{{ p.title | escape }}" href="{{ site.url }}{{ p.pdf }}" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-file"/></svg> PDF<span class="sr-only"> (external)</span></a>{% endif -%}
+                  {%- if p.slides %}<a class="publink ext" data-goatcounter-click="slides/{{ pubkey }}" data-goatcounter-title="{{ p.title | escape }}" href="{{ p.slides }}" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-slides"/></svg> Slides<span class="sr-only"> (external)</span></a>{% endif -%}
+                  {%- if p.poster %}<a class="publink ext" data-goatcounter-click="poster/{{ pubkey }}" data-goatcounter-title="{{ p.title | escape }}" href="{{ p.poster }}" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-image"/></svg> Poster<span class="sr-only"> (external)</span></a>{% endif -%}
+                </div>
+              </div>
+            </li>
+            {%- endfor -%}
+          </ol>
+        </div>
+        {%- endif -%}
+        {%- endfor -%}
+      </div>
       <div class="emptystate" id="pubEmpty" hidden>
         <p><strong>No publications match these filters.</strong><br>
           For example, there are no national conference papers ranked Q1 — quartiles apply to journals only.</p>
@@ -72,36 +126,30 @@ permalink: /publications/
       </div>
     </div>
 
-    <nav class="cvtoc" id="pubToc" aria-label="Publication sections" hidden>
+    <nav class="cvtoc" id="pubToc" aria-label="Publication sections">
       <div class="toctitle">On this page</div>
-      <ul></ul>
+      <ul>
+        {%- for gdef in gdefs -%}
+        {%- assign g = gdef | split: ";" -%}
+        {%- assign items = site.data.publications | where: "type", g[0] -%}
+        {%- if items.size > 0 %}<li id="toc-{{ g[0] }}"><a href="#pub-{{ g[0] }}">{{ g[3] }}</a></li>{% endif -%}
+        {%- endfor -%}
+      </ul>
     </nav>
   </div>
 </div>
 
 <script>
-/* Publication data — sourced from _data/publications.yml (43 entries), injected via jsonify. */
-var SITE = "https://huguryildiz.com";
+/* Publication data — sourced from _data/publications.yml, injected via jsonify.
+   The list above is rendered from the same file by Liquid; this copy exists only
+   for the counts and the two charts, which need the whole set regardless of what
+   the current filter shows. */
 var PUBS = {{ site.data.publications | jsonify }};
-/* **...** vurgusunu <b>...</b> etiketine çevir (kaynak nötr işaret tutar) */
-PUBS = PUBS.map(function (p) {
-  if (p.authors) {
-    p.authors = p.authors.replace(/\*\*(.+?)\*\*/g, "<b>$1</b>");
-  }
-  return p;
-});
 
 (function(){
   var $ = function(s){return document.querySelector(s);};
   var $$ = function(s){return Array.prototype.slice.call(document.querySelectorAll(s));};
 
-  /* type, heading, icon, short label for the table of contents */
-  var GROUPS = [
-    ["journal","Journal articles","book","Journal articles"],
-    ["editorial","Editorial","pen","Editorial"],
-    ["confint","Conference papers (international)","globe","Conf. (international)"],
-    ["confnat","Conference papers (national, in Turkish)","flag","Conf. (national)"]
-  ];
   var state = {type:"all", year:"all", q:"all"};
   var n = function(t){return PUBS.filter(function(p){return p.type === t;}).length;};
   var nq = function(q){return PUBS.filter(function(p){return p.type === "journal" && p.q === q;}).length;};
@@ -296,78 +344,29 @@ PUBS = PUBS.map(function (p) {
     if (state.q !== "all" && p.q !== state.q) return false;
     return true;
   }
-  /* Outbound-click tracking. GoatCounter records a click on any element
-     carrying data-goatcounter-click as an event, whose "path" is the value
-     below and whose title is shown beside it in the report. A stable key per
-     publication is what makes "which paper was opened" answerable at all; the
-     shared prefix keeps the events grouped. Escaped because both values land
-     in an HTML attribute built by string concatenation. */
-  function esc(s){
-    return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/"/g, "&quot;")
-      .replace(/</g, "&lt;").replace(/>/g, "&gt;");
-  }
-  function pubKey(p){
-    if (p.pdf) return p.pdf.split("/").pop().replace(/\.pdf$/i, "");
-    if (p.doi) return p.doi.replace(/^https?:\/\/(dx\.)?doi\.org\//i, "");
-    return String(p.year) + "-" + p.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").slice(0, 40);
-  }
-  function track(kind, p){
-    return ' data-goatcounter-click="' + esc(kind + "/" + pubKey(p)) +
-           '" data-goatcounter-title="' + esc(p.title) + '"';
-  }
-  function linkRow(p){
-    var out = "";
-    if (p.q) out += '<span class="tag-q ' + String(p.q).toLowerCase() + '" title="Journal quartile in publication year">' + p.q + '</span>';
-    if (p.scie) out += '<span class="tag-scie" title="Indexed in Science Citation Index Expanded">SCIE</span>';
-    if (p.award) out += '<span class="tag tag-award">' + p.award + '</span>';
-    if (p.mostCited) out += '<span class="tag tag-award">Most cited</span>';
-    if (p.doi) out += '<a class="publink ext"' + track("doi", p) + ' href="' + p.doi + '" target="_blank" rel="noopener"><i class="ai ai-doi" aria-hidden="true"></i> DOI<span class="sr-only"> (external)</span></a>';
-    if (p.pdf) out += '<a class="publink ext"' + track("pdf", p) + ' href="' + SITE + p.pdf + '" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-file"/></svg> PDF<span class="sr-only"> (external)</span></a>';
-    if (p.slides) out += '<a class="publink ext"' + track("slides", p) + ' href="' + p.slides + '" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-slides"/></svg> Slides<span class="sr-only"> (external)</span></a>';
-    if (p.poster) out += '<a class="publink ext"' + track("poster", p) + ' href="' + p.poster + '" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-image"/></svg> Poster<span class="sr-only"> (external)</span></a>';
-    return out;
-  }
-  function entry(p){
-    var href = p.doi || (p.pdf ? SITE + p.pdf : null);
-    /* The heading points at the same destination as the DOI or PDF button, so
-       it reports the same event: the question is which paper was opened, not
-       which of the two controls did it. */
-    var title = href
-      ? '<a' + track(p.doi ? "doi" : "pdf", p) + ' href="' + href + '" target="_blank" rel="noopener">' + p.title + '</a>'
-      : p.title;
-    return '<li class="pub"><span class="year tnum" aria-hidden="true">' + p.year + '</span>' +
-      '<div><p class="t">' + title + '</p>' +
-      '<p class="authors">' + p.authors + '</p>' +
-      '<p class="venue"><i>' + p.venue + '</i>' + (p.detail ? ", " + p.detail : "") +
-      ' <span class="sr-only">(' + p.year + ')</span></p>' +
-      '<div class="row">' + linkRow(p) + '</div></div></li>';
-  }
+  /* The list itself is rendered by Liquid, above. Filtering only toggles what is
+     already in the document: an entry is hidden, never destroyed and rebuilt, so
+     the outbound-click bindings survive and the record stays in the markup. */
   function render(){
-    var host = $("#pubGroups");
-    var html = "", toc = "", shown = 0, groups = 0;
-    GROUPS.forEach(function(g){
-      var items = PUBS.filter(function(p){return p.type === g[0] && match(p);});
-      if (!items.length) return;
-      shown += items.length;
-      var id = "pub-" + g[0];
-      html += '<div class="pubgroup"><h2 class="sec" id="' + id + '"><svg class="hicon" aria-hidden="true"><use href="#i-' + g[2] + '"/></svg>' + g[1] +
-        '<span class="count tnum">' + items.length + '</span></h2><ol class="publist">' +
-        items.map(entry).join("") + '</ol></div>';
-      toc += '<li><a href="#' + id + '">' + g[3] + '</a></li>';
-      groups += 1;
+    var shown = 0, groups = 0;
+    $$("#pubGroups .pubgroup").forEach(function(g){
+      var count = 0;
+      $$('#pubGroups .pubgroup[data-group="' + g.dataset.group + '"] li.pub').forEach(function(li){
+        var on = match({type: li.dataset.type, year: Number(li.dataset.year), q: li.dataset.q || null});
+        li.hidden = !on;
+        if (on) count += 1;
+      });
+      g.hidden = count === 0;
+      g.querySelector(".count").textContent = count;
+      shown += count;
+      if (count) groups += 1;
+      /* The table of contents follows the sections it points at, and disappears
+         once a filter leaves a single group — a one-entry list navigates nothing. */
+      var tocItem = document.getElementById("toc-" + g.dataset.group);
+      if (tocItem) tocItem.hidden = count === 0;
     });
-    host.innerHTML = html;
-    /* The sections themselves depend on the filters, so the table of contents is
-       rebuilt with them — and disappears once a filter leaves a single group,
-       where a one-entry list of contents navigates nothing. */
-    var tocNav = $("#pubToc");
-    tocNav.querySelector("ul").innerHTML = toc;
-    tocNav.hidden = groups < 2;
+    $("#pubToc").hidden = groups < 2;
     if (window.initTocHighlight) window.initTocHighlight();
-    /* count.js binds click handlers once, on load. This list is rebuilt on
-       every filter change, so the new links would carry the attribute and
-       report nothing without rebinding. It skips elements it already bound. */
-    if (window.goatcounter && window.goatcounter.bind_events) window.goatcounter.bind_events();
     $("#pubEmpty").hidden = shown !== 0;
     $("#pubCount").textContent = "Showing " + shown + " of " + PUBS.length;
     var isDefault = state.type === "all" && state.year === "all" && state.q === "all";
