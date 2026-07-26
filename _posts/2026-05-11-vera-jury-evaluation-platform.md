@@ -1,6 +1,7 @@
 ---
 title: "The hardest part of running a jury isn't the jury"
 date: 2026-05-11
+description: "VERA streamlines academic jury scoring, live rankings, accreditation reporting, and audit-ready exports through a phone-based workflow."
 excerpt: "Three hours of evaluation can turn into days of Excel merging, score normalization, and accreditation paperwork. VERA turns post-jury work into a structured, export-ready workflow — QR-code scoring from a phone, live rankings, and ABET/MÜDEK criterion-mapped reports."
 tags: [Engineering Education, Assessment, Accreditation]
 linkedin: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7459747314929332224/"

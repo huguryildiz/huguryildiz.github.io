@@ -1,6 +1,6 @@
 ---
 layout: academic
-title: "Home"
+title: "Hüseyin Uğur Yıldız | Associate Professor of Electrical Engineering at TED University"
 description: "Associate Professor of Electrical & Electronics Engineering at TED University. Operations research and mathematical optimization for wireless, underwater, and drone-assisted networks."
 permalink: /
 ---

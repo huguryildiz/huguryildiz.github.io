@@ -1,6 +1,7 @@
 ---
 title: "Still uploading your .tex files to Overleaf's servers?"
 date: 2026-06-24
+description: "A local-first LaTeX workflow using VS Code, LaTeX Workshop, Git, and Claude Code, with a review of ClaudePrism for offline scientific writing."
 excerpt: "I stopped a while ago. VS Code + LaTeX Workshop + Claude Code — files on disk, version control in Git, compilation on my own machine. Overleaf still wins on real-time collaboration; local control wins for solo, code-heavy work."
 tags: [LaTeX, Scientific Writing, Research Workflow]
 linkedin: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7475571468345434112/"
