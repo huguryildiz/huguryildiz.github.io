@@ -3,7 +3,7 @@ layout: academic
 title: "Privacy & Terms – huguryildiz.com"
 description: "What limited information huguryildiz.com collects, how it is used, and how to opt out."
 permalink: /terms/
-modified: 2026-07-24
+modified: 2026-07-26
 ---
 
 <div class="shell">
@@ -19,7 +19,7 @@ modified: 2026-07-24
   <p>I use privacy-friendly analytics to understand aggregate traffic trends (which pages are visited, roughly from where) without identifying individual visitors:</p>
   <ul class="dotlist">
     <li><b><a href="https://www.goatcounter.com/" target="_blank" rel="noopener">GoatCounter<span class="sr-only"> (external)</span></a></b> — a cookieless, no–personal-data analytics service. It is the source of the public <a href="{{ '/stats/' | relative_url }}">Site Reach</a> report and of the outbound-click counts that show which papers and files are opened. Its aggregates are retained for as long as that report is published.</li>
-    <li><b>Google Analytics 4</b>, loaded through Google Tag Manager, which does use cookies. Its purpose is the longer-run traffic trend and the referral breakdown that GoatCounter reports more coarsely; nothing from it is republished here. Its event data is held by Google and expires on the retention period configured in the property, not indefinitely by this site. You can review the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Analytics Privacy Policy<span class="sr-only"> (external)</span></a> and opt out with Google's <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">browser add-on<span class="sr-only"> (external)</span></a>.</li>
+    <li><b>Google Analytics 4</b>, loaded directly without Google Tag Manager, which does use cookies. Its purpose is the longer-run traffic trend and the referral breakdown that GoatCounter reports more coarsely; nothing from it is republished here. Its event data is held by Google and expires on the retention period configured in the property, not indefinitely by this site. You can review the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Analytics Privacy Policy<span class="sr-only"> (external)</span></a> and opt out with Google's <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">browser add-on<span class="sr-only"> (external)</span></a>.</li>
   </ul>
   <p>You can block or clear cookies through your browser settings at any time; the site remains fully usable without them.</p>
 

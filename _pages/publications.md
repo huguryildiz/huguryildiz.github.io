@@ -3,9 +3,42 @@ layout: academic
 title: "Publications & Papers – Hüseyin Uğur Yıldız"
 description: "Peer-reviewed journal articles, an editorial, and international and national conference papers by Hüseyin Uğur Yıldız. Metrics from Google Scholar, refreshed weekly."
 permalink: /publications/
+modified: 2026-07-26
 ---
 
 {% assign sm = site.data.scholar_metrics %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {%- for p in site.data.publications %}
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "{{ site.url }}/publications/#{{ p.year }}-{{ p.title | slugify }}",
+      "headline": {{ p.title | jsonify }},
+      "datePublished": "{{ p.year }}",
+      "author": {"@id": "{{ site.url }}/#person"},
+      "isPartOf": {"@type": "CreativeWork", "name": {{ p.venue | jsonify }}},
+      "citation": {{ p.authors | remove: "**" | append: ". " | append: p.title | append: ". " | append: p.venue | append: ", " | append: p.year | append: "." | jsonify }},
+      "mainEntityOfPage": {"@id": "{{ site.url }}/publications/"}
+      {%- if p.doi %},
+      "sameAs": {{ p.doi | jsonify }},
+      "url": {{ p.doi | jsonify }}
+      {%- elsif p.pdf %},
+      "url": "{{ site.url }}{{ p.pdf }}"
+      {%- endif %}
+      {%- if p.pdf %},
+      "encoding": {
+        "@type": "MediaObject",
+        "contentUrl": "{{ site.url }}{{ p.pdf }}",
+        "encodingFormat": "application/pdf"
+      }
+      {%- endif %}
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ]
+}
+</script>
 <div class="shell">
   <header class="pagehead">
     <h1 id="pubs-h1">Publications</h1>
@@ -105,7 +138,7 @@ permalink: /publications/
                 {%- comment -%} The heading points at the same destination as the DOI or PDF
                   button and reports the same event: the question is which paper was opened,
                   not which of the two controls did it. {%- endcomment -%}
-                <p class="t">{% if href %}<a data-goatcounter-click="{{ kind }}/{{ pubkey }}" data-goatcounter-title="{{ p.title | escape }}" href="{{ href }}" target="_blank" rel="noopener">{{ p.title }}<span class="sr-only"> (external)</span></a>{% else %}{{ p.title }}{% endif %}</p>
+                <p class="t">{% if href %}<a data-goatcounter-click="{{ kind }}/{{ pubkey }}" data-goatcounter-title="{{ p.title | escape }}" href="{{ href }}" target="_blank" rel="noopener">{{ p.title }}<span class="sr-only">{% if kind == "pdf" %} (opens PDF in a new tab){% else %} (opens in a new tab){% endif %}</span></a>{% else %}{{ p.title }}{% endif %}</p>
                 {%- comment -%} Author lists carry neutral **…** emphasis in the data file;
                   odd split segments are the emphasised ones. {%- endcomment -%}
                 <p class="authors">{% assign chunks = p.authors | split: "**" %}{% for chunk in chunks %}{% assign odd = forloop.index0 | modulo: 2 %}{% if odd == 1 %}<b>{{ chunk }}</b>{% else %}{{ chunk }}{% endif %}{% endfor %}</p>
@@ -116,7 +149,7 @@ permalink: /publications/
                   {%- if p.award %}<span class="tag tag-award">{{ p.award }}</span>{% endif -%}
                   {%- if p.mostCited %}<span class="tag tag-award">Most cited</span>{% endif -%}
                   {%- if p.doi %}<a class="publink ext" data-goatcounter-click="doi/{{ pubkey }}" data-goatcounter-title="{{ p.title | escape }}" href="{{ p.doi }}" target="_blank" rel="noopener"><i class="ai ai-doi" aria-hidden="true"></i> DOI<span class="sr-only"> (external)</span></a>{% endif -%}
-                  {%- if p.pdf %}<a class="publink ext" data-goatcounter-click="pdf/{{ pubkey }}" data-goatcounter-title="{{ p.title | escape }}" href="{{ site.url }}{{ p.pdf }}" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-file"/></svg> PDF<span class="sr-only"> (external)</span></a>{% endif -%}
+                  {%- if p.pdf %}<a class="publink ext" data-goatcounter-click="pdf/{{ pubkey }}" data-goatcounter-title="{{ p.title | escape }}" href="{{ site.url }}{{ p.pdf }}" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-file"/></svg> PDF<span class="sr-only"> (opens in a new tab)</span></a>{% endif -%}
                   {%- if p.slides %}<a class="publink ext" data-goatcounter-click="slides/{{ pubkey }}" data-goatcounter-title="{{ p.title | escape }}" href="{{ p.slides }}" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-slides"/></svg> Slides<span class="sr-only"> (external)</span></a>{% endif -%}
                   {%- if p.poster %}<a class="publink ext" data-goatcounter-click="poster/{{ pubkey }}" data-goatcounter-title="{{ p.title | escape }}" href="{{ p.poster }}" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-image"/></svg> Poster<span class="sr-only"> (external)</span></a>{% endif -%}
                 </div>
