@@ -1069,7 +1069,10 @@ footer.site a:hover .licon.spotify{color:var(--accent);}
 .reach-metrics div:first-child{padding-left:0;}
 .reach-metrics div:last-child{border-right:0;}
 .reach-metrics dt{color:var(--ink-faint); font-size:.78rem; font-weight:650; letter-spacing:.055em; text-transform:uppercase;}
-.reach-metrics dd{margin:.25rem 0 0; color:var(--head); font-family:var(--serif); font-size:clamp(1.8rem,4vw,3rem);
+/* The qualifier sits inside the dd (a dl grouping div may hold nothing else), so the
+   display face is set on the value span rather than on the dd itself. */
+.reach-metrics dd{margin:.25rem 0 0;}
+.reach-metric-value{display:block; color:var(--head); font-family:var(--serif); font-size:clamp(1.8rem,4vw,3rem);
   font-weight:600; font-variant-numeric:tabular-nums; letter-spacing:-.025em; line-height:1;}
 /* Direction is carried by the glyph and the wording, never by hue alone. */
 .reach-delta{display:flex; gap:.35rem; align-items:baseline; margin:.5rem 0 0;

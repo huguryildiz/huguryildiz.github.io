@@ -313,11 +313,15 @@ permalink: /stats/
   }
 
   /* ---- KPI row ------------------------------------------------------------ */
+  /* The qualifier goes inside the <dd>, not beside it: a <dl> grouping <div> may
+     only hold <dt> and <dd>, and a stray <p> there is what made the list invalid. */
   function metric(label, value, sub){
     var wrap = el('div');
     wrap.appendChild(el('dt', null, label));
-    wrap.appendChild(el('dd', null, value));
-    if (sub) wrap.appendChild(sub);
+    var dd = el('dd');
+    dd.appendChild(el('span', 'reach-metric-value', value));
+    if (sub) dd.appendChild(sub);
+    wrap.appendChild(dd);
     return wrap;
   }
   function deltaNode(current, previous){
@@ -1073,7 +1077,6 @@ permalink: /stats/
 
       var plot = el('div', 'reach-stack-plot');
       var tip = el('div', 'reach-tip'); tip.hidden = true;
-      var pinned = null;
       var showTip = function(seg, s){
         tip.textContent = s.name + ' · ' + (s.count / sum * 100).toFixed(1) + '% · ' + fmt(s.count) + ' views';
         tip.hidden = false;
@@ -1082,30 +1085,27 @@ permalink: /stats/
         var half = tip.getBoundingClientRect().width / 2;
         tip.style.left = Math.min(Math.max(x, half), Math.max(box.width - half, half)) + 'px';
       };
-      var hideTip = function(){ tip.hidden = true; pinned = null; };
+      var hideTip = function(){ tip.hidden = true; };
 
       var track = el('div', 'reach-stack-track');
       track.setAttribute('role', 'img');
       track.setAttribute('aria-label', stack.title + ': ' + segments.map(function(s){
         return s.name + ' ' + (s.count / sum * 100).toFixed(1) + '%';
       }).join(', '));
+      /* The segments used to be buttons: focusable, role="button", each with its own
+         label. That made every band a control inside a role="img" container — an
+         interactive element the container claims is a picture — and the smallest of
+         them was 3.3px wide, far under any usable target. A chart is one thing or the
+         other, so this one is the picture: the track carries the whole reading in its
+         label and the legend below carries every value in text. What is left on a
+         segment is a pointer-only tooltip, which adds nothing a keyboard or screen
+         reader user is not already given. */
       segments.forEach(function(s){
         var seg = el('span', 'reach-seg reach-seg-' + s.slot);
         seg.style.setProperty('--reach-share', (s.count / sum * 100).toFixed(3) + '%');
-        seg.setAttribute('tabindex', '0');
-        seg.setAttribute('role', 'button');
-        seg.setAttribute('aria-label', s.name + ', ' + fmt(s.count) + ' views, ' + (s.count / sum * 100).toFixed(1) + ' percent');
-        seg.addEventListener('click', function(e){
-          e.stopPropagation();
-          var again = pinned === seg;
-          closeStackTips();            /* only one tooltip stays open at a time */
-          if (again) return;
-          pinned = seg; showTip(seg, s);
-        });
-        seg.addEventListener('mouseenter', function(){ if (!pinned) showTip(seg, s); });
-        seg.addEventListener('mouseleave', function(){ if (!pinned) tip.hidden = true; });
-        seg.addEventListener('focus', function(){ showTip(seg, s); });
-        seg.addEventListener('blur', function(){ if (pinned !== seg) tip.hidden = true; });
+        seg.setAttribute('aria-hidden', 'true');
+        seg.addEventListener('mouseenter', function(){ showTip(seg, s); });
+        seg.addEventListener('mouseleave', function(){ tip.hidden = true; });
         track.appendChild(seg);
       });
       plot.appendChild(track);
@@ -1137,7 +1137,8 @@ permalink: /stats/
     host.replaceChildren.apply(host, blocks);
   }
 
-  /* A pinned tooltip closes on the next click elsewhere, or on Escape. */
+  /* A tooltip left open by a pointer that never fired mouseleave — a resize, a
+     scroll under the cursor — closes on the next click or on Escape. */
   function closeStackTips(){
     document.querySelectorAll('.reach-stack').forEach(function(w){ if (w.__closeTip) w.__closeTip(); });
   }
