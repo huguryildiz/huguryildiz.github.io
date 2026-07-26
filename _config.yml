@@ -9,6 +9,7 @@ url: "https://huguryildiz.com"
 baseurl: ""
 repository: "huguryildiz/huguryildiz.github.io"
 timezone: Europe/Istanbul
+content_last_updated: 2026-07-26
 
 # =========================
 # Plugins
@@ -59,7 +60,7 @@ author:
 # =========================
 # Analytics
 # =========================
-# GTM, GA4 and GoatCounter are hardcoded in _includes/_shared/site-analytics.html.
+# Direct GA4 and GoatCounter are defined in _includes/_shared/site-analytics.html.
 # The IDs live there and nowhere else.
 
 # =========================

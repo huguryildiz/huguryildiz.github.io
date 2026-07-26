@@ -3,6 +3,7 @@ layout: academic
 title: "Hüseyin Uğur Yıldız | Associate Professor of Electrical Engineering at TED University"
 description: "Associate Professor of Electrical & Electronics Engineering at TED University. Operations research and mathematical optimization for wireless, underwater, and drone-assisted networks."
 permalink: /
+modified: 2026-07-26
 ---
 
 <div class="shell">
@@ -67,9 +68,9 @@ permalink: /
     <div class="hero-actions">
       <div class="hero-cta">
         <a class="btn btn-primary" href="/files/Yildiz_HuseyinUgur_CV.pdf" target="_blank" rel="noopener"
-           data-goatcounter-click="cv-pdf" data-goatcounter-title="CV (PDF), from the home page">
+          data-goatcounter-click="cv-pdf" data-goatcounter-title="CV (PDF), from the home page">
           <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-download"/></svg>
-          CV (PDF)<span class="sr-only"> (external)</span></a>
+          CV (PDF)<span class="sr-only"> (opens in a new tab)</span></a>
         <a class="btn btn-quiet" href="#home-selected">
           <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-book"/></svg>
           Selected publications</a>
@@ -129,17 +130,14 @@ permalink: /
   {% assign sm = site.data.scholar_metrics %}
   <section class="scholar-kpi" aria-labelledby="kpi-heading">
     <h2 class="sr-only" id="kpi-heading">Research metrics</h2>
-    <dl class="kpi-row">
+    <dl class="kpi-row kpi-row-3">
       <div><dt>Citations</dt><dd data-kpi="{{ sm.citations }}">{{ sm.citations_display }}</dd></div>
       <div><dt>h-index</dt><dd data-kpi="{{ sm.h_index }}">{{ sm.h_index }}</dd></div>
-      <div><dt>i10-index</dt><dd data-kpi="{{ sm.i10_index }}">{{ sm.i10_index }}</dd></div>
-      {% assign works_net = sm.works | minus: 2 %}
-      <div><dt>Works</dt><dd data-kpi="{{ works_net }}">{{ works_net }}</dd></div>
+      <div><dt>Curated publications</dt><dd data-kpi="{{ site.data.publications | size }}">{{ site.data.publications | size }}</dd></div>
     </dl>
-    <p class="kpi-src">Source: <a href="{{ sm.profile_url }}" target="_blank" rel="noopener">Google Scholar<span class="sr-only"> (external)</span></a> · updated {{ sm.updated_utc | date: "%b %-d, %Y" }} · refreshed weekly</p>
-    <p class="kpi-src">Google Scholar indexes {{ sm.works }} records; the two left out here are my own
-      M.Sc. and Ph.D. theses. The rest are the
-      <a href="{{ '/publications/' | relative_url }}">{{ site.data.publications | size }} curated publications</a>.</p>
+    <p class="kpi-src">Citations and h-index: <a href="{{ sm.profile_url }}" target="_blank" rel="noopener">Google Scholar<span class="sr-only"> (opens in a new tab)</span></a>, updated {{ sm.updated_utc | date: "%b %-d, %Y" }} and refreshed weekly. Catalogue total:
+      <a href="{{ '/publications/' | relative_url }}">{{ site.data.publications | size }} peer-reviewed records</a>;
+      Scholar's {{ sm.works }} works also include my M.Sc. and Ph.D. theses.</p>
   </section>
   <script>
   /* Count-up for the Scholar metrics. Values are already rendered server-side,

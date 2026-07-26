@@ -10,9 +10,9 @@ permalink: /cv/
     <h1 id="cv-h1">Curriculum Vitae</h1>
     <div class="cvhead-actions">
       <a class="btn btn-primary" href="/files/Yildiz_HuseyinUgur_CV.pdf" target="_blank" rel="noopener"
-         data-goatcounter-click="cv-pdf" data-goatcounter-title="CV (PDF), from the CV page">
+        data-goatcounter-click="cv-pdf" data-goatcounter-title="CV (PDF), from the CV page">
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8m0 0L5 7m3 3l3-3M3 13h10"/></svg>
-        Download PDF<span class="sr-only"> (external)</span></a>
+        Download PDF<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="btn btn-quiet" href="/publications/">Publication list</a>
     </div>
   </header>
@@ -81,7 +81,7 @@ permalink: /cv/
           <div class="t">{{ t.kind }}</div>
           <div class="d"><i>{{ t.title }}</i> — advisor: {{ t.advisor }}{% if t.co_advisor %} · co-advisor: {{ t.co_advisor }}{% endif %}</div>
           <div class="links">
-            <a class="ext" href="{{ t.pdf }}" target="_blank" rel="noopener" data-goatcounter-click="{{ t.pdf_goatcounter }}" data-goatcounter-title="{{ t.pdf_goatcounter_title }}"><svg class="licon" aria-hidden="true"><use href="#i-file"/></svg> PDF</a>
+            <a class="ext" href="{{ t.pdf }}" target="_blank" rel="noopener" data-goatcounter-click="{{ t.pdf_goatcounter }}" data-goatcounter-title="{{ t.pdf_goatcounter_title }}"><svg class="licon" aria-hidden="true"><use href="#i-file"/></svg> PDF<span class="sr-only"> (opens in a new tab)</span></a>
             <a class="ext" href="{{ t.yok_url }}" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-archive"/></svg> YÖK thesis record</a>
           </div>
         </div>

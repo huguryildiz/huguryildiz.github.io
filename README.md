@@ -63,7 +63,7 @@ reintroducing a theme.
 | `_posts/` | Dated writing entries published under `/writing/:title/` |
 | `_layouts/academic.html` | Primary navigation, page shell, footer, theme control, and shared interactions |
 | `_layouts/post.html` | Writing-entry metadata, reading time, tags, and optional source link |
-| `_includes/_shared/` | Head fragments: favicon markup and animation, GTM, GA4, GoatCounter |
+| `_includes/_shared/` | Shared fragments: favicon markup and animation, direct GA4, GoatCounter |
 | `_includes/hero-uwsn.html` | Interactive ocean digital twin and underwater acoustic-network scenario |
 | `_includes/research-map.html` | Interactive research map rendered from `_data/research_map.yml` |
 | `assets/css/redesign.css` | All site styles |
@@ -126,7 +126,8 @@ source of truth: `_data/cv.yml` and `_data/publications.yml`.
   `_pages/service.md`, and `_pages/teaching.md` render it directly, and the
   PDF regenerates from the same file on every deploy via
   `scripts/render_cv_tex.py` — never edit `files/Yildiz_HuseyinUgur_CV.pdf` or
-  `main.tex` by hand.
+  `main.tex` by hand. Run `scripts/build_cv_pdf.sh` to refresh the local PDF
+  from the same data and template used by production.
 - Publication records live in `_data/publications.yml`; `_pages/publications.md`
   renders them and also drives the PDF's publication list. Verify metadata,
   DOI links, and local PDF paths when adding a record.

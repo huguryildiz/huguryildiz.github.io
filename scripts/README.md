@@ -13,6 +13,7 @@ the files without updating the workflows in the same change.
 | `fetch_scholar.py` | `.github/workflows/update-scholar.yml` — weekly, Mondays at 01:30 UTC, plus manual dispatch | `_data/scholar_metrics.json` | `SERPAPI_KEY`, `SCHOLAR_AUTHOR_ID` (repo secrets); Python `requests` |
 | `fetch_goatcounter.py` | `.github/workflows/update-goatcounter.yml` — daily at 03:00 UTC, plus manual dispatch | `_data/site_stats.json` | `GOATCOUNTER_API_TOKEN` (repo secret); Python `requests` |
 | `render_cv_tex.py` | `.github/workflows/jekyll.yml` — every push to `master`, daily at 04:17 UTC, plus manual dispatch | `main.tex`, compiled to `_site/files/Yildiz_HuseyinUgur_CV.pdf` | PyYAML, Jinja2; `pdflatex` (`xu-cheng/latex-action`) |
+| `build_cv_pdf.sh` | local, explicit | `files/Yildiz_HuseyinUgur_CV.pdf` (or the path passed as its first argument) | The same renderer and data as production; PyYAML, Jinja2, `latexmk` |
 
 Both workflows commit only when the snapshot actually changed, and **neither tags the commit
 with a CI-skip marker** — each refresh is meant to trigger a Pages rebuild. The pages state
@@ -118,11 +119,12 @@ Renders `cv-latex/cv.tex.j2` against `_data/cv.yml` + `_data/publications.yml` t
 job needs it at the repo root). `cv-latex/cv.tex.j2` is excluded from the Jekyll build
 (`_config.yml`) so it never becomes a public URL. `main.tex` is compiled to PDF with
 `pdflatex` (two passes, for `\pageref{LastPage}`; `xu-cheng/latex-action` runs `latexmk` in
-CI) and is itself never committed — it is a build output, same as the PDF. `jekyll.yml` runs
-this after the Jekyll build step and before the artifact upload, since Jekyll rebuilds
-`_site/` from scratch; a `test -s main.pdf` guard fails the job if the compile produced a
-missing or empty file, so a broken LaTeX template fails the build rather than publishing a
-broken or stale PDF.
+CI) and is never committed. The local PDF preview is tracked but generated only through
+`build_cv_pdf.sh`; the deployed PDF remains a build output. `jekyll.yml` runs the renderer
+after the Jekyll build step and before the artifact upload, since Jekyll rebuilds `_site/`
+from scratch; a `test -s main.pdf` guard fails the job if the compile produced a missing or
+empty file, so a broken LaTeX template fails the build rather than publishing a broken or
+stale PDF.
 
 Publication numbering (`J24`, `C13`, `CT5`, `E1`, …) is computed at render time, per type, in
 descending year order; it is never stored in `_data/publications.yml`. Tests:
@@ -134,6 +136,55 @@ Two publication fields exist only for this script, not for the website: `month` 
 `_pages/publications.md` does not) and `title_tex`/`org_tex`-style overrides in `_data/cv.yml`
 wherever the PDF's citation-style text diverges from the web copy (see the `DIVERGED`
 comments next to those fields). Requires PyYAML, Jinja2.
+
+### Local and production PDF parity
+
+Do not edit `files/Yildiz_HuseyinUgur_CV.pdf` in a PDF application. Refresh the local
+downloadable artifact with:
+
+```bash
+scripts/build_cv_pdf.sh
+```
+
+The helper invokes `render_cv_tex.py`, reads the same three repository data files as the
+production workflow, compiles in an isolated temporary directory, and replaces the local
+artifact only after a successful non-empty build. If the active Python lacks PyYAML or Jinja2,
+the helper uses `uv` to provide them in an isolated run rather than installing packages
+globally. The Pages workflow intentionally keeps its containerized LaTeX compiler, but it
+consumes the same generated `main.tex` and places the result at the same public URL. Text
+extracted from the local and deployed PDFs should match; binary hashes need not match because
+PDF creation timestamps and producer versions differ.
+
+### Tagged PDF production plan
+
+Current verified baseline (2026-07-26): `pdfinfo` reports `Tagged: no` for both the repository
+PDF and the deployed PDF. Selectable text and metadata do not make a PDF structurally tagged.
+Do not claim PDF/UA or screen-reader conformance until every acceptance check below passes.
+
+1. Create a short-lived compatibility branch and add `\DocumentMetadata{lang=en-US,
+   tagging=on}` before `\documentclass`, following the current
+   [LaTeX Tagged PDF guidance](https://latex3.github.io/tagging-project/). Prototype with a
+   pinned current TeX Live and LuaLaTeX/PDF 2.0; do not switch the production engine in the
+   same change.
+2. Audit `article`, `titlesec`, `fullpage`, `fancyhdr`, `enumitem`, `hyperref`,
+   `fontawesome5`, and the remaining packages against the project's
+   [tagging status table](https://latex3.github.io/tagging-project/tagging-status). Replace
+   incompatible presentational constructs rather than wrapping them in misleading tags.
+3. Preserve real structural commands for headings and lists; mark decorative icons, rules,
+   and layout-only material as artifacts. Verify the reading order of the two-ended
+   appointment rows, publication entries, header, and footer rather than relying on visual
+   position.
+4. Retain document language, title, author, subject, link annotations, and Unicode mapping.
+   Add alternative text only for meaningful graphics; decorative Font Awesome glyphs must not
+   be announced as content.
+5. Validate a release candidate with `pdfinfo` (`Tagged: yes`), veraPDF against PDF/UA-2,
+   PAC or Acrobat's accessibility checker, and manual VoiceOver or NVDA reading-order and link
+   navigation. Render all pages to images and compare them with the current six-page CV so
+   tagging does not introduce clipped text, changed pagination, or missing glyphs.
+6. Only after those checks pass, pin the TeX Live version, switch both the local helper and
+   Pages workflow to the same engine, add the structural validation to CI, and update this
+   document from “planned” to the exact verified conformance level. A failed tagging or visual
+   check must leave the previous deployed PDF live.
 
 ## Dormant — manual, output is not part of the site
 

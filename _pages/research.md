@@ -184,6 +184,6 @@ permalink: /research/
       <a class="ext" href="https://github.com/huguryildiz/wsn-opt-python" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-github"/></svg> GitHub</a></li>
     <li><span class="n">Underwater networks — basics</span> — an introductory document covering core
       principles of underwater acoustic communication and sensor networks.
-      <a class="ext" href="https://huguryildiz.com/files/underwater_networks_basics.pdf" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-file"/></svg> PDF</a></li>
+      <a class="ext" href="https://huguryildiz.com/files/underwater_networks_basics.pdf" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-file"/></svg> PDF<span class="sr-only"> (opens in a new tab)</span></a></li>
   </ul>
 </div>

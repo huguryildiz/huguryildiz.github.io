@@ -8,8 +8,6 @@ layout: compress
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  {% include _shared/site-analytics.html %}
-
   {%- if page.url == '/' %}
   <title>{{ page.title }}</title>
   {% seo title=false %}
@@ -82,12 +80,17 @@ layout: compress
 
   {% include _shared/site-favicon.html %}
   <meta name="theme-color" content="#12314E">
+  {%- if page.collection == "posts" %}
+  {%- assign page_modified = page.last_modified_at | default: page.date %}
+  {%- else %}
+  {%- assign page_modified = page.modified | default: site.content_last_updated %}
+  {%- endif %}
+  <meta name="last-modified" content="{{ page_modified | date_to_xmlschema }}">
+  <meta property="article:modified_time" content="{{ page_modified | date_to_xmlschema }}">
 
 </head>
 
 <body>
-  {% include _shared/site-analytics-noscript.html %}
-
   {% include icons.html %}
 
   <a class="skip" href="#main">Skip to content</a>
@@ -125,6 +128,7 @@ layout: compress
   <footer class="site">
     <div class="shell footer-row">
       <span class="fcopy">© {{ 'now' | date: "%Y" }} Hüseyin Uğur Yıldız · Jekyll · GitHub Pages</span>
+      <span class="fupdated">Last updated <time datetime="{{ site.content_last_updated | date: "%Y-%m-%d" }}">{{ site.content_last_updated | date: "%B %-d, %Y" }}</time></span>
       <span class="flisten">
         <span class="flabel">Listening</span>
         <a href="https://open.spotify.com/playlist/0rGMcXyrxCuw5GGxl9WwXX" target="_blank" rel="noopener"><svg class="licon spotify" aria-hidden="true"><use href="#i-spotify"/></svg> Jazz<span class="sr-only"> (external)</span></a>
@@ -172,6 +176,12 @@ layout: compress
     navToggle.addEventListener('click',function(){
       var open=nav.classList.toggle('open');
       navToggle.setAttribute('aria-expanded',String(open));
+    });
+    document.addEventListener('keydown',function(event){
+      if(event.key!=='Escape'||!nav.classList.contains('open'))return;
+      nav.classList.remove('open');
+      navToggle.setAttribute('aria-expanded','false');
+      navToggle.focus();
     });
     if(matchMedia('(prefers-reduced-motion: reduce)').matches){
       document.querySelectorAll('video[autoplay]').forEach(function(v){v.removeAttribute('autoplay');v.pause();});
@@ -245,5 +255,6 @@ layout: compress
     }
   })();
   </script>
+  {% include _shared/site-analytics.html %}
 </body>
 </html>

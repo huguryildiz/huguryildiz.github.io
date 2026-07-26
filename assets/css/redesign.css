@@ -119,6 +119,8 @@ figure{margin:0;}
 button{font-family:var(--sans);}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
 .shell{max-width:1280px; margin-inline:auto; padding-inline:clamp(20px,4.5vw,48px);}
+.shell,.masthead-in>*{min-width:0;}
+.shell :is(p,li,dd),footer.site :is(span,a){overflow-wrap:anywhere;}
 .tnum{font-variant-numeric:tabular-nums;}
 .ext::after{content:""; display:inline-block; width:.58em; height:.58em; margin-left:.26em;
   vertical-align:.02em; background-color:var(--ink-faint);
@@ -171,7 +173,7 @@ nav.primary a:hover .navico{color:var(--accent); opacity:1;}
 /* ---------- MASTHEAD ---------- */
 .masthead{border-bottom:1px solid var(--hairline); background:var(--bg);
   position:sticky; top:0; z-index:var(--z-nav);}
-.masthead-in{display:flex; align-items:center; gap:1.25rem; min-height:3.6rem;}
+.masthead-in{display:flex; align-items:center; gap:clamp(.55rem,2vw,1.25rem); min-height:4rem;}
 .wordmark{font-family:var(--serif); font-weight:600; font-size:1.12rem; color:var(--head); letter-spacing:.005em;
   display:inline-flex; align-items:center; gap:.5rem;}
 .wordmark-fav{width:30px; height:30px; flex:0 0 auto;}
@@ -189,7 +191,7 @@ nav.primary a:hover{color:var(--head); text-decoration:none; background:var(--su
 nav.primary a[aria-current="page"]{color:var(--head); font-weight:650; box-shadow:inset 0 -2px 0 var(--accent);}
 .iconbtn{
   background:none; border:1px solid var(--hairline); color:var(--ink-soft);
-  width:2.15rem; height:2.15rem; border-radius:6px; cursor:pointer;
+  width:44px; height:44px; border-radius:6px; cursor:pointer;
   display:inline-flex; align-items:center; justify-content:center; flex:none;
 }
 .iconbtn:hover{color:var(--head); border-color:var(--hairline-strong); background:var(--surface);}
@@ -220,6 +222,11 @@ nav.primary a[aria-current="page"]{color:var(--head); font-weight:650; box-shado
   nav.primary a[aria-current="page"]{box-shadow:none; border-bottom:1px solid var(--hairline);
     color:var(--accent);}
   nav.primary li:last-child a{border-bottom:0;}
+}
+@media (max-width:23em){
+  .masthead-in{gap:.45rem;}
+  .wordmark{font-size:1rem; gap:.4rem;}
+  .wordmark-fav{width:27px; height:27px;}
 }
 
 /* ---------- SECTION GRAMMAR ---------- */
@@ -539,7 +546,7 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
   .hero{grid-template-columns:minmax(0,46fr) minmax(0,54fr);}
 }
 @media (max-width:860px){
-  .hero{grid-template-columns:1fr; grid-template-areas:"id" "twin" "actions";
+  .hero{grid-template-columns:1fr; grid-template-areas:"id" "actions" "twin";
     gap:1.4rem; padding-top:1.4rem;}
   .hero .prop, .hero .supporting{max-width:none;}
   .hero h1{font-size:1.65rem;}
@@ -571,7 +578,7 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
 
 /* ---------- PUBLICATIONS ---------- */
 .filters{
-  position:sticky; top:3.6rem; z-index:20;
+  position:sticky; top:4rem; z-index:20;
   background:var(--bg); border-bottom:1px solid var(--hairline);
   padding:.8rem 0 .75rem; margin:1.8rem 0 0;
 }
@@ -901,6 +908,13 @@ ol.publist{list-style:none; margin:0; padding:0;}
 .swproject h3{font-size:1.14rem; font-weight:600; margin:0 0 .35rem;}
 .swproject p{font-size:.96rem; color:var(--ink-soft); margin-bottom:.7rem;}
 .swproject .links{display:flex; flex-wrap:wrap; gap:.4rem .9rem; font-size:.88rem; font-weight:650; align-items:center;}
+.course-motion{display:flex; flex-wrap:wrap; align-items:center; gap:.55rem 1rem; margin:.2rem 0 1rem;}
+.course-motion-toggle{min-height:44px;}
+.course-motion-toggle .motion-play{display:none;}
+.course-motion-toggle[aria-pressed="true"] .motion-pause{display:none;}
+.course-motion-toggle[aria-pressed="true"] .motion-play{display:block;}
+.course-motion-toggle:disabled{pointer-events:auto;}
+.course-motion p{margin:0; color:var(--ink-faint); font-size:.84rem;}
 @media (max-width:620px){
   .swproject{grid-template-columns:1fr; gap:.8rem;}
   .swproject :is(img,video){max-width:340px;}
@@ -999,6 +1013,7 @@ footer.site{border-top:1px solid var(--hairline); margin-top:clamp(3rem,7vw,4.5r
   padding:1.1rem 0; font-size:.85rem; color:var(--ink-faint);}
 footer.site .footer-row{display:flex; flex-wrap:wrap; gap:.5rem 1.6rem; align-items:center; justify-content:space-between;}
 footer.site .fcopy{font-variant-numeric:tabular-nums;}
+footer.site .fupdated{color:var(--ink-faint); font-variant-numeric:tabular-nums;}
 footer.site .flisten{display:inline-flex; flex-wrap:wrap; align-items:center; gap:.3rem 1rem; margin-left:auto;}
 footer.site .flabel{font-size:.7rem; font-weight:650; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-faint);}
 footer.site .fstats{display:inline-flex; flex-wrap:wrap; align-items:center; gap:.3rem 1rem;}
@@ -1428,10 +1443,4 @@ footer.site a:hover .licon.spotify{color:var(--accent);}
    practice minimum without inflating them for precise mouse pointers. */
 @media (pointer:coarse){
   .seg button, .rmap-views button, .uw-plaque .pctl button{min-height:44px;}
-  /* The masthead pair draws at 34.4px — over WCAG's 24px floor, under the 44px
-     ergonomic one. The hit area grows through ::before so the drawn button keeps
-     its size; enlarging the box itself would make the masthead taller on every phone. */
-  .iconbtn{position:relative;}
-  .iconbtn::before{content:""; position:absolute; left:50%; top:50%;
-    transform:translate(-50%,-50%); width:44px; height:44px;}
 }
