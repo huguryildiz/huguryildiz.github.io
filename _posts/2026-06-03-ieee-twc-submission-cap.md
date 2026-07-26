@@ -1,6 +1,7 @@
 ---
 title: "An academic rate limiter: IEEE TWC now caps authors at 36 new manuscripts a year"
 date: 2026-06-03
+description: "Why IEEE Transactions on Wireless Communications' limit of 36 new submissions per author per year matters for editorial capacity and research culture."
 excerpt: "IEEE Transactions on Wireless Communications has introduced a per-author submission cap — at most 36 new manuscripts per year. Three a month. The number is high enough to be no constraint at all for ordinary researchers, which is precisely what makes it interesting."
 tags: [Academic Publishing, Research Integrity, Peer Review]
 linkedin: "https://www.linkedin.com/feed/update/urn:li:share:7467913511143346176/"

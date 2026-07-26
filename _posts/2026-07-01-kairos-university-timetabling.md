@@ -1,6 +1,7 @@
 ---
 title: "A university timetable can look clean on paper and still break in operation"
 date: 2026-07-01
+description: "How KAIROS uses CP-SAT and independent validation to produce feasible university timetables and reduce idle time and room-capacity waste."
 excerpt: "KAIROS is a CP-SAT university timetabling engine that drove every hard-constraint category to zero across two live TED University terms — cutting within-day idle time ~75% and capacity waste ~29% per room-hour."
 tags: [Operations Research, Constraint Programming, University Timetabling]
 linkedin: "https://www.linkedin.com/posts/huguryildiz_kairos-zero-conflict-university-timetabling-activity-7477983095242211329-2Zcz"
