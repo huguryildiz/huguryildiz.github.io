@@ -10,7 +10,7 @@ permalink: /
     <div class="hero-id">
       <div class="idrow">
         <figure class="portrait">
-          <img src="/assets/images/huguryildiz.png" alt="Portrait of Hüseyin Uğur Yıldız" width="126" height="126">
+          <img src="/assets/images/huguryildiz.webp" alt="Portrait of Hüseyin Uğur Yıldız" width="126" height="126">
           <svg class="orn" viewBox="0 0 160 160" aria-hidden="true" focusable="false">
             <g class="oarc" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
               <path d="M17.6 116 A72 72 0 0 0 147.7 104.6"/>

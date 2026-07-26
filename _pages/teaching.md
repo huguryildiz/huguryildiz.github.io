@@ -13,7 +13,7 @@ permalink: /teaching/
 
   <article class="swproject">
     <video class="course-video" src="/assets/video/courses/hero-ee304.mp4"
-      poster="/assets/images/courses/ee304.png" loop muted playsinline preload="metadata"
+      poster="/assets/images/courses/ee304.webp" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
       {% assign course = site.data.cv.courses | where: "code", "EE 304" | first %}<h3>{{ course.code }} — {{ course.name }}</h3>
@@ -26,7 +26,7 @@ permalink: /teaching/
 
   <article class="swproject">
     <video class="course-video" src="/assets/video/courses/hero-ee311.mp4"
-      poster="/assets/images/courses/ee311.png" loop muted playsinline preload="metadata"
+      poster="/assets/images/courses/ee311.webp" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
       {% assign course = site.data.cv.courses | where: "code", "EE 311" | first %}<h3>{{ course.code }} — {{ course.name }}</h3>
@@ -39,7 +39,7 @@ permalink: /teaching/
 
   <article class="swproject">
     <video class="course-video" src="/assets/video/courses/hero-ee413.mp4"
-      poster="/assets/images/courses/ee413.png" loop muted playsinline preload="metadata"
+      poster="/assets/images/courses/ee413.webp" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
       {% assign course = site.data.cv.courses | where: "code", "EE 413" | first %}<h3>{{ course.code }} — {{ course.name }}</h3>
@@ -53,7 +53,7 @@ permalink: /teaching/
 
   <article class="swproject">
     <video class="course-video" src="/assets/video/courses/hero-ee491.mp4"
-      poster="/assets/images/courses/ee491.png" loop muted playsinline preload="metadata"
+      poster="/assets/images/courses/ee491.webp" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
       <h3>EE 491 / EE 492 — Senior Design Project I &amp; II</h3>
@@ -73,7 +73,7 @@ permalink: /teaching/
 
   <article class="swproject">
     <video class="course-video" src="/assets/video/courses/hero-ee512.mp4"
-      poster="/assets/images/courses/ee512.png" loop muted playsinline preload="metadata"
+      poster="/assets/images/courses/ee512.webp" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
       {% assign course = site.data.cv.courses | where: "code", "EE 512" | first %}<h3>{{ course.code }} — {{ course.name }}</h3>
@@ -89,7 +89,7 @@ permalink: /teaching/
 
   <article class="swproject">
     <video class="course-video" src="/assets/video/courses/hero-ee205.mp4"
-      poster="/assets/images/courses/ee205.png" loop muted playsinline preload="metadata"
+      poster="/assets/images/courses/ee205.webp" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
       {% assign course = site.data.cv.courses | where: "code", "EE 205" | first %}<h3>{{ course.code }} — {{ course.name }}</h3>
@@ -102,7 +102,7 @@ permalink: /teaching/
 
   <article class="swproject">
     <video class="course-video" src="/assets/video/courses/hero-ee312.mp4"
-      poster="/assets/images/courses/ee312.png" loop muted playsinline preload="metadata"
+      poster="/assets/images/courses/ee312.webp" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
       {% assign course = site.data.cv.courses | where: "code", "EE 312" | first %}<h3>{{ course.code }} — {{ course.name }}</h3>
@@ -115,7 +115,7 @@ permalink: /teaching/
 
   <article class="swproject">
     <video class="course-video" src="/assets/video/courses/hero-ee462.mp4"
-      poster="/assets/images/courses/ee462.png" loop muted playsinline preload="metadata"
+      poster="/assets/images/courses/ee462.webp" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
       {% assign course = site.data.cv.courses | where: "code", "EE 462" | first %}<h3>{{ course.code }} — {{ course.name }}</h3>

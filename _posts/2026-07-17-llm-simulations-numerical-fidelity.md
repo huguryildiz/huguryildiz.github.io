@@ -29,7 +29,8 @@ GPT leads under the provisional composite, but the metric-level picture is less 
 This is a single synthetic scenario, not a general model ranking. The composite remains provisional because geometry fidelity is not yet scored, and BELLHOP3D is a reference, not ground truth.
 
 <figure class="post-figure">
-  <video class="post-video" controls playsinline preload="metadata">
+  <video class="post-video" controls playsinline preload="metadata" width="1080" height="1136"
+         poster="/assets/images/writing/compare-grid-poster.webp">
     <source src="/assets/video/compare_grid_portrait.mp4" type="video/mp4">
   </video>
   <figcaption>Side-by-side transmission-loss fields from each model against the BELLHOP3D reference.</figcaption>
