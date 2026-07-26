@@ -12,6 +12,40 @@ layout: compress
 
   {% seo %}
 
+  {%- if page.url == '/' %}
+  {%- assign ids = site.data.cv.identifiers %}
+  <!-- jekyll-seo-tag emits a Person node with name, url and sameAs; this one carries
+       what it has no slot for — role, employer, discipline, and the ORCID iD as an
+       identifier rather than just another profile link. Same @id, so a consumer
+       merges the two instead of reading them as two people. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "{{ site.url }}/#person",
+    "name": "Hüseyin Uğur Yıldız",
+    "alternateName": "Huseyin Ugur Yildiz",
+    "url": "{{ site.url }}/",
+    "image": "{{ site.url }}/assets/images/og-default.jpg",
+    "jobTitle": "Associate Professor of Electrical and Electronics Engineering",
+    "worksFor": {
+      "@type": "CollegeOrUniversity",
+      "name": "TED University",
+      "url": "https://www.tedu.edu.tr/en",
+      "address": {"@type": "PostalAddress", "addressLocality": "Ankara", "addressCountry": "TR"}
+    },
+    "affiliation": {"@type": "CollegeOrUniversity", "name": "TED University"},
+    "identifier": [
+      {"@type": "PropertyValue", "propertyID": "ORCID", "value": "{{ ids.orcid }}"},
+      {"@type": "PropertyValue", "propertyID": "Scopus Author ID", "value": "{{ ids.scopus }}"},
+      {"@type": "PropertyValue", "propertyID": "ResearcherID", "value": "{{ ids.researcherid }}"}
+    ],
+    "knowsAbout": [{% for a in site.data.cv.research_areas %}{{ a | jsonify }}{% unless forloop.last %}, {% endunless %}{% endfor %}],
+    "sameAs": [{% for l in site.social.links %}{{ l | jsonify }}{% unless forloop.last %}, {% endunless %}{% endfor %}]
+  }
+  </script>
+  {%- endif %}
+
   <!-- Set theme before paint to avoid flash -->
   <script>
   (function(){try{var t=localStorage.getItem('hy-theme');

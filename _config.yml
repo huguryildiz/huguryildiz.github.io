@@ -31,10 +31,19 @@ title_separator: "|"
 social:
   type: Person
   name: "Huseyin Ugur Yildiz"
+  # sameAs for the Person node. Every entry is a profile that resolves to this
+  # person and is linked from /cv/; nothing goes in here that the CV does not claim.
   links:
-    - "https://github.com/huguryildiz"
-    - "https://www.linkedin.com/in/huguryildiz/"
+    - "https://orcid.org/0000-0002-1556-2634"
     - "https://scholar.google.com/citations?user=nQwHS1gAAAAJ"
+    - "https://www.scopus.com/authid/detail.uri?authorId=56242674200"
+    - "https://www.webofscience.com/wos/author/record/S-6587-2016"
+    - "https://www.linkedin.com/in/huguryildiz/"
+    - "https://github.com/huguryildiz"
+    - "https://www.researchgate.net/profile/Huseyin-Yildiz-3"
+
+twitter:
+  card: summary_large_image
 
 # =========================
 # Author
@@ -64,17 +73,21 @@ include:
 # =========================
 # Page Defaults
 # =========================
+# `image` is what jekyll-seo-tag turns into og:image / twitter:image. Without it
+# no page had a share preview at all; a post can override it in its front matter.
 defaults:
   - scope:
       path: ""
       type: pages
     values:
       layout: academic
+      image: /assets/images/og-default.jpg
   - scope:
       path: ""
       type: posts
     values:
       layout: post
+      image: /assets/images/og-default.jpg
 
 # =========================
 # Markdown
