@@ -1,7 +1,19 @@
 """scripts/test_render_cv_tex.py — stdlib unittest, harici bağımlılık yok."""
+import json
+import re
+import tempfile
 import unittest
+from pathlib import Path
+from unittest import mock
 
-from render_cv_tex import emphasise, host_initials, mdlink_to_href, sentence_case, tex_escape, tex_text
+import render_cv_tex
+from render_cv_tex import (emphasise, host_initials, load_scholar, mdlink_to_href,
+                           scholar_date, sentence_case, tex_escape, tex_text)
+
+TEMPLATE = Path(render_cv_tex.TEMPLATE_DIR) / "cv.tex.j2"
+SCHOLAR_SNAPSHOT = {"citations_display": "1,075", "h_index": 16, "i10_index": 24,
+                    "updated_utc": "2026-07-25T19:45:11Z",
+                    "profile_url": "https://scholar.google.com/citations?user=x"}
 
 
 class TestTexEscape(unittest.TestCase):
@@ -95,6 +107,53 @@ class TestTexText(unittest.TestCase):
         self.assertEqual(
             result,
             r"A \& B \href{https://x.com/}{\underline{C}} D \& E")
+
+
+class TestScholarMetrics(unittest.TestCase):
+    """Bibliyometrik hiçbir sayı şablona elle yazılmamalı: PDF CV ile web CV
+    aynı `_data/scholar_metrics.json` anlık görüntüsünü göstermek zorunda."""
+
+    def test_citation_section_interpolates_every_number(self):
+        body = TEMPLATE.read_text(encoding="utf-8")
+        section = body.split(r"\section{\faChartBar~Citations}", 1)[1].split(r"\section", 1)[0]
+        for token in ("scholar.citations_display", "scholar.h_index",
+                      "scholar.i10_index", "scholar.updated_display"):
+            self.assertIn(token, section, f"{token} şablonda enterpole edilmiyor")
+        """LaTeX'in kendi ölçü/aralık argümanları (\\vspace{-10pt}) sayı içerir;
+        aranan şey metrik konumundaki çıplak sayı — yani komut argümanı
+        olmayan her rakam dizisi."""
+        prose = re.sub(r"\\[a-zA-Z]+\*?(\[[^\]]*\])?(\{[^{}]*\})?", " ", section)
+        prose = re.sub(r"\{\{.*?\}\}", " ", prose, flags=re.S)
+        self.assertNotRegex(prose, r"\d",
+                            "Citations bölümünde elle yazılmış sayı kaldı")
+
+    def test_no_rounded_citation_claim(self):
+        """Canlı PDF yıllarca 'Citations > 1K' dedi; gerçek değer 1.075 idi."""
+        self.assertNotIn("1K", TEMPLATE.read_text(encoding="utf-8"))
+
+    def test_date_matches_web_format(self):
+        self.assertEqual(scholar_date("2026-07-25T19:45:11Z"), "Jul 2026")
+
+    def _load_from(self, payload):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "scholar_metrics.json"
+            if payload is not None:
+                path.write_text(json.dumps(payload), encoding="utf-8")
+            with mock.patch.object(render_cv_tex, "SCHOLAR_JSON", path):
+                return load_scholar()
+
+    def test_valid_snapshot_gets_display_date(self):
+        self.assertEqual(self._load_from(SCHOLAR_SNAPSHOT)["updated_display"], "Jul 2026")
+
+    def test_missing_file_fails_closed(self):
+        with self.assertRaises(SystemExit):
+            self._load_from(None)
+
+    def test_missing_metric_fails_closed(self):
+        for key in ("citations_display", "h_index", "i10_index", "updated_utc", "profile_url"):
+            partial = {k: v for k, v in SCHOLAR_SNAPSHOT.items() if k != key}
+            with self.subTest(missing=key), self.assertRaises(SystemExit):
+                self._load_from(partial)
 
 
 if __name__ == "__main__":
