@@ -126,15 +126,13 @@ button{font-family:var(--sans);}
 a.ext:hover::after{background-color:currentColor;}
 h1,h2,h3,[id]{scroll-margin-top:5.2rem;}
 
-/* The 1280px shell does NOT keep line length in check, which is what the comment
-   here used to claim: at 1440px and up a full-width paragraph measures about 140
-   characters, twice the editorial norm. The cap belongs on the paragraph itself.
-   Justification goes with it — it opens word gaps at narrow widths (visible at
-   320px) and hyphens:auto was breaking terms mid-word. */
-p{max-width:90ch; text-align:left; hyphens:none;}
-/* Opt-out for pages where the 90ch cap left paragraphs short of the lists,
-   cards, and figures beside them, so one column read as two widths. */
-.prose-wide p{max-width:none;}
+/* Paragraphs run the full width of the 1280px shell. A per-paragraph measure cap
+   was tried and reverted: every academic page mixes prose with full-width rules,
+   KPI strips, and cards, so a capped paragraph left a ragged empty right column
+   and the page read as two competing widths. Justification stays off — it opens
+   word gaps at narrow widths (visible at 320px) and hyphens:auto broke terms
+   mid-word. */
+p{text-align:left; hyphens:none;}
 /* Display lines and console UI text stay left-aligned */
 .hero .prop, .ptext, .uw-pstatus{text-align:left; hyphens:none;}
 
