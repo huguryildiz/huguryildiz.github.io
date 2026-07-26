@@ -42,7 +42,7 @@ permalink: /
           <p class="role">
             <span class="role-line">Associate Professor &amp; IEEE Senior Member</span>
             <span class="role-line">Department of Electrical &amp; Electronics Engineering</span>
-            <span class="role-line"><span class="org"><a href="https://www.tedu.edu.tr/en/huseyin-ugur-yildiz" target="_blank" rel="noopener">TED University</a></span></span>
+            <span class="role-line"><span class="org"><a href="https://www.tedu.edu.tr/en/huseyin-ugur-yildiz" target="_blank" rel="noopener">TED University<span class="sr-only"> (external)</span></a></span></span>
             <a class="role-addr" href="https://share.google/AFFkStDzjSsudiC1V" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-map-pin"/></svg>
               <span>Ankara, Türkiye<span class="sr-only"> — campus location on the map (external)</span></span></a></p>
@@ -69,7 +69,7 @@ permalink: /
         <a class="btn btn-primary" href="/files/Yildiz_HuseyinUgur_CV.pdf" target="_blank" rel="noopener"
            data-goatcounter-click="cv-pdf" data-goatcounter-title="CV (PDF), from the home page">
           <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-download"/></svg>
-          CV (PDF)</a>
+          CV (PDF)<span class="sr-only"> (external)</span></a>
         <a class="btn btn-quiet" href="#home-selected">
           <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-book"/></svg>
           Selected publications</a>
@@ -135,7 +135,7 @@ permalink: /
       <div><dt>i10-index</dt><dd data-kpi="{{ sm.i10_index }}">{{ sm.i10_index }}</dd></div>
       <div><dt>Works</dt><dd data-kpi="{{ sm.works }}">{{ sm.works }}</dd></div>
     </dl>
-    <p class="kpi-src">Source: <a href="{{ sm.profile_url }}" target="_blank" rel="noopener">Google Scholar</a> · updated {{ sm.updated_utc | date: "%b %-d, %Y" }} · refreshed weekly</p>
+    <p class="kpi-src">Source: <a href="{{ sm.profile_url }}" target="_blank" rel="noopener">Google Scholar<span class="sr-only"> (external)</span></a> · updated {{ sm.updated_utc | date: "%b %-d, %Y" }} · refreshed weekly</p>
     <p class="kpi-src">Works counts every record Google Scholar indexes; this site lists
       <a href="{{ '/publications/' | relative_url }}">{{ site.data.publications | size }} curated publications</a>.</p>
   </section>
@@ -176,9 +176,9 @@ permalink: /
     <h2 class="sec" id="home-bio"><svg class="hicon" aria-hidden="true"><use href="#i-user"/></svg>Biography</h2>
     <div class="fullw">
         <p>Huseyin Ugur Yildiz received the B.Sc. degree in Electrical and Electronics Engineering from
-          <a href="https://w3.bilkent.edu.tr/bilkent/" target="_blank" rel="noopener">Bilkent University</a>, Ankara, Turkey, in 2009,
+          <a href="https://w3.bilkent.edu.tr/bilkent/" target="_blank" rel="noopener">Bilkent University<span class="sr-only"> (external)</span></a>, Ankara, Turkey, in 2009,
           and the M.Sc. and Ph.D. degrees from
-          <a href="https://www.etu.edu.tr/en" target="_blank" rel="noopener">TOBB University of Economics and Technology</a>,
+          <a href="https://www.etu.edu.tr/en" target="_blank" rel="noopener">TOBB University of Economics and Technology<span class="sr-only"> (external)</span></a>,
           Ankara, in 2013 and 2016, respectively.</p>
         <p>Between 2010 and 2015, he worked at Turk Telekom, where he contributed to the design and operation
           of the Safer Internet Service, a nationwide content-filtering and parental-control platform used by
@@ -237,7 +237,7 @@ permalink: /
     {%- for post in site.posts limit: 2 %}
     <li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time><svg class="nicon" aria-hidden="true"><use href="#i-pen"/></svg><span>Writing: <a href="{{ post.url | relative_url }}">{{ post.title }}</a>.</span></li>
     {%- endfor %}
-    <li><time>Dec 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span><a href="https://www.linkedin.com/in/%C3%A7a%C4%9Fla-tantur-karag%C3%BCl-b834b0b5/" target="_blank" rel="noopener">Çağla Tantur Karagül</a> successfully defended her Ph.D. dissertation at TOBB University of Economics and Technology.</span></li>
+    <li><time>Dec 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span><a href="https://www.linkedin.com/in/%C3%A7a%C4%9Fla-tantur-karag%C3%BCl-b834b0b5/" target="_blank" rel="noopener">Çağla Tantur Karagül<span class="sr-only"> (external)</span></a> successfully defended her Ph.D. dissertation at TOBB University of Economics and Technology.</span></li>
     <li><time>Nov 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-mic"/></svg><span>Conference paper presented at IEEE TELFOR 2025: “Non-uniform k-connectivity for energy-efficient and reliable underwater wireless sensor networks”.</span></li>
     <li><time>Oct 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-book"/></svg><span>Journal paper published in <i>IEEE Internet of Things Journal</i>: “Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity”.</span></li>
   </ul>
@@ -246,25 +246,25 @@ permalink: /
     <ul class="newslist">
       <li><time>Aug 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-book"/></svg><span>Journal paper published in <i>Computer Standards &amp; Interfaces</i>: “Enhancing drone network resilience: Investigating strategies for k-connectivity restoration”.</span></li>
       <li><time>Jul 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-pen"/></svg><span>Editorial published in <i>Internet of Things</i> (Elsevier), Special Issue on Mass Connectivity and Communication Paradigms for IoT.</span></li>
-      <li><time>Aug 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-check"/></svg><span>Completed <a href="https://www.coursera.org/account/accomplishments/specialization/26BOL8LTVD7S" target="_blank" rel="noopener">Reinforcement Learning Specialization</a> (University of Alberta, Coursera).</span></li>
-      <li><time>Jun 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-check"/></svg><span>Completed <a href="https://www.coursera.org/account/accomplishments/specialization/JGGZ4NGSKTQZ" target="_blank" rel="noopener">Deep Learning Specialization</a> (DeepLearning.AI, Coursera).</span></li>
-      <li><time>Mar 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-check"/></svg><span>Completed <a href="https://www.coursera.org/account/accomplishments/specialization/FGT2PNQ9NYVL" target="_blank" rel="noopener">Machine Learning Specialization</a> (DeepLearning.AI, Coursera).</span></li>
+      <li><time>Aug 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-check"/></svg><span>Completed <a href="https://www.coursera.org/account/accomplishments/specialization/26BOL8LTVD7S" target="_blank" rel="noopener">Reinforcement Learning Specialization<span class="sr-only"> (external)</span></a> (University of Alberta, Coursera).</span></li>
+      <li><time>Jun 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-check"/></svg><span>Completed <a href="https://www.coursera.org/account/accomplishments/specialization/JGGZ4NGSKTQZ" target="_blank" rel="noopener">Deep Learning Specialization<span class="sr-only"> (external)</span></a> (DeepLearning.AI, Coursera).</span></li>
+      <li><time>Mar 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-check"/></svg><span>Completed <a href="https://www.coursera.org/account/accomplishments/specialization/FGT2PNQ9NYVL" target="_blank" rel="noopener">Machine Learning Specialization<span class="sr-only"> (external)</span></a> (DeepLearning.AI, Coursera).</span></li>
       <li><time>Oct 2023</time><svg class="nicon" aria-hidden="true"><use href="#i-book"/></svg><span>Journal paper published in <i>IEEE Sensors Journal</i>: “Joint effects of void region size and sink architecture on underwater WSNs lifetime”.</span></li>
       <li><time>Jun 2023</time><svg class="nicon" aria-hidden="true"><use href="#i-book"/></svg><span>Journal paper published in <i>Ad Hoc Networks</i>: “Exploring the tradeoff between energy dissipation, delay, and the number of backbones for broadcasting in wireless sensor networks through goal programming”.</span></li>
       <li><time>Dec 2022</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span>Muhammed Çobanlar successfully defended his Ph.D. dissertation at TOBB University of Economics and Technology.</span></li>
       <li><time>Nov 2022</time><svg class="nicon" aria-hidden="true"><use href="#i-book"/></svg><span>Journal paper published in <i>IEEE Internet of Things Journal</i>: “On the trade-off between network lifetime and k-connectivity-based reliability in UWSNs”.</span></li>
       <li><time>Sep 2022</time><svg class="nicon" aria-hidden="true"><use href="#i-book"/></svg><span>Journal paper published in <i>Ad Hoc Networks</i>: “Reliability of linear WSNs: A complementary overview and analysis of impact of cascaded failures on network lifetime”.</span></li>
-      <li><time>Apr 2022</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span><a href="https://www.linkedin.com/in/burak-emre-%C3%BCn-2a558892/" target="_blank" rel="noopener">Burak Emre Ün</a> successfully defended his M.Sc. thesis at TOBB University of Economics and Technology.</span></li>
+      <li><time>Apr 2022</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span><a href="https://www.linkedin.com/in/burak-emre-%C3%BCn-2a558892/" target="_blank" rel="noopener">Burak Emre Ün<span class="sr-only"> (external)</span></a> successfully defended his M.Sc. thesis at TOBB University of Economics and Technology.</span></li>
       <li><time>Aug 2021</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span>Ceylan Aydın successfully defended her M.Sc. thesis at TOBB University of Economics and Technology.</span></li>
       <li><time>Jul 2021</time><svg class="nicon" aria-hidden="true"><use href="#i-badge"/></svg><span>Appointed Chair of the Electrical and Electronics Engineering Department, TED University.</span></li>
       <li><time>Apr 2021</time><svg class="nicon" aria-hidden="true"><use href="#i-award"/></svg><span>Elevated to IEEE Senior Member grade.</span></li>
-      <li><time>Mar 2021</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span><a href="https://www.linkedin.com/in/alper-%C3%B6zmen-1a6232109/" target="_blank" rel="noopener">Alper Özmen</a> successfully defended his M.Sc. thesis at TOBB University of Economics and Technology.</span></li>
+      <li><time>Mar 2021</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span><a href="https://www.linkedin.com/in/alper-%C3%B6zmen-1a6232109/" target="_blank" rel="noopener">Alper Özmen<span class="sr-only"> (external)</span></a> successfully defended his M.Sc. thesis at TOBB University of Economics and Technology.</span></li>
       <li><time>Nov 2020</time><svg class="nicon" aria-hidden="true"><use href="#i-award"/></svg><span>Promoted to Associate Professor (Doçent) by the Interuniversity Council of Turkey (ÜAK).</span></li>
       <li><time>Oct 2019</time><svg class="nicon" aria-hidden="true"><use href="#i-mic"/></svg><span>Invited seminar at Georgia Institute of Technology: “Prolonging the Lifetime of Underwater Sensor Networks Under Sinkhole Attacks” (Host: Prof. Ian F. Akyildiz).</span></li>
       <li><time>Apr 2019</time><svg class="nicon" aria-hidden="true"><use href="#i-mic"/></svg><span>Invited talk at IEEE SIU 2019 – Special Session: “Maximization of Underwater Sensor Networks Lifetime via Fountain Codes”.</span></li>
       <li><time>Feb 2019</time><svg class="nicon" aria-hidden="true"><use href="#i-mic"/></svg><span>Invited seminar at ASELSAN Information and Communication Technologies Workshop: “Maximization of Underwater Sensor Networks Lifetime via Fountain Codes”.</span></li>
-      <li><time>Apr 2018</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span><a href="https://www.linkedin.com/in/y%C4%B1ld%C4%B1z-canbilen-karakurt-1377bb22/" target="_blank" rel="noopener">Yıldız Karakurt</a> successfully defended her M.Sc. thesis at TOBB University of Economics and Technology.</span></li>
-      <li><time>Aug 2017</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span><a href="https://www.linkedin.com/in/%C3%A7a%C4%9Fla-tantur-karag%C3%BCl-b834b0b5/" target="_blank" rel="noopener">Çağla Tantur</a> successfully defended her M.Sc. thesis at TOBB University of Economics and Technology.</span></li>
+      <li><time>Apr 2018</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span><a href="https://www.linkedin.com/in/y%C4%B1ld%C4%B1z-canbilen-karakurt-1377bb22/" target="_blank" rel="noopener">Yıldız Karakurt<span class="sr-only"> (external)</span></a> successfully defended her M.Sc. thesis at TOBB University of Economics and Technology.</span></li>
+      <li><time>Aug 2017</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span><a href="https://www.linkedin.com/in/%C3%A7a%C4%9Fla-tantur-karag%C3%BCl-b834b0b5/" target="_blank" rel="noopener">Çağla Tantur<span class="sr-only"> (external)</span></a> successfully defended her M.Sc. thesis at TOBB University of Economics and Technology.</span></li>
       <li><time>Sep 2016</time><svg class="nicon" aria-hidden="true"><use href="#i-badge"/></svg><span>Appointed as Assistant Professor in the Department of Electrical and Electronics Engineering at TED University.</span></li>
       <li><time>Apr 2016</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span>Successfully defended my Ph.D. dissertation at TOBB University of Economics and Technology.</span></li>
     </ul>
@@ -275,23 +275,23 @@ permalink: /
     program, and recency. The <a href="{{ '/publications/' | relative_url }}">full list</a> is
     unfiltered.</p>
   <article class="homepub">
-    <p class="t"><a href="https://doi.org/10.1109/TIE.2016.2619319" target="_blank" rel="noopener">Packet size optimization in wireless sensor networks for smart grid applications</a></p>
+    <p class="t"><a href="https://doi.org/10.1109/TIE.2016.2619319" target="_blank" rel="noopener">Packet size optimization in wireless sensor networks for smart grid applications<span class="sr-only"> (external)</span></a></p>
     <p class="m">Kurt, S., <b>Yildiz, H. U.</b>, Yigit, M., Tavli, B., &amp; Gungor, V. C. ·
       <i>IEEE Transactions on Industrial Electronics</i>, 2017
       <span class="tags"><span class="tag-q q1">Q1</span><span class="tag tag-award">Most cited</span></span></p>
   </article>
   <article class="homepub">
-    <p class="t"><a href="https://doi.org/10.1109/MENACOMM46666.2019.8988521" target="_blank" rel="noopener">Utilization of multi-sink architectures for lifetime maximization in underwater sensor networks</a></p>
+    <p class="t"><a href="https://doi.org/10.1109/MENACOMM46666.2019.8988521" target="_blank" rel="noopener">Utilization of multi-sink architectures for lifetime maximization in underwater sensor networks<span class="sr-only"> (external)</span></a></p>
     <p class="m"><b>Yildiz, H. U.</b> · <i>IEEE MENACOMM</i>, 2019
       <span class="tags"><span class="tag tag-award">Best Paper Award</span></span></p>
   </article>
   <article class="homepub">
-    <p class="t"><a href="https://doi.org/10.1109/TII.2019.2892866" target="_blank" rel="noopener">Maximization of underwater sensor networks lifetime via fountain codes</a></p>
+    <p class="t"><a href="https://doi.org/10.1109/TII.2019.2892866" target="_blank" rel="noopener">Maximization of underwater sensor networks lifetime via fountain codes<span class="sr-only"> (external)</span></a></p>
     <p class="m"><b>Yildiz, H. U.</b> · <i>IEEE Transactions on Industrial Informatics</i>, 2019
       <span class="tags"><span class="tag-q q1">Q1</span></span></p>
   </article>
   <article class="homepub">
-    <p class="t"><a href="https://doi.org/10.1109/JIOT.2025.3603829" target="_blank" rel="noopener">Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity</a></p>
+    <p class="t"><a href="https://doi.org/10.1109/JIOT.2025.3603829" target="_blank" rel="noopener">Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity<span class="sr-only"> (external)</span></a></p>
     <p class="m">Tantur Karagul, C., Akgun, M. B., <b>Yildiz, H. U.</b>, &amp; Tavli, B. ·
       <i>IEEE Internet of Things Journal</i>, 2025
       <span class="tags"><span class="tag-q q1">Q1</span></span></p>

@@ -12,7 +12,7 @@ permalink: /cv/
       <a class="btn btn-primary" href="/files/Yildiz_HuseyinUgur_CV.pdf" target="_blank" rel="noopener"
          data-goatcounter-click="cv-pdf" data-goatcounter-title="CV (PDF), from the CV page">
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8m0 0L5 7m3 3l3-3M3 13h10"/></svg>
-        Download PDF</a>
+        Download PDF<span class="sr-only"> (external)</span></a>
       <a class="btn btn-quiet" href="/publications/">Publication list</a>
     </div>
   </header>
@@ -52,7 +52,7 @@ permalink: /cv/
       <div class="cvrow">
         <div class="when tnum">{{ a.years }}</div>
         <div class="what">
-          <div class="t"><a class="instlink" href="{{ a.org_url }}" target="_blank" rel="noopener">{{ a.org }}</a>, {{ a.location }}</div>
+          <div class="t"><a class="instlink" href="{{ a.org_url }}" target="_blank" rel="noopener">{{ a.org }}<span class="sr-only"> (external)</span></a>, {{ a.location }}</div>
           {% if a.unit %}<div class="w">{{ a.unit }}</div>{% endif %}
           <div class="d">{% for r in a.roles %}{{ r.title }} ({{ r.period }}{% if r.note %}; {{ r.note }}{% endif %}){% unless forloop.last %} · {% endunless %}{% endfor %}</div>
           <ul class="dotlist">
@@ -68,7 +68,7 @@ permalink: /cv/
         <div class="when tnum">{{ e.years }}</div>
         <div class="what">
           <div class="t">{{ e.degree }}</div>
-          <div class="w"><a class="instlink" href="{{ e.org_url }}" target="_blank" rel="noopener">{{ e.org }}</a>, {{ e.location }}</div>
+          <div class="w"><a class="instlink" href="{{ e.org_url }}" target="_blank" rel="noopener">{{ e.org }}<span class="sr-only"> (external)</span></a>, {{ e.location }}</div>
         </div>
       </div>
       {% endfor %}
