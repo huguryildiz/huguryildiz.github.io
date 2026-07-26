@@ -11,6 +11,10 @@ on:
   push:
     branches: ["master"]
 
+  # Regenerates the CV PDF daily even if nothing else triggered a build
+  schedule:
+    - cron: "17 4 * * *"
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -48,6 +52,24 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install CV renderer dependencies
+        run: pip install --quiet jinja2 pyyaml
+      - name: Render main.tex from _data/cv.yml
+        run: python scripts/render_cv_tex.py --out main.tex
+      - name: Compile CV PDF
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          latexmk_use_xelatex: false
+      - name: Place PDF into the built site
+        run: |
+          test -s main.pdf || { echo "PDF üretilmedi veya boş"; exit 1; }
+          mkdir -p _site/files
+          cp main.pdf _site/files/Yildiz_HuseyinUgur_CV.pdf
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v5

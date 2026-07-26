@@ -12,6 +12,7 @@ the files without updating the workflows in the same change.
 | --- | --- | --- | --- |
 | `fetch_scholar.py` | `.github/workflows/update-scholar.yml` — weekly, Mondays at 01:30 UTC, plus manual dispatch | `_data/scholar_metrics.json` | `SERPAPI_KEY`, `SCHOLAR_AUTHOR_ID` (repo secrets); Python `requests` |
 | `fetch_goatcounter.py` | `.github/workflows/update-goatcounter.yml` — daily at 03:00 UTC, plus manual dispatch | `_data/site_stats.json` | `GOATCOUNTER_API_TOKEN` (repo secret); Python `requests` |
+| `render_cv_tex.py` | `.github/workflows/jekyll.yml` — every push to `master`, daily at 04:17 UTC, plus manual dispatch | `main.tex`, compiled to `_site/files/Yildiz_HuseyinUgur_CV.pdf` | PyYAML, Jinja2; `pdflatex` (`xu-cheng/latex-action`) |
 
 Both workflows commit only when the snapshot actually changed, and **neither tags the commit
 with a CI-skip marker** — each refresh is meant to trigger a Pages rebuild. The pages state
@@ -110,15 +111,19 @@ through SerpApi's `google_scholar_author` endpoint:
   the key: `/publications/` hides the chart when the key is missing rather than inventing one.
 - `SCHOLAR_AUTHOR_ID` accepts either the bare profile ID or a full profile URL.
 
-## Manual — generates the LaTeX CV, not yet wired to CI
+## `render_cv_tex.py` notes
 
-| Script | Purpose | Writes | Requires |
-| --- | --- | --- | --- |
-| `render_cv_tex.py` | Renders `cv-latex/cv.tex.j2` against `_data/cv.yml` + `_data/publications.yml` to produce `main.tex`, the LaTeX source of the downloadable PDF CV | `main.tex` (generated artifact, not committed — pass `--out`) | PyYAML, Jinja2 |
+Renders `cv-latex/cv.tex.j2` against `_data/cv.yml` + `_data/publications.yml` to produce
+`main.tex`, the LaTeX source of the downloadable PDF CV (invoked with `--out`, since the CI
+job needs it at the repo root). `cv-latex/cv.tex.j2` is excluded from the Jekyll build
+(`_config.yml`) so it never becomes a public URL. `main.tex` is compiled to PDF with
+`pdflatex` (two passes, for `\pageref{LastPage}`; `xu-cheng/latex-action` runs `latexmk` in
+CI) and is itself never committed — it is a build output, same as the PDF. `jekyll.yml` runs
+this after the Jekyll build step and before the artifact upload, since Jekyll rebuilds
+`_site/` from scratch; a `test -s main.pdf` guard fails the job if the compile produced a
+missing or empty file, so a broken LaTeX template fails the build rather than publishing a
+broken or stale PDF.
 
-`cv-latex/cv.tex.j2` is excluded from the Jekyll build (`_config.yml`) so it never becomes
-a public URL. `main.tex` is compiled to PDF with `pdflatex` (two passes, for
-`\pageref{LastPage}`) and is itself never committed — it is a build output, same as the PDF.
 Publication numbering (`J24`, `C13`, `CT5`, `E1`, …) is computed at render time, per type, in
 descending year order; it is never stored in `_data/publications.yml`. Tests:
 `python3 -m unittest scripts/test_render_cv_tex` (stdlib only, no network, no LaTeX
@@ -138,10 +143,11 @@ comments next to those fields). Requires PyYAML, Jinja2.
 | `update_cv_json.sh` | Interactive wrapper around the converter | No scheduled caller |
 
 These are **not** a synchronization pipeline. Their target, `_data/cv.json`, is neither
-tracked nor rendered by any page. The web CV (`_pages/cv.md`) and the downloadable
-`files/Yildiz_HuseyinUgur_CV.pdf` are independent, hand-maintained artifacts. Run the
-converter only when JSON Resume output is explicitly requested, and review the result
-rather than assuming the parser preserved the hand-authored CV.
+tracked nor rendered by any page, and neither script feeds `_pages/cv.md` or the downloadable
+PDF — both of those now render from `_data/cv.yml` and `_data/publications.yml` via
+`render_cv_tex.py` above. Run the converter only when JSON Resume output is explicitly
+requested, and review the result rather than assuming the parser preserved the hand-authored
+CV.
 
 Requires PyYAML in addition to `requests`.
 
