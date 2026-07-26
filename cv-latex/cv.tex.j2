@@ -117,7 +117,7 @@
 \justify
 
 \noindent \textbf{\href{{ '{' }}{{ cv.appointments[0].org_url }}}{{ '{' }}{{ esc(cv.appointments[0].org) }}}} \hfill {{ '{' }}{{ esc(cv.appointments[0].location) }}} \\
-\noindent {Associate Professor of Electrical and Electronics Engineering} \hfill {03/2021 -- Present} \\
+\noindent {Associate Professor of Electrical and Electronics Engineering{% if cv.appointments[0].roles[0].note %} ({{ esc(cv.appointments[0].roles[0].note) }}){% endif %}} \hfill {03/2021 -- Present} \\
 \noindent {Chair of the Electrical and Electronics Engineering Department} \hfill {07/2021 -- 07/2024} \\
 \noindent {Assistant Professor of Electrical and Electronics Engineering} \hfill {09/2016 -- 03/2021} \\
 \vspace{-20pt}

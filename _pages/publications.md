@@ -11,7 +11,10 @@ permalink: /publications/
     <h1 id="pubs-h1">Publications</h1>
     <p class="lede">Peer-reviewed journal articles, an editorial, and international and national
       conference papers. Metrics are sourced from
-      <a href="{{ sm.profile_url }}" target="_blank" rel="noopener">Google Scholar</a> and refreshed weekly.</p>
+      <a href="{{ sm.profile_url }}" target="_blank" rel="noopener">Google Scholar</a> and refreshed weekly.
+      Scholar reports {{ sm.works }} indexed works; the {{ site.data.publications | size }} records below
+      are the curated list — Scholar also indexes preprints, duplicate venue entries, and items outside
+      this record.</p>
   </header>
 
   <div class="statgrid" role="group" aria-label="Publication metrics">

@@ -54,7 +54,7 @@ permalink: /cv/
         <div class="what">
           <div class="t"><a class="instlink" href="{{ a.org_url }}" target="_blank" rel="noopener">{{ a.org }}</a>, {{ a.location }}</div>
           {% if a.unit %}<div class="w">{{ a.unit }}</div>{% endif %}
-          <div class="d">{% for r in a.roles %}{{ r.title }} ({{ r.period }}){% unless forloop.last %} · {% endunless %}{% endfor %}</div>
+          <div class="d">{% for r in a.roles %}{{ r.title }} ({{ r.period }}{% if r.note %}; {{ r.note }}{% endif %}){% unless forloop.last %} · {% endunless %}{% endfor %}</div>
           <ul class="dotlist">
             {% for b in a.bullets_web %}<li>{{ b }}</li>
             {% endfor %}</ul>
