@@ -90,7 +90,16 @@ permalink: /stats/
         <div id="reachCountries"></div>
       </div>
       <div id="reachRegions"></div>
-      <p class="reach-note worldmap-credit" id="mapCredit" hidden>Map geometry: <a href="https://github.com/VictorCazanave/svg-maps" target="_blank" rel="noopener">@svg-maps/world<span class="sr-only"> (opens in a new tab)</span></a>, CC BY 4.0. Shading uses a logarithmic scale; country names and exact counts are available by keyboard focus and in the ranked list.</p>
+      <div class="reach-provinces" id="turkeyPanel" hidden>
+        <div class="reach-subhead">
+          <h3 id="turkey-title">Provinces in Türkiye</h3>
+          <span class="reach-unit" id="turkeyCount"></span>
+        </div>
+        <div class="worldmap worldmap-tr" id="turkeyMap" data-map-url="{{ '/assets/maps/turkey.svg' | relative_url }}">
+          <p class="reach-map-fallback">The province map is loading. The ranked region list remains available.</p>
+        </div>
+      </div>
+      <p class="reach-note worldmap-credit" id="mapCredit" hidden>Map geometry: <a href="https://github.com/VictorCazanave/svg-maps" target="_blank" rel="noopener">@svg-maps/world<span class="sr-only"> (opens in a new tab)</span></a>, CC BY 4.0, and <a href="https://simplemaps.com/svg/country/tr" target="_blank" rel="noopener">simplemaps.com<span class="sr-only"> (opens in a new tab)</span></a> for Türkiye. Shading uses a logarithmic scale; names and exact counts are available by keyboard focus and in the ranked lists.</p>
     </section>
 
     <section class="reach-panel reach-discovery" aria-labelledby="discovery-title">
@@ -743,7 +752,7 @@ permalink: /stats/
       emptyTitle:'No geographic aggregate available',
       emptyBody:'The report does not currently contain country-level data.' });
     staleNote(host, info);
-    paintMap(info.rows);
+    worldMap.paint(info.rows);
     renderRegions(key);
   }
 
@@ -753,6 +762,7 @@ permalink: /stats/
     var host = document.getElementById('reachRegions');
     if (!host) return;
     var info = breakdown(key, 'regions');
+    renderTurkey(info.rows);
     if (!info.rows.length) { host.replaceChildren(); return; }
 
     var head = el('div', 'reach-subhead');
@@ -767,69 +777,105 @@ permalink: /stats/
     staleNote(host, info);
   }
 
-  /* ---- world map ---------------------------------------------------------- */
-  var mapSvg = null, mapTip = null;
-  function paintMap(rows){
-    if (!mapSvg) return;
-    var byCode = {};
-    rows.forEach(function(r){ if (r.code) byCode[r.code.toLowerCase()] = r; });
-    var max = rows.length ? rows[0].count : 0;
-    var bucketOf = function(v){ return Math.max(1, Math.min(5, Math.ceil(Math.log(v + 1) / Math.log(max + 1) * 5))); };
+  /* ---- choropleth maps ----------------------------------------------------- */
+  /* One controller per map. The world map keys paths by ISO country code; the
+     Türkiye map keys them by licence-plate number, which the fetch script
+     resolves from the province name GoatCounter reports. Both take the same
+     {code, name, count} rows, so the painting and tooltip code is shared. */
+  function createMap(hostId, ariaLabel, failText){
+    var host = document.getElementById(hostId), svg = null, tip = null;
 
-    mapSvg.querySelectorAll('path[data-code]').forEach(function(path){
-      var row = byCode[(path.getAttribute('data-code') || '').toLowerCase()];
-      path.classList.remove('wm-on', 'wm-b1', 'wm-b2', 'wm-b3', 'wm-b4', 'wm-b5');
-      path.removeAttribute('tabindex');
-      path.removeAttribute('aria-label');
-      if (!row || !max) return;
-      path.classList.add('wm-on', 'wm-b' + bucketOf(row.count));
-      path.setAttribute('tabindex', '0');
-      path.setAttribute('role', 'img');
-      path.setAttribute('aria-label', row.name + ', ' + fmt(row.count) + ' page views');
-      path.__reach = row;
-    });
-  }
-  function loadMap(onReady){
-    var host = document.getElementById('worldMap');
-    if (!host || !window.fetch) return;
-    fetch(host.dataset.mapUrl).then(function(res){
-      if (!res.ok) throw new Error('Map request failed: ' + res.status);
-      return res.text();
-    }).then(function(source){
-      var doc = new DOMParser().parseFromString(source, 'image/svg+xml');
-      if (doc.querySelector('parsererror')) throw new Error('Map SVG could not be parsed');
-      mapSvg = document.importNode(doc.documentElement, true);
-      mapSvg.classList.add('worldmap-svg');
-      mapSvg.setAttribute('role', 'group');
-      mapSvg.setAttribute('aria-label', 'World map of page views by country. Use Tab to inspect countries with recorded views.');
-      mapTip = el('div', 'worldmap-tip'); mapTip.hidden = true;
-
-      var show = function(e){
-        var path = e.currentTarget, row = path.__reach;
-        if (!row) return;
-        mapTip.textContent = row.name + ' · ' + fmt(row.count) + ' views';
-        mapTip.hidden = false;
-        var box = host.getBoundingClientRect(), mark = path.getBoundingClientRect();
-        mapTip.style.left = ((e && Number.isFinite(e.clientX) ? e.clientX - box.left : mark.left - box.left + mark.width / 2)) + 'px';
-        mapTip.style.top = ((e && Number.isFinite(e.clientY) ? e.clientY - box.top : mark.top - box.top)) + 'px';
-      };
-      var hide = function(){ mapTip.hidden = true; };
-      mapSvg.querySelectorAll('path[data-code]').forEach(function(path){
-        path.addEventListener('mouseenter', show);
-        path.addEventListener('mousemove', show);
-        path.addEventListener('mouseleave', hide);
-        path.addEventListener('focus', show);
-        path.addEventListener('blur', hide);
+    function paint(rows){
+      if (!svg) return;
+      var byCode = {}, max = 0;
+      rows.forEach(function(r){
+        if (!r.code) return;
+        byCode[String(r.code).toLowerCase()] = r;
+        if (r.count > max) max = r.count;
       });
+      var bucketOf = function(v){ return Math.max(1, Math.min(5, Math.ceil(Math.log(v + 1) / Math.log(max + 1) * 5))); };
 
-      host.replaceChildren(mapSvg, mapTip);
-      var credit = document.getElementById('mapCredit');
-      if (credit) credit.hidden = false;
-      onReady();
-    }).catch(function(){
-      var fallback = host.querySelector('.reach-map-fallback');
-      if (fallback) fallback.textContent = 'The map could not be loaded. The ranked country list remains available.';
-    });
+      svg.querySelectorAll('path[data-code]').forEach(function(path){
+        var row = byCode[(path.getAttribute('data-code') || '').toLowerCase()];
+        path.classList.remove('wm-on', 'wm-b1', 'wm-b2', 'wm-b3', 'wm-b4', 'wm-b5');
+        path.removeAttribute('tabindex');
+        path.removeAttribute('aria-label');
+        if (!row || !max) return;
+        path.classList.add('wm-on', 'wm-b' + bucketOf(row.count));
+        path.setAttribute('tabindex', '0');
+        path.setAttribute('role', 'img');
+        /* The SVG carries the canonical place name; the row carries the count.
+           Falling back to the row name keeps a tooltip if the two ever differ. */
+        path.setAttribute('aria-label', (path.getAttribute('data-name') || row.name) + ', ' + fmt(row.count) + ' page views');
+        path.__reach = row;
+      });
+    }
+
+    function load(onReady){
+      if (!host || !window.fetch) return;
+      fetch(host.dataset.mapUrl).then(function(res){
+        if (!res.ok) throw new Error('Map request failed: ' + res.status);
+        return res.text();
+      }).then(function(source){
+        var doc = new DOMParser().parseFromString(source, 'image/svg+xml');
+        if (doc.querySelector('parsererror')) throw new Error('Map SVG could not be parsed');
+        svg = document.importNode(doc.documentElement, true);
+        svg.classList.add('worldmap-svg');
+        svg.setAttribute('role', 'group');
+        svg.setAttribute('aria-label', ariaLabel);
+        tip = el('div', 'worldmap-tip'); tip.hidden = true;
+
+        var show = function(e){
+          var path = e.currentTarget, row = path.__reach;
+          if (!row) return;
+          tip.textContent = (path.getAttribute('data-name') || row.name) + ' · ' + fmt(row.count) + ' views';
+          tip.hidden = false;
+          var box = host.getBoundingClientRect(), mark = path.getBoundingClientRect();
+          tip.style.left = ((e && Number.isFinite(e.clientX) ? e.clientX - box.left : mark.left - box.left + mark.width / 2)) + 'px';
+          tip.style.top = ((e && Number.isFinite(e.clientY) ? e.clientY - box.top : mark.top - box.top)) + 'px';
+        };
+        var hide = function(){ tip.hidden = true; };
+        svg.querySelectorAll('path[data-code]').forEach(function(path){
+          path.addEventListener('mouseenter', show);
+          path.addEventListener('mousemove', show);
+          path.addEventListener('mouseleave', hide);
+          path.addEventListener('focus', show);
+          path.addEventListener('blur', hide);
+        });
+
+        host.replaceChildren(svg, tip);
+        var credit = document.getElementById('mapCredit');
+        if (credit) credit.hidden = false;
+        if (onReady) onReady();
+      }).catch(function(){
+        var fallback = host.querySelector('.reach-map-fallback');
+        if (fallback) fallback.textContent = failText;
+      });
+    }
+
+    return { load:load, paint:paint, loaded:function(){ return !!svg; } };
+  }
+
+  var worldMap = createMap('worldMap',
+    'World map of page views by country. Use Tab to inspect countries with recorded views.',
+    'The map could not be loaded. The ranked country list remains available.');
+  var turkeyMap = createMap('turkeyMap',
+    'Map of Türkiye showing page views by province. Use Tab to inspect provinces with recorded views.',
+    'The province map could not be loaded. The ranked region list remains available.');
+
+  /* The province map is fetched only once a window actually has Turkish rows:
+     GoatCounter stores no region for a page view recorded while the setting was
+     off, so the panel stays absent rather than drawing an empty country. */
+  function renderTurkey(rows){
+    var panel = document.getElementById('turkeyPanel');
+    if (!panel) return;
+    var tr = rows.filter(function(r){ return r.country_code === 'TR' && r.code; });
+    panel.hidden = !tr.length;
+    if (!tr.length) return;
+    var label = document.getElementById('turkeyCount');
+    if (label) label.textContent = tr.length + (tr.length === 1 ? ' province' : ' provinces');
+    if (turkeyMap.loaded()) turkeyMap.paint(tr);
+    else turkeyMap.load(function(){ turkeyMap.paint(tr); });
   }
 
   /* ---- reading environment: part-to-whole stacked bars --------------------- */
@@ -1288,6 +1334,6 @@ permalink: /stats/
   toolbar.hidden = false;
   apply();
   renderTrails();
-  loadMap(function(){ renderCountries(current); });
+  worldMap.load(function(){ renderCountries(current); });
 })();
 </script>
