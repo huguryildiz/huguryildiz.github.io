@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-26T08:18:32Z",
+  "updated": "2026-07-26T08:21:07Z",
   "range": {
     "start": "2026-02-05",
     "end": "2026-07-26"
@@ -69806,7 +69806,7 @@
     }
   ],
   "site": {
-    "timezone": "TR.Europe/Istanbul",
+    "timezone": "Europe/Istanbul",
     "first_hit_at": "2026-02-05T12:24:02.263206Z",
     "data_retention_days": 0
   },
