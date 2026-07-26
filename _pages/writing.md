@@ -5,7 +5,7 @@ description: "Notes, announcements, and longer pieces on operations research, ne
 permalink: /writing/
 ---
 
-<div class="shell prose-wide">
+<div class="shell">
   <header class="pagehead">
     <h1 id="writing-h1">Writing</h1>
     <p class="lede">Notes, announcements, and longer pieces — shared first on LinkedIn, kept here for the record.</p>
