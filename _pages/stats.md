@@ -89,6 +89,7 @@ permalink: /stats/
         </div>
         <div id="reachCountries"></div>
       </div>
+      <p class="reach-note reach-map-hint" id="mapHint" hidden>Countries with a stored regional breakdown can be selected on the map to filter the list below.</p>
       <div id="reachRegions"></div>
       <div class="reach-provinces" id="turkeyPanel" hidden>
         <div class="reach-subhead">
@@ -514,10 +515,77 @@ permalink: /stats/
       li.appendChild(strong);
       /* An optional second line under the bar — used for the per-page
          referrer split, which qualifies the row it sits under. */
-      if (row.meta) li.appendChild(el('p', 'reach-subrow', row.meta));
+      if (row.refs && row.refs.length) li.appendChild(sourceStrip(row.refs));
       list.appendChild(li);
     });
     host.replaceChildren(list);
+  }
+
+  /* ---- referrer chips ------------------------------------------------------ */
+  /* GoatCounter reports a referrer as a bare host or host+path string. Rendered
+     verbatim they read as a run-on line, so each one is classified into a kind
+     (own site / search / social / other), given a short human label, and drawn
+     as a chip. The raw string stays in the title attribute so nothing is lost. */
+  var REF_NAMES = { 'www.linkedin.com':'LinkedIn', 'linkedin.com':'LinkedIn',
+    'lnkd.in':'LinkedIn', 'com.linkedin.android':'LinkedIn app',
+    'github.com':'GitHub', 'chatgpt.com':'ChatGPT', 'bing.com':'Bing',
+    'duckduckgo.com':'DuckDuckGo', 'search.marginalia.nu':'Marginalia',
+    'avesis.tedu.edu.tr':'TEDU AVESİS', 'scholar.google.com':'Google Scholar' };
+  var REF_ICONS = { site:'i-home', search:'i-globe', social:'i-linkedin', other:'i-link' };
+
+  function classifyRef(name){
+    var raw = String(name || '');
+    var own = raw.match(/^(?:www\.)?huguryildiz\.(?:com|github\.io)(\/.*)?$/i);
+    if (own) return { kind:'site', label:own[1] ? own[1].replace(/\/$/, '') : 'Home page' };
+    var host = raw.replace(/^www\./i, '');
+    if (/^google/i.test(raw) || /^(bing|duckduckgo|yandex|ecosia|search)\b/i.test(host)) {
+      return { kind:'search', label:REF_NAMES[host] || REF_NAMES[raw] || raw };
+    }
+    if (/linkedin|lnkd\.in|github\.com|^x\.com|twitter|facebook|bsky|mastodon/i.test(raw)) {
+      return { kind:'social', label:REF_NAMES[raw] || REF_NAMES[host] || host };
+    }
+    return { kind:'other', label:REF_NAMES[host] || host };
+  }
+
+  /* The same origin can arrive under two hosts (huguryildiz.com and the
+     github.io mirror) or two LinkedIn surfaces; once they collapse to one
+     label their counts must collapse too, or the strip shows the same chip
+     twice with a split figure. */
+  function mergeRefs(refs){
+    var order = [], byLabel = {};
+    refs.forEach(function(ref){
+      var info = classifyRef(ref.name);
+      var key = info.kind + '|' + info.label;
+      if (byLabel[key]) {
+        byLabel[key].count += ref.count;
+        byLabel[key].names.push(ref.name);
+      } else {
+        byLabel[key] = { kind:info.kind, label:info.label, count:ref.count, names:[ref.name] };
+        order.push(key);
+      }
+    });
+    return order.map(function(k){ return byLabel[k]; })
+      .sort(function(a, b){ return b.count - a.count; });
+  }
+
+  function sourceStrip(refs){
+    var strip = el('p', 'reach-srcs');
+    strip.appendChild(el('span', 'reach-srcs-label', 'Reached via'));
+    mergeRefs(refs).slice(0, 3).forEach(function(info){
+      var chip = el('span', 'reach-src is-' + info.kind);
+      chip.title = info.names.join(', ') + ' — ' + fmt(info.count) +
+        ' view' + (info.count === 1 ? '' : 's');
+      var icon = document.createElementNS(NS, 'svg');
+      icon.setAttribute('aria-hidden', 'true');
+      var use = document.createElementNS(NS, 'use');
+      use.setAttribute('href', '#' + REF_ICONS[info.kind]);
+      icon.appendChild(use);
+      chip.appendChild(icon);
+      chip.appendChild(el('span', 'reach-src-name', info.label));
+      chip.appendChild(el('b', null, fmt(info.count)));
+      strip.appendChild(chip);
+    });
+    return strip;
   }
 
   /* GoatCounter stores the page title it saw; it is the better label whenever
@@ -533,13 +601,7 @@ permalink: /stats/
     var rows = info.rows.filter(function(r){ return !HIDDEN_PAGES[r.path]; }).slice(0, 5)
       .map(function(r){
         var href = r.path === '/' ? '/' : (r.path.charAt(r.path.length - 1) === '/' ? r.path : r.path + '/');
-        var meta = null;
-        if (r.refs && r.refs.length) {
-          meta = 'Reached via ' + r.refs.slice(0, 3).map(function(ref){
-            return ref.name + ' ' + fmt(ref.count);
-          }).join(' · ');
-        }
-        return { name:pageLabel(r), count:r.count, href:href, meta:meta };
+        return { name:pageLabel(r), count:r.count, href:href, refs:r.refs || [] };
       });
     barList(host, rows, { label:'Most viewed content pages',
       emptyTitle:'No page ranking available',
@@ -745,15 +807,50 @@ permalink: /stats/
     staleNote(host, info);
   }
 
+  /* Which window the geography panel is showing, and which country — if any —
+     the reader has selected on the map. */
+  var geoKey = null, regionFilter = null;
+
   function renderCountries(key){
     var host = document.getElementById('reachCountries');
     var info = breakdown(key, 'countries');
+    geoKey = key;
     barList(host, info.rows.slice(0, 5), { label:'Countries with the most page views',
       emptyTitle:'No geographic aggregate available',
       emptyBody:'The report does not currently contain country-level data.' });
     staleNote(host, info);
     worldMap.paint(info.rows);
+    /* A one- or two-country range leaves the ranked column almost empty; a
+       full-height world map beside it reads as a layout accident rather than
+       a chart, so the map shrinks to match the little there is to show. */
+    var layout = document.querySelector('.reach-map-layout');
+    if (layout) layout.classList.toggle('reach-map-sparse', info.rows.length < 3);
+
+    /* Only countries the snapshot has a regional breakdown for are worth
+       clicking; the rest stay inert so the pointer never promises a drill-down
+       that would open an empty list. */
+    var regionRows = breakdown(key, 'regions').rows, hasRegions = {}, onMap = {};
+    regionRows.forEach(function(r){ if (r.country) hasRegions[r.country] = true; });
+    info.rows.forEach(function(r){ onMap[r.name] = true; });
+    /* A selection the new window cannot show — no regions for it, or no views
+       at all so it is not even shaded — would leave the list claiming a country
+       the map no longer marks, so it is dropped rather than carried over. */
+    if (regionFilter && !(hasRegions[regionFilter] && onMap[regionFilter])) regionFilter = null;
+    worldMap.paint(info.rows, function(row){ return !!hasRegions[row.name]; });
+    worldMap.mark(regionFilter);
+    var hint = document.getElementById('mapHint');
+    if (hint) hint.hidden = !info.rows.some(function(r){ return hasRegions[r.name]; });
     renderRegions(key);
+  }
+
+  /* Clicking a shaded country filters the regional list to it; clicking it
+     again clears the filter. The selection is a view state, not a data one —
+     changing the date range re-derives it and drops it if the new window has
+     no regions for that country. */
+  function pickCountry(row){
+    regionFilter = (regionFilter === row.name) ? null : row.name;
+    worldMap.mark(regionFilter);
+    renderRegions(geoKey);
   }
 
   /* Regions are the finest location GoatCounter records — it has no city
@@ -763,14 +860,32 @@ permalink: /stats/
     if (!host) return;
     var info = breakdown(key, 'regions');
     renderTurkey(info.rows);
-    if (!info.rows.length) { host.replaceChildren(); return; }
+    var rows = regionFilter
+      ? info.rows.filter(function(r){ return r.country === regionFilter; })
+      : info.rows;
+    if (!rows.length) { host.replaceChildren(); return; }
 
     var head = el('div', 'reach-subhead');
-    head.appendChild(el('h3', null, 'Regions within those countries'));
-    head.appendChild(el('span', 'reach-unit', 'Top five'));
+    /* "within those countries" only holds when both panels come from the same
+       window. On the all-time fallback the countries above can be a different
+       set entirely, so the heading drops the claim instead of implying it. */
+    head.appendChild(el('h3', null, regionFilter ? 'Regions in ' + regionFilter
+      : (info.exact ? 'Regions within those countries' : 'Regions with the most page views')));
+    if (regionFilter) {
+      var clear = el('button', 'reach-filter-clear', 'Show all countries');
+      clear.type = 'button';
+      clear.addEventListener('click', function(){
+        regionFilter = null;
+        worldMap.mark(null);
+        renderRegions(geoKey);
+      });
+      head.appendChild(clear);
+    } else {
+      head.appendChild(el('span', 'reach-unit', 'Top five'));
+    }
     var list = el('div');
-    barList(list, info.rows.slice(0, 5).map(function(r){
-      return { name:r.country ? r.name + ', ' + r.country : r.name, count:r.count };
+    barList(list, rows.slice(0, 5).map(function(r){
+      return { name:(!regionFilter && r.country) ? r.name + ', ' + r.country : r.name, count:r.count };
     }), { label:'Regions with the most page views',
           emptyTitle:'No regional aggregate available', emptyBody:'' });
     host.replaceChildren(head, list);
@@ -782,10 +897,21 @@ permalink: /stats/
      Türkiye map keys them by licence-plate number, which the fetch script
      resolves from the province name GoatCounter reports. Both take the same
      {code, name, count} rows, so the painting and tooltip code is shared. */
-  function createMap(hostId, ariaLabel, failText){
+  function createMap(hostId, ariaLabel, failText, onPick){
     var host = document.getElementById(hostId), svg = null, tip = null;
 
-    function paint(rows){
+    /* Outlines the selected country and keeps the pressed state on the shapes
+       that act as buttons, so pointer and screen reader agree on what is on. */
+    function mark(name){
+      if (!svg) return;
+      svg.querySelectorAll('path[data-code]').forEach(function(path){
+        var on = !!(name && path.__reach && path.__reach.name === name);
+        path.classList.toggle('wm-sel', on);
+        if (path.classList.contains('wm-pick')) path.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+    }
+
+    function paint(rows, pickable){
       if (!svg) return;
       var byCode = {}, max = 0;
       rows.forEach(function(r){
@@ -797,16 +923,27 @@ permalink: /stats/
 
       svg.querySelectorAll('path[data-code]').forEach(function(path){
         var row = byCode[(path.getAttribute('data-code') || '').toLowerCase()];
-        path.classList.remove('wm-on', 'wm-b1', 'wm-b2', 'wm-b3', 'wm-b4', 'wm-b5');
+        path.classList.remove('wm-on', 'wm-pick', 'wm-sel', 'wm-b1', 'wm-b2', 'wm-b3', 'wm-b4', 'wm-b5');
         path.removeAttribute('tabindex');
         path.removeAttribute('aria-label');
+        path.removeAttribute('aria-pressed');
+        path.__reach = null;
         if (!row || !max) return;
         path.classList.add('wm-on', 'wm-b' + bucketOf(row.count));
         path.setAttribute('tabindex', '0');
-        path.setAttribute('role', 'img');
+        var canPick = typeof pickable === 'function' && pickable(row);
+        var name = path.getAttribute('data-name') || row.name;
         /* The SVG carries the canonical place name; the row carries the count.
            Falling back to the row name keeps a tooltip if the two ever differ. */
-        path.setAttribute('aria-label', (path.getAttribute('data-name') || row.name) + ', ' + fmt(row.count) + ' page views');
+        if (canPick) {
+          path.classList.add('wm-pick');
+          path.setAttribute('role', 'button');
+          path.setAttribute('aria-pressed', 'false');
+          path.setAttribute('aria-label', name + ', ' + fmt(row.count) + ' page views. Filter the regional breakdown to this country.');
+        } else {
+          path.setAttribute('role', 'img');
+          path.setAttribute('aria-label', name + ', ' + fmt(row.count) + ' page views');
+        }
         path.__reach = row;
       });
     }
@@ -835,12 +972,23 @@ permalink: /stats/
           tip.style.top = ((e && Number.isFinite(e.clientY) ? e.clientY - box.top : mark.top - box.top)) + 'px';
         };
         var hide = function(){ tip.hidden = true; };
+        var pick = function(e){
+          var path = e.currentTarget;
+          if (!onPick || !path.__reach || !path.classList.contains('wm-pick')) return;
+          onPick(path.__reach);
+        };
         svg.querySelectorAll('path[data-code]').forEach(function(path){
           path.addEventListener('mouseenter', show);
           path.addEventListener('mousemove', show);
           path.addEventListener('mouseleave', hide);
           path.addEventListener('focus', show);
           path.addEventListener('blur', hide);
+          path.addEventListener('click', pick);
+          path.addEventListener('keydown', function(e){
+            if (e.key !== 'Enter' && e.key !== ' ' && e.key !== 'Spacebar') return;
+            e.preventDefault();
+            pick(e);
+          });
         });
 
         host.replaceChildren(svg, tip);
@@ -853,12 +1001,13 @@ permalink: /stats/
       });
     }
 
-    return { load:load, paint:paint, loaded:function(){ return !!svg; } };
+    return { load:load, paint:paint, mark:mark, loaded:function(){ return !!svg; } };
   }
 
   var worldMap = createMap('worldMap',
     'World map of page views by country. Use Tab to inspect countries with recorded views.',
-    'The map could not be loaded. The ranked country list remains available.');
+    'The map could not be loaded. The ranked country list remains available.',
+    function(row){ pickCountry(row); });
   var turkeyMap = createMap('turkeyMap',
     'Map of Türkiye showing page views by province. Use Tab to inspect provinces with recorded views.',
     'The province map could not be loaded. The ranked region list remains available.');
