@@ -12,9 +12,8 @@ permalink: /publications/
     <p class="lede">Peer-reviewed journal articles, an editorial, and international and national
       conference papers. Metrics are sourced from
       <a href="{{ sm.profile_url }}" target="_blank" rel="noopener">Google Scholar<span class="sr-only"> (external)</span></a> and refreshed weekly.
-      Scholar reports {{ sm.works }} indexed works; the {{ site.data.publications | size }} records below
-      are the curated list — Scholar also indexes preprints, duplicate venue entries, and items outside
-      this record.</p>
+      Scholar indexes {{ sm.works }} records; the {{ site.data.publications | size }} below are all of
+      them except my own M.Sc. and Ph.D. theses.</p>
   </header>
 
   <div class="statgrid" role="group" aria-label="Publication metrics">
