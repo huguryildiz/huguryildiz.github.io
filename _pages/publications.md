@@ -59,11 +59,20 @@ permalink: /publications/
 </div>
 
 <div class="shell">
-  <div id="pubGroups"></div>
-  <div class="emptystate" id="pubEmpty" hidden>
-    <p><strong>No publications match these filters.</strong><br>
-      For example, there are no national conference papers ranked Q1 — quartiles apply to journals only.</p>
-    <button class="btn btn-quiet" type="button" onclick="resetFilters()">Clear all filters</button>
+  <div class="cvlayout">
+    <div>
+      <div id="pubGroups"></div>
+      <div class="emptystate" id="pubEmpty" hidden>
+        <p><strong>No publications match these filters.</strong><br>
+          For example, there are no national conference papers ranked Q1 — quartiles apply to journals only.</p>
+        <button class="btn btn-quiet" type="button" onclick="resetFilters()">Clear all filters</button>
+      </div>
+    </div>
+
+    <nav class="cvtoc" id="pubToc" aria-label="Publication sections" hidden>
+      <div class="toctitle">On this page</div>
+      <ul></ul>
+    </nav>
   </div>
 </div>
 
@@ -83,11 +92,12 @@ PUBS = PUBS.map(function (p) {
   var $ = function(s){return document.querySelector(s);};
   var $$ = function(s){return Array.prototype.slice.call(document.querySelectorAll(s));};
 
+  /* type, heading, icon, short label for the table of contents */
   var GROUPS = [
-    ["journal","Journal articles","book"],
-    ["editorial","Editorial","pen"],
-    ["confint","Conference papers (international)","globe"],
-    ["confnat","Conference papers (national, in Turkish)","flag"]
+    ["journal","Journal articles","book","Journal articles"],
+    ["editorial","Editorial","pen","Editorial"],
+    ["confint","Conference papers (international)","globe","Conf. (international)"],
+    ["confnat","Conference papers (national, in Turkish)","flag","Conf. (national)"]
   ];
   var state = {type:"all", year:"all", q:"all"};
   var n = function(t){return PUBS.filter(function(p){return p.type === t;}).length;};
@@ -331,16 +341,26 @@ PUBS = PUBS.map(function (p) {
   }
   function render(){
     var host = $("#pubGroups");
-    var html = "", shown = 0;
+    var html = "", toc = "", shown = 0, groups = 0;
     GROUPS.forEach(function(g){
       var items = PUBS.filter(function(p){return p.type === g[0] && match(p);});
       if (!items.length) return;
       shown += items.length;
-      html += '<div class="pubgroup"><h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-' + g[2] + '"/></svg>' + g[1] +
+      var id = "pub-" + g[0];
+      html += '<div class="pubgroup"><h2 class="sec" id="' + id + '"><svg class="hicon" aria-hidden="true"><use href="#i-' + g[2] + '"/></svg>' + g[1] +
         '<span class="count tnum">' + items.length + '</span></h2><ol class="publist">' +
         items.map(entry).join("") + '</ol></div>';
+      toc += '<li><a href="#' + id + '">' + g[3] + '</a></li>';
+      groups += 1;
     });
     host.innerHTML = html;
+    /* The sections themselves depend on the filters, so the table of contents is
+       rebuilt with them — and disappears once a filter leaves a single group,
+       where a one-entry list of contents navigates nothing. */
+    var tocNav = $("#pubToc");
+    tocNav.querySelector("ul").innerHTML = toc;
+    tocNav.hidden = groups < 2;
+    if (window.initTocHighlight) window.initTocHighlight();
     /* count.js binds click handlers once, on load. This list is rebuilt on
        every filter change, so the new links would carry the attribute and
        report nothing without rebinding. It skips elements it already bound. */
