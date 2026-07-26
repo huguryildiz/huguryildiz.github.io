@@ -107,7 +107,8 @@ a:hover{color:var(--accent-strong); text-decoration:underline; text-underline-of
    more than colour, so they carry a persistent underline. Heading/nav/card links
    (publication titles, "→" more-links, software strip) opt back out below. */
 .shell p a, .shell .newslist a,
-.shell .dotlist a, .shell .resourcelist a{text-decoration:underline; text-underline-offset:.16em;
+.shell .dotlist a, .shell .resourcelist a,
+.shell .cvrow .what .d a{text-decoration:underline; text-underline-offset:.16em;
   text-decoration-color:color-mix(in srgb, var(--accent) 42%, transparent);}
 .shell p.more a, .shell .homepub .t a, .shell .pub .t a,
 .shell .software-strip a, .shell .rmap-pubs a,
@@ -279,11 +280,16 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
   border-radius:3px; padding:.06rem .38rem; line-height:1.5; white-space:nowrap;
 }
 .tag-award{border-color:var(--accent); color:var(--accent);}
-/* Ongoing thesis — a slow pulse so the badge reads as live, not decorative. */
+/* Ongoing thesis — a slow pulse so the badge reads as live, not decorative. The
+   pulse is on a dot rather than on the label: fading the text itself took its
+   contrast down to 3.1:1 at the bottom of every cycle, so the badge spent part of
+   each cycle unreadable. A dot can fade all the way out and carry no information. */
 .tag-active{border-color:var(--accent); color:var(--accent);
-  animation:tag-pulse 2.4s ease-in-out infinite;}
-@keyframes tag-pulse{0%,100%{opacity:1;} 50%{opacity:.35;}}
-@media (prefers-reduced-motion:reduce){.tag-active{animation:none;}}
+  display:inline-flex; align-items:center; gap:.36em;}
+.tag-active::before{content:""; flex:none; width:.42em; height:.42em; border-radius:50%;
+  background:currentColor; animation:tag-pulse 2.4s ease-in-out infinite;}
+@keyframes tag-pulse{0%,100%{opacity:1;} 50%{opacity:.25;}}
+@media (prefers-reduced-motion:reduce){.tag-active::before{animation:none;}}
 
 /* Quartile and index badges — a tinted pill per quartile, with a small dial
    whose filled arc encodes the rank (Q1 full … Q4 a quarter). */
