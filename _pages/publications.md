@@ -11,7 +11,7 @@ permalink: /publications/
     <h1 id="pubs-h1">Publications</h1>
     <p class="lede">Peer-reviewed journal articles, an editorial, and international and national
       conference papers. Metrics are sourced from
-      <a href="{{ sm.profile_url }}" target="_blank" rel="noopener">Google Scholar</a> and refreshed weekly.
+      <a href="{{ sm.profile_url }}" target="_blank" rel="noopener">Google Scholar<span class="sr-only"> (external)</span></a> and refreshed weekly.
       Scholar reports {{ sm.works }} indexed works; the {{ site.data.publications | size }} records below
       are the curated list — Scholar also indexes preprints, duplicate venue entries, and items outside
       this record.</p>
@@ -96,7 +96,7 @@ permalink: /publications/
                 {%- comment -%} The heading points at the same destination as the DOI or PDF
                   button and reports the same event: the question is which paper was opened,
                   not which of the two controls did it. {%- endcomment -%}
-                <p class="t">{% if href %}<a data-goatcounter-click="{{ kind }}/{{ pubkey }}" data-goatcounter-title="{{ p.title | escape }}" href="{{ href }}" target="_blank" rel="noopener">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</p>
+                <p class="t">{% if href %}<a data-goatcounter-click="{{ kind }}/{{ pubkey }}" data-goatcounter-title="{{ p.title | escape }}" href="{{ href }}" target="_blank" rel="noopener">{{ p.title }}<span class="sr-only"> (external)</span></a>{% else %}{{ p.title }}{% endif %}</p>
                 {%- comment -%} Author lists carry neutral **…** emphasis in the data file;
                   odd split segments are the emphasised ones. {%- endcomment -%}
                 <p class="authors">{% assign chunks = p.authors | split: "**" %}{% for chunk in chunks %}{% assign odd = forloop.index0 | modulo: 2 %}{% if odd == 1 %}<b>{{ chunk }}</b>{% else %}{{ chunk }}{% endif %}{% endfor %}</p>
