@@ -26,12 +26,14 @@ layout: academic
 
     {%- if page.linkedin -%}
     <footer class="post-cite">
-      <a href="{{ page.linkedin }}" target="_blank" rel="noopener"
-         data-goatcounter-click="linkedin{{ page.url }}" data-goatcounter-title="LinkedIn original: {{ page.title | escape }}">
+      <p class="post-cite-lede">Comments are open where the conversation already is.</p>
+      <a class="post-cite-cta" href="{{ page.linkedin }}" target="_blank" rel="noopener"
+         data-goatcounter-click="linkedin{{ page.url }}" data-goatcounter-title="LinkedIn discuss: {{ page.title | escape }}">
         <svg class="licon" aria-hidden="true"><use href="#i-linkedin"/></svg>
-        Originally shared on LinkedIn
+        Discuss this post on LinkedIn
         <svg class="licon go" aria-hidden="true"><use href="#i-link"/></svg>
       </a>
+      <p class="post-cite-note">This piece was originally shared there — replies and questions are welcome.</p>
     </footer>
     {%- endif -%}
   </article>
