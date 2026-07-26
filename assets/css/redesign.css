@@ -399,7 +399,7 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
 .portrait .orn{position:absolute; inset:-13.5%; color:var(--accent); pointer-events:none;}
 .portrait .orn .oarc{opacity:.45;}
 .portrait .orn .on{opacity:.7;}
-.portrait .orn .osig{transform-box:view-box; transform-origin:50% 50%;
+.portrait .orn .osig{transform-box:view-box; transform-origin:80px 80px;
   animation:orn-orbit 12s linear infinite;}
 .portrait .orn .onx{animation:orn-flare 12s linear infinite;}
 .portrait.orn-off .orn .osig,
