@@ -121,7 +121,6 @@ exclude:
   - main.log
   - main.out
   - analytics-archive/
-  - docs/
   - Dockerfile
   - docker-compose.yaml
   - design-artifacts/

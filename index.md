@@ -133,10 +133,12 @@ permalink: /
       <div><dt>Citations</dt><dd data-kpi="{{ sm.citations }}">{{ sm.citations_display }}</dd></div>
       <div><dt>h-index</dt><dd data-kpi="{{ sm.h_index }}">{{ sm.h_index }}</dd></div>
       <div><dt>i10-index</dt><dd data-kpi="{{ sm.i10_index }}">{{ sm.i10_index }}</dd></div>
-      <div><dt>Works</dt><dd data-kpi="{{ sm.works }}">{{ sm.works }}</dd></div>
+      {% assign works_net = sm.works | minus: 2 %}
+      <div><dt>Works</dt><dd data-kpi="{{ works_net }}">{{ works_net }}</dd></div>
     </dl>
     <p class="kpi-src">Source: <a href="{{ sm.profile_url }}" target="_blank" rel="noopener">Google Scholar<span class="sr-only"> (external)</span></a> · updated {{ sm.updated_utc | date: "%b %-d, %Y" }} · refreshed weekly</p>
-    <p class="kpi-src">Works counts every record Google Scholar indexes; this site lists
+    <p class="kpi-src">Google Scholar indexes {{ sm.works }} records; the two left out here are my own
+      M.Sc. and Ph.D. theses. The rest are the
       <a href="{{ '/publications/' | relative_url }}">{{ site.data.publications | size }} curated publications</a>.</p>
   </section>
   <script>
