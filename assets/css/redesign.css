@@ -550,6 +550,11 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
 #resetBtn{font-size:.85rem; padding:.4rem .8rem;}
 
 .pubgroup h2.sec{margin-top:2.4rem;}
+/* The publications table of contents shares the CV's markup, but here the sticky
+   filter bar sits below the header, so both the sticky offset and the anchor
+   landing point clear it instead of the header alone. */
+#pubToc{top:9.6rem;}
+.pubgroup h2.sec[id]{scroll-margin-top:8.4rem;}
 ol.publist{list-style:none; margin:0; padding:0;}
 .pub{
   display:grid; grid-template-columns:3.4rem minmax(0,1fr); gap:0 1.2rem;
@@ -760,6 +765,7 @@ ol.publist{list-style:none; margin:0; padding:0;}
 .rmap-pubs .m{display:block; color:var(--ink-faint); font-size:.84rem; margin-top:.08rem;}
 .rmap-pubs .m i{font-family:var(--serif); font-size:1.03em;}
 .rmap-node:target{border-color:var(--accent);}
+.rmap > .cap{font-style:italic;}
 
 /* Map view toggle + topic-relation graph */
 .rmap-views{display:flex; gap:.3rem; margin:0 0 .9rem;}
@@ -1278,13 +1284,34 @@ footer.site a:hover .licon.spotify{color:var(--accent);}
   border-left:3px solid var(--accent); margin:1.4rem 0; padding:.2rem 0 .2rem 1.1rem;
   color:var(--ink-soft); font-style:italic;
 }
-.post-cite{margin-top:2.6rem; padding-top:1.4rem; border-top:1px solid var(--hairline);}
-.post-cite a{
-  display:inline-flex; align-items:center; gap:.5rem;
-  font-family:var(--sans); font-size:.92rem; font-weight:600; color:var(--accent);
+.post-cite{
+  margin-top:2.6rem; padding:1.4rem 1.5rem 1.5rem;
+  border:1px solid var(--hairline); border-radius:12px;
+  background:var(--surface); text-align:center;
 }
-.post-cite .licon{width:1.05em; height:1.05em;}
-.post-cite .licon.go{width:.85em; height:.85em; opacity:.7;}
+.post-cite-lede{
+  margin:0 0 .85rem; font-family:var(--sans); font-size:1.02rem;
+  font-weight:600; color:var(--head);
+}
+.post-cite .post-cite-cta{
+  display:inline-flex; align-items:center; gap:.55rem;
+  padding:.62rem 1.15rem; border-radius:999px;
+  background:var(--accent); color:var(--btn-ink);
+  font-family:var(--sans); font-size:.95rem; font-weight:600;
+  text-decoration:none; transition:background .15s ease;
+}
+.post-cite .post-cite-cta:hover{background:var(--accent-strong);}
+.post-cite-note{
+  margin:.9rem 0 0; font-family:var(--sans); font-size:.86rem; color:var(--ink-faint);
+}
+.post-cite .licon{width:1.05em; height:1.05em; flex:none;}
+.post-cite .licon.go{width:.85em; height:.85em; opacity:.75; flex:none;}
+
+@media (max-width:480px){
+  .post-cite{padding:1.2rem 1rem 1.3rem;}
+  .post-cite .post-cite-cta{padding:.6rem .9rem; font-size:.9rem;}
+  .post-cite-note{text-align:left;}
+}
 
 @media (max-width:620px){
   .post-card-link{flex-direction:column; gap:1rem; padding:1.15rem 1.2rem;}

@@ -107,24 +107,48 @@ layout: compress
     if(matchMedia('(prefers-reduced-motion: reduce)').matches){
       document.querySelectorAll('video[autoplay]').forEach(function(v){v.removeAttribute('autoplay');v.pause();});
     }
-    /* CV table-of-contents highlight */
-    var tocLinks=Array.prototype.slice.call(document.querySelectorAll('.cvtoc a'));
-    if('IntersectionObserver' in window && tocLinks.length){
-      var map=new Map();
+    /* Table-of-contents highlight. The reading position is derived from where the
+       headings sit, not from an intersection band: publication groups are long
+       enough that no heading is inside a narrow band for most of a scroll, which
+       left the highlight stuck on whichever section was crossed last. Exposed as
+       a function because the publications list rebuilds its sections on every
+       filter change. */
+    var tocDetach=null;
+    window.initTocHighlight=function(){
+      if(tocDetach){tocDetach();tocDetach=null;}
+      var tocLinks=Array.prototype.slice.call(document.querySelectorAll('.cvtoc a'));
+      var pairs=[];
       tocLinks.forEach(function(a){
         var sec=document.getElementById(a.getAttribute('href').slice(1));
-        if(sec)map.set(sec,a);
+        if(sec)pairs.push({a:a,sec:sec});
       });
-      var io=new IntersectionObserver(function(entries){
-        entries.forEach(function(en){
-          if(en.isIntersecting){
-            tocLinks.forEach(function(a){a.classList.remove('current');});
-            var a=map.get(en.target);if(a)a.classList.add('current');
-          }
+      if(!pairs.length)return;
+      var queued=0;
+      function mark(){
+        queued=0;
+        var line=window.innerHeight*0.28, cur=null;
+        pairs.forEach(function(p){
+          if(p.sec.getBoundingClientRect().top<=line)cur=p;
         });
-      },{rootMargin:'-20% 0px -70% 0px'});
-      map.forEach(function(a,sec){io.observe(sec);});
-    }
+        /* The last sections can be short enough that the reading line never
+           reaches them, so the end of the page claims the final entry. */
+        if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-2)
+          cur=pairs[pairs.length-1];
+        pairs.forEach(function(p){p.a.classList.toggle('current',p===cur);});
+      }
+      function onScroll(){
+        if(!queued)queued=requestAnimationFrame(mark);
+      }
+      window.addEventListener('scroll',onScroll,{passive:true});
+      window.addEventListener('resize',onScroll);
+      tocDetach=function(){
+        window.removeEventListener('scroll',onScroll);
+        window.removeEventListener('resize',onScroll);
+        if(queued)cancelAnimationFrame(queued);
+      };
+      mark();
+    };
+    window.initTocHighlight();
     /* Metric tiles count up from zero on load. Any prefix or suffix around the
        digits ("40+") is preserved, and the run ends on the value the page rendered. */
     if(document.documentElement.hasAttribute('data-statcount')){
