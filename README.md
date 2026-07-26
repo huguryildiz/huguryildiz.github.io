@@ -190,6 +190,20 @@ commits `_data/site_stats.json` only when the snapshot changes.
 
 ## License
 
-This repository includes software distributed under the terms in
-[LICENSE](LICENSE). Publication PDFs and other third-party or scholarly
-materials may carry their own rights and reuse conditions.
+Code and content are licensed separately; see [LICENSE](LICENSE) for the exact
+paths each covers.
+
+- **Software** — the layouts, includes, stylesheet, scripts, LaTeX template, and
+  workflows are MIT licensed. Take any part of them, including the
+  `_data/cv.yml` → web CV + LaTeX PDF pipeline.
+- **Content and media** — the prose, biography, publication and teaching
+  records, and images are CC BY-NC 4.0. This is a personal scholarly record, so
+  reuse means credit and non-commercial use, not adoption as your own CV.
+- **Publication PDFs under `files/`** — excluded from both. Copyright in most of
+  them belongs to their publishers and they are posted here only under the
+  self-archiving terms each publisher permits.
+
+This repository is a working site rather than a template: content is written
+directly into the pages, and `_includes/hero-uwsn.html` is specific to one
+research programme. It is published to be read and borrowed from, not forked
+wholesale.

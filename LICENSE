@@ -1,6 +1,19 @@
+This repository contains both software and scholarly content, which are
+licensed separately. Neither license grants rights over the other's material.
+
+
+================================================================================
+1. SOFTWARE — MIT License
+================================================================================
+
+Applies to the site's source code: `_layouts/`, `_includes/`, `assets/css/`,
+`assets/js/`, `scripts/`, `cv-latex/`, `docs/`, `.github/workflows/`, and the
+repository's configuration and build files (`_config.yml`, `_config_docker.yml`,
+`Gemfile`, `Dockerfile`, `docker-compose.yaml`).
+
 The MIT License (MIT)
 
-Copyright (c) 2016 Michael Rose
+Copyright (c) 2026 Hüseyin Uğur Yıldız
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +32,43 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+================================================================================
+2. CONTENT AND MEDIA — CC BY-NC 4.0
+================================================================================
+
+Applies to the site's written content and media: the prose, biography,
+publication records, teaching and supervision records, and service records in
+`index.md`, `_pages/`, `_posts/`, and `_data/`, together with the images in
+`assets/images/`.
+
+Copyright (c) 2026 Hüseyin Uğur Yıldız
+
+This material is licensed under the Creative Commons
+Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0).
+
+You are free to share and adapt it for non-commercial purposes, provided you
+give appropriate credit to Hüseyin Uğur Yıldız, link to the license, and
+indicate whether changes were made.
+
+Full license text: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+Summary:           https://creativecommons.org/licenses/by-nc/4.0/
+
+
+================================================================================
+3. EXCLUSION — Publication PDFs and other third-party material
+================================================================================
+
+Neither license above applies to the publication PDFs and related scholarly
+documents distributed under `files/`. Copyright in most of these works has been
+transferred to their respective publishers (IEEE, Elsevier, and others) and they
+are made available here solely under the author self-archiving terms each
+publisher permits. They may not be redistributed, relicensed, or used
+commercially on the basis of this repository's licenses. Consult the publisher's
+version of record for the applicable terms.
+
+The curriculum vitae (`files/Yildiz_HuseyinUgur_CV.pdf`) is a generated artifact
+of the content in `_data/` and follows the CC BY-NC 4.0 terms in section 2.
+
+Third-party software dependencies retain their own licenses.
