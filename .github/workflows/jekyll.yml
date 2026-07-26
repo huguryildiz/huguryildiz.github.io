@@ -66,11 +66,13 @@ jobs:
         with:
           root_file: main.tex
           latexmk_use_xelatex: false
-      - name: Place PDF into the built site
+      - name: Place CV artifacts into the built site
         run: |
           test -s main.pdf || { echo "PDF üretilmedi veya boş"; exit 1; }
+          test -s main.tex || { echo "main.tex üretilmedi veya boş"; exit 1; }
           mkdir -p _site/files
           cp main.pdf _site/files/Yildiz_HuseyinUgur_CV.pdf
+          cp main.tex _site/files/Yildiz_HuseyinUgur_CV.tex
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v5

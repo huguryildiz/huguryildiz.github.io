@@ -49,3 +49,13 @@ scripts/__pycache__/
 
 # Local design artifacts
 design-artifacts/
+
+# Generated CV artifacts. main.tex is produced from _data/cv.yml by
+# scripts/render_cv_tex.py at build time and compiled to PDF; neither is a
+# source file. Also excluded in _config.yml so a stray local copy cannot be
+# published as huguryildiz.com/main.tex.
+/main.tex
+/main.pdf
+/main.aux
+/main.log
+/main.out
