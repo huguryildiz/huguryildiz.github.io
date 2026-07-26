@@ -46,8 +46,10 @@ def emphasise(text: str) -> str:
 
 def mdlink_to_href(text: str) -> str:
     r"""Inline [text](url) işaretini \href{url}{\underline{text}} hâline getirir.
-    Kaçış YOK: url kısmı escape edilmez (zaten geçerli bir URL). `]` hemen
-    ardından `(` gelmediği sürece eşleşmez, bu yüzden alâkasız bir
+    Saf bir sözdizimi dönüştürücüdür: hiçbir parçayı kendisi kaçışlamaz veya
+    değiştirmez — çağıranın `text` ve `url` içeriğini önceden hazırlamış olması
+    beklenir (bkz. tex_text, `url`'i kaçışsız bırakırken `text`'i kaçışlar).
+    `]` hemen ardından `(` gelmediği sürece eşleşmez, bu yüzden alâkasız bir
     ``[3] (bkz. ...)`` metnini bozmaz."""
     return re.sub(
         r"\[([^\]]+)\]\(([^)]+)\)",
@@ -72,11 +74,28 @@ def sentence_case(text: str) -> str:
     return " ".join([words[0]] + [w.lower() for w in words[1:]])
 
 
+_MDLINK_RE = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
+
+
 def tex_text(text: str) -> str:
-    """Escape edilip vurgu ve link işaretleri LaTeX'e çevrilmiş düz metin.
-    Sıra kritik: tex_escape ÖNCE (aksi hâlde **/[]/() kaçışlanır ve
-    \\textbf/\\href üretilemez), emphasise ve mdlink_to_href SONRA."""
-    return mdlink_to_href(emphasise(tex_escape(text)))
+    r"""Escape edilip vurgu ve link işaretleri LaTeX'e çevrilmiş düz metin.
+
+    Naif "tex_escape(text) sonra mdlink_to_href" sırası [text](url)
+    işaretlerindeki url'i de kaçışlar — url bir & veya _ içeriyorsa \href
+    kırılır. Bunun yerine metin [text](url) eşleşmelerine göre parçalara
+    bölünür: her düz-metin parçası VE her linkin görünen `text`'i
+    tex_escape + emphasise'ten geçer, ama `url` bu ikisinden asla geçmez —
+    zaten geçerli bir URL, kaçışlanmaya ihtiyacı yok."""
+    out = []
+    pos = 0
+    for m in _MDLINK_RE.finditer(text):
+        out.append(emphasise(tex_escape(text[pos:m.start()])))
+        link_text = emphasise(tex_escape(m.group(1)))
+        url = m.group(2)
+        out.append(mdlink_to_href(f"[{link_text}]({url})"))
+        pos = m.end()
+    out.append(emphasise(tex_escape(text[pos:])))
+    return "".join(out)
 
 
 def load_data():
