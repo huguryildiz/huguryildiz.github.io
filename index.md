@@ -29,12 +29,8 @@ modified: 2026-07-26
               <circle class="on onx" cx="139" cy="121.3" r="2.2"/>
             </g>
             <g class="osig">
-              <g fill="none" stroke="currentColor" stroke-linecap="round">
-                <path opacity=".04" stroke-width="1.5" d="M21.8 37.7 A72 72 0 0 1 37.7 21.8"/>
-                <path opacity=".08" stroke-width="2" d="M37.7 21.8 A72 72 0 0 1 57.8 11.5"/>
-                <path opacity=".18" stroke-width="2.5" d="M57.8 11.5 A72 72 0 0 1 80 8"/>
-              </g>
-              <circle cx="80" cy="8" r="2.8" fill="currentColor"/>
+              <circle class="oaxis" cx="80" cy="80" r="74.6" fill="none" stroke="none"/>
+              <circle cx="80" cy="8" r="2.6" fill="currentColor"/>
             </g>
           </svg>
         </figure>
