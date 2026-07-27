@@ -29,7 +29,6 @@ modified: 2026-07-26
               <circle class="on onx" cx="139" cy="121.3" r="2.2"/>
             </g>
             <g class="osig">
-              <circle class="oaxis" cx="80" cy="80" r="74.6" fill="none" stroke="none"/>
               <circle cx="80" cy="8" r="2.6" fill="currentColor"/>
             </g>
           </svg>
