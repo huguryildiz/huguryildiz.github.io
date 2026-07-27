@@ -357,15 +357,28 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
 .status.ongoing{color:var(--accent);}
 
 /* ---------- HOME ---------- */
-.hero{display:grid;
+.hero{position:relative; isolation:isolate; display:grid;
   grid-template-columns:minmax(0,46fr) minmax(0,54fr);
   grid-template-areas:"id twin" "actions twin";
   grid-template-rows:auto 1fr;
   gap:1.2rem clamp(2rem,4.5vw,4rem);
   padding:clamp(1.8rem,4vw,3rem) 0 clamp(1.6rem,3vw,2.4rem); align-items:start;}
-.hero-id{grid-area:id; min-width:0;}
-.hero-actions{grid-area:actions; align-self:start;}
-.hero-twin{grid-area:twin; min-width:0;}
+.hero-flow{
+  grid-column:1; grid-row:1 / 3; align-self:stretch;
+  width:calc(100% + clamp(1rem,2.2vw,2rem)); height:100%; min-height:0;
+  margin-left:clamp(-1rem,-1.6vw,-.35rem);
+  display:block; pointer-events:none; z-index:0; opacity:.28;
+  contain:strict;
+  -webkit-mask-image:radial-gradient(ellipse 94% 82% at 38% 44%,#000 0 46%,rgba(0,0,0,.72) 67%,transparent 100%);
+  mask-image:radial-gradient(ellipse 94% 82% at 38% 44%,#000 0 46%,rgba(0,0,0,.72) 67%,transparent 100%);
+}
+:root[data-theme="dark"] .hero-flow{opacity:.46;}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme]) .hero-flow{opacity:.46;}
+}
+.hero-id{grid-area:id; min-width:0; position:relative; z-index:1;}
+.hero-actions{grid-area:actions; align-self:start; position:relative; z-index:1;}
+.hero-twin{grid-area:twin; min-width:0; position:relative; z-index:1;}
 .hero .idrow{display:flex; align-items:center; gap:1.6rem; margin-bottom:1.6rem;}
 .hero .idtext{min-width:0;}
 .hero h1{font-size:clamp(1.7rem,2.9vw,2.45rem); font-weight:600; letter-spacing:-.012em;}
@@ -555,6 +568,7 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
 @media (max-width:860px){
   .hero{grid-template-columns:1fr; grid-template-areas:"id" "actions" "twin";
     gap:1.4rem; padding-top:1.4rem;}
+  .hero-flow{display:none;}
   .hero .prop, .hero .supporting{max-width:none;}
   .hero h1{font-size:1.65rem;}
   .hero .role{margin-top:.2rem; font-size:.95rem; line-height:1.5;}
@@ -571,6 +585,9 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
     padding:.8rem 0; border-right:0; border-bottom:1px solid var(--hairline);}
   .kpi-row-3 > div:last-child{border-bottom:0; padding-bottom:0;}
   .kpi-row-3 dd{margin:0;}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero-flow{display:none;}
 }
 @media (max-width:31.25em){
   /* The 126px portrait and 1.6rem gap leave too little room for the identity
