@@ -367,6 +367,7 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
 .hero-actions{grid-area:actions; align-self:start;}
 .hero-twin{grid-area:twin; min-width:0;}
 .hero .idrow{display:flex; align-items:center; gap:1.6rem; margin-bottom:1.6rem;}
+.hero .idtext{min-width:0;}
 .hero h1{font-size:clamp(1.7rem,2.9vw,2.45rem); font-weight:600; letter-spacing:-.012em;}
 .hero .role{margin:.3rem 0 0; font-size:.98rem; color:var(--ink); font-weight:500; line-height:1.45;}
 .hero .role .role-line{display:block;}
@@ -399,7 +400,12 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
 .portrait .orn{position:absolute; inset:-13.5%; color:var(--accent); pointer-events:none;}
 .portrait .orn .oarc{opacity:.45;}
 .portrait .orn .on{opacity:.7;}
-.portrait .orn .osig{transform-box:view-box; transform-origin:80px 80px;
+/* iOS Safari resolves transform-origin against the group's own bounding box
+   instead of the viewBox, so a length origin throws the marker onto an
+   off-centre, oversized orbit on the 96px mobile portrait. The .oaxis circle in
+   index.md makes that bounding box symmetric about 80,80, so 50% 50% lands on
+   the portrait centre under either interpretation. */
+.portrait .orn .osig{transform-box:view-box; transform-origin:50% 50%;
   animation:orn-orbit 12s linear infinite;}
 .portrait .orn .onx{animation:orn-flare 12s linear infinite;}
 .portrait.orn-off .orn .osig,
@@ -565,13 +571,19 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
   .kpi-row-3 > div:last-child{border-bottom:0; padding-bottom:0;}
   .kpi-row-3 dd{margin:0;}
 }
+@media (max-width:31.25em){
+  /* The 126px portrait and 1.6rem gap leave too little room for the identity
+     copy on 402–430px iPhones. Restore the compact mobile proportions before
+     the narrowest layout switches to a vertical stack. */
+  .hero .idrow{gap:1rem;}
+  .portrait{width:96px; height:96px;}
+}
 @media (max-width:400px){
   /* Below 400px the portrait and the identity block compete for the same ~280px:
      the affiliation lines break mid-phrase and the address sits on its own short
      line. Stacking gives the text the full column back and costs one screenful of
      scroll at the narrowest size the site is used at. */
   .hero .idrow{flex-direction:column; align-items:flex-start; gap:1rem;}
-  .portrait{width:96px; height:96px;}
   .hero-cta .btn{flex:1 1 100%;}
   .uw-plaque{margin:-16px 4px 0; padding:10px 12px;}
 }
