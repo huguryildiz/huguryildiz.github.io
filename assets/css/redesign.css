@@ -397,14 +397,15 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
   border:3px solid var(--bg);}
 .portrait::after{content:""; position:absolute; inset:6px; border-radius:50%;
   border:1px solid color-mix(in srgb, var(--ink) 22%, transparent); pointer-events:none;}
-.portrait .orn{position:absolute; inset:-13.5%; color:var(--accent); pointer-events:none;}
+/* Safari does not stretch an absolutely positioned <svg> between left and right:
+   it keeps the element's own box and only shifts it, so `inset:-13.5%` moved the
+   ornament off the portrait centre without enlarging it and the marker orbited a
+   point 13.5% up and to the left. Sizing it explicitly keeps every engine in
+   step — 127% = 100% + 2 x 13.5%. */
+.portrait .orn{position:absolute; left:-13.5%; top:-13.5%; width:127%; height:127%;
+  color:var(--accent); pointer-events:none;}
 .portrait .orn .oarc{opacity:.45;}
 .portrait .orn .on{opacity:.7;}
-/* iOS Safari resolves transform-origin against the group's own bounding box
-   instead of the viewBox, so a length origin throws the marker onto an
-   off-centre, oversized orbit on the 96px mobile portrait. The .oaxis circle in
-   index.md makes that bounding box symmetric about 80,80, so 50% 50% lands on
-   the portrait centre under either interpretation. */
 .portrait .orn .osig{transform-box:view-box; transform-origin:50% 50%;
   animation:orn-orbit 12s linear infinite;}
 .portrait .orn .onx{animation:orn-flare 12s linear infinite;}
