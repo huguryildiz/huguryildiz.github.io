@@ -2,7 +2,7 @@
 layout: compress
 ---
 <!doctype html>
-<html lang="{{ site.locale | slice: 0,2 | default: 'en' }}">
+<html lang="{{ site.locale | slice: 0,2 | default: 'en' }}" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -63,7 +63,7 @@ layout: compress
   </script>
   {%- endif %}
 
-  <!-- Set theme before paint to avoid flash -->
+  <!-- Dark is the site default; restore an explicit reader preference before paint. -->
   <script>
   (function(){try{var t=localStorage.getItem('hy-theme');
   if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
@@ -90,8 +90,10 @@ layout: compress
 
 </head>
 
-<body>
+<body class="has-topographic-bg">
   {% include icons.html %}
+
+  <canvas class="topographic-bg" aria-hidden="true"></canvas>
 
   <a class="skip" href="#main">Skip to content</a>
 
@@ -114,7 +116,7 @@ layout: compress
           <li><a href="{{ '/cv/' | relative_url }}"{% if u contains '/cv' %} aria-current="page"{% endif %}><svg class="navico" aria-hidden="true"><use href="#i-file"/></svg>CV</a></li>
         </ul>
       </nav>
-      <button class="iconbtn" id="themeToggle" aria-pressed="false" aria-label="Switch to dark theme">
+      <button class="iconbtn" id="themeToggle" aria-pressed="true" aria-label="Switch to light theme">
         <svg class="sun" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="3.2"/><path d="M8 1v1.8M8 13.2V15M1 8h1.8M13.2 8H15M3 3l1.3 1.3M11.7 11.7L13 13M13 3l-1.3 1.3M4.3 11.7L3 13"/></svg>
         <svg class="moon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M13.2 9.4A5.6 5.6 0 1 1 6.6 2.8a4.4 4.4 0 0 0 6.6 6.6z"/></svg>
       </button>
@@ -149,16 +151,14 @@ layout: compress
     /* The control is a two-state toggle, so it reports that state rather than a
        static "switch color theme": aria-pressed says which theme is on, and the
        label names the theme the next press would bring. The markup ships the
-       light-theme wording, so the state is re-derived on load — the theme can
-       come from localStorage or from the OS preference, neither of which the
-       server knew about. */
+       dark-theme wording, so the state is re-derived on load after a stored
+       reader preference may have overridden the site default. */
     var themeState=function(theme){
       tBtn.setAttribute('aria-pressed',theme==='dark'?'true':'false');
       tBtn.setAttribute('aria-label',theme==='dark'?'Switch to light theme':'Switch to dark theme');
     };
     var currentTheme=function(){
-      return root.getAttribute('data-theme')||
-        (matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+      return root.getAttribute('data-theme')||'dark';
     };
     themeState(currentTheme());
     tBtn.addEventListener('click',function(){
@@ -166,11 +166,6 @@ layout: compress
       root.setAttribute('data-theme',next);
       themeState(next);
       try{localStorage.setItem('hy-theme',next);}catch(e){}
-    });
-    /* An OS-level theme switch changes the button's meaning too, but only while
-       the reader has not pinned a theme of their own. */
-    matchMedia('(prefers-color-scheme: dark)').addEventListener('change',function(){
-      if(!root.hasAttribute('data-theme'))themeState(currentTheme());
     });
     var navToggle=document.getElementById('navToggle'),nav=document.getElementById('primaryNav');
     navToggle.addEventListener('click',function(){
@@ -255,6 +250,7 @@ layout: compress
     }
   })();
   </script>
+  <script src="{{ '/assets/js/topographic-bg.js' | relative_url }}" defer></script>
   {% include _shared/site-analytics.html %}
 </body>
 </html>

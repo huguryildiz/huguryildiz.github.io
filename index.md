@@ -8,7 +8,6 @@ modified: 2026-07-26
 
 <div class="shell">
   <header class="hero">
-    <canvas class="hero-flow" id="hero-flow" aria-hidden="true"></canvas>
     <div class="hero-id">
       <div class="idrow">
         <figure class="portrait">
@@ -122,7 +121,6 @@ modified: 2026-07-26
       {% include hero-uwsn.html %}
     </section>
   </header>
-  <script src="{{ '/assets/js/hero-flow.js' | relative_url }}" defer></script>
 
   {% assign sm = site.data.scholar_metrics %}
   <section class="scholar-kpi" aria-labelledby="kpi-heading">

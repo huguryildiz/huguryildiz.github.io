@@ -1,0 +1,225 @@
+# Curated relation layer for the interactive research constellation.
+# Counts and publication targets are grounded in _data/research_map.yml. A topic may map to
+# only part of a broader publication group (for example, packet size within the underwater
+# lifetime/coding/delay group), so these counts are intentionally explicit rather than inferred.
+nodes:
+  - id: core
+    type: core
+    x: 450
+    y: 278
+    radius: 18
+    start_x: 0
+    start_y: 0
+    label_lines: ["Operations Research"]
+    label_y: 43
+    meta: "LP · MILP · CP · network flow"
+    meta_y: 61
+    aria: "Operations research and mathematical optimization, the methodological core"
+
+  - id: terrestrial
+    type: area
+    status: established
+    x: 168
+    y: 148
+    radius: 13
+    start_x: 34
+    start_y: 22
+    label_lines: ["Terrestrial ad hoc", "& sensor networks"]
+    label_y: 34
+    meta: "24 publications"
+    meta_y: 67
+    open: ["map-terrestrial"]
+    aria: "Terrestrial ad hoc and sensor networks, 24 publications; open in overview"
+
+  - id: underwater
+    type: area
+    status: established
+    x: 730
+    y: 145
+    radius: 13
+    start_x: -34
+    start_y: 22
+    label_lines: ["Underwater acoustic", "networks"]
+    label_y: 34
+    meta: "15 publications"
+    meta_y: 67
+    open: ["map-underwater"]
+    aria: "Underwater acoustic networks, 15 publications; open in overview"
+
+  - id: aerial
+    type: area
+    status: established
+    x: 735
+    y: 405
+    radius: 12
+    start_x: -36
+    start_y: -24
+    label_lines: ["Drone-assisted", "aerial networks"]
+    label_y: 33
+    meta: "1 publication"
+    meta_y: 66
+    open: ["map-aerial"]
+    aria: "Drone-assisted aerial networks, 1 publication; open in overview"
+
+  - id: ml
+    type: area
+    status: ongoing
+    x: 180
+    y: 415
+    radius: 12
+    start_x: 38
+    start_y: -26
+    label_lines: ["Machine learning &", "reinforcement learning"]
+    label_y: 33
+    meta: "ongoing integration"
+    meta_y: 66
+    open: ["map-ml"]
+    aria: "Machine learning and reinforcement learning, ongoing integration; open in overview"
+
+  - id: quantum
+    type: area
+    status: exploratory
+    x: 470
+    y: 485
+    radius: 12
+    start_x: -4
+    start_y: -38
+    label_lines: ["Hybrid classical–", "quantum routing"]
+    label_y: 33
+    meta: "exploratory"
+    meta_y: 66
+    open: ["map-quantum"]
+    aria: "Hybrid classical quantum routing, exploratory direction with no publications yet; open in overview"
+
+  - id: packet
+    type: topic
+    x: 427
+    y: 68
+    radius: 8
+    start_x: 4
+    start_y: 32
+    label_lines: ["packet size"]
+    label_y: -36
+    meta: "6 publications"
+    meta_y: -21
+    open: ["map-terrestrial-packet-size-optimization", "map-underwater-lifetime-coding-delay"]
+    aria: "Packet size, 6 publications across terrestrial and underwater networks; open in overview"
+
+  - id: lifetime
+    type: topic
+    x: 340
+    y: 158
+    radius: 8
+    start_x: 20
+    start_y: 20
+    label_lines: ["lifetime & energy"]
+    label_y: -36
+    meta: "15 publications"
+    meta_y: -21
+    open: ["map-terrestrial-network-lifetime-energy", "map-underwater-lifetime-coding-delay"]
+    aria: "Network lifetime and energy, 15 publications across terrestrial and underwater networks; open in overview"
+
+  - id: security
+    type: topic
+    x: 478
+    y: 158
+    radius: 8
+    start_x: -6
+    start_y: 28
+    label_lines: ["security & attacks"]
+    label_y: -36
+    meta: "10 publications"
+    meta_y: -21
+    open: ["map-terrestrial-security-critical-nodes", "map-underwater-attacks-secure-connectivity"]
+    aria: "Security and attacks, 10 publications across terrestrial and underwater networks; open in overview"
+
+  - id: kconn
+    type: topic
+    x: 790
+    y: 276
+    radius: 8
+    start_x: -30
+    start_y: 2
+    label_lines: ["k-connectivity"]
+    label_y: -36
+    meta: "4 publications"
+    meta_y: -21
+    open: ["map-underwater-k-connectivity", "map-aerial-k-connectivity-restoration-mobility"]
+    aria: "K-connectivity, 4 publications across underwater and aerial networks; open in overview"
+
+  - id: power
+    type: topic
+    x: 400
+    y: 230
+    radius: 8
+    start_x: 32
+    start_y: 0
+    label_lines: ["power control"]
+    label_y: -36
+    meta: "4 publications"
+    meta_y: -21
+    open: ["map-terrestrial-transmission-power-control"]
+    aria: "Transmission power control, 4 publications related to terrestrial and underwater networks; open in overview"
+
+  - id: voids
+    type: topic
+    x: 625
+    y: 235
+    radius: 8
+    start_x: -22
+    start_y: 14
+    label_lines: ["void regions"]
+    label_y: -36
+    meta: "1 publication"
+    meta_y: -21
+    open: ["map-underwater-void-regions"]
+    aria: "Void regions, 1 publication in underwater networks; open in overview"
+
+  - id: msink
+    type: topic
+    x: 624
+    y: 323
+    radius: 8
+    start_x: -20
+    start_y: -12
+    label_lines: ["multi-sink"]
+    label_y: 29
+    meta: "1 publication"
+    meta_y: 44
+    open: ["map-underwater-multi-sink-architectures"]
+    aria: "Multi-sink architectures, 1 publication in underwater networks; open in overview"
+
+  - id: param
+    type: topic
+    x: 298
+    y: 336
+    radius: 8
+    start_x: 18
+    start_y: -18
+    label_lines: ["parameter prediction"]
+    label_y: -36
+    meta: "1 publication"
+    meta_y: -21
+    open: ["map-ml-optimization-learning-integration"]
+    aria: "Neural parameter prediction, 1 publication linking machine learning and terrestrial optimization; open in overview"
+
+edges:
+  - {from: core, to: terrestrial, signal: true}
+  - {from: core, to: underwater, signal: true}
+  - {from: core, to: aerial}
+  - {from: core, to: ml, status: frontier, signal: true}
+  - {from: ml, to: quantum, status: frontier, signal: true}
+  - {from: terrestrial, to: packet, bend: -10, signal: true}
+  - {from: underwater, to: packet, bend: 10}
+  - {from: terrestrial, to: lifetime, bend: -24}
+  - {from: underwater, to: lifetime, bend: 24}
+  - {from: terrestrial, to: security, bend: 32}
+  - {from: underwater, to: security, bend: -32}
+  - {from: underwater, to: kconn, bend: 12, signal: true}
+  - {from: aerial, to: kconn, bend: -12}
+  - {from: terrestrial, to: power}
+  - {from: underwater, to: power}
+  - {from: underwater, to: voids}
+  - {from: underwater, to: msink}
+  - {from: terrestrial, to: param, bend: -8}
+  - {from: ml, to: param}
