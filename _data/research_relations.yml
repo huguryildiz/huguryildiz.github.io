@@ -149,7 +149,7 @@ nodes:
 
   - id: power
     type: topic
-    x: 400
+    x: 420
     y: 230
     radius: 8
     start_x: 32
@@ -191,8 +191,8 @@ nodes:
 
   - id: param
     type: topic
-    x: 298
-    y: 336
+    x: 210
+    y: 282
     radius: 8
     start_x: 18
     start_y: -18
@@ -208,6 +208,7 @@ edges:
   - {from: core, to: underwater, signal: true}
   - {from: core, to: aerial}
   - {from: core, to: ml, status: frontier, signal: true}
+  - {from: core, to: quantum, status: frontier}
   - {from: ml, to: quantum, status: frontier, signal: true}
   - {from: terrestrial, to: packet, bend: -10, signal: true}
   - {from: underwater, to: packet, bend: 10}
@@ -221,5 +222,5 @@ edges:
   - {from: underwater, to: power}
   - {from: underwater, to: voids}
   - {from: underwater, to: msink}
-  - {from: terrestrial, to: param, bend: -8}
-  - {from: ml, to: param}
+  - {from: terrestrial, to: param, bend: -18}
+  - {from: ml, to: param, bend: 18}
