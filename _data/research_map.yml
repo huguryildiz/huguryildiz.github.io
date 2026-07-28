@@ -5,7 +5,7 @@
 - id: terrestrial
   status: established
   title: "Terrestrial ad hoc & sensor networks"
-  keywords: [lifetime, packet size, power control, security]
+  keywords: [lifetime, packet size, power control, security, parameter prediction]
   groups:
     - name: "Network lifetime & energy"
       pubs:
@@ -43,7 +43,7 @@
 - id: underwater
   status: established
   title: "Underwater acoustic networks"
-  keywords: [k-connectivity, void regions, multi-sink, attacks]
+  keywords: [k-connectivity, void regions, multi-sink, attacks, power control]
   groups:
     - name: "k-connectivity"
       pubs:
