@@ -54,91 +54,82 @@
     {%- endfor -%}
   </div>
   <div class="rgraph-wrap" hidden>
-    <!-- Topic-relation graph. Counts mirror _data/research_map.yml — update together. -->
-    <svg class="rgraph" viewBox="0 0 900 520" role="group" aria-label="Topic relation graph: shared research topics connecting the research areas">
-      <g class="rg-edges" aria-hidden="true">
-        <path class="rg-edge" data-e="core terrestrial" d="M380 272 C340 210 250 165 200 134"/>
-        <path class="rg-edge" data-e="core underwater" d="M520 272 C560 210 650 165 700 134"/>
-        <path class="rg-edge" data-e="core aerial" d="M520 328 C560 365 630 395 660 408"/>
-        <path class="rg-edge dashed" data-e="core ml" d="M380 328 C340 365 270 395 240 408"/>
-        <path class="rg-edge dashed" data-e="core quantum" d="M450 328 L450 446"/>
-        <path class="rg-edge" data-e="terrestrial packet" d="M240 98 C300 70 330 58 375 58"/>
-        <path class="rg-edge" data-e="underwater packet" d="M660 98 C600 70 570 58 525 58"/>
-        <path class="rg-edge" data-e="terrestrial lifetime" d="M240 110 L365 110"/>
-        <path class="rg-edge" data-e="underwater lifetime" d="M535 110 L660 110"/>
-        <path class="rg-edge" data-e="terrestrial security" d="M240 122 C300 150 330 162 365 162"/>
-        <path class="rg-edge" data-e="underwater security" d="M660 122 C600 150 570 162 535 162"/>
-        <path class="rg-edge" data-e="underwater kconn" d="M760 134 L760 250"/>
-        <path class="rg-edge" data-e="aerial kconn" d="M760 280 L760 396"/>
-        <path class="rg-edge" data-e="terrestrial power" d="M200 134 C230 158 255 175 285 190"/>
-        <path class="rg-edge" data-e="underwater voids" d="M700 134 C665 155 640 170 600 185"/>
-        <path class="rg-edge" data-e="underwater msink" d="M710 134 C660 180 640 210 600 235"/>
-        <path class="rg-edge" data-e="terrestrial param" d="M140 134 L140 250"/>
-        <path class="rg-edge" data-e="ml param" d="M140 280 L140 396"/>
-      </g>
-      <g class="rg-node core" data-id="core" tabindex="0" role="button" aria-label="Operations research and mathematical optimization — the core">
-        <rect x="350" y="272" width="200" height="56" rx="8"/>
-        <text x="450" y="296" text-anchor="middle" font-size="15" class="serif">Operations Research</text>
-        <text x="450" y="315" text-anchor="middle" font-size="9.5" class="dim">LP · MILP · CP · network flow</text>
-      </g>
-      <g class="rg-node area" data-id="terrestrial" data-open="map-terrestrial" tabindex="0" role="button" aria-label="Terrestrial ad hoc and sensor networks — open in overview map">
-        <rect x="40" y="86" width="200" height="48" rx="8"/>
-        <text x="140" y="105" text-anchor="middle" font-size="12.5">Terrestrial ad hoc &amp;</text>
-        <text x="140" y="120" text-anchor="middle" font-size="12.5">sensor networks</text>
-      </g>
-      <g class="rg-node area" data-id="underwater" data-open="map-underwater" tabindex="0" role="button" aria-label="Underwater acoustic networks — open in overview map">
-        <rect x="660" y="86" width="200" height="48" rx="8"/>
-        <text x="760" y="105" text-anchor="middle" font-size="12.5">Underwater acoustic</text>
-        <text x="760" y="120" text-anchor="middle" font-size="12.5">networks</text>
-      </g>
-      <g class="rg-node area" data-id="aerial" data-open="map-aerial" tabindex="0" role="button" aria-label="Drone-assisted aerial networks — open in overview map">
-        <rect x="660" y="396" width="200" height="48" rx="8"/>
-        <text x="760" y="415" text-anchor="middle" font-size="12.5">Drone-assisted</text>
-        <text x="760" y="430" text-anchor="middle" font-size="12.5">aerial networks</text>
-      </g>
-      <g class="rg-node area frontier" data-id="ml" data-open="map-ml" tabindex="0" role="button" aria-label="Machine learning and reinforcement learning — ongoing — open in overview map">
-        <rect x="40" y="396" width="200" height="48" rx="8"/>
-        <text x="140" y="415" text-anchor="middle" font-size="12.5">Machine learning &amp;</text>
-        <text x="140" y="430" text-anchor="middle" font-size="12.5">reinforcement learning</text>
-      </g>
-      <g class="rg-node area frontier" data-id="quantum" data-open="map-quantum" tabindex="0" role="button" aria-label="Hybrid classical–quantum routing — exploratory — open in overview map">
-        <rect x="350" y="446" width="200" height="48" rx="8"/>
-        <text x="450" y="465" text-anchor="middle" font-size="12.5">Hybrid classical–quantum</text>
-        <text x="450" y="480" text-anchor="middle" font-size="12.5">routing</text>
-      </g>
-      <g class="rg-node topic" data-id="packet" data-open="map-terrestrial-packet-size-optimization map-underwater-lifetime-coding-delay" tabindex="0" role="button" aria-label="Packet size — 6 publications across terrestrial and underwater networks">
-        <rect x="375" y="43" width="150" height="30" rx="15"/>
-        <text x="450" y="62" text-anchor="middle" font-size="11.5">packet size · 6</text>
-      </g>
-      <g class="rg-node topic" data-id="lifetime" data-open="map-terrestrial-network-lifetime-energy map-underwater-lifetime-coding-delay" tabindex="0" role="button" aria-label="Network lifetime and energy — 15 publications across terrestrial and underwater networks">
-        <rect x="365" y="95" width="170" height="30" rx="15"/>
-        <text x="450" y="114" text-anchor="middle" font-size="11.5">lifetime &amp; energy · 15</text>
-      </g>
-      <g class="rg-node topic" data-id="security" data-open="map-terrestrial-security-critical-nodes map-underwater-attacks-secure-connectivity" tabindex="0" role="button" aria-label="Security and attacks — 10 publications across terrestrial and underwater networks">
-        <rect x="365" y="147" width="170" height="30" rx="15"/>
-        <text x="450" y="166" text-anchor="middle" font-size="11.5">security &amp; attacks · 10</text>
-      </g>
-      <g class="rg-node topic" data-id="kconn" data-open="map-underwater-k-connectivity map-aerial-k-connectivity-restoration-mobility" tabindex="0" role="button" aria-label="k-connectivity — 4 publications across underwater and aerial networks">
-        <rect x="685" y="250" width="150" height="30" rx="15"/>
-        <text x="760" y="269" text-anchor="middle" font-size="11.5">k-connectivity · 4</text>
-      </g>
-      <g class="rg-node topic" data-id="power" data-open="map-terrestrial-transmission-power-control" tabindex="0" role="button" aria-label="Transmission power control — 4 publications in terrestrial networks">
-        <rect x="210" y="190" width="150" height="30" rx="15"/>
-        <text x="285" y="209" text-anchor="middle" font-size="11.5">power control · 4</text>
-      </g>
-      <g class="rg-node topic" data-id="voids" data-open="map-underwater-void-regions" tabindex="0" role="button" aria-label="Void regions — 1 publication in underwater networks">
-        <rect x="525" y="185" width="150" height="30" rx="15"/>
-        <text x="600" y="204" text-anchor="middle" font-size="11.5">void regions · 1</text>
-      </g>
-      <g class="rg-node topic" data-id="msink" data-open="map-underwater-multi-sink-architectures" tabindex="0" role="button" aria-label="Multi-sink architectures — 1 publication in underwater networks">
-        <rect x="525" y="235" width="150" height="30" rx="15"/>
-        <text x="600" y="254" text-anchor="middle" font-size="11.5">multi-sink · 1</text>
-      </g>
-      <g class="rg-node topic" data-id="param" data-open="map-ml-optimization-learning-integration" tabindex="0" role="button" aria-label="Neural parameter prediction — 1 publication linking machine learning with terrestrial network optimization">
-        <rect x="50" y="250" width="180" height="30" rx="15"/>
-        <text x="140" y="269" text-anchor="middle" font-size="11.5">parameter prediction · 1</text>
-      </g>
-    </svg>
+    <div class="rgraph-key" aria-hidden="true">
+      <span><i class="solid"></i>publication-backed</span>
+      <span><i class="frontier"></i>ongoing / exploratory</span>
+    </div>
+    <div class="rgraph-stage">
+      <svg class="rgraph" viewBox="0 0 900 560" role="group" aria-label="Research constellation: shared topics connecting the research areas">
+        <defs>
+          <filter id="rgGlow" x="-100%" y="-100%" width="300%" height="300%">
+            <feGaussianBlur stdDeviation="6"/>
+          </filter>
+        </defs>
+        <g class="rg-contours" aria-hidden="true">
+          <path d="M18 108C86 22 213 31 277 76s129 27 188-8 168-54 246-8 126 40 171 6"/>
+          <path d="M6 169c83-75 180-72 252-26s145 38 211 1 155-56 238-13 130 51 180 17"/>
+          <path d="M14 239c71-53 166-54 235-17s142 41 216 8 158-52 235-18 133 53 190 34"/>
+          <path d="M7 320c79-39 163-40 240-10s139 39 219 11 153-42 237-16 132 44 188 33"/>
+          <path d="M16 402c74-30 153-21 226 9s147 35 219 13 156-31 237-8 135 36 188 25"/>
+          <path d="M12 486c76-23 155-6 226 20s151 26 224 8 151-19 231 2 137 25 193 8"/>
+        </g>
+        <g class="rg-edges" aria-hidden="true">
+          {%- for edge in site.data.research_relations.edges -%}
+          {%- assign source = site.data.research_relations.nodes | where: "id", edge.from | first -%}
+          {%- assign target = site.data.research_relations.nodes | where: "id", edge.to | first -%}
+          <path class="rg-edge{% if edge.status == 'frontier' %} dashed{% endif %}"
+            data-from="{{ edge.from }}" data-to="{{ edge.to }}"
+            data-e="{{ edge.from }} {{ edge.to }}" data-bend="{{ edge.bend | default: 0 }}"
+            d="M{{ source.x }} {{ source.y }}L{{ target.x }} {{ target.y }}"/>
+          {%- endfor -%}
+        </g>
+        <g class="rg-signals" aria-hidden="true">
+          {%- for edge in site.data.research_relations.edges -%}
+          {%- if edge.signal -%}
+          <circle class="rg-signal{% if edge.status == 'frontier' %} frontier{% endif %}"
+            data-from="{{ edge.from }}" data-to="{{ edge.to }}"
+            data-e="{{ edge.from }} {{ edge.to }}" data-bend="{{ edge.bend | default: 0 }}"
+            data-phase="{{ forloop.index0 }}" r="2.4"/>
+          {%- endif -%}
+          {%- endfor -%}
+        </g>
+        <g class="rg-nodes">
+          {%- for node in site.data.research_relations.nodes -%}
+          <g class="rg-node {{ node.type }} {{ node.status }}" data-id="{{ node.id }}"
+            {% if node.open %}data-open="{{ node.open | join: ' ' }}" tabindex="0" role="button"{% else %}tabindex="-1" focusable="false" role="group"{% endif %}
+            aria-label="{{ node.aria }}" data-x="{{ node.x }}" data-y="{{ node.y }}" data-radius="{{ node.radius }}"
+            transform="translate({{ node.x }} {{ node.y }})"
+            style="--sx:{{ node.start_x }}px;--sy:{{ node.start_y }}px;--d:{{ forloop.index0 | times: 38 }}ms">
+            <g class="rg-node-body">
+              {%- if node.open -%}<circle class="rg-hit" r="{{ node.radius | plus: 14 }}"/>{%- endif -%}
+              <circle class="rg-halo" r="{{ node.radius | plus: 10 }}" filter="url(#rgGlow)"/>
+              <circle class="rg-ring" r="{{ node.radius | plus: 6 }}"/>
+              <circle class="rg-dot" r="{{ node.radius }}"/>
+              <circle class="rg-seed" r="{{ node.radius | divided_by: 3 }}"/>
+              <text class="rg-label" text-anchor="middle" y="{{ node.label_y }}">
+                {%- for line in node.label_lines -%}
+                <tspan x="0"{% unless forloop.first %} dy="15"{% endunless %}>{{ line }}</tspan>
+                {%- endfor -%}
+              </text>
+              <text class="rg-meta" text-anchor="middle" y="{{ node.meta_y }}">{{ node.meta }}</text>
+            </g>
+          </g>
+          {%- endfor -%}
+        </g>
+      </svg>
+    </div>
+    <ul class="rgraph-list" aria-label="Research areas and shared topics">
+      {%- for node in site.data.research_relations.nodes -%}
+      {%- if node.open -%}
+      <li>
+        <button type="button" data-open="{{ node.open | join: ' ' }}">
+          <span>{{ node.label_lines | join: ' ' }}</span>
+          <small>{{ node.meta }}</small>
+        </button>
+      </li>
+      {%- endif -%}
+      {%- endfor -%}
+    </ul>
   </div>
   <figcaption class="cap">Solid boxes: established lines of work, evidenced by the publication record.
     Dashed outlines: ongoing integration and exploratory directions. Select an area to see the
@@ -302,15 +293,22 @@
   var map = document.getElementById('research-map');
   var viewBtns = Array.prototype.slice.call(map.querySelectorAll('.rmap-views button'));
   var relWrap = map.querySelector('.rgraph-wrap');
-  var animateGraph = null, curView = 'tree';
+  var animateGraph = null, startConstellation = null, stopConstellation = null, curView = 'tree';
   function showView(v){
     var changed = (v !== curView);
     curView = v;
     grid.hidden = (v !== 'tree');
     relWrap.hidden = (v !== 'relations');
     viewBtns.forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.view === v)); });
-    if (v === 'tree') draw();
-    if (!changed || reduce) return;
+    if (v === 'tree'){
+      draw();
+      if (stopConstellation) stopConstellation(true);
+    }
+    if (!changed){
+      if (v === 'relations' && startConstellation) startConstellation();
+      return;
+    }
+    if (reduce) return;
     var shown = (v === 'tree') ? grid : relWrap;
     shown.classList.remove('v-in');
     shown.getBoundingClientRect();
@@ -325,6 +323,113 @@
   if (rg){
     var rEdges = Array.prototype.slice.call(rg.querySelectorAll('.rg-edge'));
     var rNodes = Array.prototype.slice.call(rg.querySelectorAll('.rg-node'));
+    var rSignals = Array.prototype.slice.call(rg.querySelectorAll('.rg-signal'));
+    var rListNodes = Array.prototype.slice.call(map.querySelectorAll('.rgraph-list button'));
+    var nodeById = {};
+    rNodes.forEach(function(n){ nodeById[n.getAttribute('data-id')] = n; });
+    function endpoints(el){
+      return [nodeById[el.getAttribute('data-from')], nodeById[el.getAttribute('data-to')]];
+    }
+    function basePoint(n){
+      return {x:parseFloat(n.getAttribute('data-x')), y:parseFloat(n.getAttribute('data-y')),
+        r:parseFloat(n.getAttribute('data-radius')) || 0};
+    }
+    function trimLine(a,b){
+      var dx = b.x-a.x, dy = b.y-a.y, len = Math.sqrt(dx*dx+dy*dy) || 1;
+      var ux = dx/len, uy = dy/len;
+      return {
+        a:{x:a.x+ux*(a.r+7), y:a.y+uy*(a.r+7)},
+        b:{x:b.x-ux*(b.r+7), y:b.y-uy*(b.r+7)}
+      };
+    }
+    function curveGeometry(a,b,bend){
+      var segment = trimLine(a,b);
+      var dx = segment.b.x-segment.a.x, dy = segment.b.y-segment.a.y;
+      var len = Math.sqrt(dx*dx+dy*dy) || 1;
+      return {
+        a:segment.a, b:segment.b,
+        c:{x:(segment.a.x+segment.b.x)/2-dy/len*bend,
+          y:(segment.a.y+segment.b.y)/2+dx/len*bend}
+      };
+    }
+    function curvePoint(g,p){
+      var q = 1-p;
+      return {x:q*q*g.a.x+2*q*p*g.c.x+p*p*g.b.x,
+        y:q*q*g.a.y+2*q*p*g.c.y+p*p*g.b.y};
+    }
+    function updateLinks(points, elapsed){
+      rEdges.forEach(function(e){
+        var pair = endpoints(e), a = points[pair[0].getAttribute('data-id')], b = points[pair[1].getAttribute('data-id')];
+        var g = curveGeometry(a,b,parseFloat(e.getAttribute('data-bend')) || 0);
+        e.setAttribute('d','M'+g.a.x+' '+g.a.y+'Q'+g.c.x+' '+g.c.y+' '+g.b.x+' '+g.b.y);
+      });
+      rSignals.forEach(function(s){
+        var pair = endpoints(s), a = points[pair[0].getAttribute('data-id')], b = points[pair[1].getAttribute('data-id')];
+        var g = curveGeometry(a,b,parseFloat(s.getAttribute('data-bend')) || 0);
+        var phase = parseFloat(s.getAttribute('data-phase')) || 0;
+        var p = (elapsed / (5200 + phase*110) + phase*.137) % 1;
+        var point = curvePoint(g,p);
+        s.setAttribute('cx', point.x);
+        s.setAttribute('cy', point.y);
+        s.style.opacity = String(Math.sin(Math.PI*p)*.9);
+      });
+    }
+    function resetConstellation(){
+      var points = {};
+      rNodes.forEach(function(n){
+        var p = basePoint(n);
+        n.setAttribute('transform','translate('+p.x+' '+p.y+')');
+        points[n.getAttribute('data-id')] = p;
+      });
+      updateLinks(points, 0);
+      rSignals.forEach(function(s){ s.style.opacity = '0'; });
+    }
+    var motionFrame = 0, motionEpoch = 0, constellationVisible = true;
+    function canMove(){
+      return !reduce && curView === 'relations' && constellationVisible &&
+        document.visibilityState !== 'hidden' && window.innerWidth > 620;
+    }
+    function moveConstellation(now){
+      if (!canMove()){ motionFrame = 0; return; }
+      var elapsed = now-motionEpoch, points = {};
+      rNodes.forEach(function(n,i){
+        var base = basePoint(n), phase = i*.83, scale = n.classList.contains('core') ? .55 : 1;
+        var dx = (Math.sin(elapsed/2600+phase)-Math.sin(phase))*2.2*scale;
+        var dy = (Math.cos(elapsed/3100+phase)-Math.cos(phase))*1.8*scale;
+        var p = {x:base.x+dx, y:base.y+dy, r:base.r};
+        n.setAttribute('transform','translate('+p.x.toFixed(2)+' '+p.y.toFixed(2)+')');
+        points[n.getAttribute('data-id')] = p;
+      });
+      updateLinks(points, elapsed);
+      motionFrame = requestAnimationFrame(moveConstellation);
+    }
+    startConstellation = function(){
+      if (!canMove() || motionFrame) return;
+      motionEpoch = performance.now();
+      rg.setAttribute('data-motion','true');
+      motionFrame = requestAnimationFrame(moveConstellation);
+    };
+    stopConstellation = function(reset){
+      if (motionFrame) cancelAnimationFrame(motionFrame);
+      motionFrame = 0;
+      rg.removeAttribute('data-motion');
+      if (reset) resetConstellation();
+    };
+    var parents = {}, children = {};
+    rNodes.forEach(function(n){
+      var id = n.getAttribute('data-id');
+      parents[id] = []; children[id] = [];
+    });
+    rEdges.forEach(function(e){
+      var from = e.getAttribute('data-from'), to = e.getAttribute('data-to');
+      parents[to].push(from);
+      children[from].push(to);
+    });
+    function addAncestors(id,keep){
+      if (keep[id]) return;
+      keep[id] = 1;
+      parents[id].forEach(function(parent){ addAncestors(parent,keep); });
+    }
     function setFocus(id){
       if (!id){
         rg.removeAttribute('data-focus');
@@ -332,43 +437,51 @@
         return;
       }
       rg.setAttribute('data-focus','');
-      var nb = {}; nb[id] = 1;
+      var keep = {}, seeds = [id].concat(parents[id],children[id]);
+      seeds.forEach(function(seed){ addAncestors(seed,keep); });
       rEdges.forEach(function(e){
-        var t = e.getAttribute('data-e').split(' ');
-        var on = t.indexOf(id) > -1;
+        var on = !!keep[e.getAttribute('data-from')] && !!keep[e.getAttribute('data-to')];
         e.classList.toggle('hl', on);
-        if (on){ nb[t[0]] = 1; nb[t[1]] = 1; }
       });
-      rNodes.forEach(function(n){ n.classList.toggle('hl', !!nb[n.getAttribute('data-id')]); });
+      rNodes.forEach(function(n){ n.classList.toggle('hl', !!keep[n.getAttribute('data-id')]); });
+    }
+    function openTargets(value){
+      var ids = (value || '').split(' ').filter(Boolean);
+      if (!ids.length) return;
+      showView('tree');
+      ids.forEach(function(i){
+        var d = document.getElementById(i);
+        if (d) for (var el = d; el; el = el.parentElement && el.parentElement.closest('details')) el.open = true;
+      });
+      var first = document.getElementById(ids[0]);
+      if (first) first.scrollIntoView({block:'center'});
     }
     rNodes.forEach(function(n){
       var id = n.getAttribute('data-id');
-      n.addEventListener('mouseenter', function(){ setFocus(id); });
-      n.addEventListener('mouseleave', function(){ setFocus(null); });
+      n.addEventListener('mouseenter', function(){
+        if (stopConstellation) stopConstellation(true);
+        setFocus(id);
+      });
+      n.addEventListener('mouseleave', function(){
+        setFocus(null);
+        if (startConstellation) startConstellation();
+      });
       n.addEventListener('focus', function(){ setFocus(id); });
       n.addEventListener('blur', function(){ setFocus(null); });
-      function act(){
-        var ids = (n.getAttribute('data-open') || '').split(' ').filter(Boolean);
-        if (!ids.length) return;
-        showView('tree');
-        ids.forEach(function(i){
-          var d = document.getElementById(i);
-          if (d) for (var el = d; el; el = el.parentElement && el.parentElement.closest('details')) el.open = true;
-        });
-        var first = document.getElementById(ids[0]);
-        if (first) first.scrollIntoView({block:'center'});
-      }
+      function act(){ openTargets(n.getAttribute('data-open')); }
       n.addEventListener('click', act);
       n.addEventListener('keydown', function(ev){
         if (ev.key === 'Enter' || ev.key === ' '){ ev.preventDefault(); act(); }
       });
     });
+    rListNodes.forEach(function(n){
+      n.addEventListener('click', function(){ openTargets(n.getAttribute('data-open')); });
+    });
 
-    /* Entering the relations view: nodes pop in, edges draw between them. */
+    /* Entering the relations view: the constellation settles, then shifts into slow live motion. */
     var gRun = 0;
     animateGraph = function(){
       var run = ++gRun;
-      rg.classList.remove('rg-flow');
       rNodes.forEach(function(n){ n.classList.remove('rg-in'); });
       rEdges.forEach(function(e){
         e.style.transition = ''; e.style.strokeDasharray = ''; e.style.strokeDashoffset = '';
@@ -392,9 +505,37 @@
         rEdges.forEach(function(e){
           e.style.transition = ''; e.style.strokeDasharray = ''; e.style.strokeDashoffset = '';
         });
-        rg.classList.add('rg-flow');
+        if (startConstellation) startConstellation();
       }, 600 + rEdges.length*25);
     };
+    if ('IntersectionObserver' in window){
+      var rgIo = new IntersectionObserver(function(en){
+        constellationVisible = en[0].isIntersecting;
+        if (constellationVisible){
+          if (startConstellation) startConstellation();
+        } else if (stopConstellation) stopConstellation(true);
+      }, {threshold:.08});
+      rgIo.observe(map);
+    }
+    document.addEventListener('visibilitychange', function(){
+      if (document.visibilityState === 'hidden'){
+        if (stopConstellation) stopConstellation(true);
+      } else if (startConstellation) startConstellation();
+    });
+    window.addEventListener('resize', function(){
+      if (canMove()){
+        if (startConstellation) startConstellation();
+      } else if (stopConstellation) stopConstellation(true);
+    });
+    rg.addEventListener('focusin', function(){
+      if (stopConstellation) stopConstellation(true);
+    });
+    rg.addEventListener('focusout', function(){
+      setTimeout(function(){
+        if (!rg.contains(document.activeElement) && startConstellation) startConstellation();
+      },0);
+    });
+    resetConstellation();
   }
 
   if ('IntersectionObserver' in window && !reduce){
