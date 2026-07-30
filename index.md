@@ -128,7 +128,7 @@ modified: 2026-07-26
     <dl class="kpi-row kpi-row-3">
       <div><dt>Citations</dt><dd data-kpi="{{ sm.citations }}">{{ sm.citations_display }}</dd></div>
       <div><dt>h-index</dt><dd data-kpi="{{ sm.h_index }}">{{ sm.h_index }}</dd></div>
-      <div><dt>Curated publications</dt><dd data-kpi="{{ site.data.publications | size }}">{{ site.data.publications | size }}</dd></div>
+      <div><dt>Publications</dt><dd data-kpi="{{ site.data.publications | size }}">{{ site.data.publications | size }}</dd></div>
     </dl>
     <p class="kpi-src">Citations and h-index: <a href="{{ sm.profile_url }}" target="_blank" rel="noopener">Google Scholar<span class="sr-only"> (opens in a new tab)</span></a>, updated {{ sm.updated_utc | date: "%b %-d, %Y" }} and refreshed weekly. Catalogue total:
       <a href="{{ '/publications/' | relative_url }}">{{ site.data.publications | size }} peer-reviewed records</a>;
