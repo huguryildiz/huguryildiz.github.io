@@ -137,7 +137,7 @@
 \begin{itemize}[leftmargin=*]
 \setlength\itemsep{-0.5em}
 {% for b in cv.appointments[0].bullets_tex %}
-\item \noindent {{ tex(b) }}
+\item \noindent {{ tex(b | replace('[theses_supervised_count]', (cv.theses_supervised | length | string))) }}
 {% endfor %}
 \end{itemize}
 
@@ -383,7 +383,7 @@ $\bullet$ {{ esc(r) }},
 \justify
 
 {% for t in cv.theses_supervised %}
-\noindent [{{ t.id }}] {{ esc(t.student) }} ({{ t.year }}). \textit{{ '{' }}{{ esc(t.title) }}} ({{ esc(t.kind) }}). {{ esc(t.org) }}, {{ esc(t.location) }}.
+\noindent [{{ t.id }}] {{ esc(t.student) }} ({{ esc(t.status | lower) if t.status else t.year }}). \textit{{ '{' }}{{ esc(t.title) }}} ({{ esc(t.kind) }}). {{ esc(t.org) }}, {{ esc(t.location) }}.
 
 {% if not loop.last %}
 \vspace{5pt}

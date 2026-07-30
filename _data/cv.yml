@@ -69,12 +69,12 @@ appointments:
     bullets_web:
       - "Founded the department's IEEE Student Branch, established a new teaching laboratory, and launched the M.Sc. program."
       - "Led academic operations for 100+ students and 12 faculty members; oversaw accreditation and curriculum development."
-      - "Authored 20+ peer-reviewed publications (14 in IEEE journals); supervised 7 graduate theses and 40+ senior design teams."
+      - "Authored 20+ peer-reviewed publications (14 in IEEE journals); supervised [theses_supervised_count] graduate theses and 40+ senior design teams."
     bullets_tex:
       - "Conducted research on network flow–based optimization to enhance wireless sensor network performance; authored 20+ peer-reviewed publications, including 14 articles in IEEE journals."
       - "Led academic operations for 100+ students and 12 faculty members; oversaw accreditation and curriculum, established a new teaching laboratory, launched an M.Sc. program, and founded the IEEE Student Branch."
       - "Developed [VERA](https://vera-eval.app/), a web-based capstone jury evaluation platform supporting secure juror access, rubric-based scoring, progress tracking, analytics, and report exports."
-      - "Taught undergraduate and graduate courses in communications, signal processing, and probability using active learning methodologies; mentored 40+ senior design teams and supervised 7 graduate theses."
+      - "Taught undergraduate and graduate courses in communications, signal processing, and probability using active learning methodologies; mentored 40+ senior design teams and supervised [theses_supervised_count] graduate theses."
   - years: "2015 – 2016"
     org: "Turkish Aerospace"
     org_url: "https://www.tusas.com/en"
@@ -134,7 +134,11 @@ theses_own:                                 # kendi tezleri (/cv/ Graduate these
     pdf_goatcounter_title: "MSc thesis (PDF)"
     yok_url: "https://tez.yok.gov.tr/UlusalTezMerkezi/TezGoster?key=iTkOhwevEenJZ3onUvs52nzi419Y-02Qu4K0DuUcM1T12y2xRhF2YLzHmis2Ng60"
 
-theses_supervised:                          # main.tex Theses Supervised [TH1]…[TH7] — LaTeX-only, not yet rendered on any page
+theses_supervised:                          # PDF Theses Supervised [TH1]…[TH8]; web supervision totals derive from this list
+  - { id: "TH8", student: "Geleri, S.",
+      title: "Joint optimization of node deployment and k-connectivity in underwater acoustic sensor networks for seismic monitoring",
+      kind: "Master's thesis", org: "TED University", location: "Ankara, Türkiye",
+      role: "Advisor", status: "In progress" }
   - { id: "TH7", year: 2025, student: "Tantur Karagul, C.",
       title: "Network lifetime optimization in underwater wireless sensor networks with variable k-connectivity",
       kind: "Doctoral dissertation", org: "TOBB University of Economics and Technology", location: "Ankara, Türkiye" }

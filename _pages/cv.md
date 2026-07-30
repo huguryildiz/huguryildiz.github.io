@@ -18,11 +18,12 @@ permalink: /cv/
   </header>
 
   {% assign sm = site.data.scholar_metrics %}
+  {% assign theses_supervised_count = site.data.cv.theses_supervised | size %}
   <div class="statgrid" role="group" aria-label="At a glance">
     <div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg><b>40+</b><span>Publications</span></div>
     <div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-link"/></svg><b>{{ sm.citations_display }}</b><span>Citations<small>Google Scholar · {{ sm.updated_utc | date: "%b %Y" }}</small></span></div>
     <div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-target"/></svg><b>{{ sm.h_index }}</b><span>h-index<small>Google Scholar · {{ sm.updated_utc | date: "%b %Y" }}</small></span></div>
-    <div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-cap"/></svg><b>7</b><span>Graduate theses supervised</span></div>
+    <div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-cap"/></svg><b>{{ theses_supervised_count }}</b><span>Graduate theses supervised</span></div>
     <div class="stat"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg><b>40+</b><span>Senior design teams</span></div>
   </div>
 
@@ -56,7 +57,7 @@ permalink: /cv/
           {% if a.unit %}<div class="w">{{ a.unit }}</div>{% endif %}
           <div class="d">{% for r in a.roles %}{{ r.title }} ({{ r.period }}{% if r.note %}; {{ r.note }}{% endif %}){% unless forloop.last %} · {% endunless %}{% endfor %}</div>
           <ul class="dotlist">
-            {% for b in a.bullets_web %}<li>{{ b }}</li>
+            {% for b in a.bullets_web %}<li>{{ b | replace: '[theses_supervised_count]', theses_supervised_count }}</li>
             {% endfor %}</ul>
         </div>
       </div>
