@@ -7,9 +7,10 @@ permalink: /students/
 
 <div class="shell">
   <header class="pagehead"><h1 id="students-h1">Students</h1></header>
+  {% assign theses_supervised_count = site.data.cv.theses_supervised | size %}
   <section class="kpi-strip" aria-label="Supervision overview">
     <dl class="kpi-row kpi-row-3">
-      <div><dt><svg class="ic" aria-hidden="true"><use href="#i-cap"/></svg>Graduate theses</dt><dd>7</dd></div>
+      <div><dt><svg class="ic" aria-hidden="true"><use href="#i-cap"/></svg>Graduate theses</dt><dd>{{ theses_supervised_count }}</dd></div>
       <div><dt><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg>Undergraduate projects</dt><dd>40+</dd></div>
       <div><dt><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>Recommendation letters</dt><dd>50+</dd></div>
     </dl>
