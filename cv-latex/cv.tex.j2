@@ -58,6 +58,7 @@
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.6in}
 \addtolength{\textheight}{1in}
+\setlength{\headwidth}{\textwidth}
 
 %\urlstyle{same}
 \raggedbottom
@@ -261,11 +262,7 @@ Leadership, Team Management, Communication \& Collaboration, Problem-Solving, De
 \subsection*{(1) \underline{Journal Articles:}}
 
 {% for p in journals %}
-\noindent [J{{ p.num }}] {{ p.authors_tex }} ({{ p.date_tex }}). {{ p.title_tex }}. \emph{{ '{' }}{{ p.venue_tex }}, {{ p.vol_tex }}\nocorr}{{ p.detail_rest_tex }}.
-{% if not loop.last %}
-\vspace{5pt}
-
-{% endif %}
+\noindent [J{{ p.num }}] {{ p.authors_tex }} ({{ p.date_tex }}). {{ p.title_tex }}. \emph{{ '{' }}{{ p.venue_tex }}, {{ p.vol_tex }}\nocorr}{{ p.detail_rest_tex }}.\par{% if not loop.last %}\vspace{3pt}{% endif %}
 {% endfor %}
 \vspace{-10pt}
 \subsection*{(2) \underline{Editorial:}}
@@ -277,21 +274,13 @@ Leadership, Team Management, Communication \& Collaboration, Problem-Solving, De
 \subsection*{(3) \underline{Conference Proceedings:}}
 
 {% for p in confints %}
-\noindent [C{{ p.num }}] {{ p.authors_tex }} ({{ p.date_tex }}). {{ p.title_tex }}. In \emph{{ '{' }}{{ p.venue_tex }}} ({{ p.pages_tex }}). {{ p.publisher_tex }}.
-{% if not loop.last %}
-\vspace{5pt}
-
-{% endif %}
+\noindent [C{{ p.num }}] {{ p.authors_tex }} ({{ p.date_tex }}). {{ p.title_tex }}. In \emph{{ '{' }}{{ p.venue_tex }}} ({{ p.pages_tex }}). {{ p.publisher_tex }}.\par{% if not loop.last %}\vspace{3pt}{% endif %}
 {% endfor %}
 \vspace{-10pt}
 \subsection*{(4) \underline{Conference Proceedings (in Turkish):}}
 
 {% for p in confnats %}
-\noindent [CT{{ p.num }}] {{ p.authors_tex }} ({{ p.date_tex }}). {{ p.title_tex }}. In \emph{{ '{' }}{{ p.venue_tex }}} ({{ p.pages_tex }}). {{ p.publisher_tex }}.
-{% if not loop.last %}
-\vspace{5pt}
-
-{% endif %}
+\noindent [CT{{ p.num }}] {{ p.authors_tex }} ({{ p.date_tex }}). {{ p.title_tex }}. In \emph{{ '{' }}{{ p.venue_tex }}} ({{ p.pages_tex }}). {{ p.publisher_tex }}.\par{% if not loop.last %}\vspace{3pt}{% endif %}
 {% endfor %}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
