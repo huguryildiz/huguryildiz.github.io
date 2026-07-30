@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-29T05:56:24Z",
+  "updated": "2026-07-30T05:45:20Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-07-29"
+    "end": "2026-07-30"
   },
   "window_order": [
     "today",
@@ -16,6 +16,97 @@
   "windows": {
     "today": {
       "label": "Today",
+      "start": "2026-07-30",
+      "end": "2026-07-30",
+      "pageviews": 0,
+      "pages_total": 0,
+      "pages": [],
+      "events_total": 0,
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries_total": 1,
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 2
+        }
+      ],
+      "referrers_total": 0,
+      "referrers": [],
+      "browsers_total": 1,
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 2
+        }
+      ],
+      "systems_total": 2,
+      "systems": [
+        {
+          "name": "Android",
+          "count": 1
+        },
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
+      "sizes_total": 0,
+      "sizes": [],
+      "languages_total": 1,
+      "languages": [
+        {
+          "name": "English",
+          "count": 2
+        }
+      ],
+      "regions_total": 2,
+      "regions": [
+        {
+          "name": "California",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "Colorado",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 1
+        }
+      ],
+      "regions_unmatched": []
+    },
+    "yesterday": {
+      "label": "Yesterday",
       "start": "2026-07-29",
       "end": "2026-07-29",
       "pageviews": 0,
@@ -49,147 +140,108 @@
         0,
         0
       ],
-      "countries_total": 0,
-      "countries": [],
-      "referrers_total": 0,
-      "referrers": [],
-      "browsers_total": 0,
-      "browsers": [],
-      "systems_total": 0,
-      "systems": [],
-      "sizes_total": 0,
-      "sizes": [],
-      "languages_total": 0,
-      "languages": [],
-      "regions_total": 0,
-      "regions": [],
-      "regions_unmatched": []
-    },
-    "yesterday": {
-      "label": "Yesterday",
-      "start": "2026-07-28",
-      "end": "2026-07-28",
-      "pageviews": 0,
-      "pages_total": 0,
-      "pages": [],
-      "events_total": 0,
-      "events": [],
-      "hourly": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "countries_total": 3,
+      "countries_total": 4,
       "countries": [
-        {
-          "code": "TR",
-          "name": "Turkey",
-          "count": 7
-        },
-        {
-          "code": "NG",
-          "name": "Nigeria",
-          "count": 1
-        },
         {
           "code": "US",
           "name": "United States",
+          "count": 3
+        },
+        {
+          "code": "CA",
+          "name": "Canada",
+          "count": 1
+        },
+        {
+          "code": "DK",
+          "name": "Denmark",
+          "count": 1
+        },
+        {
+          "code": "JP",
+          "name": "Japan",
           "count": 1
         }
       ],
       "referrers_total": 0,
       "referrers": [],
-      "browsers_total": 3,
+      "browsers_total": 2,
       "browsers": [
         {
-          "name": "Safari",
-          "count": 6
-        },
-        {
           "name": "Chrome",
-          "count": 2
+          "count": 4
         },
         {
-          "name": "Firefox",
-          "count": 1
+          "name": "Edge",
+          "count": 2
         }
       ],
       "systems_total": 3,
       "systems": [
         {
-          "name": "iOS",
-          "count": 6
-        },
-        {
           "name": "Windows",
-          "count": 2
+          "count": 4
         },
         {
           "name": "Android",
+          "count": 1
+        },
+        {
+          "name": "macOS",
           "count": 1
         }
       ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 2,
+      "languages_total": 3,
       "languages": [
         {
           "name": "English",
-          "count": 7
-        },
-        {
-          "name": "Turkish",
-          "count": 2
-        }
-      ],
-      "regions_total": 4,
-      "regions": [
-        {
-          "name": "Ankara",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "06",
           "count": 3
         },
         {
-          "name": "İstanbul",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "34",
-          "count": 1
+          "name": "(unknown)",
+          "count": 2
         },
         {
-          "name": "Lagos",
-          "country": "Nigeria",
-          "country_code": "NG",
+          "name": "Chinese",
+          "count": 1
+        }
+      ],
+      "regions_total": 5,
+      "regions": [
+        {
+          "name": "Iowa",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 2
+        },
+        {
+          "name": "Colorado",
+          "country": "United States",
+          "country_code": "US",
           "code": null,
           "count": 1
         },
         {
-          "name": "Illinois",
-          "country": "United States",
-          "country_code": "US",
+          "name": "Ontario",
+          "country": "Canada",
+          "country_code": "CA",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "Capital Region",
+          "country": "Denmark",
+          "country_code": "DK",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "Hyōgo",
+          "country": "Japan",
+          "country_code": "JP",
           "code": null,
           "count": 1
         }
@@ -198,36 +250,36 @@
     },
     "7d": {
       "label": "Last 7 days",
-      "start": "2026-07-23",
-      "end": "2026-07-29",
-      "pageviews": 84,
-      "pages_total": 15,
+      "start": "2026-07-24",
+      "end": "2026-07-30",
+      "pageviews": 82,
+      "pages_total": 16,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 23,
+          "count": 24,
           "refs": [
             {
               "name": "Google",
-              "count": 3
+              "count": 4
             },
             {
-              "name": "www.linkedin.com",
-              "count": 2
+              "name": "bing.com",
+              "count": 1
             },
             {
               "name": "www.bing.com",
               "count": 1
             },
             {
-              "name": "huguryildiz.com/teaching",
+              "name": "www.linkedin.com",
               "count": 1
             },
             {
-              "name": "huguryildiz.com/writing/vera-jury-evaluation-platform",
+              "name": "huguryildiz.com/teaching",
               "count": 1
             }
           ]
@@ -237,18 +289,18 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 9,
+          "count": 8,
           "refs": [
             {
               "name": "huguryildiz.com",
               "count": 4
             },
             {
-              "name": "huguryildiz.com/publications",
-              "count": 2
+              "name": "huguryildiz.com/teaching",
+              "count": 1
             },
             {
-              "name": "huguryildiz.com/teaching",
+              "name": "huguryildiz.com/publications",
               "count": 1
             },
             {
@@ -262,7 +314,7 @@
           "title": "Huseyin Ugur Yildiz",
           "path_id": 80750338,
           "event": false,
-          "count": 8,
+          "count": 7,
           "refs": [
             {
               "name": "huguryildiz.com/students",
@@ -273,15 +325,15 @@
               "count": 1
             },
             {
-              "name": "huguryildiz.com/research",
-              "count": 1
-            },
-            {
               "name": "huguryildiz.com/stats",
               "count": 1
             },
             {
               "name": "huguryildiz.com/writing",
+              "count": 1
+            },
+            {
+              "name": "huguryildiz.com/writing/kairos-university-timetabling",
               "count": 1
             }
           ]
@@ -291,7 +343,7 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 8,
+          "count": 7,
           "refs": [
             {
               "name": "huguryildiz.com/research",
@@ -299,7 +351,7 @@
             },
             {
               "name": "huguryildiz.com",
-              "count": 2
+              "count": 1
             },
             {
               "name": "huguryildiz.com/teaching",
@@ -316,11 +368,11 @@
           "title": "Students | Huseyin Ugur Yildiz",
           "path_id": 80840367,
           "event": false,
-          "count": 7,
+          "count": 6,
           "refs": [
             {
               "name": "huguryildiz.com/teaching",
-              "count": 5
+              "count": 4
             },
             {
               "name": "huguryildiz.com",
@@ -337,7 +389,7 @@
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
-          "count": 7
+          "count": 6
         },
         {
           "path": "/writing",
@@ -347,18 +399,25 @@
           "count": 5
         },
         {
-          "path": "/service",
-          "title": "Service | Huseyin Ugur Yildiz",
-          "path_id": 80843167,
-          "event": false,
-          "count": 4
-        },
-        {
           "path": "/stats",
           "title": "Site Stats | Huseyin Ugur Yildiz",
           "path_id": 95945764,
           "event": false,
           "count": 3
+        },
+        {
+          "path": "/service",
+          "title": "Service | Huseyin Ugur Yildiz",
+          "path_id": 80843167,
+          "event": false,
+          "count": 3
+        },
+        {
+          "path": "/writing/ai-assisted-proof-derivative-free-optimization",
+          "title": "A 30-year gap in derivative-free convex optimization, closed with AI assistance and verified in Lean 4 | Huseyin Ugur Yildiz",
+          "path_id": 97138454,
+          "event": false,
+          "count": 2
         },
         {
           "path": "/writing/vera-jury-evaluation-platform",
@@ -373,13 +432,6 @@
           "path_id": 96451161,
           "event": false,
           "count": 2
-        },
-        {
-          "path": "/writing/kairos-university-timetabling",
-          "title": "A university timetable can look clean on paper and still break in operation | Huseyin Ugur Yildiz",
-          "path_id": 96360102,
-          "event": false,
-          "count": 2
         }
       ],
       "events_total": 1,
@@ -389,7 +441,7 @@
           "title": "CV (PDF), from the CV page",
           "path_id": 96697209,
           "event": true,
-          "count": 1
+          "count": 2
         }
       ],
       "hourly": [
@@ -398,37 +450,47 @@
         1,
         0,
         7,
+        0,
+        0,
+        1,
         1,
         0,
         1,
-        1,
-        0,
-        0,
         3,
         3,
-        11,
+        5,
         4,
         4,
         3,
-        0,
+        4,
         5,
         8,
-        8,
+        9,
         3,
         10,
-        10
+        9
       ],
-      "countries_total": 5,
+      "countries_total": 8,
       "countries": [
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 78
+          "count": 71
         },
         {
           "code": "US",
           "name": "United States",
-          "count": 3
+          "count": 7
+        },
+        {
+          "code": "CA",
+          "name": "Canada",
+          "count": 1
+        },
+        {
+          "code": "DK",
+          "name": "Denmark",
+          "count": 1
         },
         {
           "code": "GB",
@@ -441,23 +503,32 @@
           "count": 1
         },
         {
+          "code": "JP",
+          "name": "Japan",
+          "count": 1
+        },
+        {
           "code": "NG",
           "name": "Nigeria",
           "count": 1
         }
       ],
-      "referrers_total": 4,
+      "referrers_total": 5,
       "referrers": [
         {
           "name": "Google",
-          "count": 4
+          "count": 6
         },
         {
-          "name": "www.linkedin.com",
-          "count": 2
+          "name": "bing.com",
+          "count": 1
         },
         {
           "name": "www.bing.com",
+          "count": 1
+        },
+        {
+          "name": "www.linkedin.com",
           "count": 1
         },
         {
@@ -465,7 +536,7 @@
           "count": 1
         }
       ],
-      "browsers_total": 3,
+      "browsers_total": 4,
       "browsers": [
         {
           "name": "Safari",
@@ -473,14 +544,18 @@
         },
         {
           "name": "Chrome",
-          "count": 33
+          "count": 31
+        },
+        {
+          "name": "Edge",
+          "count": 2
         },
         {
           "name": "Firefox",
           "count": 1
         }
       ],
-      "systems_total": 5,
+      "systems_total": 4,
       "systems": [
         {
           "name": "iOS",
@@ -492,35 +567,35 @@
         },
         {
           "name": "Windows",
-          "count": 11
+          "count": 10
         },
         {
           "name": "Android",
-          "count": 1
-        },
-        {
-          "name": "Linux",
-          "count": 1
+          "count": 3
         }
       ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 3,
+      "languages_total": 4,
       "languages": [
         {
           "name": "(unknown)",
-          "count": 56
+          "count": 50
         },
         {
           "name": "English",
-          "count": 26
+          "count": 31
         },
         {
           "name": "Turkish",
           "count": 2
+        },
+        {
+          "name": "Chinese",
+          "count": 1
         }
       ],
-      "regions_total": 7,
+      "regions_total": 10,
       "regions": [
         {
           "name": "Ankara",
@@ -530,7 +605,14 @@
           "count": 6
         },
         {
-          "name": "Texas",
+          "name": "Colorado",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 2
+        },
+        {
+          "name": "Iowa",
           "country": "United States",
           "country_code": "US",
           "code": null,
@@ -544,9 +626,37 @@
           "count": 1
         },
         {
+          "name": "California",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 1
+        },
+        {
           "name": "Illinois",
           "country": "United States",
           "country_code": "US",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "Texas",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "Ontario",
+          "country": "Canada",
+          "country_code": "CA",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "Capital Region",
+          "country": "Denmark",
+          "country_code": "DK",
           "code": null,
           "count": 1
         },
@@ -556,30 +666,16 @@
           "country_code": "GB",
           "code": null,
           "count": 1
-        },
-        {
-          "name": "Karnataka",
-          "country": "India",
-          "country_code": "IN",
-          "code": null,
-          "count": 1
-        },
-        {
-          "name": "Lagos",
-          "country": "Nigeria",
-          "country_code": "NG",
-          "code": null,
-          "count": 1
         }
       ],
       "regions_unmatched": []
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-06-30",
-      "end": "2026-07-29",
-      "pageviews": 224,
-      "pages_total": 15,
+      "start": "2026-07-01",
+      "end": "2026-07-30",
+      "pageviews": 229,
+      "pages_total": 16,
       "pages": [
         {
           "path": "/cv",
@@ -615,11 +711,11 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 66,
+          "count": 69,
           "refs": [
             {
               "name": "Google",
-              "count": 9
+              "count": 10
             },
             {
               "name": "www.linkedin.com",
@@ -627,7 +723,7 @@
             },
             {
               "name": "bing.com",
-              "count": 2
+              "count": 3
             },
             {
               "name": "github.com",
@@ -733,7 +829,7 @@
           "title": "Page Not Found Huseyin Ugur Yildiz",
           "path_id": 80992097,
           "event": false,
-          "count": 8
+          "count": 7
         },
         {
           "path": "/writing",
@@ -750,16 +846,16 @@
           "count": 4
         },
         {
-          "path": "/writing/vera-jury-evaluation-platform",
-          "title": "The hardest part of running a jury isn’t the jury | Huseyin Ugur Yildiz",
-          "path_id": 96462588,
+          "path": "/writing/ai-assisted-proof-derivative-free-optimization",
+          "title": "A 30-year gap in derivative-free convex optimization, closed with AI assistance and verified in Lean 4 | Huseyin Ugur Yildiz",
+          "path_id": 97138454,
           "event": false,
           "count": 2
         },
         {
-          "path": "/terms",
-          "title": "Terms and Privacy Policy | Huseyin Ugur Yildiz",
-          "path_id": 96451161,
+          "path": "/writing/vera-jury-evaluation-platform",
+          "title": "The hardest part of running a jury isn’t the jury | Huseyin Ugur Yildiz",
+          "path_id": 96462588,
           "event": false,
           "count": 2
         }
@@ -771,7 +867,7 @@
           "title": "CV (PDF), from the CV page",
           "path_id": 96697209,
           "event": true,
-          "count": 1
+          "count": 2
         }
       ],
       "hourly": [
@@ -785,22 +881,22 @@
         3,
         1,
         2,
-        4,
+        5,
         9,
         6,
         20,
         20,
         12,
         9,
-        2,
+        6,
         12,
         24,
-        12,
+        13,
         6,
-        15,
+        14,
         15
       ],
-      "countries_total": 21,
+      "countries_total": 23,
       "countries": [
         {
           "code": "TR",
@@ -810,7 +906,7 @@
         {
           "code": "US",
           "name": "United States",
-          "count": 69
+          "count": 74
         },
         {
           "code": "SA",
@@ -843,6 +939,16 @@
           "count": 1
         },
         {
+          "code": "CA",
+          "name": "Canada",
+          "count": 1
+        },
+        {
+          "code": "DK",
+          "name": "Denmark",
+          "count": 1
+        },
+        {
           "code": "DZ",
           "name": "Algeria",
           "count": 1
@@ -865,6 +971,11 @@
         {
           "code": "IN",
           "name": "India",
+          "count": 1
+        },
+        {
+          "code": "JP",
+          "name": "Japan",
           "count": 1
         },
         {
@@ -901,18 +1012,13 @@
           "code": "TH",
           "name": "Thailand",
           "count": 1
-        },
-        {
-          "code": "VE",
-          "name": "Venezuela",
-          "count": 1
         }
       ],
       "referrers_total": 10,
       "referrers": [
         {
           "name": "Google",
-          "count": 68
+          "count": 71
         },
         {
           "name": "www.linkedin.com",
@@ -920,7 +1026,7 @@
         },
         {
           "name": "bing.com",
-          "count": 2
+          "count": 3
         },
         {
           "name": "github.com",
@@ -955,19 +1061,19 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 151
+          "count": 156
         },
         {
           "name": "Safari",
           "count": 68
         },
         {
-          "name": "Firefox",
-          "count": 3
+          "name": "Edge",
+          "count": 4
         },
         {
-          "name": "Edge",
-          "count": 2
+          "name": "Firefox",
+          "count": 3
         }
       ],
       "systems_total": 5,
@@ -982,36 +1088,54 @@
         },
         {
           "name": "macOS",
-          "count": 57
+          "count": 58
         },
         {
           "name": "Windows",
-          "count": 29
+          "count": 33
         },
         {
           "name": "Android",
-          "count": 7
+          "count": 9
         }
       ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 3,
+      "languages_total": 4,
       "languages": [
         {
           "name": "(unknown)",
-          "count": 196
+          "count": 197
         },
         {
           "name": "English",
-          "count": 26
+          "count": 31
         },
         {
           "name": "Turkish",
           "count": 2
+        },
+        {
+          "name": "Chinese",
+          "count": 1
         }
       ],
       "regions_total": 16,
       "regions": [
+        {
+          "name": "Colorado",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 8
+        },
+        {
+          "name": "California",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 7
+        },
         {
           "name": "Ankara",
           "country": "Turkey",
@@ -1020,18 +1144,11 @@
           "count": 6
         },
         {
-          "name": "California",
+          "name": "Iowa",
           "country": "United States",
           "country_code": "US",
           "code": null,
-          "count": 6
-        },
-        {
-          "name": "Colorado",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 6
+          "count": 5
         },
         {
           "name": "Virginia",
@@ -1046,13 +1163,6 @@
           "country_code": "US",
           "code": null,
           "count": 4
-        },
-        {
-          "name": "Iowa",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 3
         },
         {
           "name": "New York",
@@ -1101,21 +1211,21 @@
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-05-01",
-      "end": "2026-07-29",
-      "pageviews": 429,
-      "pages_total": 15,
+      "start": "2026-05-02",
+      "end": "2026-07-30",
+      "pageviews": 435,
+      "pages_total": 16,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 171,
+          "count": 174,
           "refs": [
             {
               "name": "Google",
-              "count": 25
+              "count": 26
             },
             {
               "name": "www.linkedin.com",
@@ -1126,11 +1236,11 @@
               "count": 8
             },
             {
-              "name": "github.com",
+              "name": "bing.com",
               "count": 3
             },
             {
-              "name": "chatgpt.com",
+              "name": "github.com",
               "count": 3
             }
           ]
@@ -1283,16 +1393,16 @@
           "count": 4
         },
         {
-          "path": "/writing/vera-jury-evaluation-platform",
-          "title": "The hardest part of running a jury isn’t the jury | Huseyin Ugur Yildiz",
-          "path_id": 96462588,
+          "path": "/writing/ai-assisted-proof-derivative-free-optimization",
+          "title": "A 30-year gap in derivative-free convex optimization, closed with AI assistance and verified in Lean 4 | Huseyin Ugur Yildiz",
+          "path_id": 97138454,
           "event": false,
           "count": 2
         },
         {
-          "path": "/terms",
-          "title": "Terms and Privacy Policy | Huseyin Ugur Yildiz",
-          "path_id": 96451161,
+          "path": "/writing/vera-jury-evaluation-platform",
+          "title": "The hardest part of running a jury isn’t the jury | Huseyin Ugur Yildiz",
+          "path_id": 96462588,
           "event": false,
           "count": 2
         }
@@ -1304,7 +1414,7 @@
           "title": "CV (PDF), from the CV page",
           "path_id": 96697209,
           "event": true,
-          "count": 1
+          "count": 2
         }
       ],
       "hourly": [
@@ -1318,22 +1428,22 @@
         6,
         3,
         16,
-        15,
+        16,
         14,
         13,
         26,
         24,
         25,
         22,
-        18,
+        22,
         34,
         41,
-        14,
+        15,
         11,
         16,
         25
       ],
-      "countries_total": 35,
+      "countries_total": 36,
       "countries": [
         {
           "code": "TR",
@@ -1343,7 +1453,7 @@
         {
           "code": "US",
           "name": "United States",
-          "count": 77
+          "count": 82
         },
         {
           "code": "GB",
@@ -1376,8 +1486,18 @@
           "count": 4
         },
         {
+          "code": "CA",
+          "name": "Canada",
+          "count": 3
+        },
+        {
           "code": "DZ",
           "name": "Algeria",
+          "count": 3
+        },
+        {
+          "code": "JP",
+          "name": "Japan",
           "count": 3
         },
         {
@@ -1391,18 +1511,8 @@
           "count": 2
         },
         {
-          "code": "CA",
-          "name": "Canada",
-          "count": 2
-        },
-        {
           "code": "IT",
           "name": "Italy",
-          "count": 2
-        },
-        {
-          "code": "JP",
-          "name": "Japan",
           "count": 2
         },
         {
@@ -1433,6 +1543,11 @@
         {
           "code": "CY",
           "name": "Cyprus",
+          "count": 1
+        },
+        {
+          "code": "DK",
+          "name": "Denmark",
           "count": 1
         },
         {
@@ -1515,7 +1630,7 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 88
+          "count": 91
         },
         {
           "name": "www.linkedin.com",
@@ -1526,16 +1641,16 @@
           "count": 8
         },
         {
+          "name": "bing.com",
+          "count": 3
+        },
+        {
           "name": "github.com",
           "count": 3
         },
         {
           "name": "chatgpt.com",
           "count": 3
-        },
-        {
-          "name": "bing.com",
-          "count": 2
         },
         {
           "name": "scholar.google.com",
@@ -1566,26 +1681,26 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 282
+          "count": 288
         },
         {
           "name": "Safari",
           "count": 142
         },
         {
-          "name": "Firefox",
-          "count": 3
+          "name": "Edge",
+          "count": 4
         },
         {
-          "name": "Edge",
-          "count": 2
+          "name": "Firefox",
+          "count": 3
         }
       ],
       "systems_total": 5,
       "systems": [
         {
           "name": "macOS",
-          "count": 163
+          "count": 164
         },
         {
           "name": "iOS",
@@ -1597,28 +1712,32 @@
         },
         {
           "name": "Windows",
-          "count": 62
+          "count": 67
         },
         {
           "name": "Android",
-          "count": 18
+          "count": 20
         }
       ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 3,
+      "languages_total": 4,
       "languages": [
         {
           "name": "(unknown)",
-          "count": 401
+          "count": 403
         },
         {
           "name": "English",
-          "count": 26
+          "count": 31
         },
         {
           "name": "Turkish",
           "count": 2
+        },
+        {
+          "name": "Chinese",
+          "count": 1
         }
       ],
       "regions_total": 19,
@@ -1628,7 +1747,14 @@
           "country": "United States",
           "country_code": "US",
           "code": null,
-          "count": 7
+          "count": 8
+        },
+        {
+          "name": "Colorado",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 8
         },
         {
           "name": "Ankara",
@@ -1638,7 +1764,7 @@
           "count": 6
         },
         {
-          "name": "Colorado",
+          "name": "Iowa",
           "country": "United States",
           "country_code": "US",
           "code": null,
@@ -1650,13 +1776,6 @@
           "country_code": "US",
           "code": null,
           "count": 5
-        },
-        {
-          "name": "Iowa",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 4
         },
         {
           "name": "Texas",
@@ -1712,21 +1831,21 @@
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-07-30",
-      "end": "2026-07-29",
-      "pageviews": 936,
-      "pages_total": 19,
+      "start": "2025-07-31",
+      "end": "2026-07-30",
+      "pageviews": 942,
+      "pages_total": 20,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 357,
+          "count": 360,
           "refs": [
             {
               "name": "Google",
-              "count": 40
+              "count": 41
             },
             {
               "name": "www.linkedin.com",
@@ -1919,7 +2038,7 @@
           "title": "CV (PDF), from the CV page",
           "path_id": 96697209,
           "event": true,
-          "count": 1
+          "count": 2
         }
       ],
       "hourly": [
@@ -1933,22 +2052,22 @@
         10,
         7,
         24,
-        23,
+        24,
         49,
         29,
         61,
         59,
         48,
         69,
-        38,
+        42,
         68,
         50,
-        34,
+        35,
         27,
         52,
         62
       ],
-      "countries_total": 38,
+      "countries_total": 39,
       "countries": [
         {
           "code": "TR",
@@ -1958,7 +2077,7 @@
         {
           "code": "US",
           "name": "United States",
-          "count": 99
+          "count": 104
         },
         {
           "code": "GB",
@@ -1976,14 +2095,14 @@
           "count": 13
         },
         {
-          "code": "IN",
-          "name": "India",
+          "code": "CA",
+          "name": "Canada",
           "count": 10
         },
         {
-          "code": "CA",
-          "name": "Canada",
-          "count": 9
+          "code": "IN",
+          "name": "India",
+          "count": 10
         },
         {
           "code": "DE",
@@ -2004,6 +2123,11 @@
           "code": "DZ",
           "name": "Algeria",
           "count": 4
+        },
+        {
+          "code": "JP",
+          "name": "Japan",
+          "count": 3
         },
         {
           "code": "KZ",
@@ -2028,11 +2152,6 @@
         {
           "code": "IT",
           "name": "Italy",
-          "count": 2
-        },
-        {
-          "code": "JP",
-          "name": "Japan",
           "count": 2
         },
         {
@@ -2068,6 +2187,11 @@
         {
           "code": "CY",
           "name": "Cyprus",
+          "count": 1
+        },
+        {
+          "code": "DK",
+          "name": "Denmark",
           "count": 1
         },
         {
@@ -2145,7 +2269,7 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 107
+          "count": 110
         },
         {
           "name": "www.linkedin.com",
@@ -2164,16 +2288,16 @@
           "count": 4
         },
         {
+          "name": "bing.com",
+          "count": 3
+        },
+        {
           "name": "github.com",
           "count": 3
         },
         {
           "name": "chatgpt.com",
           "count": 3
-        },
-        {
-          "name": "bing.com",
-          "count": 2
         },
         {
           "name": "scholar.google.com",
@@ -2196,7 +2320,7 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 531
+          "count": 537
         },
         {
           "name": "Safari",
@@ -2208,7 +2332,7 @@
         },
         {
           "name": "Edge",
-          "count": 2
+          "count": 4
         }
       ],
       "systems_total": 5,
@@ -2219,11 +2343,11 @@
         },
         {
           "name": "macOS",
-          "count": 341
+          "count": 342
         },
         {
           "name": "Windows",
-          "count": 130
+          "count": 135
         },
         {
           "name": "Linux",
@@ -2231,24 +2355,28 @@
         },
         {
           "name": "Android",
-          "count": 23
+          "count": 25
         }
       ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 3,
+      "languages_total": 4,
       "languages": [
         {
           "name": "(unknown)",
-          "count": 908
+          "count": 910
         },
         {
           "name": "English",
-          "count": 26
+          "count": 31
         },
         {
           "name": "Turkish",
           "count": 2
+        },
+        {
+          "name": "Chinese",
+          "count": 1
         }
       ],
       "regions_total": 18,
@@ -2258,14 +2386,21 @@
           "country": "United States",
           "country_code": "US",
           "code": null,
-          "count": 11
+          "count": 12
         },
         {
           "name": "Colorado",
           "country": "United States",
           "country_code": "US",
           "code": null,
-          "count": 10
+          "count": 12
+        },
+        {
+          "name": "Iowa",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 9
         },
         {
           "name": "Oregon",
@@ -2273,13 +2408,6 @@
           "country_code": "US",
           "code": null,
           "count": 9
-        },
-        {
-          "name": "Iowa",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 7
         },
         {
           "name": "Ankara",
@@ -2350,20 +2478,20 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-07-29",
-      "pageviews": 936,
-      "pages_total": 19,
+      "end": "2026-07-30",
+      "pageviews": 942,
+      "pages_total": 20,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 357,
+          "count": 360,
           "refs": [
             {
               "name": "Google",
-              "count": 40
+              "count": 41
             },
             {
               "name": "www.linkedin.com",
@@ -2556,7 +2684,7 @@
           "title": "CV (PDF), from the CV page",
           "path_id": 96697209,
           "event": true,
-          "count": 1
+          "count": 2
         }
       ],
       "hourly": [
@@ -2570,22 +2698,22 @@
         10,
         7,
         24,
-        23,
+        24,
         49,
         29,
         61,
         59,
         48,
         69,
-        38,
+        42,
         68,
         50,
-        34,
+        35,
         27,
         52,
         62
       ],
-      "countries_total": 38,
+      "countries_total": 39,
       "countries": [
         {
           "code": "TR",
@@ -2595,7 +2723,7 @@
         {
           "code": "US",
           "name": "United States",
-          "count": 99
+          "count": 104
         },
         {
           "code": "GB",
@@ -2613,14 +2741,14 @@
           "count": 13
         },
         {
-          "code": "IN",
-          "name": "India",
+          "code": "CA",
+          "name": "Canada",
           "count": 10
         },
         {
-          "code": "CA",
-          "name": "Canada",
-          "count": 9
+          "code": "IN",
+          "name": "India",
+          "count": 10
         },
         {
           "code": "DE",
@@ -2641,6 +2769,11 @@
           "code": "DZ",
           "name": "Algeria",
           "count": 4
+        },
+        {
+          "code": "JP",
+          "name": "Japan",
+          "count": 3
         },
         {
           "code": "KZ",
@@ -2665,11 +2798,6 @@
         {
           "code": "IT",
           "name": "Italy",
-          "count": 2
-        },
-        {
-          "code": "JP",
-          "name": "Japan",
           "count": 2
         },
         {
@@ -2705,6 +2833,11 @@
         {
           "code": "CY",
           "name": "Cyprus",
+          "count": 1
+        },
+        {
+          "code": "DK",
+          "name": "Denmark",
           "count": 1
         },
         {
@@ -2782,7 +2915,7 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 107
+          "count": 110
         },
         {
           "name": "www.linkedin.com",
@@ -2801,16 +2934,16 @@
           "count": 4
         },
         {
+          "name": "bing.com",
+          "count": 3
+        },
+        {
           "name": "github.com",
           "count": 3
         },
         {
           "name": "chatgpt.com",
           "count": 3
-        },
-        {
-          "name": "bing.com",
-          "count": 2
         },
         {
           "name": "scholar.google.com",
@@ -2833,7 +2966,7 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 531
+          "count": 537
         },
         {
           "name": "Safari",
@@ -2845,7 +2978,7 @@
         },
         {
           "name": "Edge",
-          "count": 2
+          "count": 4
         }
       ],
       "systems_total": 5,
@@ -2856,11 +2989,11 @@
         },
         {
           "name": "macOS",
-          "count": 341
+          "count": 342
         },
         {
           "name": "Windows",
-          "count": 130
+          "count": 135
         },
         {
           "name": "Linux",
@@ -2868,24 +3001,28 @@
         },
         {
           "name": "Android",
-          "count": 23
+          "count": 25
         }
       ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 3,
+      "languages_total": 4,
       "languages": [
         {
           "name": "(unknown)",
-          "count": 908
+          "count": 910
         },
         {
           "name": "English",
-          "count": 26
+          "count": 31
         },
         {
           "name": "Turkish",
           "count": 2
+        },
+        {
+          "name": "Chinese",
+          "count": 1
         }
       ],
       "regions_total": 18,
@@ -2895,14 +3032,21 @@
           "country": "United States",
           "country_code": "US",
           "code": null,
-          "count": 11
+          "count": 12
         },
         {
           "name": "Colorado",
           "country": "United States",
           "country_code": "US",
           "code": null,
-          "count": 10
+          "count": 12
+        },
+        {
+          "name": "Iowa",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 9
         },
         {
           "name": "Oregon",
@@ -2910,13 +3054,6 @@
           "country_code": "US",
           "code": null,
           "count": 9
-        },
-        {
-          "name": "Iowa",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 7
         },
         {
           "name": "Ankara",
@@ -3684,6 +3821,10 @@
     },
     {
       "date": "2026-07-29",
+      "views": 6
+    },
+    {
+      "date": "2026-07-30",
       "views": 0
     }
   ],
@@ -3691,7 +3832,7 @@
     {
       "path": "/",
       "title": "Home | Huseyin Ugur Yildiz",
-      "count": 357,
+      "count": 360,
       "stats": [
         {
           "date": "2019-01-01",
@@ -14759,6 +14900,10 @@
         },
         {
           "date": "2026-07-29",
+          "views": 3
+        },
+        {
+          "date": "2026-07-30",
           "views": 0
         }
       ]
@@ -25835,6 +25980,10 @@
         {
           "date": "2026-07-29",
           "views": 0
+        },
+        {
+          "date": "2026-07-30",
+          "views": 0
         }
       ]
     },
@@ -36909,6 +37058,10 @@
         },
         {
           "date": "2026-07-29",
+          "views": 0
+        },
+        {
+          "date": "2026-07-30",
           "views": 0
         }
       ]
@@ -47985,6 +48138,10 @@
         {
           "date": "2026-07-29",
           "views": 0
+        },
+        {
+          "date": "2026-07-30",
+          "views": 0
         }
       ]
     },
@@ -59059,6 +59216,10 @@
         },
         {
           "date": "2026-07-29",
+          "views": 0
+        },
+        {
+          "date": "2026-07-30",
           "views": 0
         }
       ]
@@ -70135,6 +70296,10 @@
         {
           "date": "2026-07-29",
           "views": 0
+        },
+        {
+          "date": "2026-07-30",
+          "views": 0
         }
       ]
     }
@@ -70145,7 +70310,7 @@
     "data_retention_days": 0
   },
   "totals": {
-    "pageviews": 936,
+    "pageviews": 942,
     "visitors": null
   },
   "pages": [
@@ -70154,11 +70319,11 @@
       "title": "Home | Huseyin Ugur Yildiz",
       "path_id": 80749188,
       "event": false,
-      "count": 357,
+      "count": 360,
       "refs": [
         {
           "name": "Google",
-          "count": 40
+          "count": 41
         },
         {
           "name": "www.linkedin.com",
@@ -70353,7 +70518,7 @@
     {
       "code": "US",
       "name": "United States",
-      "count": 99
+      "count": 104
     },
     {
       "code": "GB",
@@ -70371,14 +70536,14 @@
       "count": 13
     },
     {
-      "code": "IN",
-      "name": "India",
+      "code": "CA",
+      "name": "Canada",
       "count": 10
     },
     {
-      "code": "CA",
-      "name": "Canada",
-      "count": 9
+      "code": "IN",
+      "name": "India",
+      "count": 10
     },
     {
       "code": "DE",
@@ -70399,6 +70564,11 @@
       "code": "DZ",
       "name": "Algeria",
       "count": 4
+    },
+    {
+      "code": "JP",
+      "name": "Japan",
+      "count": 3
     },
     {
       "code": "KZ",
@@ -70423,11 +70593,6 @@
     {
       "code": "IT",
       "name": "Italy",
-      "count": 2
-    },
-    {
-      "code": "JP",
-      "name": "Japan",
       "count": 2
     },
     {
@@ -70463,6 +70628,11 @@
     {
       "code": "CY",
       "name": "Cyprus",
+      "count": 1
+    },
+    {
+      "code": "DK",
+      "name": "Denmark",
       "count": 1
     },
     {
@@ -70539,7 +70709,7 @@
   "referrers": [
     {
       "name": "Google",
-      "count": 107
+      "count": 110
     },
     {
       "name": "www.linkedin.com",
@@ -70558,16 +70728,16 @@
       "count": 4
     },
     {
+      "name": "bing.com",
+      "count": 3
+    },
+    {
       "name": "github.com",
       "count": 3
     },
     {
       "name": "chatgpt.com",
       "count": 3
-    },
-    {
-      "name": "bing.com",
-      "count": 2
     },
     {
       "name": "scholar.google.com",
@@ -70589,7 +70759,7 @@
   "browsers": [
     {
       "name": "Chrome",
-      "count": 531
+      "count": 537
     },
     {
       "name": "Safari",
@@ -70601,7 +70771,7 @@
     },
     {
       "name": "Edge",
-      "count": 2
+      "count": 4
     }
   ],
   "systems": [
@@ -70611,11 +70781,11 @@
     },
     {
       "name": "macOS",
-      "count": 341
+      "count": 342
     },
     {
       "name": "Windows",
-      "count": 130
+      "count": 135
     },
     {
       "name": "Linux",
@@ -70623,7 +70793,7 @@
     },
     {
       "name": "Android",
-      "count": 23
+      "count": 25
     }
   ],
   "sizes": []
