@@ -58,7 +58,8 @@
       <span><i class="solid"></i>publication-backed</span>
       <span><i class="frontier"></i>ongoing / exploratory</span>
     </div>
-    <div class="rgraph-stage">
+    <p class="rgraph-pan-hint" id="rgraphPanHint">Swipe horizontally to explore the full map.</p>
+    <div class="rgraph-stage" aria-describedby="rgraphPanHint">
       <svg class="rgraph" viewBox="0 0 900 560" role="group" aria-label="Research constellation: shared topics connecting the research areas">
         <defs>
           <filter id="rgGlow" x="-100%" y="-100%" width="300%" height="300%">
@@ -101,7 +102,7 @@
             transform="translate({{ node.x }} {{ node.y }})"
             style="--sx:{{ node.start_x }}px;--sy:{{ node.start_y }}px;--d:{{ forloop.index0 | times: 38 }}ms">
             <g class="rg-node-body">
-              {%- if node.open -%}<circle class="rg-hit" r="{{ node.radius | plus: 14 }}"/>{%- endif -%}
+              {%- if node.open -%}<circle class="rg-hit" r="{{ node.radius | plus: 19 }}"/>{%- endif -%}
               <circle class="rg-halo" r="{{ node.radius | plus: 10 }}" filter="url(#rgGlow)"/>
               <circle class="rg-ring" r="{{ node.radius | plus: 6 }}"/>
               <circle class="rg-dot" r="{{ node.radius }}"/>
@@ -293,13 +294,20 @@
   var map = document.getElementById('research-map');
   var viewBtns = Array.prototype.slice.call(map.querySelectorAll('.rmap-views button'));
   var relWrap = map.querySelector('.rgraph-wrap');
+  var relStage = relWrap.querySelector('.rgraph-stage');
+  var graphWasMobile = window.innerWidth <= 620;
   var animateGraph = null, startConstellation = null, stopConstellation = null, curView = 'tree';
+  function centerMobileGraph(){
+    if (!relStage || window.innerWidth > 620) return;
+    relStage.scrollLeft = Math.max(0, (relStage.scrollWidth - relStage.clientWidth) / 2);
+  }
   function showView(v){
     var changed = (v !== curView);
     curView = v;
     grid.hidden = (v !== 'tree');
     relWrap.hidden = (v !== 'relations');
     viewBtns.forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.view === v)); });
+    if (v === 'relations') requestAnimationFrame(centerMobileGraph);
     if (v === 'tree'){
       draw();
       if (stopConstellation) stopConstellation(true);
@@ -523,6 +531,10 @@
       } else if (startConstellation) startConstellation();
     });
     window.addEventListener('resize', function(){
+      var graphIsMobile = window.innerWidth <= 620;
+      if (curView === 'relations' && graphIsMobile && !graphWasMobile)
+        requestAnimationFrame(centerMobileGraph);
+      graphWasMobile = graphIsMobile;
       if (canMove()){
         if (startConstellation) startConstellation();
       } else if (stopConstellation) stopConstellation(true);
