@@ -1,8 +1,8 @@
 {
-  "updated": "2026-07-31T06:18:14Z",
+  "updated": "2026-08-01T05:58:40Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-07-31"
+    "end": "2026-08-01"
   },
   "window_order": [
     "today",
@@ -16,8 +16,8 @@
   "windows": {
     "today": {
       "label": "Today",
-      "start": "2026-07-31",
-      "end": "2026-07-31",
+      "start": "2026-08-01",
+      "end": "2026-08-01",
       "pageviews": 0,
       "pages_total": 0,
       "pages": [],
@@ -49,55 +49,26 @@
         0,
         0
       ],
-      "countries_total": 1,
-      "countries": [
-        {
-          "code": "TR",
-          "name": "Turkey",
-          "count": 1
-        }
-      ],
+      "countries_total": 0,
+      "countries": [],
       "referrers_total": 0,
       "referrers": [],
-      "browsers_total": 1,
-      "browsers": [
-        {
-          "name": "Chrome",
-          "count": 1
-        }
-      ],
-      "systems_total": 1,
-      "systems": [
-        {
-          "name": "Android",
-          "count": 1
-        }
-      ],
+      "browsers_total": 0,
+      "browsers": [],
+      "systems_total": 0,
+      "systems": [],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 1,
-      "languages": [
-        {
-          "name": "Turkish",
-          "count": 1
-        }
-      ],
-      "regions_total": 1,
-      "regions": [
-        {
-          "name": "Ankara",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "06",
-          "count": 1
-        }
-      ],
+      "languages_total": 0,
+      "languages": [],
+      "regions_total": 0,
+      "regions": [],
       "regions_unmatched": []
     },
     "yesterday": {
       "label": "Yesterday",
-      "start": "2026-07-30",
-      "end": "2026-07-30",
+      "start": "2026-07-31",
+      "end": "2026-07-31",
       "pageviews": 0,
       "pages_total": 0,
       "pages": [],
@@ -132,56 +103,64 @@
       "countries_total": 2,
       "countries": [
         {
-          "code": "US",
-          "name": "United States",
-          "count": 2
+          "code": "TR",
+          "name": "Turkey",
+          "count": 1
         },
         {
-          "code": "FR",
-          "name": "France",
+          "code": "US",
+          "name": "United States",
           "count": 1
         }
       ],
       "referrers_total": 0,
       "referrers": [],
-      "browsers_total": 1,
+      "browsers_total": 2,
       "browsers": [
         {
           "name": "Chrome",
-          "count": 3
+          "count": 1
+        },
+        {
+          "name": "Safari",
+          "count": 1
         }
       ],
       "systems_total": 2,
       "systems": [
         {
-          "name": "Windows",
-          "count": 2
+          "name": "Android",
+          "count": 1
         },
         {
-          "name": "Android",
+          "name": "iOS",
           "count": 1
         }
       ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 1,
+      "languages_total": 2,
       "languages": [
         {
-          "name": "English",
-          "count": 3
+          "name": "(unknown)",
+          "count": 1
+        },
+        {
+          "name": "Turkish",
+          "count": 1
         }
       ],
       "regions_total": 2,
       "regions": [
         {
-          "name": "California",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
+          "name": "Ankara",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "06",
           "count": 1
         },
         {
-          "name": "Colorado",
+          "name": "Virginia",
           "country": "United States",
           "country_code": "US",
           "code": null,
@@ -192,32 +171,32 @@
     },
     "7d": {
       "label": "Last 7 days",
-      "start": "2026-07-25",
-      "end": "2026-07-31",
-      "pageviews": 69,
-      "pages_total": 15,
+      "start": "2026-07-26",
+      "end": "2026-08-01",
+      "pageviews": 44,
+      "pages_total": 14,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 22,
+          "count": 19,
           "refs": [
             {
               "name": "Google",
-              "count": 4
+              "count": 3
             },
             {
               "name": "bing.com",
               "count": 1
             },
             {
-              "name": "www.bing.com",
+              "name": "com.linkedin.android",
               "count": 1
             },
             {
-              "name": "www.linkedin.com",
+              "name": "www.bing.com",
               "count": 1
             },
             {
@@ -227,22 +206,31 @@
           ]
         },
         {
+          "path": "/writing/ai-assisted-proof-derivative-free-optimization",
+          "title": "A 30-year gap in derivative-free convex optimization, closed with AI assistance and verified in Lean 4 | Huseyin Ugur Yildiz",
+          "path_id": 97138454,
+          "event": false,
+          "count": 3,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 3
+            }
+          ]
+        },
+        {
           "path": "/research",
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 6,
+          "count": 3,
           "refs": [
             {
               "name": "huguryildiz.com",
-              "count": 3
-            },
-            {
-              "name": "huguryildiz.com/teaching",
               "count": 1
             },
             {
-              "name": "huguryildiz.com/publications",
+              "name": "huguryildiz.com/teaching",
               "count": 1
             },
             {
@@ -252,77 +240,15 @@
           ]
         },
         {
-          "path": "/teaching",
-          "title": "Huseyin Ugur Yildiz",
-          "path_id": 80750338,
+          "path": "/writing/vera-jury-evaluation-platform",
+          "title": "The hardest part of running a jury isn’t the jury | Huseyin Ugur Yildiz",
+          "path_id": 96462588,
           "event": false,
-          "count": 6,
+          "count": 2,
           "refs": [
-            {
-              "name": "huguryildiz.com/students",
-              "count": 2
-            },
-            {
-              "name": "huguryildiz.com",
-              "count": 1
-            },
-            {
-              "name": "huguryildiz.com/stats",
-              "count": 1
-            },
             {
               "name": "huguryildiz.com/writing",
-              "count": 1
-            },
-            {
-              "name": "huguryildiz.com/writing/ieee-twc-submission-cap",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/students",
-          "title": "Students | Huseyin Ugur Yildiz",
-          "path_id": 80840367,
-          "event": false,
-          "count": 5,
-          "refs": [
-            {
-              "name": "huguryildiz.com/teaching",
-              "count": 3
-            },
-            {
-              "name": "huguryildiz.com",
-              "count": 1
-            },
-            {
-              "name": "huguryildiz.com/terms",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/publications",
-          "title": "Publications | Huseyin Ugur Yildiz",
-          "path_id": 80750273,
-          "event": false,
-          "count": 5,
-          "refs": [
-            {
-              "name": "huguryildiz.com/research",
               "count": 2
-            },
-            {
-              "name": "huguryildiz.com",
-              "count": 1
-            },
-            {
-              "name": "huguryildiz.com/teaching",
-              "count": 1
-            },
-            {
-              "name": "192.168.68.105:5500",
-              "count": 1
             }
           ]
         },
@@ -331,49 +257,66 @@
           "title": "Writing | Huseyin Ugur Yildiz",
           "path_id": 96360100,
           "event": false,
-          "count": 4
-        },
-        {
-          "path": "/cv",
-          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
-          "path_id": 80749912,
-          "event": false,
-          "count": 4
-        },
-        {
-          "path": "/writing/ai-assisted-proof-derivative-free-optimization",
-          "title": "A 30-year gap in derivative-free convex optimization, closed with AI assistance and verified in Lean 4 | Huseyin Ugur Yildiz",
-          "path_id": 97138454,
-          "event": false,
-          "count": 3
+          "count": 2,
+          "refs": [
+            {
+              "name": "huguryildiz.com",
+              "count": 1
+            },
+            {
+              "name": "huguryildiz.com/publications",
+              "count": 1
+            }
+          ]
         },
         {
           "path": "/stats",
           "title": "Site Stats | Huseyin Ugur Yildiz",
           "path_id": 95945764,
           "event": false,
-          "count": 3
+          "count": 2
         },
         {
-          "path": "/writing/vera-jury-evaluation-platform",
-          "title": "The hardest part of running a jury isn’t the jury | Huseyin Ugur Yildiz",
-          "path_id": 96462588,
+          "path": "/students",
+          "title": "Students | Huseyin Ugur Yildiz",
+          "path_id": 80840367,
           "event": false,
           "count": 2
+        },
+        {
+          "path": "/teaching",
+          "title": "Huseyin Ugur Yildiz",
+          "path_id": 80750338,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/publications",
+          "title": "Publications | Huseyin Ugur Yildiz",
+          "path_id": 80750273,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/writing/ieee-twc-submission-cap",
+          "title": "An academic rate limiter: IEEE TWC now caps authors at 36 new manuscripts a year | Huseyin Ugur Yildiz",
+          "path_id": 96633631,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing/cuopt-gpu-multidimensional-knapsack",
+          "title": "A 30,000-variable knapsack, solved on a GPU in ten seconds | Huseyin Ugur Yildiz",
+          "path_id": 96462585,
+          "event": false,
+          "count": 1
         },
         {
           "path": "/terms",
           "title": "Terms and Privacy Policy | Huseyin Ugur Yildiz",
           "path_id": 96451161,
           "event": false,
-          "count": 2
-        },
-        {
-          "path": "/service",
-          "title": "Service | Huseyin Ugur Yildiz",
-          "path_id": 80843167,
-          "event": false,
-          "count": 2
+          "count": 1
         }
       ],
       "events_total": 1,
@@ -394,35 +337,35 @@
         9,
         0,
         0,
-        1,
-        1,
-        0,
-        1,
         2,
         1,
+        0,
         1,
+        0,
+        1,
+        1,
+        0,
         4,
+        3,
         4,
-        4,
-        4,
-        5,
+        1,
+        0,
+        7,
         0,
         9,
-        3,
-        10,
-        9
+        0
       ],
       "countries_total": 9,
       "countries": [
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 57
+          "count": 30
         },
         {
           "code": "US",
           "name": "United States",
-          "count": 6
+          "count": 7
         },
         {
           "code": "CA",
@@ -460,26 +403,22 @@
           "count": 1
         }
       ],
-      "referrers_total": 5,
+      "referrers_total": 4,
       "referrers": [
         {
           "name": "Google",
-          "count": 7
+          "count": 6
         },
         {
           "name": "bing.com",
           "count": 1
         },
         {
+          "name": "com.linkedin.android",
+          "count": 1
+        },
+        {
           "name": "www.bing.com",
-          "count": 1
-        },
-        {
-          "name": "www.linkedin.com",
-          "count": 1
-        },
-        {
-          "name": "192.168.68.105:5500",
           "count": 1
         }
       ],
@@ -487,11 +426,11 @@
       "browsers": [
         {
           "name": "Safari",
-          "count": 40
+          "count": 29
         },
         {
           "name": "Chrome",
-          "count": 27
+          "count": 12
         },
         {
           "name": "Edge",
@@ -506,11 +445,7 @@
       "systems": [
         {
           "name": "iOS",
-          "count": 39
-        },
-        {
-          "name": "macOS",
-          "count": 17
+          "count": 29
         },
         {
           "name": "Windows",
@@ -519,6 +454,10 @@
         {
           "name": "Android",
           "count": 4
+        },
+        {
+          "name": "macOS",
+          "count": 1
         }
       ],
       "sizes_total": 0,
@@ -526,12 +465,12 @@
       "languages_total": 4,
       "languages": [
         {
-          "name": "(unknown)",
-          "count": 34
-        },
-        {
           "name": "English",
           "count": 32
+        },
+        {
+          "name": "(unknown)",
+          "count": 8
         },
         {
           "name": "Turkish",
@@ -542,7 +481,7 @@
           "count": 1
         }
       ],
-      "regions_total": 8,
+      "regions_total": 9,
       "regions": [
         {
           "name": "Ankara",
@@ -587,6 +526,13 @@
           "count": 1
         },
         {
+          "name": "Virginia",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 1
+        },
+        {
           "name": "Ontario",
           "country": "Canada",
           "country_code": "CA",
@@ -605,9 +551,9 @@
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-07-02",
-      "end": "2026-07-31",
-      "pageviews": 223,
+      "start": "2026-07-03",
+      "end": "2026-08-01",
+      "pageviews": 219,
       "pages_total": 16,
       "pages": [
         {
@@ -644,7 +590,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 65,
+          "count": 64,
           "refs": [
             {
               "name": "Google",
@@ -663,7 +609,7 @@
               "count": 2
             },
             {
-              "name": "lnkd.in",
+              "name": "com.linkedin.android",
               "count": 1
             }
           ]
@@ -673,11 +619,11 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 19,
+          "count": 18,
           "refs": [
             {
               "name": "huguryildiz.com",
-              "count": 10
+              "count": 9
             },
             {
               "name": "huguryildiz.com/research",
@@ -698,14 +644,14 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 14,
+          "count": 13,
           "refs": [
             {
-              "name": "huguryildiz.com/publications",
-              "count": 6
+              "name": "huguryildiz.com",
+              "count": 5
             },
             {
-              "name": "huguryildiz.com",
+              "name": "huguryildiz.com/publications",
               "count": 5
             },
             {
@@ -758,16 +704,16 @@
           "count": 9
         },
         {
-          "path": "/404.html",
-          "title": "Page Not Found Huseyin Ugur Yildiz",
-          "path_id": 80992097,
-          "event": false,
-          "count": 6
-        },
-        {
           "path": "/writing",
           "title": "Writing | Huseyin Ugur Yildiz",
           "path_id": 96360100,
+          "event": false,
+          "count": 5
+        },
+        {
+          "path": "/404.html",
+          "title": "Page Not Found Huseyin Ugur Yildiz",
+          "path_id": 80992097,
           "event": false,
           "count": 5
         },
@@ -811,30 +757,30 @@
         17,
         2,
         3,
-        3,
+        4,
         1,
         1,
-        5,
+        4,
         6,
         6,
         20,
-        20,
-        12,
-        9,
+        17,
+        11,
+        8,
         6,
-        12,
+        13,
         24,
         13,
         5,
         14,
         15
       ],
-      "countries_total": 23,
+      "countries_total": 21,
       "countries": [
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 122
+          "count": 119
         },
         {
           "code": "US",
@@ -887,11 +833,6 @@
           "count": 1
         },
         {
-          "code": "EC",
-          "name": "Ecuador",
-          "count": 1
-        },
-        {
           "code": "FR",
           "name": "France",
           "count": 1
@@ -899,11 +840,6 @@
         {
           "code": "ID",
           "name": "Indonesia",
-          "count": 1
-        },
-        {
-          "code": "IL",
-          "name": "Israel",
           "count": 1
         },
         {
@@ -947,7 +883,7 @@
           "count": 1
         }
       ],
-      "referrers_total": 9,
+      "referrers_total": 10,
       "referrers": [
         {
           "name": "Google",
@@ -964,6 +900,10 @@
         {
           "name": "github.com",
           "count": 2
+        },
+        {
+          "name": "com.linkedin.android",
+          "count": 1
         },
         {
           "name": "lnkd.in",
@@ -990,11 +930,11 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 150
+          "count": 144
         },
         {
           "name": "Safari",
-          "count": 67
+          "count": 68
         },
         {
           "name": "Edge",
@@ -1009,19 +949,19 @@
       "systems": [
         {
           "name": "iOS",
-          "count": 64
+          "count": 65
         },
         {
           "name": "Linux",
-          "count": 64
+          "count": 62
         },
         {
           "name": "macOS",
-          "count": 55
+          "count": 52
         },
         {
           "name": "Windows",
-          "count": 32
+          "count": 31
         },
         {
           "name": "Android",
@@ -1034,7 +974,7 @@
       "languages": [
         {
           "name": "(unknown)",
-          "count": 188
+          "count": 183
         },
         {
           "name": "English",
@@ -1063,7 +1003,7 @@
           "country": "United States",
           "country_code": "US",
           "code": null,
-          "count": 7
+          "count": 6
         },
         {
           "name": "Colorado",
@@ -1077,7 +1017,7 @@
           "country": "United States",
           "country_code": "US",
           "code": null,
-          "count": 5
+          "count": 6
         },
         {
           "name": "Iowa",
@@ -1140,9 +1080,9 @@
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-05-03",
-      "end": "2026-07-31",
-      "pageviews": 438,
+      "start": "2026-05-04",
+      "end": "2026-08-01",
+      "pageviews": 440,
       "pages_total": 16,
       "pages": [
         {
@@ -1150,7 +1090,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 176,
+          "count": 178,
           "refs": [
             {
               "name": "Google",
@@ -1162,7 +1102,7 @@
             },
             {
               "name": "com.linkedin.android",
-              "count": 8
+              "count": 9
             },
             {
               "name": "bing.com",
@@ -1354,7 +1294,7 @@
         21,
         4,
         3,
-        6,
+        7,
         3,
         16,
         16,
@@ -1365,7 +1305,7 @@
         25,
         23,
         22,
-        34,
+        35,
         41,
         15,
         11,
@@ -1382,7 +1322,7 @@
         {
           "code": "US",
           "name": "United States",
-          "count": 82
+          "count": 83
         },
         {
           "code": "GB",
@@ -1567,7 +1507,7 @@
         },
         {
           "name": "com.linkedin.android",
-          "count": 8
+          "count": 9
         },
         {
           "name": "bing.com",
@@ -1614,7 +1554,7 @@
         },
         {
           "name": "Safari",
-          "count": 142
+          "count": 143
         },
         {
           "name": "Edge",
@@ -1633,7 +1573,7 @@
         },
         {
           "name": "iOS",
-          "count": 116
+          "count": 117
         },
         {
           "name": "Linux",
@@ -1654,7 +1594,7 @@
       "languages": [
         {
           "name": "(unknown)",
-          "count": 403
+          "count": 404
         },
         {
           "name": "English",
@@ -1704,7 +1644,7 @@
           "country": "United States",
           "country_code": "US",
           "code": null,
-          "count": 5
+          "count": 6
         },
         {
           "name": "Texas",
@@ -1760,9 +1700,9 @@
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-08-01",
-      "end": "2026-07-31",
-      "pageviews": 945,
+      "start": "2025-08-02",
+      "end": "2026-08-01",
+      "pageviews": 947,
       "pages_total": 20,
       "pages": [
         {
@@ -1770,7 +1710,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 362,
+          "count": 364,
           "refs": [
             {
               "name": "Google",
@@ -1782,7 +1722,7 @@
             },
             {
               "name": "com.linkedin.android",
-              "count": 8
+              "count": 9
             },
             {
               "name": "huguryildiz.com/publications",
@@ -1978,7 +1918,7 @@
         31,
         11,
         4,
-        10,
+        11,
         7,
         24,
         24,
@@ -1989,7 +1929,7 @@
         48,
         70,
         42,
-        68,
+        69,
         50,
         35,
         27,
@@ -2006,7 +1946,7 @@
         {
           "code": "US",
           "name": "United States",
-          "count": 104
+          "count": 105
         },
         {
           "code": "GB",
@@ -2206,7 +2146,7 @@
         },
         {
           "name": "com.linkedin.android",
-          "count": 8
+          "count": 9
         },
         {
           "name": "avesis.tedu.edu.tr",
@@ -2253,7 +2193,7 @@
         },
         {
           "name": "Safari",
-          "count": 395
+          "count": 396
         },
         {
           "name": "Firefox",
@@ -2268,7 +2208,7 @@
       "systems": [
         {
           "name": "iOS",
-          "count": 359
+          "count": 360
         },
         {
           "name": "macOS",
@@ -2293,7 +2233,7 @@
       "languages": [
         {
           "name": "(unknown)",
-          "count": 910
+          "count": 911
         },
         {
           "name": "English",
@@ -2350,7 +2290,7 @@
           "country": "United States",
           "country_code": "US",
           "code": null,
-          "count": 6
+          "count": 7
         },
         {
           "name": "Texas",
@@ -2407,8 +2347,8 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-07-31",
-      "pageviews": 945,
+      "end": "2026-08-01",
+      "pageviews": 947,
       "pages_total": 20,
       "pages": [
         {
@@ -2416,7 +2356,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 362,
+          "count": 364,
           "refs": [
             {
               "name": "Google",
@@ -2428,7 +2368,7 @@
             },
             {
               "name": "com.linkedin.android",
-              "count": 8
+              "count": 9
             },
             {
               "name": "huguryildiz.com/publications",
@@ -2624,7 +2564,7 @@
         31,
         11,
         4,
-        10,
+        11,
         7,
         24,
         24,
@@ -2635,7 +2575,7 @@
         48,
         70,
         42,
-        68,
+        69,
         50,
         35,
         27,
@@ -2652,7 +2592,7 @@
         {
           "code": "US",
           "name": "United States",
-          "count": 104
+          "count": 105
         },
         {
           "code": "GB",
@@ -2852,7 +2792,7 @@
         },
         {
           "name": "com.linkedin.android",
-          "count": 8
+          "count": 9
         },
         {
           "name": "avesis.tedu.edu.tr",
@@ -2899,7 +2839,7 @@
         },
         {
           "name": "Safari",
-          "count": 395
+          "count": 396
         },
         {
           "name": "Firefox",
@@ -2914,7 +2854,7 @@
       "systems": [
         {
           "name": "iOS",
-          "count": 359
+          "count": 360
         },
         {
           "name": "macOS",
@@ -2939,7 +2879,7 @@
       "languages": [
         {
           "name": "(unknown)",
-          "count": 910
+          "count": 911
         },
         {
           "name": "English",
@@ -2996,7 +2936,7 @@
           "country": "United States",
           "country_code": "US",
           "code": null,
-          "count": 6
+          "count": 7
         },
         {
           "name": "Texas",
@@ -3758,6 +3698,10 @@
     },
     {
       "date": "2026-07-31",
+      "views": 2
+    },
+    {
+      "date": "2026-08-01",
       "views": 0
     }
   ],
@@ -3765,7 +3709,7 @@
     {
       "path": "/",
       "title": "Home | Huseyin Ugur Yildiz",
-      "count": 362,
+      "count": 364,
       "stats": [
         {
           "date": "2019-01-01",
@@ -14841,6 +14785,10 @@
         },
         {
           "date": "2026-07-31",
+          "views": 2
+        },
+        {
+          "date": "2026-08-01",
           "views": 0
         }
       ]
@@ -25925,6 +25873,10 @@
         {
           "date": "2026-07-31",
           "views": 0
+        },
+        {
+          "date": "2026-08-01",
+          "views": 0
         }
       ]
     },
@@ -37007,6 +36959,10 @@
         },
         {
           "date": "2026-07-31",
+          "views": 0
+        },
+        {
+          "date": "2026-08-01",
           "views": 0
         }
       ]
@@ -48091,6 +48047,10 @@
         {
           "date": "2026-07-31",
           "views": 0
+        },
+        {
+          "date": "2026-08-01",
+          "views": 0
         }
       ]
     },
@@ -59173,6 +59133,10 @@
         },
         {
           "date": "2026-07-31",
+          "views": 0
+        },
+        {
+          "date": "2026-08-01",
           "views": 0
         }
       ]
@@ -70257,6 +70221,10 @@
         {
           "date": "2026-07-31",
           "views": 0
+        },
+        {
+          "date": "2026-08-01",
+          "views": 0
         }
       ]
     }
@@ -70267,7 +70235,7 @@
     "data_retention_days": 0
   },
   "totals": {
-    "pageviews": 945,
+    "pageviews": 947,
     "visitors": null
   },
   "pages": [
@@ -70276,7 +70244,7 @@
       "title": "Home | Huseyin Ugur Yildiz",
       "path_id": 80749188,
       "event": false,
-      "count": 362,
+      "count": 364,
       "refs": [
         {
           "name": "Google",
@@ -70288,7 +70256,7 @@
         },
         {
           "name": "com.linkedin.android",
-          "count": 8
+          "count": 9
         },
         {
           "name": "huguryildiz.com/publications",
@@ -70475,7 +70443,7 @@
     {
       "code": "US",
       "name": "United States",
-      "count": 104
+      "count": 105
     },
     {
       "code": "GB",
@@ -70674,7 +70642,7 @@
     },
     {
       "name": "com.linkedin.android",
-      "count": 8
+      "count": 9
     },
     {
       "name": "avesis.tedu.edu.tr",
@@ -70720,7 +70688,7 @@
     },
     {
       "name": "Safari",
-      "count": 395
+      "count": 396
     },
     {
       "name": "Firefox",
@@ -70734,7 +70702,7 @@
   "systems": [
     {
       "name": "iOS",
-      "count": 359
+      "count": 360
     },
     {
       "name": "macOS",
