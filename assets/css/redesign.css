@@ -955,6 +955,7 @@ ol.publist{list-style:none; margin:0; padding:0;}
 .rgraph-list button small{color:var(--ink-faint); font-size:.75rem; text-align:right;}
 .rgraph-list button:hover span{color:var(--accent);}
 .rgraph-list button:focus-visible{outline:2px solid var(--focus); outline-offset:3px;}
+.rgraph-pan-hint{display:none;}
 @media (prefers-reduced-motion:reduce){
   .rgraph .rg-edge,.rgraph .rg-node-body,.rgraph .rg-dot{transition:none;}
   .rgraph .rg-node.rg-in .rg-node-body{animation:none;}
@@ -967,8 +968,18 @@ ol.publist{list-style:none; margin:0; padding:0;}
   .rmap-node.established,.rmap-node.ongoing,.rmap-node.exploratory{grid-column:1; grid-row:auto;}
 }
 @media (max-width:620px){
-  .rgraph-key,.rgraph-stage{display:none;}
-  .rgraph-list{display:block;}
+  .rgraph-key{justify-content:flex-start; margin:.1rem 0 .45rem; font-size:.68rem;}
+  .rgraph-pan-hint{display:block; margin:0 0 .45rem; color:var(--ink-faint);
+    font-size:.75rem; line-height:1.4;}
+  .rgraph-stage{display:block; overflow-x:auto; overflow-y:hidden;
+    overscroll-behavior-inline:contain; -webkit-overflow-scrolling:touch;
+    scrollbar-color:var(--hairline-strong) transparent; scrollbar-width:thin;}
+  .rgraph{width:760px; max-width:none;}
+  .rgraph .rg-label{font-size:14px; stroke-width:5px;}
+  .rgraph .rg-meta{font-size:11px; stroke-width:4px;}
+  .rgraph .rg-node.core .rg-label{font-size:16px;}
+  .rgraph .rg-node.area .rg-label{font-size:14.5px;}
+  .rgraph-list{display:none;}
 }
 
 .theme-item{border-bottom:1px solid var(--hairline); padding:1.6rem 0;
