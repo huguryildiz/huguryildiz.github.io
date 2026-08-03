@@ -231,7 +231,7 @@ modified: 2026-07-26
     which means the newest date on this page updates itself whenever a piece is published.
   {%- endcomment -%}
   <ul class="newslist">
-    {%- for post in site.posts limit: 2 %}
+    {%- for post in site.posts %}
     <li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time><svg class="nicon" aria-hidden="true"><use href="#i-pen"/></svg><span>Writing: <a href="{{ post.url | relative_url }}">{{ post.title }}</a>.</span></li>
     {%- endfor %}
     <li><time>Dec 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span><a href="https://www.linkedin.com/in/%C3%A7a%C4%9Fla-tantur-karag%C3%BCl-b834b0b5/" target="_blank" rel="noopener">Çağla Tantur Karagül<span class="sr-only"> (external)</span></a> successfully defended her Ph.D. dissertation at TOBB University of Economics and Technology.</span></li>
