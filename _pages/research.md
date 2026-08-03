@@ -179,6 +179,11 @@ permalink: /research/
 
   <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-book"/></svg>Code &amp; learning resources</h2>
   <ul class="resourcelist">
+    <li><span class="n">IEEE / ACM Paper Writing Skills</span> — an evidence-aware manuscript workflow
+      for drafting, rewriting, humanizing, and auditing engineering papers without crossing the
+      evidence boundary.
+      <span class="tag">Codex · Claude Code</span>
+      <a class="ext" href="https://github.com/huguryildiz/ieee-acm-paper-writing" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-github"/></svg> GitHub</a></li>
     <li><span class="n">wsn-opt-python</span> — a hands-on Python tutorial for network-flow–based
       optimization models in wireless sensor networks, intended for students and researchers.
       <a class="ext" href="https://github.com/huguryildiz/wsn-opt-python" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-github"/></svg> GitHub</a></li>
