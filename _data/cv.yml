@@ -70,7 +70,7 @@ appointments:
     bullets_tex:
       - "Conducted research on network flow–based optimization to enhance wireless sensor network performance; authored 20+ peer-reviewed publications, including 14 articles in IEEE journals."
       - "Led academic operations for 100+ students and 12 faculty members; oversaw accreditation and curriculum, established a new teaching laboratory, launched an M.Sc. program, and founded the IEEE Student Branch."
-      - "Developed [VERA](https://vera-eval.app/), a web-based capstone jury evaluation platform supporting secure juror access, rubric-based scoring, progress tracking, analytics, and report exports."
+      - "Developed [VERA](https://vera-eval.app/), a web-based capstone jury evaluation platform for secure rubric-based assessment, analytics, and reporting, and [KAIROS](https://github.com/huguryildiz/KAIROS), an OR-Tools CP-SAT university timetabling system with repair search and a separate post-solve validator."
       - "Taught undergraduate and graduate courses in communications, signal processing, and probability using active learning methodologies; mentored 40+ senior design teams and supervised [theses_supervised_count] graduate theses."
   - years: "2015 – 2016"
     org: "Turkish Aerospace"
@@ -221,6 +221,23 @@ toolbox:                                    # /cv/ Technical toolbox — LaTeX't
       - { name: "Sakana Fugu", icon: "sakana-fugu.png" }
       - { name: "GitHub Copilot", icon: "githubcopilot.svg" }
       - { name: "Antigravity", icon: "antigravity.png" }
+
+# Seçilmiş, kamuya açık araştırma yazılımları. PDF'de Technical Skills sonrasında
+# render edilir; uzun bir GitHub envanteri değil, akademik profile doğrudan kanıt
+# sağlayan sınırlı bir seçkidir.
+selected_research_software:
+  - title: "research-graph"
+    url: "https://github.com/huguryildiz/research-graph"
+    detail_tex: >-
+      MIT-licensed Python verifier for multi-agent research: schema validation,
+      provenance-chain and producer--reviewer role checks, and bounded revisions;
+      public beta with automated tests and continuous integration.
+  - title: "KAIROS"
+    url: "https://github.com/huguryildiz/KAIROS"
+    detail_tex: >-
+      OR-Tools CP-SAT university timetabling system with repair search, independent
+      post-solve constraint validation, a bilingual web interface, and structured
+      schedule exports.
 
 certificates:                               # /cv/ Professional development — main.tex Certificates
   - { year: 2025, title: "Reinforcement Learning Specialization", org: "University of Alberta (Coursera)",

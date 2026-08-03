@@ -201,9 +201,22 @@ Linear Programming (LP), Mixed-Integer Programming (MIP), Multi-Objective Optimi
 Supervised and Unsupervised Learning, Regression and Classification Models, Decision Trees, Neural Networks, Markov Decision Processes (MDPs), Q-Learning, Proximal Policy Optimization (PPO), Deep Reinforcement Learning.
 \item \noindent \textbf{Programming \& Scientific Computing:} 
 Python (NumPy, Pandas, Scikit-Learn, Matplotlib), MATLAB-Octave, Simulink, \LaTeX.
-\item \noindent \textbf{Development Tools:} 
-PyCharm, Jupyter Notebook, VS Code, Spyder, Cursor.
 \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------SELECTED RESEARCH SOFTWARE---
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-10pt}
+\section{\faCodeBranch~Selected Research Software}
+\justify
+
+\begin{itemize}[leftmargin=*]
+\setlength\itemsep{-0.5em}
+{% for project in cv.selected_research_software %}
+\item \noindent \textbf{\href{{ '{' }}{{ project.url }}}{\underline{{ '{' }}{{ esc(project.title) }}}}} --- {{ tex(project.detail_tex) }}
+{% endfor %}
+\end{itemize}
+\vspace{-5pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %-----------CERTIFICATES-------------------
@@ -218,15 +231,6 @@ PyCharm, Jupyter Notebook, VS Code, Spyder, Cursor.
 \item \noindent \textbf{{ '{' }}{{ esc(c.title) }}}, {{ esc(c.org | replace(" (Coursera)", "")) }} -- Coursera, {{ c.year }} (\href{{ '{' }}{{ c.url }}}{\underline{Credential}})
 {% endfor %}
 \end{itemize}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%-----------SOFT SKILLS-------------------
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{-10pt}
-\section{\faUsers~Soft Skills}
-\justify
-
-Leadership, Team Management, Communication \& Collaboration, Problem-Solving, Decision-Making, Mentoring, Teaching, Adaptability, Time Management
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %-----------AWARDS-------------------
@@ -286,6 +290,7 @@ Leadership, Team Management, Communication \& Collaboration, Problem-Solving, De
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %-----------CITATIONS-------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
 \vspace{-10pt}
 \section{\faChartBar~Citations}
 \justify
