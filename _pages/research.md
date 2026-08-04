@@ -25,7 +25,7 @@ permalink: /research/
   <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-layers"/></svg>Key research topics</h2>
 
   <article class="theme-item">
-    <video class="thumb topic-video" data-topic-video muted playsinline preload="none"
+    <video class="thumb topic-video" data-topic-video muted playsinline preload="metadata"
       poster="/assets/images/research/network_flow_optimization.webp" tabindex="-1" aria-hidden="true">
       <source src="/assets/video/topics/optimization.mp4" type="video/mp4">
     </video>
@@ -45,7 +45,7 @@ permalink: /research/
   </article>
 
   <article class="theme-item">
-    <video class="thumb topic-video" data-topic-video muted playsinline preload="none"
+    <video class="thumb topic-video" data-topic-video muted playsinline preload="metadata"
       poster="/assets/images/research/wireless_ad_hoc_underwater_sensor_networks.webp" tabindex="-1" aria-hidden="true">
       <source src="/assets/video/topics/wireless-underwater.mp4" type="video/mp4">
     </video>
@@ -66,7 +66,7 @@ permalink: /research/
   </article>
 
   <article class="theme-item">
-    <video class="thumb topic-video" data-topic-video muted playsinline preload="none"
+    <video class="thumb topic-video" data-topic-video muted playsinline preload="metadata"
       poster="/assets/images/research/drone_network_resilience.webp" tabindex="-1" aria-hidden="true">
       <source src="/assets/video/topics/aerial.mp4" type="video/mp4">
     </video>
@@ -85,7 +85,7 @@ permalink: /research/
   </article>
 
   <article class="theme-item">
-    <video class="thumb topic-video" data-topic-video muted playsinline preload="none"
+    <video class="thumb topic-video" data-topic-video muted playsinline preload="metadata"
       poster="/assets/images/research/hybrid_opt_rl_networks.webp" tabindex="-1" aria-hidden="true">
       <source src="/assets/video/topics/quantum.mp4" type="video/mp4">
     </video>
@@ -119,7 +119,7 @@ permalink: /research/
           video.pause();
         }
       });
-    },{threshold:.45});
+    },{rootMargin:'360px 0px',threshold:.01});
     videos.forEach(function(video){
       video.muted=true;
       video.defaultMuted=true;
@@ -178,7 +178,7 @@ permalink: /research/
   </article>
 
   <article class="swproject">
-    <img src="/assets/images/ieee-acm-paper-writing.png" alt="IEEE / ACM Paper Writing Skills social preview showing evidence-grounded manuscript drafting, rewriting, and audit" width="1280" height="640" loading="lazy">
+    <img src="/assets/images/ieee-acm-paper-writing.webp" alt="IEEE / ACM Paper Writing Skills social preview showing evidence-grounded manuscript drafting, rewriting, and audit" width="1280" height="640" loading="lazy">
     <div>
       <h3>IEEE / ACM Paper Writing Skills</h3>
       <p>An evidence-aware manuscript workflow for drafting, rewriting, humanizing, and auditing
