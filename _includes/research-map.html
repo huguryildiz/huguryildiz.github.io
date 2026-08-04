@@ -1,9 +1,9 @@
 <figure class="rmap" id="research-map">
   <div class="rmap-views" role="group" aria-label="Map view">
-    <button type="button" data-view="tree" aria-pressed="true">Overview</button>
-    <button type="button" data-view="relations" aria-pressed="false">Topic relations</button>
+    <button type="button" data-view="tree" aria-pressed="false">Overview</button>
+    <button type="button" data-view="relations" aria-pressed="true">Topic relations</button>
   </div>
-  <div class="rmap-grid" id="rmapGrid">
+  <div class="rmap-grid" id="rmapGrid" hidden>
     <svg class="rmap-wires" aria-hidden="true" focusable="false"></svg>
     <div class="rmap-core" id="rmapCore">
       <span class="t">Operations Research</span>
@@ -53,7 +53,7 @@
     </details>
     {%- endfor -%}
   </div>
-  <div class="rgraph-wrap" hidden>
+  <div class="rgraph-wrap">
     <div class="rgraph-key" aria-hidden="true">
       <span><i class="solid"></i>publication-backed</span>
       <span><i class="frontier"></i>ongoing / exploratory</span>
@@ -296,7 +296,7 @@
   var relWrap = map.querySelector('.rgraph-wrap');
   var relStage = relWrap.querySelector('.rgraph-stage');
   var graphWasMobile = window.innerWidth <= 620;
-  var animateGraph = null, startConstellation = null, stopConstellation = null, curView = 'tree';
+  var animateGraph = null, startConstellation = null, stopConstellation = null, curView = 'relations';
   function centerMobileGraph(){
     if (!relStage || window.innerWidth > 620) return;
     relStage.scrollLeft = Math.max(0, (relStage.scrollWidth - relStage.clientWidth) / 2);
