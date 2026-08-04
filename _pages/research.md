@@ -184,7 +184,7 @@ permalink: /research/
       <p>An evidence-aware manuscript workflow for drafting, rewriting, humanizing, and auditing
         engineering papers while preserving claims, citations, notation, scope, and uncertainty.</p>
       <div class="links">
-        <a class="ext" href="https://ieee-acm-paper-writing.vercel.app" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-globe"/></svg> Audit-map showcase</a>
+        <a class="ext" href="https://ieee-acm-paper-writing.vercel.app" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-globe"/></svg> ieee-acm-paper-writing.vercel.app</a>
         <a class="ext" href="https://github.com/huguryildiz/ieee-acm-paper-writing" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-github"/></svg> GitHub repository</a>
       </div>
     </div>
