@@ -44,7 +44,7 @@ modified: 2026-07-26
               <span>Ankara, Türkiye<span class="sr-only"> — campus location on the map (external)</span></span></a></p>
         </div>
       </div>
-      <p class="prop">Optimization for resilient networked systems under physical constraints.</p>
+      <p class="prop">Operations Research &amp; Machine Learning for Wireless, Underwater &amp; Aerial Networks</p>
       <p class="supporting">I develop optimization-based models for routing, resource allocation,
         and energy efficiency in wireless ad&nbsp;hoc, underwater acoustic, and drone-assisted
         networks, increasingly combined with machine learning, reinforcement learning, and
