@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">IEEE and ACM Paper Writing</title>
+  <desc id="desc">A premium amber and ember emblem showing a quill pen drawing a line of manuscript text, sealed by a kite-shaped verification mark.</desc>
+
+  <defs>
+    <linearGradient id="navy" x1="76" y1="36" x2="430" y2="486" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3C2609"/>
+      <stop offset="0.54" stop-color="#211203"/>
+      <stop offset="1" stop-color="#100701"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="200" y1="330" x2="372" y2="146" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFAEE"/>
+      <stop offset="0.6" stop-color="#F4E3C3"/>
+      <stop offset="1" stop-color="#DCC49A"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="122" y1="82" x2="396" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFEDC4"/>
+      <stop offset="0.3" stop-color="#FFC24D"/>
+      <stop offset="0.68" stop-color="#E0871B"/>
+      <stop offset="1" stop-color="#A0500C"/>
+    </linearGradient>
+    <linearGradient id="vaneGold" x1="210" y1="330" x2="374" y2="150" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B4711C"/>
+      <stop offset="0.5" stop-color="#E7A233"/>
+      <stop offset="1" stop-color="#FFD588"/>
+    </linearGradient>
+    <linearGradient id="sealGold" x1="352" y1="344" x2="432" y2="426" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE0A0"/>
+      <stop offset="0.55" stop-color="#FFB93C"/>
+      <stop offset="1" stop-color="#D6811A"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(266 238) rotate(90) scale(224)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A6631A" stop-opacity="0.46"/>
+      <stop offset="1" stop-color="#1A0F04" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="quillShadow" x="96" y="72" width="340" height="360" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#130700" flood-opacity="0.6"/>
+    </filter>
+    <filter id="sealShadow" x="312" y="312" width="164" height="164" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#0C0500" flood-opacity="0.65"/>
+    </filter>
+    <clipPath id="frameClip">
+      <rect x="24" y="24" width="464" height="464" rx="104"/>
+    </clipPath>
+    <clipPath id="vaneAClip">
+      <path d="M197 331 Q275 245 374 140 C300 160 225 235 197 331 Z"/>
+    </clipPath>
+    <clipPath id="vaneBClip">
+      <path d="M197 331 Q275 245 374 140 C340 200 265 275 197 331 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- App-icon frame -->
+  <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#navy)"/>
+  <rect x="28" y="28" width="456" height="456" rx="100" stroke="url(#gold)" stroke-opacity="0.68" stroke-width="8"/>
+  <rect x="43" y="43" width="426" height="426" rx="85" stroke="#F5C97F" stroke-opacity="0.18" stroke-width="2"/>
+  <g clip-path="url(#frameClip)">
+    <circle cx="266" cy="238" r="224" fill="url(#glow)"/>
+    <g stroke="#E8A63C" stroke-opacity="0.16" stroke-width="2">
+      <path d="M-10 142H522M-10 370H522"/>
+      <path d="M142-10V522M370-10V522"/>
+      <circle cx="256" cy="256" r="218" stroke-dasharray="4 10"/>
+    </g>
+    <!-- Kite outline: a quiet nod to the IEEE emblem -->
+    <rect x="106" y="106" width="300" height="300" rx="34" transform="rotate(45 256 256)"
+          stroke="#F0AE45" stroke-opacity="0.26" stroke-width="3"/>
+  </g>
+
+  <!-- Ink stroke the quill is laying down -->
+  <g stroke-linecap="round" fill="none">
+    <path d="M158 393 C212 405 262 405 314 396" stroke="#F3C57E" stroke-opacity="0.88" stroke-width="9"/>
+    <path d="M190 424 C226 431 262 431 296 425" stroke="#E8A63C" stroke-opacity="0.4" stroke-width="6"/>
+  </g>
+
+  <!-- Quill -->
+  <g filter="url(#quillShadow)">
+    <!-- broad vane -->
+    <path d="M197 331 Q275 245 374 140 C300 160 225 235 197 331 Z" fill="url(#paper)"/>
+    <g clip-path="url(#vaneAClip)" stroke="#A67C43" stroke-opacity="0.55" stroke-width="4" stroke-linecap="round">
+      <path d="M213 313 180 246"/>
+      <path d="M234 291 201 224"/>
+      <path d="M255 269 222 202"/>
+      <path d="M275 247 242 180"/>
+      <path d="M296 224 263 157"/>
+      <path d="M316 202 283 135"/>
+      <path d="M337 180 304 113"/>
+    </g>
+    <path d="M197 331 Q275 245 374 140 C300 160 225 235 197 331 Z" stroke="url(#gold)" stroke-width="5" stroke-linejoin="round"/>
+
+    <!-- narrow vane -->
+    <path d="M197 331 Q275 245 374 140 C340 200 265 275 197 331 Z" fill="url(#vaneGold)"/>
+    <g clip-path="url(#vaneBClip)" stroke="#5C3407" stroke-opacity="0.45" stroke-width="4" stroke-linecap="round">
+      <path d="M213 313 259 329"/>
+      <path d="M234 291 280 307"/>
+      <path d="M255 269 301 285"/>
+      <path d="M275 247 321 263"/>
+      <path d="M296 224 342 240"/>
+      <path d="M316 202 362 218"/>
+    </g>
+    <path d="M197 331 Q275 245 374 140 C340 200 265 275 197 331 Z" stroke="url(#gold)" stroke-width="5" stroke-linejoin="round"/>
+
+    <!-- rachis -->
+    <path d="M197 331 Q275 245 374 140" stroke="#3A2308" stroke-opacity="0.7" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- nib -->
+    <path d="M186 321 L208 341 L152 390 Z" fill="url(#gold)" stroke="#7A4410" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M176 352 L158 379" stroke="#5C3407" stroke-opacity="0.8" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Verified-claim seal, cut as an IEEE-style kite -->
+  <g filter="url(#sealShadow)">
+    <g transform="rotate(45 392 386)">
+      <rect x="358" y="352" width="68" height="68" rx="18" fill="#170D03" stroke="#7A4410" stroke-width="9"/>
+      <rect x="362" y="356" width="60" height="60" rx="15" fill="#2E1A06" stroke="url(#sealGold)" stroke-width="6"/>
+      <rect x="370" y="364" width="44" height="44" rx="11" stroke="#FFCE78" stroke-opacity="0.5" stroke-width="2" stroke-dasharray="3 6"/>
+    </g>
+    <path d="M377 387 L389 399 L409 374" stroke="url(#sealGold)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Quiet IEEE / ACM signature encoded as bars, avoiding font dependencies -->
+  <g fill="#FFC776" opacity="0.8">
+    <rect x="203" y="448" width="34" height="4" rx="2"/>
+    <rect x="245" y="448" width="22" height="4" rx="2"/>
+    <rect x="275" y="448" width="34" height="4" rx="2"/>
+  </g>
+</svg>
