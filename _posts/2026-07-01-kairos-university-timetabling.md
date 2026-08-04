@@ -29,11 +29,11 @@ A full university term solves in **3–10 minutes**, depending on the quality ta
 Tested on two live TED University terms (Fall 2025 and Spring 2026), KAIROS drove **every tracked hard-constraint category to zero** unresolved violations in both semesters. Within-day idle time dropped ~**75%** and capacity waste ~**29%** per room-hour, while occupancy and evening load stayed stable.
 
 <div class="carousel" role="group" aria-label="KAIROS case study — swipeable slides">
-  <img src="/assets/images/writing/kairos/slide-1.png" alt="Every hard conflict eliminated — Fall 2025: 854 to 0, Spring 2026: 808 to 0" loading="lazy">
-  <img src="/assets/images/writing/kairos/slide-2.png" alt="How KAIROS works — five-stage workflow" loading="lazy">
-  <img src="/assets/images/writing/kairos/slide-3.png" alt="Product UI — bilingual TR/EN scheduling web app" loading="lazy">
-  <img src="/assets/images/writing/kairos/slide-4.png" alt="Benchmark results — feasibility heatmaps and quality KPIs for both terms" loading="lazy">
-  <img src="/assets/images/writing/kairos/slide-5.png" alt="Deployed and auditable — built on Python, Streamlit, OR-Tools, CP-SAT, Great Deluge, Docker" loading="lazy">
+  <img src="/assets/images/writing/kairos/slide-1.webp" alt="Every hard conflict eliminated — Fall 2025: 854 to 0, Spring 2026: 808 to 0" loading="lazy">
+  <img src="/assets/images/writing/kairos/slide-2.webp" alt="How KAIROS works — five-stage workflow" loading="lazy">
+  <img src="/assets/images/writing/kairos/slide-3.webp" alt="Product UI — bilingual TR/EN scheduling web app" loading="lazy">
+  <img src="/assets/images/writing/kairos/slide-4.webp" alt="Benchmark results — feasibility heatmaps and quality KPIs for both terms" loading="lazy">
+  <img src="/assets/images/writing/kairos/slide-5.webp" alt="Deployed and auditable — built on Python, Streamlit, OR-Tools, CP-SAT, Great Deluge, Docker" loading="lazy">
 </div>
 <p class="carousel-hint">Swipe / scroll for the workflow, feasibility heatmaps, and term-by-term KPIs →</p>
 

@@ -10,21 +10,11 @@ modified: 2026-07-26
   <header class="pagehead"><h1 id="teaching-h1">Teaching</h1></header>
 
   <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-calendar"/></svg>Current courses at TED University</h2>
-  <div class="course-motion">
-    <button class="btn btn-quiet course-motion-toggle" id="courseMotionToggle" type="button"
-      aria-pressed="false" aria-describedby="courseMotionNote">
-      <svg class="motion-pause" aria-hidden="true"><use href="#i-pause"/></svg>
-      <svg class="motion-play" aria-hidden="true"><use href="#i-play"/></svg>
-      <span>Pause animations</span>
-    </button>
-    <p id="courseMotionNote">Course previews play silently when they enter the viewport and pause off-screen.</p>
-    <span class="sr-only" id="courseMotionStatus" aria-live="polite"></span>
-  </div>
   <h3 class="sub">Undergraduate</h3>
 
   <article class="swproject">
     <video class="course-video" data-src="/assets/video/courses/hero-ee304.mp4"
-      poster="/assets/images/courses/ee304.webp" loop muted playsinline preload="none"
+      poster="/assets/images/courses/ee304.webp" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
       {% assign course = site.data.cv.courses | where: "code", "EE 304" | first %}<h3>{{ course.code }} — {{ course.name }}</h3>
@@ -37,7 +27,7 @@ modified: 2026-07-26
 
   <article class="swproject">
     <video class="course-video" data-src="/assets/video/courses/hero-ee311.mp4"
-      poster="/assets/images/courses/ee311.webp" loop muted playsinline preload="none"
+      poster="/assets/images/courses/ee311.webp" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
       {% assign course = site.data.cv.courses | where: "code", "EE 311" | first %}<h3>{{ course.code }} — {{ course.name }}</h3>
@@ -50,7 +40,7 @@ modified: 2026-07-26
 
   <article class="swproject">
     <video class="course-video" data-src="/assets/video/courses/hero-ee413.mp4"
-      poster="/assets/images/courses/ee413.webp" loop muted playsinline preload="none"
+      poster="/assets/images/courses/ee413.webp" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
       {% assign course = site.data.cv.courses | where: "code", "EE 413" | first %}<h3>{{ course.code }} — {{ course.name }}</h3>
@@ -64,7 +54,7 @@ modified: 2026-07-26
 
   <article class="swproject">
     <video class="course-video" data-src="/assets/video/courses/hero-ee491.mp4"
-      poster="/assets/images/courses/ee491.webp" loop muted playsinline preload="none"
+      poster="/assets/images/courses/ee491.webp" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
       <h3>EE 491 / EE 492 — Senior Design Project I &amp; II</h3>
@@ -84,7 +74,7 @@ modified: 2026-07-26
 
   <article class="swproject">
     <video class="course-video" data-src="/assets/video/courses/hero-ee512.mp4"
-      poster="/assets/images/courses/ee512.webp" loop muted playsinline preload="none"
+      poster="/assets/images/courses/ee512.webp" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
       {% assign course = site.data.cv.courses | where: "code", "EE 512" | first %}<h3>{{ course.code }} — {{ course.name }}</h3>
@@ -100,7 +90,7 @@ modified: 2026-07-26
 
   <article class="swproject">
     <video class="course-video" data-src="/assets/video/courses/hero-ee205.mp4"
-      poster="/assets/images/courses/ee205.webp" loop muted playsinline preload="none"
+      poster="/assets/images/courses/ee205.webp" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
       {% assign course = site.data.cv.courses | where: "code", "EE 205" | first %}<h3>{{ course.code }} — {{ course.name }}</h3>
@@ -113,7 +103,7 @@ modified: 2026-07-26
 
   <article class="swproject">
     <video class="course-video" data-src="/assets/video/courses/hero-ee312.mp4"
-      poster="/assets/images/courses/ee312.webp" loop muted playsinline preload="none"
+      poster="/assets/images/courses/ee312.webp" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
       {% assign course = site.data.cv.courses | where: "code", "EE 312" | first %}<h3>{{ course.code }} — {{ course.name }}</h3>
@@ -126,7 +116,7 @@ modified: 2026-07-26
 
   <article class="swproject">
     <video class="course-video" data-src="/assets/video/courses/hero-ee462.mp4"
-      poster="/assets/images/courses/ee462.webp" loop muted playsinline preload="none"
+      poster="/assets/images/courses/ee462.webp" loop muted playsinline preload="metadata"
       aria-hidden="true"></video>
     <div>
       {% assign course = site.data.cv.courses | where: "code", "EE 462" | first %}<h3>{{ course.code }} — {{ course.name }}</h3>
@@ -158,11 +148,7 @@ modified: 2026-07-26
 <script>
 (function(){
   var videos=Array.prototype.slice.call(document.querySelectorAll('.course-video'));
-  var toggle=document.getElementById('courseMotionToggle');
-  var toggleText=toggle.querySelector('span');
-  var status=document.getElementById('courseMotionStatus');
   var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)');
-  var pausedByUser=false;
 
   function motionReduced(){
     return !!(reduced&&reduced.matches);
@@ -173,7 +159,7 @@ modified: 2026-07-26
     video.load();
   }
   function shouldPlay(video){
-    return video.hasAttribute('data-in-view')&&!pausedByUser&&!motionReduced()&&!document.hidden;
+    return video.hasAttribute('data-in-view')&&!motionReduced()&&!document.hidden;
   }
   function syncVideo(video){
     video.muted=true;
@@ -187,25 +173,9 @@ modified: 2026-07-26
       if(motionReduced()&&video.currentTime)video.currentTime=0;
     }
   }
-  function updateControl(announce){
-    var forced=motionReduced();
-    var paused=forced||pausedByUser;
-    toggle.disabled=forced;
-    toggle.setAttribute('aria-pressed',String(paused));
-    toggleText.textContent=forced?'Animations disabled by motion preference':
-      (pausedByUser?'Resume animations':'Pause animations');
-    if(announce)status.textContent=forced?'Course animations are disabled by your reduced-motion preference.':
-      (pausedByUser?'Course animations paused.':'Course animations resumed.');
-  }
-  function syncAll(announce){
+  function syncAll(){
     videos.forEach(syncVideo);
-    updateControl(announce);
   }
-
-  toggle.addEventListener('click',function(){
-    pausedByUser=!pausedByUser;
-    syncAll(true);
-  });
 
   if('IntersectionObserver' in window){
     var observer=new IntersectionObserver(function(entries){
@@ -214,17 +184,17 @@ modified: 2026-07-26
         else entry.target.removeAttribute('data-in-view');
         syncVideo(entry.target);
       });
-    },{rootMargin:'180px 0px',threshold:.12});
+    },{rootMargin:'600px 0px',threshold:.05});
     videos.forEach(function(video){observer.observe(video);});
   }else{
     videos.forEach(function(video){video.setAttribute('data-in-view','');});
   }
 
-  document.addEventListener('visibilitychange',function(){syncAll(false);});
-  syncAll(false);
+  document.addEventListener('visibilitychange',function(){syncAll();});
+  syncAll();
   if(reduced){
-    if(reduced.addEventListener)reduced.addEventListener('change',function(){syncAll(true);});
-    else if(reduced.addListener)reduced.addListener(function(){syncAll(true);});
+    if(reduced.addEventListener)reduced.addEventListener('change',syncAll);
+    else if(reduced.addListener)reduced.addListener(syncAll);
   }
 })();
 </script>

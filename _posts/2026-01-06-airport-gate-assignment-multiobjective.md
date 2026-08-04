@@ -31,7 +31,7 @@ On a 200-flight day across 41 gates, the load-balancing term flattens the passen
 The remote-stand penalty, meanwhile, is driven to zero: all 200 flights are assigned to contact gates, against a 17.4% coached share in the historic baseline. The gate timeline shows how the slot-discretized overlap constraints pack boarding windows without collision, spreading occupancy across the full operating day rather than crowding the morning and evening peaks onto a few gates.
 
 <figure class="post-figure">
-  <img src="/assets/images/writing/gap/optimized_gate_timeline.png" alt="Gantt-style timeline titled Optimized Gate Timeline (Boarding–Departure): horizontal colored bars for each flight's boarding window, stacked by gate on the vertical axis (gates 1–30 and 90–100) against a 04:00–24:00 time axis, with no overlapping bars on any single gate row" loading="lazy">
+  <img src="/assets/images/writing/gap/optimized_gate_timeline.webp" alt="Gantt-style timeline titled Optimized Gate Timeline (Boarding–Departure): horizontal colored bars for each flight's boarding window, stacked by gate on the vertical axis (gates 1–30 and 90–100) against a 04:00–24:00 time axis, with no overlapping bars on any single gate row" loading="lazy">
   <figcaption>Boarding-to-departure occupancy per gate. No two bars overlap on a row — the time-compatibility constraint holding across all 41 gates.</figcaption>
 </figure>
 

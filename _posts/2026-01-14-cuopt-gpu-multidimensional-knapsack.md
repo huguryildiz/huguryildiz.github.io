@@ -13,6 +13,6 @@ image: /assets/images/writing/covers/cuopt-gpu-multidimensional-knapsack.jpg
 The model was solved on an NVIDIA Tesla T4 GPU under a **10-second time limit**, yielding a feasible solution with a **~0.035% relative MIP gap**.
 
 <figure class="post-figure">
-  <img src="/assets/images/writing/cuopt/mkp-cuopt-code.jpg" alt="mkp.py — a 54-line Python script building the multi-dimensional knapsack model with cuopt.linear_programming: 30000 binary variables and 10 capacity constraints over a random instance, a maximize objective, a 10-second time limit, and a print of status, objective value, MIP gap, and wall-clock time" loading="lazy">
+  <img src="/assets/images/writing/cuopt/mkp-cuopt-code.webp" alt="mkp.py — a 54-line Python script building the multi-dimensional knapsack model with cuopt.linear_programming: 30000 binary variables and 10 capacity constraints over a random instance, a maximize objective, a 10-second time limit, and a print of status, objective value, MIP gap, and wall-clock time" loading="lazy">
   <figcaption>The cuOpt implementation used for this experiment.</figcaption>
 </figure>

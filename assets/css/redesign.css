@@ -1008,13 +1008,6 @@ ol.publist{list-style:none; margin:0; padding:0;}
 .swproject h3{font-size:1.14rem; font-weight:600; margin:0 0 .35rem;}
 .swproject p{font-size:.96rem; color:var(--ink-soft); margin-bottom:.7rem;}
 .swproject .links{display:flex; flex-wrap:wrap; gap:.4rem .9rem; font-size:.88rem; font-weight:650; align-items:center;}
-.course-motion{display:flex; flex-wrap:wrap; align-items:center; gap:.55rem 1rem; margin:.2rem 0 1rem;}
-.course-motion-toggle{min-height:44px;}
-.course-motion-toggle .motion-play{display:none;}
-.course-motion-toggle[aria-pressed="true"] .motion-pause{display:none;}
-.course-motion-toggle[aria-pressed="true"] .motion-play{display:block;}
-.course-motion-toggle:disabled{pointer-events:auto;}
-.course-motion p{margin:0; color:var(--ink-faint); font-size:.84rem;}
 @media (max-width:620px){
   .swproject{grid-template-columns:1fr; gap:.8rem;}
   .swproject :is(img,video){max-width:340px;}
