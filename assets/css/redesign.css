@@ -1050,6 +1050,16 @@ ol.publist{list-style:none; margin:0; padding:0;}
 .cvrow .what .instlink:hover{color:var(--accent); border-bottom-color:currentColor;}
 .cvrow .what .w{color:var(--ink-soft); font-size:.94rem;}
 .cvrow .what .d{color:var(--ink-soft); font-size:.92rem; margin-top:.2rem;}
+/* Each role under an appointment carries its own bullets, so the role header has to
+   hold the period that the removed one-line role summary used to carry. Flex with
+   margin-left:auto rather than a float: when the title is long the period wraps to its
+   own line instead of overlapping, and the narrow-viewport rule below drops it back to
+   the left edge where the rest of the stacked row already sits. */
+.cvrow .what .cvrole{margin-top:.6rem;}
+.cvrow .what .cvrole .rt{display:flex; flex-wrap:wrap; align-items:baseline; gap:.1rem .9rem;
+  font-size:.94rem; font-weight:650; color:var(--head);}
+.cvrow .what .cvrole .rn{font-weight:400; color:var(--ink-soft);}
+.cvrow .what .cvrole .rp{margin-left:auto; font-size:.85rem; font-weight:400; color:var(--ink-faint);}
 .cvrow .what .links{margin-top:.35rem; display:flex; gap:.9rem; flex-wrap:wrap; font-size:.87rem; font-weight:650; align-items:center;}
 /* Standalone link rows are their own targets, not links inside a sentence, so the
    WCAG 2.2 inline exception does not cover them: at .87rem the line box lands on
@@ -1058,6 +1068,7 @@ ol.publist{list-style:none; margin:0; padding:0;}
 @media (max-width:640px){
   .cvrow{grid-template-columns:1fr; gap:0;}
   .cvrow .when{order:-1; padding:0 0 .1rem;}
+  .cvrow .what .cvrole .rp{margin-left:0;}
 }
 /* min(…,100%) rather than a bare 320px: below a 320px viewport the column can no
    longer reach its own floor, so the track stops shrinking and the whole page

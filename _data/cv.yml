@@ -53,46 +53,68 @@ appointments:
     org_url: "https://www.tedu.edu.tr/en"
     location: "Ankara, Türkiye"
     unit: "Department of Electrical and Electronics Engineering"
-    roles:
-      - { title: "Associate Professor", period: "Mar 2021 – present" }
-      - { title: "Department Chair", period: "Jul 2021 – Jul 2024" }
-      - { title: "Assistant Professor", period: "Sep 2016 – Mar 2021" }
-    # DIVERGED — web bullets render on /cv/; tex bullets (main.tex:124-127) differ in
-    # content and order (4 bullets, includes a VERA-platform bullet not on the web page).
+    # DIVERGED — web maddeleri rol bazlıdır (her rolün kendi bullets_web'i var, /cv/ üç
+    # unvanı ayrı bloklar hâlinde gösterir); LaTeX tarafı appointment düzeyinde dört
+    # birleşik maddeyle devam eder (bullets_tex, main.tex:124-127).
     # NOTE: bullets_tex uses inline Markdown-style links [text](url) wherever main.tex has
     # an embedded \href — main.tex wraps every \href target in \underline{}, so
     # scripts/render_cv_tex.py should convert [text](url) -> \href{url}{\underline{text}}
     # uniformly for every occurrence, not just this one.
-    bullets_web:
-      - "Founded the department's IEEE Student Branch, established a new teaching laboratory, and launched the M.Sc. program."
-      - "Led academic operations for 100+ students and 12 faculty members; oversaw accreditation and curriculum development."
-      - "Authored 20+ peer-reviewed publications (14 in IEEE journals); supervised [theses_supervised_count] graduate theses and 40+ senior design teams."
+    roles:
+      - title: "Associate Professor"
+        period: "Mar 2021 – present"
+        bullets_web:
+          - "Develop optimization models for routing, resource allocation, reliability, and energy efficiency in wireless sensor, underwater acoustic, and drone networks using network flow, mixed-integer, and constraint programming, and extend these formulations with machine and reinforcement learning for dynamic and large-scale decision settings."
+          - "Published seven peer-reviewed journal articles since March 2021, four of them in IEEE journals, and guest-edited a special issue on mass connectivity for the journal Internet of Things."
+          - "Built VERA for rubric-based capstone jury assessment and reporting, and KAIROS, a CP-SAT timetabling engine with independent post-solve validation — both in use at TED University."
+          - "Teach probability and random variables, signals and systems, and communication systems, together with a graduate course on optimization for communication networks; supervise graduate research and mentor the two-semester senior design sequence."
+      - title: "Department Chair"
+        period: "Jul 2021 – Jul 2024"
+        bullets_web:
+          - "Directed teaching, research, and strategic planning across the undergraduate and M.Sc. programmes, covering 8 faculty members, 4 research assistants, and more than 100 students."
+          - "Prepared the undergraduate programme for MÜDEK accreditation, the Turkish equivalent of ABET, and directed the accompanying curriculum revision."
+          - "Established the M.Sc. programme, founded the department's IEEE Student Branch, and set up a Microprocessors teaching laboratory with more than 20 TI ARM Cortex-M4F Tiva C development kits."
+          - "Recruited and mentored three faculty members, coordinated the department's evaluation and reporting cycles, represented the department on the Engineering Faculty Board, and coordinated alumni relations."
+      - title: "Assistant Professor"
+        period: "Sep 2016 – Mar 2021"
+        bullets_web:
+          - "Established an independent research line on optimization for wireless sensor networks, covering network flow models for lifetime maximization, transmission power control, and reliability under physical constraints."
+          - "Published 21 peer-reviewed works between 2017 and 2020, including articles in IEEE Transactions on Industrial Informatics, IEEE Systems Journal, and IEEE Sensors Journal."
+          - "Developed and delivered six undergraduate courses, among them a new course on power system analysis first taught in spring 2017."
+          - "Co-supervised the first two M.Sc. theses in this line, completed in 2017 and 2018, supervised senior design projects from 2016, and began peer review and technical programme committee service for IEEE venues."
     bullets_tex:
-      - "Conducted research on network flow–based optimization to enhance wireless sensor network performance; authored 20+ peer-reviewed publications, including 14 articles in IEEE journals."
-      - "Led academic operations for 100+ students and 12 faculty members; oversaw accreditation and curriculum, established a new teaching laboratory, launched an M.Sc. program, and founded the IEEE Student Branch."
+      - "Conducted research on network flow–based optimization to enhance wireless sensor network performance; authored 40+ peer-reviewed publications, including 15 articles in IEEE journals."
+      - "Led academic operations for 100+ students, 8 faculty members, and 4 research assistants; oversaw accreditation and curriculum, established a new teaching laboratory, launched an M.Sc. program, and founded the IEEE Student Branch."
       - "Developed [VERA](https://vera-eval.app/), a web-based capstone jury evaluation platform for secure rubric-based assessment, analytics, and reporting, and [KAIROS](https://github.com/huguryildiz/KAIROS), an OR-Tools CP-SAT university timetabling system with repair search and a separate post-solve validator."
       - "Taught undergraduate and graduate courses in communications, signal processing, and probability using active learning methodologies; mentored 40+ senior design teams and supervised [theses_supervised_count] graduate theses."
   - years: "2015 – 2016"
     org: "Turkish Aerospace"
     org_url: "https://www.tusas.com/en"
     location: "Ankara, Türkiye"
-    roles:
-      - { title: "Avionics Design Engineer", period: "Dec 2015 – Aug 2016" }
     # DIVERGED — tex title/bullet (main.tex:130-136) add "Unmanned Aerial Vehicles" role
-    # qualifier and extra "built and configured UAV network infrastructure" detail.
-    bullets_web:
-      - "Developed and integrated network architectures for the ANKA UAV program; designed high-availability Cisco systems for 24/7 operational readiness."
+    # qualifier and keep the three web bullets condensed into a single sentence.
+    roles:
+      - title: "Avionics Design Engineer"
+        period: "Dec 2015 – Aug 2016"
+        bullets_web:
+          - "Contributed to the development and integration of the network architecture for the ANKA medium-altitude long-endurance UAV programme."
+          - "Built and configured the network infrastructure required by the programme's integration activities."
+          - "Designed high-availability Cisco systems to meet the programme's 24/7 mission-readiness requirements."
     bullets_tex:
       - "Involved in development and integration of network architectures for the [ANKA](https://www.tusas.com/en/products/uav/operative-strategic-uav-systems/anka) UAV program; built and configured UAV network infrastructure and designed high-availability Cisco systems ensuring 24/7 readiness."
   - years: "2010 – 2015"
     org: "Turk Telekom"
     org_url: "https://www.turktelekom.com.tr/en"
     location: "Ankara, Türkiye"
+    # DIVERGED — tex bullet (main.tex:138-144) condenses the three web bullets into one
+    # sentence and says "regulatory compliance" where the web says what was actually kept.
     roles:
-      - { title: "Senior Network Engineer", period: "Dec 2010 – Nov 2015" }
-    # DIVERGED — tex bullet (main.tex:138-144) adds "and regulatory compliance".
-    bullets_web:
-      - "Contributed to the design and operation of the Safer Internet Service, a nationwide content-filtering platform serving 5M+ users; managed 100+ Cisco/Procera DPI systems at 99.9% uptime."
+      - title: "Senior Network Engineer"
+        period: "Dec 2010 – Nov 2015"
+        bullets_web:
+          - "Contributed to the design and operation of the Safer Internet Service, a nationwide content-filtering and parental-control platform serving more than five million subscribers."
+          - "Operated and maintained more than 100 Cisco and Procera deep packet inspection systems at 99.9% availability."
+          - "Maintained configuration records and reporting in line with the applicable regulatory requirements for the service."
     bullets_tex:
       - "Contributed to design and operation of the [Safer Internet Service](https://www.guvenlinet.org.tr/), a nationwide content-filtering platform serving 5M+ users; managed 100+ Cisco/Procera DPI systems, ensuring 99.9% uptime and regulatory compliance."
 
