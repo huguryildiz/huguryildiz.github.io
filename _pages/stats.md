@@ -155,10 +155,10 @@ permalink: /stats/
         <p class="reach-index">08 / Page trends</p>
         <h2 id="trails-title">How each page trended</h2>
       </div>
-      <span class="reach-unit">Whole tracked period</span>
+      <span class="reach-unit">Since 1 Jan 2026</span>
     </header>
     <div id="reachTrails"></div>
-    <p class="reach-note">Each line covers the entire tracked period rather than the selected range, so the panels can be compared with one another and with the trend at the top of the page.</p>
+    <p class="reach-note">Each line starts on 1 January 2026 rather than following the selected range, so the page trends retain a consistent time scale.</p>
   </section>
 
   <aside class="reach-method" aria-labelledby="method-title">
@@ -724,12 +724,18 @@ permalink: /stats/
   function hourLabel(hour){ return (hour < 10 ? '0' : '') + hour + ':00'; }
 
   /* ---- per-page trend lines ------------------------------------------------ */
+  var TRAIL_START = '2026-01-01';
+
   function renderTrails(){
     var panel = document.getElementById('reachTrailsPanel');
     var host = document.getElementById('reachTrails');
     if (!panel || !host) return;
-    var series = (DATA.page_series || []).filter(function(s){
-      return s.stats && s.stats.length && !HIDDEN_PAGES[s.path];
+    var series = (DATA.page_series || []).map(function(s){
+      var stats = (s.stats || []).filter(function(p){ return p.date >= TRAIL_START; });
+      return { path:s.path, title:s.title, stats:stats,
+               count:stats.reduce(function(sum, p){ return sum + (Number(p.views) || 0); }, 0) };
+    }).filter(function(s){
+      return s.stats.length && !HIDDEN_PAGES[s.path];
     });
     if (!series.length) { panel.hidden = true; return; }
     panel.hidden = false;
