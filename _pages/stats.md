@@ -296,12 +296,15 @@ permalink: /stats/
   function windowBlock(key){ return (DATA.windows || {})[key] || null; }
   function breakdown(key, name){
     var w = windowBlock(key);
-    if (w && w[name] && w[name].length) {
-      return { rows:w[name], count:w[name + '_total'], exact:true };
+    /* An empty array is still an exact result: it means the API returned no
+       rows for this stored window. Falling back merely because its length is
+       zero makes a quiet day display all-time figures under a Today label. */
+    if (w && Array.isArray(w[name])) {
+      return { rows:w[name], count:Number(w[name + '_total']) || 0, exact:true };
     }
     var all = windowBlock('all');
-    if (all && all[name] && all[name].length) {
-      return { rows:all[name], count:all[name + '_total'], exact:(key === 'all') };
+    if (all && Array.isArray(all[name])) {
+      return { rows:all[name], count:Number(all[name + '_total']) || 0, exact:(key === 'all') };
     }
     return { rows:[], count:0, exact:false };
   }
@@ -351,7 +354,7 @@ permalink: /stats/
              el('p', 'reach-delta reach-delta-none', 'Across ' + plural(points.length, 'day'))),
       metric('Busiest day', fmt(peak.views),
              el('p', 'reach-delta reach-delta-none', peak.views ? shortDate(peak.date) : 'No activity recorded')),
-      metric('Countries reached', countries.count ? fmt(countries.count) : '—',
+      metric('Countries reached', countries.exact ? fmt(countries.count) : (countries.count ? fmt(countries.count) : '—'),
              el('p', 'reach-delta reach-delta-none', countries.exact ? 'In this range' : 'All time'))
     ];
     host.replaceChildren.apply(host, nodes);
@@ -608,8 +611,9 @@ permalink: /stats/
         return { name:pageLabel(r), count:r.count, href:href, refs:r.refs || [] };
       });
     barList(host, rows, { label:'Most viewed content pages',
-      emptyTitle:'No page ranking available',
-      emptyBody:'Content rankings will appear after the next successful data refresh.' });
+      emptyTitle:info.exact ? 'No page views in this range' : 'No page ranking available',
+      emptyBody:info.exact ? 'No content page views were recorded in the selected date range.'
+                           : 'Content rankings will appear after the next successful data refresh.' });
     staleNote(host, info);
   }
 
@@ -806,8 +810,9 @@ permalink: /stats/
     var host = document.getElementById('reachReferrers');
     var info = breakdown(key, 'referrers');
     barList(host, info.rows.slice(0, 5), { label:'Top referrer sources',
-      emptyTitle:'No discovery data available',
-      emptyBody:'Referrer aggregates will appear after a successful refresh.' });
+      emptyTitle:info.exact ? 'No discovery sources in this range' : 'No discovery data available',
+      emptyBody:info.exact ? 'No referrer sources were recorded in the selected date range.'
+                           : 'Referrer aggregates will appear after a successful refresh.' });
     staleNote(host, info);
   }
 
@@ -820,8 +825,9 @@ permalink: /stats/
     var info = breakdown(key, 'countries');
     geoKey = key;
     barList(host, info.rows.slice(0, 5), { label:'Countries with the most page views',
-      emptyTitle:'No geographic aggregate available',
-      emptyBody:'The report does not currently contain country-level data.' });
+      emptyTitle:info.exact ? 'No geographic activity in this range' : 'No geographic aggregate available',
+      emptyBody:info.exact ? 'No country-level page views were recorded in the selected date range.'
+                           : 'The report does not currently contain country-level data.' });
     staleNote(host, info);
     worldMap.paint(info.rows);
     /* A one- or two-country range leaves the ranked column almost empty; a
@@ -929,6 +935,7 @@ permalink: /stats/
         var row = byCode[(path.getAttribute('data-code') || '').toLowerCase()];
         path.classList.remove('wm-on', 'wm-pick', 'wm-sel', 'wm-b1', 'wm-b2', 'wm-b3', 'wm-b4', 'wm-b5');
         path.removeAttribute('tabindex');
+        path.removeAttribute('role');
         path.removeAttribute('aria-label');
         path.removeAttribute('aria-pressed');
         path.__reach = null;
@@ -1130,8 +1137,11 @@ permalink: /stats/
     });
 
     if (!blocks.length) {
-      empty(host, 'No environment breakdown available',
-        'Browser, operating-system and screen-class aggregates will appear after the next successful refresh.');
+      var selected = windowBlock(key);
+      var exact = !!selected && STACKS.every(function(stack){ return Array.isArray(selected[stack.key]); });
+      empty(host, exact ? 'No reading-environment data in this range' : 'No environment breakdown available',
+        exact ? 'No browser, operating-system, screen-class or language data was recorded in the selected date range.'
+              : 'Browser, operating-system and screen-class aggregates will appear after the next successful refresh.');
       return;
     }
     host.replaceChildren.apply(host, blocks);
