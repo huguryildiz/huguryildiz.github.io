@@ -1,18 +1,21 @@
 """Fetch aggregated GoatCounter statistics into _data/site_stats.json.
 
-The /stats/ report lets a reader switch between date ranges, so the snapshot
-stores one self-contained block per window. Each window is queried separately
-because GoatCounter aggregates every breakdown server-side: a country or
-browser ranking for "last 30 days" cannot be re-derived on the client from an
-all-time ranking. The daily total series is stored once; the trend chart, the
-page-view totals and the period-over-period deltas are all derived from it in
-the browser, so those numbers can never disagree between windows.
+The /stats/ report lets a reader switch between preset and arbitrary date
+ranges. Presets are queried directly, while ``daily_breakdowns`` stores one
+small, exact aggregate per site-calendar day. The browser can therefore merge the daily
+blocks for a custom range without exposing raw hits or falling back to
+all-time figures.
+
+GoatCounter reports tracked events in the same totals and hit list as real
+page views. This script separates them before it computes page-view totals,
+daily trends, and hourly profiles; clicks never inflate a page-view KPI.
 
 Requires GOATCOUNTER_API_TOKEN. Run by .github/workflows/update-goatcounter.yml.
 """
 
 import os, sys, json, time, unicodedata, requests
 from datetime import date, datetime, timedelta, timezone
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 TOKEN = os.getenv("GOATCOUNTER_API_TOKEN", "").strip()
 if not TOKEN:
@@ -24,7 +27,21 @@ BASE = f"https://{SITE}/api/v0"
 HEADERS = {"Authorization": f"Bearer {TOKEN}"}
 
 TRACKING_START = date(2019, 1, 1)
-TODAY = date.today()
+SITE_TIMEZONE = os.getenv("GOATCOUNTER_SITE_TIMEZONE", "Europe/Istanbul").strip()
+try:
+    SITE_ZONE = ZoneInfo(SITE_TIMEZONE)
+except ZoneInfoNotFoundError:
+    sys.exit(f"ERROR: unknown GOATCOUNTER_SITE_TIMEZONE: {SITE_TIMEZONE}")
+TODAY = datetime.now(SITE_ZONE).date()
+
+# A clean first run needs seven API calls per tracked day: hits plus six
+# dimension lists. The current public history fits below this ceiling. Once
+# populated, the committed cache means ordinary daily runs refresh only the
+# two most recent days. The hard cap prevents an unexpectedly old account or
+# an empty cache from creating an unbounded request campaign.
+DAILY_CALL_BUDGET = int(os.getenv("GOATCOUNTER_DAILY_CALL_BUDGET", "1500"))
+DAILY_CALLS_PER_DAY = 1 + 6
+DAILY_REFRESH_DAYS = 2
 
 # key, label, length in days (None = everything since TRACKING_START), and how
 # many days back the window ends. The offset is what lets "yesterday" be a
@@ -51,9 +68,17 @@ DIMENSIONS = [
     ("languages", "/stats/languages"),
 ]
 
-# Ranked lists are truncated for page weight; the map needs every country.
+# These lists partition page views and therefore must sum to the same total as
+# the non-event /stats/hits rows. Screen sizes are optional in GoatCounter, but
+# when present they must reconcile as well.
+COMPLETE_PAGEVIEW_DIMENSIONS = ("pages", "countries", "browsers", "systems", "languages")
+OPTIONAL_PAGEVIEW_DIMENSIONS = ("sizes",)
+
+# Ranked lists remain complete in the snapshot; the page itself decides how
+# many rows to display. Keeping the tail is what lets a merged custom range
+# produce a correct ranking and distinct-country count.
 LIST_CAP = 12
-UNCAPPED = {"countries"}
+UNCAPPED = {key for key, _ in DIMENSIONS}
 # How many of the busiest countries get a region lookup (one request each).
 REGION_COUNTRIES = 5
 
@@ -107,7 +132,19 @@ def get(path, start, end, params=None):
     a single blip used to abort the whole run and skip that day's snapshot.
     A 4xx is a request we got wrong, so it is not retried.
     """
-    q = {"start": start.isoformat(), "end": end.isoformat()}
+    # The API accepts timestamps, and its end bound is a time rather than an
+    # inclusive calendar date. Sending the same bare YYYY-MM-DD for both ends
+    # produces an empty interval on /stats/total and /stats/hits. The dimension
+    # endpoints then convert these timestamps back to the site's calendar date,
+    # so UTC 23:59 would become the next day in Istanbul and silently widen
+    # only those endpoints. Site-zone boundaries keep both endpoint families
+    # on one interval.
+    start_at = datetime.combine(start, datetime.min.time(), SITE_ZONE)
+    end_at = datetime.combine(end, datetime.max.time().replace(microsecond=0), SITE_ZONE)
+    q = {
+        "start": start_at.isoformat(timespec="seconds"),
+        "end": end_at.isoformat(timespec="seconds"),
+    }
     q.update(params or {})
     url = f"{BASE}{path}"
 
@@ -136,7 +173,7 @@ def get(path, start, end, params=None):
     return None
 
 
-def stats_list(path, start, end, limit=100, max_pages=10, extra=None):
+def stats_list(path, start, end, limit=100, max_pages=10, extra=None, strict=False):
     """Fetch a /stats/<x> list endpoint, paginating while the API reports
     `more: true`.
 
@@ -154,18 +191,28 @@ def stats_list(path, start, end, limit=100, max_pages=10, extra=None):
             params["offset"] = offset
         data = get(path, start, end, params)
         if data is None:
+            if strict:
+                return None
             break
         # Each list endpoint names its payload differently: `stats` for the
         # dimension breakdowns, `hits` for pages, `refs` for the per-page
         # referrer detail.
+        payload_keys = ("stats", "hits", "refs")
         items = data.get("stats") or data.get("hits") or data.get("refs") or []
         if not items:
             # A 200 with nothing readable means the payload keys differ from
             # what we look for; print them so the next run can be diagnosed.
             print(f"[INFO] {path} [{start}..{end}]: no items; response keys = {sorted(data)}")
+            if strict and not any(key in data for key in payload_keys):
+                return None
             break
         out.extend(items)
         if not data.get("more"):
+            break
+        if not paged:
+            print(f"[WARN] {path} [{start}..{end}]: response is truncated but endpoint takes no offset")
+            if strict:
+                return None
             break
         offset += limit
     return out
@@ -231,6 +278,8 @@ def hour_profile(hits):
     """
     hours = [0] * 24
     for hit in hits:
+        if hit.get("event"):
+            continue
         for day in hit.get("stats") or []:
             for i, value in enumerate((day.get("hourly") or [])[:24]):
                 hours[i] += int(value or 0)
@@ -269,17 +318,37 @@ def fetch_page_series(start, end):
     a resolution the chart never draws.
     """
     out = []
-    for hit in stats_list("/stats/hits", start, end, extra={"group": "day"}):
+    hits = stats_list("/stats/hits", start, end, extra={"group": "day"}, strict=True)
+    if hits is None:
+        return out
+    for hit in hits:
         if hit.get("event") or not hit.get("path"):
             continue
         points = [{"date": d.get("day"), "views": int(d.get("daily") or 0)}
                   for d in (hit.get("stats") or []) if d.get("day")]
         if not points:
             continue
+        first = next((i for i, point in enumerate(points) if point["views"] > 0), len(points))
+        if first == len(points):
+            continue
+        points = points[first:]
         out.append({"path": hit["path"], "title": (hit.get("title") or "").strip(),
                     "count": int(hit.get("count") or 0), "stats": points})
     out.sort(key=lambda r: r["count"], reverse=True)
     return out[:SERIES_PAGES]
+
+
+def daily_series_from_hits(hits):
+    """Merge per-path daily buckets into a page-view-only site series."""
+    by_day = {}
+    for hit in hits:
+        if hit.get("event"):
+            continue
+        for point in hit.get("stats") or []:
+            day = point.get("day")
+            if day:
+                by_day[day] = by_day.get(day, 0) + int(point.get("daily") or 0)
+    return [{"date": day, "views": by_day[day]} for day in sorted(by_day)]
 
 
 def fetch_site_meta():
@@ -329,29 +398,37 @@ def fetch_site_meta():
 
 
 def fetch_window(label, days, offset):
-    """Build one window block. Returns (block, raw_total) or (None, None)."""
+    """Build one preset window block.
+
+    The total endpoint remains a required health check and supplies no public
+    count: its ``total`` includes events. Page-view totals are derived from the
+    non-event hit rows, the same rows shown in the readership panel.
+    """
     start, end = window_bounds(days, offset)
     total = get("/stats/total", start, end)
     if total is None:
-        return None, None
+        return None, None, None
 
     block = {
         "label": label,
         "start": start.isoformat(),
         "end": end.isoformat(),
-        "pageviews": int(total.get("total") or 0),
+        "pageviews": 0,
     }
 
     # One /stats/hits response feeds three panels: the page ranking, the
     # tracked-interaction ranking, and the hour-of-day profile.
-    hits = stats_list("/stats/hits", start, end)
+    hits = stats_list("/stats/hits", start, end, strict=True)
+    if hits is None:
+        return None, None, None
     rows = normalize("pages", hits)
     pages = [r for r in rows if not r["event"]]
     events = [r for r in rows if r["event"]]
     block["pages_total"] = len(pages)
-    block["pages"] = attach_refs(pages[:LIST_CAP], start, end)
+    block["pages"] = attach_refs(pages, start, end)
     block["events_total"] = len(events)
-    block["events"] = events[:LIST_CAP]
+    block["events"] = events
+    block["pageviews"] = sum(r["count"] for r in pages)
     block["hourly"] = hour_profile(hits)
 
     for key, path in DIMENSIONS:
@@ -367,7 +444,91 @@ def fetch_window(label, days, offset):
         r for r in regions[LIST_CAP:] if r["country_code"] == "TR" and r["code"]]
     block["regions_unmatched"] = unmatched
 
-    return block, total
+    return block, total, hits
+
+
+def fetch_daily_breakdown(day):
+    """Fetch one exact site-calendar-day block used for custom ranges."""
+    hits = stats_list("/stats/hits", day, day, strict=True)
+    if hits is None:
+        return None
+    rows = normalize("pages", hits)
+    pages = [r for r in rows if not r["event"]]
+    events = [r for r in rows if r["event"]]
+    block = {
+        "pageviews": sum(r["count"] for r in pages),
+        "pages": pages,
+        "events": events,
+        "hourly": hour_profile(hits),
+    }
+    for key, path in DIMENSIONS:
+        items = stats_list(path, day, day, strict=True)
+        if items is None:
+            return None
+        block[key] = normalize(key, items)
+    return block
+
+
+def pageview_breakdown_mismatches(block):
+    """Return page-view dimensions whose row sums disagree with the KPI."""
+    expected = int(block.get("pageviews") or 0)
+    mismatches = {}
+    for key in COMPLETE_PAGEVIEW_DIMENSIONS + OPTIONAL_PAGEVIEW_DIMENSIONS:
+        rows = block.get(key) or []
+        if key in OPTIONAL_PAGEVIEW_DIMENSIONS and not rows:
+            continue
+        actual = sum(int(row.get("count") or 0) for row in rows)
+        if actual != expected:
+            mismatches[key] = actual
+    return mismatches
+
+
+def load_daily_cache():
+    try:
+        with open("_data/site_stats.json", encoding="utf-8") as f:
+            old = json.load(f)
+    except (OSError, ValueError):
+        return {}
+    cache = old.get("daily_breakdowns")
+    return cache if isinstance(cache, dict) else {}
+
+
+def refresh_daily_cache(cache, first_day, last_day):
+    """Fill missing days and refresh the newest two within a hard call cap."""
+    wanted = []
+    cursor = first_day
+    while cursor <= last_day:
+        key = cursor.isoformat()
+        if key not in cache or (last_day - cursor).days < DAILY_REFRESH_DAYS:
+            wanted.append(cursor)
+        cursor += timedelta(days=1)
+
+    max_days = DAILY_CALL_BUDGET // DAILY_CALLS_PER_DAY
+    if len(wanted) > max_days:
+        # Prefer recent dates: they are the most likely custom ranges and the
+        # oldest missing dates can be filled by subsequent scheduled runs.
+        print(f"[WARN] daily backfill needs {len(wanted) * DAILY_CALLS_PER_DAY} calls; "
+              f"budget is {DAILY_CALL_BUDGET}. Fetching the newest {max_days} days.")
+        wanted = wanted[-max_days:]
+
+    for i, day in enumerate(wanted, 1):
+        print(f"[..] daily {day.isoformat()} ({i}/{len(wanted)})")
+        block = fetch_daily_breakdown(day)
+        # A day is cached only as a complete unit; an endpoint failure leaves
+        # the date absent, so the browser shows "unavailable" rather than a
+        # partial result as though it were exact.
+        if block is None:
+            print(f"[WARN] daily {day}: incomplete endpoint set; not caching")
+            continue
+        if sum(block["hourly"]) != block["pageviews"]:
+            print(f"[WARN] daily {day}: hourly/page-view mismatch; not caching")
+            continue
+        mismatches = pageview_breakdown_mismatches(block)
+        if mismatches:
+            print(f"[WARN] daily {day}: breakdown/page-view mismatch {mismatches}; not caching")
+            continue
+        cache[day.isoformat()] = block
+    return {key: cache[key] for key in sorted(cache) if first_day.isoformat() <= key <= last_day.isoformat()}
 
 
 def fetch_regions(countries, start, end):
@@ -412,64 +573,108 @@ def fetch_regions(countries, start, end):
     return out, unmatched
 
 
-windows, all_raw = {}, None
-for key, label, days, offset in WINDOWS:
-    print(f"[..] window {key} ({label})")
-    block, raw = fetch_window(label, days, offset)
-    if block is None:
+def main():
+    site_meta = fetch_site_meta()
+    reported_zone = site_meta.get("timezone")
+    if reported_zone and reported_zone != SITE_TIMEZONE:
+        sys.exit(f"ERROR: GoatCounter reports timezone {reported_zone}, but the collector is configured "
+                 f"for {SITE_TIMEZONE}. Set GOATCOUNTER_SITE_TIMEZONE before collecting.")
+
+    windows, all_hits = {}, None
+    for key, label, days, offset in WINDOWS:
+        print(f"[..] window {key} ({label})")
+        block, _, hits = fetch_window(label, days, offset)
+        if block is None:
+            if key == "all":
+                sys.exit("ERROR: could not fetch the all-time window; aborting to avoid overwriting good data.")
+            print(f"[WARN] window {key}: skipped")
+            continue
+        windows[key] = block
         if key == "all":
-            sys.exit("ERROR: could not fetch the all-time window; aborting to avoid overwriting good data.")
-        print(f"[WARN] window {key}: skipped")
-        continue
-    windows[key] = block
-    if key == "all":
-        all_raw = raw
+            all_hits = hits
 
-# ---- daily series ---------------------------------------------------------
-# Trimmed to the first day with recorded activity: the account was created
-# well after TRACKING_START, and the empty prefix is both misleading in a
-# "tracked since" line and the bulk of the file.
-series = [{"date": d.get("day"), "views": int(d.get("daily") or 0)}
-          for d in (all_raw.get("stats") or []) if d.get("day")]
-first = next((i for i, p in enumerate(series) if p["views"] > 0), 0)
-timeseries = series[first:]
-tracked_since = timeseries[0]["date"] if timeseries else TRACKING_START.isoformat()
+    # The API's total series includes tracked events. Merge only non-event hit
+    # rows, then trim the empty prefix from before the first real page view.
+    series = daily_series_from_hits(all_hits or [])
+    first = next((i for i, p in enumerate(series) if p["views"] > 0), 0)
+    timeseries = series[first:]
+    tracked_since = timeseries[0]["date"] if timeseries else TRACKING_START.isoformat()
 
-all_win = windows["all"]
-out = {
-    "updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-    "range": {"start": tracked_since, "end": TODAY.isoformat()},
-    "window_order": [key for key, _, _, _ in WINDOWS if key in windows],
-    "windows": windows,
-    "timeseries": timeseries,
-    # Per-page daily series, stored once: the panel that draws it always
-    # plots the full tracked period, so a copy per window would be dead weight.
-    "page_series": fetch_page_series(*window_bounds(None, 0)),
-    "site": fetch_site_meta(),
-    # Flat mirror of the all-time window, kept for anything reading the
-    # pre-window shape of this file.
-    "totals": {"pageviews": all_win["pageviews"], "visitors": None},
-    "pages": all_win["pages"],
-    "countries": all_win["countries"],
-    "referrers": all_win["referrers"],
-    "browsers": all_win["browsers"],
-    "systems": all_win["systems"],
-    "sizes": all_win["sizes"],
-}
+    # Backfill the exact daily blocks once, then refresh just the newest two on
+    # ordinary scheduled runs. A fully covered cache becomes the authoritative
+    # site-calendar daily series used by the KPI row and custom-range breakdowns.
+    daily_breakdowns = refresh_daily_cache(
+        load_daily_cache(), date.fromisoformat(tracked_since), TODAY)
+    expected_days = (TODAY - date.fromisoformat(tracked_since)).days + 1
+    if len(daily_breakdowns) == expected_days:
+        timeseries = [{"date": day, "views": int(block.get("pageviews") or 0)}
+                      for day, block in daily_breakdowns.items()]
+    else:
+        print(f"[WARN] daily detail covers {len(daily_breakdowns)}/{expected_days} days; "
+              "custom detailed panels remain unavailable across gaps")
 
-if all_win["pageviews"] == 0:
-    sys.exit("ERROR: all-time pageviews is 0. Check the API token / site.")
+    all_win = windows["all"]
+    out = {
+        "updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "range": {"start": tracked_since, "end": TODAY.isoformat()},
+        "window_order": [key for key, _, _, _ in WINDOWS if key in windows],
+        "windows": windows,
+        "timeseries": timeseries,
+        "daily_breakdowns": daily_breakdowns,
+        # Per-page daily series is stored once; the panel always plots the full
+        # tracked period, so a copy per window would be dead weight.
+        "page_series": fetch_page_series(*window_bounds(None, 0)),
+        "site": site_meta,
+        # Flat mirror of all-time data for older readers of this file.
+        "totals": {"pageviews": all_win["pageviews"], "visitors": None},
+        "pages": all_win["pages"],
+        "countries": all_win["countries"],
+        "referrers": all_win["referrers"],
+        "browsers": all_win["browsers"],
+        "systems": all_win["systems"],
+        "sizes": all_win["sizes"],
+    }
 
-os.makedirs("_data", exist_ok=True)
-with open("_data/site_stats.json", "w", encoding="utf-8") as f:
-    json.dump(out, f, indent=2, ensure_ascii=False)
+    if all_win["pageviews"] == 0:
+        sys.exit("ERROR: all-time pageviews is 0. Check the API token / site.")
 
-for key in out["window_order"]:
-    w = windows[key]
-    print(f"[OK] {key:>4}: views={w['pageviews']} pages={w['pages_total']} "
-          f"events={w['events_total']} countries={w['countries_total']} refs={w['referrers_total']} "
-          f"browsers={w['browsers_total']} systems={w['systems_total']} sizes={w['sizes_total']} "
-          f"langs={w['languages_total']}")
-print(f"[OK] tracked since {tracked_since}, {len(timeseries)} days of series")
-print(f"[OK] per-page series for {len(out['page_series'])} pages; site meta: {out['site'] or 'unavailable'}")
-print("[OK] Saved _data/site_stats.json")
+    for key, block in windows.items():
+        if sum(block.get("hourly") or []) != block["pageviews"]:
+            sys.exit(f"ERROR: {key} hourly total does not equal its page-view total; snapshot not written.")
+        mismatches = pageview_breakdown_mismatches(block)
+        if mismatches:
+            sys.exit(f"ERROR: {key} breakdown totals {mismatches} do not equal page-view total "
+                     f"{block['pageviews']}; snapshot not written.")
+
+    # When every day is available, preset totals must equal the sum of those
+    # same daily blocks. This catches boundary drift before it reaches the KPI.
+    if len(daily_breakdowns) == expected_days:
+        for key, _, days, offset in WINDOWS:
+            if key not in windows:
+                continue
+            start, end = window_bounds(days, offset)
+            start = max(start, date.fromisoformat(tracked_since))
+            expected = sum(block["pageviews"] for day, block in daily_breakdowns.items()
+                           if start.isoformat() <= day <= end.isoformat())
+            if expected != windows[key]["pageviews"]:
+                sys.exit(f"ERROR: {key} page-view total {windows[key]['pageviews']} "
+                         f"does not match daily sum {expected}; snapshot not written.")
+
+    os.makedirs("_data", exist_ok=True)
+    with open("_data/site_stats.json", "w", encoding="utf-8") as f:
+        json.dump(out, f, indent=2, ensure_ascii=False)
+
+    for key in out["window_order"]:
+        w = windows[key]
+        print(f"[OK] {key:>4}: views={w['pageviews']} pages={w['pages_total']} "
+              f"events={w['events_total']} countries={w['countries_total']} refs={w['referrers_total']} "
+              f"browsers={w['browsers_total']} systems={w['systems_total']} sizes={w['sizes_total']} "
+              f"langs={w['languages_total']}")
+    print(f"[OK] tracked since {tracked_since}, {len(timeseries)} days of series")
+    print(f"[OK] daily detail for {len(daily_breakdowns)}/{expected_days} tracked days")
+    print(f"[OK] per-page series for {len(out['page_series'])} pages; site meta: {out['site'] or 'unavailable'}")
+    print("[OK] Saved _data/site_stats.json")
+
+
+if __name__ == "__main__":
+    main()

@@ -155,10 +155,10 @@ permalink: /stats/
         <p class="reach-index">08 / Page trends</p>
         <h2 id="trails-title">How each page trended</h2>
       </div>
-      <span class="reach-unit">Since 1 Jan 2026</span>
+      <span class="reach-unit" id="reachTrailsRange">Selected range</span>
     </header>
     <div id="reachTrails"></div>
-    <p class="reach-note">Each line starts on 1 January 2026 rather than following the selected range, so the page trends retain a consistent time scale.</p>
+    <p class="reach-note">Each line is restricted to the selected date range and uses the same page-view-only daily aggregates as the KPI row.</p>
   </section>
 
   <aside class="reach-method" aria-labelledby="method-title">
@@ -166,8 +166,8 @@ permalink: /stats/
     <h2 id="method-title">How to read this report</h2>
     <div>
       <p>Every figure is an aggregate page-view count from GoatCounter for the selected date range. GoatCounter does not track sessions, so this report contains no sessions, bounce rate, average session duration, or new-versus-returning split; those measures are absent rather than estimated. It resolves a visitor's location to a country and, below that, to a region—a province or state—but never to a city, so no city breakdown exists to publish.</p>
-      <p>The date-range control re-slices one stored daily snapshot. Page-view totals, averages and period-over-period changes are computed from that daily series, so they are exact for any range, including one picked from the calendar. A change is shown only when the whole preceding period of equal length falls inside the tracked window—otherwise it is omitted rather than compared against partial data.</p>
-      <p>The ranked breakdowns (pages, countries, sources, and reading environment) are a different case: GoatCounter aggregates them server-side, so only the preset ranges carry their own figures. Choosing a custom range leaves those panels showing all-time totals, and each one says so rather than implying the numbers match the selected dates.</p>
+      <p>The date-range control re-slices stored daily aggregates. Page-view totals, averages, ranked breakdowns and interactions are recomputed from the same selected days, so a custom range never falls back to all-time figures. If daily detail is missing for any part of a range, the affected panel is marked unavailable rather than filled with a partial or broader total.</p>
+      <p>Page views and interactions are separated before aggregation. A tracked download, DOI or outbound-link click therefore appears only in the interactions panel and never increases the page-view KPI or trend. A change is shown only when the whole preceding period of equal length falls inside the tracked window—otherwise it is omitted rather than compared against partial data.</p>
       <p>The trend can be read two ways. <strong>Raw</strong> plots the page views recorded in each day or week on its own; <strong>Cumulative</strong> adds them up as the range progresses, so the final point equals the range total shown above. Neither adds information the other lacks—the axis label states which one is on screen.</p>
       <p>Browser, operating-system, screen-class, and language shares are reported as coarse aggregates over page views. They carry no per-visitor detail and are not linked to any other dimension in this report. Language is the preference the browser sent, which is a setting rather than a statement about the reader. Maintenance and measurement paths such as <code>/404.html</code> and <code>/stats/</code> are excluded from the public content ranking without altering the source data.</p>
       <p>Interactions are counted separately from page views and are never added to them. A click on a download, a DOI, or an outbound link is recorded by the page itself, which means it is missing wherever scripts did not run, and it records the click rather than whether the file finished downloading or the destination loaded. Read those figures as a lower bound. The same applies to the referrer line under a page in the readership panel: it splits that page's own arrivals, so it does not sum to the site-wide discovery ranking.</p>
@@ -292,26 +292,87 @@ permalink: /stats/
     return total(slice(toKey(prevStart), toKey(prevEnd)));
   }
 
-  /* ---- breakdowns: exact when the range was aggregated server-side --------- */
-  function windowBlock(key){ return (DATA.windows || {})[key] || null; }
+  /* ---- breakdowns: preset blocks or exact merges of stored site days ------- */
+  /* A preset response can occasionally be sliced on a different boundary by
+     one GoatCounter endpoint. The daily series is the KPI authority; never
+     put a mismatched preset block under that KPI as though it described the
+     same dates. */
+  function windowBlock(key){
+    var block = (DATA.windows || {})[key] || null;
+    if (!block) return null;
+    var b = bounds(key);
+    return Number(block.pageviews) === total(slice(b.start, b.end)) ? block : null;
+  }
+  function dailyBlocks(start, end){
+    var stored = DATA.daily_breakdowns || {};
+    var rows = [], cursor = toDate(start), last = toDate(end);
+    while (cursor <= last) {
+      var key = toKey(cursor);
+      if (!Object.prototype.hasOwnProperty.call(stored, key)) return null;
+      rows.push(stored[key]);
+      cursor = new Date(cursor.getTime() + DAY);
+    }
+    return rows;
+  }
+  function rowKey(name, row){
+    if (name === 'pages' || name === 'events') return row.path || row.title || '';
+    if (name === 'countries') return row.code || row.name || '';
+    if (name === 'regions') return (row.country_code || row.country || '') + '|' + (row.code || row.name || '');
+    return row.name || '';
+  }
+  function mergeBreakdown(blocks, name){
+    var merged = {};
+    for (var i = 0; i < blocks.length; i += 1) {
+      if (!Array.isArray(blocks[i][name])) return null;
+      blocks[i][name].forEach(function(row){
+        var key = rowKey(name, row);
+        if (!key) return;
+        if (!merged[key]) {
+          merged[key] = {};
+          Object.keys(row).forEach(function(field){
+            if (field !== 'count' && field !== 'refs') merged[key][field] = row[field];
+          });
+          merged[key].count = 0;
+        }
+        merged[key].count += Number(row.count) || 0;
+      });
+    }
+    return Object.keys(merged).map(function(key){ return merged[key]; })
+      .filter(function(row){ return row.count > 0; })
+      .sort(function(a, b){ return b.count - a.count; });
+  }
+  var COMPLETE_VIEW_BREAKDOWNS = {
+    pages:1, countries:1, browsers:1, systems:1, languages:1
+  };
+  function breakdownMatchesViews(name, rows, expected){
+    /* Screen-size collection may be disabled, in which case an empty list is
+       an exact absence rather than a zero-view claim. Every other listed
+       dimension is expected to partition the page-view total completely. */
+    if (!COMPLETE_VIEW_BREAKDOWNS[name] && name !== 'sizes') return true;
+    if (name === 'sizes' && !rows.length) return true;
+    return rows.reduce(function(sum, row){ return sum + (Number(row.count) || 0); }, 0) === expected;
+  }
   function breakdown(key, name){
+    if (key === 'custom' && customRange) {
+      var blocks = dailyBlocks(customRange.start, customRange.end);
+      var rows = blocks && mergeBreakdown(blocks, name);
+      var customViews = total(slice(customRange.start, customRange.end));
+      return rows && breakdownMatchesViews(name, rows, customViews)
+        ? { rows:rows, count:rows.length, exact:true }
+        : { rows:[], count:0, exact:false };
+    }
     var w = windowBlock(key);
     /* An empty array is still an exact result: it means the API returned no
        rows for this stored window. Falling back merely because its length is
        zero makes a quiet day display all-time figures under a Today label. */
-    if (w && Array.isArray(w[name])) {
+    if (w && Array.isArray(w[name]) && breakdownMatchesViews(name, w[name], Number(w.pageviews) || 0)) {
       return { rows:w[name], count:Number(w[name + '_total']) || 0, exact:true };
-    }
-    var all = windowBlock('all');
-    if (all && Array.isArray(all[name])) {
-      return { rows:all[name], count:Number(all[name + '_total']) || 0, exact:(key === 'all') };
     }
     return { rows:[], count:0, exact:false };
   }
   function staleNote(host, info){
-    /* Nothing to qualify when the panel is empty — it already says so. */
-    if (info.exact || !info.rows.length) return;
-    var note = el('p', 'reach-flag', 'Range-specific breakdown not yet in the snapshot — showing all-time figures for this panel.');
+    if (info.exact) return;
+    var note = el('p', 'reach-flag', 'Complete daily detail is not stored for this range, so no broader or partial figures are shown.');
     host.appendChild(note);
   }
 
@@ -344,7 +405,9 @@ permalink: /stats/
   function renderMetrics(b, points){
     var host = document.getElementById('reachMetrics');
     var views = total(points);
-    var peak = points.reduce(function(best, p){ return p.views > best.views ? p : best; }, points[0]);
+    var peak = points.length
+      ? points.reduce(function(best, p){ return p.views > best.views ? p : best; }, points[0])
+      : { date:b.start, views:0 };
     var avg = points.length ? views / points.length : 0;
     var countries = breakdown(b.key, 'countries');
 
@@ -355,7 +418,7 @@ permalink: /stats/
       metric('Busiest day', fmt(peak.views),
              el('p', 'reach-delta reach-delta-none', peak.views ? shortDate(peak.date) : 'No activity recorded')),
       metric('Countries reached', countries.exact ? fmt(countries.count) : (countries.count ? fmt(countries.count) : '—'),
-             el('p', 'reach-delta reach-delta-none', countries.exact ? 'In this range' : 'All time'))
+             el('p', 'reach-delta reach-delta-none', countries.exact ? 'In this range' : 'Unavailable for this range'))
     ];
     host.replaceChildren.apply(host, nodes);
   }
@@ -623,14 +686,16 @@ permalink: /stats/
     var host = document.getElementById('reachEvents');
     if (!panel || !host) return;
     var info = breakdown(key, 'events');
-    /* The panel is hidden rather than shown empty: until something is
-       instrumented and clicked, an "interactions" heading over a blank box
-       claims a measurement that does not exist yet. */
-    if (!info.rows.length) { panel.hidden = true; return; }
     panel.hidden = false;
+    if (!info.rows.length) {
+      empty(host, info.exact ? 'No interactions in this range' : 'Interaction data unavailable',
+        info.exact ? 'No tracked download, DOI, or outbound-link clicks were recorded in the selected date range.'
+                   : 'Complete daily interaction detail is not stored for this range.');
+      return;
+    }
     barList(host, info.rows.slice(0, 6).map(function(r){
       return { name:r.title || r.path, count:r.count };
-    }), { label:'Most clicked downloads and outbound links', unit:'clicks',
+    }), { label:'Most clicked downloads and outbound links', unit:'click',
           emptyTitle:'', emptyBody:'' });
     staleNote(host, info);
   }
@@ -640,8 +705,19 @@ permalink: /stats/
     var panel = document.getElementById('reachHoursPanel');
     var host = document.getElementById('reachHours');
     if (!panel || !host) return;
-    var block = windowBlock(key) || windowBlock('all');
-    var hours = (block && block.hourly) || [];
+    var hours = [];
+    if (key === 'custom' && customRange) {
+      var blocks = dailyBlocks(customRange.start, customRange.end);
+      if (blocks && blocks.every(function(block){ return Array.isArray(block.hourly) && block.hourly.length === 24; })) {
+        hours = new Array(24).fill(0);
+        blocks.forEach(function(block){
+          block.hourly.forEach(function(value, i){ hours[i] += Number(value) || 0; });
+        });
+      }
+    } else {
+      var block = windowBlock(key);
+      hours = (block && block.hourly) || [];
+    }
     var sum = hours.reduce(function(t, v){ return t + (Number(v) || 0); }, 0);
     if (hours.length !== 24 || !sum) { panel.hidden = true; return; }
     panel.hidden = false;
@@ -724,14 +800,12 @@ permalink: /stats/
   function hourLabel(hour){ return (hour < 10 ? '0' : '') + hour + ':00'; }
 
   /* ---- per-page trend lines ------------------------------------------------ */
-  var TRAIL_START = '2026-01-01';
-
-  function renderTrails(){
+  function renderTrails(b){
     var panel = document.getElementById('reachTrailsPanel');
     var host = document.getElementById('reachTrails');
     if (!panel || !host) return;
     var series = (DATA.page_series || []).map(function(s){
-      var stats = (s.stats || []).filter(function(p){ return p.date >= TRAIL_START; });
+      var stats = (s.stats || []).filter(function(p){ return p.date >= b.start && p.date <= b.end; });
       return { path:s.path, title:s.title, stats:stats,
                count:stats.reduce(function(sum, p){ return sum + (Number(p.views) || 0); }, 0) };
     }).filter(function(s){
@@ -739,6 +813,9 @@ permalink: /stats/
     });
     if (!series.length) { panel.hidden = true; return; }
     panel.hidden = false;
+    var range = document.getElementById('reachTrailsRange');
+    if (range) range.textContent = b.start === b.end ? shortDate(b.start)
+      : shortDate(b.start) + ' – ' + shortDate(b.end);
 
     /* One shared vertical scale across all the small charts: drawing each to
        its own peak would make a 3-view page look like a 60-view one. */
@@ -879,12 +956,15 @@ permalink: /stats/
     var rows = regionFilter
       ? info.rows.filter(function(r){ return r.country === regionFilter; })
       : info.rows;
-    if (!rows.length) { host.replaceChildren(); return; }
+    if (!rows.length) {
+      host.replaceChildren();
+      if (breakdown(key, 'countries').exact) staleNote(host, info);
+      return;
+    }
 
     var head = el('div', 'reach-subhead');
     /* "within those countries" only holds when both panels come from the same
-       window. On the all-time fallback the countries above can be a different
-       set entirely, so the heading drops the claim instead of implying it. */
+       exact window; otherwise the heading drops the claim. */
     head.appendChild(el('h3', null, regionFilter ? 'Regions in ' + regionFilter
       : (info.exact ? 'Regions within those countries' : 'Regions with the most page views')));
     if (regionFilter) {
@@ -1138,13 +1218,12 @@ permalink: /stats/
         legend.appendChild(li);
       });
       wrap.appendChild(legend);
-      if (!info.exact) wrap.appendChild(el('p', 'reach-flag', 'Range-specific breakdown not yet in the snapshot — showing all-time figures.'));
+      if (!info.exact) wrap.appendChild(el('p', 'reach-flag', 'Complete daily detail is not stored for this range.'));
       blocks.push(wrap);
     });
 
     if (!blocks.length) {
-      var selected = windowBlock(key);
-      var exact = !!selected && STACKS.every(function(stack){ return Array.isArray(selected[stack.key]); });
+      var exact = STACKS.every(function(stack){ return breakdown(key, stack.key).exact; });
       empty(host, exact ? 'No reading-environment data in this range' : 'No environment breakdown available',
         exact ? 'No browser, operating-system, screen-class or language data was recorded in the selected date range.'
               : 'Browser, operating-system and screen-class aggregates will appear after the next successful refresh.');
@@ -1495,11 +1574,11 @@ permalink: /stats/
     renderStacks(current);
     renderEvents(current);
     renderHours(current);
+    renderTrails(b);
   }
 
   toolbar.hidden = false;
   apply();
-  renderTrails();
   worldMap.load(function(){ renderCountries(current); });
 })();
 </script>
