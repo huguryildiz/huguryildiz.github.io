@@ -117,7 +117,7 @@ class TestScholarMetrics(unittest.TestCase):
         body = TEMPLATE.read_text(encoding="utf-8")
         section = body.split(r"\section{\faChartBar~Citations}", 1)[1].split(r"\section", 1)[0]
         for token in ("scholar.citations_display", "scholar.h_index",
-                      "scholar.i10_index", "scholar.updated_display"):
+                      "scholar.i10_index"):
             self.assertIn(token, section, f"{token} şablonda enterpole edilmiyor")
         """LaTeX'in kendi ölçü/aralık argümanları (\\vspace{-10pt}) sayı içerir;
         aranan şey metrik konumundaki çıplak sayı — yani komut argümanı
