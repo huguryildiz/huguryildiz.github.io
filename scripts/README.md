@@ -24,21 +24,34 @@ date, which is how this repository previously published a `/stats/` report one d
 own committed data. Do not reintroduce the marker to reduce build noise without also removing
 the cadence claim from the affected page.
 
-`fetch_goatcounter.py` notes — the snapshot is a *rewritten mirror* of GoatCounter's
-server-side aggregates, not an accumulating archive: every run replaces the file with what the
-API reports now. What each run collects, beyond the totals and the daily series:
+`fetch_goatcounter.py` notes — the snapshot is a public aggregate, not a raw-hit archive. It
+keeps exact per-day breakdowns in `daily_breakdowns` so an arbitrary calendar range can be
+merged in the browser without querying GoatCounter or substituting all-time figures. A clean
+first run backfills at most 1,500 API calls (configurable with
+`GOATCOUNTER_DAILY_CALL_BUDGET`); later runs reuse the committed cache and refresh only the
+newest two days. A date is omitted if any required endpoint fails, and the page then marks a
+range crossing that gap unavailable instead of presenting a partial result as exact. What each
+run collects, beyond the preset blocks and page-view-only daily series:
 
 - **Pages and events come from one `/stats/hits` response.** GoatCounter returns both in the
-  same list, distinguished by the `event` flag, and the script splits them. Events are the
+  same list and includes both in its headline total, distinguished by the `event` flag. The
+  script separates them before computing the page-view KPI, trend, or hourly profile. Events are the
   clicks instrumented with `data-goatcounter-click` (CV and thesis PDFs, publication DOI/PDF
-  links, the LinkedIn footer on posts). Because that same response carries hourly buckets, the
-  hour-of-day profile costs no extra request.
+  links, the LinkedIn footer on posts); they appear only in the interactions panel. Because
+  that same response carries hourly buckets, the hour-of-day profile costs no extra request.
 - **Per-page referrers** are one `/stats/hits/<path_id>` call for each of the five busiest
   pages, per window, and land on `pages[].refs`.
 - **Page titles** ride along on the same response, so `/stats/` labels a new page sensibly
   before anyone adds it to the curated label map.
+- **Single-day API bounds use the site's calendar time zone.** A bare date used for both
+  `start` and `end` describes an empty interval to the total and hits endpoints. Conversely,
+  a UTC end-of-day timestamp becomes the following date when GoatCounter converts it to the
+  site's `Europe/Istanbul` calendar for country, browser, and other daily tables. The
+  collector therefore sends `00:00:00` through `23:59:59` with the site's UTC offset so all
+  endpoint families share one interval. `GOATCOUNTER_SITE_TIMEZONE` can override the default,
+  and collection aborts if it disagrees with the time zone reported by `/sites`.
 - **Per-page daily series** (`page_series`) is fetched once, for the all-time window only,
-  with `group=day`.
+  with `group=day`; leading zero-only history is removed before publication.
 - **Site metadata** (`site`) carries the time zone the hour-of-day panel is labelled with,
   plus GoatCounter's own `data_retention` setting. It comes from `/sites`, which — like
   `/stats/hits` and `offset` — rejects an unexpected query parameter with a 400, so it is
