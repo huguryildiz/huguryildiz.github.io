@@ -1,5 +1,7 @@
 import importlib.util
 import os
+import sys
+import types
 from datetime import date
 from pathlib import Path
 import unittest
@@ -7,6 +9,13 @@ from unittest import mock
 
 
 os.environ.setdefault("GOATCOUNTER_API_TOKEN", "test-token")
+try:
+    import requests  # noqa: F401
+except ModuleNotFoundError:
+    requests_stub = types.ModuleType("requests")
+    requests_stub.get = None
+    requests_stub.RequestException = Exception
+    sys.modules["requests"] = requests_stub
 MODULE_PATH = Path(__file__).with_name("fetch_goatcounter.py")
 SPEC = importlib.util.spec_from_file_location("fetch_goatcounter", MODULE_PATH)
 stats = importlib.util.module_from_spec(SPEC)
@@ -72,6 +81,57 @@ class GoatCounterAggregationTests(unittest.TestCase):
         self.assertEqual(5, block["pageviews"])
         self.assertEqual(5, sum(row["count"] for row in block["pages"]))
         self.assertEqual(2, sum(row["count"] for row in block["events"]))
+
+    def test_daily_dimensions_are_filtered_to_page_view_paths(self):
+        hits = [
+            {"path": "/research", "title": "Research", "path_id": 11,
+             "event": False, "count": 5, "stats": []},
+            {"path": "cv-pdf", "title": "CV", "path_id": 22,
+             "event": True, "count": 2, "stats": []},
+        ]
+        dimension_filters = []
+
+        def fake_list(path, *_args, **kwargs):
+            if path == "/stats/hits":
+                return hits
+            dimension_filters.append(kwargs.get("extra"))
+            if path == "/stats/locations":
+                return [{"id": "TR", "name": "Turkey", "count": 5}]
+            return [{"name": "Recorded", "count": 5}]
+
+        with mock.patch.object(stats, "stats_list", side_effect=fake_list):
+            block = stats.fetch_daily_breakdown(date(2026, 8, 5))
+
+        self.assertIsNotNone(block)
+        self.assertEqual(6, len(dimension_filters))
+        self.assertTrue(all(value == {"include_paths": ["11"]}
+                            for value in dimension_filters))
+        self.assertEqual({}, stats.pageview_breakdown_mismatches(block))
+
+    def test_event_only_day_does_not_query_unfiltered_dimensions(self):
+        hits = [{"path": "cv-pdf", "title": "CV", "path_id": 22,
+                 "event": True, "count": 2, "stats": []}]
+
+        with mock.patch.object(stats, "stats_list", return_value=hits) as fetch:
+            block = stats.fetch_daily_breakdown(date(2026, 8, 5))
+
+        self.assertEqual(0, block["pageviews"])
+        self.assertEqual([], block["countries"])
+        fetch.assert_called_once_with(
+            "/stats/hits", date(2026, 8, 5), date(2026, 8, 5), strict=True)
+
+    def test_region_detail_uses_the_page_view_path_filter(self):
+        page_filter = {"include_paths": ["11"]}
+        with mock.patch.object(stats, "stats_list", return_value=[]) as fetch:
+            regions, unmatched = stats.fetch_regions(
+                [{"code": "TR", "name": "Turkey", "count": 5}],
+                date(2026, 8, 5), date(2026, 8, 5), page_filter)
+
+        self.assertEqual([], regions)
+        self.assertEqual([], unmatched)
+        fetch.assert_called_once_with(
+            "/stats/locations/TR", date(2026, 8, 5), date(2026, 8, 5),
+            extra=page_filter)
 
     def test_pageview_breakdowns_must_reconcile_with_kpi(self):
         block = {
