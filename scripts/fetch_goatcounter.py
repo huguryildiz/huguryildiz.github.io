@@ -245,6 +245,20 @@ def normalize(key, items):
     return rows
 
 
+def pageview_path_filter(pages):
+    """Limit dimension endpoints to non-event paths from /stats/hits.
+
+    GoatCounter's browser, system, location, language, size, and referrer
+    endpoints include tracked events unless ``include_paths`` is supplied.
+    Returning None for a malformed hit row prevents an unfiltered request from
+    silently mixing event clicks into a page-view breakdown.
+    """
+    ids = [page.get("path_id") for page in pages]
+    if any(path_id is None for path_id in ids):
+        return None
+    return {"include_paths": [str(path_id) for path_id in ids]}
+
+
 def province_key(name):
     """Fold a province name to a comparison key: lower-case, unaccented, and
     stripped of spaces and punctuation. 'Şanlıurfa', 'Sanliurfa' and
@@ -424,6 +438,9 @@ def fetch_window(label, days, offset):
     rows = normalize("pages", hits)
     pages = [r for r in rows if not r["event"]]
     events = [r for r in rows if r["event"]]
+    page_filter = pageview_path_filter(pages)
+    if pages and page_filter is None:
+        return None, None, None
     block["pages_total"] = len(pages)
     block["pages"] = attach_refs(pages, start, end)
     block["events_total"] = len(events)
@@ -432,11 +449,11 @@ def fetch_window(label, days, offset):
     block["hourly"] = hour_profile(hits)
 
     for key, path in DIMENSIONS:
-        rows = normalize(key, stats_list(path, start, end))
+        rows = normalize(key, stats_list(path, start, end, extra=page_filter)) if pages else []
         block[key + "_total"] = len(rows)
         block[key] = rows if key in UNCAPPED else rows[:LIST_CAP]
 
-    regions, unmatched = fetch_regions(block["countries"], start, end)
+    regions, unmatched = fetch_regions(block["countries"], start, end, page_filter)
     block["regions_total"] = len(regions)
     # Turkish rows are kept in full because the province map paints every one of
     # them; the rest of the world stays capped, as only the ranked list reads it.
@@ -455,6 +472,9 @@ def fetch_daily_breakdown(day):
     rows = normalize("pages", hits)
     pages = [r for r in rows if not r["event"]]
     events = [r for r in rows if r["event"]]
+    page_filter = pageview_path_filter(pages)
+    if pages and page_filter is None:
+        return None
     block = {
         "pageviews": sum(r["count"] for r in pages),
         "pages": pages,
@@ -462,7 +482,10 @@ def fetch_daily_breakdown(day):
         "hourly": hour_profile(hits),
     }
     for key, path in DIMENSIONS:
-        items = stats_list(path, day, day, strict=True)
+        if not pages:
+            block[key] = []
+            continue
+        items = stats_list(path, day, day, extra=page_filter, strict=True)
         if items is None:
             return None
         block[key] = normalize(key, items)
@@ -531,7 +554,7 @@ def refresh_daily_cache(cache, first_day, last_day):
     return {key: cache[key] for key in sorted(cache) if first_day.isoformat() <= key <= last_day.isoformat()}
 
 
-def fetch_regions(countries, start, end):
+def fetch_regions(countries, start, end, page_filter):
     """Sub-country regions for the busiest countries.
 
     GoatCounter resolves visitors to a country and, below it, an ISO 3166-2
@@ -551,7 +574,7 @@ def fetch_regions(countries, start, end):
         cc = country.get("code")
         if not cc:
             continue
-        for item in stats_list(f"/stats/locations/{cc}", start, end):
+        for item in stats_list(f"/stats/locations/{cc}", start, end, extra=page_filter):
             name = (item.get("name") or item.get("id") or "").strip()
             count = int(item.get("count") or 0)
             if not name or not count:

@@ -39,6 +39,10 @@ run collects, beyond the preset blocks and page-view-only daily series:
   clicks instrumented with `data-goatcounter-click` (CV and thesis PDFs, publication DOI/PDF
   links, the LinkedIn footer on posts); they appear only in the interactions panel. Because
   that same response carries hourly buckets, the hour-of-day profile costs no extra request.
+- **Dimension endpoints are filtered to page paths.** GoatCounter's country, browser, system,
+  screen-size, language, and referrer endpoints include tracked events by default. The
+  collector sends the non-event `path_id` values from `/stats/hits` through `include_paths`,
+  so those panels describe page views rather than page views plus instrumented clicks.
 - **Per-page referrers** are one `/stats/hits/<path_id>` call for each of the five busiest
   pages, per window, and land on `pages[].refs`.
 - **Page titles** ride along on the same response, so `/stats/` labels a new page sensibly
