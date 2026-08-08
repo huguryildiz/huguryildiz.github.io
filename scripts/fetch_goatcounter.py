@@ -35,13 +35,13 @@ except ZoneInfoNotFoundError:
 TODAY = datetime.now(SITE_ZONE).date()
 
 # A clean first run needs seven API calls per tracked day: hits plus six
-# dimension lists. The current public history fits below this ceiling. Once
-# populated, the committed cache means ordinary daily runs refresh only the
-# two most recent days. The hard cap prevents an unexpectedly old account or
-# an empty cache from creating an unbounded request campaign.
-DAILY_CALL_BUDGET = int(os.getenv("GOATCOUNTER_DAILY_CALL_BUDGET", "1500"))
+# dimension lists. Keep the bootstrap batch below the provider's rate-limit
+# window; each successful run commits the batch, so later runs can continue
+# from the remaining gap instead of repeating an uncommitted full backfill.
+DAILY_CALL_BUDGET = int(os.getenv("GOATCOUNTER_DAILY_CALL_BUDGET", "280"))
 DAILY_CALLS_PER_DAY = 1 + 6
 DAILY_REFRESH_DAYS = 2
+REQUEST_DELAY_SECONDS = float(os.getenv("GOATCOUNTER_REQUEST_DELAY_SECONDS", "0.5"))
 
 # key, label, length in days (None = everything since TRACKING_START), and how
 # many days back the window ends. The offset is what lets "yesterday" be a
@@ -156,7 +156,7 @@ def get(path, start, end, params=None):
         except requests.RequestException as e:
             print(f"[WARN] {path} [{start}..{end}]: request failed ({e})")
             continue
-        time.sleep(0.25)  # stay well inside GoatCounter's rate limit
+        time.sleep(REQUEST_DELAY_SECONDS)  # stay below GoatCounter's 4 req/s limit
         if r.status_code == 200:
             try:
                 return r.json()
@@ -164,6 +164,11 @@ def get(path, start, end, params=None):
                 print(f"[WARN] {path} [{start}..{end}]: non-JSON response, skipping")
                 return None
         print(f"[WARN] {path} [{start}..{end}]: HTTP {r.status_code} - {r.text[:200]}")
+        if r.status_code == 429:
+            reset = r.headers.get("X-Rate-Limit-Reset") or r.headers.get("Retry-After")
+            if reset:
+                print(f"[WARN] GoatCounter rate limit reset hint: {reset}; skipping this request")
+            return None
         # 404 is normally "we got the path wrong", but GoatCounter intermittently
         # answers a valid stats path with its HTML 404 page around the scheduled
         # run time; those runs aborted while a manual re-run minutes later
@@ -548,8 +553,11 @@ def refresh_daily_cache(cache, first_day, last_day):
             continue
         mismatches = pageview_breakdown_mismatches(block)
         if mismatches:
-            print(f"[WARN] daily {day}: breakdown/page-view mismatch {mismatches}; not caching")
-            continue
+            # GoatCounter may omit a dimension value (or report a different
+            # visitor/page-view basis) even when the page-view-only hourly
+            # series is complete. Keep the exact temporal/page/event block;
+            # the browser will mark only the affected breakdown unavailable.
+            print(f"[WARN] daily {day}: breakdown/page-view mismatch {mismatches}; caching temporal block")
         cache[day.isoformat()] = block
     return {key: cache[key] for key in sorted(cache) if first_day.isoformat() <= key <= last_day.isoformat()}
 
@@ -666,8 +674,8 @@ def main():
             sys.exit(f"ERROR: {key} hourly total does not equal its page-view total; snapshot not written.")
         mismatches = pageview_breakdown_mismatches(block)
         if mismatches:
-            sys.exit(f"ERROR: {key} breakdown totals {mismatches} do not equal page-view total "
-                     f"{block['pageviews']}; snapshot not written.")
+            print(f"[WARN] {key} breakdown totals {mismatches} do not equal page-view total "
+                  f"{block['pageviews']}; affected breakdowns will be unavailable")
 
     # When every day is available, preset totals must equal the sum of those
     # same daily blocks. This catches boundary drift before it reaches the KPI.
