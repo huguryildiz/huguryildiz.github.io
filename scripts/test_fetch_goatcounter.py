@@ -43,6 +43,18 @@ class GoatCounterAggregationTests(unittest.TestCase):
         self.assertEqual("2026-08-05T00:00:00+03:00", query["start"])
         self.assertEqual("2026-08-05T23:59:59+03:00", query["end"])
 
+    def test_get_does_not_retry_rate_limit_response(self):
+        response = Response()
+        response.status_code = 429
+        response.text = "rate limited"
+        response.headers = {"X-Rate-Limit-Reset": "40"}
+        with mock.patch.object(stats.requests, "get", return_value=response) as get, \
+             mock.patch.object(stats.time, "sleep"):
+            result = stats.get("/stats/hits", date(2026, 8, 5), date(2026, 8, 5))
+
+        self.assertIsNone(result)
+        self.assertEqual(1, get.call_count)
+
     def test_page_view_series_and_hours_exclude_events(self):
         hits = [
             {"event": False, "stats": [
@@ -160,6 +172,24 @@ class GoatCounterAggregationTests(unittest.TestCase):
         }
 
         self.assertEqual({"sizes": 3}, stats.pageview_breakdown_mismatches(block))
+
+    def test_daily_cache_keeps_temporal_block_when_dimension_does_not_reconcile(self):
+        block = {
+            "pageviews": 5,
+            "pages": [{"count": 5}],
+            "events": [],
+            "hourly": [5] + [0] * 23,
+            "countries": [{"count": 4}],
+            "browsers": [{"count": 4}],
+            "systems": [{"count": 4}],
+            "languages": [{"count": 4}],
+            "sizes": [],
+        }
+
+        with mock.patch.object(stats, "fetch_daily_breakdown", return_value=block):
+            cache = stats.refresh_daily_cache({}, stats.TODAY, stats.TODAY)
+
+        self.assertEqual(block, cache[stats.TODAY.isoformat()])
 
 
 if __name__ == "__main__":

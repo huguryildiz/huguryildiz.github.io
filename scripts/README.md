@@ -27,11 +27,15 @@ the cadence claim from the affected page.
 `fetch_goatcounter.py` notes — the snapshot is a public aggregate, not a raw-hit archive. It
 keeps exact per-day breakdowns in `daily_breakdowns` so an arbitrary calendar range can be
 merged in the browser without querying GoatCounter or substituting all-time figures. A clean
-first run backfills at most 1,500 API calls (configurable with
+first run backfills at most 280 daily API calls (40 days; configurable with
 `GOATCOUNTER_DAILY_CALL_BUDGET`); later runs reuse the committed cache and refresh only the
-newest two days. A date is omitted if any required endpoint fails, and the page then marks a
-range crossing that gap unavailable instead of presenting a partial result as exact. What each
-run collects, beyond the preset blocks and page-view-only daily series:
+newest two days. This incremental limit is intentional: each successful run commits its batch,
+so an empty cache cannot trigger a rate-limit failure and repeat the same full backfill forever.
+A date is omitted if a required endpoint fails, and the page then marks a range crossing that
+gap unavailable instead of presenting a partial result as exact. If a dimension total does not
+reconcile with the temporal page-view block, the temporal block is retained and only that
+breakdown is shown as unavailable. What each run collects, beyond the preset blocks and
+page-view-only daily series:
 
 - **Pages and events come from one `/stats/hits` response.** GoatCounter returns both in the
   same list and includes both in its headline total, distinguished by the `event` flag. The
