@@ -1,8 +1,8 @@
 {
-  "updated": "2026-08-17T03:53:48Z",
+  "updated": "2026-08-18T03:48:27Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-08-17"
+    "end": "2026-08-18"
   },
   "window_order": [
     "today",
@@ -16,8 +16,8 @@
   "windows": {
     "today": {
       "label": "Today",
-      "start": "2026-08-17",
-      "end": "2026-08-17",
+      "start": "2026-08-18",
+      "end": "2026-08-18",
       "pageviews": 0,
       "pages_total": 0,
       "pages": [],
@@ -67,8 +67,8 @@
     },
     "yesterday": {
       "label": "Yesterday",
-      "start": "2026-08-16",
-      "end": "2026-08-16",
+      "start": "2026-08-17",
+      "end": "2026-08-17",
       "pageviews": 0,
       "pages_total": 0,
       "pages": [],
@@ -118,9 +118,9 @@
     },
     "7d": {
       "label": "Last 7 days",
-      "start": "2026-08-11",
-      "end": "2026-08-17",
-      "pageviews": 15,
+      "start": "2026-08-12",
+      "end": "2026-08-18",
+      "pageviews": 12,
       "pages_total": 7,
       "pages": [
         {
@@ -128,26 +128,14 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 9,
+          "count": 6,
           "refs": [
-            {
-              "name": "Google",
-              "count": 1
-            },
             {
               "name": "com.linkedin.android",
               "count": 1
             },
             {
-              "name": "www.bing.com",
-              "count": 1
-            },
-            {
               "name": "www.linkedin.com",
-              "count": 1
-            },
-            {
-              "name": "avesis.tedu.edu.tr",
               "count": 1
             }
           ]
@@ -219,17 +207,17 @@
           "count": 1
         }
       ],
-      "events_total": 1,
-      "events": [
-        {
-          "path": "cv-pdf",
-          "title": "CV (PDF), from the CV page",
-          "path_id": 96697209,
-          "event": true,
-          "count": 1
-        }
-      ],
+      "events_total": 0,
+      "events": [],
       "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
         1,
         0,
         0,
@@ -237,15 +225,7 @@
         0,
         0,
         0,
-        1,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        9,
+        7,
         0,
         0,
         1,
@@ -255,13 +235,8 @@
         1,
         0
       ],
-      "countries_total": 5,
+      "countries_total": 4,
       "countries": [
-        {
-          "code": "TR",
-          "name": "Turkey",
-          "count": 3
-        },
         {
           "code": "US",
           "name": "United States",
@@ -273,51 +248,35 @@
           "count": 1
         },
         {
-          "code": "IN",
-          "name": "India",
-          "count": 1
-        },
-        {
           "code": "SG",
           "name": "Singapore",
           "count": 1
+        },
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 1
         }
       ],
-      "referrers_total": 5,
+      "referrers_total": 2,
       "referrers": [
-        {
-          "name": "Google",
-          "count": 1
-        },
         {
           "name": "com.linkedin.android",
           "count": 1
         },
         {
-          "name": "www.bing.com",
-          "count": 1
-        },
-        {
           "name": "www.linkedin.com",
-          "count": 1
-        },
-        {
-          "name": "avesis.tedu.edu.tr",
           "count": 1
         }
       ],
-      "browsers_total": 3,
+      "browsers_total": 2,
       "browsers": [
         {
           "name": "Chrome",
-          "count": 7
+          "count": 5
         },
         {
           "name": "Edge",
-          "count": 1
-        },
-        {
-          "name": "Safari",
           "count": 1
         }
       ],
@@ -325,14 +284,14 @@
       "systems": [
         {
           "name": "Windows",
-          "count": 6
-        },
-        {
-          "name": "macOS",
-          "count": 2
+          "count": 4
         },
         {
           "name": "Android",
+          "count": 1
+        },
+        {
+          "name": "macOS",
           "count": 1
         }
       ],
@@ -342,7 +301,7 @@
       "languages": [
         {
           "name": "English",
-          "count": 6
+          "count": 3
         },
         {
           "name": "(unknown)",
@@ -357,15 +316,8 @@
           "count": 1
         }
       ],
-      "regions_total": 4,
+      "regions_total": 2,
       "regions": [
-        {
-          "name": "İstanbul",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "34",
-          "count": 2
-        },
         {
           "name": "Colorado",
           "country": "United States",
@@ -379,22 +331,15 @@
           "country_code": "US",
           "code": null,
           "count": 1
-        },
-        {
-          "name": "Karnataka",
-          "country": "India",
-          "country_code": "IN",
-          "code": null,
-          "count": 1
         }
       ],
       "regions_unmatched": []
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-07-19",
-      "end": "2026-08-17",
-      "pageviews": 211,
+      "start": "2026-07-20",
+      "end": "2026-08-18",
+      "pageviews": 197,
       "pages_total": 19,
       "pages": [
         {
@@ -431,11 +376,11 @@
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
-          "count": 43,
+          "count": 29,
           "refs": [
             {
               "name": "Google",
-              "count": 33
+              "count": 19
             },
             {
               "name": "huguryildiz.com",
@@ -659,26 +604,26 @@
         5,
         6,
         9,
-        13,
+        11,
+        1,
         2,
-        3,
         7,
         2,
         0,
-        5,
+        4,
         8,
         10,
-        17,
-        17,
-        16,
+        13,
+        15,
+        15,
         10,
-        6,
+        5,
         13,
         13,
         12,
         7,
         15,
-        13
+        12
       ],
       "countries_total": 13,
       "countries": [
@@ -941,8 +886,8 @@
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-05-20",
-      "end": "2026-08-17",
+      "start": "2026-05-21",
+      "end": "2026-08-18",
       "pageviews": 458,
       "pages_total": 19,
       "pages": [
@@ -1585,8 +1530,8 @@
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-08-18",
-      "end": "2026-08-17",
+      "start": "2025-08-19",
+      "end": "2026-08-18",
       "pageviews": 1010,
       "pages_total": 23,
       "pages": [
@@ -2276,7 +2221,7 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-08-17",
+      "end": "2026-08-18",
       "pageviews": 1010,
       "pages_total": 23,
       "pages": [
@@ -3739,6 +3684,10 @@
     },
     {
       "date": "2026-08-17",
+      "views": 0
+    },
+    {
+      "date": "2026-08-18",
       "views": 0
     }
   ],
@@ -19562,6 +19511,43 @@
       "systems": [],
       "sizes": [],
       "languages": []
+    },
+    "2026-08-18": {
+      "pageviews": 0,
+      "pages": [],
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries": [],
+      "referrers": [],
+      "browsers": [],
+      "systems": [],
+      "sizes": [],
+      "languages": []
     }
   },
   "page_series": [
@@ -20348,6 +20334,10 @@
         },
         {
           "date": "2026-08-18",
+          "views": 0
+        },
+        {
+          "date": "2026-08-19",
           "views": 0
         }
       ]
@@ -21136,6 +21126,10 @@
         {
           "date": "2026-08-18",
           "views": 0
+        },
+        {
+          "date": "2026-08-19",
+          "views": 0
         }
       ]
     },
@@ -21922,6 +21916,10 @@
         },
         {
           "date": "2026-08-18",
+          "views": 0
+        },
+        {
+          "date": "2026-08-19",
           "views": 0
         }
       ]
@@ -22710,6 +22708,10 @@
         {
           "date": "2026-08-18",
           "views": 0
+        },
+        {
+          "date": "2026-08-19",
+          "views": 0
         }
       ]
     },
@@ -23497,6 +23499,10 @@
         {
           "date": "2026-08-18",
           "views": 0
+        },
+        {
+          "date": "2026-08-19",
+          "views": 0
         }
       ]
     },
@@ -24280,11 +24286,19 @@
         {
           "date": "2026-08-18",
           "views": 0
+        },
+        {
+          "date": "2026-08-19",
+          "views": 0
         }
       ]
     }
   ],
-  "site": {},
+  "site": {
+    "timezone": "Europe/Istanbul",
+    "first_hit_at": "2026-02-05T12:24:02.263206Z",
+    "data_retention_days": 0
+  },
   "totals": {
     "pageviews": 1010,
     "visitors": null
