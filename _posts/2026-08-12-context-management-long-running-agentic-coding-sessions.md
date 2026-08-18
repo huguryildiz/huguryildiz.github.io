@@ -5,9 +5,18 @@ description: "Six evidence-bounded practices for managing context in long-runnin
 excerpt: "Compaction removes accumulated context; delegation keeps task-specific reading out of the main window. Six practical guidelines separate those mechanisms and state what the observed telemetry can and cannot establish."
 tags: [Context Engineering, Agentic Workflows, LLM Engineering]
 linkedin: "https://www.linkedin.com/feed/update/urn:li:share:7492713085070184448/"
+image: /assets/images/writing/covers/context-management-static.webp
 ---
 
 A model keeps no private memory between API calls. The harness rebuilds the model's state each turn from the conversation, tool results, files, and instructions it supplies. What is absent is unavailable to the model.
+
+<figure class="post-figure">
+  <picture>
+    <source srcset="/assets/images/writing/covers/context-management-static.webp" media="(prefers-reduced-motion: reduce)">
+    <img src="/assets/images/writing/covers/context-management.gif" alt="Animated diagram contrasting bounded subagent reports with context compaction across long-running coding sessions" loading="lazy" width="2160" height="2160">
+  </picture>
+  <figcaption>Subagent reporting and compaction act at different points in the context lifecycle. The measurements are descriptive and do not establish task-quality outcomes.</figcaption>
+</figure>
 
 Six practices I have settled on:
 

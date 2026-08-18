@@ -5,9 +5,15 @@ description: "Why a detected Claude watermark can indicate model contact without
 excerpt: "A watermark may indicate that text came into contact with Claude, but it cannot by itself distinguish generation from editing or establish authorship, intent, or cheating."
 tags: [Academic Integrity, AI Watermarking, Higher Education]
 linkedin: "https://www.linkedin.com/feed/update/urn:li:share:7495502747249729536/"
+image: /assets/images/writing/covers/claude-watermark-academic-misconduct.webp
 ---
 
 A student is accused of using AI to write an assignment. The university's evidence is a Claude watermark. Is that enough to prove cheating?
+
+<figure class="post-figure">
+  <img src="/assets/images/writing/covers/claude-watermark-academic-misconduct.webp" alt="A sheet of textured white paper with a subtle embossed pattern and faint lines, photographed on a dark wooden surface" loading="lazy" width="1254" height="1254">
+  <figcaption>Conceptual illustration of a text watermark. It is not a detector result or evidence of authorship.</figcaption>
+</figure>
 
 Claude's new models mark generated text worldwide. The method is a variant of DeepMind's SynthID-Text. The watermark sits in patterns of word choice, not in hidden characters. It survives copy-paste, and supported files carry C2PA metadata. Anthropic plans a detector, but none is public yet.
 
