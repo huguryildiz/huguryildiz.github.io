@@ -1,8 +1,8 @@
 {
-  "updated": "2026-08-18T03:48:27Z",
+  "updated": "2026-08-19T03:50:27Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-08-18"
+    "end": "2026-08-19"
   },
   "window_order": [
     "today",
@@ -16,8 +16,8 @@
   "windows": {
     "today": {
       "label": "Today",
-      "start": "2026-08-18",
-      "end": "2026-08-18",
+      "start": "2026-08-19",
+      "end": "2026-08-19",
       "pageviews": 0,
       "pages_total": 0,
       "pages": [],
@@ -67,14 +67,94 @@
     },
     "yesterday": {
       "label": "Yesterday",
-      "start": "2026-08-17",
-      "end": "2026-08-17",
-      "pageviews": 0,
-      "pages_total": 0,
-      "pages": [],
-      "events_total": 0,
-      "events": [],
+      "start": "2026-08-18",
+      "end": "2026-08-18",
+      "pageviews": 9,
+      "pages_total": 5,
+      "pages": [
+        {
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
+          "event": false,
+          "count": 4,
+          "refs": [
+            {
+              "name": "avesis.tedu.edu.tr",
+              "count": 2
+            },
+            {
+              "name": "www.linkedin.com",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/publications",
+          "title": "Publications | Huseyin Ugur Yildiz",
+          "path_id": 80750273,
+          "event": false,
+          "count": 2,
+          "refs": [
+            {
+              "name": "huguryildiz.com/research",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
+          "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
+          "path_id": 99994300,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "huguryildiz.com",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/writing/cuopt-gpu-multidimensional-knapsack",
+          "title": "A 30,000-variable knapsack, solved on a GPU in ten seconds | Huseyin Ugur Yildiz",
+          "path_id": 96462585,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/research",
+          "title": "Research | Huseyin Ugur Yildiz",
+          "path_id": 80750374,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "huguryildiz.com",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "events_total": 1,
+      "events": [
+        {
+          "path": "doi/gultekin2023exploring",
+          "title": "Exploring the tradeoff between energy dissipation, delay, and the number of backbones for broadcasting in wireless sensor networks through goal programming",
+          "path_id": 103890124,
+          "event": true,
+          "count": 1
+        }
+      ],
       "hourly": [
+        1,
+        2,
         0,
         0,
         0,
@@ -86,12 +166,10 @@
         0,
         0,
         0,
+        2,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        3,
+        1,
         0,
         0,
         0,
@@ -100,36 +178,97 @@
         0,
         0
       ],
-      "countries_total": 0,
-      "countries": [],
-      "referrers_total": 0,
-      "referrers": [],
-      "browsers_total": 0,
-      "browsers": [],
-      "systems_total": 0,
-      "systems": [],
+      "countries_total": 1,
+      "countries": [
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 4
+        }
+      ],
+      "referrers_total": 2,
+      "referrers": [
+        {
+          "name": "avesis.tedu.edu.tr",
+          "count": 2
+        },
+        {
+          "name": "www.linkedin.com",
+          "count": 1
+        }
+      ],
+      "browsers_total": 2,
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 2
+        },
+        {
+          "name": "Safari",
+          "count": 2
+        }
+      ],
+      "systems_total": 3,
+      "systems": [
+        {
+          "name": "iOS",
+          "count": 2
+        },
+        {
+          "name": "macOS",
+          "count": 1
+        },
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 0,
-      "languages": [],
-      "regions_total": 0,
-      "regions": [],
+      "languages_total": 1,
+      "languages": [
+        {
+          "name": "English",
+          "count": 4
+        }
+      ],
+      "regions_total": 2,
+      "regions": [
+        {
+          "name": "Ankara",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "06",
+          "count": 2
+        },
+        {
+          "name": "Antalya",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "07",
+          "count": 2
+        }
+      ],
       "regions_unmatched": []
     },
     "7d": {
       "label": "Last 7 days",
-      "start": "2026-08-12",
-      "end": "2026-08-18",
-      "pageviews": 12,
-      "pages_total": 7,
+      "start": "2026-08-13",
+      "end": "2026-08-19",
+      "pageviews": 14,
+      "pages_total": 5,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 6,
+          "count": 9,
           "refs": [
+            {
+              "name": "avesis.tedu.edu.tr",
+              "count": 2
+            },
             {
               "name": "com.linkedin.android",
               "count": 1
@@ -141,22 +280,22 @@
           ]
         },
         {
-          "path": "/writing/llm-simulations-numerical-fidelity",
-          "title": "Visually convincing LLM simulations can conceal substantial differences in numerical fidelity | Huseyin Ugur Yildiz",
-          "path_id": 102215395,
+          "path": "/publications",
+          "title": "Publications | Huseyin Ugur Yildiz",
+          "path_id": 80750273,
           "event": false,
-          "count": 1,
+          "count": 2,
           "refs": [
             {
-              "name": "huguryildiz.com/writing",
+              "name": "huguryildiz.com/research",
               "count": 1
             }
           ]
         },
         {
-          "path": "/writing/ieee-twc-submission-cap",
-          "title": "An academic rate limiter: IEEE TWC now caps authors at 36 new manuscripts a year | Huseyin Ugur Yildiz",
-          "path_id": 96633631,
+          "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
+          "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
+          "path_id": 99994300,
           "event": false,
           "count": 1,
           "refs": [
@@ -167,51 +306,45 @@
           ]
         },
         {
-          "path": "/writing",
-          "title": "Writing | Huseyin Ugur Yildiz",
-          "path_id": 96360100,
+          "path": "/writing/cuopt-gpu-multidimensional-knapsack",
+          "title": "A 30,000-variable knapsack, solved on a GPU in ten seconds | Huseyin Ugur Yildiz",
+          "path_id": 96462585,
           "event": false,
           "count": 1,
           "refs": [
             {
-              "name": "huguryildiz.com/publications",
+              "name": "Google",
               "count": 1
             }
           ]
         },
         {
-          "path": "/students",
-          "title": "Students | Huseyin Ugur Yildiz",
-          "path_id": 80840367,
+          "path": "/research",
+          "title": "Research | Huseyin Ugur Yildiz",
+          "path_id": 80750374,
           "event": false,
           "count": 1,
           "refs": [
             {
-              "name": "huguryildiz.com/teaching",
+              "name": "huguryildiz.com",
               "count": 1
             }
           ]
-        },
+        }
+      ],
+      "events_total": 1,
+      "events": [
         {
-          "path": "/teaching",
-          "title": "Huseyin Ugur Yildiz",
-          "path_id": 80750338,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/publications",
-          "title": "Publications | Huseyin Ugur Yildiz",
-          "path_id": 80750273,
-          "event": false,
+          "path": "doi/gultekin2023exploring",
+          "title": "Exploring the tradeoff between energy dissipation, delay, and the number of backbones for broadcasting in wireless sensor networks through goal programming",
+          "path_id": 103890124,
+          "event": true,
           "count": 1
         }
       ],
-      "events_total": 0,
-      "events": [],
       "hourly": [
-        0,
-        0,
+        1,
+        2,
         0,
         0,
         0,
@@ -223,10 +356,10 @@
         0,
         0,
         0,
+        2,
         0,
-        0,
-        7,
-        0,
+        3,
+        1,
         0,
         1,
         0,
@@ -235,8 +368,13 @@
         1,
         0
       ],
-      "countries_total": 4,
+      "countries_total": 3,
       "countries": [
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 5
+        },
         {
           "code": "US",
           "name": "United States",
@@ -246,20 +384,14 @@
           "code": "HK",
           "name": "Hong Kong",
           "count": 1
-        },
-        {
-          "code": "SG",
-          "name": "Singapore",
-          "count": 1
-        },
-        {
-          "code": "TR",
-          "name": "Turkey",
-          "count": 1
         }
       ],
-      "referrers_total": 2,
+      "referrers_total": 3,
       "referrers": [
+        {
+          "name": "avesis.tedu.edu.tr",
+          "count": 2
+        },
         {
           "name": "com.linkedin.android",
           "count": 1
@@ -269,39 +401,47 @@
           "count": 1
         }
       ],
-      "browsers_total": 2,
+      "browsers_total": 3,
       "browsers": [
         {
           "name": "Chrome",
-          "count": 5
+          "count": 6
+        },
+        {
+          "name": "Safari",
+          "count": 2
         },
         {
           "name": "Edge",
           "count": 1
         }
       ],
-      "systems_total": 3,
+      "systems_total": 4,
       "systems": [
         {
           "name": "Windows",
           "count": 4
         },
         {
-          "name": "Android",
-          "count": 1
+          "name": "iOS",
+          "count": 2
         },
         {
           "name": "macOS",
+          "count": 2
+        },
+        {
+          "name": "Android",
           "count": 1
         }
       ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 4,
+      "languages_total": 3,
       "languages": [
         {
           "name": "English",
-          "count": 3
+          "count": 7
         },
         {
           "name": "(unknown)",
@@ -310,14 +450,24 @@
         {
           "name": "Turkish",
           "count": 1
-        },
-        {
-          "name": "Chinese",
-          "count": 1
         }
       ],
-      "regions_total": 2,
+      "regions_total": 4,
       "regions": [
+        {
+          "name": "Ankara",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "06",
+          "count": 2
+        },
+        {
+          "name": "Antalya",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "07",
+          "count": 2
+        },
         {
           "name": "Colorado",
           "country": "United States",
@@ -337,9 +487,9 @@
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-07-20",
-      "end": "2026-08-18",
-      "pageviews": 197,
+      "start": "2026-07-21",
+      "end": "2026-08-19",
+      "pageviews": 200,
       "pages_total": 19,
       "pages": [
         {
@@ -347,7 +497,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 69,
+          "count": 73,
           "refs": [
             {
               "name": "Google",
@@ -355,11 +505,11 @@
             },
             {
               "name": "www.linkedin.com",
-              "count": 6
+              "count": 7
             },
             {
               "name": "avesis.tedu.edu.tr",
-              "count": 4
+              "count": 6
             },
             {
               "name": "com.linkedin.android",
@@ -376,11 +526,11 @@
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
-          "count": 29,
+          "count": 23,
           "refs": [
             {
               "name": "Google",
-              "count": 19
+              "count": 13
             },
             {
               "name": "huguryildiz.com",
@@ -405,11 +555,11 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 17,
+          "count": 18,
           "refs": [
             {
               "name": "huguryildiz.com",
-              "count": 8
+              "count": 9
             },
             {
               "name": "huguryildiz.com/publications",
@@ -430,7 +580,7 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 15,
+          "count": 17,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -438,7 +588,7 @@
             },
             {
               "name": "huguryildiz.com/research",
-              "count": 4
+              "count": 5
             },
             {
               "name": "huguryildiz.com/teaching",
@@ -533,9 +683,23 @@
           "count": 3
         },
         {
+          "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
+          "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
+          "path_id": 99994300,
+          "event": false,
+          "count": 2
+        },
+        {
           "path": "/writing/vera-jury-evaluation-platform",
           "title": "The hardest part of running a jury isn’t the jury | Huseyin Ugur Yildiz",
           "path_id": 96462588,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/writing/cuopt-gpu-multidimensional-knapsack",
+          "title": "A 30,000-variable knapsack, solved on a GPU in ten seconds | Huseyin Ugur Yildiz",
+          "path_id": 96462585,
           "event": false,
           "count": 2
         },
@@ -561,28 +725,14 @@
           "count": 1
         },
         {
-          "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
-          "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
-          "path_id": 99994300,
-          "event": false,
-          "count": 1
-        },
-        {
           "path": "/writing/local-first-latex-workflow",
           "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
           "path_id": 98713527,
           "event": false,
           "count": 1
-        },
-        {
-          "path": "/writing/cuopt-gpu-multidimensional-knapsack",
-          "title": "A 30,000-variable knapsack, solved on a GPU in ten seconds | Huseyin Ugur Yildiz",
-          "path_id": 96462585,
-          "event": false,
-          "count": 1
         }
       ],
-      "events_total": 2,
+      "events_total": 3,
       "events": [
         {
           "path": "cv-pdf",
@@ -590,6 +740,13 @@
           "path_id": 96697209,
           "event": true,
           "count": 4
+        },
+        {
+          "path": "doi/gultekin2023exploring",
+          "title": "Exploring the tradeoff between energy dissipation, delay, and the number of backbones for broadcasting in wireless sensor networks through goal programming",
+          "path_id": 103890124,
+          "event": true,
+          "count": 1
         },
         {
           "path": "pdf/tantur2025mitigating",
@@ -600,23 +757,23 @@
         }
       ],
       "hourly": [
-        2,
+        3,
+        7,
         5,
-        6,
         9,
-        11,
+        10,
         1,
         2,
         7,
         2,
         0,
         4,
-        8,
-        10,
-        13,
-        15,
-        15,
-        10,
+        7,
+        9,
+        14,
+        14,
+        18,
+        11,
         5,
         13,
         13,
@@ -630,7 +787,7 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 40
+          "count": 44
         },
         {
           "code": "US",
@@ -701,11 +858,11 @@
         },
         {
           "name": "www.linkedin.com",
-          "count": 6
+          "count": 7
         },
         {
           "name": "avesis.tedu.edu.tr",
-          "count": 4
+          "count": 6
         },
         {
           "name": "com.linkedin.android",
@@ -728,11 +885,11 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 42
+          "count": 44
         },
         {
           "name": "Safari",
-          "count": 22
+          "count": 24
         },
         {
           "name": "Firefox",
@@ -747,15 +904,15 @@
       "systems": [
         {
           "name": "Windows",
-          "count": 27
+          "count": 28
         },
         {
           "name": "iOS",
-          "count": 20
+          "count": 22
         },
         {
           "name": "macOS",
-          "count": 10
+          "count": 11
         },
         {
           "name": "Android",
@@ -772,7 +929,7 @@
       "languages": [
         {
           "name": "English",
-          "count": 31
+          "count": 35
         },
         {
           "name": "(unknown)",
@@ -795,14 +952,14 @@
           "count": 1
         }
       ],
-      "regions_total": 14,
+      "regions_total": 15,
       "regions": [
         {
           "name": "Ankara",
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 11
+          "count": 13
         },
         {
           "name": "İstanbul",
@@ -817,6 +974,13 @@
           "country_code": "US",
           "code": null,
           "count": 4
+        },
+        {
+          "name": "Antalya",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "07",
+          "count": 2
         },
         {
           "name": "California",
@@ -873,22 +1037,15 @@
           "country_code": "US",
           "code": null,
           "count": 1
-        },
-        {
-          "name": "National Capital Territory of Delhi",
-          "country": "India",
-          "country_code": "IN",
-          "code": null,
-          "count": 1
         }
       ],
       "regions_unmatched": []
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-05-21",
-      "end": "2026-08-18",
-      "pageviews": 458,
+      "start": "2026-05-22",
+      "end": "2026-08-19",
+      "pageviews": 467,
       "pages_total": 19,
       "pages": [
         {
@@ -896,7 +1053,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 188,
+          "count": 192,
           "refs": [
             {
               "name": "Google",
@@ -904,7 +1061,7 @@
             },
             {
               "name": "www.linkedin.com",
-              "count": 27
+              "count": 28
             },
             {
               "name": "com.linkedin.android",
@@ -912,7 +1069,7 @@
             },
             {
               "name": "avesis.tedu.edu.tr",
-              "count": 5
+              "count": 7
             },
             {
               "name": "bing.com",
@@ -954,19 +1111,19 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 42,
+          "count": 44,
           "refs": [
             {
               "name": "huguryildiz.com",
               "count": 22
             },
             {
-              "name": "huguryildiz.com/cv",
+              "name": "huguryildiz.com/research",
               "count": 6
             },
             {
-              "name": "huguryildiz.com/research",
-              "count": 5
+              "name": "huguryildiz.com/cv",
+              "count": 6
             },
             {
               "name": "Google",
@@ -983,7 +1140,7 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 35,
+          "count": 36,
           "refs": [
             {
               "name": "huguryildiz.com/publications",
@@ -991,7 +1148,7 @@
             },
             {
               "name": "huguryildiz.com",
-              "count": 11
+              "count": 12
             },
             {
               "name": "Google",
@@ -1093,9 +1250,23 @@
           "count": 3
         },
         {
+          "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
+          "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
+          "path_id": 99994300,
+          "event": false,
+          "count": 2
+        },
+        {
           "path": "/writing/vera-jury-evaluation-platform",
           "title": "The hardest part of running a jury isn’t the jury | Huseyin Ugur Yildiz",
           "path_id": 96462588,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/writing/cuopt-gpu-multidimensional-knapsack",
+          "title": "A 30,000-variable knapsack, solved on a GPU in ten seconds | Huseyin Ugur Yildiz",
+          "path_id": 96462585,
           "event": false,
           "count": 2
         },
@@ -1114,28 +1285,14 @@
           "count": 1
         },
         {
-          "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
-          "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
-          "path_id": 99994300,
-          "event": false,
-          "count": 1
-        },
-        {
           "path": "/writing/local-first-latex-workflow",
           "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
           "path_id": 98713527,
           "event": false,
           "count": 1
-        },
-        {
-          "path": "/writing/cuopt-gpu-multidimensional-knapsack",
-          "title": "A 30,000-variable knapsack, solved on a GPU in ten seconds | Huseyin Ugur Yildiz",
-          "path_id": 96462585,
-          "event": false,
-          "count": 1
         }
       ],
-      "events_total": 2,
+      "events_total": 3,
       "events": [
         {
           "path": "cv-pdf",
@@ -1143,6 +1300,13 @@
           "path_id": 96697209,
           "event": true,
           "count": 4
+        },
+        {
+          "path": "doi/gultekin2023exploring",
+          "title": "Exploring the tradeoff between energy dissipation, delay, and the number of backbones for broadcasting in wireless sensor networks through goal programming",
+          "path_id": 103890124,
+          "event": true,
+          "count": 1
         },
         {
           "path": "pdf/tantur2025mitigating",
@@ -1153,8 +1317,8 @@
         }
       ],
       "hourly": [
-        9,
-        23,
+        10,
+        25,
         33,
         13,
         20,
@@ -1166,10 +1330,10 @@
         15,
         14,
         16,
-        26,
+        28,
         32,
-        29,
-        26,
+        32,
+        27,
         20,
         40,
         35,
@@ -1183,7 +1347,7 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 93
+          "count": 97
         },
         {
           "code": "US",
@@ -1329,7 +1493,7 @@
         },
         {
           "name": "www.linkedin.com",
-          "count": 27
+          "count": 28
         },
         {
           "name": "com.linkedin.android",
@@ -1337,7 +1501,7 @@
         },
         {
           "name": "avesis.tedu.edu.tr",
-          "count": 5
+          "count": 7
         },
         {
           "name": "bing.com",
@@ -1372,11 +1536,11 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 130
+          "count": 132
         },
         {
           "name": "Safari",
-          "count": 51
+          "count": 53
         },
         {
           "name": "Edge",
@@ -1391,15 +1555,15 @@
       "systems": [
         {
           "name": "Windows",
-          "count": 59
+          "count": 60
         },
         {
           "name": "macOS",
-          "count": 56
+          "count": 57
         },
         {
           "name": "iOS",
-          "count": 42
+          "count": 44
         },
         {
           "name": "Android",
@@ -1420,7 +1584,7 @@
         },
         {
           "name": "English",
-          "count": 31
+          "count": 35
         },
         {
           "name": "Turkish",
@@ -1439,14 +1603,14 @@
           "count": 1
         }
       ],
-      "regions_total": 17,
+      "regions_total": 18,
       "regions": [
         {
           "name": "Ankara",
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 11
+          "count": 13
         },
         {
           "name": "Colorado",
@@ -1489,6 +1653,13 @@
           "country_code": "US",
           "code": null,
           "count": 3
+        },
+        {
+          "name": "Antalya",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "07",
+          "count": 2
         },
         {
           "name": "Illinois",
@@ -1517,22 +1688,15 @@
           "country_code": "US",
           "code": null,
           "count": 1
-        },
-        {
-          "name": "New York",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 1
         }
       ],
       "regions_unmatched": []
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-08-19",
-      "end": "2026-08-18",
-      "pageviews": 1010,
+      "start": "2025-08-20",
+      "end": "2026-08-19",
+      "pageviews": 1019,
       "pages_total": 23,
       "pages": [
         {
@@ -1540,7 +1704,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 394,
+          "count": 398,
           "refs": [
             {
               "name": "Google",
@@ -1548,15 +1712,15 @@
             },
             {
               "name": "www.linkedin.com",
-              "count": 33
+              "count": 34
+            },
+            {
+              "name": "avesis.tedu.edu.tr",
+              "count": 12
             },
             {
               "name": "com.linkedin.android",
               "count": 11
-            },
-            {
-              "name": "avesis.tedu.edu.tr",
-              "count": 10
             },
             {
               "name": "huguryildiz.com/publications",
@@ -1598,7 +1762,7 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 126,
+          "count": 128,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -1610,7 +1774,7 @@
             },
             {
               "name": "huguryildiz.com/research",
-              "count": 13
+              "count": 14
             },
             {
               "name": "huguryildiz.github.io/research",
@@ -1627,7 +1791,7 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 89,
+          "count": 90,
           "refs": [
             {
               "name": "huguryildiz.com/publications",
@@ -1635,7 +1799,7 @@
             },
             {
               "name": "huguryildiz.com",
-              "count": 24
+              "count": 25
             },
             {
               "name": "huguryildiz.com/service",
@@ -1751,9 +1915,23 @@
           "count": 3
         },
         {
+          "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
+          "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
+          "path_id": 99994300,
+          "event": false,
+          "count": 2
+        },
+        {
           "path": "/writing/vera-jury-evaluation-platform",
           "title": "The hardest part of running a jury isn’t the jury | Huseyin Ugur Yildiz",
           "path_id": 96462588,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/writing/cuopt-gpu-multidimensional-knapsack",
+          "title": "A 30,000-variable knapsack, solved on a GPU in ten seconds | Huseyin Ugur Yildiz",
+          "path_id": 96462585,
           "event": false,
           "count": 2
         },
@@ -1786,28 +1964,14 @@
           "count": 1
         },
         {
-          "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
-          "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
-          "path_id": 99994300,
-          "event": false,
-          "count": 1
-        },
-        {
           "path": "/writing/local-first-latex-workflow",
           "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
           "path_id": 98713527,
           "event": false,
           "count": 1
-        },
-        {
-          "path": "/writing/cuopt-gpu-multidimensional-knapsack",
-          "title": "A 30,000-variable knapsack, solved on a GPU in ten seconds | Huseyin Ugur Yildiz",
-          "path_id": 96462585,
-          "event": false,
-          "count": 1
         }
       ],
-      "events_total": 2,
+      "events_total": 3,
       "events": [
         {
           "path": "cv-pdf",
@@ -1815,6 +1979,13 @@
           "path_id": 96697209,
           "event": true,
           "count": 4
+        },
+        {
+          "path": "doi/gultekin2023exploring",
+          "title": "Exploring the tradeoff between energy dissipation, delay, and the number of backbones for broadcasting in wireless sensor networks through goal programming",
+          "path_id": 103890124,
+          "event": true,
+          "count": 1
         },
         {
           "path": "pdf/tantur2025mitigating",
@@ -1825,8 +1996,8 @@
         }
       ],
       "hourly": [
-        32,
-        51,
+        33,
+        53,
         56,
         51,
         30,
@@ -1838,10 +2009,10 @@
         25,
         51,
         35,
-        61,
+        63,
         69,
-        58,
-        74,
+        61,
+        75,
         42,
         76,
         51,
@@ -1855,7 +2026,7 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 247
+          "count": 251
         },
         {
           "code": "US",
@@ -2011,15 +2182,15 @@
         },
         {
           "name": "www.linkedin.com",
-          "count": 33
+          "count": 34
+        },
+        {
+          "name": "avesis.tedu.edu.tr",
+          "count": 12
         },
         {
           "name": "com.linkedin.android",
           "count": 11
-        },
-        {
-          "name": "avesis.tedu.edu.tr",
-          "count": 10
         },
         {
           "name": "bing.com",
@@ -2062,11 +2233,11 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 245
+          "count": 247
         },
         {
           "name": "Safari",
-          "count": 141
+          "count": 143
         },
         {
           "name": "Edge",
@@ -2081,15 +2252,15 @@
       "systems": [
         {
           "name": "iOS",
-          "count": 127
+          "count": 129
         },
         {
           "name": "macOS",
-          "count": 124
+          "count": 125
         },
         {
           "name": "Windows",
-          "count": 99
+          "count": 100
         },
         {
           "name": "Android",
@@ -2110,7 +2281,7 @@
         },
         {
           "name": "English",
-          "count": 31
+          "count": 35
         },
         {
           "name": "Turkish",
@@ -2129,21 +2300,21 @@
           "count": 1
         }
       ],
-      "regions_total": 17,
+      "regions_total": 18,
       "regions": [
+        {
+          "name": "Ankara",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "06",
+          "count": 13
+        },
         {
           "name": "Colorado",
           "country": "United States",
           "country_code": "US",
           "code": null,
           "count": 13
-        },
-        {
-          "name": "Ankara",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "06",
-          "count": 11
         },
         {
           "name": "Iowa",
@@ -2188,6 +2359,13 @@
           "count": 3
         },
         {
+          "name": "Antalya",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "07",
+          "count": 2
+        },
+        {
           "name": "Illinois",
           "country": "United States",
           "country_code": "US",
@@ -2203,13 +2381,6 @@
         },
         {
           "name": "Arizona",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 1
-        },
-        {
-          "name": "Florida",
           "country": "United States",
           "country_code": "US",
           "code": null,
@@ -2221,8 +2392,8 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-08-18",
-      "pageviews": 1010,
+      "end": "2026-08-19",
+      "pageviews": 1019,
       "pages_total": 23,
       "pages": [
         {
@@ -2230,7 +2401,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 394,
+          "count": 398,
           "refs": [
             {
               "name": "Google",
@@ -2238,15 +2409,15 @@
             },
             {
               "name": "www.linkedin.com",
-              "count": 33
+              "count": 34
+            },
+            {
+              "name": "avesis.tedu.edu.tr",
+              "count": 12
             },
             {
               "name": "com.linkedin.android",
               "count": 11
-            },
-            {
-              "name": "avesis.tedu.edu.tr",
-              "count": 10
             },
             {
               "name": "huguryildiz.com/publications",
@@ -2288,7 +2459,7 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 126,
+          "count": 128,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -2300,7 +2471,7 @@
             },
             {
               "name": "huguryildiz.com/research",
-              "count": 13
+              "count": 14
             },
             {
               "name": "huguryildiz.github.io/research",
@@ -2317,7 +2488,7 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 89,
+          "count": 90,
           "refs": [
             {
               "name": "huguryildiz.com/publications",
@@ -2325,7 +2496,7 @@
             },
             {
               "name": "huguryildiz.com",
-              "count": 24
+              "count": 25
             },
             {
               "name": "huguryildiz.com/service",
@@ -2441,9 +2612,23 @@
           "count": 3
         },
         {
+          "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
+          "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
+          "path_id": 99994300,
+          "event": false,
+          "count": 2
+        },
+        {
           "path": "/writing/vera-jury-evaluation-platform",
           "title": "The hardest part of running a jury isn’t the jury | Huseyin Ugur Yildiz",
           "path_id": 96462588,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/writing/cuopt-gpu-multidimensional-knapsack",
+          "title": "A 30,000-variable knapsack, solved on a GPU in ten seconds | Huseyin Ugur Yildiz",
+          "path_id": 96462585,
           "event": false,
           "count": 2
         },
@@ -2476,28 +2661,14 @@
           "count": 1
         },
         {
-          "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
-          "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
-          "path_id": 99994300,
-          "event": false,
-          "count": 1
-        },
-        {
           "path": "/writing/local-first-latex-workflow",
           "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
           "path_id": 98713527,
           "event": false,
           "count": 1
-        },
-        {
-          "path": "/writing/cuopt-gpu-multidimensional-knapsack",
-          "title": "A 30,000-variable knapsack, solved on a GPU in ten seconds | Huseyin Ugur Yildiz",
-          "path_id": 96462585,
-          "event": false,
-          "count": 1
         }
       ],
-      "events_total": 2,
+      "events_total": 3,
       "events": [
         {
           "path": "cv-pdf",
@@ -2505,6 +2676,13 @@
           "path_id": 96697209,
           "event": true,
           "count": 4
+        },
+        {
+          "path": "doi/gultekin2023exploring",
+          "title": "Exploring the tradeoff between energy dissipation, delay, and the number of backbones for broadcasting in wireless sensor networks through goal programming",
+          "path_id": 103890124,
+          "event": true,
+          "count": 1
         },
         {
           "path": "pdf/tantur2025mitigating",
@@ -2515,8 +2693,8 @@
         }
       ],
       "hourly": [
-        32,
-        51,
+        33,
+        53,
         56,
         51,
         30,
@@ -2528,10 +2706,10 @@
         25,
         51,
         35,
-        61,
+        63,
         69,
-        58,
-        74,
+        61,
+        75,
         42,
         76,
         51,
@@ -2545,7 +2723,7 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 247
+          "count": 251
         },
         {
           "code": "US",
@@ -2701,15 +2879,15 @@
         },
         {
           "name": "www.linkedin.com",
-          "count": 33
+          "count": 34
+        },
+        {
+          "name": "avesis.tedu.edu.tr",
+          "count": 12
         },
         {
           "name": "com.linkedin.android",
           "count": 11
-        },
-        {
-          "name": "avesis.tedu.edu.tr",
-          "count": 10
         },
         {
           "name": "bing.com",
@@ -2752,11 +2930,11 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 245
+          "count": 247
         },
         {
           "name": "Safari",
-          "count": 141
+          "count": 143
         },
         {
           "name": "Edge",
@@ -2771,15 +2949,15 @@
       "systems": [
         {
           "name": "iOS",
-          "count": 127
+          "count": 129
         },
         {
           "name": "macOS",
-          "count": 124
+          "count": 125
         },
         {
           "name": "Windows",
-          "count": 99
+          "count": 100
         },
         {
           "name": "Android",
@@ -2800,7 +2978,7 @@
         },
         {
           "name": "English",
-          "count": 31
+          "count": 35
         },
         {
           "name": "Turkish",
@@ -2819,21 +2997,21 @@
           "count": 1
         }
       ],
-      "regions_total": 17,
+      "regions_total": 18,
       "regions": [
+        {
+          "name": "Ankara",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "06",
+          "count": 13
+        },
         {
           "name": "Colorado",
           "country": "United States",
           "country_code": "US",
           "code": null,
           "count": 13
-        },
-        {
-          "name": "Ankara",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "06",
-          "count": 11
         },
         {
           "name": "Iowa",
@@ -2878,6 +3056,13 @@
           "count": 3
         },
         {
+          "name": "Antalya",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "07",
+          "count": 2
+        },
+        {
           "name": "Illinois",
           "country": "United States",
           "country_code": "US",
@@ -2893,13 +3078,6 @@
         },
         {
           "name": "Arizona",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 1
-        },
-        {
-          "name": "Florida",
           "country": "United States",
           "country_code": "US",
           "code": null,
@@ -3688,6 +3866,10 @@
     },
     {
       "date": "2026-08-18",
+      "views": 9
+    },
+    {
+      "date": "2026-08-19",
       "views": 0
     }
   ],
@@ -19513,6 +19695,129 @@
       "languages": []
     },
     "2026-08-18": {
+      "pageviews": 9,
+      "pages": [
+        {
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
+          "event": false,
+          "count": 4
+        },
+        {
+          "path": "/publications",
+          "title": "Publications | Huseyin Ugur Yildiz",
+          "path_id": 80750273,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
+          "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
+          "path_id": 99994300,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing/cuopt-gpu-multidimensional-knapsack",
+          "title": "A 30,000-variable knapsack, solved on a GPU in ten seconds | Huseyin Ugur Yildiz",
+          "path_id": 96462585,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/research",
+          "title": "Research | Huseyin Ugur Yildiz",
+          "path_id": 80750374,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events": [
+        {
+          "path": "doi/gultekin2023exploring",
+          "title": "Exploring the tradeoff between energy dissipation, delay, and the number of backbones for broadcasting in wireless sensor networks through goal programming",
+          "path_id": 103890124,
+          "event": true,
+          "count": 1
+        }
+      ],
+      "hourly": [
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        3,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries": [
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 4
+        }
+      ],
+      "referrers": [
+        {
+          "name": "avesis.tedu.edu.tr",
+          "count": 2
+        },
+        {
+          "name": "www.linkedin.com",
+          "count": 1
+        }
+      ],
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 2
+        },
+        {
+          "name": "Safari",
+          "count": 2
+        }
+      ],
+      "systems": [
+        {
+          "name": "iOS",
+          "count": 2
+        },
+        {
+          "name": "macOS",
+          "count": 1
+        },
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
+      "sizes": [],
+      "languages": [
+        {
+          "name": "English",
+          "count": 4
+        }
+      ]
+    },
+    "2026-08-19": {
       "pageviews": 0,
       "pages": [],
       "events": [],
@@ -19554,7 +19859,7 @@
     {
       "path": "/",
       "title": "Home | Huseyin Ugur Yildiz",
-      "count": 394,
+      "count": 398,
       "stats": [
         {
           "date": "2026-02-05",
@@ -20334,10 +20639,14 @@
         },
         {
           "date": "2026-08-18",
-          "views": 0
+          "views": 2
         },
         {
           "date": "2026-08-19",
+          "views": 2
+        },
+        {
+          "date": "2026-08-20",
           "views": 0
         }
       ]
@@ -21130,13 +21439,17 @@
         {
           "date": "2026-08-19",
           "views": 0
+        },
+        {
+          "date": "2026-08-20",
+          "views": 0
         }
       ]
     },
     {
       "path": "/publications",
       "title": "Publications | Huseyin Ugur Yildiz",
-      "count": 126,
+      "count": 128,
       "stats": [
         {
           "date": "2026-02-05",
@@ -21916,10 +22229,14 @@
         },
         {
           "date": "2026-08-18",
-          "views": 0
+          "views": 1
         },
         {
           "date": "2026-08-19",
+          "views": 1
+        },
+        {
+          "date": "2026-08-20",
           "views": 0
         }
       ]
@@ -21927,7 +22244,7 @@
     {
       "path": "/research",
       "title": "Research | Huseyin Ugur Yildiz",
-      "count": 89,
+      "count": 90,
       "stats": [
         {
           "date": "2026-02-05",
@@ -22707,10 +23024,14 @@
         },
         {
           "date": "2026-08-18",
-          "views": 0
+          "views": 1
         },
         {
           "date": "2026-08-19",
+          "views": 0
+        },
+        {
+          "date": "2026-08-20",
           "views": 0
         }
       ]
@@ -23502,6 +23823,10 @@
         },
         {
           "date": "2026-08-19",
+          "views": 0
+        },
+        {
+          "date": "2026-08-20",
           "views": 0
         }
       ]
@@ -24290,17 +24615,17 @@
         {
           "date": "2026-08-19",
           "views": 0
+        },
+        {
+          "date": "2026-08-20",
+          "views": 0
         }
       ]
     }
   ],
-  "site": {
-    "timezone": "Europe/Istanbul",
-    "first_hit_at": "2026-02-05T12:24:02.263206Z",
-    "data_retention_days": 0
-  },
+  "site": {},
   "totals": {
-    "pageviews": 1010,
+    "pageviews": 1019,
     "visitors": null
   },
   "pages": [
@@ -24309,7 +24634,7 @@
       "title": "Home | Huseyin Ugur Yildiz",
       "path_id": 80749188,
       "event": false,
-      "count": 394,
+      "count": 398,
       "refs": [
         {
           "name": "Google",
@@ -24317,15 +24642,15 @@
         },
         {
           "name": "www.linkedin.com",
-          "count": 33
+          "count": 34
+        },
+        {
+          "name": "avesis.tedu.edu.tr",
+          "count": 12
         },
         {
           "name": "com.linkedin.android",
           "count": 11
-        },
-        {
-          "name": "avesis.tedu.edu.tr",
-          "count": 10
         },
         {
           "name": "huguryildiz.com/publications",
@@ -24367,7 +24692,7 @@
       "title": "Publications | Huseyin Ugur Yildiz",
       "path_id": 80750273,
       "event": false,
-      "count": 126,
+      "count": 128,
       "refs": [
         {
           "name": "huguryildiz.com",
@@ -24379,7 +24704,7 @@
         },
         {
           "name": "huguryildiz.com/research",
-          "count": 13
+          "count": 14
         },
         {
           "name": "huguryildiz.github.io/research",
@@ -24396,7 +24721,7 @@
       "title": "Research | Huseyin Ugur Yildiz",
       "path_id": 80750374,
       "event": false,
-      "count": 89,
+      "count": 90,
       "refs": [
         {
           "name": "huguryildiz.com/publications",
@@ -24404,7 +24729,7 @@
         },
         {
           "name": "huguryildiz.com",
-          "count": 24
+          "count": 25
         },
         {
           "name": "huguryildiz.com/service",
@@ -24520,9 +24845,23 @@
       "count": 3
     },
     {
+      "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
+      "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
+      "path_id": 99994300,
+      "event": false,
+      "count": 2
+    },
+    {
       "path": "/writing/vera-jury-evaluation-platform",
       "title": "The hardest part of running a jury isn’t the jury | Huseyin Ugur Yildiz",
       "path_id": 96462588,
+      "event": false,
+      "count": 2
+    },
+    {
+      "path": "/writing/cuopt-gpu-multidimensional-knapsack",
+      "title": "A 30,000-variable knapsack, solved on a GPU in ten seconds | Huseyin Ugur Yildiz",
+      "path_id": 96462585,
       "event": false,
       "count": 2
     },
@@ -24555,23 +24894,9 @@
       "count": 1
     },
     {
-      "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
-      "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
-      "path_id": 99994300,
-      "event": false,
-      "count": 1
-    },
-    {
       "path": "/writing/local-first-latex-workflow",
       "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
       "path_id": 98713527,
-      "event": false,
-      "count": 1
-    },
-    {
-      "path": "/writing/cuopt-gpu-multidimensional-knapsack",
-      "title": "A 30,000-variable knapsack, solved on a GPU in ten seconds | Huseyin Ugur Yildiz",
-      "path_id": 96462585,
       "event": false,
       "count": 1
     }
@@ -24580,7 +24905,7 @@
     {
       "code": "TR",
       "name": "Turkey",
-      "count": 247
+      "count": 251
     },
     {
       "code": "US",
@@ -24735,15 +25060,15 @@
     },
     {
       "name": "www.linkedin.com",
-      "count": 33
+      "count": 34
+    },
+    {
+      "name": "avesis.tedu.edu.tr",
+      "count": 12
     },
     {
       "name": "com.linkedin.android",
       "count": 11
-    },
-    {
-      "name": "avesis.tedu.edu.tr",
-      "count": 10
     },
     {
       "name": "bing.com",
@@ -24785,11 +25110,11 @@
   "browsers": [
     {
       "name": "Chrome",
-      "count": 245
+      "count": 247
     },
     {
       "name": "Safari",
-      "count": 141
+      "count": 143
     },
     {
       "name": "Edge",
@@ -24803,15 +25128,15 @@
   "systems": [
     {
       "name": "iOS",
-      "count": 127
+      "count": 129
     },
     {
       "name": "macOS",
-      "count": 124
+      "count": 125
     },
     {
       "name": "Windows",
-      "count": 99
+      "count": 100
     },
     {
       "name": "Android",
