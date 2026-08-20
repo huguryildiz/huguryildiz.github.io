@@ -1,8 +1,8 @@
 {
-  "updated": "2026-08-19T03:50:27Z",
+  "updated": "2026-08-20T03:50:45Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-08-19"
+    "end": "2026-08-20"
   },
   "window_order": [
     "today",
@@ -16,8 +16,8 @@
   "windows": {
     "today": {
       "label": "Today",
-      "start": "2026-08-19",
-      "end": "2026-08-19",
+      "start": "2026-08-20",
+      "end": "2026-08-20",
       "pageviews": 0,
       "pages_total": 0,
       "pages": [],
@@ -67,9 +67,60 @@
     },
     "yesterday": {
       "label": "Yesterday",
-      "start": "2026-08-18",
-      "end": "2026-08-18",
-      "pageviews": 9,
+      "start": "2026-08-19",
+      "end": "2026-08-19",
+      "pageviews": 0,
+      "pages_total": 0,
+      "pages": [],
+      "events_total": 0,
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries_total": 0,
+      "countries": [],
+      "referrers_total": 0,
+      "referrers": [],
+      "browsers_total": 0,
+      "browsers": [],
+      "systems_total": 0,
+      "systems": [],
+      "sizes_total": 0,
+      "sizes": [],
+      "languages_total": 0,
+      "languages": [],
+      "regions_total": 0,
+      "regions": [],
+      "regions_unmatched": []
+    },
+    "7d": {
+      "label": "Last 7 days",
+      "start": "2026-08-14",
+      "end": "2026-08-20",
+      "pageviews": 11,
       "pages_total": 5,
       "pages": [
         {
@@ -77,7 +128,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 4,
+          "count": 6,
           "refs": [
             {
               "name": "avesis.tedu.edu.tr",
@@ -160,8 +211,8 @@
         0,
         0,
         0,
-        0,
-        0,
+        1,
+        1,
         0,
         0,
         0,
@@ -178,12 +229,22 @@
         0,
         0
       ],
-      "countries_total": 1,
+      "countries_total": 3,
       "countries": [
         {
           "code": "TR",
           "name": "Turkey",
           "count": 4
+        },
+        {
+          "code": "HK",
+          "name": "Hong Kong",
+          "count": 1
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 1
         }
       ],
       "referrers_total": 2,
@@ -201,7 +262,7 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 2
+          "count": 4
         },
         {
           "name": "Safari",
@@ -216,11 +277,11 @@
         },
         {
           "name": "macOS",
-          "count": 1
+          "count": 2
         },
         {
           "name": "Windows",
-          "count": 1
+          "count": 2
         }
       ],
       "sizes_total": 0,
@@ -229,230 +290,10 @@
       "languages": [
         {
           "name": "English",
-          "count": 4
-        }
-      ],
-      "regions_total": 2,
-      "regions": [
-        {
-          "name": "Ankara",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "06",
-          "count": 2
-        },
-        {
-          "name": "Antalya",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "07",
-          "count": 2
-        }
-      ],
-      "regions_unmatched": []
-    },
-    "7d": {
-      "label": "Last 7 days",
-      "start": "2026-08-13",
-      "end": "2026-08-19",
-      "pageviews": 14,
-      "pages_total": 5,
-      "pages": [
-        {
-          "path": "/",
-          "title": "Home | Huseyin Ugur Yildiz",
-          "path_id": 80749188,
-          "event": false,
-          "count": 9,
-          "refs": [
-            {
-              "name": "avesis.tedu.edu.tr",
-              "count": 2
-            },
-            {
-              "name": "com.linkedin.android",
-              "count": 1
-            },
-            {
-              "name": "www.linkedin.com",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/publications",
-          "title": "Publications | Huseyin Ugur Yildiz",
-          "path_id": 80750273,
-          "event": false,
-          "count": 2,
-          "refs": [
-            {
-              "name": "huguryildiz.com/research",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
-          "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
-          "path_id": 99994300,
-          "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "huguryildiz.com",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/writing/cuopt-gpu-multidimensional-knapsack",
-          "title": "A 30,000-variable knapsack, solved on a GPU in ten seconds | Huseyin Ugur Yildiz",
-          "path_id": 96462585,
-          "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/research",
-          "title": "Research | Huseyin Ugur Yildiz",
-          "path_id": 80750374,
-          "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "huguryildiz.com",
-              "count": 1
-            }
-          ]
-        }
-      ],
-      "events_total": 1,
-      "events": [
-        {
-          "path": "doi/gultekin2023exploring",
-          "title": "Exploring the tradeoff between energy dissipation, delay, and the number of backbones for broadcasting in wireless sensor networks through goal programming",
-          "path_id": 103890124,
-          "event": true,
-          "count": 1
-        }
-      ],
-      "hourly": [
-        1,
-        2,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        1,
-        0,
-        0,
-        0,
-        0,
-        2,
-        0,
-        3,
-        1,
-        0,
-        1,
-        0,
-        1,
-        0,
-        1,
-        0
-      ],
-      "countries_total": 3,
-      "countries": [
-        {
-          "code": "TR",
-          "name": "Turkey",
-          "count": 5
-        },
-        {
-          "code": "US",
-          "name": "United States",
-          "count": 3
-        },
-        {
-          "code": "HK",
-          "name": "Hong Kong",
-          "count": 1
-        }
-      ],
-      "referrers_total": 3,
-      "referrers": [
-        {
-          "name": "avesis.tedu.edu.tr",
-          "count": 2
-        },
-        {
-          "name": "com.linkedin.android",
-          "count": 1
-        },
-        {
-          "name": "www.linkedin.com",
-          "count": 1
-        }
-      ],
-      "browsers_total": 3,
-      "browsers": [
-        {
-          "name": "Chrome",
           "count": 6
-        },
-        {
-          "name": "Safari",
-          "count": 2
-        },
-        {
-          "name": "Edge",
-          "count": 1
         }
       ],
-      "systems_total": 4,
-      "systems": [
-        {
-          "name": "Windows",
-          "count": 4
-        },
-        {
-          "name": "iOS",
-          "count": 2
-        },
-        {
-          "name": "macOS",
-          "count": 2
-        },
-        {
-          "name": "Android",
-          "count": 1
-        }
-      ],
-      "sizes_total": 0,
-      "sizes": [],
-      "languages_total": 3,
-      "languages": [
-        {
-          "name": "English",
-          "count": 7
-        },
-        {
-          "name": "(unknown)",
-          "count": 1
-        },
-        {
-          "name": "Turkish",
-          "count": 1
-        }
-      ],
-      "regions_total": 4,
+      "regions_total": 3,
       "regions": [
         {
           "name": "Ankara",
@@ -473,13 +314,6 @@
           "country": "United States",
           "country_code": "US",
           "code": null,
-          "count": 2
-        },
-        {
-          "name": "Iowa",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
           "count": 1
         }
       ],
@@ -487,9 +321,9 @@
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-07-21",
-      "end": "2026-08-19",
-      "pageviews": 200,
+      "start": "2026-07-22",
+      "end": "2026-08-20",
+      "pageviews": 181,
       "pages_total": 19,
       "pages": [
         {
@@ -497,7 +331,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 73,
+          "count": 68,
           "refs": [
             {
               "name": "Google",
@@ -509,7 +343,7 @@
             },
             {
               "name": "avesis.tedu.edu.tr",
-              "count": 6
+              "count": 5
             },
             {
               "name": "com.linkedin.android",
@@ -526,15 +360,15 @@
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
-          "count": 23,
+          "count": 18,
           "refs": [
             {
               "name": "Google",
-              "count": 13
+              "count": 10
             },
             {
               "name": "huguryildiz.com",
-              "count": 4
+              "count": 3
             },
             {
               "name": "huguryildiz.com/service",
@@ -542,10 +376,6 @@
             },
             {
               "name": "huguryildiz.com/research",
-              "count": 1
-            },
-            {
-              "name": "huguryildiz.com/publications",
               "count": 1
             }
           ]
@@ -555,7 +385,7 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 18,
+          "count": 17,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -563,7 +393,7 @@
             },
             {
               "name": "huguryildiz.com/publications",
-              "count": 4
+              "count": 3
             },
             {
               "name": "huguryildiz.com/teaching",
@@ -580,15 +410,15 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 17,
+          "count": 14,
           "refs": [
-            {
-              "name": "huguryildiz.com",
-              "count": 6
-            },
             {
               "name": "huguryildiz.com/research",
               "count": 5
+            },
+            {
+              "name": "huguryildiz.com",
+              "count": 3
             },
             {
               "name": "huguryildiz.com/teaching",
@@ -638,7 +468,7 @@
           "title": "Students | Huseyin Ugur Yildiz",
           "path_id": 80840367,
           "event": false,
-          "count": 12
+          "count": 11
         },
         {
           "path": "/writing",
@@ -652,14 +482,7 @@
           "title": "Service | Huseyin Ugur Yildiz",
           "path_id": 80843167,
           "event": false,
-          "count": 8
-        },
-        {
-          "path": "/stats",
-          "title": "Site Stats | Huseyin Ugur Yildiz",
-          "path_id": 95945764,
-          "event": false,
-          "count": 5
+          "count": 6
         },
         {
           "path": "/writing/ai-assisted-proof-derivative-free-optimization",
@@ -672,6 +495,13 @@
           "path": "/writing/ieee-twc-submission-cap",
           "title": "An academic rate limiter: IEEE TWC now caps authors at 36 new manuscripts a year | Huseyin Ugur Yildiz",
           "path_id": 96633631,
+          "event": false,
+          "count": 4
+        },
+        {
+          "path": "/stats",
+          "title": "Site Stats | Huseyin Ugur Yildiz",
+          "path_id": 95945764,
           "event": false,
           "count": 4
         },
@@ -711,13 +541,6 @@
           "count": 2
         },
         {
-          "path": "/404.html",
-          "title": "Page Not Found Huseyin Ugur Yildiz",
-          "path_id": 80992097,
-          "event": false,
-          "count": 2
-        },
-        {
           "path": "/writing/llm-simulations-numerical-fidelity",
           "title": "Visually convincing LLM simulations can conceal substantial differences in numerical fidelity | Huseyin Ugur Yildiz",
           "path_id": 102215395,
@@ -728,6 +551,13 @@
           "path": "/writing/local-first-latex-workflow",
           "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
           "path_id": 98713527,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/404.html",
+          "title": "Page Not Found Huseyin Ugur Yildiz",
+          "path_id": 80992097,
           "event": false,
           "count": 1
         }
@@ -757,18 +587,18 @@
         }
       ],
       "hourly": [
-        3,
-        7,
-        5,
-        9,
-        10,
-        1,
         2,
-        7,
+        6,
+        5,
+        2,
+        9,
+        1,
+        1,
+        6,
         2,
         0,
         4,
-        7,
+        6,
         9,
         14,
         14,
@@ -776,18 +606,18 @@
         11,
         5,
         13,
-        13,
-        12,
+        10,
+        10,
         7,
-        15,
+        14,
         12
       ],
-      "countries_total": 13,
+      "countries_total": 12,
       "countries": [
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 44
+          "count": 40
         },
         {
           "code": "US",
@@ -812,11 +642,6 @@
         {
           "code": "BR",
           "name": "Brazil",
-          "count": 1
-        },
-        {
-          "code": "DE",
-          "name": "Germany",
           "count": 1
         },
         {
@@ -862,7 +687,7 @@
         },
         {
           "name": "avesis.tedu.edu.tr",
-          "count": 6
+          "count": 5
         },
         {
           "name": "com.linkedin.android",
@@ -885,11 +710,11 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 44
+          "count": 41
         },
         {
           "name": "Safari",
-          "count": 24
+          "count": 22
         },
         {
           "name": "Firefox",
@@ -904,15 +729,15 @@
       "systems": [
         {
           "name": "Windows",
-          "count": 28
+          "count": 27
         },
         {
           "name": "iOS",
-          "count": 22
+          "count": 20
         },
         {
           "name": "macOS",
-          "count": 11
+          "count": 10
         },
         {
           "name": "Android",
@@ -920,7 +745,7 @@
         },
         {
           "name": "Linux",
-          "count": 5
+          "count": 4
         }
       ],
       "sizes_total": 0,
@@ -933,7 +758,7 @@
         },
         {
           "name": "(unknown)",
-          "count": 24
+          "count": 19
         },
         {
           "name": "Turkish",
@@ -1043,9 +868,9 @@
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-05-22",
-      "end": "2026-08-19",
-      "pageviews": 467,
+      "start": "2026-05-23",
+      "end": "2026-08-20",
+      "pageviews": 459,
       "pages_total": 19,
       "pages": [
         {
@@ -1053,7 +878,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 192,
+          "count": 190,
           "refs": [
             {
               "name": "Google",
@@ -1082,7 +907,7 @@
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
-          "count": 86,
+          "count": 85,
           "refs": [
             {
               "name": "Google",
@@ -1090,7 +915,7 @@
             },
             {
               "name": "huguryildiz.com",
-              "count": 14
+              "count": 13
             },
             {
               "name": "huguryildiz.com/publications",
@@ -1111,7 +936,7 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 44,
+          "count": 43,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -1123,7 +948,7 @@
             },
             {
               "name": "huguryildiz.com/cv",
-              "count": 6
+              "count": 5
             },
             {
               "name": "Google",
@@ -1140,11 +965,11 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 36,
+          "count": 35,
           "refs": [
             {
               "name": "huguryildiz.com/publications",
-              "count": 14
+              "count": 13
             },
             {
               "name": "huguryildiz.com",
@@ -1169,11 +994,11 @@
           "title": "Students | Huseyin Ugur Yildiz",
           "path_id": 80840367,
           "event": false,
-          "count": 24,
+          "count": 23,
           "refs": [
             {
               "name": "huguryildiz.com/service",
-              "count": 10
+              "count": 9
             },
             {
               "name": "huguryildiz.com/teaching",
@@ -1198,14 +1023,14 @@
           "title": "Huseyin Ugur Yildiz",
           "path_id": 80750338,
           "event": false,
-          "count": 22
+          "count": 21
         },
         {
           "path": "/service",
           "title": "Service | Huseyin Ugur Yildiz",
           "path_id": 80843167,
           "event": false,
-          "count": 21
+          "count": 20
         },
         {
           "path": "/writing",
@@ -1319,7 +1144,7 @@
       "hourly": [
         10,
         25,
-        33,
+        26,
         13,
         20,
         4,
@@ -1330,7 +1155,7 @@
         15,
         14,
         16,
-        28,
+        27,
         32,
         32,
         27,
@@ -1342,12 +1167,12 @@
         20,
         20
       ],
-      "countries_total": 28,
+      "countries_total": 27,
       "countries": [
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 97
+          "count": 96
         },
         {
           "code": "US",
@@ -1478,11 +1303,6 @@
           "code": "TW",
           "name": "Taiwan",
           "count": 1
-        },
-        {
-          "code": "UA",
-          "name": "Ukraine",
-          "count": 1
         }
       ],
       "referrers_total": 11,
@@ -1512,15 +1332,15 @@
           "count": 3
         },
         {
-          "name": "www.bing.com",
-          "count": 3
-        },
-        {
           "name": "chatgpt.com",
           "count": 3
         },
         {
           "name": "scholar.google.com",
+          "count": 2
+        },
+        {
+          "name": "www.bing.com",
           "count": 2
         },
         {
@@ -1536,7 +1356,7 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 132
+          "count": 130
         },
         {
           "name": "Safari",
@@ -1555,11 +1375,11 @@
       "systems": [
         {
           "name": "Windows",
-          "count": 60
+          "count": 59
         },
         {
           "name": "macOS",
-          "count": 57
+          "count": 56
         },
         {
           "name": "iOS",
@@ -1580,7 +1400,7 @@
       "languages": [
         {
           "name": "(unknown)",
-          "count": 143
+          "count": 141
         },
         {
           "name": "English",
@@ -1694,8 +1514,8 @@
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-08-20",
-      "end": "2026-08-19",
+      "start": "2025-08-21",
+      "end": "2026-08-20",
       "pageviews": 1019,
       "pages_total": 23,
       "pages": [
@@ -2392,7 +2212,7 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-08-19",
+      "end": "2026-08-20",
       "pageviews": 1019,
       "pages_total": 23,
       "pages": [
@@ -3870,6 +3690,10 @@
     },
     {
       "date": "2026-08-19",
+      "views": 0
+    },
+    {
+      "date": "2026-08-20",
       "views": 0
     }
   ],
@@ -19853,6 +19677,43 @@
       "systems": [],
       "sizes": [],
       "languages": []
+    },
+    "2026-08-20": {
+      "pageviews": 0,
+      "pages": [],
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries": [],
+      "referrers": [],
+      "browsers": [],
+      "systems": [],
+      "sizes": [],
+      "languages": []
     }
   },
   "page_series": [
@@ -20647,6 +20508,10 @@
         },
         {
           "date": "2026-08-20",
+          "views": 0
+        },
+        {
+          "date": "2026-08-21",
           "views": 0
         }
       ]
@@ -21443,6 +21308,10 @@
         {
           "date": "2026-08-20",
           "views": 0
+        },
+        {
+          "date": "2026-08-21",
+          "views": 0
         }
       ]
     },
@@ -22237,6 +22106,10 @@
         },
         {
           "date": "2026-08-20",
+          "views": 0
+        },
+        {
+          "date": "2026-08-21",
           "views": 0
         }
       ]
@@ -23033,6 +22906,10 @@
         {
           "date": "2026-08-20",
           "views": 0
+        },
+        {
+          "date": "2026-08-21",
+          "views": 0
         }
       ]
     },
@@ -23828,6 +23705,10 @@
         {
           "date": "2026-08-20",
           "views": 0
+        },
+        {
+          "date": "2026-08-21",
+          "views": 0
         }
       ]
     },
@@ -24618,6 +24499,10 @@
         },
         {
           "date": "2026-08-20",
+          "views": 0
+        },
+        {
+          "date": "2026-08-21",
           "views": 0
         }
       ]
