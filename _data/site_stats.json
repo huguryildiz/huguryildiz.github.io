@@ -1,8 +1,8 @@
 {
-  "updated": "2026-08-20T03:50:45Z",
+  "updated": "2026-08-21T03:54:11Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-08-20"
+    "end": "2026-08-21"
   },
   "window_order": [
     "today",
@@ -16,11 +16,25 @@
   "windows": {
     "today": {
       "label": "Today",
-      "start": "2026-08-20",
-      "end": "2026-08-20",
-      "pageviews": 0,
-      "pages_total": 0,
-      "pages": [],
+      "start": "2026-08-21",
+      "end": "2026-08-21",
+      "pageviews": 1,
+      "pages_total": 1,
+      "pages": [
+        {
+          "path": "/writing/can-llms-jump-scientific-discovery",
+          "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
+          "path_id": 104195821,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "chatgpt.com",
+              "count": 1
+            }
+          ]
+        }
+      ],
       "events_total": 0,
       "events": [],
       "hourly": [
@@ -28,7 +42,7 @@
         0,
         0,
         0,
-        0,
+        1,
         0,
         0,
         0,
@@ -49,34 +63,131 @@
         0,
         0
       ],
-      "countries_total": 0,
-      "countries": [],
-      "referrers_total": 0,
-      "referrers": [],
-      "browsers_total": 0,
-      "browsers": [],
-      "systems_total": 0,
-      "systems": [],
+      "countries_total": 1,
+      "countries": [
+        {
+          "code": "JP",
+          "name": "Japan",
+          "count": 1
+        }
+      ],
+      "referrers_total": 1,
+      "referrers": [
+        {
+          "name": "chatgpt.com",
+          "count": 1
+        }
+      ],
+      "browsers_total": 1,
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        }
+      ],
+      "systems_total": 1,
+      "systems": [
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 0,
-      "languages": [],
-      "regions_total": 0,
-      "regions": [],
+      "languages_total": 1,
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        }
+      ],
+      "regions_total": 1,
+      "regions": [
+        {
+          "name": "Hyōgo",
+          "country": "Japan",
+          "country_code": "JP",
+          "code": null,
+          "count": 1
+        }
+      ],
       "regions_unmatched": []
     },
     "yesterday": {
       "label": "Yesterday",
-      "start": "2026-08-19",
-      "end": "2026-08-19",
-      "pageviews": 0,
-      "pages_total": 0,
-      "pages": [],
+      "start": "2026-08-20",
+      "end": "2026-08-20",
+      "pageviews": 7,
+      "pages_total": 7,
+      "pages": [
+        {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing/local-first-latex-workflow",
+          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+          "path_id": 98713527,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing/kairos-university-timetabling",
+          "title": "A university timetable can look clean on paper and still break in operation | Huseyin Ugur Yildiz",
+          "path_id": 96360102,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/service",
+          "title": "Service | Huseyin Ugur Yildiz",
+          "path_id": 80843167,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "huguryildiz.com/cv",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/students",
+          "title": "Students | Huseyin Ugur Yildiz",
+          "path_id": 80840367,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "huguryildiz.com",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/cv",
+          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
+          "path_id": 80749912,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
+          "event": false,
+          "count": 1
+        }
+      ],
       "events_total": 0,
       "events": [],
       "hourly": [
         0,
         0,
+        1,
         0,
         0,
         0,
@@ -88,9 +199,8 @@
         0,
         0,
         0,
-        0,
-        0,
-        0,
+        2,
+        4,
         0,
         0,
         0,
@@ -100,35 +210,56 @@
         0,
         0
       ],
-      "countries_total": 0,
-      "countries": [],
+      "countries_total": 1,
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 1
+        }
+      ],
       "referrers_total": 0,
       "referrers": [],
-      "browsers_total": 0,
-      "browsers": [],
-      "systems_total": 0,
-      "systems": [],
+      "browsers_total": 1,
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        }
+      ],
+      "systems_total": 1,
+      "systems": [
+        {
+          "name": "macOS",
+          "count": 1
+        }
+      ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 0,
-      "languages": [],
+      "languages_total": 1,
+      "languages": [
+        {
+          "name": "(unknown)",
+          "count": 1
+        }
+      ],
       "regions_total": 0,
       "regions": [],
       "regions_unmatched": []
     },
     "7d": {
       "label": "Last 7 days",
-      "start": "2026-08-14",
-      "end": "2026-08-20",
-      "pageviews": 11,
-      "pages_total": 5,
+      "start": "2026-08-15",
+      "end": "2026-08-21",
+      "pageviews": 17,
+      "pages_total": 12,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 6,
+          "count": 5,
           "refs": [
             {
               "name": "avesis.tedu.edu.tr",
@@ -154,6 +285,26 @@
           ]
         },
         {
+          "path": "/writing/can-llms-jump-scientific-discovery",
+          "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
+          "path_id": 104195821,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "chatgpt.com",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
+          "event": false,
+          "count": 1
+        },
+        {
           "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
           "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
           "path_id": 99994300,
@@ -167,30 +318,53 @@
           ]
         },
         {
+          "path": "/writing/local-first-latex-workflow",
+          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+          "path_id": 98713527,
+          "event": false,
+          "count": 1
+        },
+        {
           "path": "/writing/cuopt-gpu-multidimensional-knapsack",
           "title": "A 30,000-variable knapsack, solved on a GPU in ten seconds | Huseyin Ugur Yildiz",
           "path_id": 96462585,
           "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 1
-            }
-          ]
+          "count": 1
+        },
+        {
+          "path": "/writing/kairos-university-timetabling",
+          "title": "A university timetable can look clean on paper and still break in operation | Huseyin Ugur Yildiz",
+          "path_id": 96360102,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/service",
+          "title": "Service | Huseyin Ugur Yildiz",
+          "path_id": 80843167,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/students",
+          "title": "Students | Huseyin Ugur Yildiz",
+          "path_id": 80840367,
+          "event": false,
+          "count": 1
         },
         {
           "path": "/research",
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "huguryildiz.com",
-              "count": 1
-            }
-          ]
+          "count": 1
+        },
+        {
+          "path": "/cv",
+          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
+          "path_id": 80749912,
+          "event": false,
+          "count": 1
         }
       ],
       "events_total": 1,
@@ -206,20 +380,20 @@
       "hourly": [
         1,
         2,
-        0,
-        0,
-        0,
-        0,
+        1,
         0,
         1,
-        1,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0,
         0,
         2,
-        0,
-        3,
+        2,
+        7,
         1,
         0,
         0,
@@ -229,7 +403,7 @@
         0,
         0
       ],
-      "countries_total": 3,
+      "countries_total": 2,
       "countries": [
         {
           "code": "TR",
@@ -237,13 +411,8 @@
           "count": 4
         },
         {
-          "code": "HK",
-          "name": "Hong Kong",
-          "count": 1
-        },
-        {
-          "code": "US",
-          "name": "United States",
+          "code": "KE",
+          "name": "Kenya",
           "count": 1
         }
       ],
@@ -262,7 +431,7 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 4
+          "count": 3
         },
         {
           "name": "Safari",
@@ -276,12 +445,12 @@
           "count": 2
         },
         {
-          "name": "macOS",
+          "name": "Windows",
           "count": 2
         },
         {
-          "name": "Windows",
-          "count": 2
+          "name": "macOS",
+          "count": 1
         }
       ],
       "sizes_total": 0,
@@ -290,7 +459,7 @@
       "languages": [
         {
           "name": "English",
-          "count": 6
+          "count": 5
         }
       ],
       "regions_total": 3,
@@ -310,9 +479,9 @@
           "count": 2
         },
         {
-          "name": "Colorado",
-          "country": "United States",
-          "country_code": "US",
+          "name": "Nairobi Province",
+          "country": "Kenya",
+          "country_code": "KE",
           "code": null,
           "count": 1
         }
@@ -321,17 +490,17 @@
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-07-22",
-      "end": "2026-08-20",
-      "pageviews": 181,
-      "pages_total": 19,
+      "start": "2026-07-23",
+      "end": "2026-08-21",
+      "pageviews": 175,
+      "pages_total": 21,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 68,
+          "count": 65,
           "refs": [
             {
               "name": "Google",
@@ -352,31 +521,6 @@
             {
               "name": "www.bing.com",
               "count": 2
-            }
-          ]
-        },
-        {
-          "path": "/cv",
-          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
-          "path_id": 80749912,
-          "event": false,
-          "count": 18,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 10
-            },
-            {
-              "name": "huguryildiz.com",
-              "count": 3
-            },
-            {
-              "name": "huguryildiz.com/service",
-              "count": 3
-            },
-            {
-              "name": "huguryildiz.com/research",
-              "count": 1
             }
           ]
         },
@@ -468,7 +612,36 @@
           "title": "Students | Huseyin Ugur Yildiz",
           "path_id": 80840367,
           "event": false,
-          "count": 11
+          "count": 12,
+          "refs": [
+            {
+              "name": "huguryildiz.com/teaching",
+              "count": 6
+            },
+            {
+              "name": "huguryildiz.com",
+              "count": 3
+            },
+            {
+              "name": "huguryildiz.com/research",
+              "count": 1
+            },
+            {
+              "name": "huguryildiz.com/service",
+              "count": 1
+            },
+            {
+              "name": "huguryildiz.com/terms",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/cv",
+          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
+          "path_id": 80749912,
+          "event": false,
+          "count": 10
         },
         {
           "path": "/writing",
@@ -513,9 +686,23 @@
           "count": 3
         },
         {
+          "path": "/writing/kairos-university-timetabling",
+          "title": "A university timetable can look clean on paper and still break in operation | Huseyin Ugur Yildiz",
+          "path_id": 96360102,
+          "event": false,
+          "count": 3
+        },
+        {
           "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
           "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
           "path_id": 99994300,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/writing/local-first-latex-workflow",
+          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+          "path_id": 98713527,
           "event": false,
           "count": 2
         },
@@ -534,23 +721,23 @@
           "count": 2
         },
         {
-          "path": "/writing/kairos-university-timetabling",
-          "title": "A university timetable can look clean on paper and still break in operation | Huseyin Ugur Yildiz",
-          "path_id": 96360102,
+          "path": "/writing/can-llms-jump-scientific-discovery",
+          "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
+          "path_id": 104195821,
           "event": false,
-          "count": 2
+          "count": 1
+        },
+        {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
+          "event": false,
+          "count": 1
         },
         {
           "path": "/writing/llm-simulations-numerical-fidelity",
           "title": "Visually convincing LLM simulations can conceal substantial differences in numerical fidelity | Huseyin Ugur Yildiz",
           "path_id": 102215395,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/writing/local-first-latex-workflow",
-          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
-          "path_id": 98713527,
           "event": false,
           "count": 1
         },
@@ -588,41 +775,41 @@
       ],
       "hourly": [
         2,
-        6,
-        5,
-        2,
-        9,
-        1,
-        1,
-        6,
-        2,
-        0,
         4,
         6,
+        2,
         9,
-        14,
-        14,
-        18,
-        11,
+        1,
+        0,
         5,
+        2,
+        0,
+        2,
+        5,
+        9,
         13,
-        10,
+        16,
+        21,
+        9,
+        4,
+        13,
+        9,
         10,
         7,
         14,
         12
       ],
-      "countries_total": 12,
+      "countries_total": 13,
       "countries": [
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 40
+          "count": 37
         },
         {
           "code": "US",
           "name": "United States",
-          "count": 13
+          "count": 12
         },
         {
           "code": "FR",
@@ -655,6 +842,11 @@
           "count": 1
         },
         {
+          "code": "KE",
+          "name": "Kenya",
+          "count": 1
+        },
+        {
           "code": "NG",
           "name": "Nigeria",
           "count": 1
@@ -675,7 +867,7 @@
           "count": 1
         }
       ],
-      "referrers_total": 7,
+      "referrers_total": 6,
       "referrers": [
         {
           "name": "Google",
@@ -700,28 +892,24 @@
         {
           "name": "bing.com",
           "count": 1
-        },
-        {
-          "name": "lnkd.in",
-          "count": 1
         }
       ],
       "browsers_total": 4,
       "browsers": [
         {
           "name": "Chrome",
-          "count": 41
+          "count": 39
         },
         {
           "name": "Safari",
           "count": 22
         },
         {
-          "name": "Firefox",
-          "count": 3
+          "name": "Edge",
+          "count": 2
         },
         {
-          "name": "Edge",
+          "name": "Firefox",
           "count": 2
         }
       ],
@@ -729,7 +917,7 @@
       "systems": [
         {
           "name": "Windows",
-          "count": 27
+          "count": 28
         },
         {
           "name": "iOS",
@@ -737,15 +925,15 @@
         },
         {
           "name": "macOS",
-          "count": 10
+          "count": 9
         },
         {
           "name": "Android",
-          "count": 7
+          "count": 5
         },
         {
           "name": "Linux",
-          "count": 4
+          "count": 3
         }
       ],
       "sizes_total": 0,
@@ -754,11 +942,11 @@
       "languages": [
         {
           "name": "English",
-          "count": 35
+          "count": 36
         },
         {
           "name": "(unknown)",
-          "count": 19
+          "count": 15
         },
         {
           "name": "Turkish",
@@ -808,13 +996,6 @@
           "count": 2
         },
         {
-          "name": "California",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 2
-        },
-        {
           "name": "Iowa",
           "country": "United States",
           "country_code": "US",
@@ -843,6 +1024,13 @@
           "count": 1
         },
         {
+          "name": "California",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 1
+        },
+        {
           "name": "Illinois",
           "country": "United States",
           "country_code": "US",
@@ -868,25 +1056,25 @@
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-05-23",
-      "end": "2026-08-20",
-      "pageviews": 459,
-      "pages_total": 19,
+      "start": "2026-05-24",
+      "end": "2026-08-21",
+      "pageviews": 458,
+      "pages_total": 21,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 190,
+          "count": 184,
           "refs": [
-            {
-              "name": "Google",
-              "count": 28
-            },
             {
               "name": "www.linkedin.com",
               "count": 28
+            },
+            {
+              "name": "Google",
+              "count": 25
             },
             {
               "name": "com.linkedin.android",
@@ -918,11 +1106,11 @@
               "count": 13
             },
             {
-              "name": "huguryildiz.com/publications",
-              "count": 4
+              "name": "huguryildiz.com/service",
+              "count": 3
             },
             {
-              "name": "huguryildiz.com/service",
+              "name": "huguryildiz.com/publications",
               "count": 3
             },
             {
@@ -936,11 +1124,11 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 43,
+          "count": 42,
           "refs": [
             {
               "name": "huguryildiz.com",
-              "count": 22
+              "count": 21
             },
             {
               "name": "huguryildiz.com/research",
@@ -994,7 +1182,7 @@
           "title": "Students | Huseyin Ugur Yildiz",
           "path_id": 80840367,
           "event": false,
-          "count": 23,
+          "count": 24,
           "refs": [
             {
               "name": "huguryildiz.com/service",
@@ -1006,7 +1194,7 @@
             },
             {
               "name": "huguryildiz.com",
-              "count": 4
+              "count": 5
             },
             {
               "name": "huguryildiz.com/research",
@@ -1019,18 +1207,18 @@
           ]
         },
         {
+          "path": "/service",
+          "title": "Service | Huseyin Ugur Yildiz",
+          "path_id": 80843167,
+          "event": false,
+          "count": 21
+        },
+        {
           "path": "/teaching",
           "title": "Huseyin Ugur Yildiz",
           "path_id": 80750338,
           "event": false,
           "count": 21
-        },
-        {
-          "path": "/service",
-          "title": "Service | Huseyin Ugur Yildiz",
-          "path_id": 80843167,
-          "event": false,
-          "count": 20
         },
         {
           "path": "/writing",
@@ -1075,9 +1263,23 @@
           "count": 3
         },
         {
+          "path": "/writing/kairos-university-timetabling",
+          "title": "A university timetable can look clean on paper and still break in operation | Huseyin Ugur Yildiz",
+          "path_id": 96360102,
+          "event": false,
+          "count": 3
+        },
+        {
           "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
           "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
           "path_id": 99994300,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/writing/local-first-latex-workflow",
+          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+          "path_id": 98713527,
           "event": false,
           "count": 2
         },
@@ -1096,23 +1298,23 @@
           "count": 2
         },
         {
-          "path": "/writing/kairos-university-timetabling",
-          "title": "A university timetable can look clean on paper and still break in operation | Huseyin Ugur Yildiz",
-          "path_id": 96360102,
+          "path": "/writing/can-llms-jump-scientific-discovery",
+          "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
+          "path_id": 104195821,
           "event": false,
-          "count": 2
+          "count": 1
+        },
+        {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
+          "event": false,
+          "count": 1
         },
         {
           "path": "/writing/llm-simulations-numerical-fidelity",
           "title": "Visually convincing LLM simulations can conceal substantial differences in numerical fidelity | Huseyin Ugur Yildiz",
           "path_id": 102215395,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/writing/local-first-latex-workflow",
-          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
-          "path_id": 98713527,
           "event": false,
           "count": 1
         }
@@ -1143,26 +1345,26 @@
       ],
       "hourly": [
         10,
-        25,
+        23,
         26,
         13,
-        20,
+        21,
         4,
         3,
         10,
         4,
         15,
-        15,
+        11,
         14,
         16,
         27,
-        32,
-        32,
+        34,
+        36,
         27,
         20,
         40,
         35,
-        16,
+        14,
         15,
         20,
         20
@@ -1172,12 +1374,12 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 96
+          "count": 95
         },
         {
           "code": "US",
           "name": "United States",
-          "count": 32
+          "count": 31
         },
         {
           "code": "GB",
@@ -1192,11 +1394,6 @@
         {
           "code": "FR",
           "name": "France",
-          "count": 4
-        },
-        {
-          "code": "NL",
-          "name": "Netherlands",
           "count": 4
         },
         {
@@ -1240,11 +1437,6 @@
           "count": 2
         },
         {
-          "code": "RU",
-          "name": "Russia",
-          "count": 2
-        },
-        {
           "code": "SA",
           "name": "Saudi Arabia",
           "count": 2
@@ -1280,13 +1472,13 @@
           "count": 1
         },
         {
-          "code": "KR",
-          "name": "South Korea",
+          "code": "KE",
+          "name": "Kenya",
           "count": 1
         },
         {
-          "code": "KZ",
-          "name": "Kazakhstan",
+          "code": "KR",
+          "name": "South Korea",
           "count": 1
         },
         {
@@ -1295,8 +1487,18 @@
           "count": 1
         },
         {
+          "code": "NL",
+          "name": "Netherlands",
+          "count": 1
+        },
+        {
           "code": "PH",
           "name": "Philippines",
+          "count": 1
+        },
+        {
+          "code": "RU",
+          "name": "Russia",
           "count": 1
         },
         {
@@ -1308,12 +1510,12 @@
       "referrers_total": 11,
       "referrers": [
         {
-          "name": "Google",
+          "name": "www.linkedin.com",
           "count": 28
         },
         {
-          "name": "www.linkedin.com",
-          "count": 28
+          "name": "Google",
+          "count": 25
         },
         {
           "name": "com.linkedin.android",
@@ -1356,11 +1558,11 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 130
+          "count": 125
         },
         {
           "name": "Safari",
-          "count": 53
+          "count": 52
         },
         {
           "name": "Edge",
@@ -1374,16 +1576,16 @@
       "systems_total": 5,
       "systems": [
         {
-          "name": "Windows",
-          "count": 59
-        },
-        {
           "name": "macOS",
           "count": 56
         },
         {
+          "name": "Windows",
+          "count": 56
+        },
+        {
           "name": "iOS",
-          "count": 44
+          "count": 43
         },
         {
           "name": "Android",
@@ -1391,7 +1593,7 @@
         },
         {
           "name": "Linux",
-          "count": 12
+          "count": 10
         }
       ],
       "sizes_total": 0,
@@ -1400,11 +1602,11 @@
       "languages": [
         {
           "name": "(unknown)",
-          "count": 141
+          "count": 134
         },
         {
           "name": "English",
-          "count": 35
+          "count": 36
         },
         {
           "name": "Turkish",
@@ -1423,7 +1625,7 @@
           "count": 1
         }
       ],
-      "regions_total": 18,
+      "regions_total": 17,
       "regions": [
         {
           "name": "Ankara",
@@ -1514,17 +1716,17 @@
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-08-21",
-      "end": "2026-08-20",
-      "pageviews": 1019,
-      "pages_total": 23,
+      "start": "2025-08-22",
+      "end": "2026-08-21",
+      "pageviews": 1027,
+      "pages_total": 25,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 398,
+          "count": 399,
           "refs": [
             {
               "name": "Google",
@@ -1553,7 +1755,7 @@
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
-          "count": 139,
+          "count": 140,
           "refs": [
             {
               "name": "Google",
@@ -1669,14 +1871,14 @@
           "title": "Service | Huseyin Ugur Yildiz",
           "path_id": 80843167,
           "event": false,
-          "count": 61
+          "count": 62
         },
         {
           "path": "/students",
           "title": "Students | Huseyin Ugur Yildiz",
           "path_id": 80840367,
           "event": false,
-          "count": 60
+          "count": 61
         },
         {
           "path": "/404.html",
@@ -1735,9 +1937,23 @@
           "count": 3
         },
         {
+          "path": "/writing/kairos-university-timetabling",
+          "title": "A university timetable can look clean on paper and still break in operation | Huseyin Ugur Yildiz",
+          "path_id": 96360102,
+          "event": false,
+          "count": 3
+        },
+        {
           "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
           "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
           "path_id": 99994300,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/writing/local-first-latex-workflow",
+          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+          "path_id": 98713527,
           "event": false,
           "count": 2
         },
@@ -1756,13 +1972,6 @@
           "count": 2
         },
         {
-          "path": "/writing/kairos-university-timetabling",
-          "title": "A university timetable can look clean on paper and still break in operation | Huseyin Ugur Yildiz",
-          "path_id": 96360102,
-          "event": false,
-          "count": 2
-        },
-        {
           "path": "/search",
           "title": "Search | Huseyin Ugur Yildiz",
           "path_id": 81294212,
@@ -1777,16 +1986,23 @@
           "count": 2
         },
         {
-          "path": "/writing/llm-simulations-numerical-fidelity",
-          "title": "Visually convincing LLM simulations can conceal substantial differences in numerical fidelity | Huseyin Ugur Yildiz",
-          "path_id": 102215395,
+          "path": "/writing/can-llms-jump-scientific-discovery",
+          "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
+          "path_id": 104195821,
           "event": false,
           "count": 1
         },
         {
-          "path": "/writing/local-first-latex-workflow",
-          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
-          "path_id": 98713527,
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing/llm-simulations-numerical-fidelity",
+          "title": "Visually convincing LLM simulations can conceal substantial differences in numerical fidelity | Huseyin Ugur Yildiz",
+          "path_id": 102215395,
           "event": false,
           "count": 1
         }
@@ -1818,9 +2034,9 @@
       "hourly": [
         33,
         53,
-        56,
+        57,
         51,
-        30,
+        31,
         11,
         4,
         14,
@@ -1830,8 +2046,8 @@
         51,
         35,
         63,
-        69,
-        61,
+        71,
+        65,
         75,
         42,
         76,
@@ -1841,7 +2057,7 @@
         56,
         64
       ],
-      "countries_total": 30,
+      "countries_total": 31,
       "countries": [
         {
           "code": "TR",
@@ -1959,6 +2175,11 @@
           "count": 1
         },
         {
+          "code": "KE",
+          "name": "Kenya",
+          "count": 1
+        },
+        {
           "code": "KR",
           "name": "South Korea",
           "count": 1
@@ -2053,7 +2274,7 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 247
+          "count": 248
         },
         {
           "name": "Safari",
@@ -2080,7 +2301,7 @@
         },
         {
           "name": "Windows",
-          "count": 100
+          "count": 101
         },
         {
           "name": "Android",
@@ -2101,7 +2322,7 @@
         },
         {
           "name": "English",
-          "count": 35
+          "count": 36
         },
         {
           "name": "Turkish",
@@ -2212,16 +2433,16 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-08-20",
-      "pageviews": 1019,
-      "pages_total": 23,
+      "end": "2026-08-21",
+      "pageviews": 1027,
+      "pages_total": 25,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 398,
+          "count": 399,
           "refs": [
             {
               "name": "Google",
@@ -2250,7 +2471,7 @@
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
-          "count": 139,
+          "count": 140,
           "refs": [
             {
               "name": "Google",
@@ -2366,14 +2587,14 @@
           "title": "Service | Huseyin Ugur Yildiz",
           "path_id": 80843167,
           "event": false,
-          "count": 61
+          "count": 62
         },
         {
           "path": "/students",
           "title": "Students | Huseyin Ugur Yildiz",
           "path_id": 80840367,
           "event": false,
-          "count": 60
+          "count": 61
         },
         {
           "path": "/404.html",
@@ -2432,9 +2653,23 @@
           "count": 3
         },
         {
+          "path": "/writing/kairos-university-timetabling",
+          "title": "A university timetable can look clean on paper and still break in operation | Huseyin Ugur Yildiz",
+          "path_id": 96360102,
+          "event": false,
+          "count": 3
+        },
+        {
           "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
           "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
           "path_id": 99994300,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/writing/local-first-latex-workflow",
+          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+          "path_id": 98713527,
           "event": false,
           "count": 2
         },
@@ -2453,13 +2688,6 @@
           "count": 2
         },
         {
-          "path": "/writing/kairos-university-timetabling",
-          "title": "A university timetable can look clean on paper and still break in operation | Huseyin Ugur Yildiz",
-          "path_id": 96360102,
-          "event": false,
-          "count": 2
-        },
-        {
           "path": "/search",
           "title": "Search | Huseyin Ugur Yildiz",
           "path_id": 81294212,
@@ -2474,16 +2702,23 @@
           "count": 2
         },
         {
-          "path": "/writing/llm-simulations-numerical-fidelity",
-          "title": "Visually convincing LLM simulations can conceal substantial differences in numerical fidelity | Huseyin Ugur Yildiz",
-          "path_id": 102215395,
+          "path": "/writing/can-llms-jump-scientific-discovery",
+          "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
+          "path_id": 104195821,
           "event": false,
           "count": 1
         },
         {
-          "path": "/writing/local-first-latex-workflow",
-          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
-          "path_id": 98713527,
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing/llm-simulations-numerical-fidelity",
+          "title": "Visually convincing LLM simulations can conceal substantial differences in numerical fidelity | Huseyin Ugur Yildiz",
+          "path_id": 102215395,
           "event": false,
           "count": 1
         }
@@ -2515,9 +2750,9 @@
       "hourly": [
         33,
         53,
-        56,
+        57,
         51,
-        30,
+        31,
         11,
         4,
         14,
@@ -2527,8 +2762,8 @@
         51,
         35,
         63,
-        69,
-        61,
+        71,
+        65,
         75,
         42,
         76,
@@ -2538,7 +2773,7 @@
         56,
         64
       ],
-      "countries_total": 30,
+      "countries_total": 31,
       "countries": [
         {
           "code": "TR",
@@ -2656,6 +2891,11 @@
           "count": 1
         },
         {
+          "code": "KE",
+          "name": "Kenya",
+          "count": 1
+        },
+        {
           "code": "KR",
           "name": "South Korea",
           "count": 1
@@ -2750,7 +2990,7 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 247
+          "count": 248
         },
         {
           "name": "Safari",
@@ -2777,7 +3017,7 @@
         },
         {
           "name": "Windows",
-          "count": 100
+          "count": 101
         },
         {
           "name": "Android",
@@ -2798,7 +3038,7 @@
         },
         {
           "name": "English",
-          "count": 35
+          "count": 36
         },
         {
           "name": "Turkish",
@@ -3694,7 +3934,11 @@
     },
     {
       "date": "2026-08-20",
-      "views": 0
+      "views": 7
+    },
+    {
+      "date": "2026-08-21",
+      "views": 1
     }
   ],
   "daily_breakdowns": {
@@ -19679,15 +19923,131 @@
       "languages": []
     },
     "2026-08-20": {
-      "pageviews": 0,
-      "pages": [],
+      "pageviews": 7,
+      "pages": [
+        {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing/local-first-latex-workflow",
+          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+          "path_id": 98713527,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing/kairos-university-timetabling",
+          "title": "A university timetable can look clean on paper and still break in operation | Huseyin Ugur Yildiz",
+          "path_id": 96360102,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/service",
+          "title": "Service | Huseyin Ugur Yildiz",
+          "path_id": 80843167,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/students",
+          "title": "Students | Huseyin Ugur Yildiz",
+          "path_id": 80840367,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/cv",
+          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
+          "path_id": 80749912,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 1
+        }
+      ],
+      "referrers": [],
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        }
+      ],
+      "systems": [
+        {
+          "name": "macOS",
+          "count": 1
+        }
+      ],
+      "sizes": [],
+      "languages": [
+        {
+          "name": "(unknown)",
+          "count": 1
+        }
+      ]
+    },
+    "2026-08-21": {
+      "pageviews": 1,
+      "pages": [
+        {
+          "path": "/writing/can-llms-jump-scientific-discovery",
+          "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
+          "path_id": 104195821,
+          "event": false,
+          "count": 1
+        }
+      ],
       "events": [],
       "hourly": [
         0,
         0,
         0,
         0,
-        0,
+        1,
         0,
         0,
         0,
@@ -19708,19 +20068,45 @@
         0,
         0
       ],
-      "countries": [],
-      "referrers": [],
-      "browsers": [],
-      "systems": [],
+      "countries": [
+        {
+          "code": "JP",
+          "name": "Japan",
+          "count": 1
+        }
+      ],
+      "referrers": [
+        {
+          "name": "chatgpt.com",
+          "count": 1
+        }
+      ],
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        }
+      ],
+      "systems": [
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
       "sizes": [],
-      "languages": []
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        }
+      ]
     }
   },
   "page_series": [
     {
       "path": "/",
       "title": "Home | Huseyin Ugur Yildiz",
-      "count": 398,
+      "count": 399,
       "stats": [
         {
           "date": "2026-02-05",
@@ -20508,10 +20894,14 @@
         },
         {
           "date": "2026-08-20",
-          "views": 0
+          "views": 1
         },
         {
           "date": "2026-08-21",
+          "views": 0
+        },
+        {
+          "date": "2026-08-22",
           "views": 0
         }
       ]
@@ -20519,7 +20909,7 @@
     {
       "path": "/cv",
       "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
-      "count": 139,
+      "count": 140,
       "stats": [
         {
           "date": "2026-02-05",
@@ -21307,10 +21697,14 @@
         },
         {
           "date": "2026-08-20",
-          "views": 0
+          "views": 1
         },
         {
           "date": "2026-08-21",
+          "views": 0
+        },
+        {
+          "date": "2026-08-22",
           "views": 0
         }
       ]
@@ -22111,6 +22505,10 @@
         {
           "date": "2026-08-21",
           "views": 0
+        },
+        {
+          "date": "2026-08-22",
+          "views": 0
         }
       ]
     },
@@ -22909,6 +23307,10 @@
         },
         {
           "date": "2026-08-21",
+          "views": 0
+        },
+        {
+          "date": "2026-08-22",
           "views": 0
         }
       ]
@@ -23709,13 +24111,17 @@
         {
           "date": "2026-08-21",
           "views": 0
+        },
+        {
+          "date": "2026-08-22",
+          "views": 0
         }
       ]
     },
     {
       "path": "/service",
       "title": "Service | Huseyin Ugur Yildiz",
-      "count": 61,
+      "count": 62,
       "stats": [
         {
           "date": "2026-02-06",
@@ -24499,10 +24905,14 @@
         },
         {
           "date": "2026-08-20",
-          "views": 0
+          "views": 1
         },
         {
           "date": "2026-08-21",
+          "views": 0
+        },
+        {
+          "date": "2026-08-22",
           "views": 0
         }
       ]
@@ -24510,7 +24920,7 @@
   ],
   "site": {},
   "totals": {
-    "pageviews": 1019,
+    "pageviews": 1027,
     "visitors": null
   },
   "pages": [
@@ -24519,7 +24929,7 @@
       "title": "Home | Huseyin Ugur Yildiz",
       "path_id": 80749188,
       "event": false,
-      "count": 398,
+      "count": 399,
       "refs": [
         {
           "name": "Google",
@@ -24548,7 +24958,7 @@
       "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
       "path_id": 80749912,
       "event": false,
-      "count": 139,
+      "count": 140,
       "refs": [
         {
           "name": "Google",
@@ -24664,14 +25074,14 @@
       "title": "Service | Huseyin Ugur Yildiz",
       "path_id": 80843167,
       "event": false,
-      "count": 61
+      "count": 62
     },
     {
       "path": "/students",
       "title": "Students | Huseyin Ugur Yildiz",
       "path_id": 80840367,
       "event": false,
-      "count": 60
+      "count": 61
     },
     {
       "path": "/404.html",
@@ -24730,9 +25140,23 @@
       "count": 3
     },
     {
+      "path": "/writing/kairos-university-timetabling",
+      "title": "A university timetable can look clean on paper and still break in operation | Huseyin Ugur Yildiz",
+      "path_id": 96360102,
+      "event": false,
+      "count": 3
+    },
+    {
       "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
       "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
       "path_id": 99994300,
+      "event": false,
+      "count": 2
+    },
+    {
+      "path": "/writing/local-first-latex-workflow",
+      "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+      "path_id": 98713527,
       "event": false,
       "count": 2
     },
@@ -24751,13 +25175,6 @@
       "count": 2
     },
     {
-      "path": "/writing/kairos-university-timetabling",
-      "title": "A university timetable can look clean on paper and still break in operation | Huseyin Ugur Yildiz",
-      "path_id": 96360102,
-      "event": false,
-      "count": 2
-    },
-    {
       "path": "/search",
       "title": "Search | Huseyin Ugur Yildiz",
       "path_id": 81294212,
@@ -24772,16 +25189,23 @@
       "count": 2
     },
     {
-      "path": "/writing/llm-simulations-numerical-fidelity",
-      "title": "Visually convincing LLM simulations can conceal substantial differences in numerical fidelity | Huseyin Ugur Yildiz",
-      "path_id": 102215395,
+      "path": "/writing/can-llms-jump-scientific-discovery",
+      "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
+      "path_id": 104195821,
       "event": false,
       "count": 1
     },
     {
-      "path": "/writing/local-first-latex-workflow",
-      "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
-      "path_id": 98713527,
+      "path": "/writing/airport-gate-assignment-multiobjective",
+      "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+      "path_id": 104130835,
+      "event": false,
+      "count": 1
+    },
+    {
+      "path": "/writing/llm-simulations-numerical-fidelity",
+      "title": "Visually convincing LLM simulations can conceal substantial differences in numerical fidelity | Huseyin Ugur Yildiz",
+      "path_id": 102215395,
       "event": false,
       "count": 1
     }
@@ -24903,6 +25327,11 @@
       "count": 1
     },
     {
+      "code": "KE",
+      "name": "Kenya",
+      "count": 1
+    },
+    {
       "code": "KR",
       "name": "South Korea",
       "count": 1
@@ -24995,7 +25424,7 @@
   "browsers": [
     {
       "name": "Chrome",
-      "count": 247
+      "count": 248
     },
     {
       "name": "Safari",
@@ -25021,7 +25450,7 @@
     },
     {
       "name": "Windows",
-      "count": 100
+      "count": 101
     },
     {
       "name": "Android",
