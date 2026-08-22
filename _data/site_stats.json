@@ -1,8 +1,8 @@
 {
-  "updated": "2026-08-21T03:54:11Z",
+  "updated": "2026-08-22T03:45:12Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-08-21"
+    "end": "2026-08-22"
   },
   "window_order": [
     "today",
@@ -16,6 +16,57 @@
   "windows": {
     "today": {
       "label": "Today",
+      "start": "2026-08-22",
+      "end": "2026-08-22",
+      "pageviews": 0,
+      "pages_total": 0,
+      "pages": [],
+      "events_total": 0,
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries_total": 0,
+      "countries": [],
+      "referrers_total": 0,
+      "referrers": [],
+      "browsers_total": 0,
+      "browsers": [],
+      "systems_total": 0,
+      "systems": [],
+      "sizes_total": 0,
+      "sizes": [],
+      "languages_total": 0,
+      "languages": [],
+      "regions_total": 0,
+      "regions": [],
+      "regions_unmatched": []
+    },
+    "yesterday": {
+      "label": "Yesterday",
       "start": "2026-08-21",
       "end": "2026-08-21",
       "pageviews": 1,
@@ -113,144 +164,10 @@
       ],
       "regions_unmatched": []
     },
-    "yesterday": {
-      "label": "Yesterday",
-      "start": "2026-08-20",
-      "end": "2026-08-20",
-      "pageviews": 7,
-      "pages_total": 7,
-      "pages": [
-        {
-          "path": "/writing/airport-gate-assignment-multiobjective",
-          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
-          "path_id": 104130835,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/writing/local-first-latex-workflow",
-          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
-          "path_id": 98713527,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/writing/kairos-university-timetabling",
-          "title": "A university timetable can look clean on paper and still break in operation | Huseyin Ugur Yildiz",
-          "path_id": 96360102,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/service",
-          "title": "Service | Huseyin Ugur Yildiz",
-          "path_id": 80843167,
-          "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "huguryildiz.com/cv",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/students",
-          "title": "Students | Huseyin Ugur Yildiz",
-          "path_id": 80840367,
-          "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "huguryildiz.com",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/cv",
-          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
-          "path_id": 80749912,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/",
-          "title": "Home | Huseyin Ugur Yildiz",
-          "path_id": 80749188,
-          "event": false,
-          "count": 1
-        }
-      ],
-      "events_total": 0,
-      "events": [],
-      "hourly": [
-        0,
-        0,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        2,
-        4,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "countries_total": 1,
-      "countries": [
-        {
-          "code": "US",
-          "name": "United States",
-          "count": 1
-        }
-      ],
-      "referrers_total": 0,
-      "referrers": [],
-      "browsers_total": 1,
-      "browsers": [
-        {
-          "name": "Chrome",
-          "count": 1
-        }
-      ],
-      "systems_total": 1,
-      "systems": [
-        {
-          "name": "macOS",
-          "count": 1
-        }
-      ],
-      "sizes_total": 0,
-      "sizes": [],
-      "languages_total": 1,
-      "languages": [
-        {
-          "name": "(unknown)",
-          "count": 1
-        }
-      ],
-      "regions_total": 0,
-      "regions": [],
-      "regions_unmatched": []
-    },
     "7d": {
       "label": "Last 7 days",
-      "start": "2026-08-15",
-      "end": "2026-08-21",
+      "start": "2026-08-16",
+      "end": "2026-08-22",
       "pageviews": 17,
       "pages_total": 12,
       "pages": [
@@ -490,9 +407,9 @@
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-07-23",
-      "end": "2026-08-21",
-      "pageviews": 175,
+      "start": "2026-07-24",
+      "end": "2026-08-22",
+      "pageviews": 167,
       "pages_total": 21,
       "pages": [
         {
@@ -500,7 +417,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 65,
+          "count": 63,
           "refs": [
             {
               "name": "Google",
@@ -508,7 +425,7 @@
             },
             {
               "name": "www.linkedin.com",
-              "count": 7
+              "count": 6
             },
             {
               "name": "avesis.tedu.edu.tr",
@@ -529,7 +446,7 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 17,
+          "count": 16,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -537,7 +454,7 @@
             },
             {
               "name": "huguryildiz.com/publications",
-              "count": 3
+              "count": 2
             },
             {
               "name": "huguryildiz.com/teaching",
@@ -554,7 +471,7 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 14,
+          "count": 13,
           "refs": [
             {
               "name": "huguryildiz.com/research",
@@ -562,7 +479,7 @@
             },
             {
               "name": "huguryildiz.com",
-              "count": 3
+              "count": 2
             },
             {
               "name": "huguryildiz.com/teaching",
@@ -583,7 +500,7 @@
           "title": "Huseyin Ugur Yildiz",
           "path_id": 80750338,
           "event": false,
-          "count": 13,
+          "count": 12,
           "refs": [
             {
               "name": "huguryildiz.com/students",
@@ -602,7 +519,7 @@
               "count": 1
             },
             {
-              "name": "huguryildiz.com/research",
+              "name": "huguryildiz.com/stats",
               "count": 1
             }
           ]
@@ -612,11 +529,11 @@
           "title": "Students | Huseyin Ugur Yildiz",
           "path_id": 80840367,
           "event": false,
-          "count": 12,
+          "count": 11,
           "refs": [
             {
               "name": "huguryildiz.com/teaching",
-              "count": 6
+              "count": 5
             },
             {
               "name": "huguryildiz.com",
@@ -641,7 +558,7 @@
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
-          "count": 10
+          "count": 9
         },
         {
           "path": "/writing",
@@ -655,7 +572,7 @@
           "title": "Service | Huseyin Ugur Yildiz",
           "path_id": 80843167,
           "event": false,
-          "count": 6
+          "count": 5
         },
         {
           "path": "/writing/ai-assisted-proof-derivative-free-optimization",
@@ -779,7 +696,7 @@
         6,
         2,
         9,
-        1,
+        0,
         0,
         5,
         2,
@@ -787,7 +704,7 @@
         2,
         5,
         9,
-        13,
+        7,
         16,
         21,
         9,
@@ -797,14 +714,14 @@
         10,
         7,
         14,
-        12
+        11
       ],
       "countries_total": 13,
       "countries": [
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 37
+          "count": 35
         },
         {
           "code": "US",
@@ -875,7 +792,7 @@
         },
         {
           "name": "www.linkedin.com",
-          "count": 7
+          "count": 6
         },
         {
           "name": "avesis.tedu.edu.tr",
@@ -898,7 +815,7 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 39
+          "count": 37
         },
         {
           "name": "Safari",
@@ -917,7 +834,7 @@
       "systems": [
         {
           "name": "Windows",
-          "count": 28
+          "count": 27
         },
         {
           "name": "iOS",
@@ -925,7 +842,7 @@
         },
         {
           "name": "macOS",
-          "count": 9
+          "count": 8
         },
         {
           "name": "Android",
@@ -946,7 +863,7 @@
         },
         {
           "name": "(unknown)",
-          "count": 15
+          "count": 13
         },
         {
           "name": "Turkish",
@@ -1056,9 +973,9 @@
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-05-24",
-      "end": "2026-08-21",
-      "pageviews": 458,
+      "start": "2026-05-25",
+      "end": "2026-08-22",
+      "pageviews": 457,
       "pages_total": 21,
       "pages": [
         {
@@ -1095,7 +1012,7 @@
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
-          "count": 85,
+          "count": 84,
           "refs": [
             {
               "name": "Google",
@@ -1110,11 +1027,11 @@
               "count": 3
             },
             {
-              "name": "huguryildiz.com/publications",
-              "count": 3
+              "name": "huguryildiz.com/research",
+              "count": 2
             },
             {
-              "name": "huguryildiz.com/research",
+              "name": "huguryildiz.com/publications",
               "count": 2
             }
           ]
@@ -1356,7 +1273,7 @@
         15,
         11,
         14,
-        16,
+        15,
         27,
         34,
         36,
@@ -1716,8 +1633,8 @@
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-08-22",
-      "end": "2026-08-21",
+      "start": "2025-08-23",
+      "end": "2026-08-22",
       "pageviews": 1027,
       "pages_total": 25,
       "pages": [
@@ -2433,7 +2350,7 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-08-21",
+      "end": "2026-08-22",
       "pageviews": 1027,
       "pages_total": 25,
       "pages": [
@@ -3939,6 +3856,10 @@
     {
       "date": "2026-08-21",
       "views": 1
+    },
+    {
+      "date": "2026-08-22",
+      "views": 0
     }
   ],
   "daily_breakdowns": {
@@ -20100,6 +20021,43 @@
           "count": 1
         }
       ]
+    },
+    "2026-08-22": {
+      "pageviews": 0,
+      "pages": [],
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries": [],
+      "referrers": [],
+      "browsers": [],
+      "systems": [],
+      "sizes": [],
+      "languages": []
     }
   },
   "page_series": [
@@ -20902,6 +20860,10 @@
         },
         {
           "date": "2026-08-22",
+          "views": 0
+        },
+        {
+          "date": "2026-08-23",
           "views": 0
         }
       ]
@@ -21706,6 +21668,10 @@
         {
           "date": "2026-08-22",
           "views": 0
+        },
+        {
+          "date": "2026-08-23",
+          "views": 0
         }
       ]
     },
@@ -22508,6 +22474,10 @@
         },
         {
           "date": "2026-08-22",
+          "views": 0
+        },
+        {
+          "date": "2026-08-23",
           "views": 0
         }
       ]
@@ -23312,6 +23282,10 @@
         {
           "date": "2026-08-22",
           "views": 0
+        },
+        {
+          "date": "2026-08-23",
+          "views": 0
         }
       ]
     },
@@ -24115,6 +24089,10 @@
         {
           "date": "2026-08-22",
           "views": 0
+        },
+        {
+          "date": "2026-08-23",
+          "views": 0
         }
       ]
     },
@@ -24914,11 +24892,19 @@
         {
           "date": "2026-08-22",
           "views": 0
+        },
+        {
+          "date": "2026-08-23",
+          "views": 0
         }
       ]
     }
   ],
-  "site": {},
+  "site": {
+    "timezone": "Europe/Istanbul",
+    "first_hit_at": "2026-02-05T12:24:02.263206Z",
+    "data_retention_days": 0
+  },
   "totals": {
     "pageviews": 1027,
     "visitors": null
