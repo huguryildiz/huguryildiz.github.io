@@ -121,7 +121,7 @@ permalink: /stats/
         <p class="reach-index">05 / Reading environment</p>
         <h2 id="environment-title">How the site was read</h2>
       </div>
-      <span class="reach-unit">Share of page views</span>
+      <span class="reach-unit">Share of recorded environment data</span>
     </header>
     <div class="reach-stacks" id="reachEnvironment"></div>
   </section>
@@ -169,7 +169,7 @@ permalink: /stats/
       <p>The date-range control re-slices stored daily aggregates. Page-view totals, averages, ranked breakdowns and interactions are recomputed from the same selected days, so a custom range never falls back to all-time figures. If daily detail is missing for any part of a range, the affected panel is marked unavailable rather than filled with a partial or broader total.</p>
       <p>Page views and interactions are separated before aggregation. A tracked download, DOI or outbound-link click therefore appears only in the interactions panel and never increases the page-view KPI or trend. A change is shown only when the whole preceding period of equal length falls inside the tracked window—otherwise it is omitted rather than compared against partial data.</p>
       <p>The trend can be read two ways. <strong>Raw</strong> plots the page views recorded in each day or week on its own; <strong>Cumulative</strong> adds them up as the range progresses, so the final point equals the range total shown above. Neither adds information the other lacks—the axis label states which one is on screen.</p>
-      <p>Browser, operating-system, screen-class, and language shares are reported as coarse aggregates over page views. They carry no per-visitor detail and are not linked to any other dimension in this report. Language is the preference the browser sent, which is a setting rather than a statement about the reader. Maintenance and measurement paths such as <code>/404.html</code> and <code>/stats/</code> are excluded from the public content ranking without altering the source data.</p>
+      <p>Browser, operating-system, screen-class, and language shares are reported as coarse aggregates over requests for which GoatCounter recorded the relevant value. They carry no per-visitor detail and are not linked to any other dimension in this report. A missing value is excluded rather than inferred; language is the preference the browser sent, which is a setting rather than a statement about the reader. Maintenance and measurement paths such as <code>/404.html</code> and <code>/stats/</code> are excluded from the public content ranking without altering the source data.</p>
       <p>Interactions are counted separately from page views and are never added to them. A click on a download, a DOI, or an outbound link is recorded by the page itself, which means it is missing wherever scripts did not run, and it records the click rather than whether the file finished downloading or the destination loaded. Read those figures as a lower bound. The same applies to the referrer line under a page in the readership panel: it splits that page's own arrivals, so it does not sum to the site-wide discovery ranking.</p>
       <p>The hour-of-day panel is in the site's configured time zone, named in the panel header, not in the reader's own clock and not in UTC. It aggregates every day in the selected range into twenty-four buckets, so it describes a typical day across that range rather than any particular one.</p>
       <p>This statement describes the source of the figures on this page only. It is not a site-wide claim about every analytics service loaded by huguryildiz.com.</p>
@@ -341,13 +341,12 @@ permalink: /stats/
       .filter(function(row){ return row.count > 0; })
       .sort(function(a, b){ return b.count - a.count; });
   }
-  var COMPLETE_VIEW_BREAKDOWNS = {
-    pages:1, browsers:1, systems:1, languages:1
-  };
+  var COMPLETE_VIEW_BREAKDOWNS = { pages:1 };
   function breakdownMatchesViews(name, rows, expected){
-    /* Screen-size collection may be disabled, in which case an empty list is
-       an exact absence rather than a zero-view claim. Every other listed
-       dimension is expected to partition the page-view total completely. */
+    /* Browser, system, language, and location rows may omit requests for
+       which GoatCounter stored no value. Screen-size collection may be
+       disabled, in which case an empty list is an exact absence rather than a
+       zero-view claim. Only content pages must partition every page view. */
     if (!COMPLETE_VIEW_BREAKDOWNS[name] && name !== 'sizes') return true;
     if (name === 'sizes' && !rows.length) return true;
     return rows.reduce(function(sum, row){ return sum + (Number(row.count) || 0); }, 0) === expected;

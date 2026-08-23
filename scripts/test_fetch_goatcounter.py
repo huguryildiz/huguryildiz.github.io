@@ -145,20 +145,33 @@ class GoatCounterAggregationTests(unittest.TestCase):
             "/stats/locations/TR", date(2026, 8, 5), date(2026, 8, 5),
             extra=page_filter)
 
-    def test_country_breakdown_can_exclude_unlocated_pageviews(self):
+    def test_dimension_breakdowns_can_exclude_unidentified_pageviews(self):
         block = {
             "pageviews": 5,
             "pages": [{"count": 5}],
             "countries": [{"count": 4}],
-            "browsers": [{"count": 5}],
-            "systems": [{"count": 5}],
+            "browsers": [{"count": 4}],
+            "systems": [{"count": 4}],
             "sizes": [],
-            "languages": [{"count": 5}],
+            "languages": [{"count": 4}],
             "events": [{"count": 9}],
             "referrers": [{"count": 2}],
         }
 
         self.assertEqual({}, stats.pageview_breakdown_mismatches(block))
+
+    def test_page_breakdown_must_reconcile_with_kpi(self):
+        block = {
+            "pageviews": 5,
+            "pages": [{"count": 4}],
+            "countries": [{"count": 4}],
+            "browsers": [{"count": 4}],
+            "systems": [{"count": 4}],
+            "sizes": [],
+            "languages": [{"count": 4}],
+        }
+
+        self.assertEqual({"pages": 4}, stats.pageview_breakdown_mismatches(block))
 
     def test_present_optional_screen_sizes_must_reconcile(self):
         block = {
