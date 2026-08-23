@@ -89,19 +89,7 @@ permalink: /stats/
         </div>
         <div id="reachCountries"></div>
       </div>
-      <p class="reach-note reach-map-hint" id="mapHint" hidden>Countries with a stored regional breakdown can be selected on the map to filter the list below.</p>
-      <div id="reachRegions"></div>
-      <div class="reach-provinces" id="turkeyPanel" hidden>
-        <div class="reach-subhead">
-          <h3 id="turkey-title">Provinces in Türkiye</h3>
-          <span class="reach-unit" id="turkeyCount"></span>
-        </div>
-        <p class="reach-note reach-coverage" id="turkeyCoverage"></p>
-        <div class="worldmap worldmap-tr" id="turkeyMap" data-map-url="{{ '/assets/maps/turkey.svg' | relative_url }}">
-          <p class="reach-map-fallback">The province map is loading. The ranked region list remains available.</p>
-        </div>
-      </div>
-      <p class="reach-note worldmap-credit" id="mapCredit" hidden>Map geometry: <a href="https://github.com/VictorCazanave/svg-maps" target="_blank" rel="noopener">@svg-maps/world<span class="sr-only"> (opens in a new tab)</span></a>, CC BY 4.0, and <a href="https://simplemaps.com/svg/country/tr" target="_blank" rel="noopener">simplemaps.com<span class="sr-only"> (opens in a new tab)</span></a> for Türkiye. Shading uses a logarithmic scale; names and exact counts are available by keyboard focus and in the ranked lists.</p>
+      <p class="reach-note worldmap-credit" id="mapCredit" hidden>Map geometry: <a href="https://github.com/VictorCazanave/svg-maps" target="_blank" rel="noopener">@svg-maps/world<span class="sr-only"> (opens in a new tab)</span></a>, CC BY 4.0. Shading uses a logarithmic scale; names and exact counts are available by keyboard focus and in the ranked list.</p>
     </section>
 
     <section class="reach-panel reach-discovery" aria-labelledby="discovery-title">
@@ -168,7 +156,7 @@ permalink: /stats/
     <div>
       <p>Every headline figure is an aggregate page-view count from GoatCounter for the selected date range. GoatCounter does not track sessions, so this report contains no sessions, bounce rate, average session duration, or new-versus-returning split; those measures are absent rather than estimated. Country, referrer, browser, operating-system, screen-class, and language lists cover only requests for which the relevant value was retained; each affected panel reports its denominator rather than implying complete coverage.</p>
       <p>The date-range control re-slices stored daily aggregates. Page-view totals, averages, ranked breakdowns and interactions are recomputed from the same selected days for both presets and custom ranges, so selecting the same dates produces the same figures. If daily detail is missing for any part of a range, the affected panel is marked unavailable rather than filled with a partial or broader total.</p>
-      <p>Regional detail is different: GoatCounter supplies it through per-country lookups that this snapshot stores only for preset ranges and at most five countries. It is a best-effort list of recorded provinces or states, not a partition of the country totals, and it is omitted for custom ranges rather than substituted from a broader period. GoatCounter does not provide city data.</p>
+      <p>Sub-country detail is not published because the snapshot does not contain daily region aggregates. Showing preset-only province or state counts under the date filter would imply temporal comparability that the stored data cannot support. GoatCounter does not provide city data.</p>
       <p>Page views and interactions are separated before aggregation. A tracked download, DOI or outbound-link click therefore appears only in the interactions panel and never increases the page-view KPI or trend. A change is shown only when the whole preceding period of equal length falls inside the tracked window—otherwise it is omitted rather than compared against partial data.</p>
       <p>The trend can be read two ways. <strong>Raw</strong> plots the page views recorded in each day or week on its own; <strong>Cumulative</strong> adds them up as the range progresses, so the final point equals the range total shown above. Neither adds information the other lacks—the axis label states which one is on screen.</p>
       <p>Browser, operating-system, screen-class, and language shares are reported as coarse aggregates over requests for which GoatCounter recorded the relevant value. They carry no per-visitor detail and are not linked to any other dimension in this report. A missing value is excluded rather than inferred; language is the preference the browser sent, which is a setting rather than a statement about the reader. Maintenance and measurement paths such as <code>/404.html</code> and <code>/stats/</code> are excluded from the public content ranking without altering the source data.</p>
@@ -936,14 +924,9 @@ permalink: /stats/
       'The remainder was direct, internal, or had no retained referrer.');
   }
 
-  /* Which window the geography panel is showing, and which country — if any —
-     the reader has selected on the map. */
-  var geoKey = null, regionFilter = null;
-
   function renderCountries(key){
     var host = document.getElementById('reachCountries');
     var info = breakdown(key, 'countries');
-    geoKey = key;
     barList(host, info.rows.slice(0, 5), { label:'Countries with the most page views',
       emptyTitle:info.exact ? 'No geographic activity in this range' : 'No geographic aggregate available',
       emptyBody:info.exact ? 'No country-level page views were recorded in the selected date range.'
@@ -957,81 +940,11 @@ permalink: /stats/
        a chart, so the map shrinks to match the little there is to show. */
     var layout = document.querySelector('.reach-map-layout');
     if (layout) layout.classList.toggle('reach-map-sparse', info.rows.length < 3);
-
-    /* Only countries the snapshot has a regional breakdown for are worth
-       clicking; the rest stay inert so the pointer never promises a drill-down
-       that would open an empty list. */
-    var regionRows = breakdown(key, 'regions').rows, hasRegions = {}, onMap = {};
-    regionRows.forEach(function(r){ if (r.country) hasRegions[r.country] = true; });
-    info.rows.forEach(function(r){ onMap[r.name] = true; });
-    /* A selection the new window cannot show — no regions for it, or no views
-       at all so it is not even shaded — would leave the list claiming a country
-       the map no longer marks, so it is dropped rather than carried over. */
-    if (regionFilter && !(hasRegions[regionFilter] && onMap[regionFilter])) regionFilter = null;
-    worldMap.paint(info.rows, function(row){ return !!hasRegions[row.name]; });
-    worldMap.mark(regionFilter);
-    var hint = document.getElementById('mapHint');
-    if (hint) hint.hidden = !info.rows.some(function(r){ return hasRegions[r.name]; });
-    renderRegions(key);
-  }
-
-  /* Clicking a shaded country filters the regional list to it; clicking it
-     again clears the filter. The selection is a view state, not a data one —
-     changing the date range re-derives it and drops it if the new window has
-     no regions for that country. */
-  function pickCountry(row){
-    regionFilter = (regionFilter === row.name) ? null : row.name;
-    worldMap.mark(regionFilter);
-    renderRegions(geoKey);
-  }
-
-  /* Regions are the finest location GoatCounter records — it has no city
-     data — so the panel only appears once the pipeline has stored some. */
-  function renderRegions(key){
-    var host = document.getElementById('reachRegions');
-    if (!host) return;
-    var info = breakdown(key, 'regions');
-    renderTurkey(info.rows, key);
-    var rows = regionFilter
-      ? info.rows.filter(function(r){ return r.country === regionFilter; })
-      : info.rows;
-    if (!rows.length) {
-      host.replaceChildren();
-      if (breakdown(key, 'countries').exact) staleNote(host, info);
-      return;
-    }
-
-    var head = el('div', 'reach-subhead');
-    head.appendChild(el('h3', null, regionFilter ? 'Regions in ' + regionFilter
-      : 'Available regional detail'));
-    if (regionFilter) {
-      var clear = el('button', 'reach-filter-clear', 'Show all countries');
-      clear.type = 'button';
-      clear.addEventListener('click', function(){
-        regionFilter = null;
-        worldMap.mark(null);
-        renderRegions(geoKey);
-      });
-      head.appendChild(clear);
-    } else {
-      head.appendChild(el('span', 'reach-unit', 'Top five'));
-    }
-    var list = el('div');
-    barList(list, rows.slice(0, 5).map(function(r){
-      return { name:(!regionFilter && r.country) ? r.name + ', ' + r.country : r.name, count:r.count };
-    }), { label:'Regions with the most page views',
-          emptyTitle:'No regional aggregate available', emptyBody:'' });
-    host.replaceChildren(head, list);
-    staleNote(host, info);
-    if (info.exact) host.appendChild(el('p', 'reach-note reach-coverage',
-      'Regional detail is best-effort: it is stored for preset ranges and up to five countries, and it does not partition the country totals. A longer range can therefore retain the same regional counts when its additional views have no stored region.'));
   }
 
   /* ---- choropleth maps ----------------------------------------------------- */
-  /* One controller per map. The world map keys paths by ISO country code; the
-     Türkiye map keys them by licence-plate number, which the fetch script
-     resolves from the province name GoatCounter reports. Both take the same
-     {code, name, count} rows, so the painting and tooltip code is shared. */
+  /* The world map keys paths by ISO country code and receives the same
+     {code, name, count} rows as the ranked country list. */
   function createMap(hostId, ariaLabel, failText, onPick){
     var host = document.getElementById(hostId), svg = null, tip = null;
 
@@ -1142,43 +1055,7 @@ permalink: /stats/
 
   var worldMap = createMap('worldMap',
     'World map of page views by country. Use Tab to inspect countries with recorded views.',
-    'The map could not be loaded. The ranked country list remains available.',
-    function(row){ pickCountry(row); });
-  var turkeyMap = createMap('turkeyMap',
-    'Map of Türkiye showing page views by province. Use Tab to inspect provinces with recorded views.',
-    'The province map could not be loaded. The ranked region list remains available.');
-
-  /* The province map is fetched only once a window actually has Turkish rows:
-     GoatCounter stores no region for a page view recorded while the setting was
-     off, so the panel stays absent rather than drawing an empty country. */
-  function renderTurkey(rows, key){
-    var panel = document.getElementById('turkeyPanel');
-    if (!panel) return;
-    var stored = rows.filter(function(r){ return r.country_code === 'TR'; });
-    var tr = stored.filter(function(r){ return r.code; });
-    panel.hidden = !tr.length;
-    if (!tr.length) return;
-    var label = document.getElementById('turkeyCount');
-    if (label) label.textContent = tr.length + (tr.length === 1 ? ' province' : ' provinces');
-    var country = breakdown(key, 'countries').rows.find(function(r){ return r.code === 'TR'; });
-    var observed = rowTotal(stored), expected = country ? Number(country.count) || 0 : 0;
-    var coverage = document.getElementById('turkeyCoverage');
-    if (coverage) {
-      if (expected && observed >= expected) {
-        coverage.textContent = 'Province detail was recorded for all ' + fmt(expected) +
-          ' Turkey page views in this range.';
-      } else if (expected) {
-        coverage.textContent = 'Province detail was recorded for ' + fmt(observed) + ' of ' +
-          fmt(expected) + ' Turkey page views in this range (' +
-          (observed / expected * 100).toFixed(1) + '%). Earlier views without stored province data are excluded, so longer filters can show the same province counts.';
-      } else {
-        coverage.textContent = 'Province detail was recorded for ' + fmt(observed) +
-          ' Turkey page views in this range.';
-      }
-    }
-    if (turkeyMap.loaded()) turkeyMap.paint(tr);
-    else turkeyMap.load(function(){ turkeyMap.paint(tr); });
-  }
+    'The map could not be loaded. The ranked country list remains available.');
 
   /* ---- reading environment: part-to-whole stacked bars --------------------- */
   var STACKS = [
