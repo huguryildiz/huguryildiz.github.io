@@ -96,6 +96,7 @@ permalink: /stats/
           <h3 id="turkey-title">Provinces in Türkiye</h3>
           <span class="reach-unit" id="turkeyCount"></span>
         </div>
+        <p class="reach-note reach-coverage" id="turkeyCoverage"></p>
         <div class="worldmap worldmap-tr" id="turkeyMap" data-map-url="{{ '/assets/maps/turkey.svg' | relative_url }}">
           <p class="reach-map-fallback">The province map is loading. The ranked region list remains available.</p>
         </div>
@@ -990,7 +991,7 @@ permalink: /stats/
     var host = document.getElementById('reachRegions');
     if (!host) return;
     var info = breakdown(key, 'regions');
-    renderTurkey(info.rows);
+    renderTurkey(info.rows, key);
     var rows = regionFilter
       ? info.rows.filter(function(r){ return r.country === regionFilter; })
       : info.rows;
@@ -1023,7 +1024,7 @@ permalink: /stats/
     host.replaceChildren(head, list);
     staleNote(host, info);
     if (info.exact) host.appendChild(el('p', 'reach-note reach-coverage',
-      'Regional detail is best-effort: it is stored for preset ranges and up to five countries, and it does not partition the country totals.'));
+      'Regional detail is best-effort: it is stored for preset ranges and up to five countries, and it does not partition the country totals. A longer range can therefore retain the same regional counts when its additional views have no stored region.'));
   }
 
   /* ---- choropleth maps ----------------------------------------------------- */
@@ -1150,14 +1151,31 @@ permalink: /stats/
   /* The province map is fetched only once a window actually has Turkish rows:
      GoatCounter stores no region for a page view recorded while the setting was
      off, so the panel stays absent rather than drawing an empty country. */
-  function renderTurkey(rows){
+  function renderTurkey(rows, key){
     var panel = document.getElementById('turkeyPanel');
     if (!panel) return;
-    var tr = rows.filter(function(r){ return r.country_code === 'TR' && r.code; });
+    var stored = rows.filter(function(r){ return r.country_code === 'TR'; });
+    var tr = stored.filter(function(r){ return r.code; });
     panel.hidden = !tr.length;
     if (!tr.length) return;
     var label = document.getElementById('turkeyCount');
     if (label) label.textContent = tr.length + (tr.length === 1 ? ' province' : ' provinces');
+    var country = breakdown(key, 'countries').rows.find(function(r){ return r.code === 'TR'; });
+    var observed = rowTotal(stored), expected = country ? Number(country.count) || 0 : 0;
+    var coverage = document.getElementById('turkeyCoverage');
+    if (coverage) {
+      if (expected && observed >= expected) {
+        coverage.textContent = 'Province detail was recorded for all ' + fmt(expected) +
+          ' Turkey page views in this range.';
+      } else if (expected) {
+        coverage.textContent = 'Province detail was recorded for ' + fmt(observed) + ' of ' +
+          fmt(expected) + ' Turkey page views in this range (' +
+          (observed / expected * 100).toFixed(1) + '%). Earlier views without stored province data are excluded, so longer filters can show the same province counts.';
+      } else {
+        coverage.textContent = 'Province detail was recorded for ' + fmt(observed) +
+          ' Turkey page views in this range.';
+      }
+    }
     if (turkeyMap.loaded()) turkeyMap.paint(tr);
     else turkeyMap.load(function(){ turkeyMap.paint(tr); });
   }
