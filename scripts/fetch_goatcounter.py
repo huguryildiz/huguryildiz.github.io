@@ -68,10 +68,13 @@ DIMENSIONS = [
     ("languages", "/stats/languages"),
 ]
 
-# These lists partition page views and therefore must sum to the same total as
-# the non-event /stats/hits rows. Screen sizes are optional in GoatCounter, but
-# when present they must reconcile as well.
-COMPLETE_PAGEVIEW_DIMENSIONS = ("pages", "countries", "browsers", "systems", "languages")
+# Pages and reading-environment lists partition page views and therefore must
+# sum to the same total as the non-event /stats/hits rows. Screen sizes are
+# optional in GoatCounter, but when present they must reconcile as well.
+# A location may be empty when GoatCounter cannot resolve a country. Those
+# unlocated page views are intentionally excluded from the public geographic
+# ranking, so country rows need not sum to the page-view KPI.
+COMPLETE_PAGEVIEW_DIMENSIONS = ("pages", "browsers", "systems", "languages")
 OPTIONAL_PAGEVIEW_DIMENSIONS = ("sizes",)
 
 # Ranked lists remain complete in the snapshot; the page itself decides how

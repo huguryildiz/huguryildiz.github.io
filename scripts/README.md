@@ -32,9 +32,11 @@ first run backfills at most 280 daily API calls (40 days; configurable with
 newest two days. This incremental limit is intentional: each successful run commits its batch,
 so an empty cache cannot trigger a rate-limit failure and repeat the same full backfill forever.
 A date is omitted if a required endpoint fails, and the page then marks a range crossing that
-gap unavailable instead of presenting a partial result as exact. If a dimension total does not
-reconcile with the temporal page-view block, the temporal block is retained and only that
-breakdown is shown as unavailable. What each run collects, beyond the preset blocks and
+gap unavailable instead of presenting a partial result as exact. Pages, browsers, systems,
+languages, and enabled screen-size totals must reconcile with the temporal page-view block.
+Country totals need not: GoatCounter records an empty location when it cannot resolve a
+country, and the public geographic rankings exclude those unlocated page views. What each
+run collects, beyond the preset blocks and
 page-view-only daily series:
 
 - **Pages and events come from one `/stats/hits` response.** GoatCounter returns both in the

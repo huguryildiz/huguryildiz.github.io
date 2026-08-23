@@ -145,7 +145,7 @@ class GoatCounterAggregationTests(unittest.TestCase):
             "/stats/locations/TR", date(2026, 8, 5), date(2026, 8, 5),
             extra=page_filter)
 
-    def test_pageview_breakdowns_must_reconcile_with_kpi(self):
+    def test_country_breakdown_can_exclude_unlocated_pageviews(self):
         block = {
             "pageviews": 5,
             "pages": [{"count": 5}],
@@ -158,7 +158,7 @@ class GoatCounterAggregationTests(unittest.TestCase):
             "referrers": [{"count": 2}],
         }
 
-        self.assertEqual({"countries": 4}, stats.pageview_breakdown_mismatches(block))
+        self.assertEqual({}, stats.pageview_breakdown_mismatches(block))
 
     def test_present_optional_screen_sizes_must_reconcile(self):
         block = {
