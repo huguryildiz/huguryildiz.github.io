@@ -165,7 +165,7 @@ permalink: /stats/
     <p class="reach-index">Method note</p>
     <h2 id="method-title">How to read this report</h2>
     <div>
-      <p>Every figure is an aggregate page-view count from GoatCounter for the selected date range. GoatCounter does not track sessions, so this report contains no sessions, bounce rate, average session duration, or new-versus-returning split; those measures are absent rather than estimated. It resolves a visitor's location to a country and, below that, to a region—a province or state—but never to a city, so no city breakdown exists to publish.</p>
+      <p>Every figure is an aggregate page-view count from GoatCounter for the selected date range. GoatCounter does not track sessions, so this report contains no sessions, bounce rate, average session duration, or new-versus-returning split; those measures are absent rather than estimated. It resolves a visitor's location to a country and, below that, to a region—a province or state—but never to a city, so no city breakdown exists to publish. Requests with no resolved country are excluded from the geographic rankings rather than attributed to a country.</p>
       <p>The date-range control re-slices stored daily aggregates. Page-view totals, averages, ranked breakdowns and interactions are recomputed from the same selected days, so a custom range never falls back to all-time figures. If daily detail is missing for any part of a range, the affected panel is marked unavailable rather than filled with a partial or broader total.</p>
       <p>Page views and interactions are separated before aggregation. A tracked download, DOI or outbound-link click therefore appears only in the interactions panel and never increases the page-view KPI or trend. A change is shown only when the whole preceding period of equal length falls inside the tracked window—otherwise it is omitted rather than compared against partial data.</p>
       <p>The trend can be read two ways. <strong>Raw</strong> plots the page views recorded in each day or week on its own; <strong>Cumulative</strong> adds them up as the range progresses, so the final point equals the range total shown above. Neither adds information the other lacks—the axis label states which one is on screen.</p>
@@ -342,7 +342,7 @@ permalink: /stats/
       .sort(function(a, b){ return b.count - a.count; });
   }
   var COMPLETE_VIEW_BREAKDOWNS = {
-    pages:1, countries:1, browsers:1, systems:1, languages:1
+    pages:1, browsers:1, systems:1, languages:1
   };
   function breakdownMatchesViews(name, rows, expected){
     /* Screen-size collection may be disabled, in which case an empty list is
