@@ -90,6 +90,17 @@ permalink: /stats/
         <div id="reachCountries"></div>
       </div>
       <p class="reach-note worldmap-credit" id="mapCredit" hidden>Map geometry: <a href="https://github.com/VictorCazanave/svg-maps" target="_blank" rel="noopener">@svg-maps/world<span class="sr-only"> (opens in a new tab)</span></a>, CC BY 4.0. Shading uses a logarithmic scale; names and exact counts are available by keyboard focus and in the ranked list.</p>
+      <div class="reach-provinces" id="turkeySnapshot" hidden>
+        <div class="reach-subhead">
+          <h3>Türkiye — recent province snapshot</h3>
+          <span class="reach-unit" id="turkeySnapshotRange"></span>
+        </div>
+        <p class="reach-note reach-coverage" id="turkeySnapshotNote"></p>
+        <div class="worldmap worldmap-tr" id="turkeySnapshotMap" data-map-url="{{ '/assets/maps/turkey.svg' | relative_url }}">
+          <p class="reach-map-fallback">The province map is loading.</p>
+        </div>
+        <p class="reach-note worldmap-credit">Map geometry: <a href="https://simplemaps.com/svg/country/tr" target="_blank" rel="noopener">simplemaps.com<span class="sr-only"> (opens in a new tab)</span></a>. Province names and exact counts are available by keyboard focus.</p>
+      </div>
     </section>
 
     <section class="reach-panel reach-discovery" aria-labelledby="discovery-title">
@@ -156,7 +167,7 @@ permalink: /stats/
     <div>
       <p>Every headline figure is an aggregate page-view count from GoatCounter for the selected date range. GoatCounter does not track sessions, so this report contains no sessions, bounce rate, average session duration, or new-versus-returning split; those measures are absent rather than estimated. Country, referrer, browser, operating-system, screen-class, and language lists cover only requests for which the relevant value was retained; each affected panel reports its denominator rather than implying complete coverage.</p>
       <p>The date-range control re-slices stored daily aggregates. Page-view totals, averages, ranked breakdowns and interactions are recomputed from the same selected days for both presets and custom ranges, so selecting the same dates produces the same figures. If daily detail is missing for any part of a range, the affected panel is marked unavailable rather than filled with a partial or broader total.</p>
-      <p>Sub-country detail is not published because the snapshot does not contain daily region aggregates. Showing preset-only province or state counts under the date filter would imply temporal comparability that the stored data cannot support. GoatCounter does not provide city data.</p>
+      <p>Sub-country detail is not part of the date-filtered report because the snapshot does not contain daily region aggregates. The separate Türkiye map is a fixed seven-day province snapshot with its own dates and coverage statement; it does not change with the main filter or represent a longer period. GoatCounter does not provide city data.</p>
       <p>Page views and interactions are separated before aggregation. A tracked download, DOI or outbound-link click therefore appears only in the interactions panel and never increases the page-view KPI or trend. A change is shown only when the whole preceding period of equal length falls inside the tracked window—otherwise it is omitted rather than compared against partial data.</p>
       <p>The trend can be read two ways. <strong>Raw</strong> plots the page views recorded in each day or week on its own; <strong>Cumulative</strong> adds them up as the range progresses, so the final point equals the range total shown above. Neither adds information the other lacks—the axis label states which one is on screen.</p>
       <p>Browser, operating-system, screen-class, and language shares are reported as coarse aggregates over requests for which GoatCounter recorded the relevant value. They carry no per-visitor detail and are not linked to any other dimension in this report. A missing value is excluded rather than inferred; language is the preference the browser sent, which is a setting rather than a statement about the reader. Maintenance and measurement paths such as <code>/404.html</code> and <code>/stats/</code> are excluded from the public content ranking without altering the source data.</p>
@@ -943,8 +954,9 @@ permalink: /stats/
   }
 
   /* ---- choropleth maps ----------------------------------------------------- */
-  /* The world map keys paths by ISO country code and receives the same
-     {code, name, count} rows as the ranked country list. */
+  /* Both maps key shapes by the code in their SVG and receive
+     {code, name, count} rows. The world map follows the active filter; the
+     Türkiye map is rendered once from its explicitly dated snapshot. */
   function createMap(hostId, ariaLabel, failText, onPick){
     var host = document.getElementById(hostId), svg = null, tip = null;
 
@@ -1056,6 +1068,39 @@ permalink: /stats/
   var worldMap = createMap('worldMap',
     'World map of page views by country. Use Tab to inspect countries with recorded views.',
     'The map could not be loaded. The ranked country list remains available.');
+  var turkeySnapshotMap = createMap('turkeySnapshotMap',
+    'Map of Türkiye showing the fixed recent snapshot of page views by province. Use Tab to inspect provinces with recorded views.',
+    'The province snapshot map could not be loaded.');
+
+  function renderTurkeySnapshot(){
+    var panel = document.getElementById('turkeySnapshot');
+    var block = windowBlock('7d');
+    if (!panel || !block || !Array.isArray(block.regions)) return;
+    var rows = block.regions.filter(function(r){
+      return r.country_code === 'TR' && r.code && Number(r.count) > 0;
+    });
+    if (!rows.length) return;
+
+    var country = (block.countries || []).find(function(r){ return r.code === 'TR'; });
+    var observed = rowTotal(rows), expected = country ? Number(country.count) || 0 : 0;
+    var range = document.getElementById('turkeySnapshotRange');
+    if (range) range.textContent = shortDate(block.start) + ' – ' + shortDate(block.end);
+    var note = document.getElementById('turkeySnapshotNote');
+    if (note) {
+      var coverage;
+      if (expected && observed >= expected) {
+        coverage = 'Province detail was recorded for all ' + fmt(expected) + ' Turkey page views in this window.';
+      } else if (expected) {
+        coverage = 'Province detail was recorded for ' + fmt(observed) + ' of ' + fmt(expected) +
+          ' Turkey page views in this window (' + (observed / expected * 100).toFixed(1) + '%).';
+      } else {
+        coverage = 'Province detail was recorded for ' + fmt(observed) + ' Turkey page views in this window.';
+      }
+      note.textContent = 'Fixed seven-day snapshot; it does not follow the date filter above. ' + coverage;
+    }
+    panel.hidden = false;
+    turkeySnapshotMap.load(function(){ turkeySnapshotMap.paint(rows); });
+  }
 
   /* ---- reading environment: part-to-whole stacked bars --------------------- */
   var STACKS = [
@@ -1514,5 +1559,6 @@ permalink: /stats/
   toolbar.hidden = false;
   apply();
   worldMap.load(function(){ renderCountries(current); });
+  renderTurkeySnapshot();
 })();
 </script>
