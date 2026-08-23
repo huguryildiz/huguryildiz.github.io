@@ -111,7 +111,7 @@ permalink: /stats/
         </div>
       </header>
       <div id="reachReferrers"></div>
-      <p class="reach-note"><strong>Direct</strong> means that no referrer header was available—for example, after a typed URL, bookmark, or a link opened by an app that strips referral information. It is not a known acquisition source.</p>
+      <p class="reach-note">Only named external referrers are ranked. Direct arrivals, same-site navigation, and requests without retained referrer information are excluded; the coverage line states how much of the selected traffic the ranking describes.</p>
     </section>
   </div>
 
@@ -165,8 +165,9 @@ permalink: /stats/
     <p class="reach-index">Method note</p>
     <h2 id="method-title">How to read this report</h2>
     <div>
-      <p>Every figure is an aggregate page-view count from GoatCounter for the selected date range. GoatCounter does not track sessions, so this report contains no sessions, bounce rate, average session duration, or new-versus-returning split; those measures are absent rather than estimated. It resolves a visitor's location to a country and, below that, to a region—a province or state—but never to a city, so no city breakdown exists to publish. Requests with no resolved country are excluded from the geographic rankings rather than attributed to a country.</p>
-      <p>The date-range control re-slices stored daily aggregates. Page-view totals, averages, ranked breakdowns and interactions are recomputed from the same selected days, so a custom range never falls back to all-time figures. If daily detail is missing for any part of a range, the affected panel is marked unavailable rather than filled with a partial or broader total.</p>
+      <p>Every headline figure is an aggregate page-view count from GoatCounter for the selected date range. GoatCounter does not track sessions, so this report contains no sessions, bounce rate, average session duration, or new-versus-returning split; those measures are absent rather than estimated. Country, referrer, browser, operating-system, screen-class, and language lists cover only requests for which the relevant value was retained; each affected panel reports its denominator rather than implying complete coverage.</p>
+      <p>The date-range control re-slices stored daily aggregates. Page-view totals, averages, ranked breakdowns and interactions are recomputed from the same selected days for both presets and custom ranges, so selecting the same dates produces the same figures. If daily detail is missing for any part of a range, the affected panel is marked unavailable rather than filled with a partial or broader total.</p>
+      <p>Regional detail is different: GoatCounter supplies it through per-country lookups that this snapshot stores only for preset ranges and at most five countries. It is a best-effort list of recorded provinces or states, not a partition of the country totals, and it is omitted for custom ranges rather than substituted from a broader period. GoatCounter does not provide city data.</p>
       <p>Page views and interactions are separated before aggregation. A tracked download, DOI or outbound-link click therefore appears only in the interactions panel and never increases the page-view KPI or trend. A change is shown only when the whole preceding period of equal length falls inside the tracked window—otherwise it is omitted rather than compared against partial data.</p>
       <p>The trend can be read two ways. <strong>Raw</strong> plots the page views recorded in each day or week on its own; <strong>Cumulative</strong> adds them up as the range progresses, so the final point equals the range total shown above. Neither adds information the other lacks—the axis label states which one is on screen.</p>
       <p>Browser, operating-system, screen-class, and language shares are reported as coarse aggregates over requests for which GoatCounter recorded the relevant value. They carry no per-visitor detail and are not linked to any other dimension in this report. A missing value is excluded rather than inferred; language is the preference the browser sent, which is a setting rather than a statement about the reader. Maintenance and measurement paths such as <code>/404.html</code> and <code>/stats/</code> are excluded from the public content ranking without altering the source data.</p>
@@ -341,6 +342,9 @@ permalink: /stats/
       .filter(function(row){ return row.count > 0; })
       .sort(function(a, b){ return b.count - a.count; });
   }
+  function rowTotal(rows){
+    return rows.reduce(function(sum, row){ return sum + (Number(row.count) || 0); }, 0);
+  }
   var COMPLETE_VIEW_BREAKDOWNS = { pages:1 };
   function breakdownMatchesViews(name, rows, expected){
     /* Browser, system, language, and location rows may omit requests for
@@ -349,30 +353,65 @@ permalink: /stats/
        zero-view claim. Only content pages must partition every page view. */
     if (!COMPLETE_VIEW_BREAKDOWNS[name] && name !== 'sizes') return true;
     if (name === 'sizes' && !rows.length) return true;
-    return rows.reduce(function(sum, row){ return sum + (Number(row.count) || 0); }, 0) === expected;
+    return rowTotal(rows) === expected;
+  }
+  function breakdownInfo(rows, expected, source){
+    return { rows:rows, count:rows.length, observed:rowTotal(rows), expected:expected,
+             exact:true, source:source };
+  }
+  function attachPresetPageRefs(key, rows){
+    var preset = key === 'custom' ? null : windowBlock(key);
+    if (!preset || !Array.isArray(preset.pages)) return rows;
+    var refs = {};
+    preset.pages.forEach(function(row){
+      if (row.path && Array.isArray(row.refs)) refs[row.path] = { count:Number(row.count) || 0, rows:row.refs };
+    });
+    return rows.map(function(row){
+      var stored = refs[row.path];
+      if (stored && stored.count === Number(row.count)) row.refs = stored.rows;
+      return row;
+    });
   }
   function breakdown(key, name){
-    if (key === 'custom' && customRange) {
-      var blocks = dailyBlocks(customRange.start, customRange.end);
+    var b = bounds(key);
+    var expected = total(slice(b.start, b.end));
+
+    /* Daily blocks are the one authority for every re-sliceable panel. This
+       prevents a preset API response and an identical custom range from
+       publishing different country, referrer, or environment totals. */
+    if (name !== 'regions') {
+      var blocks = dailyBlocks(b.start, b.end);
       var rows = blocks && mergeBreakdown(blocks, name);
-      var customViews = total(slice(customRange.start, customRange.end));
-      return rows && breakdownMatchesViews(name, rows, customViews)
-        ? { rows:rows, count:rows.length, exact:true }
-        : { rows:[], count:0, exact:false };
+      if (rows && breakdownMatchesViews(name, rows, expected)) {
+        if (name === 'pages') rows = attachPresetPageRefs(key, rows);
+        return breakdownInfo(rows, expected, 'daily');
+      }
+    }
+
+    /* Region lookups are not part of the daily cache. They remain available
+       only for stored presets and are explicitly labelled as best-effort; a
+       custom range never borrows them from a broader window. */
+    if (name !== 'regions' || key === 'custom') {
+      return { rows:[], count:0, observed:0, expected:expected, exact:false, source:null };
     }
     var w = windowBlock(key);
-    /* An empty array is still an exact result: it means the API returned no
-       rows for this stored window. Falling back merely because its length is
-       zero makes a quiet day display all-time figures under a Today label. */
-    if (w && Array.isArray(w[name]) && breakdownMatchesViews(name, w[name], Number(w.pageviews) || 0)) {
-      return { rows:w[name], count:Number(w[name + '_total']) || 0, exact:true };
+    if (w && Array.isArray(w.regions)) {
+      var info = breakdownInfo(w.regions, expected, 'preset-regions');
+      info.count = Number(w.regions_total) || w.regions.length;
+      return info;
     }
-    return { rows:[], count:0, exact:false };
+    return { rows:[], count:0, observed:0, expected:expected, exact:false, source:null };
   }
   function staleNote(host, info){
     if (info.exact) return;
     var note = el('p', 'reach-flag', 'Complete daily detail is not stored for this range, so no broader or partial figures are shown.');
     host.appendChild(note);
+  }
+  function coverageNote(host, info, label, remainder){
+    if (!info.exact || !info.expected || info.observed >= info.expected) return;
+    var pct = (info.observed / info.expected * 100).toFixed(1);
+    host.appendChild(el('p', 'reach-note reach-coverage', label + ' for ' +
+      fmt(info.observed) + ' of ' + fmt(info.expected) + ' page views (' + pct + '%). ' + remainder));
   }
 
   /* ---- KPI row ------------------------------------------------------------ */
@@ -417,7 +456,7 @@ permalink: /stats/
       metric('Busiest day', fmt(peak.views),
              el('p', 'reach-delta reach-delta-none', peak.views ? shortDate(peak.date) : 'No activity recorded')),
       metric('Countries reached', countries.exact ? fmt(countries.count) : (countries.count ? fmt(countries.count) : '—'),
-             el('p', 'reach-delta reach-delta-none', countries.exact ? 'In this range' : 'Unavailable for this range'))
+             el('p', 'reach-delta reach-delta-none', countries.exact ? 'With recorded location' : 'Unavailable for this range'))
     ];
     host.replaceChildren.apply(host, nodes);
   }
@@ -705,17 +744,13 @@ permalink: /stats/
     var host = document.getElementById('reachHours');
     if (!panel || !host) return;
     var hours = [];
-    if (key === 'custom' && customRange) {
-      var blocks = dailyBlocks(customRange.start, customRange.end);
-      if (blocks && blocks.every(function(block){ return Array.isArray(block.hourly) && block.hourly.length === 24; })) {
-        hours = new Array(24).fill(0);
-        blocks.forEach(function(block){
-          block.hourly.forEach(function(value, i){ hours[i] += Number(value) || 0; });
-        });
-      }
-    } else {
-      var block = windowBlock(key);
-      hours = (block && block.hourly) || [];
+    var b = bounds(key);
+    var blocks = dailyBlocks(b.start, b.end);
+    if (blocks && blocks.every(function(block){ return Array.isArray(block.hourly) && block.hourly.length === 24; })) {
+      hours = new Array(24).fill(0);
+      blocks.forEach(function(block){
+        block.hourly.forEach(function(value, i){ hours[i] += Number(value) || 0; });
+      });
     }
     var sum = hours.reduce(function(t, v){ return t + (Number(v) || 0); }, 0);
     if (hours.length !== 24 || !sum) { panel.hidden = true; return; }
@@ -896,6 +931,8 @@ permalink: /stats/
       emptyBody:info.exact ? 'No referrer sources were recorded in the selected date range.'
                            : 'Referrer aggregates will appear after a successful refresh.' });
     staleNote(host, info);
+    coverageNote(host, info, 'A named external referrer was retained',
+      'The remainder was direct, internal, or had no retained referrer.');
   }
 
   /* Which window the geography panel is showing, and which country — if any —
@@ -911,6 +948,8 @@ permalink: /stats/
       emptyBody:info.exact ? 'No country-level page views were recorded in the selected date range.'
                            : 'The report does not currently contain country-level data.' });
     staleNote(host, info);
+    coverageNote(host, info, 'Country was recorded',
+      'Views without a resolved country are excluded from the map and ranking.');
     worldMap.paint(info.rows);
     /* A one- or two-country range leaves the ranked column almost empty; a
        full-height world map beside it reads as a layout accident rather than
@@ -962,10 +1001,8 @@ permalink: /stats/
     }
 
     var head = el('div', 'reach-subhead');
-    /* "within those countries" only holds when both panels come from the same
-       exact window; otherwise the heading drops the claim. */
     head.appendChild(el('h3', null, regionFilter ? 'Regions in ' + regionFilter
-      : (info.exact ? 'Regions within those countries' : 'Regions with the most page views')));
+      : 'Available regional detail'));
     if (regionFilter) {
       var clear = el('button', 'reach-filter-clear', 'Show all countries');
       clear.type = 'button';
@@ -985,6 +1022,8 @@ permalink: /stats/
           emptyTitle:'No regional aggregate available', emptyBody:'' });
     host.replaceChildren(head, list);
     staleNote(host, info);
+    if (info.exact) host.appendChild(el('p', 'reach-note reach-coverage',
+      'Regional detail is best-effort: it is stored for preset ranges and up to five countries, and it does not partition the country totals.'));
   }
 
   /* ---- choropleth maps ----------------------------------------------------- */
@@ -1133,11 +1172,10 @@ permalink: /stats/
   var SLOTS = 4; /* four brand hues, then a neutral "Other" */
 
   /* Colour follows the entity, not its rank in the current range: slots are
-     assigned once from the all-time ordering, so filtering never repaints. */
+     assigned once from the daily all-time ordering, so filtering never repaints. */
   var slotIndex = {};
   STACKS.forEach(function(stack){
-    var all = windowBlock('all');
-    var rows = (all && all[stack.key]) || [];
+    var rows = breakdown('all', stack.key).rows;
     slotIndex[stack.key] = {};
     rows.slice(0, SLOTS).forEach(function(r, i){ slotIndex[stack.key][r.name] = i + 1; });
   });
@@ -1164,7 +1202,9 @@ permalink: /stats/
       var wrap = el('section', 'reach-stack');
       var head = el('div', 'reach-stack-head');
       head.appendChild(el('h3', null, stack.title));
-      head.appendChild(el('span', 'reach-stack-total', fmt(sum) + ' views'));
+      head.appendChild(el('span', 'reach-stack-total', info.expected && sum < info.expected
+        ? fmt(sum) + ' of ' + fmt(info.expected) + ' views'
+        : fmt(sum) + ' views'));
       wrap.appendChild(head);
 
       var plot = el('div', 'reach-stack-plot');

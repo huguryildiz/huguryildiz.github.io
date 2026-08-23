@@ -1243,7 +1243,8 @@ footer.site a:hover .licon.spotify{color:var(--accent);}
 .reach-bars a,.reach-bars li>span:nth-child(2){min-width:0; overflow-wrap:anywhere; color:var(--ink); font-size:.94rem; font-weight:550;}
 .reach-bars a:hover{color:var(--accent);}
 .reach-rank{color:var(--ink-faint); font-size:.72rem; font-variant-numeric:tabular-nums;}
-.reach-bars strong{color:var(--head); font-size:.88rem; font-weight:650; font-variant-numeric:tabular-nums; text-align:right;}
+.reach-bars strong{color:var(--head); font-size:.88rem; font-weight:650; font-variant-numeric:tabular-nums;
+  text-align:right; white-space:nowrap; overflow-wrap:normal;}
 .reach-bar{height:2px; background:var(--hairline); overflow:hidden;}
 .reach-bar i{display:block; width:calc(var(--reach-value)/var(--reach-max)*100%); height:100%; background:var(--accent);}
 /* Qualifier under a ranked row (the per-page referrer split). It spans the
