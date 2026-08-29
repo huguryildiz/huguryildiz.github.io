@@ -3,7 +3,7 @@ layout: academic
 title: "Hüseyin Uğur Yıldız | Associate Professor of Electrical Engineering at TED University"
 description: "Associate Professor of Electrical & Electronics Engineering at TED University. Operations research and mathematical optimization for wireless, underwater, and drone-assisted networks."
 permalink: /
-modified: 2026-07-26
+modified: 2026-08-30
 ---
 
 <div class="shell">
@@ -289,6 +289,7 @@ modified: 2026-07-26
 
   <h2 class="sec" id="home-software"><svg class="hicon" aria-hidden="true"><use href="#i-code"/></svg>Software</h2>
   <ul class="software-strip">
+    <li><img class="ico" src="/assets/images/icons/research-graph.svg" alt="" width="22" height="22"><span class="n">research-graph</span><span class="d">Contract-gated workflow verification, provenance, and staleness checks for multi-agent research pipelines.</span><a class="ext" href="https://github.com/huguryildiz/research-graph" target="_blank" rel="noopener">GitHub repository</a></li>
     <li><img class="ico" src="/assets/images/icons/vera-mark.png" alt="" width="22" height="22"><span class="n">VERA</span><span class="d">Visual evaluation, reporting &amp; analytics for academic juries and accreditation workflows.</span><a class="ext" href="https://vera-eval.app" target="_blank" rel="noopener">vera-eval.app</a></li>
     <li><img class="ico" src="/assets/images/icons/kairos-mark.png" alt="" width="22" height="22"><span class="n">KAIROS</span><span class="d">Conflict-free university course timetabling on OR-Tools CP-SAT.</span><a class="ext" href="https://kairos.huguryildiz.com" target="_blank" rel="noopener">kairos.huguryildiz.com</a></li>
     <li><img class="ico" src="/assets/images/icons/uwa-ray-bench-mark.png" alt="" width="22" height="22"><span class="n">UWA Ray Bench</span><span class="d">Benchmarking LLMs against a BELLHOP3D reference solver on underwater acoustic ray tracing.</span><a class="ext" href="https://uwa-ray-bench.vercel.app/" target="_blank" rel="noopener">uwa-ray-bench.vercel.app</a></li>

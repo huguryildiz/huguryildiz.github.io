@@ -1,7 +1,7 @@
 ---
 layout: academic
 title: "Research Program – Hüseyin Uğur Yıldız"
-description: "One research program: optimization-based models for networked systems, extended with learning where scale and uncertainty demand it. Software: VERA, KAIROS, UWA Ray Bench."
+description: "One research program: optimization-based models for networked systems, extended with learning where scale and uncertainty demand it. Software includes research-graph, VERA, KAIROS, and UWA Ray Bench."
 permalink: /research/
 ---
 
@@ -129,6 +129,21 @@ permalink: /research/
   </script>
 
   <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-code"/></svg>Software</h2>
+
+  <article class="swproject">
+    <img src="/assets/images/icons/research-graph.svg" alt="research-graph provenance and verification mark" width="48" height="48" loading="lazy" style="object-fit:contain;">
+    <div>
+      <h3>research-graph — Agentic research workflow verification</h3>
+      <p>A public-beta, contract-gated verification layer for multi-agent research workflows. It
+        validates versioned artifacts against JSON Schema, checks SHA-256 provenance and staleness,
+        enforces revision budgets, and records reviewer–producer separation. It does not determine
+        scientific correctness or provide autonomous orchestration.</p>
+      <div class="links">
+        <a class="ext" href="https://research-graph-kit.vercel.app/" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-globe"/></svg> Project site</a>
+        <a class="ext" href="https://github.com/huguryildiz/research-graph" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-github"/></svg> GitHub repository</a>
+      </div>
+    </div>
+  </article>
 
   <article class="swproject">
     <img src="/assets/images/vera.webp" alt="VERA evaluation platform screenshot" width="560" height="280" loading="lazy">
