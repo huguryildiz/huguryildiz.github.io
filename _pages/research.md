@@ -139,7 +139,7 @@ permalink: /research/
         enforces revision budgets, and records reviewer–producer separation. It does not determine
         scientific correctness or provide autonomous orchestration.</p>
       <div class="links">
-        <a class="ext" href="https://research-graph-kit.vercel.app/" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-globe"/></svg> Project site</a>
+        <a class="ext" href="https://research-graph-kit.vercel.app/" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-globe"/></svg> research-graph-kit.vercel.app</a>
         <a class="ext" href="https://github.com/huguryildiz/research-graph" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-github"/></svg> GitHub repository</a>
       </div>
     </div>
