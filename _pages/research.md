@@ -1,7 +1,7 @@
 ---
 layout: academic
 title: "Research Program – Hüseyin Uğur Yıldız"
-description: "One research program: optimization-based models for networked systems, extended with learning where scale and uncertainty demand it. Software includes research-graph, VERA, KAIROS, and UWA Ray Bench."
+description: "One research program: optimization-based models for networked systems, extended with learning where scale and uncertainty demand it. Software includes Internet of Algae Lab, research-graph, VERA, KAIROS, and UWA Ray Bench."
 permalink: /research/
 ---
 
