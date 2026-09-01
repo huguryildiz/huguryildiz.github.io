@@ -131,6 +131,19 @@ permalink: /research/
   <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-code"/></svg>Software</h2>
 
   <article class="swproject">
+    <img src="/assets/images/icons/internet-of-algae-lab.svg" alt="Internet of Algae Lab communication channel mark" width="560" height="280" loading="lazy" style="object-fit:contain;">
+    <div>
+      <h3>Internet of Algae Lab — Interactive channel simulations</h3>
+      <p>A browser-based teaching lab for four communication channels in photosynthetic molecular
+        networks: quorum sensing, airborne VOC, electrical, and bioluminescent optical signaling.</p>
+      <div class="links">
+        <a class="ext" href="https://internet-of-algae-lab.vercel.app" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-globe"/></svg> internet-of-algae-lab.vercel.app</a>
+        <a class="ext" href="https://github.com/huguryildiz/internet-of-algae-lab" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-github"/></svg> GitHub repository</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="swproject">
     <img src="/assets/images/icons/research-graph.svg" alt="research-graph provenance and verification mark" width="48" height="48" loading="lazy" style="object-fit:contain;">
     <div>
       <h3>research-graph — Agentic research workflow verification</h3>
