@@ -3,7 +3,7 @@ layout: academic
 title: "Courses & Teaching – Hüseyin Uğur Yıldız"
 description: "Courses taught at TED University by Hüseyin Uğur Yıldız — probability, signals and systems, communication systems, optimization for networks — and teaching philosophy."
 permalink: /teaching/
-modified: 2026-07-26
+modified: 2026-09-01
 ---
 
 <div class="shell">
@@ -34,7 +34,8 @@ modified: 2026-07-26
       <p>A third-year undergraduate course covering continuous-time and discrete-time signals,
         linear systems, Fourier analysis, and sampling theory.</p>
       <div class="links"><span class="tag">{{ course.terms_web }}</span>
-        <a class="ext" href="https://www.tedu.edu.tr/ee-311" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-link"/></svg> Course catalog</a></div>
+        <a class="ext" href="https://www.tedu.edu.tr/ee-311" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-link"/></svg> Course catalog</a>
+        <a class="ext" href="https://github.com/huguryildiz/signals-and-systems" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-github"/></svg> GitHub repository</a></div>
     </div>
   </article>
 
@@ -48,7 +49,8 @@ modified: 2026-07-26
         quantization, digital modulation, receiver design, noise effects, and introductory
         information theory concepts.</p>
       <div class="links"><span class="tag">{{ course.terms_web }}</span>
-        <a class="ext" href="https://www.tedu.edu.tr/ee-413" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-link"/></svg> Course catalog</a></div>
+        <a class="ext" href="https://www.tedu.edu.tr/ee-413" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-link"/></svg> Course catalog</a>
+        <a class="ext" href="https://github.com/huguryildiz/digital-communications" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-github"/></svg> GitHub repository</a></div>
     </div>
   </article>
 
