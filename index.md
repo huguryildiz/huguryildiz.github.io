@@ -3,52 +3,78 @@ layout: academic
 title: "Hüseyin Uğur Yıldız | Associate Professor of Electrical Engineering at TED University"
 description: "Associate Professor of Electrical & Electronics Engineering at TED University. Operations research and mathematical optimization for wireless, underwater, and drone-assisted networks."
 permalink: /
-modified: 2026-08-30
+modified: 2026-09-03
 ---
 
-<div class="shell">
-  <header class="hero">
-    <div class="hero-id">
-      <div class="idrow">
-        <figure class="portrait">
-          <img src="/assets/images/huguryildiz.webp" alt="Portrait of Hüseyin Uğur Yıldız" width="126" height="126">
-          <svg class="orn" viewBox="0 0 160 160" aria-hidden="true" focusable="false">
-            <g class="oarc" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
-              <path d="M17.6 116 A72 72 0 0 0 147.7 104.6"/>
-              <path d="M55.4 12.3 A72 72 0 0 1 135.2 33.7"/>
-            </g>
-            <g class="oping" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
-              <path opacity=".35" d="M144.2 118.3 A6 6 0 0 1 138 127.2"/>
-              <path opacity=".22" d="M148.1 116.1 A10.5 10.5 0 0 1 137.2 131.6"/>
-              <path opacity=".12" d="M152 113.8 A15 15 0 0 1 136.4 136.1"/>
-            </g>
-            <g fill="currentColor">
-              <circle class="on" cx="17.6" cy="116" r="1.8"/>
-              <circle class="on" cx="55.4" cy="12.3" r="1.8"/>
-              <circle class="on" cx="135.2" cy="33.7" r="1.8"/>
-              <circle class="on onx" cx="139" cy="121.3" r="2.2"/>
-            </g>
-            <g class="osig">
-              <circle cx="80" cy="8" r="2.6" fill="currentColor"/>
-            </g>
-          </svg>
-        </figure>
-        <div class="idtext">
-          <h1 id="home-h1">Hüseyin Uğur Yıldız</h1>
-          <p class="role">
-            <span class="role-line">Associate Professor &amp; IEEE Senior Member</span>
-            <span class="role-line">Department of Electrical &amp; Electronics Engineering</span>
-            <span class="role-line"><span class="org"><a href="https://www.tedu.edu.tr/en/huseyin-ugur-yildiz" target="_blank" rel="noopener">TED University<span class="sr-only"> (external)</span></a></span></span>
-            <a class="role-addr" href="https://share.google/AFFkStDzjSsudiC1V" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-map-pin"/></svg>
-              <span>Ankara, Türkiye<span class="sr-only"> — campus location on the map (external)</span></span></a></p>
+<section class="obs" aria-labelledby="home-h1">
+  <div class="obs-copy">
+    <div class="shell obs-copy-in">
+      <div class="obs-idrow">
+      <figure class="portrait">
+        <img src="/assets/images/huguryildiz.webp" alt="Portrait of Hüseyin Uğur Yıldız" width="126" height="126">
+        <svg class="orn" viewBox="0 0 160 160" aria-hidden="true" focusable="false">
+          <g class="oarc" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+            <path d="M17.6 116 A72 72 0 0 0 147.7 104.6"/>
+            <path d="M55.4 12.3 A72 72 0 0 1 135.2 33.7"/>
+          </g>
+          <g class="oping" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+            <path opacity=".35" d="M144.2 118.3 A6 6 0 0 1 138 127.2"/>
+            <path opacity=".22" d="M148.1 116.1 A10.5 10.5 0 0 1 137.2 131.6"/>
+            <path opacity=".12" d="M152 113.8 A15 15 0 0 1 136.4 136.1"/>
+          </g>
+          <g fill="currentColor">
+            <circle class="on" cx="17.6" cy="116" r="1.8"/>
+            <circle class="on" cx="55.4" cy="12.3" r="1.8"/>
+            <circle class="on" cx="135.2" cy="33.7" r="1.8"/>
+            <circle class="on onx" cx="139" cy="121.3" r="2.2"/>
+          </g>
+          <g class="osig">
+            <circle cx="80" cy="8" r="2.6" fill="currentColor"/>
+          </g>
+        </svg>
+      </figure>
+        <div class="obs-idtext">
+      <h1 id="home-h1">Hüseyin Uğur Yıldız</h1>
+      <p class="obs-role">
+        <span class="obs-role-line">Associate Professor and IEEE Senior Member</span>
+        <span class="obs-role-line">Department of Electrical &amp; Electronics Engineering,
+          <a href="https://www.tedu.edu.tr/en/huseyin-ugur-yildiz" target="_blank" rel="noopener">TED University<span class="sr-only"> (external)</span></a></span>
+        <a class="obs-addr" href="https://share.google/AFFkStDzjSsudiC1V" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-map-pin"/></svg>
+          <span>Ankara, Türkiye<span class="sr-only"> — campus location on the map (external)</span></span></a></p>
         </div>
       </div>
-      <p class="prop">Operations Research &amp; Machine Learning for Wireless, Underwater &amp; Aerial Networks</p>
-      <p class="supporting">I develop optimization-based models for routing, resource allocation,
+      <p class="obs-prop">Operations Research &amp; Machine Learning for Wireless, Underwater &amp; Aerial Networks</p>
+      <div class="obs-cta">
+        <a class="btn btn-paper" href="/files/Yildiz_HuseyinUgur_CV.pdf" target="_blank" rel="noopener"
+          data-goatcounter-click="cv-pdf" data-goatcounter-title="CV (PDF), from the home page">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-download"/></svg>
+          View CV<span class="sr-only"> (PDF, opens in a new tab)</span></a>
+        <a class="btn btn-line" href="#home-selected">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-book"/></svg>
+          Selected publications</a>
+        <a class="btn btn-line" href="mailto:hugur.yildiz@tedu.edu.tr">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg>
+          Contact</a>
+      </div>
+    </div>
+  </div>
+  <div class="obs-scene">
+    {% include hero-uwsn.html %}
+  </div>
+</section>
+
+<div class="shell">
+  <section class="idband" aria-label="Research focus and academic profiles">
+    <p class="supporting">I develop optimization-based models for routing, resource allocation,
         and energy efficiency in wireless ad&nbsp;hoc, underwater acoustic, and drone-assisted
         networks, increasingly combined with machine learning, reinforcement learning, and
         hybrid classical–quantum network routing.</p>
+    <div class="idband-cols">
+      <div class="idband-areas">
+        <p class="profiles-label">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-target"/></svg>
+          Research areas</p>
       <ul class="chiprow hero-chips" aria-label="Research areas">
         <li class="chip chip-opt">Operations Research</li>
         <li class="chip chip-opt">Network Optimization</li>
@@ -59,68 +85,52 @@ modified: 2026-08-30
         <li class="chip chip-net">Internet of Things</li>
         <li class="chip chip-net">UAV Networks</li>
       </ul>
-    </div>
-    <div class="hero-actions">
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="/files/Yildiz_HuseyinUgur_CV.pdf" target="_blank" rel="noopener"
-          data-goatcounter-click="cv-pdf" data-goatcounter-title="CV (PDF), from the home page">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-download"/></svg>
-          CV (PDF)<span class="sr-only"> (opens in a new tab)</span></a>
-        <a class="btn btn-quiet" href="#home-selected">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-book"/></svg>
-          Selected publications</a>
-        <a class="btn btn-quiet" href="mailto:hugur.yildiz@tedu.edu.tr">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg>
-          Contact</a>
       </div>
       <div class="profiles">
-        <p class="profiles-label">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-link"/></svg>
-          Academic profiles</p>
-        <ul class="profilelinks">
-          <li><a href="https://www.tedu.edu.tr/en/huseyin-ugur-yildiz" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tedu"/></svg>
-            TED University<span class="sr-only"> (external)</span></a></li>
-          <li><a href="https://akademik.yok.gov.tr/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&amp;authorId=1E27C0D0F1F46164" target="_blank" rel="noopener">
-            <span class="mlogo mlogo-yok" aria-hidden="true"></span>
-            YÖK Akademik<span class="sr-only"> (external)</span></a></li>
-          <li><a href="https://scholar.google.com/citations?user=nQwHS1gAAAAJ" target="_blank" rel="noopener">
-            <i class="ai ai-google-scholar" aria-hidden="true"></i>
-            Google Scholar<span class="sr-only"> (external)</span></a></li>
-          <li><a href="https://orcid.org/0000-0002-1556-2634" target="_blank" rel="noopener">
-            <i class="ai ai-orcid" aria-hidden="true"></i>
-            ORCID<span class="sr-only"> (external)</span></a></li>
-          <li><a href="https://www.researchgate.net/profile/Huseyin-Yildiz-3" target="_blank" rel="noopener">
-            <i class="ai ai-researchgate" aria-hidden="true"></i>
-            ResearchGate<span class="sr-only"> (external)</span></a></li>
-          <li><a href="https://dblp.org/pid/160/4924.html" target="_blank" rel="noopener">
-            <i class="ai ai-dblp" aria-hidden="true"></i>
-            DBLP<span class="sr-only"> (external)</span></a></li>
-          <li><a href="https://www.webofscience.com/wos/author/record/S-6587-2016" target="_blank" rel="noopener">
-            <i class="ai ai-researcherid" aria-hidden="true"></i>
-            ResearcherID<span class="sr-only"> (external)</span></a></li>
-          <li><a href="https://www.scopus.com/authid/detail.uri?authorId=56242674200" target="_blank" rel="noopener">
-            <i class="ai ai-scopus" aria-hidden="true"></i>
-            Scopus<span class="sr-only"> (external)</span></a></li>
-          <li><a href="https://openalex.org/authors/a5085505896" target="_blank" rel="noopener">
-            <span class="mlogo mlogo-openalex" aria-hidden="true"></span>
-            OpenAlex<span class="sr-only"> (external)</span></a></li>
-          <li><a href="https://ieeexplore.ieee.org/author/37085350625" target="_blank" rel="noopener">
-            <i class="ai ai-ieee" aria-hidden="true"></i>
-            IEEE<span class="sr-only"> (external)</span></a></li>
-          <li><a href="https://github.com/huguryildiz" target="_blank" rel="noopener">
-            <svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-github"/></svg>
-            GitHub<span class="sr-only"> (external)</span></a></li>
-          <li><a href="https://www.linkedin.com/in/huguryildiz/" target="_blank" rel="noopener">
-            <svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-linkedin"/></svg>
-            LinkedIn<span class="sr-only"> (external)</span></a></li>
-        </ul>
+      <p class="profiles-label">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-link"/></svg>
+        Academic profiles</p>
+      <ul class="profilelinks">
+        <li><a href="https://www.tedu.edu.tr/en/huseyin-ugur-yildiz" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-tedu"/></svg>
+          TED University<span class="sr-only"> (external)</span></a></li>
+        <li><a href="https://akademik.yok.gov.tr/AkademikArama/AkademisyenGorevOgrenimBilgileri?islem=direct&amp;authorId=1E27C0D0F1F46164" target="_blank" rel="noopener">
+          <span class="mlogo mlogo-yok" aria-hidden="true"></span>
+          YÖK Akademik<span class="sr-only"> (external)</span></a></li>
+        <li><a href="https://scholar.google.com/citations?user=nQwHS1gAAAAJ" target="_blank" rel="noopener">
+          <i class="ai ai-google-scholar" aria-hidden="true"></i>
+          Google Scholar<span class="sr-only"> (external)</span></a></li>
+        <li><a href="https://orcid.org/0000-0002-1556-2634" target="_blank" rel="noopener">
+          <i class="ai ai-orcid" aria-hidden="true"></i>
+          ORCID<span class="sr-only"> (external)</span></a></li>
+        <li><a href="https://www.researchgate.net/profile/Huseyin-Yildiz-3" target="_blank" rel="noopener">
+          <i class="ai ai-researchgate" aria-hidden="true"></i>
+          ResearchGate<span class="sr-only"> (external)</span></a></li>
+        <li><a href="https://dblp.org/pid/160/4924.html" target="_blank" rel="noopener">
+          <i class="ai ai-dblp" aria-hidden="true"></i>
+          DBLP<span class="sr-only"> (external)</span></a></li>
+        <li><a href="https://www.webofscience.com/wos/author/record/S-6587-2016" target="_blank" rel="noopener">
+          <i class="ai ai-researcherid" aria-hidden="true"></i>
+          ResearcherID<span class="sr-only"> (external)</span></a></li>
+        <li><a href="https://www.scopus.com/authid/detail.uri?authorId=56242674200" target="_blank" rel="noopener">
+          <i class="ai ai-scopus" aria-hidden="true"></i>
+          Scopus<span class="sr-only"> (external)</span></a></li>
+        <li><a href="https://openalex.org/authors/a5085505896" target="_blank" rel="noopener">
+          <span class="mlogo mlogo-openalex" aria-hidden="true"></span>
+          OpenAlex<span class="sr-only"> (external)</span></a></li>
+        <li><a href="https://ieeexplore.ieee.org/author/37085350625" target="_blank" rel="noopener">
+          <i class="ai ai-ieee" aria-hidden="true"></i>
+          IEEE<span class="sr-only"> (external)</span></a></li>
+        <li><a href="https://github.com/huguryildiz" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-github"/></svg>
+          GitHub<span class="sr-only"> (external)</span></a></li>
+        <li><a href="https://www.linkedin.com/in/huguryildiz/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><use href="#i-linkedin"/></svg>
+          LinkedIn<span class="sr-only"> (external)</span></a></li>
+      </ul>
       </div>
     </div>
-    <section class="hero-twin" aria-label="Ocean digital twin">
-      {% include hero-uwsn.html %}
-    </section>
-  </header>
+  </section>
 
   {% assign sm = site.data.scholar_metrics %}
   <section class="scholar-kpi" aria-labelledby="kpi-heading">
@@ -224,41 +234,6 @@ modified: 2026-08-30
     </div>
   </div>
 
-  <h2 class="sec" id="home-news"><svg class="hicon" aria-hidden="true"><use href="#i-bell"/></svg>News</h2>
-  <ul class="newslist">
-    <li><time>Dec 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span><a href="https://www.linkedin.com/in/%C3%A7a%C4%9Fla-tantur-karag%C3%BCl-b834b0b5/" target="_blank" rel="noopener">Çağla Tantur Karagül<span class="sr-only"> (external)</span></a> successfully defended her Ph.D. dissertation at TOBB University of Economics and Technology.</span></li>
-    <li><time>Nov 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-mic"/></svg><span>Conference paper presented at IEEE TELFOR 2025: “Non-uniform k-connectivity for energy-efficient and reliable underwater wireless sensor networks”.</span></li>
-    <li><time>Oct 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-book"/></svg><span>Journal paper published in <i>IEEE Internet of Things Journal</i>: “Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity”.</span></li>
-  </ul>
-  <details class="news-archive">
-    <summary>Older news</summary>
-    <ul class="newslist">
-      <li><time>Aug 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-book"/></svg><span>Journal paper published in <i>Computer Standards &amp; Interfaces</i>: “Enhancing drone network resilience: Investigating strategies for k-connectivity restoration”.</span></li>
-      <li><time>Jul 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-pen"/></svg><span>Editorial published in <i>Internet of Things</i> (Elsevier), Special Issue on Mass Connectivity and Communication Paradigms for IoT.</span></li>
-      <li><time>Aug 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-check"/></svg><span>Completed <a href="https://www.coursera.org/account/accomplishments/specialization/26BOL8LTVD7S" target="_blank" rel="noopener">Reinforcement Learning Specialization<span class="sr-only"> (external)</span></a> (University of Alberta, Coursera).</span></li>
-      <li><time>Jun 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-check"/></svg><span>Completed <a href="https://www.coursera.org/account/accomplishments/specialization/JGGZ4NGSKTQZ" target="_blank" rel="noopener">Deep Learning Specialization<span class="sr-only"> (external)</span></a> (DeepLearning.AI, Coursera).</span></li>
-      <li><time>Mar 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-check"/></svg><span>Completed <a href="https://www.coursera.org/account/accomplishments/specialization/FGT2PNQ9NYVL" target="_blank" rel="noopener">Machine Learning Specialization<span class="sr-only"> (external)</span></a> (DeepLearning.AI, Coursera).</span></li>
-      <li><time>Oct 2023</time><svg class="nicon" aria-hidden="true"><use href="#i-book"/></svg><span>Journal paper published in <i>IEEE Sensors Journal</i>: “Joint effects of void region size and sink architecture on underwater WSNs lifetime”.</span></li>
-      <li><time>Jun 2023</time><svg class="nicon" aria-hidden="true"><use href="#i-book"/></svg><span>Journal paper published in <i>Ad Hoc Networks</i>: “Exploring the tradeoff between energy dissipation, delay, and the number of backbones for broadcasting in wireless sensor networks through goal programming”.</span></li>
-      <li><time>Dec 2022</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span>Muhammed Çobanlar successfully defended his Ph.D. dissertation at TOBB University of Economics and Technology.</span></li>
-      <li><time>Nov 2022</time><svg class="nicon" aria-hidden="true"><use href="#i-book"/></svg><span>Journal paper published in <i>IEEE Internet of Things Journal</i>: “On the trade-off between network lifetime and k-connectivity-based reliability in UWSNs”.</span></li>
-      <li><time>Sep 2022</time><svg class="nicon" aria-hidden="true"><use href="#i-book"/></svg><span>Journal paper published in <i>Ad Hoc Networks</i>: “Reliability of linear WSNs: A complementary overview and analysis of impact of cascaded failures on network lifetime”.</span></li>
-      <li><time>Apr 2022</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span><a href="https://www.linkedin.com/in/burak-emre-%C3%BCn-2a558892/" target="_blank" rel="noopener">Burak Emre Ün<span class="sr-only"> (external)</span></a> successfully defended his M.Sc. thesis at TOBB University of Economics and Technology.</span></li>
-      <li><time>Aug 2021</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span>Ceylan Aydın successfully defended her M.Sc. thesis at TOBB University of Economics and Technology.</span></li>
-      <li><time>Jul 2021</time><svg class="nicon" aria-hidden="true"><use href="#i-badge"/></svg><span>Appointed Chair of the Electrical and Electronics Engineering Department, TED University.</span></li>
-      <li><time>Apr 2021</time><svg class="nicon" aria-hidden="true"><use href="#i-award"/></svg><span>Elevated to IEEE Senior Member grade.</span></li>
-      <li><time>Mar 2021</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span><a href="https://www.linkedin.com/in/alper-%C3%B6zmen-1a6232109/" target="_blank" rel="noopener">Alper Özmen<span class="sr-only"> (external)</span></a> successfully defended his M.Sc. thesis at TOBB University of Economics and Technology.</span></li>
-      <li><time>Nov 2020</time><svg class="nicon" aria-hidden="true"><use href="#i-award"/></svg><span>Promoted to Associate Professor (Doçent) by the Interuniversity Council of Turkey (ÜAK).</span></li>
-      <li><time>Oct 2019</time><svg class="nicon" aria-hidden="true"><use href="#i-mic"/></svg><span>Invited seminar at Georgia Institute of Technology: “Prolonging the Lifetime of Underwater Sensor Networks Under Sinkhole Attacks” (Host: Prof. Ian F. Akyildiz).</span></li>
-      <li><time>Apr 2019</time><svg class="nicon" aria-hidden="true"><use href="#i-mic"/></svg><span>Invited talk at IEEE SIU 2019 – Special Session: “Maximization of Underwater Sensor Networks Lifetime via Fountain Codes”.</span></li>
-      <li><time>Feb 2019</time><svg class="nicon" aria-hidden="true"><use href="#i-mic"/></svg><span>Invited seminar at ASELSAN Information and Communication Technologies Workshop: “Maximization of Underwater Sensor Networks Lifetime via Fountain Codes”.</span></li>
-      <li><time>Apr 2018</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span><a href="https://www.linkedin.com/in/y%C4%B1ld%C4%B1z-canbilen-karakurt-1377bb22/" target="_blank" rel="noopener">Yıldız Karakurt<span class="sr-only"> (external)</span></a> successfully defended her M.Sc. thesis at TOBB University of Economics and Technology.</span></li>
-      <li><time>Aug 2017</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span><a href="https://www.linkedin.com/in/%C3%A7a%C4%9Fla-tantur-karag%C3%BCl-b834b0b5/" target="_blank" rel="noopener">Çağla Tantur<span class="sr-only"> (external)</span></a> successfully defended her M.Sc. thesis at TOBB University of Economics and Technology.</span></li>
-      <li><time>Sep 2016</time><svg class="nicon" aria-hidden="true"><use href="#i-badge"/></svg><span>Appointed as Assistant Professor in the Department of Electrical and Electronics Engineering at TED University.</span></li>
-      <li><time>Apr 2016</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span>Successfully defended my Ph.D. dissertation at TOBB University of Economics and Technology.</span></li>
-    </ul>
-  </details>
-
   <h2 class="sec" id="home-selected"><svg class="hicon" aria-hidden="true"><use href="#i-book"/></svg>Selected publications</h2>
   <p class="seln">Selected for citation impact, external recognition, fit with the research
     program, and recency. The <a href="{{ '/publications/' | relative_url }}">full list</a> is
@@ -297,9 +272,101 @@ modified: 2026-08-30
     <li><img class="ico" src="/assets/images/icons/ieee-acm-paper-writing.svg" alt="" width="22" height="22"><span class="n">IEEE / ACM Paper Writing Skills</span><span class="d">Evidence-aware drafting, rewriting, and auditing for engineering manuscripts.</span><a class="ext" href="https://ieee-acm-paper-writing.vercel.app" target="_blank" rel="noopener">ieee-acm-paper-writing.vercel.app</a></li>
   </ul>
   <p class="more" style="margin-top:.7rem;"><a href="/research/">Research program &amp; software →</a></p>
+  <h2 class="sec" id="home-news"><svg class="hicon" aria-hidden="true"><use href="#i-bell"/></svg>News</h2>
+  <ul class="newslist">
+    <li><time>Dec 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span><a href="https://www.linkedin.com/in/%C3%A7a%C4%9Fla-tantur-karag%C3%BCl-b834b0b5/" target="_blank" rel="noopener">Çağla Tantur Karagül<span class="sr-only"> (external)</span></a> successfully defended her Ph.D. dissertation at TOBB University of Economics and Technology.</span></li>
+    <li><time>Nov 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-mic"/></svg><span>Conference paper presented at IEEE TELFOR 2025: “Non-uniform k-connectivity for energy-efficient and reliable underwater wireless sensor networks”.</span></li>
+    <li><time>Oct 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-book"/></svg><span>Journal paper published in <i>IEEE Internet of Things Journal</i>: “Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity”.</span></li>
+  </ul>
+  <details class="news-archive">
+    <summary>Older news</summary>
+    <ul class="newslist">
+      <li><time>Aug 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-book"/></svg><span>Journal paper published in <i>Computer Standards &amp; Interfaces</i>: “Enhancing drone network resilience: Investigating strategies for k-connectivity restoration”.</span></li>
+      <li><time>Jul 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-pen"/></svg><span>Editorial published in <i>Internet of Things</i> (Elsevier), Special Issue on Mass Connectivity and Communication Paradigms for IoT.</span></li>
+      <li><time>Aug 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-check"/></svg><span>Completed <a href="https://www.coursera.org/account/accomplishments/specialization/26BOL8LTVD7S" target="_blank" rel="noopener">Reinforcement Learning Specialization<span class="sr-only"> (external)</span></a> (University of Alberta, Coursera).</span></li>
+      <li><time>Jun 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-check"/></svg><span>Completed <a href="https://www.coursera.org/account/accomplishments/specialization/JGGZ4NGSKTQZ" target="_blank" rel="noopener">Deep Learning Specialization<span class="sr-only"> (external)</span></a> (DeepLearning.AI, Coursera).</span></li>
+      <li><time>Mar 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-check"/></svg><span>Completed <a href="https://www.coursera.org/account/accomplishments/specialization/FGT2PNQ9NYVL" target="_blank" rel="noopener">Machine Learning Specialization<span class="sr-only"> (external)</span></a> (DeepLearning.AI, Coursera).</span></li>
+      <li><time>Oct 2023</time><svg class="nicon" aria-hidden="true"><use href="#i-book"/></svg><span>Journal paper published in <i>IEEE Sensors Journal</i>: “Joint effects of void region size and sink architecture on underwater WSNs lifetime”.</span></li>
+      <li><time>Jun 2023</time><svg class="nicon" aria-hidden="true"><use href="#i-book"/></svg><span>Journal paper published in <i>Ad Hoc Networks</i>: “Exploring the tradeoff between energy dissipation, delay, and the number of backbones for broadcasting in wireless sensor networks through goal programming”.</span></li>
+      <li><time>Dec 2022</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span>Muhammed Çobanlar successfully defended his Ph.D. dissertation at TOBB University of Economics and Technology.</span></li>
+      <li><time>Nov 2022</time><svg class="nicon" aria-hidden="true"><use href="#i-book"/></svg><span>Journal paper published in <i>IEEE Internet of Things Journal</i>: “On the trade-off between network lifetime and k-connectivity-based reliability in UWSNs”.</span></li>
+      <li><time>Sep 2022</time><svg class="nicon" aria-hidden="true"><use href="#i-book"/></svg><span>Journal paper published in <i>Ad Hoc Networks</i>: “Reliability of linear WSNs: A complementary overview and analysis of impact of cascaded failures on network lifetime”.</span></li>
+      <li><time>Apr 2022</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span><a href="https://www.linkedin.com/in/burak-emre-%C3%BCn-2a558892/" target="_blank" rel="noopener">Burak Emre Ün<span class="sr-only"> (external)</span></a> successfully defended his M.Sc. thesis at TOBB University of Economics and Technology.</span></li>
+      <li><time>Aug 2021</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span>Ceylan Aydın successfully defended her M.Sc. thesis at TOBB University of Economics and Technology.</span></li>
+      <li><time>Jul 2021</time><svg class="nicon" aria-hidden="true"><use href="#i-badge"/></svg><span>Appointed Chair of the Electrical and Electronics Engineering Department, TED University.</span></li>
+      <li><time>Apr 2021</time><svg class="nicon" aria-hidden="true"><use href="#i-award"/></svg><span>Elevated to IEEE Senior Member grade.</span></li>
+      <li><time>Mar 2021</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span><a href="https://www.linkedin.com/in/alper-%C3%B6zmen-1a6232109/" target="_blank" rel="noopener">Alper Özmen<span class="sr-only"> (external)</span></a> successfully defended his M.Sc. thesis at TOBB University of Economics and Technology.</span></li>
+      <li><time>Nov 2020</time><svg class="nicon" aria-hidden="true"><use href="#i-award"/></svg><span>Promoted to Associate Professor (Doçent) by the Interuniversity Council of Turkey (ÜAK).</span></li>
+      <li><time>Oct 2019</time><svg class="nicon" aria-hidden="true"><use href="#i-mic"/></svg><span>Invited seminar at Georgia Institute of Technology: “Prolonging the Lifetime of Underwater Sensor Networks Under Sinkhole Attacks” (Host: Prof. Ian F. Akyildiz).</span></li>
+      <li><time>Apr 2019</time><svg class="nicon" aria-hidden="true"><use href="#i-mic"/></svg><span>Invited talk at IEEE SIU 2019 – Special Session: “Maximization of Underwater Sensor Networks Lifetime via Fountain Codes”.</span></li>
+      <li><time>Feb 2019</time><svg class="nicon" aria-hidden="true"><use href="#i-mic"/></svg><span>Invited seminar at ASELSAN Information and Communication Technologies Workshop: “Maximization of Underwater Sensor Networks Lifetime via Fountain Codes”.</span></li>
+      <li><time>Apr 2018</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span><a href="https://www.linkedin.com/in/y%C4%B1ld%C4%B1z-canbilen-karakurt-1377bb22/" target="_blank" rel="noopener">Yıldız Karakurt<span class="sr-only"> (external)</span></a> successfully defended her M.Sc. thesis at TOBB University of Economics and Technology.</span></li>
+      <li><time>Aug 2017</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span><a href="https://www.linkedin.com/in/%C3%A7a%C4%9Fla-tantur-karag%C3%BCl-b834b0b5/" target="_blank" rel="noopener">Çağla Tantur<span class="sr-only"> (external)</span></a> successfully defended her M.Sc. thesis at TOBB University of Economics and Technology.</span></li>
+      <li><time>Sep 2016</time><svg class="nicon" aria-hidden="true"><use href="#i-badge"/></svg><span>Appointed as Assistant Professor in the Department of Electrical and Electronics Engineering at TED University.</span></li>
+      <li><time>Apr 2016</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span>Successfully defended my Ph.D. dissertation at TOBB University of Economics and Technology.</span></li>
+    </ul>
+  </details>
+
+  <section class="closing" aria-labelledby="home-contact">
+    <h2 class="sec" id="home-contact"><svg class="hicon" aria-hidden="true"><use href="#i-mail"/></svg>Contact</h2>
+    <div class="closing-grid">
+      <div>
+        <h3>Email</h3>
+        <p><a href="mailto:hugur.yildiz@tedu.edu.tr">hugur.yildiz@tedu.edu.tr</a></p>
+      </div>
+      <div>
+        <h3>Office</h3>
+        <p>Department of Electrical &amp; Electronics Engineering,
+          <a href="https://www.tedu.edu.tr/en/huseyin-ugur-yildiz" target="_blank" rel="noopener">TED University<span class="sr-only"> (external)</span></a>,
+          Ankara, Türkiye.
+          <a href="https://share.google/AFFkStDzjSsudiC1V" target="_blank" rel="noopener">Campus map<span class="sr-only"> (external)</span></a></p>
+      </div>
+      <div>
+        <h3>Record</h3>
+        <ul class="closing-links">
+          <li><a href="/files/Yildiz_HuseyinUgur_CV.pdf" target="_blank" rel="noopener"
+            data-goatcounter-click="cv-pdf-footer" data-goatcounter-title="CV (PDF), from the home page closing">CV (PDF)<span class="sr-only"> (opens in a new tab)</span></a></li>
+          <li><a href="{{ '/cv/' | relative_url }}">Web curriculum vitae</a></li>
+          <li><a href="{{ '/publications/' | relative_url }}">All publications</a></li>
+          <li><a href="{{ '/students/' | relative_url }}">Graduate supervision</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </div>
 
 <script>
+/* The masthead is a transparent rail while the reader is within the observatory
+   plate; once the page scrolls past it, the masthead returns to its page surface.
+   Without JS the class is never set and the masthead simply stays solid. */
+(function(){
+  var obs = document.querySelector('.obs'), mast = document.querySelector('.masthead');
+  if (!obs || !mast) return;
+  var root = document.documentElement, queued = 0;
+  var hero = document.getElementById('uwsn-hero'), copy = document.querySelector('.obs-copy');
+  var narrow = window.matchMedia('(max-width: 63.99em)');
+  function mark(){
+    queued = 0;
+    root.classList.toggle('obs-over', window.scrollY < obs.offsetHeight - mast.offsetHeight);
+    root.classList.toggle('obs-scrolled', window.scrollY > 8);
+  }
+  /* On narrow screens the copy stands above the scene rather than beside it, so
+     the scene is told how much of the canvas top the copy occupies. */
+  function layout(){
+    if (!hero || !copy) return;
+    /* the surface line may rise a little behind the actions, so the sea is already
+       present where the copy ends */
+    var top = narrow.matches ? Math.max(0, copy.offsetTop + copy.offsetHeight - 120) : 0;
+    if (top) { hero.style.setProperty('--uw-top', top + 'px'); }
+    else { hero.style.removeProperty('--uw-top'); }
+    if (hero.__uwsnResize) { hero.__uwsnResize(); }
+  }
+  function onScroll(){ if (!queued) queued = requestAnimationFrame(mark); }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', function(){ layout(); onScroll(); });
+  window.addEventListener('load', layout);
+  layout(); mark();
+})();
 (function(){
   var p = document.querySelector('.portrait');
   if (!p || !('IntersectionObserver' in window)) return;

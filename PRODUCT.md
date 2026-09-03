@@ -14,7 +14,7 @@ passively at first, then explored interactively by the curious.
 ## Product Purpose
 
 The site is the scientific record of Hüseyin Uğur Yıldız. The UWSN hero
-(`_includes/hero-uwsn.html`) is an interactive **ocean digital twin**: a simulated but
+(`_includes/hero-uwsn.html`) is an interactive **ocean observatory simulation**: a simulated but
 operationally honest underwater sensor-network monitoring screen showing security threats,
 habitat observations, and seismic events on one shared infrastructure. Success = a viewer
 believes a real ocean-observatory operator could work with this screen.

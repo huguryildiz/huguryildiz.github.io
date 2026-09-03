@@ -159,7 +159,7 @@ h1,h2,h3,[id]{scroll-margin-top:5.2rem;}
    mid-word. */
 p{text-align:left; hyphens:none;}
 /* Display lines and console UI text stay left-aligned */
-.hero .prop, .ptext, .uw-pstatus{text-align:left; hyphens:none;}
+.obs-prop, .ptext, .uw-pstatus{text-align:left; hyphens:none;}
 
 /* Skip link */
 .skip{position:absolute; left:1rem; top:-3.2rem; z-index:60; background:var(--head); color:var(--bg);
@@ -188,14 +188,16 @@ p{text-align:left; hyphens:none;}
 .hicon{width:1.1rem; height:1.1rem; color:var(--accent); flex:none; transform:translateY(.02em);}
 .licon{width:.95em; height:.95em; display:inline-block; vertical-align:-0.12em;}
 .navico{width:.92em; height:.92em; display:inline-block; vertical-align:-0.1em;
-  margin-right:.38em; opacity:.72;}
-nav.primary a[aria-current="page"] .navico{opacity:1;}
+  margin-right:.38em; opacity:.42;}
+nav.primary a[aria-current="page"] .navico{opacity:.9;}
 nav.primary a:hover .navico{color:var(--accent); opacity:1;}
 .pub .row .ai, .publink .licon{color:inherit;}
 
 /* ---------- MASTHEAD ---------- */
 .masthead{border-bottom:1px solid var(--hairline); background:var(--bg);
-  position:sticky; top:0; z-index:var(--z-nav);}
+  position:sticky; top:0; z-index:var(--z-nav);
+  transition:background-color .25s ease, border-color .25s ease;}
+@media (prefers-reduced-motion:reduce){.masthead{transition:none;}}
 .masthead-in{display:flex; align-items:center; gap:clamp(.55rem,2vw,1.25rem); min-height:4rem;}
 .wordmark{font-family:var(--serif); font-weight:600; font-size:1.12rem; color:var(--head); letter-spacing:.005em;
   display:inline-flex; align-items:center; gap:.5rem;}
@@ -379,31 +381,168 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
   text-transform:uppercase; color:var(--ink-faint);}
 .status.ongoing{color:var(--accent);}
 
-/* ---------- HOME ---------- */
-.hero{position:relative; isolation:isolate; display:grid;
-  grid-template-columns:minmax(0,46fr) minmax(0,54fr);
-  grid-template-areas:"id twin" "actions twin";
-  grid-template-rows:auto 1fr;
-  gap:1.2rem clamp(2rem,4.5vw,4rem);
-  padding:clamp(1.8rem,4vw,3rem) 0 clamp(1.6rem,3vw,2.4rem); align-items:start;}
-.hero-id{grid-area:id; min-width:0; position:relative; z-index:1;}
-.hero-actions{grid-area:actions; align-self:start; position:relative; z-index:1;}
-.hero-twin{grid-area:twin; min-width:0; position:relative; z-index:1;}
-.hero .idrow{display:flex; align-items:center; gap:1.6rem; margin-bottom:1.6rem;}
-.hero .idtext{min-width:0;}
-.hero h1{font-size:clamp(1.7rem,2.9vw,2.45rem); font-weight:600; letter-spacing:-.012em;}
-.hero .role{margin:.3rem 0 0; font-size:.98rem; color:var(--ink); font-weight:500; line-height:1.45;}
-.hero .role .role-line{display:block;}
-.hero .role .org a{color:inherit; text-decoration:underline; text-underline-offset:.18em; text-decoration-color:var(--hairline-strong);}
-.hero .role .org a:hover{color:var(--accent);}
-.hero .role .role-addr{display:inline-flex; align-items:center; gap:.32em; margin-top:.34rem; font-size:.9rem; color:var(--ink-soft); text-decoration:none;}
-.hero .role .role-addr svg{width:1em; height:1em; flex:none;}
-.hero .role .role-addr span{text-decoration:underline; text-underline-offset:.18em; text-decoration-color:var(--hairline-strong);}
-.hero .role .role-addr:hover{color:var(--accent);}
-.hero .role .role-addr:hover span{text-decoration-color:currentColor;}
-.hero .prop{font-family:var(--serif); font-size:clamp(1.08rem,1.6vw,1.28rem); font-weight:500;
-  color:var(--head); line-height:1.45; margin:0 0 .8rem;}
-.hero .supporting{color:var(--ink-soft); font-size:.98rem;}
+/* ---------- HOME: OCEAN OBSERVATORY ---------- */
+/* The first screen is one plate: the ocean observatory simulation fills it edge to edge, the
+   identity copy stands on the left as a caption to the scene, and the plaque
+   at the lower right carries the scenario disclosure and the Explore control.
+   The plate stays dark in both themes — it is the ocean, not the page — so
+   its tokens are fixed here rather than taken from the theme. */
+.obs{
+  --obs-ink:#EEF3F5; --obs-ink-soft:#C0D0D8; --obs-ink-faint:#93AAB5;
+  --obs-line:rgba(196,220,232,.30); --obs-plate:#061524; --obs-panel:rgba(5,17,27,.88);
+  --obs-pad:clamp(20px,4.5vw,48px);
+  --obs-screen:clamp(600px,100svh,1040px);
+  /* everything on the plate uses the dark palette whatever the page theme, so the
+     shared components (chips, profile links, portrait) recolour themselves here */
+  --bg:var(--obs-plate); --surface:rgba(238,243,245,.08); --surface-raise:rgba(238,243,245,.06);
+  --ink:#E6E2D9; --ink-soft:#C0D0D8; --ink-faint:#93AAB5; --head:#EEF3F5;
+  --hairline:rgba(196,220,232,.22); --hairline-strong:rgba(196,220,232,.38);
+  --accent:#E09A6A; --accent-strong:#EBB289; --accent-wash:rgba(224,154,106,.12);
+  --cc-net:#8FB8DC; --cc-opt:#E09A6A; --cc-ai:#72C6B4; --cc-q:#BFA0E8;
+  --focus:#EBB289;
+  position:relative; isolation:isolate; overflow:hidden;
+  background:var(--obs-plate); color:var(--obs-ink);
+  border-bottom:1px solid rgba(196,220,232,.16);
+  /* the plate begins under the masthead so the scene also fills the navigation band */
+  margin-top:-4rem;
+}
+/* While the page is scrolled within the plate (html.obs-over, set by the home
+   page script), the masthead is a transparent rail over the scene. The mobile
+   nav sheet keeps the theme colours: it paints its own page-surface background. */
+html.obs-over .masthead{background:transparent; border-bottom-color:transparent;}
+/* once the reader has scrolled, copy passes under the rail, so it takes a dark ground */
+html.obs-over.obs-scrolled .masthead{background:rgba(6,21,36,.86); border-bottom-color:rgba(196,220,232,.14);}
+html.obs-over .wordmark{color:#EEF3F5;}
+html.obs-over .wordmark:hover{color:#EBB289;}
+html.obs-over .iconbtn{color:#C0D0D8; border-color:rgba(196,220,232,.30);}
+html.obs-over .iconbtn:hover{color:#FFFFFF; border-color:#C0D0D8; background:rgba(5,17,27,.45);}
+html.obs-over .masthead :focus-visible{outline-color:#EBB289;}
+@media (min-width:51.25em){
+  html.obs-over nav.primary a{color:#A9BCC6; font-weight:500;}
+  html.obs-over nav.primary a:hover{color:#FFFFFF; background:rgba(5,17,27,.45);}
+  html.obs-over nav.primary a:hover .navico{color:#EBB289;}
+  html.obs-over nav.primary a[aria-current="page"]{color:#EEF3F5; box-shadow:inset 0 -2px 0 #EBB289;}
+}
+.obs-copy{position:relative; z-index:2;}
+.obs-copy-in{max-width:1280px; margin-inline:auto; padding-inline:var(--obs-pad);}
+.obs-copy-in > *{max-width:46rem;}
+.obs-idrow{display:flex; align-items:center; gap:1.6rem; margin-bottom:.4rem;}
+.obs-idtext{min-width:0;}
+.obs h1{color:var(--obs-ink); font-size:clamp(2.1rem,3.6vw,3.3rem); font-weight:600;
+  letter-spacing:-.016em; line-height:1.08;}
+.obs-role{margin:.55rem 0 0; font-size:clamp(.98rem,1.15vw,1.08rem); color:var(--obs-ink-soft);
+  font-weight:500; line-height:1.5;}
+.obs-role-line{display:block;}
+.obs-role a{color:var(--obs-ink); text-decoration:underline; text-underline-offset:.18em;
+  text-decoration-color:var(--obs-line);}
+.obs-role a:hover{color:#EBB289; text-decoration-color:currentColor;}
+.obs-addr{display:inline-flex; align-items:center; gap:.32em; margin-top:.4rem; font-size:.92rem;
+  color:var(--obs-ink-faint); text-decoration:none; font-weight:500;}
+.obs-addr svg{width:1em; height:1em; flex:none;}
+.obs-addr span{text-decoration:underline; text-underline-offset:.18em; text-decoration-color:var(--obs-line);}
+.obs-addr:hover{color:#EBB289;}
+.obs-addr:hover span{text-decoration-color:currentColor;}
+.obs-prop{font-family:var(--serif); font-size:clamp(1.18rem,1.55vw,1.45rem); font-weight:500;
+  line-height:1.38; color:var(--obs-ink); margin:1.35rem 0 0; text-wrap:balance;}
+.obs-cta{display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.9rem;}
+.obs-cta .btn{min-height:44px;}
+.btn-paper{background:var(--obs-ink); color:#0B1E2C; border-color:var(--obs-ink);}
+.btn-paper:hover{background:#FFFFFF; border-color:#FFFFFF; color:#0B1E2C;}
+.btn-line{background:rgba(5,17,27,.38); color:var(--obs-ink); border-color:var(--obs-line);}
+.btn-line:hover{background:rgba(5,17,27,.62); border-color:var(--obs-ink-soft); color:#FFFFFF;}
+.obs-scene{position:absolute; inset:0; z-index:1;}
+.obs #uwsn-hero{position:absolute; inset:0; height:auto; border:0; border-radius:0; box-shadow:none; --uw-top:0px;}
+.obs-copy{pointer-events:none; transition:opacity .3s ease, visibility 0s linear 0s;}
+.obs-copy a{pointer-events:auto;}
+.obs-explore .obs-copy{opacity:0; visibility:hidden; transition:opacity .3s ease, visibility 0s linear .3s;}
+/* the plaque already carries the state; the corner chip returns with the console.
+   The console's top corners start below the masthead rail that floats over the plate. */
+.obs:not(.obs-explore) #uwsn-hero .uw-topleft{display:none;}
+.obs #uwsn-hero .uw-topleft, .obs #uwsn-hero .uw-topright{top:calc(4rem + 10px);}
+.obs #uwsn-hero .uw-panel{top:calc(4rem + 92px);}
+.obs #uwsn-hero canvas:focus-visible{border-radius:0; outline-offset:-4px;}
+.obs #uwsn-hero .uw-shade{display:block;}
+/* the plaque sits on the ocean in both themes, so it drops the page-surface skin */
+.obs .uw-plaque{background:var(--obs-panel); border-color:var(--obs-line); color:var(--obs-ink-soft);
+  box-shadow:0 14px 34px rgba(0,0,0,.38);}
+.obs .uw-plaque .ptag{color:var(--obs-ink-faint); border-color:var(--obs-line);}
+.obs .uw-plaque .ptag.live{color:#72C6B4;}
+.obs .uw-plaque .ptitle{color:var(--obs-ink);}
+.obs .uw-plaque .ptext{color:var(--obs-ink-soft);}
+.obs .uw-plaque .pctl button{color:var(--obs-ink); border-color:var(--obs-line); background:transparent;}
+.obs .uw-plaque .pctl button:hover{background:rgba(238,243,245,.10); border-color:var(--obs-ink-soft); color:#FFFFFF;}
+.obs .uw-plaque .pctl button[aria-pressed="true"]{background:var(--obs-ink); color:#0B1E2C; border-color:var(--obs-ink);}
+.obs .uw-plaque .psim{color:var(--obs-ink-faint);}
+/* thin plaque: three short rows, the hint to the right of the controls */
+.obs .uw-plaque{padding:8px 12px 8px; border-radius:8px;}
+.obs .uw-plaque .ptop{gap:.4rem;}
+.obs .uw-plaque .ptag{font-size:.58rem; padding:.08rem .32rem;}
+.obs .uw-plaque .ptitle{font-size:.84rem;}
+.obs .uw-plaque .ptext{font-size:.8rem; line-height:1.4; margin-top:.2rem;}
+.obs .uw-plaque .pctl{margin-top:.4rem; gap:.35rem .55rem;}
+.obs .uw-plaque .pctl button{min-height:30px; font-size:.76rem; padding:.25rem .55rem;}
+.obs .uw-plaque .psim{font-size:.66rem; margin-left:.15rem; letter-spacing:.02em;
+  flex:1 1 8rem; min-width:8rem; line-height:1.3; text-align:right;}
+
+/* Wide screens: copy over the scene. The scene anchors right of centre so the
+   sensor field clears the copy column; the shade is a directional gradient from
+   the left edge plus a foot for the plaque, never an opaque card. */
+@media (min-width:64em){
+  /* the two columns share the masthead's 1280px reading lane */
+  .obs{--obs-gutter:max(var(--obs-pad),calc((100% - 1280px) / 2 + var(--obs-pad)));
+    min-height:var(--obs-screen); display:flex; align-items:center; padding-inline:var(--obs-gutter);}
+  .obs-copy{width:100%; padding:calc(4rem + clamp(1.5rem,4vh,3rem)) 0 clamp(2rem,4vh,3rem);}
+  .obs-copy-in{width:100%; max-width:none; margin:0; padding:0;}
+  .obs-copy a{pointer-events:auto;}
+  .obs #uwsn-hero{--uw-cx:.66; --uw-vh:1;}
+  .obs #uwsn-hero .uw-shade{background:
+    linear-gradient(90deg,rgba(4,13,22,.92) 0%,rgba(4,13,22,.82) 22%,rgba(4,13,22,.4) 40%,rgba(4,13,22,.08) 50%,rgba(4,13,22,0) 56%),
+    linear-gradient(180deg,rgba(4,13,22,.42) 0%,rgba(4,13,22,0) 14%,rgba(4,13,22,0) 74%,rgba(4,13,22,.42) 100%);
+    background-size:100% 100%, 100% 100%; background-repeat:no-repeat;}
+  .obs-explore #uwsn-hero .uw-shade{background:
+    linear-gradient(180deg,rgba(4,13,22,.52) 0%,rgba(4,13,22,0) 14%,rgba(4,13,22,0) 74%,rgba(4,13,22,.42) 100%);
+    background-size:100% 100%; background-repeat:no-repeat;}
+  .obs #uwsn-hero .uw-zoom{right:auto; left:10px;}
+  .obs #uwsn-hero .uw-panel{max-height:calc(var(--obs-screen) - 4rem - 92px - 190px);}
+  /* the plaque holds the lower-right corner of the first screen, compact enough
+     to sit whole above the fold; the console's bottom controls share that edge */
+  .obs .uw-plaque{position:absolute; right:var(--obs-gutter); left:auto; bottom:auto;
+    top:calc(var(--obs-screen) - clamp(18px,3vh,30px)); transform:translateY(-100%);
+    width:min(31rem,40%); margin:0; z-index:3; transition:top .25s ease;}
+  .obs #uwsn-hero.uw-explore + .uw-plaque{margin:0; top:calc(var(--obs-screen) - 60px);}
+  .obs #uwsn-hero .uw-timebar{bottom:auto; top:var(--obs-screen); transform:translateY(-100%);}
+  .obs #uwsn-hero .uw-zoom{bottom:auto; top:calc(var(--obs-screen) - 56px); transform:translateY(-100%);}
+}
+/* Narrow screens: the copy stands at the top of the plate and the scene fills the
+   rest of it; the page script tells the scene where the copy ends (--uw-top). */
+@media (max-width:63.99em){
+  .obs{padding-bottom:min(64svh,600px);}
+  .obs-copy{position:relative; z-index:2; padding:calc(4rem + clamp(1.6rem,5vw,2.6rem)) 0 clamp(1.4rem,4vw,2rem);}
+  .obs #uwsn-hero .uw-shade{background:
+    linear-gradient(180deg,rgba(4,13,22,.84) 0px,rgba(4,13,22,.78) calc(var(--uw-top) - 60px),
+      rgba(4,13,22,.34) calc(var(--uw-top) + 110px),rgba(4,13,22,0) calc(var(--uw-top) + 220px),
+      rgba(4,13,22,0) 82%,rgba(4,13,22,.5) 100%);}
+  .obs-explore #uwsn-hero .uw-shade{background:linear-gradient(180deg,rgba(4,13,22,.5) 0%,rgba(4,13,22,0) 14%);}
+  .obs .uw-plaque{position:absolute; left:10px; right:10px; bottom:10px; margin:0; z-index:3;}
+  .obs .uw-plaque .psim{margin-left:0; text-align:left; flex-basis:100%;}
+  .obs .uw-plaque .ptop .ptag:last-child, .obs .uw-plaque .psim{margin-left:0;}
+  /* explore mode: the timebar and the detail panel take the bottom edge, so the plaque lifts */
+  .obs #uwsn-hero.uw-explore + .uw-plaque{margin:0; bottom:84px;}
+  .obs #uwsn-hero .uw-panel{top:calc(4rem + 96px); bottom:auto; max-height:46%;}
+}
+@media (max-width:31.25em){
+  .obs-idrow{gap:1rem;}
+}
+@media (max-width:360px){
+  .obs-cta .btn{flex:1 1 100%;}
+}
+@media (max-width:400px){
+  /* Below 400px the portrait and the name compete for the same ~280px, so they stack. */
+  .obs-idrow{flex-direction:column; align-items:flex-start; gap:1rem;}
+}
+@media (prefers-reduced-motion:reduce){
+  .obs-copy, .obs .uw-plaque, .obs #uwsn-hero .uw-timebar, .obs #uwsn-hero .uw-zoom{transition:none;}
+}
 .portrait{
   position:relative; width:126px; height:126px; flex:none;
   border-radius:50%; padding:3px;
@@ -440,8 +579,6 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
   .portrait .orn .osig,
   .portrait .orn .onx{animation:none;}
 }
-.hero-cta{display:flex; flex-wrap:wrap; gap:.6rem; margin:0 0 .6rem;}
-.hero-cta .btn{min-height:44px;}
 .profiles{margin-top:1.4rem;}
 .profiles-label{display:inline-flex; align-items:center; gap:.4rem; margin:0;
   color:var(--ink-faint); font-size:.8rem; font-weight:600;
@@ -465,9 +602,18 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
 .profilelinks a:hover svg,
 .profilelinks a:hover .ai{color:var(--accent); opacity:1;}
 
+/* Below the plate: research statement, chips and the profile links, on the page surface. */
+.idband{padding:clamp(1.8rem,4vw,2.8rem) 0 clamp(1.6rem,3.5vw,2.4rem);}
+.idband .supporting{color:var(--ink-soft); font-size:1.02rem; margin:0; max-width:none;}
+.idband-cols{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:1.4rem clamp(1.6rem,4vw,3rem); align-items:start; margin-top:1.4rem;}
+.idband-areas .chiprow{margin-top:.6rem;}
+.idband .profiles{margin-top:0;}
+@media (max-width:860px){ .idband-cols{grid-template-columns:1fr;} }
+
 .home-biography .fullw{color:var(--ink-soft);}
 
-/* Spotlight plaque under the digital twin (markup in _includes/hero-uwsn.html) */
+/* Spotlight plaque of the observatory scene (markup in _includes/hero-uwsn.html) */
 .uw-plaque{
   position:relative; z-index:3;
   margin:-26px 14px 0; padding:12px 16px 11px;
@@ -521,6 +667,16 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
 .kpi-src a{color:inherit; text-decoration:underline; text-underline-offset:.16em;}
 .kpi-src a:hover{color:var(--accent);}
 
+/* Closing: the three things a visitor leaves with — an address, an office, the record. */
+.closing{padding-bottom:clamp(1rem,3vw,2rem);}
+.closing-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.2rem clamp(1.4rem,3vw,2.6rem);}
+.closing h3{font-family:var(--sans); font-size:.78rem; font-weight:650; letter-spacing:.055em;
+  text-transform:uppercase; color:var(--ink-faint); margin:0 0 .4rem;}
+.closing p{margin:0; font-size:.98rem;}
+.closing-links{list-style:none; margin:0; padding:0; display:grid; gap:.3rem; font-size:.98rem;}
+.closing-links a{font-weight:600;}
+@media (max-width:700px){ .closing-grid{grid-template-columns:1fr;} }
+
 .focusgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(255px,1fr)); gap:1.4rem 2.6rem; margin-top:.4rem;}
 .focusgrid h3{font-family:var(--sans); font-size:.95rem; font-weight:700; color:var(--ink); margin:0 0 .5rem;
   display:flex; align-items:center; gap:.45rem;}
@@ -572,19 +728,7 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
 }
 .cta .row{display:flex; flex-wrap:wrap; gap:.7rem; margin-top:1rem;}
 
-@media (max-width:1080px) and (min-width:861px){
-  .hero{grid-template-columns:minmax(0,46fr) minmax(0,54fr);}
-}
 @media (max-width:860px){
-  .hero{grid-template-columns:1fr; grid-template-areas:"id" "actions" "twin";
-    gap:1.4rem; padding-top:1.4rem;}
-  .hero .prop, .hero .supporting{max-width:none;}
-  .hero h1{font-size:1.65rem;}
-  .hero .role{margin-top:.2rem; font-size:.95rem; line-height:1.5;}
-  .uw-plaque{margin:-20px 8px 0;}
-  /* Narrow cards wrap the header and control rows; a right-flushed item alone on
-     its own line reads as a stray, so keep everything left-aligned there. */
-  .uw-plaque .ptop .ptag:last-child, .uw-plaque .psim{margin-left:0;}
   .kpi-row{grid-template-columns:repeat(2,minmax(0,1fr)); row-gap:1.35rem;}
   .kpi-row > div:nth-child(2n){border-right:0; padding-right:0;}
   .kpi-row > div:nth-child(2n+1){padding-left:0;}
@@ -596,20 +740,7 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
   .kpi-row-3 dd{margin:0;}
 }
 @media (max-width:31.25em){
-  /* The 126px portrait and 1.6rem gap leave too little room for the identity
-     copy on 402–430px iPhones. Restore the compact mobile proportions before
-     the narrowest layout switches to a vertical stack. */
-  .hero .idrow{gap:1rem;}
   .portrait{width:96px; height:96px;}
-}
-@media (max-width:400px){
-  /* Below 400px the portrait and the identity block compete for the same ~280px:
-     the affiliation lines break mid-phrase and the address sits on its own short
-     line. Stacking gives the text the full column back and costs one screenful of
-     scroll at the narrowest size the site is used at. */
-  .hero .idrow{flex-direction:column; align-items:flex-start; gap:1rem;}
-  .hero-cta .btn{flex:1 1 100%;}
-  .uw-plaque{margin:-16px 4px 0; padding:10px 12px;}
 }
 
 /* ---------- PUBLICATIONS ---------- */

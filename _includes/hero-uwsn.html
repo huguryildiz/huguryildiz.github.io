@@ -1,10 +1,11 @@
 <div id="uwsn-hero">
   <canvas tabindex="0" role="application" aria-roledescription="interactive simulation"
-    aria-label="Interactive ocean digital twin: an underwater acoustic sensor network on a bathymetric seafloor relays data to a surface buoy while monitoring security contacts, marine habitat, and seismic activity along a fault zone. Simulated scenario."
+    aria-label="Interactive ocean observatory simulation: an underwater acoustic sensor network on a bathymetric seafloor relays data to a surface buoy while monitoring security contacts, marine habitat, and seismic activity along a fault zone. Simulated scenario."
     aria-describedby="uw-help"></canvas>
   <p id="uw-help" class="uw-sr">Arrow keys cycle through objects and select them. Enter confirms,
     Escape closes the detail panel. Plus and minus keys zoom. Drag the scene to orbit the camera.</p>
   <noscript><div class="uwsn-ns">Underwater sensor network visualization (requires JavaScript)</div></noscript>
+  <div class="uw-shade" aria-hidden="true"></div>
 
   <div class="uw-ui">
     <div class="uw-topleft">
@@ -77,9 +78,8 @@
 
 <div class="uw-plaque">
   <div class="ptop">
-    <span class="ptag live">OCEAN DIGITAL TWIN</span>
+    <span class="ptag live">OCEAN OBSERVATORY</span>
     <span class="ptitle" id="uw-plq-title">Standing by</span>
-    <span class="ptag">SIMULATED SCENARIO</span>
   </div>
   <p class="ptext" id="uw-plq-text">Acoustic sensor field deployed on the fault-zone shelf.
     Awaiting synchronization pulse from surface gateway BS-1.</p>
@@ -88,8 +88,8 @@
       aria-hidden="true"><use href="#i-pause"/></svg><span>Pause</span></button>
     <button type="button" id="uw-plq-explore" aria-pressed="false" aria-expanded="false"
       aria-controls="uwsn-hero"><svg class="licon"
-      aria-hidden="true"><use href="#i-layers"/></svg><span>Explore the twin</span></button>
-    <span class="psim">Drag to orbit · click objects for details</span>
+      aria-hidden="true"><use href="#i-layers"/></svg><span>Explore the scene</span></button>
+    <span class="psim">Simulated scenario · drag to orbit · click for details</span>
   </div>
 </div>
 
@@ -125,6 +125,8 @@
 #uwsn-hero canvas{position:absolute;inset:0;width:100%;height:100%;display:block;
   touch-action:pan-y;cursor:grab;}
 #uwsn-hero canvas.uw-drag{cursor:grabbing;}
+/* readability shade for the full-bleed home composition; inert and hidden elsewhere */
+#uwsn-hero .uw-shade{display:none;position:absolute;inset:0;z-index:1;pointer-events:none;}
 #uwsn-hero canvas:focus-visible{outline:2px solid #7FDCF2;outline-offset:-3px;border-radius:14px;}
 #uwsn-hero .uwsn-ns{position:absolute;inset:0;display:flex;align-items:center;
   justify-content:center;color:#7FA8B8;font:14px/1.4 inherit;}
@@ -282,7 +284,7 @@ var cv=host.querySelector('canvas'); var ctx=cv.getContext('2d'); if(!ctx){retur
 var DPR=Math.min(window.devicePixelRatio||1,2);
 var MONO='ui-monospace,SFMono-Regular,Menlo,Consolas,monospace';
 var REDUCED=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-var W=0,H=0;
+var W=0,H=0,HV=0,TOPY=0,CXF=0.5; /* scene composes into [TOPY, TOPY+HV] of the canvas; CXF: horizontal anchor */
 
 /* ================= 0. CONFIG =================
    All tunables central: colors are operational semantics (see legend),
@@ -747,13 +749,13 @@ var frameAcc=0,frameN=0,qCheck=0;
 function cam(){
   yawS=Math.sin(camYaw);yawC=Math.cos(camYaw);
   PT=camPitch;
-  S=Math.min(W*0.45,H*1.12)*camZoom;
-  DH=H*0.55*camZoom;
+  S=Math.min(W*0.45,HV*1.12)*camZoom;
+  DH=HV*0.55*camZoom;
   SC=clamp(S/420,0.7,1.6);
   var sh=0;
   if(!REDUCED&&t-shakeT0<1.1){sh=(1-(t-shakeT0)/1.1)*3;}
-  CX=W*0.5+panX+sh*(hsh(Math.floor(t*30),3)-0.5)*2;
-  TY=H*0.23-(camZoom-1)*H*0.16+panY+sh*(hsh(Math.floor(t*30),9)-0.5)*2;
+  CX=W*CXF+panX+sh*(hsh(Math.floor(t*30),3)-0.5)*2;
+  TY=TOPY+HV*0.23-(camZoom-1)*HV*0.16+panY+sh*(hsh(Math.floor(t*30),9)-0.5)*2;
 }
 function proj(x,y,z,o){
   var rx=x*yawC-z*yawS,rz=x*yawS+z*yawC;
@@ -1002,7 +1004,7 @@ function drawSurface(){
   sk.addColorStop(0.7,'rgba(90,160,190,0.10)');
   sk.addColorStop(1,'rgba(90,160,190,0)');
   ctx.fillStyle=sk;ctx.fillRect(0,0,W,Math.max(backY,10));
-  var sun=ctx.createRadialGradient(W*0.5,backY*0.4,0,W*0.5,backY*0.4,W*0.30);
+  var sun=ctx.createRadialGradient(W*CXF,backY*0.4,0,W*CXF,backY*0.4,W*0.30);
   sun.addColorStop(0,'rgba(200,235,248,0.16)');sun.addColorStop(1,'rgba(200,235,248,0)');
   ctx.fillStyle=sun;ctx.fillRect(0,0,W,Math.max(backY+40,10));
   /* the surface sheet: one wavy strip per row, wider than the terrain so it
@@ -1336,7 +1338,7 @@ function paintTerrain(st){
   }
 }
 function drawTerrain(){
-  var mx=Math.ceil(W*0.25)+8,my=Math.ceil(H*0.2)+8;
+  var mx=Math.ceil(W*0.25)+8,my=Math.ceil(HV*0.2)+8;
   var cw=Math.round((W+mx*2)*DPR),ch=Math.round((H+my*2)*DPR);
   /* half density while the camera is in motion; full the moment it settles */
   var moving=orbiting||Math.abs(camZoomT-camZoom)>0.0008
@@ -1347,7 +1349,7 @@ function drawTerrain(){
   if(key!==tcKey){
     if(TC.width!==cw||TC.height!==ch){TC.width=cw;TC.height=ch;}
     tcW=W+mx*2;tcH=H+my*2;
-    tcCX=mx+W*0.5;tcTY=my+H*0.23-(camZoom-1)*H*0.16;
+    tcCX=mx+W*CXF;tcTY=my+TOPY+HV*0.23-(camZoom-1)*HV*0.16;
     paintTerrain(st);
     tcKey=key;
   }
@@ -2021,7 +2023,7 @@ function drawSelection(){
   }
 }
 function drawVignette(){
-  var v=ctx.createRadialGradient(W*0.5,H*0.42,H*0.25,W*0.5,H*0.42,Math.max(W,H)*0.78);
+  var v=ctx.createRadialGradient(W*CXF,TOPY+HV*0.42,HV*0.25,W*CXF,TOPY+HV*0.42,Math.max(W,H)*0.78);
   v.addColorStop(0,'rgba(3,10,16,0)');v.addColorStop(1,'rgba(3,10,16,0.50)');
   ctx.fillStyle=v;ctx.fillRect(0,0,W,H);
 }
@@ -2102,7 +2104,7 @@ function drawFrame(){
     if(layerFail[nm]){continue;}
     try{LAYER_DRAWS[k][1]();}
     catch(err){
-      /* fail one visual layer, keep the twin alive */
+      /* fail one visual layer, keep the scene alive */
       layerFail[nm]=true;
       if(window.console){console.warn('uwsn layer disabled:',nm,err);}
     }
@@ -2168,8 +2170,8 @@ function enterSpot(idx){
   var s=SPOTS[idx],F=SPOT_FOCUS[s];
   camZoomT=F.zoom;
   proj(F.x,F.y,F.z,A);
-  panXT=clamp(panX+(W*0.5-A.x)*0.5,-W*0.25,W*0.25);
-  panYT=clamp(panY+(H*0.47-A.y)*0.35,-H*0.2,H*0.2);
+  panXT=clamp(panX+(W*CXF-A.x)*0.5,-W*0.25,W*0.25);
+  panYT=clamp(panY+(TOPY+HV*0.47-A.y)*0.35,-HV*0.2,HV*0.2);
   setPlaque(s);
   announce('Spotlight: '+PLQ[s][0]+'. '+PLQ[s][1]);
 }
@@ -2202,9 +2204,9 @@ function select(o,msg){
   var p=selPos(o);
   if(p){
     proj(p.x,p.y||0,p.z,A);
-    var tx=W*0.42,tyy=H*0.46;
+    var tx=W*(CXF-0.08),tyy=TOPY+HV*0.46;
     panXT=clamp(panX+(tx-A.x)*0.5,-W*0.25,W*0.25);
-    panYT=clamp(panY+(tyy-A.y)*0.35,-H*0.2,H*0.2);
+    panYT=clamp(panY+(tyy-A.y)*0.35,-HV*0.2,HV*0.2);
   }
   renderIfIdle();
 }
@@ -2529,6 +2531,8 @@ if(btnPlqExplore){
   btnPlqExplore.addEventListener('click',function(){
     exploring=!exploring;
     host.classList.toggle('uw-explore',exploring);
+    var obs=host.closest?host.closest('.obs'):null;
+    if(obs){obs.classList.toggle('obs-explore',exploring);}
     btnPlqExplore.setAttribute('aria-pressed',String(exploring));
     btnPlqExplore.setAttribute('aria-expanded',String(exploring));
     announce(exploring?'Explore mode: layer filters, legend, timeline and zoom available. Automatic spotlighting paused.'
@@ -2537,7 +2541,7 @@ if(btnPlqExplore){
     renderIfIdle();
   });
 }
-/* any interaction inside the twin suspends the automatic spotlight cycle */
+/* any interaction inside the scene suspends the automatic spotlight cycle */
 cv.addEventListener('pointerenter',function(){hovering=true;});
 cv.addEventListener('pointerleave',function(){hovering=false;});
 host.addEventListener('click',function(){lastInteract=t;},true);
@@ -2670,11 +2674,28 @@ function renderIfIdle(){
 function resize(){
   var rct=host.getBoundingClientRect();
   W=Math.max(1,rct.width);H=Math.max(1,rct.height);
+  /* the home composition keeps identity copy on the left and asks the scene to
+     sit right of centre; anywhere else the property is unset and 0.5 applies */
+  var cs=getComputedStyle(host);
+  var cxv=parseFloat(cs.getPropertyValue('--uw-cx'));
+  CXF=(cxv>0.2&&cxv<0.8)?cxv:0.5;
+  /* --uw-vh (a fraction of the viewport height) lets a canvas taller than one
+     screen keep composing the scene to the first screen; the extra height is
+     deep water behind the copy that follows. Unset, the scene fills the canvas. */
+  var vhf=parseFloat(cs.getPropertyValue('--uw-vh'));
+  /* --uw-top (px) reserves the top of the canvas for copy that sits above the
+     scene on narrow screens; the scene composes into the remaining height */
+  var topv=parseFloat(cs.getPropertyValue('--uw-top'));
+  TOPY=(topv>0&&topv<H*0.85)?topv:0;
+  HV=H-TOPY;
+  if(vhf>0){HV=Math.min(HV,Math.max(1,window.innerHeight*vhf));}
   cv.width=Math.round(W*DPR);cv.height=Math.round(H*DPR);
   ctx.setTransform(DPR,0,0,DPR,0,0);
   renderIfIdle();
 }
-if(window.ResizeObserver){new ResizeObserver(resize).observe(host);}else{window.addEventListener('resize',resize);}
+if(window.ResizeObserver){new ResizeObserver(resize).observe(host);}
+window.addEventListener('resize',resize);
+host.__uwsnResize=resize;   /* the page can re-run the layout after changing --uw-top */
 liveT0=performance.now()/1000;
 if(REDUCED){
   /* static-but-scrubbable: land on an informative moment, controls re-render */

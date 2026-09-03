@@ -30,7 +30,7 @@ academic interface.
 
 | Section | Content |
 | --- | --- |
-| [Home](https://huguryildiz.com/) | Academic profile, research focus, news, and an interactive ocean digital twin |
+| [Home](https://huguryildiz.com/) | Academic profile, research focus, news, and an interactive ocean observatory simulation |
 | [Publications](https://huguryildiz.com/publications/) | Publication catalogue with type, year, and quartile filters; DOI and local full-text links |
 | [Research](https://huguryildiz.com/research/) | Research program, interactive topic map, software, and learning resources |
 | [Writing](https://huguryildiz.com/writing/) | Notes, announcements, and longer pieces retained as part of the scholarly record |
@@ -64,7 +64,7 @@ reintroducing a theme.
 | `_layouts/academic.html` | Primary navigation, page shell, footer, theme control, and shared interactions |
 | `_layouts/post.html` | Writing-entry metadata, reading time, tags, and optional source link |
 | `_includes/_shared/` | Shared fragments: favicon markup and animation, direct GA4, GoatCounter |
-| `_includes/hero-uwsn.html` | Interactive ocean digital twin and underwater acoustic-network scenario |
+| `_includes/hero-uwsn.html` | Interactive ocean observatory simulation and underwater acoustic-network scenario |
 | `_includes/research-map.html` | Interactive research map rendered from `_data/research_map.yml` |
 | `assets/css/redesign.css` | All site styles |
 | `_data/cv.yml` | CV data — the source for `_pages/cv.md`, `_pages/service.md`, `_pages/teaching.md`, and the downloadable PDF |
@@ -77,7 +77,7 @@ reintroducing a theme.
 | `assets/video/courses/`, `assets/video/topics/` | Course and research-topic media |
 | `scripts/` | Google Scholar, OpenAlex, and GoatCounter retrieval plus optional CV-conversion utilities; excluded from the build (see `scripts/README.md`) |
 | `_config.yml` | Jekyll, metadata, SEO, and plugin configuration |
-| `PRODUCT.md` | Product, data-honesty, design, and accessibility contract for the ocean digital twin |
+| `PRODUCT.md` | Product, data-honesty, design, and accessibility contract for the ocean observatory simulation |
 
 Generated output under `_site/` is not a source and should not be edited.
 
