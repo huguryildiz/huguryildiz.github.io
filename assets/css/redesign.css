@@ -1004,7 +1004,7 @@ ol.publist{list-style:none; margin:0; padding:0;}
 .swproject{display:grid; grid-template-columns:clamp(150px,20vw,220px) minmax(0,1fr);
   gap:1.4rem; padding:1.4rem 0; border-bottom:1px solid var(--hairline); align-items:start;}
 .swproject:last-of-type{border-bottom:0;}
-.swproject :is(img,video){display:block; border:1px solid var(--hairline); border-radius:6px; width:100%; aspect-ratio:16/10; object-fit:cover; background:var(--surface);}
+.swproject :is(img,video){display:block; border:1px solid var(--hairline); border-radius:6px; width:100%; aspect-ratio:2/1; object-fit:cover; background:var(--surface);}
 .swproject h3{font-size:1.14rem; font-weight:600; margin:0 0 .35rem;}
 .swproject p{font-size:.96rem; color:var(--ink-soft); margin-bottom:.7rem;}
 .swproject .links{display:flex; flex-wrap:wrap; gap:.4rem .9rem; font-size:.88rem; font-weight:650; align-items:center;}
