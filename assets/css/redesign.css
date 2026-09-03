@@ -391,7 +391,7 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
   --obs-ink:#EEF3F5; --obs-ink-soft:#C0D0D8; --obs-ink-faint:#93AAB5;
   --obs-line:rgba(196,220,232,.30); --obs-plate:#061524; --obs-panel:rgba(5,17,27,.88);
   --obs-pad:clamp(20px,4.5vw,48px);
-  --obs-screen:clamp(600px,100svh,1040px);
+  --obs-screen:clamp(600px,100svh,1080px);
   /* everything on the plate uses the dark palette whatever the page theme, so the
      shared components (chips, profile links, portrait) recolour themselves here */
   --bg:var(--obs-plate); --surface:rgba(238,243,245,.08); --surface-raise:rgba(238,243,245,.06);

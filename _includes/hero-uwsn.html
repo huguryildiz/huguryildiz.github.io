@@ -3,7 +3,8 @@
     aria-label="Interactive ocean observatory simulation: an underwater acoustic sensor network on a bathymetric seafloor relays data to a surface buoy while monitoring security contacts, marine habitat, and seismic activity along a fault zone. Simulated scenario."
     aria-describedby="uw-help"></canvas>
   <p id="uw-help" class="uw-sr">Arrow keys cycle through objects and select them. Enter confirms,
-    Escape closes the detail panel. Plus and minus keys zoom. Drag the scene to orbit the camera.</p>
+    Escape closes the detail panel. Plus and minus keys zoom; the mouse wheel zooms in Explore mode
+  or with Control or Command held. Drag the scene to orbit the camera.</p>
   <noscript><div class="uwsn-ns">Underwater sensor network visualization (requires JavaScript)</div></noscript>
   <div class="uw-shade" aria-hidden="true"></div>
 
@@ -2548,6 +2549,16 @@ host.addEventListener('click',function(){lastInteract=t;},true);
 cv.addEventListener('keydown',function(){lastInteract=t;});
 document.getElementById('uw-zin').addEventListener('click',function(){camZoomT=clamp(camZoomT*1.25,CONFIG.cam.zoomMin,CONFIG.cam.zoomMax);renderIfIdle();});
 document.getElementById('uw-zout').addEventListener('click',function(){camZoomT=clamp(camZoomT/1.25,CONFIG.cam.zoomMin,CONFIG.cam.zoomMax);renderIfIdle();});
+/* wheel zoom: only when the reader has opened the console, or holds Ctrl/Cmd —
+   otherwise the wheel keeps scrolling the page over the full-bleed scene */
+cv.addEventListener('wheel',function(e){
+  if(!exploring&&!e.ctrlKey&&!e.metaKey){return;}
+  e.preventDefault();
+  var f=e.deltaY<0?1.12:1/1.12;
+  camZoomT=clamp(camZoomT*f,CONFIG.cam.zoomMin,CONFIG.cam.zoomMax);
+  lastInteract=t;
+  renderIfIdle();
+},{passive:false});
 
 /* pointer: drag orbits, click selects; vertical touch keeps scrolling the page */
 var drag=null;
