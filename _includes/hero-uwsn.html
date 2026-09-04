@@ -9,37 +9,39 @@
   <div class="uw-shade" aria-hidden="true"></div>
 
   <div class="uw-ui">
-    <div class="uw-topleft">
-      <span class="uw-chip uw-chip-state" id="uw-state">STANDBY</span>
-      <div class="uw-layers" role="group" aria-label="Data layers">
-        <button type="button" data-layer="all" aria-pressed="true">All</button>
-        <button type="button" data-layer="network" aria-pressed="true"><i class="uw-dot uw-dot-net"></i>Network</button>
-        <button type="button" data-layer="security" aria-pressed="true"><i class="uw-dot uw-dot-sec"></i>Security</button>
-        <button type="button" data-layer="habitat" aria-pressed="true"><i class="uw-dot uw-dot-hab"></i>Habitat</button>
-        <button type="button" data-layer="seismic" aria-pressed="true"><i class="uw-dot uw-dot-sei"></i>Seismic</button>
+    <div class="uw-topbar">
+      <div class="uw-topleft">
+        <span class="uw-chip uw-chip-state" id="uw-state">STANDBY</span>
+        <div class="uw-layers" role="group" aria-label="Data layers">
+          <button type="button" data-layer="all" aria-pressed="true">All</button>
+          <button type="button" data-layer="network" aria-pressed="true"><i class="uw-dot uw-dot-net"></i>Network</button>
+          <button type="button" data-layer="security" aria-pressed="true"><i class="uw-dot uw-dot-sec"></i>Security</button>
+          <button type="button" data-layer="habitat" aria-pressed="true"><i class="uw-dot uw-dot-hab"></i>Habitat</button>
+          <button type="button" data-layer="seismic" aria-pressed="true"><i class="uw-dot uw-dot-sei"></i>Seismic</button>
+        </div>
       </div>
-    </div>
 
-    <div class="uw-topright">
-      <details class="uw-drop uw-legend">
-        <summary>Legend</summary>
-        <ul>
-          <li><i class="uw-sw uw-sw-net"></i>Normal transmission</li>
-          <li><i class="uw-sw uw-sw-bak"></i>Backup route (&kappa;&nbsp;=&nbsp;2)</li>
-          <li><i class="uw-sw uw-sw-alarm"></i>Alarm transmission</li>
-          <li><i class="uw-sw uw-sw-deg"></i>Link degraded</li>
-          <li><i class="uw-sw uw-sw-thr"></i>Security threat</li>
-          <li><i class="uw-sw uw-sw-eco"></i>Eco threshold warning</li>
-          <li><i class="uw-sw uw-sw-hab"></i>Habitat observation</li>
-          <li><i class="uw-sw uw-sw-sei"></i>Seismic event</li>
-          <li><i class="uw-sw uw-sw-off"></i>Offline sensor</li>
-          <li class="uw-note">Symbols not to scale &middot; all data simulated</li>
-        </ul>
-      </details>
-      <details class="uw-drop uw-events">
-        <summary>Event log</summary>
-        <ol id="uw-evlist"></ol>
-      </details>
+      <div class="uw-topright">
+        <details class="uw-drop uw-legend">
+          <summary>Legend</summary>
+          <ul>
+            <li><i class="uw-sw uw-sw-net"></i>Normal transmission</li>
+            <li><i class="uw-sw uw-sw-bak"></i>Backup route (&kappa;&nbsp;=&nbsp;2)</li>
+            <li><i class="uw-sw uw-sw-alarm"></i>Alarm transmission</li>
+            <li><i class="uw-sw uw-sw-deg"></i>Link degraded</li>
+            <li><i class="uw-sw uw-sw-thr"></i>Security threat</li>
+            <li><i class="uw-sw uw-sw-eco"></i>Eco threshold warning</li>
+            <li><i class="uw-sw uw-sw-hab"></i>Habitat observation</li>
+            <li><i class="uw-sw uw-sw-sei"></i>Seismic event</li>
+            <li><i class="uw-sw uw-sw-off"></i>Offline sensor</li>
+            <li class="uw-note">Symbols not to scale &middot; all data simulated</li>
+          </ul>
+        </details>
+        <details class="uw-drop uw-events">
+          <summary>Event log</summary>
+          <ol id="uw-evlist"></ol>
+        </details>
+      </div>
     </div>
 
     <aside class="uw-panel" id="uw-panel" hidden role="region" aria-label="Selection details">
@@ -77,20 +79,25 @@
   </div>
 </div>
 
-<div class="uw-plaque">
+<div class="uw-plaque" id="uw-plaque">
   <div class="ptop">
     <span class="ptag live">OCEAN OBSERVATORY</span>
     <span class="ptitle" id="uw-plq-title">Standing by</span>
+    <button type="button" class="uw-plq-minimize" id="uw-plq-minimize"
+      aria-expanded="true" aria-controls="uw-plaque-body" aria-label="Minimize observatory panel"
+      title="Minimize observatory panel"><svg class="licon" aria-hidden="true"><use href="#i-chevron-up"/></svg></button>
   </div>
-  <p class="ptext" id="uw-plq-text">Acoustic sensor field deployed on the fault-zone shelf.
-    Awaiting synchronization pulse from surface gateway BS-1.</p>
-  <div class="pctl">
-    <button type="button" id="uw-plq-pause" aria-pressed="false"><svg class="licon"
-      aria-hidden="true"><use href="#i-pause"/></svg><span>Pause</span></button>
-    <button type="button" id="uw-plq-explore" aria-pressed="false" aria-expanded="false"
-      aria-controls="uwsn-hero"><svg class="licon"
-      aria-hidden="true"><use href="#i-layers"/></svg><span>Explore the scene</span></button>
-    <span class="psim">Simulated scenario · drag to orbit · click for details</span>
+  <div id="uw-plaque-body">
+    <p class="ptext" id="uw-plq-text">Acoustic sensor field deployed on the fault-zone shelf.
+      Awaiting synchronization pulse from surface gateway BS-1.</p>
+    <div class="pctl">
+      <button type="button" id="uw-plq-pause" aria-pressed="false"><svg class="licon"
+        aria-hidden="true"><use href="#i-pause"/></svg><span>Pause</span></button>
+      <button type="button" id="uw-plq-explore" aria-pressed="false" aria-expanded="false"
+        aria-controls="uwsn-hero"><svg class="licon"
+        aria-hidden="true"><use href="#i-layers"/></svg><span>Explore the scene</span></button>
+      <span class="psim">Simulated scenario · drag to orbit · click for details</span>
+    </div>
   </div>
 </div>
 
@@ -146,9 +153,10 @@
 #uwsn-hero .uw-ui button:focus-visible{outline:2px solid #7FDCF2;outline-offset:1px;}
 #uwsn-hero .uw-ui button[aria-pressed="true"]{color:#06222F;background:#8ADAF2;border-color:#8ADAF2;font-weight:600;}
 
-/* top-left: state chip + layer bar */
-#uwsn-hero .uw-topleft{position:absolute;top:10px;left:10px;display:flex;flex-direction:column;
-  gap:7px;align-items:flex-start;max-width:70%;}
+/* top rail: state/layer controls and the dropdowns share one responsive flow */
+#uwsn-hero .uw-topbar{position:absolute;top:10px;left:10px;right:10px;display:flex;
+  align-items:flex-start;justify-content:space-between;gap:10px;pointer-events:none;}
+#uwsn-hero .uw-topleft{display:flex;flex-direction:column;gap:7px;align-items:flex-start;max-width:70%;}
 #uwsn-hero .uw-chip{display:inline-block;font-size:9.5px;letter-spacing:.08em;font-weight:600;
   padding:4px 8px;border-radius:5px;}
 #uwsn-hero .uw-chip-state{color:#A9CDDC;border:1px solid rgba(140,190,210,.35);
@@ -177,8 +185,7 @@
 #uwsn-hero .uw-layers button[aria-pressed="true"] .uw-dot{outline:1.5px solid rgba(6,34,47,.6);}
 
 /* top-right: legend + event log dropdowns */
-#uwsn-hero .uw-topright{position:absolute;top:10px;right:10px;display:flex;flex-direction:column;
-  gap:6px;align-items:flex-end;}
+#uwsn-hero .uw-topright{display:flex;flex-direction:column;gap:6px;align-items:flex-end;pointer-events:auto;}
 #uwsn-hero .uw-drop{font-size:11px;color:#C6E2ED;}
 #uwsn-hero .uw-drop summary{list-style:none;cursor:pointer;color:#A9CDDC;font-size:11px;
   background:rgba(6,20,31,.72);border:1px solid rgba(140,190,210,.28);border-radius:7px;
@@ -262,10 +269,11 @@
 
 @media (max-width:640px){
   #uwsn-hero{height:clamp(480px,128vw,620px);}
-  #uwsn-hero .uw-topleft{max-width:100%;right:10px;}
+  #uwsn-hero .uw-topbar{flex-direction:column;gap:8px;}
+  #uwsn-hero .uw-topleft{max-width:none;width:100%;}
   #uwsn-hero .uw-layers{flex-wrap:wrap;max-width:100%;}
   #uwsn-hero .uw-layers button{flex:none;}
-  #uwsn-hero .uw-topright{top:86px;}
+  #uwsn-hero .uw-topright{width:100%;flex-direction:row;flex-wrap:wrap;justify-content:flex-end;align-items:flex-start;}
   #uwsn-hero .uw-drop ul,#uwsn-hero .uw-drop ol{max-width:min(238px,72vw);}
   #uwsn-hero .uw-panel{left:8px;right:8px;top:auto;bottom:58px;width:auto;max-height:44%;}
   #uwsn-hero .uw-zoom{bottom:auto;top:40%;}
@@ -2137,6 +2145,8 @@ var plqTitle=document.getElementById('uw-plq-title'),
     plqText=document.getElementById('uw-plq-text'),
     btnPlqPause=document.getElementById('uw-plq-pause'),
     btnPlqExplore=document.getElementById('uw-plq-explore'),
+    plaqueEl=document.getElementById('uw-plaque'),
+    btnPlqMin=document.getElementById('uw-plq-minimize'),
     stEl=document.getElementById('uw-state');
 var PLQ={
   pre:['Standing by','Acoustic sensor field deployed on the fault-zone shelf. Awaiting synchronization pulse from surface gateway BS-1.'],
@@ -2540,6 +2550,17 @@ if(btnPlqExplore){
       :'Explore mode closed. Automatic spotlighting resumes.');
     lastInteract=t;
     renderIfIdle();
+  });
+}
+if(btnPlqMin){
+  btnPlqMin.addEventListener('click',function(){
+    var minimized=plaqueEl.classList.toggle('is-minimized');
+    btnPlqMin.setAttribute('aria-expanded',String(!minimized));
+    btnPlqMin.setAttribute('aria-label',minimized?'Expand observatory panel':'Minimize observatory panel');
+    btnPlqMin.setAttribute('title',minimized?'Expand observatory panel':'Minimize observatory panel');
+    var icon=btnPlqMin.querySelector('use');
+    if(icon){icon.setAttribute('href',minimized?'#i-chevron-down':'#i-chevron-up');}
+    announce(minimized?'Observatory panel minimized.':'Observatory panel expanded.');
   });
 }
 /* any interaction inside the scene suspends the automatic spotlight cycle */
