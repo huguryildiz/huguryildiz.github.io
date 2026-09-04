@@ -1690,4 +1690,5 @@ footer.site a:hover .licon.spotify{color:var(--accent);}
   .seg button, .rmap-views button, .uw-plaque .pctl button{min-height:44px;}
   .uw-plaque .uw-plq-minimize{width:44px; min-height:44px;}
   #uwsn-hero .uw-drop summary{min-height:44px; display:inline-flex; align-items:center;}
+  #uwsn-hero .uw-zoom button{width:44px; height:44px;}
 }

@@ -4,7 +4,8 @@
     aria-describedby="uw-help"></canvas>
   <p id="uw-help" class="uw-sr">Arrow keys cycle through objects and select them. Enter confirms,
     Escape closes the detail panel. Plus and minus keys zoom; the mouse wheel zooms in Explore mode
-  or with Control or Command held. Drag the scene to orbit the camera.</p>
+  or with Control or Command held. In Explore mode, drag with one finger to orbit and pinch
+    with two fingers to zoom.</p>
   <noscript><div class="uwsn-ns">Underwater sensor network visualization (requires JavaScript)</div></noscript>
   <div class="uw-shade" aria-hidden="true"></div>
 
@@ -132,6 +133,7 @@
 }
 #uwsn-hero canvas{position:absolute;inset:0;width:100%;height:100%;display:block;
   touch-action:pan-y;cursor:grab;}
+#uwsn-hero.uw-explore canvas{touch-action:none;}
 #uwsn-hero canvas.uw-drag{cursor:grabbing;}
 /* readability shade for the full-bleed home composition; inert and hidden elsewhere */
 #uwsn-hero .uw-shade{display:none;position:absolute;inset:0;z-index:1;pointer-events:none;}
@@ -2568,27 +2570,52 @@ cv.addEventListener('pointerenter',function(){hovering=true;});
 cv.addEventListener('pointerleave',function(){hovering=false;});
 host.addEventListener('click',function(){lastInteract=t;},true);
 cv.addEventListener('keydown',function(){lastInteract=t;});
-document.getElementById('uw-zin').addEventListener('click',function(){camZoomT=clamp(camZoomT*1.25,CONFIG.cam.zoomMin,CONFIG.cam.zoomMax);renderIfIdle();});
-document.getElementById('uw-zout').addEventListener('click',function(){camZoomT=clamp(camZoomT/1.25,CONFIG.cam.zoomMin,CONFIG.cam.zoomMax);renderIfIdle();});
+function zoomBy(factor,notify){
+  camZoomT=clamp(camZoomT*factor,CONFIG.cam.zoomMin,CONFIG.cam.zoomMax);
+  lastInteract=t;
+  if(notify){announce('Scene zoom '+Math.round(camZoomT*100)+' percent.');}
+  renderIfIdle();
+}
+document.getElementById('uw-zin').addEventListener('click',function(){zoomBy(1.25,true);});
+document.getElementById('uw-zout').addEventListener('click',function(){zoomBy(1/1.25,true);});
 /* wheel zoom: only when the reader has opened the console, or holds Ctrl/Cmd —
    otherwise the wheel keeps scrolling the page over the full-bleed scene */
 cv.addEventListener('wheel',function(e){
   if(!exploring&&!e.ctrlKey&&!e.metaKey){return;}
   e.preventDefault();
   var f=e.deltaY<0?1.12:1/1.12;
-  camZoomT=clamp(camZoomT*f,CONFIG.cam.zoomMin,CONFIG.cam.zoomMax);
-  lastInteract=t;
-  renderIfIdle();
+  zoomBy(f,false);
 },{passive:false});
 
-/* pointer: drag orbits, click selects; vertical touch keeps scrolling the page */
-var drag=null;
+/* pointer: drag orbits, click selects; Explore mode also owns pinch zoom */
+var drag=null,pointers={},pinch=null;
 cv.addEventListener('pointerdown',function(e){
-  drag={x:e.clientX,y:e.clientY,moved:false,type:e.pointerType};
+  pointers[e.pointerId]={x:e.clientX,y:e.clientY};
+  var ids=Object.keys(pointers);
+  if(ids.length===2){
+    drag=null;orbiting=false;cv.classList.remove('uw-drag');
+    var p1=pointers[ids[0]],p2=pointers[ids[1]],dx=p2.x-p1.x,dy=p2.y-p1.y;
+    pinch={ids:ids,distance:Math.sqrt(dx*dx+dy*dy),zoom:camZoomT};
+    try{cv.setPointerCapture(e.pointerId);}catch(_){/* noop */}
+    lastInteract=t;
+    e.preventDefault();
+    return;
+  }
+  drag={id:e.pointerId,x:e.clientX,y:e.clientY,moved:false,type:e.pointerType};
   lastInteract=t;
 });
 cv.addEventListener('pointermove',function(e){
-  if(!drag){return;}
+  if(pointers[e.pointerId]){pointers[e.pointerId].x=e.clientX;pointers[e.pointerId].y=e.clientY;}
+  if(pinch){
+    var p1=pointers[pinch.ids[0]],p2=pointers[pinch.ids[1]];
+    if(!p1||!p2){return;}
+    var dx=p2.x-p1.x,dy=p2.y-p1.y,distance=Math.sqrt(dx*dx+dy*dy);
+    camZoomT=clamp(pinch.zoom*(distance/Math.max(1,pinch.distance)),CONFIG.cam.zoomMin,CONFIG.cam.zoomMax);
+    lastInteract=t;
+    renderIfIdle();
+    return;
+  }
+  if(!drag||drag.id!==e.pointerId){return;}
   var dx=e.clientX-drag.x,dy=e.clientY-drag.y;
   if(!drag.moved&&Math.sqrt(dx*dx+dy*dy)>4){
     drag.moved=true;orbiting=true;cv.classList.add('uw-drag');
@@ -2596,7 +2623,7 @@ cv.addEventListener('pointermove',function(e){
   }
   if(drag.moved){
     camYawT=camYaw+dx*0.005;camYaw=camYawT;
-    if(drag.type!=='touch'){
+    if(drag.type!=='touch'||exploring){
       camPitchT=clamp(camPitch-dy*0.0022,CONFIG.cam.pitchMin,CONFIG.cam.pitchMax);
       camPitch=camPitchT;
     }
@@ -2616,18 +2643,21 @@ function endDrag(e){
   }
   lastInteract=t;
 }
-cv.addEventListener('pointerup',endDrag);
-cv.addEventListener('pointercancel',function(){drag=null;orbiting=false;cv.classList.remove('uw-drag');});
-cv.addEventListener('wheel',function(e){
-  if(!e.ctrlKey&&!e.metaKey){return;}   /* plain scroll keeps scrolling the page */
-  e.preventDefault();
-  camZoomT=clamp(camZoomT*(e.deltaY<0?1.12:0.89),CONFIG.cam.zoomMin,CONFIG.cam.zoomMax);
-  lastInteract=t;
-  renderIfIdle();
-},{passive:false});
+cv.addEventListener('pointerup',function(e){
+  delete pointers[e.pointerId];
+  if(pinch){
+    if(Object.keys(pointers).length<2){pinch=null;cv.classList.remove('uw-drag');}
+    lastInteract=t;
+    return;
+  }
+  if(drag&&drag.id===e.pointerId){endDrag(e);}
+});
+cv.addEventListener('pointercancel',function(e){
+  delete pointers[e.pointerId];
+  pinch=null;drag=null;orbiting=false;cv.classList.remove('uw-drag');
+});
 cv.addEventListener('dblclick',function(){
-  camZoomT=clamp(camZoomT*1.3,CONFIG.cam.zoomMin,CONFIG.cam.zoomMax);
-  lastInteract=t;
+  zoomBy(1.3,true);
 });
 /* keyboard: cycle + select objects, zoom, escape */
 var cycleIdx=-1;
@@ -2646,9 +2676,9 @@ cv.addEventListener('keydown',function(e){
   }else if(kc==='Escape'){
     select(null,'Selection cleared');
   }else if(kc==='+'||kc==='='){
-    camZoomT=clamp(camZoomT*1.15,CONFIG.cam.zoomMin,CONFIG.cam.zoomMax);renderIfIdle();
+    zoomBy(1.15,true);
   }else if(kc==='-'||kc==='_'){
-    camZoomT=clamp(camZoomT/1.15,CONFIG.cam.zoomMin,CONFIG.cam.zoomMax);renderIfIdle();
+    zoomBy(1/1.15,true);
   }else if(kc==='Home'){
     select({kind:'bs',ref:BS,id:'BS-1'});
   }
