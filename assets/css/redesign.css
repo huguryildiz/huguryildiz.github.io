@@ -458,7 +458,7 @@ html.obs-over .masthead :focus-visible{outline-color:#EBB289;}
 /* the plaque already carries the state; the corner chip returns with the console.
    The console's top corners start below the masthead rail that floats over the plate. */
 .obs:not(.obs-explore) #uwsn-hero .uw-topleft{display:none;}
-.obs #uwsn-hero .uw-topleft, .obs #uwsn-hero .uw-topright{top:calc(4rem + 10px);}
+.obs #uwsn-hero .uw-topbar{top:calc(4rem + 10px);}
 .obs #uwsn-hero .uw-panel{top:calc(4rem + 92px);}
 .obs #uwsn-hero canvas:focus-visible{border-radius:0; outline-offset:-4px;}
 .obs #uwsn-hero .uw-shade{display:block;}
@@ -473,6 +473,8 @@ html.obs-over .masthead :focus-visible{outline-color:#EBB289;}
 .obs .uw-plaque .pctl button:hover{background:rgba(238,243,245,.10); border-color:var(--obs-ink-soft); color:#FFFFFF;}
 .obs .uw-plaque .pctl button[aria-pressed="true"]{background:var(--obs-ink); color:#0B1E2C; border-color:var(--obs-ink);}
 .obs .uw-plaque .psim{color:var(--obs-ink-faint);}
+.obs .uw-plaque .uw-plq-minimize{color:var(--obs-ink-soft); border-color:var(--obs-line); background:transparent;}
+.obs .uw-plaque .uw-plq-minimize:hover{color:#FFFFFF; border-color:var(--obs-ink-soft); background:rgba(238,243,245,.10);}
 /* thin plaque: three short rows, the hint to the right of the controls */
 .obs .uw-plaque{padding:8px 12px 8px; border-radius:8px;}
 .obs .uw-plaque .ptop{gap:.4rem;}
@@ -629,8 +631,15 @@ html.obs-over .masthead :focus-visible{outline-color:#EBB289;}
   color:var(--ink-faint); border:1px solid var(--hairline-strong); border-radius:4px; padding:.12rem .4rem;}
 .uw-plaque .ptag.live{color:var(--cc-ai); border-color:currentColor;}
 .uw-plaque .ptitle{font-weight:700; font-size:.95rem; color:var(--head);}
+.uw-plaque .uw-plq-minimize{display:inline-flex; align-items:center; justify-content:center; flex:none;
+  width:32px; min-height:32px; margin-left:auto; padding:.25rem; color:var(--ink-soft);
+  background:transparent; border:1px solid var(--hairline-strong); border-radius:6px; cursor:pointer;}
+.uw-plaque .uw-plq-minimize:hover{color:var(--head); border-color:var(--ink-soft); background:var(--surface);}
+.uw-plaque .uw-plq-minimize:focus-visible{outline:2px solid var(--focus); outline-offset:2px;}
+.uw-plaque .uw-plq-minimize .licon{width:1.05rem; height:1.05rem;}
 .uw-plaque .ptext{margin:.3rem 0 0; font-size:.9rem; color:var(--ink-soft);
   line-height:1.5; transition:opacity .21s ease;}
+.uw-plaque.is-minimized #uw-plaque-body{display:none;}
 .uw-plaque .ptext.fading{opacity:0;}
 .uw-plaque .pctl{display:flex; flex-wrap:wrap; align-items:center; gap:.45rem 1rem; margin-top:.55rem;}
 .uw-plaque .pctl button{
@@ -1679,4 +1688,6 @@ footer.site a:hover .licon.spotify{color:var(--accent);}
    practice minimum without inflating them for precise mouse pointers. */
 @media (pointer:coarse){
   .seg button, .rmap-views button, .uw-plaque .pctl button{min-height:44px;}
+  .uw-plaque .uw-plq-minimize{width:44px; min-height:44px;}
+  #uwsn-hero .uw-drop summary{min-height:44px; display:inline-flex; align-items:center;}
 }
