@@ -285,9 +285,10 @@ research_areas:                             # main.tex Research Areas — yalnı
   - "Neural Networks"
   - "Reinforcement Learning"
 
-# Aşağıdaki bölümler (service, talks, courses) Task 3'ün /service/ ve /teaching/ sayfalarını
-# besleyecek; bu turda yalnızca veri olarak dolduruldu, hiçbir sayfa onlardan render etmiyor.
+# Aşağıdaki bölümler /service/ ve /teaching/ sayfalarını besler.
 service:
+  editorial:
+    - { role: "Area Editor", journal: "Ad Hoc Networks", publisher: "Elsevier", period: "Sep 2026 – present", scope: "Wireless ad hoc, sensor, underwater acoustic, and UAV-assisted networks" }
   tpc:
     - "IEEE International Conference on Communications (ICC 2018–2022)"
     - "IEEE Wireless Communications and Networking Conference (WCNC 2019, 2021–2025)"
