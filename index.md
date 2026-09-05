@@ -195,8 +195,10 @@ modified: 2026-09-03
           at <a href="https://www.tedu.edu.tr/en" target="_blank" rel="noopener">TED University<span class="sr-only"> (external)</span></a> in 2016, where he has been serving as an Associate Professor since 2021 and held
           the position of Department Chair from 2021 to 2024.</p>
         <p>He has authored over 40 peer-reviewed journal articles and conference papers, which have accumulated
-          more than 1,000 citations. He received the IEEE Middle East and North Africa Communications Conference
-          2019 Best Paper Award and was elevated to IEEE Senior Member in 2021.</p>
+          more than 1,000 citations. He serves as an Area Editor for <i>Ad Hoc Networks</i> (Elsevier), managing
+          peer review in wireless ad hoc, sensor, underwater acoustic, and UAV-assisted networks. He received the
+          IEEE Middle East and North Africa Communications Conference 2019 Best Paper Award and was elevated to
+          IEEE Senior Member in 2021.</p>
     </div>
   </section>
 
