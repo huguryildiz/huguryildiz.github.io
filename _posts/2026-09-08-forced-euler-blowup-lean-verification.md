@@ -31,8 +31,3 @@ This is therefore a useful case study in AI-assisted mathematics, but not a lice
 - [Extending the Córdoba–Martínez-Zoroa IPM blow-up](https://cims.nyu.edu/~tristanb/ipm.pdf)
 - [Lean formalization](https://github.com/tristanbuckmaster/fluid_lean)
 - [Sebastien Bubeck's response](https://x.com/SebastienBubeck/status/2097214122471432349)
-
-<figure class="post-figure linkedin-embed">
-  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7503119914476544000" height="1111" width="504" frameborder="0" allowfullscreen="" title="Embedded LinkedIn post" loading="lazy"></iframe>
-  <figcaption>The LinkedIn post that prompted this note.</figcaption>
-</figure>
