@@ -65,6 +65,7 @@ layout: compress
 
   <!-- Dark is the site default; restore an explicit reader preference before paint. -->
   <script>
+  document.documentElement.setAttribute('data-js','');
   (function(){try{var t=localStorage.getItem('hy-theme');
   if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
   /* Metric tiles count up from zero; hide the rendered value until the counter takes
@@ -91,6 +92,12 @@ layout: compress
 </head>
 
 <body class="has-topographic-bg">
+  <!-- THESIS: Preserve the academic site and add a short underwater scroll sequence.
+  OWN-WORLD: Incumbent typography, colors, portrait, navigation and academic content layout.
+  STORY: Identity, acoustic connectivity, research handoff. Native and reversible.
+  FIRST VIEWPORT: Original identity directly over the ocean; no opaque identity card.
+  FORM: User narrowed scope to scroll, overriding seed 13d11a41 and the broader redesign brief.
+  FINISH: Browser verification, screenshots, review and design documentation accompany the local implementation. -->
   {% include icons.html %}
 
   <canvas class="topographic-bg" aria-hidden="true"></canvas>

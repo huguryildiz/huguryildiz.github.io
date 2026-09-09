@@ -1,4 +1,5 @@
 <div id="uwsn-hero">
+  <img class="obs-fallback" src="/assets/images/observatory-fallback.jpg" alt="Static view of the simulated underwater acoustic sensor field. Symbols not to scale." width="1440" height="936">
   <canvas tabindex="0" role="application" aria-roledescription="interactive simulation"
     aria-label="Interactive ocean observatory simulation: an underwater acoustic sensor network on a bathymetric seafloor relays data to a surface buoy while monitoring security contacts, marine habitat, and seismic activity along a fault zone. Simulated scenario."
     aria-describedby="uw-help"></canvas>
@@ -6,7 +7,7 @@
     Escape closes the detail panel. Plus and minus keys zoom; the mouse wheel zooms in Explore mode
   or with Control or Command held. In Explore mode, drag with one finger to orbit and pinch
     with two fingers to zoom.</p>
-  <noscript><div class="uwsn-ns">Underwater sensor network visualization (requires JavaScript)</div></noscript>
+  <noscript><div class="uwsn-ns">Static simulated sensor field. Enable JavaScript to explore the scenario.</div></noscript>
   <div class="uw-shade" aria-hidden="true"></div>
 
   <div class="uw-ui">
@@ -58,8 +59,8 @@
     </div>
 
     <div class="uw-timebar">
-      <span class="uw-mode" id="uw-mode">LIVE</span>
-      <button type="button" id="uw-live" aria-pressed="true">Live</button>
+      <span class="uw-mode" id="uw-mode">SIMULATION</span>
+      <button type="button" id="uw-live" aria-pressed="true" aria-label="Resume simulated playback at normal speed">1× playback</button>
       <button type="button" id="uw-play" aria-pressed="false">Pause</button>
       <button type="button" id="uw-step" hidden>Step &#9656;</button>
       <label class="uw-speed"><span class="uw-sr">Playback speed</span>
@@ -82,22 +83,21 @@
 
 <div class="uw-plaque" id="uw-plaque">
   <div class="ptop">
-    <span class="ptag live">OCEAN OBSERVATORY</span>
-    <span class="ptitle" id="uw-plq-title">Standing by</span>
+    <span class="ptag live">SIMULATED OBSERVATORY</span>
+    <span class="ptitle" id="uw-plq-title">Acoustic sensor network</span>
     <button type="button" class="uw-plq-minimize" id="uw-plq-minimize"
       aria-expanded="true" aria-controls="uw-plaque-body" aria-label="Minimize observatory panel"
       title="Minimize observatory panel"><svg class="licon" aria-hidden="true"><use href="#i-chevron-up"/></svg></button>
   </div>
   <div id="uw-plaque-body">
-    <p class="ptext" id="uw-plq-text">Acoustic sensor field deployed on the fault-zone shelf.
-      Awaiting synchronization pulse from surface gateway BS-1.</p>
+    <p class="ptext" id="uw-plq-text">A concept demonstration of underwater routing, habitat observations, and seismic monitoring. All data are simulated.</p>
     <div class="pctl">
       <button type="button" id="uw-plq-pause" aria-pressed="false"><svg class="licon"
         aria-hidden="true"><use href="#i-pause"/></svg><span>Pause</span></button>
       <button type="button" id="uw-plq-explore" aria-pressed="false" aria-expanded="false"
         aria-controls="uwsn-hero"><svg class="licon"
         aria-hidden="true"><use href="#i-layers"/></svg><span>Explore the scene</span></button>
-      <span class="psim">Simulated scenario · drag to orbit · click for details</span>
+      <span class="psim">Simulated scenario · symbols not to scale</span>
     </div>
   </div>
 </div>
@@ -321,8 +321,9 @@ var layerFail={};                 /* draw-layer error fuse: fail once, skip afte
 var qt=0;                         /* quality tier 0 high / 1 med / 2 low     */
 
 /* ---- acoustic network awakening + guided observation state ---- */
-var awPhase=REDUCED?'done':'pre'; /* pre → run → done                        */
-var awT0=-1,routeAlpha=REDUCED?1:0;
+var homeScene=!!host.closest('.obs');
+var awPhase=(REDUCED||homeScene)?'done':'pre'; /* pre → run → done                        */
+var awT0=-1,routeAlpha=(REDUCED||homeScene)?1:0;
 var SPOTS=['network','security','habitat','seismic'];
 var spotIdx=-1,spotT0=-1,cycleFrom=-1,exploring=false,hovering=false,em=0;
 
@@ -750,6 +751,7 @@ var simT=0,prevSimT=-1,mode='live',speed=1,liveT0=0,scrubbing=false;
 var t=0,frames=0,raf=0,prevNow=0,vis=!document.hidden,inView=true;
 var camYaw=-0.45,camYawT=-0.45,camPitch=0.28,camPitchT=0.28,camZoom=1,camZoomT=1;
 var panX=0,panY=0,panXT=0,panYT=0,lastInteract=-1e9,shakeT0=-1e9;
+var presentationProgress=0,presentationEnabled=false,anchorT=0.5;
 var orbiting=false;               /* drag in progress: terrain tile at half density */
 var yawS=0,yawC=1,S=1,DH=1,PT=0.28,CX=0,TY=0,SC=1;
 var A={x:0,y:0},B={x:0,y:0};
@@ -944,9 +946,8 @@ function step(dt){
   }
   prevSimT=simT;
   if(mode==='live'){
-    var ln=((performance.now()/1000-liveT0)%CONFIG.loop+CONFIG.loop)%CONFIG.loop;
-    if(ln<simT-1){resetTransients();}     /* loop wrap */
-    simT=ln;
+    simT+=dt;
+    if(simT>=CONFIG.loop){simT-=CONFIG.loop;resetTransients();}
   }else if(mode==='play'){
     simT+=dt*speed;
     if(simT>=CONFIG.loop){simT-=CONFIG.loop;resetTransients();}
@@ -970,18 +971,28 @@ function step(dt){
   /* guided observation cycle (replaces the old idle yaw drift):
      every 8 s spotlight one layer; any interaction, selection, pause,
      replay or explore mode suspends automatic cycling immediately */
-  if(!REDUCED&&awPhase==='done'&&mode==='live'&&!sel&&!exploring&&!hovering
+  if(!homeScene&&!REDUCED&&awPhase==='done'&&mode==='live'&&!sel&&!exploring&&!hovering
      &&t-lastInteract>6){
     if(spotIdx<0){if(cycleFrom>0&&t>=cycleFrom){enterSpot(0);}}
     else if(t-spotT0>8){enterSpot((spotIdx+1)%SPOTS.length);}
   }
   if(spotIdx>=0&&em<1){em=Math.min(1,em+dt*2.8);}
+  /* Scroll owns composition only outside Explore; no simulation side effects. */
+  if(homeScene&&!exploring)presentationCamera();
   /* camera smoothing */
-  var f=Math.min(1,dt*4);
+  var f=Math.min(1,dt*12);
   camYaw+=(camYawT-camYaw)*f;
   camPitch+=(camPitchT-camPitch)*f;
   camZoom+=(camZoomT-camZoom)*f;
   panX+=(panXT-panX)*f;panY+=(panYT-panY)*f;
+  CXF+=(anchorT-CXF)*f;
+  /* Settle exactly: subpixel easing must not repaint a paused scene indefinitely. */
+  if(Math.abs(camYawT-camYaw)<0.0001)camYaw=camYawT;
+  if(Math.abs(camPitchT-camPitch)<0.0001)camPitch=camPitchT;
+  if(Math.abs(camZoomT-camZoom)<0.0001)camZoom=camZoomT;
+  if(Math.abs(panXT-panX)<0.05)panX=panXT;
+  if(Math.abs(panYT-panY)<0.05)panY=panYT;
+  if(Math.abs(anchorT-CXF)<0.0001)CXF=anchorT;
   /* drop selection when a dynamic contact leaves the picture */
   if(sel&&sel.kind==='vehicle'&&sel.id==='S-01'&&!subNow){select(null,'Contact S-01 lost');}
   if(sel&&sel.kind==='whale'&&!whaleNow){select(null,'W-1 out of range');}
@@ -2153,7 +2164,7 @@ var plqTitle=document.getElementById('uw-plq-title'),
 var PLQ={
   pre:['Standing by','Acoustic sensor field deployed on the fault-zone shelf. Awaiting synchronization pulse from surface gateway BS-1.'],
   awaken:['Synchronizing','Acoustic sync pulse from gateway BS-1 propagating through the relay topology…'],
-  synced:['Network synchronized','All 21 sensors reporting to surface gateway BS-1 over the convergecast topology. Guided observation begins shortly.'],
+  synced:['Network synchronized','Acoustic sensors relay data to surface gateway BS-1. Solid routes show primary paths; dashed routes show backups.'],
   network:['Network topology','Data packets follow the convergecast routes to gateway BS-1. Solid cyan: primary route · dashed: backup route (k = 2).'],
   security:['Security picture','Tracked contacts are shown with positional-uncertainty regions — never as exact points. Charted mines hold red threat radii.'],
   habitat:['Habitat observation','Coral-ridge and seagrass observation areas monitored by sensors H-301–H-303 (temperature, dissolved O₂, turbidity).'],
@@ -2196,7 +2207,7 @@ function stateLine(){
   if(awPhase==='run'){return 'SYNC IN PROGRESS';}
   if(mode==='play'){return 'REPLAY ×'+speed;}
   if(spotIdx>=0&&!exploring&&t-lastInteract>6){return 'AUTO · SPOTLIGHT: '+SPOTS[spotIdx].toUpperCase();}
-  return 'LIVE';
+  return 'SIMULATED PLAYBACK';
 }
 function select(o,msg){
   sel=o;
@@ -2473,7 +2484,7 @@ function setMode(m){
   btnLive.setAttribute('aria-pressed',String(m==='live'));
   btnPlay.setAttribute('aria-pressed',String(m==='pause'));
   btnPlay.textContent=m==='pause'?'Play':'Pause';
-  modeEl.textContent=m==='live'?'LIVE':m==='play'?'PLAY ×'+speed:'PAUSED';
+  modeEl.textContent=m==='live'?'SIMULATION':m==='play'?'PLAY ×'+speed:'PAUSED';
   modeEl.className='uw-mode'+(m==='play'?' m-play':m==='pause'?' m-paused':'');
   if(btnPlqPause){
     btnPlqPause.setAttribute('aria-pressed',String(m==='pause'));
@@ -2490,7 +2501,7 @@ function setSim(v){
   logDirty=true;
   renderIfIdle();
 }
-btnLive.addEventListener('click',function(){setMode('live');});
+btnLive.addEventListener('click',function(){speed=1;selSpeed.value='1';setMode('live');renderIfIdle();});
 btnPlay.addEventListener('click',function(){
   if(mode==='pause'){setMode('play');}
   else{setMode('pause');}
@@ -2535,25 +2546,46 @@ document.getElementById('uw-close').addEventListener('click',function(){select(n
 /* plaque controls: pause/resume + explore progressive disclosure */
 if(btnPlqPause){
   btnPlqPause.addEventListener('click',function(){
-    if(mode==='pause'){setMode('live');announce('Motion resumed');}
-    else{setMode('pause');announce('All motion paused');}
+    if(mode==='pause'){setMode('play');announce('Simulation resumed');}
+    else{setMode('pause');announce('Simulation paused. Scrolling can still change the camera view.');}
     renderIfIdle();
   });
 }
-if(btnPlqExplore){
-  btnPlqExplore.addEventListener('click',function(){
-    exploring=!exploring;
-    host.classList.toggle('uw-explore',exploring);
-    var obs=host.closest?host.closest('.obs'):null;
-    if(obs){obs.classList.toggle('obs-explore',exploring);}
-    btnPlqExplore.setAttribute('aria-pressed',String(exploring));
-    btnPlqExplore.setAttribute('aria-expanded',String(exploring));
-    announce(exploring?'Explore mode: layer filters, legend, timeline and zoom available. Automatic spotlighting paused.'
-      :'Explore mode closed. Automatic spotlighting resumes.');
-    lastInteract=t;
-    renderIfIdle();
-  });
+function presentationCamera(){
+  var p=presentationEnabled?presentationProgress:0;
+  var wide=window.matchMedia('(min-width:64em)').matches;
+  anchorT=wide?lerp(0.72,0.62,p):0.5;
+  camYawT=lerp(-0.45,-0.14,p);
+  camPitchT=lerp(0.28,0.39,p);
+  camZoomT=wide?lerp(0.78,1.04,p):0.86;
+  panXT=0;panYT=0;
 }
+host.__uwsnPresentation=function(p,enabled){
+  presentationProgress=p;presentationEnabled=enabled;
+  if(!exploring){presentationCamera();renderIfIdle();}
+};
+function setExplore(value){
+  exploring=value;
+  host.classList.toggle('uw-explore',exploring);
+  var obs=host.closest('.obs');
+  if(obs)obs.classList.toggle('obs-explore',exploring);
+  btnPlqExplore.setAttribute('aria-pressed',String(exploring));
+  btnPlqExplore.setAttribute('aria-expanded',String(exploring));
+  btnPlqExplore.querySelector('span').textContent=exploring?'Exit Explore':'Explore the scene';
+  if(exploring){anchorT=0.5;spotIdx=-1;em=0;}
+  else if(homeScene){select(null);presentationCamera();}
+  host.dispatchEvent(new Event('uw-explore-change'));
+  announce(exploring?'Explore mode: drag to orbit. Layer filters, legend, timeline and zoom available.'
+    :'Explore mode closed. Scroll presentation restored.');
+  lastInteract=t;
+  renderIfIdle();
+}
+if(btnPlqExplore)btnPlqExplore.addEventListener('click',function(){setExplore(!exploring);});
+/* Direct object interaction hands camera ownership to Explore as well. */
+cv.addEventListener('pointerdown',function(e){if(homeScene&&!exploring&&e.pointerType!=='touch')setExplore(true);});
+cv.addEventListener('keydown',function(e){
+  if(homeScene&&!exploring&&/^(ArrowLeft|ArrowRight|ArrowUp|ArrowDown|Enter|\+|=|-)$/.test(e.key))setExplore(true);
+});
 if(btnPlqMin){
   btnPlqMin.addEventListener('click',function(){
     var minimized=plaqueEl.classList.toggle('is-minimized');
@@ -2571,6 +2603,7 @@ cv.addEventListener('pointerleave',function(){hovering=false;});
 host.addEventListener('click',function(){lastInteract=t;},true);
 cv.addEventListener('keydown',function(){lastInteract=t;});
 function zoomBy(factor,notify){
+  if(homeScene&&!exploring)setExplore(true);
   camZoomT=clamp(camZoomT*factor,CONFIG.cam.zoomMin,CONFIG.cam.zoomMax);
   lastInteract=t;
   if(notify){announce('Scene zoom '+Math.round(camZoomT*100)+' percent.');}
@@ -2592,7 +2625,7 @@ var drag=null,pointers={},pinch=null;
 cv.addEventListener('pointerdown',function(e){
   pointers[e.pointerId]={x:e.clientX,y:e.clientY};
   var ids=Object.keys(pointers);
-  if(ids.length===2){
+  if(ids.length===2&&exploring){
     drag=null;orbiting=false;cv.classList.remove('uw-drag');
     var p1=pointers[ids[0]],p2=pointers[ids[1]],dx=p2.x-p1.x,dy=p2.y-p1.y;
     pinch={ids:ids,distance:Math.sqrt(dx*dx+dy*dy),zoom:camZoomT};
@@ -2616,6 +2649,7 @@ cv.addEventListener('pointermove',function(e){
     return;
   }
   if(!drag||drag.id!==e.pointerId){return;}
+  if(drag.type==='touch'&&!exploring){return;}
   var dx=e.clientX-drag.x,dy=e.clientY-drag.y;
   if(!drag.moved&&Math.sqrt(dx*dx+dy*dy)>4){
     drag.moved=true;orbiting=true;cv.classList.add('uw-drag');
@@ -2703,8 +2737,8 @@ function updateDOM(){
 }
 function tick(now){
   if(!vis||!inView){raf=0;return;}
-  var dt=Math.min(0.05,(now-prevNow)/1000);prevNow=now;
-  t+=dt;
+  var dt=Math.max(0,Math.min(0.05,(now-prevNow)/1000));prevNow=now;
+  if(mode!=='pause')t+=dt;
   step(dt);
   drawFrame();
   updateDOM();
@@ -2726,6 +2760,7 @@ function setRunning(){
 function renderIfIdle(){
   /* reduced motion / paused with no rAF: render single frames on demand */
   if(REDUCED||!raf){
+    camYaw=camYawT;camPitch=camPitchT;camZoom=camZoomT;panX=panXT;panY=panYT;CXF=anchorT;
     computeState();
     cam();
     drawFrame();
@@ -2740,7 +2775,8 @@ function resize(){
      sit right of centre; anywhere else the property is unset and 0.5 applies */
   var cs=getComputedStyle(host);
   var cxv=parseFloat(cs.getPropertyValue('--uw-cx'));
-  CXF=(cxv>0.2&&cxv<0.8)?cxv:0.5;
+  if(!exploring){CXF=(cxv>0.2&&cxv<0.8)?cxv:0.5;anchorT=CXF;}
+  if(homeScene&&!exploring)presentationCamera();
   /* --uw-vh (a fraction of the viewport height) lets a canvas taller than one
      screen keep composing the scene to the first screen; the extra height is
      deep water behind the copy that follows. Unset, the scene fills the canvas. */
@@ -2770,13 +2806,10 @@ if(REDUCED){
   resize();
 }else{
   setMode('live');
-  setPlaque('pre');
+  setPlaque(homeScene?'synced':'pre');
   computeState();
   resize();
-  document.addEventListener('visibilitychange',function(){vis=!document.hidden;setRunning();});
-  if(window.IntersectionObserver){
-    new IntersectionObserver(function(en){inView=en[0].isIntersecting;setRunning();},{threshold:0.04}).observe(host);
-  }
+
   setRunning();
   /* start the awakening once the page is idle; the muted pre-sync scene is
      already complete and meaningful before this fires */
@@ -2791,6 +2824,24 @@ if(REDUCED){
   if('requestIdleCallback' in window){requestIdleCallback(kick,{timeout:1500});}
   else{kick();}
 }
+document.addEventListener('visibilitychange',function(){vis=!document.hidden;setRunning();});
+if(window.IntersectionObserver)new IntersectionObserver(function(en){inView=en[0].isIntersecting;setRunning();},{threshold:0.04}).observe(host);
+host.classList.add('uw-ready');
+var motionPreference=matchMedia('(prefers-reduced-motion: reduce)');
+if(motionPreference.addEventListener)motionPreference.addEventListener('change',function(e){
+  REDUCED=e.matches;
+  if(REDUCED){
+    if(raf)cancelAnimationFrame(raf);raf=0;
+    setMode('pause');awPhase='done';routeAlpha=1;
+    btnLive.hidden=true;btnPlay.hidden=true;btnStep.hidden=false;
+    if(btnPlqPause)btnPlqPause.hidden=true;
+    renderIfIdle();
+  }else{
+    btnLive.hidden=false;btnPlay.hidden=false;btnStep.hidden=true;
+    if(btnPlqPause)btnPlqPause.hidden=false;
+    setRunning();
+  }
+});
 syncLayerBtns();
 rebuildLog();
 })();

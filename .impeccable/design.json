@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-09T14:05:32.253701+00:00",
+  "title": "Design System: Hüseyin Uğur Yıldız",
+  "extensions": {
+    "motion": [
+      {
+        "name": "native-scroll",
+        "value": "72svh",
+        "purpose": "Additional wide-screen scroll distance; camera presentation only."
+      },
+      {
+        "name": "topographic-background",
+        "value": "66ms minimum redraw interval",
+        "purpose": "Existing Radiant-derived ambient field, retained unchanged."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide-scene",
+        "value": "64em"
+      },
+      {
+        "name": "compact-menu-container",
+        "value": "64rem"
+      }
+    ],
+    "shadows": [
+      {
+        "name": "observatory-plaque",
+        "value": "0 14px 34px rgba(0,0,0,.38)",
+        "purpose": "Existing functional scene plaque."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "html": "<button class=\"ds-primary\">View research</button>",
+      "css": ".ds-primary{font-family:var(--sans);font-size:.92rem;font-weight:600;padding:.62rem 1.05rem;border:1px solid transparent;border-radius:6px;background:var(--head);color:var(--btn-ink)}.ds-primary:hover{background:var(--accent-strong)}.ds-primary:focus-visible{outline:2px solid var(--focus);outline-offset:2px}",
+      "refersTo": "button-primary"
+    },
+    {
+      "name": "Quiet button",
+      "kind": "button",
+      "html": "<button class=\"ds-quiet\">Reset filters</button>",
+      "css": ".ds-quiet{font-family:var(--sans);font-size:.92rem;font-weight:600;padding:.62rem 1.05rem;border:1px solid var(--hairline-strong);border-radius:6px;background:none;color:var(--ink)}.ds-quiet:hover{background:var(--surface);border-color:var(--ink-soft)}.ds-quiet:focus-visible{outline:2px solid var(--focus);outline-offset:2px}",
+      "refersTo": "button-quiet"
+    },
+    {
+      "name": "Navigation link",
+      "kind": "nav",
+      "html": "<nav><a class=\"ds-nav\" href=\"#\" aria-current=\"page\">Publications</a></nav>",
+      "css": ".ds-nav{display:inline-block;font-family:var(--sans);font-size:.92rem;font-weight:650;padding:.45rem .7rem;color:var(--head);border-radius:4px;text-decoration:none;box-shadow:inset 0 -2px 0 var(--accent)}.ds-nav:hover{background:var(--surface)}.ds-nav:focus-visible{outline:2px solid var(--focus);outline-offset:2px}"
+    },
+    {
+      "name": "Publication type filter",
+      "kind": "chip",
+      "html": "<button class=\"ds-filter\" aria-pressed=\"false\">Journal articles</button>",
+      "css": ".ds-filter{font-family:var(--sans);border:1px solid var(--hairline-strong);background:transparent;color:var(--ink-soft);border-radius:999px;padding:.35rem .75rem;font-size:.85rem}.ds-filter:hover{border-color:var(--ink-soft)}.ds-filter[aria-pressed=true]{background:var(--head);color:var(--btn-ink)}.ds-filter:focus-visible{outline:2px solid var(--focus);outline-offset:2px}"
+    },
+    {
+      "name": "Publication record",
+      "kind": "custom",
+      "html": "<article class=\"ds-record\"><p class=\"ds-title\">Publication title</p><p class=\"ds-meta\">Authors · Venue, year</p></article>",
+      "css": ".ds-record{padding:1rem 0;border-bottom:1px solid var(--hairline)}.ds-title{font-family:var(--serif);font-size:1.08rem;font-weight:600;line-height:1.4;margin:0 0 .3rem;color:var(--head)}.ds-meta{font-family:var(--sans);font-size:.9rem;color:var(--ink-soft);margin:0}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Academic Observatory",
+    "overview": "Preserve the incumbent academic site and animated topographic background. Add a short, native and reversible underwater camera sequence."
+  }
+}

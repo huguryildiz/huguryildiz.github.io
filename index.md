@@ -7,6 +7,7 @@ modified: 2026-09-09
 ---
 
 <section class="obs" aria-labelledby="home-h1">
+  <div class="obs-stage">
   <div class="obs-copy">
     <div class="shell obs-copy-in">
       <div class="obs-idrow">
@@ -57,14 +58,28 @@ modified: 2026-09-09
           <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg>
           Contact</a>
       </div>
+      <a class="obs-skip" href="#home-record">Skip the scene <span aria-hidden="true">↓</span></a>
     </div>
   </div>
   <div class="obs-scene">
     {% include hero-uwsn.html %}
   </div>
+  <div class="obs-narrative" aria-hidden="true">
+    <div class="obs-beat" data-beat="network">
+      <h2>Connections beneath the surface.</h2>
+      <p>Routing, reliability, and energy use in an underwater acoustic sensor network.</p>
+    </div>
+    <div class="obs-beat" data-beat="research">
+      <h2>From networks to decisions.</h2>
+      <p>Explore the models, methods, and publications behind the research program.</p>
+      <a href="#home-record">Continue to the research <span aria-hidden="true">↓</span></a>
+    </div>
+  </div>
+  <div class="obs-sequence" aria-hidden="true"><span>Observatory</span><span>Connectivity</span><span>Research</span></div>
+  </div>
 </section>
 
-<div class="shell">
+<div class="shell" id="home-record" tabindex="-1">
   <section class="idband" aria-label="Research focus and academic profiles">
     <p class="supporting">I develop optimization-based models for routing, resource allocation,
         and energy efficiency in wireless ad&nbsp;hoc, underwater acoustic, and drone-assisted
@@ -314,71 +329,6 @@ modified: 2026-09-09
     </ul>
   </details>
 
-  <section class="closing" aria-labelledby="home-contact">
-    <h2 class="sec" id="home-contact"><svg class="hicon" aria-hidden="true"><use href="#i-mail"/></svg>Contact</h2>
-    <div class="closing-grid">
-      <div>
-        <h3>Email</h3>
-        <p><a href="mailto:hugur.yildiz@tedu.edu.tr">hugur.yildiz@tedu.edu.tr</a></p>
-      </div>
-      <div>
-        <h3>Office</h3>
-        <p>Department of Electrical &amp; Electronics Engineering,
-          <a href="https://www.tedu.edu.tr/en/huseyin-ugur-yildiz" target="_blank" rel="noopener">TED University<span class="sr-only"> (external)</span></a>,
-          Ankara, Türkiye.
-          <a href="https://share.google/AFFkStDzjSsudiC1V" target="_blank" rel="noopener">Campus map<span class="sr-only"> (external)</span></a></p>
-      </div>
-      <div>
-        <h3>Record</h3>
-        <ul class="closing-links">
-          <li><a href="/files/Yildiz_HuseyinUgur_CV.pdf" target="_blank" rel="noopener"
-            data-goatcounter-click="cv-pdf-footer" data-goatcounter-title="CV (PDF), from the home page closing">CV (PDF)<span class="sr-only"> (opens in a new tab)</span></a></li>
-          <li><a href="{{ '/cv/' | relative_url }}">Web curriculum vitae</a></li>
-          <li><a href="{{ '/publications/' | relative_url }}">All publications</a></li>
-          <li><a href="{{ '/students/' | relative_url }}">Graduate supervision</a></li>
-        </ul>
-      </div>
-    </div>
-  </section>
 </div>
 
-<script>
-/* The masthead is a transparent rail while the reader is within the observatory
-   plate; once the page scrolls past it, the masthead returns to its page surface.
-   Without JS the class is never set and the masthead simply stays solid. */
-(function(){
-  var obs = document.querySelector('.obs'), mast = document.querySelector('.masthead');
-  if (!obs || !mast) return;
-  var root = document.documentElement, queued = 0;
-  var hero = document.getElementById('uwsn-hero'), copy = document.querySelector('.obs-copy');
-  var narrow = window.matchMedia('(max-width: 63.99em)');
-  function mark(){
-    queued = 0;
-    root.classList.toggle('obs-over', window.scrollY < obs.offsetHeight - mast.offsetHeight);
-    root.classList.toggle('obs-scrolled', window.scrollY > 8);
-  }
-  /* On narrow screens the copy stands above the scene rather than beside it, so
-     the scene is told how much of the canvas top the copy occupies. */
-  function layout(){
-    if (!hero || !copy) return;
-    /* the surface line may rise a little behind the actions, so the sea is already
-       present where the copy ends */
-    var top = narrow.matches ? Math.max(0, copy.offsetTop + copy.offsetHeight - 120) : 0;
-    if (top) { hero.style.setProperty('--uw-top', top + 'px'); }
-    else { hero.style.removeProperty('--uw-top'); }
-    if (hero.__uwsnResize) { hero.__uwsnResize(); }
-  }
-  function onScroll(){ if (!queued) queued = requestAnimationFrame(mark); }
-  window.addEventListener('scroll', onScroll, {passive:true});
-  window.addEventListener('resize', function(){ layout(); onScroll(); });
-  window.addEventListener('load', layout);
-  layout(); mark();
-})();
-(function(){
-  var p = document.querySelector('.portrait');
-  if (!p || !('IntersectionObserver' in window)) return;
-  new IntersectionObserver(function(entries){
-    p.classList.toggle('orn-off', !entries[0].isIntersecting);
-  }).observe(p);
-})();
-</script>
+<script src="{{ '/assets/js/observatory-scroll.js' | relative_url }}" defer></script>
