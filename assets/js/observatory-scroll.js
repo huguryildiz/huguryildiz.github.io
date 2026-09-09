@@ -8,7 +8,8 @@
   var copy=obs.querySelector('.obs-copy'),narrative=obs.querySelector('.obs-narrative');
   var masthead=document.querySelector('.masthead'),plaque=document.getElementById('uw-plaque');
   var beats=obs.querySelectorAll('.obs-beat'),steps=obs.querySelectorAll('.obs-sequence span');
-  var wide=matchMedia('(min-width:64em)'),motion=matchMedia('(prefers-reduced-motion:reduce)');
+  var wide=matchMedia('(min-width:64em)'),portrait=matchMedia('(orientation:portrait)'),
+    motion=matchMedia('(prefers-reduced-motion:reduce)');
   var start=0,distance=1,queued=0,enabled=false,chapter=-1;
   function clamp(v){return Math.max(0,Math.min(1,v));}
   function update(){
@@ -45,7 +46,11 @@
     start=obs.getBoundingClientRect().top+window.scrollY;
     distance=Math.max(1,obs.offsetHeight-stage.offsetHeight);
     host.style.setProperty('--uw-plaque-height',plaque.offsetHeight+'px');
-    host.style.setProperty('--uw-top',!wide.matches||compact?Math.max(0,copy.offsetHeight-110)+'px':'0px');
+    /* On a phone held vertically, let the underwater scene begin at the masthead
+       and sit behind the identity copy. Landscape and text-zoom layouts retain
+       the reserved copy band so their controls remain readable. */
+    var fullBleedPortrait=!wide.matches&&portrait.matches;
+    host.style.setProperty('--uw-top',fullBleedPortrait?'0px':(!wide.matches||compact?Math.max(0,copy.offsetHeight-110)+'px':'0px'));
     if(host.__uwsnResize)host.__uwsnResize();
     schedule();
   }
