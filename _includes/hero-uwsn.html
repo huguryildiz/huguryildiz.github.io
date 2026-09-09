@@ -753,7 +753,8 @@ var camYaw=-0.45,camYawT=-0.45,camPitch=0.28,camPitchT=0.28,camZoom=1,camZoomT=1
 var panX=0,panY=0,panXT=0,panYT=0,lastInteract=-1e9,shakeT0=-1e9;
 var presentationProgress=0,presentationEnabled=false,anchorT=0.5;
 var orbiting=false;               /* drag in progress: terrain tile at half density */
-var yawS=0,yawC=1,S=1,DH=1,PT=0.28,CX=0,TY=0,SC=1;
+var portraitLayout=false;
+var yawS=0,yawC=1,S=1,SX=1,DH=1,PT=0.28,CX=0,TY=0,SC=1;
 var A={x:0,y:0},B={x:0,y:0};
 var packets=[],rings=[],pickables=[],sel=null;
 var ambSlot=-1,chainSlot=-1,buoySlot=-1,pingSlot=-1,alarmSlots={},seiPulsed={};
@@ -763,6 +764,11 @@ function cam(){
   yawS=Math.sin(camYaw);yawC=Math.cos(camYaw);
   PT=camPitch;
   S=Math.min(W*0.45,HV*1.12)*camZoom;
+  /* The portrait viewport is narrower than the desktop composition. Give the
+     horizontal ground plane a small aspect correction while keeping depth and
+     object scale tied to the original camera, so the topology does not read
+     as pressed in from both sides. */
+  SX=S*(portraitLayout?1.12:1);
   DH=HV*0.55*camZoom;
   SC=clamp(S/420,0.7,1.6);
   var sh=0;
@@ -772,7 +778,7 @@ function cam(){
 }
 function proj(x,y,z,o){
   var rx=x*yawC-z*yawS,rz=x*yawS+z*yawC;
-  o.x=CX+rx*S;o.y=TY+rz*S*PT+y*DH;
+  o.x=CX+rx*SX;o.y=TY+rz*SX*PT+y*DH;
 }
 
 /* ================= 8. derived per-frame status ================= */
@@ -1001,11 +1007,11 @@ function step(dt){
 /* ================= 11. drawing ================= */
 function groundEllipse(p,r,strokeStyle,width,dash,fillStyle){
   proj(p.x,p.y,p.z,A);
-  if(fillStyle){ctx.fillStyle=fillStyle;ctx.beginPath();ctx.ellipse(A.x,A.y,r*S,r*S*PT,0,0,6.2832);ctx.fill();}
+  if(fillStyle){ctx.fillStyle=fillStyle;ctx.beginPath();ctx.ellipse(A.x,A.y,r*SX,r*SX*PT,0,0,6.2832);ctx.fill();}
   if(strokeStyle){
     ctx.strokeStyle=strokeStyle;ctx.lineWidth=width||1;
     if(dash){ctx.setLineDash(dash);}
-    ctx.beginPath();ctx.ellipse(A.x,A.y,r*S,r*S*PT,0,0,6.2832);ctx.stroke();
+    ctx.beginPath();ctx.ellipse(A.x,A.y,r*SX,r*SX*PT,0,0,6.2832);ctx.stroke();
     ctx.setLineDash([]);
   }
 }
@@ -1196,7 +1202,7 @@ function paintTerrain(st){
   for(idx=0;idx<gw.length;idx++){
     var gp=gw[idx];
     var rx=gp.x*yawC-gp.z*yawS,rz=gp.x*yawS+gp.z*yawC;
-    gsx[idx]=tcCX+rx*S;gsy[idx]=tcTY+rz*S*PT+gp.d*DH;
+    gsx[idx]=tcCX+rx*SX;gsy[idx]=tcTY+rz*SX*PT+gp.d*DH;
   }
   for(j2=0;j2+st<GZ;j2+=st){
     for(i2=0;i2+st<GX;i2+=st){
@@ -1347,7 +1353,7 @@ function paintTerrain(st){
   for(k=0;k<ROCKS.length;k++){
     var rk=ROCKS[k];
     var krx=rk.x*yawC-rk.z*yawS,krz=rk.x*yawS+rk.z*yawC;
-    var kx=tcCX+krx*S,ky=tcTY+krz*S*PT+rk.y*DH,rs=rk.s*SC;
+    var kx=tcCX+krx*SX,ky=tcTY+krz*SX*PT+rk.y*DH,rs=rk.s*SC;
     g.fillStyle='rgba(12,16,21,'+(rk.sh*0.7).toFixed(2)+')';
     g.beginPath();
     g.ellipse(kx-rs*0.28,ky+rs*0.15,rs*1.0,rs*rk.asp*0.9,rk.rot,0,6.2832);g.fill();
@@ -1367,7 +1373,7 @@ function drawTerrain(){
     ||Math.abs(camYawT-camYaw)>0.0008||Math.abs(camPitchT-camPitch)>0.0008;
   var st=(qt>=2||moving)?2:1;
   var key=cw+'|'+ch+'|'+yawS.toFixed(4)+'|'+yawC.toFixed(4)+'|'+PT.toFixed(4)
-    +'|'+S.toFixed(2)+'|'+DH.toFixed(2)+'|'+qt+'|'+st;
+    +'|'+S.toFixed(2)+'|'+SX.toFixed(2)+'|'+DH.toFixed(2)+'|'+qt+'|'+st;
   if(key!==tcKey){
     if(TC.width!==cw||TC.height!==ch){TC.width=cw;TC.height=ch;}
     tcW=W+mx*2;tcH=H+my*2;
@@ -1893,7 +1899,7 @@ function drawRings(){
     if(rg2.col===CONFIG.col.threat&&!layers.security){continue;}
     if(rg2.col===CONFIG.col.sei&&!layers.seismic){continue;}
     var q=age/rg2.life;
-    var rr=(0.006+rg2.r1*q)*S;
+    var rr=(0.006+rg2.r1*q)*SX;
     var ra=(rg2.wide?0.20:0.28)*(1-q);
     if(ra<=0){continue;}
     proj(rg2.x,rg2.y,rg2.z,A);
@@ -1914,9 +1920,9 @@ function drawAwaken(){
   proj(BS.x,0,BS.z,A);
   ctx.strokeStyle='rgba('+CONFIG.col.net+','+(0.5*(1-e)).toFixed(3)+')';
   ctx.lineWidth=1.6;
-  ctx.beginPath();ctx.ellipse(A.x,A.y,e*0.24*S,e*0.24*S*PT,0,0,6.2832);ctx.stroke();
+  ctx.beginPath();ctx.ellipse(A.x,A.y,e*0.24*SX,e*0.24*SX*PT,0,0,6.2832);ctx.stroke();
   ctx.strokeStyle='rgba('+CONFIG.col.net+','+(0.28*(1-e)).toFixed(3)+')';
-  ctx.beginPath();ctx.ellipse(A.x,A.y,e*0.15*S,e*0.15*S*PT,0,0,6.2832);ctx.stroke();
+  ctx.beginPath();ctx.ellipse(A.x,A.y,e*0.15*SX,e*0.15*SX*PT,0,0,6.2832);ctx.stroke();
 }
 function drawSeismicWave(){
   if(!layers.seismic){return;}
@@ -2065,8 +2071,8 @@ function drawHUD(){
   ctx.fillText('N',cx0,cy0-19);
   /* dynamic scale bar: pick a round distance for the current zoom */
   var kmOpts=[0.25,0.5,1,2,4],ki,km=0.25;
-  for(ki=0;ki<kmOpts.length;ki++){if(kmOpts[ki]/CONFIG.kmX*S<=130){km=kmOpts[ki];}}
-  var bl=km/CONFIG.kmX*S;
+  for(ki=0;ki<kmOpts.length;ki++){if(kmOpts[ki]/CONFIG.kmX*SX<=130){km=kmOpts[ki];}}
+  var bl=km/CONFIG.kmX*SX;
   var bx=cx0+26,by=cy0+6;
   ctx.strokeStyle=ink;ctx.lineWidth=1;
   ctx.beginPath();
@@ -2771,6 +2777,7 @@ function renderIfIdle(){
 function resize(){
   var rct=host.getBoundingClientRect();
   W=Math.max(1,rct.width);H=Math.max(1,rct.height);
+  portraitLayout=window.matchMedia('(max-width:63.99em) and (orientation:portrait)').matches;
   /* the home composition keeps identity copy on the left and asks the scene to
      sit right of centre; anywhere else the property is unset and 0.5 applies */
   var cs=getComputedStyle(host);
