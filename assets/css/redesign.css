@@ -533,6 +533,20 @@ html.obs-over .masthead :focus-visible{outline-color:#EBB289;}
   .obs #uwsn-hero.uw-explore + .uw-plaque{margin:0; bottom:84px;}
   .obs #uwsn-hero .uw-panel{top:calc(4rem + 96px); bottom:auto; max-height:46%;}
 }
+@media (max-width:63.99em) and (orientation:portrait){
+  /* Give the identity block its own vertical rhythm on phone screens. The ocean
+     still starts at the masthead, but the instrumentation stays subordinate to
+     the readable academic copy until the scroll transition takes over. */
+  .obs-copy-in{padding-inline:clamp(24px,7vw,32px);}
+  .obs-idrow{flex-direction:column; align-items:flex-start; gap:1.1rem; margin-bottom:.9rem;}
+  .obs-idtext{width:100%;}
+  .obs h1{font-size:clamp(2rem,9vw,2.8rem); line-height:1.06;}
+  .obs-role{margin-top:.75rem; line-height:1.55;}
+  .obs-addr{margin-top:.6rem;}
+  .obs-prop{margin-top:1.55rem; line-height:1.34;}
+  .obs-cta{gap:.75rem; margin-top:1.7rem;}
+  .obs-cta .btn{flex:1 1 calc(50% - .75rem); min-width:0; justify-content:center; padding-inline:.8rem;}
+}
 @media (max-width:31.25em){
   .obs-idrow{gap:1rem;}
 }
@@ -1757,6 +1771,11 @@ footer.site a:hover .licon.spotify{color:var(--accent);}
 .obs-text-compact .uw-plaque{left:var(--obs-gutter); right:var(--obs-gutter); width:auto; bottom:28px;}
 .obs-text-compact #uwsn-hero .uw-topbar{top:calc(var(--uw-top) + 120px);}
 .obs-text-compact #uwsn-hero .uw-panel{top:auto; bottom:calc(var(--uw-plaque-height,250px) + 86px); max-height:180px;}
+@media (max-width:63.99em) and (orientation:portrait){
+  .obs #uwsn-hero .uw-shade{background:
+    linear-gradient(180deg,rgba(4,13,22,.96) 0%,rgba(4,13,22,.92) 35%,
+      rgba(4,13,22,.76) 58%,rgba(4,13,22,.24) 82%,rgba(4,13,22,.5) 100%);}
+}
 /* Keep semantic navigation available without scripting and with enlarged text. */
 .masthead{container-type:inline-size;}
 html:not([data-js]) #themeToggle,html:not([data-js]) #navToggle{display:none;}
