@@ -1624,8 +1624,6 @@ footer.site a:hover .licon.spotify{color:var(--accent);}
 .post-body img{max-width:100%; height:auto; border-radius:10px; margin:1.4rem 0;}
 .post-figure{margin:1.8rem 0; text-align:center;}
 .post-video{max-width:100%; max-height:78vh; border-radius:12px; background:#000; display:block; margin:0 auto;}
-.linkedin-embed{max-width:504px; margin-left:auto; margin-right:auto;}
-.linkedin-embed iframe{display:block; width:100%; max-width:504px; border:0; border-radius:12px; background:var(--surface);}
 .post-figure figcaption{
   margin-top:.7rem; font-family:var(--sans); font-size:.85rem; color:var(--ink-faint);
   line-height:1.5; max-width:52ch; margin-inline:auto;
