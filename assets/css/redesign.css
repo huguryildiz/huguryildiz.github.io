@@ -1773,8 +1773,8 @@ footer.site a:hover .licon.spotify{color:var(--accent);}
 .obs-text-compact #uwsn-hero .uw-panel{top:auto; bottom:calc(var(--uw-plaque-height,250px) + 86px); max-height:180px;}
 @media (max-width:63.99em) and (orientation:portrait){
   .obs #uwsn-hero .uw-shade{background:
-    linear-gradient(180deg,rgba(4,13,22,.96) 0%,rgba(4,13,22,.92) 35%,
-      rgba(4,13,22,.76) 58%,rgba(4,13,22,.24) 82%,rgba(4,13,22,.5) 100%);}
+    linear-gradient(180deg,rgba(4,13,22,.86) 0%,rgba(4,13,22,.76) 35%,
+      rgba(4,13,22,.48) 58%,rgba(4,13,22,.14) 82%,rgba(4,13,22,.42) 100%);}
 }
 /* Keep semantic navigation available without scripting and with enlarged text. */
 .masthead{container-type:inline-size;}
