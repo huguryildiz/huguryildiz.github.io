@@ -515,8 +515,9 @@ html.obs-over .masthead :focus-visible{outline-color:#EBB289;}
   .obs #uwsn-hero .uw-timebar{bottom:auto; top:var(--obs-screen); transform:translateY(-100%);}
   .obs #uwsn-hero .uw-zoom{bottom:auto; top:calc(var(--obs-screen) - 56px); transform:translateY(-100%);}
 }
-/* Narrow screens: the copy stands at the top of the plate and the scene fills the
-   rest of it; the page script tells the scene where the copy ends (--uw-top). */
+/* Narrow landscape/text-zoom screens reserve the copy band above the scene. On a
+   portrait phone the page script sets --uw-top to zero so the scene begins at the
+   masthead and continues behind the identity copy. */
 @media (max-width:63.99em){
   .obs{padding-bottom:min(64svh,600px);}
   .obs-copy{position:relative; z-index:2; padding:calc(4rem + clamp(1.6rem,5vw,2.6rem)) 0 clamp(1.4rem,4vw,2rem);}
