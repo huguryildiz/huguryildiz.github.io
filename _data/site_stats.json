@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-08T07:56:02Z",
+  "updated": "2026-09-09T07:59:41Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-09-08"
+    "end": "2026-09-09"
   },
   "window_order": [
     "today",
@@ -16,15 +16,22 @@
   "windows": {
     "today": {
       "label": "Today",
-      "start": "2026-09-08",
-      "end": "2026-09-08",
-      "pageviews": 1,
-      "pages_total": 1,
+      "start": "2026-09-09",
+      "end": "2026-09-09",
+      "pageviews": 2,
+      "pages_total": 2,
       "pages": [
         {
-          "path": "/terms",
-          "title": "Terms and Privacy Policy | Huseyin Ugur Yildiz",
-          "path_id": 96451161,
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/404.html",
+          "title": "Page Not Found Huseyin Ugur Yildiz",
+          "path_id": 80992097,
           "event": false,
           "count": 1
         }
@@ -36,11 +43,11 @@
         0,
         0,
         0,
+        0,
+        0,
         1,
         0,
-        0,
-        0,
-        0,
+        1,
         0,
         0,
         0,
@@ -77,7 +84,7 @@
       "systems_total": 1,
       "systems": [
         {
-          "name": "Linux",
+          "name": "Windows",
           "count": 1
         }
       ],
@@ -93,7 +100,7 @@
       "regions_total": 1,
       "regions": [
         {
-          "name": "New York",
+          "name": "Illinois",
           "country": "United States",
           "country_code": "US",
           "code": null,
@@ -104,23 +111,37 @@
     },
     "yesterday": {
       "label": "Yesterday",
-      "start": "2026-09-07",
-      "end": "2026-09-07",
+      "start": "2026-09-08",
+      "end": "2026-09-08",
       "pageviews": 3,
-      "pages_total": 1,
+      "pages_total": 3,
       "pages": [
         {
-          "path": "/",
-          "title": "Home | Huseyin Ugur Yildiz",
-          "path_id": 80749188,
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
           "event": false,
-          "count": 3,
+          "count": 1
+        },
+        {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
+          "event": false,
+          "count": 1,
           "refs": [
             {
-              "name": "avesis.tedu.edu.tr",
-              "count": 2
+              "name": "chatgpt.com",
+              "count": 1
             }
           ]
+        },
+        {
+          "path": "/terms",
+          "title": "Terms and Privacy Policy | Huseyin Ugur Yildiz",
+          "path_id": 96451161,
+          "event": false,
+          "count": 1
         }
       ],
       "events_total": 0,
@@ -130,15 +151,6 @@
         0,
         0,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        1,
-        0,
-        0,
         1,
         0,
         0,
@@ -147,47 +159,38 @@
         0,
         0,
         0,
+        1,
         0,
         0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
         0
       ],
-      "countries_total": 2,
+      "countries_total": 1,
       "countries": [
         {
-          "code": "TR",
-          "name": "Turkey",
-          "count": 2
-        },
-        {
-          "code": "GB",
-          "name": "United Kingdom",
+          "code": "SG",
+          "name": "Singapore",
           "count": 1
         }
       ],
-      "referrers_total": 1,
-      "referrers": [
-        {
-          "name": "avesis.tedu.edu.tr",
-          "count": 2
-        }
-      ],
-      "browsers_total": 2,
+      "referrers_total": 0,
+      "referrers": [],
+      "browsers_total": 1,
       "browsers": [
         {
           "name": "Chrome",
-          "count": 2
-        },
-        {
-          "name": "Safari",
           "count": 1
         }
       ],
-      "systems_total": 2,
+      "systems_total": 1,
       "systems": [
-        {
-          "name": "Android",
-          "count": 2
-        },
         {
           "name": "macOS",
           "count": 1
@@ -195,53 +198,34 @@
       ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 2,
+      "languages_total": 1,
       "languages": [
         {
-          "name": "Turkish",
-          "count": 2
-        },
-        {
-          "name": "English",
+          "name": "Chinese",
           "count": 1
         }
       ],
-      "regions_total": 2,
-      "regions": [
-        {
-          "name": "Ankara",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "06",
-          "count": 2
-        },
-        {
-          "name": "Wales",
-          "country": "United Kingdom",
-          "country_code": "GB",
-          "code": null,
-          "count": 1
-        }
-      ],
+      "regions_total": 0,
+      "regions": [],
       "regions_unmatched": []
     },
     "7d": {
       "label": "Last 7 days",
-      "start": "2026-09-02",
-      "end": "2026-09-08",
-      "pageviews": 46,
-      "pages_total": 12,
+      "start": "2026-09-03",
+      "end": "2026-09-09",
+      "pageviews": 37,
+      "pages_total": 13,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 20,
+          "count": 16,
           "refs": [
             {
               "name": "Google",
-              "count": 3
+              "count": 2
             },
             {
               "name": "com.linkedin.android",
@@ -254,10 +238,19 @@
             {
               "name": "avesis.tedu.edu.tr",
               "count": 2
-            },
+            }
+          ]
+        },
+        {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
+          "event": false,
+          "count": 3,
+          "refs": [
             {
-              "name": "kairos.huguryildiz.com",
-              "count": 1
+              "name": "chatgpt.com",
+              "count": 2
             }
           ]
         },
@@ -265,44 +258,6 @@
           "path": "/research",
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
-          "event": false,
-          "count": 6,
-          "refs": [
-            {
-              "name": "huguryildiz.com",
-              "count": 3
-            },
-            {
-              "name": "huguryildiz.com/service",
-              "count": 1
-            },
-            {
-              "name": "huguryildiz.com/cv",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/service",
-          "title": "Service | Huseyin Ugur Yildiz",
-          "path_id": 80843167,
-          "event": false,
-          "count": 3,
-          "refs": [
-            {
-              "name": "huguryildiz.com/students",
-              "count": 2
-            },
-            {
-              "name": "huguryildiz.com",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/publications",
-          "title": "Publications | Huseyin Ugur Yildiz",
-          "path_id": 80750273,
           "event": false,
           "count": 3,
           "refs": [
@@ -326,16 +281,26 @@
           ]
         },
         {
-          "path": "/writing/ieee-twc-submission-cap",
-          "title": "An academic rate limiter: IEEE TWC now caps authors at 36 new manuscripts a year | Huseyin Ugur Yildiz",
-          "path_id": 96633631,
-          "event": false,
-          "count": 2
-        },
-        {
           "path": "/writing",
           "title": "Writing | Huseyin Ugur Yildiz",
           "path_id": 96360100,
+          "event": false,
+          "count": 2,
+          "refs": [
+            {
+              "name": "huguryildiz.com/students",
+              "count": 1
+            },
+            {
+              "name": "huguryildiz.com/publications",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/service",
+          "title": "Service | Huseyin Ugur Yildiz",
+          "path_id": 80843167,
           "event": false,
           "count": 2
         },
@@ -347,23 +312,16 @@
           "count": 2
         },
         {
-          "path": "/teaching",
-          "title": "Huseyin Ugur Yildiz",
-          "path_id": 80750338,
+          "path": "/publications",
+          "title": "Publications | Huseyin Ugur Yildiz",
+          "path_id": 80750273,
           "event": false,
           "count": 2
         },
         {
-          "path": "/cv",
-          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
-          "path_id": 80749912,
-          "event": false,
-          "count": 2
-        },
-        {
-          "path": "/writing/airport-gate-assignment-multiobjective",
-          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
-          "path_id": 104130835,
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
           "event": false,
           "count": 1
         },
@@ -371,6 +329,27 @@
           "path": "/terms",
           "title": "Terms and Privacy Policy | Huseyin Ugur Yildiz",
           "path_id": 96451161,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/404.html",
+          "title": "Page Not Found Huseyin Ugur Yildiz",
+          "path_id": 80992097,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/teaching",
+          "title": "Huseyin Ugur Yildiz",
+          "path_id": 80750338,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/cv",
+          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
+          "path_id": 80749912,
           "event": false,
           "count": 1
         }
@@ -386,37 +365,37 @@
         }
       ],
       "hourly": [
-        6,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
-        0,
-        1,
-        3,
-        1,
-        3,
-        1,
-        1,
-        3,
-        0,
-        3,
         2,
-        4,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        3,
+        1,
+        1,
+        2,
+        1,
+        3,
+        0,
+        2,
+        1,
+        0,
         0,
         6,
         8,
-        1,
+        2,
         2
       ],
-      "countries_total": 5,
+      "countries_total": 4,
       "countries": [
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 14
+          "count": 12
         },
         {
           "code": "GB",
@@ -424,18 +403,13 @@
           "count": 2
         },
         {
-          "code": "US",
-          "name": "United States",
-          "count": 2
-        },
-        {
-          "code": "DE",
-          "name": "Germany",
+          "code": "IN",
+          "name": "India",
           "count": 1
         },
         {
-          "code": "IN",
-          "name": "India",
+          "code": "US",
+          "name": "United States",
           "count": 1
         }
       ],
@@ -443,7 +417,7 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 3
+          "count": 2
         },
         {
           "name": "com.linkedin.android",
@@ -462,7 +436,7 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 12
+          "count": 8
         },
         {
           "name": "Safari",
@@ -473,15 +447,11 @@
       "systems": [
         {
           "name": "Android",
-          "count": 8
+          "count": 6
         },
         {
           "name": "iOS",
           "count": 6
-        },
-        {
-          "name": "Windows",
-          "count": 3
         },
         {
           "name": "macOS",
@@ -489,6 +459,10 @@
         },
         {
           "name": "Linux",
+          "count": 1
+        },
+        {
+          "name": "Windows",
           "count": 1
         }
       ],
@@ -498,21 +472,21 @@
       "languages": [
         {
           "name": "English",
-          "count": 12
+          "count": 11
         },
         {
           "name": "Turkish",
-          "count": 8
+          "count": 5
         }
       ],
-      "regions_total": 8,
+      "regions_total": 6,
       "regions": [
         {
           "name": "Ankara",
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 13
+          "count": 11
         },
         {
           "name": "İzmir",
@@ -536,9 +510,9 @@
           "count": 1
         },
         {
-          "name": "Michigan",
-          "country": "United States",
-          "country_code": "US",
+          "name": "Karnataka",
+          "country": "India",
+          "country_code": "IN",
           "code": null,
           "count": 1
         },
@@ -548,41 +522,27 @@
           "country_code": "US",
           "code": null,
           "count": 1
-        },
-        {
-          "name": "Baden-Württemberg",
-          "country": "Germany",
-          "country_code": "DE",
-          "code": null,
-          "count": 1
-        },
-        {
-          "name": "Karnataka",
-          "country": "India",
-          "country_code": "IN",
-          "code": null,
-          "count": 1
         }
       ],
       "regions_unmatched": []
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-08-10",
-      "end": "2026-09-08",
-      "pageviews": 112,
-      "pages_total": 18,
+      "start": "2026-08-11",
+      "end": "2026-09-09",
+      "pageviews": 111,
+      "pages_total": 20,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 53,
+          "count": 51,
           "refs": [
             {
               "name": "Google",
-              "count": 11
+              "count": 10
             },
             {
               "name": "com.linkedin.android",
@@ -632,7 +592,7 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 8,
+          "count": 7,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -641,35 +601,6 @@
             {
               "name": "huguryildiz.com/research",
               "count": 2
-            },
-            {
-              "name": "huguryildiz.com/students",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/students",
-          "title": "Students | Huseyin Ugur Yildiz",
-          "path_id": 80840367,
-          "event": false,
-          "count": 6,
-          "refs": [
-            {
-              "name": "huguryildiz.com",
-              "count": 3
-            },
-            {
-              "name": "huguryildiz.com/research",
-              "count": 1
-            },
-            {
-              "name": "huguryildiz.com/teaching",
-              "count": 1
-            },
-            {
-              "name": "huguryildiz.com/publications",
-              "count": 1
             }
           ]
         },
@@ -703,12 +634,33 @@
           "title": "Service | Huseyin Ugur Yildiz",
           "path_id": 80843167,
           "event": false,
+          "count": 5,
+          "refs": [
+            {
+              "name": "huguryildiz.com/students",
+              "count": 3
+            },
+            {
+              "name": "huguryildiz.com",
+              "count": 1
+            },
+            {
+              "name": "huguryildiz.com/cv",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/students",
+          "title": "Students | Huseyin Ugur Yildiz",
+          "path_id": 80840367,
+          "event": false,
           "count": 5
         },
         {
-          "path": "/writing/ieee-twc-submission-cap",
-          "title": "An academic rate limiter: IEEE TWC now caps authors at 36 new manuscripts a year | Huseyin Ugur Yildiz",
-          "path_id": 96633631,
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
           "event": false,
           "count": 4
         },
@@ -734,11 +686,18 @@
           "count": 3
         },
         {
-          "path": "/writing/airport-gate-assignment-multiobjective",
-          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
-          "path_id": 104130835,
+          "path": "/writing/ieee-twc-submission-cap",
+          "title": "An academic rate limiter: IEEE TWC now caps authors at 36 new manuscripts a year | Huseyin Ugur Yildiz",
+          "path_id": 96633631,
           "event": false,
-          "count": 2
+          "count": 3
+        },
+        {
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
+          "event": false,
+          "count": 1
         },
         {
           "path": "/writing/can-llms-jump-scientific-discovery",
@@ -788,6 +747,13 @@
           "path_id": 95945764,
           "event": false,
           "count": 1
+        },
+        {
+          "path": "/404.html",
+          "title": "Page Not Found Huseyin Ugur Yildiz",
+          "path_id": 80992097,
+          "event": false,
+          "count": 1
         }
       ],
       "events_total": 2,
@@ -809,18 +775,18 @@
       ],
       "hourly": [
         10,
-        5,
+        4,
         2,
-        3,
+        2,
         2,
         0,
-        0,
+        1,
         5,
-        3,
+        4,
         3,
         1,
         5,
-        1,
+        2,
         5,
         8,
         16,
@@ -829,8 +795,8 @@
         6,
         1,
         8,
-        11,
-        7,
+        8,
+        8,
         2
       ],
       "countries_total": 10,
@@ -838,7 +804,7 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 29
+          "count": 28
         },
         {
           "code": "US",
@@ -853,7 +819,7 @@
         {
           "code": "IN",
           "name": "India",
-          "count": 3
+          "count": 2
         },
         {
           "code": "DE",
@@ -890,7 +856,7 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 11
+          "count": 10
         },
         {
           "name": "com.linkedin.android",
@@ -917,7 +883,7 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 35
+          "count": 33
         },
         {
           "name": "Safari",
@@ -932,7 +898,7 @@
       "systems": [
         {
           "name": "Windows",
-          "count": 18
+          "count": 17
         },
         {
           "name": "iOS",
@@ -948,7 +914,7 @@
         },
         {
           "name": "Linux",
-          "count": 4
+          "count": 3
         }
       ],
       "sizes_total": 0,
@@ -957,11 +923,11 @@
       "languages": [
         {
           "name": "English",
-          "count": 35
+          "count": 34
         },
         {
           "name": "Turkish",
-          "count": 12
+          "count": 11
         },
         {
           "name": "(unknown)",
@@ -976,14 +942,14 @@
           "count": 1
         }
       ],
-      "regions_total": 19,
+      "regions_total": 18,
       "regions": [
         {
           "name": "Ankara",
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 18
+          "count": 17
         },
         {
           "name": "Antalya",
@@ -1067,10 +1033,10 @@
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-06-11",
-      "end": "2026-09-08",
-      "pageviews": 485,
-      "pages_total": 21,
+      "start": "2026-06-12",
+      "end": "2026-09-09",
+      "pageviews": 489,
+      "pages_total": 22,
       "pages": [
         {
           "path": "/",
@@ -1243,7 +1209,7 @@
           "title": "Page Not Found Huseyin Ugur Yildiz",
           "path_id": 80992097,
           "event": false,
-          "count": 8
+          "count": 9
         },
         {
           "path": "/writing/ieee-twc-submission-cap",
@@ -1258,6 +1224,13 @@
           "path_id": 95945764,
           "event": false,
           "count": 6
+        },
+        {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
+          "event": false,
+          "count": 4
         },
         {
           "path": "/writing/local-first-latex-workflow",
@@ -1288,13 +1261,6 @@
           "count": 3
         },
         {
-          "path": "/writing/airport-gate-assignment-multiobjective",
-          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
-          "path_id": 104130835,
-          "event": false,
-          "count": 2
-        },
-        {
           "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
           "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
           "path_id": 99994300,
@@ -1314,6 +1280,13 @@
           "path_id": 96462585,
           "event": false,
           "count": 2
+        },
+        {
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
+          "event": false,
+          "count": 1
         },
         {
           "path": "/writing/can-llms-jump-scientific-discovery",
@@ -1361,13 +1334,13 @@
         14,
         22,
         4,
-        3,
-        13,
         4,
+        13,
+        5,
         18,
         12,
         17,
-        14,
+        15,
         25,
         38,
         34,
@@ -1377,7 +1350,7 @@
         28,
         21,
         20,
-        26,
+        27,
         22
       ],
       "countries_total": 25,
@@ -1728,10 +1701,10 @@
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-09-09",
-      "end": "2026-09-08",
-      "pageviews": 1102,
-      "pages_total": 25,
+      "start": "2025-09-10",
+      "end": "2026-09-09",
+      "pageviews": 1106,
+      "pages_total": 26,
       "pages": [
         {
           "path": "/",
@@ -1897,7 +1870,7 @@
           "title": "Page Not Found Huseyin Ugur Yildiz",
           "path_id": 80992097,
           "event": false,
-          "count": 19
+          "count": 20
         },
         {
           "path": "/experience",
@@ -1926,6 +1899,13 @@
           "path_id": 95945764,
           "event": false,
           "count": 6
+        },
+        {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
+          "event": false,
+          "count": 4
         },
         {
           "path": "/writing/local-first-latex-workflow",
@@ -1963,13 +1943,6 @@
           "count": 3
         },
         {
-          "path": "/writing/airport-gate-assignment-multiobjective",
-          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
-          "path_id": 104130835,
-          "event": false,
-          "count": 2
-        },
-        {
           "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
           "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
           "path_id": 99994300,
@@ -2003,6 +1976,13 @@
           "path_id": 80752603,
           "event": false,
           "count": 2
+        },
+        {
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
+          "event": false,
+          "count": 1
         },
         {
           "path": "/writing/can-llms-jump-scientific-discovery",
@@ -2050,13 +2030,13 @@
         53,
         32,
         11,
-        4,
+        5,
         18,
-        10,
+        11,
         27,
         26,
         56,
-        36,
+        37,
         66,
         77,
         65,
@@ -2066,7 +2046,7 @@
         52,
         43,
         39,
-        62,
+        63,
         66
       ],
       "countries_total": 32,
@@ -2472,9 +2452,9 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-09-08",
-      "pageviews": 1102,
-      "pages_total": 25,
+      "end": "2026-09-09",
+      "pageviews": 1106,
+      "pages_total": 26,
       "pages": [
         {
           "path": "/",
@@ -2640,7 +2620,7 @@
           "title": "Page Not Found Huseyin Ugur Yildiz",
           "path_id": 80992097,
           "event": false,
-          "count": 19
+          "count": 20
         },
         {
           "path": "/experience",
@@ -2669,6 +2649,13 @@
           "path_id": 95945764,
           "event": false,
           "count": 6
+        },
+        {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
+          "event": false,
+          "count": 4
         },
         {
           "path": "/writing/local-first-latex-workflow",
@@ -2706,13 +2693,6 @@
           "count": 3
         },
         {
-          "path": "/writing/airport-gate-assignment-multiobjective",
-          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
-          "path_id": 104130835,
-          "event": false,
-          "count": 2
-        },
-        {
           "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
           "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
           "path_id": 99994300,
@@ -2746,6 +2726,13 @@
           "path_id": 80752603,
           "event": false,
           "count": 2
+        },
+        {
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
+          "event": false,
+          "count": 1
         },
         {
           "path": "/writing/can-llms-jump-scientific-discovery",
@@ -2793,13 +2780,13 @@
         53,
         32,
         11,
-        4,
+        5,
         18,
-        10,
+        11,
         27,
         26,
         56,
-        36,
+        37,
         66,
         77,
         65,
@@ -2809,7 +2796,7 @@
         52,
         43,
         39,
-        62,
+        63,
         66
       ],
       "countries_total": 32,
@@ -4076,7 +4063,11 @@
     },
     {
       "date": "2026-09-08",
-      "views": 1
+      "views": 3
+    },
+    {
+      "date": "2026-09-09",
+      "views": 2
     }
   ],
   "daily_breakdowns": {
@@ -21771,8 +21762,22 @@
       ]
     },
     "2026-09-08": {
-      "pageviews": 1,
+      "pageviews": 3,
       "pages": [
+        {
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
+          "event": false,
+          "count": 1
+        },
         {
           "path": "/terms",
           "title": "Terms and Privacy Policy | Huseyin Ugur Yildiz",
@@ -21792,6 +21797,79 @@
         0,
         0,
         0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "countries": [
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "count": 1
+        }
+      ],
+      "referrers": [],
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        }
+      ],
+      "systems": [
+        {
+          "name": "macOS",
+          "count": 1
+        }
+      ],
+      "sizes": [],
+      "languages": [
+        {
+          "name": "Chinese",
+          "count": 1
+        }
+      ]
+    },
+    "2026-09-09": {
+      "pageviews": 2,
+      "pages": [
+        {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/404.html",
+          "title": "Page Not Found Huseyin Ugur Yildiz",
+          "path_id": 80992097,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
         0,
         0,
         0,
@@ -21824,7 +21902,7 @@
       ],
       "systems": [
         {
-          "name": "Linux",
+          "name": "Windows",
           "count": 1
         }
       ],
@@ -22710,6 +22788,10 @@
         {
           "date": "2026-09-09",
           "views": 0
+        },
+        {
+          "date": "2026-09-10",
+          "views": 0
         }
       ]
     },
@@ -23585,6 +23667,10 @@
         {
           "date": "2026-09-09",
           "views": 0
+        },
+        {
+          "date": "2026-09-10",
+          "views": 0
         }
       ]
     },
@@ -24459,6 +24545,10 @@
         },
         {
           "date": "2026-09-09",
+          "views": 0
+        },
+        {
+          "date": "2026-09-10",
           "views": 0
         }
       ]
@@ -25335,6 +25425,10 @@
         {
           "date": "2026-09-09",
           "views": 0
+        },
+        {
+          "date": "2026-09-10",
+          "views": 0
         }
       ]
     },
@@ -26209,6 +26303,10 @@
         },
         {
           "date": "2026-09-09",
+          "views": 0
+        },
+        {
+          "date": "2026-09-10",
           "views": 0
         }
       ]
@@ -27081,17 +27179,17 @@
         {
           "date": "2026-09-09",
           "views": 0
+        },
+        {
+          "date": "2026-09-10",
+          "views": 0
         }
       ]
     }
   ],
-  "site": {
-    "timezone": "Europe/Istanbul",
-    "first_hit_at": "2026-02-05T12:24:02.263206Z",
-    "data_retention_days": 0
-  },
+  "site": {},
   "totals": {
-    "pageviews": 1102,
+    "pageviews": 1106,
     "visitors": null
   },
   "pages": [
@@ -27259,7 +27357,7 @@
       "title": "Page Not Found Huseyin Ugur Yildiz",
       "path_id": 80992097,
       "event": false,
-      "count": 19
+      "count": 20
     },
     {
       "path": "/experience",
@@ -27288,6 +27386,13 @@
       "path_id": 95945764,
       "event": false,
       "count": 6
+    },
+    {
+      "path": "/writing/airport-gate-assignment-multiobjective",
+      "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+      "path_id": 104130835,
+      "event": false,
+      "count": 4
     },
     {
       "path": "/writing/local-first-latex-workflow",
@@ -27325,13 +27430,6 @@
       "count": 3
     },
     {
-      "path": "/writing/airport-gate-assignment-multiobjective",
-      "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
-      "path_id": 104130835,
-      "event": false,
-      "count": 2
-    },
-    {
       "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
       "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
       "path_id": 99994300,
@@ -27365,6 +27463,13 @@
       "path_id": 80752603,
       "event": false,
       "count": 2
+    },
+    {
+      "path": "/writing/claude-watermark-academic-misconduct",
+      "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+      "path_id": 106047814,
+      "event": false,
+      "count": 1
     },
     {
       "path": "/writing/can-llms-jump-scientific-discovery",
