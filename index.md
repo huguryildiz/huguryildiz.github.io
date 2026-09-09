@@ -3,7 +3,7 @@ layout: academic
 title: "Hüseyin Uğur Yıldız | Associate Professor of Electrical Engineering at TED University"
 description: "Associate Professor of Electrical & Electronics Engineering at TED University. Operations research and mathematical optimization for wireless, underwater, and drone-assisted networks."
 permalink: /
-modified: 2026-09-03
+modified: 2026-09-09
 ---
 
 <section class="obs" aria-labelledby="home-h1">
@@ -231,7 +231,12 @@ modified: 2026-09-03
     <div>
       <h3><svg class="ficon fi-q" aria-hidden="true"><use href="#i-atom"/></svg>Quantum networking</h3>
       <ul class="chiprow">
+        <li class="chip chip-q">General Quantum Networks</li>
         <li class="chip chip-q">Entanglement Routing</li>
+        <li class="chip chip-q">Quantum-Pair Inventory</li>
+        <li class="chip chip-q">Age of Entanglement (AoE)</li>
+        <li class="chip chip-q">Stochastic Control</li>
+        <li class="chip chip-q">Finite-Horizon MILP</li>
       </ul>
     </div>
   </div>
