@@ -1735,6 +1735,8 @@ footer.site a:hover .licon.spotify{color:var(--accent);}
 }
 @media (max-width:63.99em){
   .obs-stage{padding-bottom:680px;}
+  .obs-story .obs-stage{position:sticky; top:0;}
+  .obs-story .obs-copy{opacity:var(--copy-opacity,1); transform:translateY(var(--copy-shift,0px)); transition:none;}
   .obs #uwsn-hero .uw-topbar{top:calc(var(--uw-top) + 120px);}
   .obs #uwsn-hero .uw-panel{top:auto; right:64px;
     bottom:calc(var(--uw-plaque-height,170px) + 100px); max-height:180px;}
