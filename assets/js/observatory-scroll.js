@@ -22,7 +22,7 @@
     obs.style.setProperty('--copy-opacity',String(1-fade));
     obs.style.setProperty('--copy-shift',(-fade*36).toFixed(1)+'px');
     /* Invisible identity links must not remain in the keyboard order. */
-    copy.inert=(enabled&&fade>=1)||(wide.matches&&exploring);
+    copy.inert=(enabled&&fade>=1)||exploring;
     if(chapter!==next){
       chapter=next;obs.dataset.chapter=String(next);
       for(var i=0;i<beats.length;i++)beats[i].classList.toggle('is-current',next===i+1);

@@ -1766,7 +1766,7 @@ footer.site a:hover .licon.spotify{color:var(--accent);}
   .obs #uwsn-hero .uw-panel{top:auto; right:64px;
     bottom:calc(var(--uw-plaque-height,170px) + 100px); max-height:180px;}
   .obs #uwsn-hero .uw-zoom{top:auto; bottom:calc(var(--uw-plaque-height,170px) + 100px);}
-  .obs-explore .obs-copy{visibility:visible; opacity:1;}
+  .obs-explore .obs-copy{opacity:0; visibility:hidden; pointer-events:none;}
   .obs-explore #uwsn-hero .uw-shade{background:
     linear-gradient(180deg,rgba(4,13,22,.84) 0px,rgba(4,13,22,.78) calc(var(--uw-top) - 60px),
       rgba(4,13,22,.34) calc(var(--uw-top) + 110px),transparent calc(var(--uw-top) + 220px),transparent 82%,rgba(4,13,22,.5));}
