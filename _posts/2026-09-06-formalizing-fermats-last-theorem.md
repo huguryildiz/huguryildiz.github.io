@@ -5,7 +5,7 @@ description: "Anthropic reports an end-to-end Lean formalization of Fermat's Las
 excerpt: "This is not a new proof of Fermat's Last Theorem. It is a computer-checked formalization of an existing proof — and a striking demonstration of what AI-assisted formal verification can make auditable."
 tags: [Formal Mathematics, Lean, AI-Assisted Research, Mathematical Verification]
 linkedin: "https://www.linkedin.com/feed/update/urn:li:share:7501798924823969792/"
-image: /assets/images/writing/formalizing-fermats-last-theorem.png
+image: /assets/images/writing/formalizing-fermats-last-theorem.webp
 ---
 
 Anthropic reports an end-to-end, computer-checked formalization of **Fermat's Last Theorem**. Working largely autonomously over eleven days, Claude translated a simplified version of the proof developed from Wiles's work into the **Lean** proof assistant.
@@ -17,7 +17,7 @@ The scale is unusual:
 - dozens of Claude agents coordinating through a dependency graph of theorem statements.
 
 <figure class="post-figure">
-  <img src="/assets/images/writing/formalizing-fermats-last-theorem.png" alt="Portrait of Pierre de Fermat beside a chalkboard showing the statement of Fermat's Last Theorem and a^n + b^n = c^n" loading="lazy" width="1536" height="1024">
+  <img src="/assets/images/writing/formalizing-fermats-last-theorem.webp" alt="Portrait of Pierre de Fermat beside a chalkboard showing the statement of Fermat's Last Theorem and a^n + b^n = c^n" loading="lazy" width="1536" height="1024" decoding="async">
   <figcaption>Fermat's Last Theorem and its formalization in a computer-checkable proof language. The illustration is conceptual, not a visualization of the formal proof.</figcaption>
 </figure>
 

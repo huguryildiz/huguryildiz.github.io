@@ -131,7 +131,7 @@ permalink: /research/
   <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-code"/></svg>Software</h2>
 
   <article class="swproject">
-    <img src="/assets/images/software/internet-of-algae-lab-social-preview.png" alt="Internet of Algae Lab GitHub social preview" width="1280" height="640" loading="lazy" decoding="async">
+    <img src="/assets/images/software/internet-of-algae-lab-social-preview.webp" alt="Internet of Algae Lab GitHub social preview" width="1280" height="640" loading="lazy" decoding="async">
     <div>
       <h3>Internet of Algae Lab — Interactive channel simulations</h3>
       <p>A browser-based teaching lab for four communication channels in photosynthetic molecular
@@ -144,7 +144,7 @@ permalink: /research/
   </article>
 
   <article class="swproject">
-    <img src="/assets/images/software/research-graph-social-preview.png" alt="research-graph GitHub social preview" width="1280" height="640" loading="lazy" decoding="async">
+    <img src="/assets/images/software/research-graph-social-preview.webp" alt="research-graph GitHub social preview" width="1280" height="640" loading="lazy" decoding="async">
     <div>
       <h3>research-graph — Agentic research workflow verification</h3>
       <p>A public-beta, contract-gated verification layer for multi-agent research workflows. It
@@ -159,7 +159,7 @@ permalink: /research/
   </article>
 
   <article class="swproject">
-    <img src="/assets/images/software/vera-social-preview.png" alt="VERA GitHub social preview" width="1280" height="640" loading="lazy" decoding="async">
+    <img src="/assets/images/software/vera-social-preview.webp" alt="VERA GitHub social preview" width="1280" height="640" loading="lazy" decoding="async">
     <div>
       <h3>VERA — Visual Evaluation, Reporting &amp; Analytics</h3>
       <p>A modern platform for academic juries, capstone evaluations, and accreditation workflows.
@@ -174,7 +174,7 @@ permalink: /research/
   </article>
 
   <article class="swproject">
-    <img src="/assets/images/kairos-1280x640.png" alt="KAIROS GitHub social preview" width="1280" height="640" loading="lazy" decoding="async">
+    <img src="/assets/images/kairos-1280x640.webp" alt="KAIROS GitHub social preview" width="1280" height="640" loading="lazy" decoding="async">
     <div>
       <h3>KAIROS — Course timetabling</h3>
       <p>A conflict-free university course timetabling system built on OR-Tools CP-SAT. Given raw
@@ -190,7 +190,7 @@ permalink: /research/
   </article>
 
   <article class="swproject">
-    <img src="/assets/images/uwa-ray-bench-1280x640.png" alt="Underwater Acoustic Ray Bench GitHub social preview" width="1280" height="640" loading="lazy" decoding="async">
+    <img src="/assets/images/uwa-ray-bench-1280x640.webp" alt="Underwater Acoustic Ray Bench GitHub social preview" width="1280" height="640" loading="lazy" decoding="async">
     <div>
       <h3>Underwater Acoustic Ray Bench</h3>
       <p>A benchmark pitting five LLMs against a genuine 3D BELLHOP3D reference solver on underwater
