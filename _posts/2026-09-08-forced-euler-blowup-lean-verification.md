@@ -5,7 +5,7 @@ description: "Tristan Buckmaster and Levent Alpöge report finite-time blow-up c
 excerpt: "A remarkable development in AI-assisted analysis: finite-time singularity constructions for several forced fluid equations, paired with machine-checked formalizations. The qualification matters: the results concern forced equations, not the Clay Navier–Stokes problem."
 tags: [Fluid Mechanics, Mathematical Analysis, Lean, AI-Assisted Research, Formal Verification]
 linkedin: "https://www.linkedin.com/feed/update/urn:li:share:7503119914476544000/"
-image: /assets/images/writing/forced-3d-euler-vortex.png
+image: /assets/images/writing/forced-3d-euler-vortex.webp
 ---
 
 Tristan Buckmaster and Levent Alpöge have released three results on finite-time singularity formation with smooth forcing: for the incompressible porous media (IPM) equation, the inviscid Boussinesq system, and the three-dimensional incompressible Euler equations. The accompanying statement says that large language models helped advance a research programme whose underlying ideas are credited to Diego Córdoba and Luis Martínez-Zoroa.
@@ -13,7 +13,7 @@ Tristan Buckmaster and Levent Alpöge have released three results on finite-time
 The most important qualification is also the easiest to lose in the headline: these are **forced** equations. The Euler paper constructs a smooth space–time force that sustains an axisymmetric solution whose vorticity becomes singular in finite time. This is not a solution of the unforced three-dimensional Euler problem, and it does not resolve the Navier–Stokes Millennium Prize problem. Buckmaster also says that the related hypodissipative Navier–Stokes work is not being released because its Lean verification is unfinished.
 
 <figure class="post-figure">
-  <img src="/assets/images/writing/forced-3d-euler-vortex.png" alt="Abstract illustration of fine streamlines forming a three-dimensional vortex" loading="lazy" width="1254" height="1254">
+  <img src="/assets/images/writing/forced-3d-euler-vortex.webp" alt="Abstract illustration of fine streamlines forming a three-dimensional vortex" loading="lazy" width="1254" height="1254" decoding="async">
   <figcaption>Conceptual vortex illustration. This image is not a figure from the cited papers.</figcaption>
 </figure>
 

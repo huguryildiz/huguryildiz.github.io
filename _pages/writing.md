@@ -19,7 +19,7 @@ permalink: /writing/
     <li class="post-card">
       <a class="post-card-link" href="{{ post.url | relative_url }}">
         {%- if post.image -%}
-        <div class="post-card-cover"><img src="{{ post.image | relative_url }}" alt="" loading="lazy"></div>
+        <div class="post-card-cover"><img src="{{ post.image | relative_url }}" alt="" loading="lazy" decoding="async"></div>
         {%- endif -%}
         <div class="post-card-body">
           <div class="post-card-meta">
