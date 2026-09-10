@@ -84,7 +84,7 @@ layout: compress
   {%- if page.collection == "posts" %}
   {%- assign page_modified = page.last_modified_at | default: page.date %}
   {%- else %}
-  {%- assign page_modified = page.modified | default: site.content_last_updated %}
+  {%- assign page_modified = page.modified | default: site.data.site_build.updated_at | default: site.content_last_updated %}
   {%- endif %}
   <meta name="last-modified" content="{{ page_modified | date_to_xmlschema }}">
   <meta property="article:modified_time" content="{{ page_modified | date_to_xmlschema }}">
@@ -137,7 +137,11 @@ layout: compress
   <footer class="site">
     <div class="shell footer-row">
       <span class="fcopy">© {{ 'now' | date: "%Y" }} Hüseyin Uğur Yıldız · Jekyll · GitHub Pages</span>
-      <span class="fupdated">Last updated <time datetime="{{ site.content_last_updated | date: "%Y-%m-%d" }}">{{ site.content_last_updated | date: "%B %-d, %Y" }}</time></span>
+      {%- assign site_updated = site.data.site_build.updated_at | default: site.content_last_updated -%}
+      <span class="fupdated">
+        <span class="fupdated-mark" aria-hidden="true"></span>
+        <span class="fupdated-copy"><span class="fupdated-label">Last updated</span><time datetime="{{ site_updated | date: "%Y-%m-%d" }}">{{ site_updated | date: "%B %-d, %Y" }}</time></span>
+      </span>
       <span class="flisten">
         <span class="flabel">Listening</span>
         <a href="https://open.spotify.com/playlist/0rGMcXyrxCuw5GGxl9WwXX" target="_blank" rel="noopener"><svg class="licon spotify" aria-hidden="true"><use href="#i-spotify"/></svg> Jazz<span class="sr-only"> (external)</span></a>

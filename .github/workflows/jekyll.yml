@@ -9,7 +9,7 @@ name: Deploy Jekyll site to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["master"]
+    branches: ["master", "main"]
 
   # Regenerates the CV PDF daily even if nothing else triggered a build
   schedule:
@@ -47,6 +47,10 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6
+      - name: Stamp build date
+        run: |
+          commit_date="$(git show -s --format=%cI "${GITHUB_SHA}")"
+          printf 'updated_at: "%s"\n' "${commit_date}" > _data/site_build.yml
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
