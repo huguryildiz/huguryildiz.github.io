@@ -202,17 +202,20 @@ modified: 2026-09-09
           Ankara, in 2013 and 2016, respectively.</p>
         <p>Between 2010 and 2015, he worked at
           <a href="https://www.turktelekom.com.tr/en" target="_blank" rel="noopener">Turk Telekom<span class="sr-only"> (external)</span></a>, where he contributed to the design and operation
-          of the Safer Internet Service, a nationwide content-filtering and parental-control platform used by
+          of the <a href="https://www.btk.gov.tr/en/haberler/guvenli-internet-gunu-btk-da-kutlandi" target="_blank" rel="noopener">Safer Internet Service<span class="sr-only"> (external)</span></a>, a nationwide content-filtering and parental-control platform used by
           more than five million subscribers. From 2015 to 2016, he was with
           <a href="https://www.tusas.com/en" target="_blank" rel="noopener">Turkish Aerospace<span class="sr-only"> (external)</span></a>, where he was
-          involved in the development and integration of communication and network architectures for ANKA
+          involved in the development and integration of communication and network architectures for
+          <a href="https://www.tusas.com/en/products/uav/operative-strategic-uav-systems/anka" target="_blank" rel="noopener">ANKA<span class="sr-only"> (external)</span></a>
           unmanned aerial vehicle systems. He joined the Department of Electrical and Electronics Engineering
           at <a href="https://www.tedu.edu.tr/en" target="_blank" rel="noopener">TED University<span class="sr-only"> (external)</span></a> in 2016, where he has been serving as an Associate Professor since 2021 and held
           the position of Department Chair from 2021 to 2024.</p>
         <p>He has authored over 40 peer-reviewed journal articles and conference papers, which have accumulated
-          more than 1,000 citations. He serves as an Area Editor for <i>Ad Hoc Networks</i> (Elsevier), managing
+          more than 1,000 citations. He serves as an Area Editor for
+          <a href="https://www.sciencedirect.com/journal/ad-hoc-networks" target="_blank" rel="noopener"><i>Ad Hoc Networks</i><span class="sr-only"> (external)</span></a> (Elsevier), managing
           peer review in wireless ad hoc, sensor, underwater acoustic, and UAV-assisted networks. He received the
-          IEEE Middle East and North Africa Communications Conference 2019 Best Paper Award and was elevated to
+          <a href="https://doi.org/10.1109/MENACOMM46666.2019.8988521" target="_blank" rel="noopener">IEEE Middle East and North Africa Communications Conference (MENACOMM) 2019<span class="sr-only"> (external)</span></a>
+          Best Paper Award and was elevated to
           IEEE Senior Member in 2021.</p>
     </div>
   </section>
