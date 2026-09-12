@@ -3,6 +3,7 @@ title: "arXivisual: interactive visual explanations for research papers"
 date: 2026-09-12
 description: "arXivisual is an open-source project that turns arXiv papers into scroll-driven visual explanations with animations and voice narration."
 excerpt: "arXivisual explores how research papers might be presented as interactive, scroll-driven visual explanations while retaining the paper as the rigorous reference record."
+image: /assets/images/writing/arxivisual-landing.jpeg
 tags: [Academic Publishing, arXiv, Open Source, Scientific Visualization]
 linkedin: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7503395674009337857/"
 ---
@@ -25,4 +26,3 @@ This is a presentation and visualization project, not evidence that generated ex
 
 - [Explore arXivisual →](https://www.arxivisual.org/)
 - [Read the source code →](https://github.com/rajshah6/arXivisual)
-
