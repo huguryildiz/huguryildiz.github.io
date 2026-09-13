@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-12T07:47:22Z",
+  "updated": "2026-09-13T08:08:07Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-09-12"
+    "end": "2026-09-13"
   },
   "window_order": [
     "today",
@@ -16,17 +16,110 @@
   "windows": {
     "today": {
       "label": "Today",
+      "start": "2026-09-13",
+      "end": "2026-09-13",
+      "pageviews": 1,
+      "pages_total": 1,
+      "pages": [
+        {
+          "path": "/cv",
+          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
+          "path_id": 80749912,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events_total": 0,
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries_total": 1,
+      "countries": [
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "count": 1
+        }
+      ],
+      "referrers_total": 0,
+      "referrers": [],
+      "browsers_total": 1,
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        }
+      ],
+      "systems_total": 1,
+      "systems": [
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
+      "sizes_total": 0,
+      "sizes": [],
+      "languages_total": 1,
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        }
+      ],
+      "regions_total": 0,
+      "regions": [],
+      "regions_unmatched": []
+    },
+    "yesterday": {
+      "label": "Yesterday",
       "start": "2026-09-12",
       "end": "2026-09-12",
-      "pageviews": 2,
-      "pages_total": 1,
+      "pageviews": 4,
+      "pages_total": 2,
       "pages": [
         {
           "path": "/writing/forced-euler-blowup-lean-verification",
           "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
           "path_id": 106131609,
           "event": false,
-          "count": 2
+          "count": 3,
+          "refs": [
+            {
+              "name": "chatgpt.com",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/publications",
+          "title": "Publications | Huseyin Ugur Yildiz",
+          "path_id": 80750273,
+          "event": false,
+          "count": 1
         }
       ],
       "events_total": 0,
@@ -45,23 +138,28 @@
         1,
         0,
         0,
+        1,
         0,
         0,
         0,
         0,
-        0,
-        0,
+        1,
         0,
         0,
         0,
         0,
         0
       ],
-      "countries_total": 2,
+      "countries_total": 3,
       "countries": [
         {
           "code": "NL",
           "name": "Netherlands",
+          "count": 1
+        },
+        {
+          "code": "NO",
+          "name": "Norway",
           "count": 1
         },
         {
@@ -70,20 +168,33 @@
           "count": 1
         }
       ],
-      "referrers_total": 0,
-      "referrers": [],
-      "browsers_total": 1,
+      "referrers_total": 1,
+      "referrers": [
+        {
+          "name": "chatgpt.com",
+          "count": 1
+        }
+      ],
+      "browsers_total": 2,
       "browsers": [
         {
           "name": "Chrome",
           "count": 2
+        },
+        {
+          "name": "Safari",
+          "count": 1
         }
       ],
-      "systems_total": 1,
+      "systems_total": 2,
       "systems": [
         {
           "name": "macOS",
           "count": 2
+        },
+        {
+          "name": "iOS",
+          "count": 1
         }
       ],
       "sizes_total": 0,
@@ -92,15 +203,22 @@
       "languages": [
         {
           "name": "English",
-          "count": 2
+          "count": 3
         }
       ],
-      "regions_total": 2,
+      "regions_total": 3,
       "regions": [
         {
           "name": "Groningen",
           "country": "Netherlands",
           "country_code": "NL",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "Oslo County",
+          "country": "Norway",
+          "country_code": "NO",
           "code": null,
           "count": 1
         },
@@ -114,159 +232,22 @@
       ],
       "regions_unmatched": []
     },
-    "yesterday": {
-      "label": "Yesterday",
-      "start": "2026-09-11",
-      "end": "2026-09-11",
-      "pageviews": 4,
-      "pages_total": 2,
-      "pages": [
-        {
-          "path": "/",
-          "title": "Home | Huseyin Ugur Yildiz",
-          "path_id": 80749188,
-          "event": false,
-          "count": 3,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 1
-            },
-            {
-              "name": "kairos.huguryildiz.com",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/writing/forced-euler-blowup-lean-verification",
-          "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
-          "path_id": 106131609,
-          "event": false,
-          "count": 1
-        }
-      ],
-      "events_total": 0,
-      "events": [],
-      "hourly": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
-        0,
-        2,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0
-      ],
-      "countries_total": 1,
-      "countries": [
-        {
-          "code": "TR",
-          "name": "Turkey",
-          "count": 3
-        }
-      ],
-      "referrers_total": 1,
-      "referrers": [
-        {
-          "name": "Google",
-          "count": 1
-        }
-      ],
-      "browsers_total": 3,
-      "browsers": [
-        {
-          "name": "Chrome",
-          "count": 1
-        },
-        {
-          "name": "Firefox",
-          "count": 1
-        },
-        {
-          "name": "Safari",
-          "count": 1
-        }
-      ],
-      "systems_total": 3,
-      "systems": [
-        {
-          "name": "Android",
-          "count": 1
-        },
-        {
-          "name": "iOS",
-          "count": 1
-        },
-        {
-          "name": "Windows",
-          "count": 1
-        }
-      ],
-      "sizes_total": 0,
-      "sizes": [],
-      "languages_total": 1,
-      "languages": [
-        {
-          "name": "English",
-          "count": 3
-        }
-      ],
-      "regions_total": 2,
-      "regions": [
-        {
-          "name": "Ankara",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "06",
-          "count": 1
-        },
-        {
-          "name": "İstanbul",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "34",
-          "count": 1
-        }
-      ],
-      "regions_unmatched": []
-    },
     "7d": {
       "label": "Last 7 days",
-      "start": "2026-09-06",
-      "end": "2026-09-12",
-      "pageviews": 38,
-      "pages_total": 14,
+      "start": "2026-09-07",
+      "end": "2026-09-13",
+      "pageviews": 33,
+      "pages_total": 12,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 17,
+          "count": 13,
           "refs": [
             {
               "name": "Google",
-              "count": 3
-            },
-            {
-              "name": "com.linkedin.android",
               "count": 2
             },
             {
@@ -288,7 +269,13 @@
           "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
           "path_id": 106131609,
           "event": false,
-          "count": 5
+          "count": 6,
+          "refs": [
+            {
+              "name": "chatgpt.com",
+              "count": 1
+            }
+          ]
         },
         {
           "path": "/writing/airport-gate-assignment-multiobjective",
@@ -304,9 +291,9 @@
           ]
         },
         {
-          "path": "/students",
-          "title": "Students | Huseyin Ugur Yildiz",
-          "path_id": 80840367,
+          "path": "/publications",
+          "title": "Publications | Huseyin Ugur Yildiz",
+          "path_id": 80750273,
           "event": false,
           "count": 2,
           "refs": [
@@ -317,15 +304,15 @@
           ]
         },
         {
-          "path": "/research",
-          "title": "Research | Huseyin Ugur Yildiz",
-          "path_id": 80750374,
+          "path": "/cv",
+          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
+          "path_id": 80749912,
           "event": false,
           "count": 2,
           "refs": [
             {
-              "name": "huguryildiz.com",
-              "count": 2
+              "name": "Google",
+              "count": 1
             }
           ]
         },
@@ -358,13 +345,6 @@
           "count": 1
         },
         {
-          "path": "/writing",
-          "title": "Writing | Huseyin Ugur Yildiz",
-          "path_id": 96360100,
-          "event": false,
-          "count": 1
-        },
-        {
           "path": "/404.html",
           "title": "Page Not Found Huseyin Ugur Yildiz",
           "path_id": 80992097,
@@ -372,23 +352,16 @@
           "count": 1
         },
         {
-          "path": "/service",
-          "title": "Service | Huseyin Ugur Yildiz",
-          "path_id": 80843167,
+          "path": "/students",
+          "title": "Students | Huseyin Ugur Yildiz",
+          "path_id": 80840367,
           "event": false,
           "count": 1
         },
         {
-          "path": "/publications",
-          "title": "Publications | Huseyin Ugur Yildiz",
-          "path_id": 80750273,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/cv",
-          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
-          "path_id": 80749912,
+          "path": "/research",
+          "title": "Research | Huseyin Ugur Yildiz",
+          "path_id": 80750374,
           "event": false,
           "count": 1
         }
@@ -396,16 +369,16 @@
       "events_total": 2,
       "events": [
         {
-          "path": "cv-pdf",
-          "title": "CV (PDF), from the CV page",
-          "path_id": 96697209,
-          "event": true,
-          "count": 2
-        },
-        {
           "path": "thesis-pdf/msc-thesis",
           "title": "MSc thesis (PDF)",
           "path_id": 106140872,
+          "event": true,
+          "count": 1
+        },
+        {
+          "path": "cv-pdf",
+          "title": "CV (PDF), from the CV page",
+          "path_id": 96697209,
           "event": true,
           "count": 1
         }
@@ -417,56 +390,47 @@
         0,
         1,
         0,
+        2,
+        2,
         1,
+        2,
+        2,
         2,
         1,
         3,
-        2,
-        2,
-        2,
-        2,
-        1,
+        0,
         2,
         0,
         1,
+        2,
         1,
         1,
-        6,
         0,
         3,
         5
       ],
-      "countries_total": 4,
+      "countries_total": 3,
       "countries": [
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 12
+          "count": 10
         },
         {
           "code": "US",
           "name": "United States",
-          "count": 3
+          "count": 2
         },
         {
           "code": "GB",
           "name": "United Kingdom",
           "count": 1
-        },
-        {
-          "code": "IN",
-          "name": "India",
-          "count": 1
         }
       ],
-      "referrers_total": 3,
+      "referrers_total": 2,
       "referrers": [
         {
           "name": "Google",
-          "count": 3
-        },
-        {
-          "name": "com.linkedin.android",
           "count": 2
         },
         {
@@ -477,19 +441,19 @@
       "browsers_total": 3,
       "browsers": [
         {
-          "name": "Chrome",
+          "name": "Safari",
           "count": 8
         },
         {
-          "name": "Safari",
-          "count": 8
+          "name": "Chrome",
+          "count": 4
         },
         {
           "name": "Firefox",
           "count": 1
         }
       ],
-      "systems_total": 5,
+      "systems_total": 4,
       "systems": [
         {
           "name": "iOS",
@@ -497,15 +461,11 @@
         },
         {
           "name": "Android",
-          "count": 6
+          "count": 3
         },
         {
           "name": "Windows",
           "count": 2
-        },
-        {
-          "name": "Linux",
-          "count": 1
         },
         {
           "name": "macOS",
@@ -518,21 +478,21 @@
       "languages": [
         {
           "name": "English",
-          "count": 14
+          "count": 11
         },
         {
           "name": "Turkish",
-          "count": 3
+          "count": 2
         }
       ],
-      "regions_total": 8,
+      "regions_total": 5,
       "regions": [
         {
           "name": "Ankara",
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 6
+          "count": 5
         },
         {
           "name": "İstanbul",
@@ -542,21 +502,7 @@
           "count": 2
         },
         {
-          "name": "İzmir",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "35",
-          "count": 1
-        },
-        {
           "name": "Colorado",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 1
-        },
-        {
-          "name": "New York",
           "country": "United States",
           "country_code": "US",
           "code": null,
@@ -575,22 +521,15 @@
           "country_code": "GB",
           "code": null,
           "count": 1
-        },
-        {
-          "name": "Karnataka",
-          "country": "India",
-          "country_code": "IN",
-          "code": null,
-          "count": 1
         }
       ],
       "regions_unmatched": []
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-08-14",
-      "end": "2026-09-12",
-      "pageviews": 120,
+      "start": "2026-08-15",
+      "end": "2026-09-13",
+      "pageviews": 121,
       "pages_total": 21,
       "pages": [
         {
@@ -598,7 +537,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 54,
+          "count": 52,
           "refs": [
             {
               "name": "Google",
@@ -652,7 +591,7 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 7,
+          "count": 8,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -669,20 +608,45 @@
           "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
           "path_id": 106131609,
           "event": false,
-          "count": 5
+          "count": 6,
+          "refs": [
+            {
+              "name": "chatgpt.com",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/cv",
+          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
+          "path_id": 80749912,
+          "event": false,
+          "count": 6,
+          "refs": [
+            {
+              "name": "huguryildiz.com/service",
+              "count": 2
+            },
+            {
+              "name": "Google",
+              "count": 1
+            },
+            {
+              "name": "huguryildiz.com",
+              "count": 1
+            },
+            {
+              "name": "huguryildiz.com/students",
+              "count": 1
+            }
+          ]
         },
         {
           "path": "/writing/airport-gate-assignment-multiobjective",
           "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
           "path_id": 104130835,
           "event": false,
-          "count": 5,
-          "refs": [
-            {
-              "name": "chatgpt.com",
-              "count": 2
-            }
-          ]
+          "count": 5
         },
         {
           "path": "/service",
@@ -702,13 +666,6 @@
           "path": "/teaching",
           "title": "Huseyin Ugur Yildiz",
           "path_id": 80750338,
-          "event": false,
-          "count": 5
-        },
-        {
-          "path": "/cv",
-          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
-          "path_id": 80749912,
           "event": false,
           "count": 5
         },
@@ -828,26 +785,26 @@
         2,
         2,
         0,
-        1,
-        7,
-        4,
-        4,
-        2,
-        7,
         2,
         6,
+        3,
+        4,
+        2,
+        7,
+        2,
+        7,
         8,
         9,
         4,
         5,
-        6,
+        7,
         2,
         8,
         8,
         9,
         7
       ],
-      "countries_total": 9,
+      "countries_total": 8,
       "countries": [
         {
           "code": "TR",
@@ -857,7 +814,7 @@
         {
           "code": "US",
           "name": "United States",
-          "count": 12
+          "count": 11
         },
         {
           "code": "GB",
@@ -867,11 +824,6 @@
         {
           "code": "DE",
           "name": "Germany",
-          "count": 1
-        },
-        {
-          "code": "HK",
-          "name": "Hong Kong",
           "count": 1
         },
         {
@@ -922,7 +874,7 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 30
+          "count": 28
         },
         {
           "name": "Safari",
@@ -941,7 +893,7 @@
         },
         {
           "name": "Windows",
-          "count": 14
+          "count": 13
         },
         {
           "name": "Android",
@@ -949,7 +901,7 @@
         },
         {
           "name": "macOS",
-          "count": 6
+          "count": 5
         },
         {
           "name": "Linux",
@@ -962,7 +914,7 @@
       "languages": [
         {
           "name": "English",
-          "count": 40
+          "count": 38
         },
         {
           "name": "Turkish",
@@ -981,7 +933,7 @@
           "count": 1
         }
       ],
-      "regions_total": 16,
+      "regions_total": 17,
       "regions": [
         {
           "name": "Ankara",
@@ -1009,13 +961,6 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "35",
-          "count": 2
-        },
-        {
-          "name": "Colorado",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
           "count": 2
         },
         {
@@ -1047,6 +992,13 @@
           "count": 1
         },
         {
+          "name": "Colorado",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 1
+        },
+        {
           "name": "Florida",
           "country": "United States",
           "country_code": "US",
@@ -1072,9 +1024,9 @@
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-06-15",
-      "end": "2026-09-12",
-      "pageviews": 494,
+      "start": "2026-06-16",
+      "end": "2026-09-13",
+      "pageviews": 495,
       "pages_total": 24,
       "pages": [
         {
@@ -1082,7 +1034,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 197,
+          "count": 195,
           "refs": [
             {
               "name": "Google",
@@ -1111,7 +1063,7 @@
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
-          "count": 85,
+          "count": 86,
           "refs": [
             {
               "name": "Google",
@@ -1140,7 +1092,7 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 39,
+          "count": 40,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -1251,6 +1203,13 @@
           "count": 9
         },
         {
+          "path": "/writing/forced-euler-blowup-lean-verification",
+          "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
+          "path_id": 106131609,
+          "event": false,
+          "count": 6
+        },
+        {
           "path": "/writing/ieee-twc-submission-cap",
           "title": "An academic rate limiter: IEEE TWC now caps authors at 36 new manuscripts a year | Huseyin Ugur Yildiz",
           "path_id": 96633631,
@@ -1263,13 +1222,6 @@
           "path_id": 95945764,
           "event": false,
           "count": 6
-        },
-        {
-          "path": "/writing/forced-euler-blowup-lean-verification",
-          "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
-          "path_id": 106131609,
-          "event": false,
-          "count": 5
         },
         {
           "path": "/writing/airport-gate-assignment-multiobjective",
@@ -1394,19 +1346,19 @@
         14,
         22,
         4,
-        4,
+        5,
         14,
         5,
         6,
         13,
         19,
         14,
-        26,
+        27,
         38,
         35,
-        29,
-        23,
-        45,
+        28,
+        22,
+        46,
         28,
         22,
         20,
@@ -1418,7 +1370,7 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 109
+          "count": 108
         },
         {
           "code": "US",
@@ -1449,11 +1401,6 @@
           "code": "JP",
           "name": "Japan",
           "count": 3
-        },
-        {
-          "code": "DZ",
-          "name": "Algeria",
-          "count": 2
         },
         {
           "code": "NL",
@@ -1488,6 +1435,11 @@
         {
           "code": "CY",
           "name": "Cyprus",
+          "count": 1
+        },
+        {
+          "code": "DZ",
+          "name": "Algeria",
           "count": 1
         },
         {
@@ -1567,10 +1519,6 @@
           "count": 2
         },
         {
-          "name": "chatgpt.com",
-          "count": 2
-        },
-        {
           "name": "duckduckgo.com",
           "count": 1
         },
@@ -1581,13 +1529,17 @@
         {
           "name": "scholar.google.com",
           "count": 1
+        },
+        {
+          "name": "chatgpt.com",
+          "count": 1
         }
       ],
       "browsers_total": 4,
       "browsers": [
         {
           "name": "Chrome",
-          "count": 123
+          "count": 121
         },
         {
           "name": "Safari",
@@ -1614,7 +1566,7 @@
         },
         {
           "name": "macOS",
-          "count": 48
+          "count": 46
         },
         {
           "name": "Android",
@@ -1631,7 +1583,7 @@
       "languages": [
         {
           "name": "(unknown)",
-          "count": 102
+          "count": 100
         },
         {
           "name": "English",
@@ -1756,9 +1708,9 @@
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-09-13",
-      "end": "2026-09-12",
-      "pageviews": 1128,
+      "start": "2025-09-14",
+      "end": "2026-09-13",
+      "pageviews": 1131,
       "pages_total": 28,
       "pages": [
         {
@@ -1795,7 +1747,7 @@
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
-          "count": 144,
+          "count": 145,
           "refs": [
             {
               "name": "Google",
@@ -1824,7 +1776,7 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 133,
+          "count": 134,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -1942,6 +1894,13 @@
           "count": 11
         },
         {
+          "path": "/writing/forced-euler-blowup-lean-verification",
+          "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
+          "path_id": 106131609,
+          "event": false,
+          "count": 6
+        },
+        {
           "path": "/writing/ieee-twc-submission-cap",
           "title": "An academic rate limiter: IEEE TWC now caps authors at 36 new manuscripts a year | Huseyin Ugur Yildiz",
           "path_id": 96633631,
@@ -1954,13 +1913,6 @@
           "path_id": 95945764,
           "event": false,
           "count": 6
-        },
-        {
-          "path": "/writing/forced-euler-blowup-lean-verification",
-          "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
-          "path_id": 106131609,
-          "event": false,
-          "count": 5
         },
         {
           "path": "/writing/airport-gate-assignment-multiobjective",
@@ -2106,19 +2058,19 @@
         53,
         32,
         11,
-        5,
+        6,
         20,
         11,
         28,
         27,
         58,
         37,
-        67,
+        68,
         77,
         67,
         78,
         47,
-        82,
+        83,
         53,
         44,
         39,
@@ -2528,8 +2480,8 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-09-12",
-      "pageviews": 1128,
+      "end": "2026-09-13",
+      "pageviews": 1131,
       "pages_total": 28,
       "pages": [
         {
@@ -2566,7 +2518,7 @@
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
-          "count": 144,
+          "count": 145,
           "refs": [
             {
               "name": "Google",
@@ -2595,7 +2547,7 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 133,
+          "count": 134,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -2713,6 +2665,13 @@
           "count": 11
         },
         {
+          "path": "/writing/forced-euler-blowup-lean-verification",
+          "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
+          "path_id": 106131609,
+          "event": false,
+          "count": 6
+        },
+        {
           "path": "/writing/ieee-twc-submission-cap",
           "title": "An academic rate limiter: IEEE TWC now caps authors at 36 new manuscripts a year | Huseyin Ugur Yildiz",
           "path_id": 96633631,
@@ -2725,13 +2684,6 @@
           "path_id": 95945764,
           "event": false,
           "count": 6
-        },
-        {
-          "path": "/writing/forced-euler-blowup-lean-verification",
-          "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
-          "path_id": 106131609,
-          "event": false,
-          "count": 5
         },
         {
           "path": "/writing/airport-gate-assignment-multiobjective",
@@ -2877,19 +2829,19 @@
         53,
         32,
         11,
-        5,
+        6,
         20,
         11,
         28,
         27,
         58,
         37,
-        67,
+        68,
         77,
         67,
         78,
         47,
-        82,
+        83,
         53,
         44,
         39,
@@ -4176,7 +4128,11 @@
     },
     {
       "date": "2026-09-12",
-      "views": 2
+      "views": 4
+    },
+    {
+      "date": "2026-09-13",
+      "views": 1
     }
   ],
   "daily_breakdowns": {
@@ -22286,14 +22242,21 @@
       ]
     },
     "2026-09-12": {
-      "pageviews": 2,
+      "pageviews": 4,
       "pages": [
         {
           "path": "/writing/forced-euler-blowup-lean-verification",
           "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
           "path_id": 106131609,
           "event": false,
-          "count": 2
+          "count": 3
+        },
+        {
+          "path": "/publications",
+          "title": "Publications | Huseyin Ugur Yildiz",
+          "path_id": 80750273,
+          "event": false,
+          "count": 1
         }
       ],
       "events": [],
@@ -22311,6 +22274,95 @@
         1,
         0,
         0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries": [
+        {
+          "code": "NL",
+          "name": "Netherlands",
+          "count": 1
+        },
+        {
+          "code": "NO",
+          "name": "Norway",
+          "count": 1
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 1
+        }
+      ],
+      "referrers": [
+        {
+          "name": "chatgpt.com",
+          "count": 1
+        }
+      ],
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 2
+        },
+        {
+          "name": "Safari",
+          "count": 1
+        }
+      ],
+      "systems": [
+        {
+          "name": "macOS",
+          "count": 2
+        },
+        {
+          "name": "iOS",
+          "count": 1
+        }
+      ],
+      "sizes": [],
+      "languages": [
+        {
+          "name": "English",
+          "count": 3
+        }
+      ]
+    },
+    "2026-09-13": {
+      "pageviews": 1,
+      "pages": [
+        {
+          "path": "/cv",
+          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
+          "path_id": 80749912,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0,
@@ -22325,13 +22377,8 @@
       ],
       "countries": [
         {
-          "code": "NL",
-          "name": "Netherlands",
-          "count": 1
-        },
-        {
-          "code": "US",
-          "name": "United States",
+          "code": "SG",
+          "name": "Singapore",
           "count": 1
         }
       ],
@@ -22339,20 +22386,20 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 2
+          "count": 1
         }
       ],
       "systems": [
         {
-          "name": "macOS",
-          "count": 2
+          "name": "Windows",
+          "count": 1
         }
       ],
       "sizes": [],
       "languages": [
         {
           "name": "English",
-          "count": 2
+          "count": 1
         }
       ]
     }
@@ -23246,13 +23293,17 @@
         {
           "date": "2026-09-13",
           "views": 0
+        },
+        {
+          "date": "2026-09-14",
+          "views": 0
         }
       ]
     },
     {
       "path": "/cv",
       "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
-      "count": 144,
+      "count": 145,
       "stats": [
         {
           "date": "2026-02-05",
@@ -24136,6 +24187,10 @@
         },
         {
           "date": "2026-09-13",
+          "views": 1
+        },
+        {
+          "date": "2026-09-14",
           "views": 0
         }
       ]
@@ -24143,7 +24198,7 @@
     {
       "path": "/publications",
       "title": "Publications | Huseyin Ugur Yildiz",
-      "count": 133,
+      "count": 134,
       "stats": [
         {
           "date": "2026-02-05",
@@ -25023,10 +25078,14 @@
         },
         {
           "date": "2026-09-12",
-          "views": 0
+          "views": 1
         },
         {
           "date": "2026-09-13",
+          "views": 0
+        },
+        {
+          "date": "2026-09-14",
           "views": 0
         }
       ]
@@ -25919,6 +25978,10 @@
         {
           "date": "2026-09-13",
           "views": 0
+        },
+        {
+          "date": "2026-09-14",
+          "views": 0
         }
       ]
     },
@@ -26809,6 +26872,10 @@
         },
         {
           "date": "2026-09-13",
+          "views": 0
+        },
+        {
+          "date": "2026-09-14",
           "views": 0
         }
       ]
@@ -27697,13 +27764,17 @@
         {
           "date": "2026-09-13",
           "views": 0
+        },
+        {
+          "date": "2026-09-14",
+          "views": 0
         }
       ]
     }
   ],
   "site": {},
   "totals": {
-    "pageviews": 1128,
+    "pageviews": 1131,
     "visitors": null
   },
   "pages": [
@@ -27741,7 +27812,7 @@
       "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
       "path_id": 80749912,
       "event": false,
-      "count": 144,
+      "count": 145,
       "refs": [
         {
           "name": "Google",
@@ -27770,7 +27841,7 @@
       "title": "Publications | Huseyin Ugur Yildiz",
       "path_id": 80750273,
       "event": false,
-      "count": 133,
+      "count": 134,
       "refs": [
         {
           "name": "huguryildiz.com",
@@ -27888,6 +27959,13 @@
       "count": 11
     },
     {
+      "path": "/writing/forced-euler-blowup-lean-verification",
+      "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
+      "path_id": 106131609,
+      "event": false,
+      "count": 6
+    },
+    {
       "path": "/writing/ieee-twc-submission-cap",
       "title": "An academic rate limiter: IEEE TWC now caps authors at 36 new manuscripts a year | Huseyin Ugur Yildiz",
       "path_id": 96633631,
@@ -27900,13 +27978,6 @@
       "path_id": 95945764,
       "event": false,
       "count": 6
-    },
-    {
-      "path": "/writing/forced-euler-blowup-lean-verification",
-      "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
-      "path_id": 106131609,
-      "event": false,
-      "count": 5
     },
     {
       "path": "/writing/airport-gate-assignment-multiobjective",
