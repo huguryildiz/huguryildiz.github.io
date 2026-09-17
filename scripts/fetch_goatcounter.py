@@ -522,13 +522,30 @@ def load_daily_cache():
     return cache if isinstance(cache, dict) else {}
 
 
-def refresh_daily_cache(cache, first_day, last_day):
-    """Fill missing days and refresh the newest two within a hard call cap."""
+def refresh_daily_cache(cache, first_day, last_day, force_ranges=None):
+    """Fill missing days and refresh selected days within a hard call cap.
+
+    ``force_ranges`` is used when a preset total no longer agrees with a
+    previously cached daily block. GoatCounter can revise historical aggregates
+    after a snapshot was written, so refreshing the affected short range gives
+    the cache a chance to catch up without turning every scheduled run into a
+    full backfill.
+    """
+    forced_days = set()
+    for range_start, range_end in force_ranges or []:
+        cursor = max(first_day, range_start)
+        end = min(last_day, range_end)
+        while cursor <= end:
+            forced_days.add(cursor)
+            cursor += timedelta(days=1)
+
     wanted = []
     cursor = first_day
     while cursor <= last_day:
         key = cursor.isoformat()
-        if key not in cache or (last_day - cursor).days < DAILY_REFRESH_DAYS:
+        if (key not in cache
+                or cursor in forced_days
+                or (last_day - cursor).days < DAILY_REFRESH_DAYS):
             wanted.append(cursor)
         cursor += timedelta(days=1)
 
@@ -561,6 +578,23 @@ def refresh_daily_cache(cache, first_day, last_day):
             print(f"[WARN] daily {day}: breakdown/page-view mismatch {mismatches}; caching temporal block")
         cache[day.isoformat()] = block
     return {key: cache[key] for key in sorted(cache) if first_day.isoformat() <= key <= last_day.isoformat()}
+
+
+def window_daily_sum_mismatches(windows, daily_breakdowns, tracked_since):
+    """Find preset windows whose direct total differs from daily aggregates."""
+    mismatches = {}
+    tracked_start = date.fromisoformat(tracked_since)
+    for key, _, days, offset in WINDOWS:
+        if key not in windows:
+            continue
+        start, end = window_bounds(days, offset)
+        start = max(start, tracked_start)
+        expected = sum(block["pageviews"] for day, block in daily_breakdowns.items()
+                       if start.isoformat() <= day <= end.isoformat())
+        actual = windows[key]["pageviews"]
+        if expected != actual:
+            mismatches[key] = {"window": actual, "daily": expected}
+    return mismatches
 
 
 def fetch_regions(countries, start, end, page_filter):
@@ -635,9 +669,10 @@ def main():
     # Backfill the exact daily blocks once, then refresh just the newest two on
     # ordinary scheduled runs. A fully covered cache becomes the authoritative
     # site-calendar daily series used by the KPI row and custom-range breakdowns.
-    daily_breakdowns = refresh_daily_cache(
-        load_daily_cache(), date.fromisoformat(tracked_since), TODAY)
-    expected_days = (TODAY - date.fromisoformat(tracked_since)).days + 1
+    tracked_start = date.fromisoformat(tracked_since)
+    daily_cache = load_daily_cache()
+    daily_breakdowns = refresh_daily_cache(daily_cache, tracked_start, TODAY)
+    expected_days = (TODAY - tracked_start).days + 1
     if len(daily_breakdowns) == expected_days:
         timeseries = [{"date": day, "views": int(block.get("pageviews") or 0)}
                       for day, block in daily_breakdowns.items()]
@@ -678,19 +713,34 @@ def main():
             print(f"[WARN] {key} breakdown totals {mismatches} do not equal page-view total "
                   f"{block['pageviews']}; affected breakdowns will be unavailable")
 
-    # When every day is available, preset totals must equal the sum of those
-    # same daily blocks. This catches boundary drift before it reaches the KPI.
+    # When every day is available, preset totals should equal the sum of those
+    # same daily blocks. Historical aggregates can be revised after a snapshot
+    # is written, so repair short affected ranges before deciding whether the
+    # discrepancy is persistent. The browser already treats a mismatch as
+    # unavailable; the collector should not discard every other valid window.
     if len(daily_breakdowns) == expected_days:
-        for key, _, days, offset in WINDOWS:
-            if key not in windows:
-                continue
-            start, end = window_bounds(days, offset)
-            start = max(start, date.fromisoformat(tracked_since))
-            expected = sum(block["pageviews"] for day, block in daily_breakdowns.items()
-                           if start.isoformat() <= day <= end.isoformat())
-            if expected != windows[key]["pageviews"]:
-                sys.exit(f"ERROR: {key} page-view total {windows[key]['pageviews']} "
-                         f"does not match daily sum {expected}; snapshot not written.")
+        mismatches = window_daily_sum_mismatches(windows, daily_breakdowns, tracked_since)
+        if mismatches:
+            max_repair_days = DAILY_CALL_BUDGET // DAILY_CALLS_PER_DAY
+            repair_ranges = []
+            for key, _, days, offset in WINDOWS:
+                if key not in mismatches or days is None or days > max_repair_days:
+                    continue
+                start, end = window_bounds(days, offset)
+                repair_ranges.append((max(start, tracked_start), end))
+            if repair_ranges:
+                print(f"[WARN] preset totals disagree with cached daily blocks {mismatches}; "
+                      "refreshing affected short ranges")
+                daily_breakdowns = refresh_daily_cache(
+                    daily_cache, tracked_start, TODAY, force_ranges=repair_ranges)
+                if len(daily_breakdowns) == expected_days:
+                    timeseries = [{"date": day, "views": int(block.get("pageviews") or 0)}
+                                  for day, block in daily_breakdowns.items()]
+                mismatches = window_daily_sum_mismatches(
+                    windows, daily_breakdowns, tracked_since)
+            if mismatches:
+                print(f"[WARN] preset totals still disagree with daily blocks {mismatches}; "
+                      "affected ranges will be unavailable in the report")
 
     os.makedirs("_data", exist_ok=True)
     with open("_data/site_stats.json", "w", encoding="utf-8") as f:

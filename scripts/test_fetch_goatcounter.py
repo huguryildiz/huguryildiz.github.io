@@ -204,6 +204,37 @@ class GoatCounterAggregationTests(unittest.TestCase):
 
         self.assertEqual(block, cache[stats.TODAY.isoformat()])
 
+    def test_window_daily_sum_mismatch_is_reported(self):
+        with mock.patch.object(stats, "TODAY", date(2026, 8, 5)):
+            windows = {"7d": {"pageviews": 9}}
+            daily = {
+                day.isoformat(): {"pageviews": 1}
+                for day in [date(2026, 7, 30), date(2026, 7, 31), date(2026, 8, 1),
+                            date(2026, 8, 2), date(2026, 8, 3), date(2026, 8, 4),
+                            date(2026, 8, 5)]
+            }
+
+            self.assertEqual({"7d": {"window": 9, "daily": 7}},
+                             stats.window_daily_sum_mismatches(
+                                 windows, daily, "2026-01-01"))
+
+    def test_forced_daily_refresh_reloads_a_stale_short_range(self):
+        old = {"2026-08-04": {"pageviews": 1}, "2026-08-05": {"pageviews": 1}}
+        refreshed = {
+            "2026-08-04": {"pageviews": 2, "hourly": [2] + [0] * 23},
+            "2026-08-05": {"pageviews": 3, "hourly": [3] + [0] * 23},
+        }
+
+        with mock.patch.object(stats, "fetch_daily_breakdown", side_effect=[
+            refreshed["2026-08-04"], refreshed["2026-08-05"]
+        ]) as fetch:
+            result = stats.refresh_daily_cache(
+                old, date(2026, 8, 4), date(2026, 8, 5),
+                force_ranges=[(date(2026, 8, 4), date(2026, 8, 5))])
+
+        self.assertEqual(refreshed, result)
+        self.assertEqual(2, fetch.call_count)
+
 
 if __name__ == "__main__":
     unittest.main()
