@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-18T08:05:25Z",
+  "updated": "2026-09-19T07:55:02Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-09-18"
+    "end": "2026-09-19"
   },
   "window_order": [
     "today",
@@ -16,8 +16,8 @@
   "windows": {
     "today": {
       "label": "Today",
-      "start": "2026-09-18",
-      "end": "2026-09-18",
+      "start": "2026-09-19",
+      "end": "2026-09-19",
       "pageviews": 0,
       "pages_total": 0,
       "pages": [],
@@ -67,32 +67,11 @@
     },
     "yesterday": {
       "label": "Yesterday",
-      "start": "2026-09-17",
-      "end": "2026-09-17",
-      "pageviews": 2,
-      "pages_total": 2,
-      "pages": [
-        {
-          "path": "/writing/local-first-latex-workflow",
-          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
-          "path_id": 98713527,
-          "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/stats",
-          "title": "Site Stats | Huseyin Ugur Yildiz",
-          "path_id": 95945764,
-          "event": false,
-          "count": 1
-        }
-      ],
+      "start": "2026-09-18",
+      "end": "2026-09-18",
+      "pageviews": 0,
+      "pages_total": 0,
+      "pages": [],
       "events_total": 0,
       "events": [],
       "hourly": [
@@ -115,82 +94,35 @@
         0,
         0,
         0,
-        1,
         0,
         0,
         0,
-        1
+        0,
+        0
       ],
-      "countries_total": 1,
-      "countries": [
-        {
-          "code": "AU",
-          "name": "Australia",
-          "count": 1
-        }
-      ],
-      "referrers_total": 1,
-      "referrers": [
-        {
-          "name": "Google",
-          "count": 1
-        }
-      ],
-      "browsers_total": 1,
-      "browsers": [
-        {
-          "name": "Firefox",
-          "count": 1
-        }
-      ],
-      "systems_total": 1,
-      "systems": [
-        {
-          "name": "Android",
-          "count": 1
-        }
-      ],
+      "countries_total": 0,
+      "countries": [],
+      "referrers_total": 0,
+      "referrers": [],
+      "browsers_total": 0,
+      "browsers": [],
+      "systems_total": 0,
+      "systems": [],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 1,
-      "languages": [
-        {
-          "name": "English",
-          "count": 1
-        }
-      ],
-      "regions_total": 1,
-      "regions": [
-        {
-          "name": "Victoria",
-          "country": "Australia",
-          "country_code": "AU",
-          "code": null,
-          "count": 1
-        }
-      ],
+      "languages_total": 0,
+      "languages": [],
+      "regions_total": 0,
+      "regions": [],
       "regions_unmatched": []
     },
     "7d": {
       "label": "Last 7 days",
-      "start": "2026-09-12",
-      "end": "2026-09-18",
-      "pageviews": 27,
+      "start": "2026-09-13",
+      "end": "2026-09-19",
+      "pageviews": 23,
       "pages_total": 12,
       "pages": [
-        {
-          "path": "/writing/forced-euler-blowup-lean-verification",
-          "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
-          "path_id": 106131609,
-          "event": false,
-          "count": 4,
-          "refs": [
-            {
-              "name": "chatgpt.com",
-              "count": 2
-            }
-          ]
-        },
         {
           "path": "/students",
           "title": "Students | Huseyin Ugur Yildiz",
@@ -260,19 +192,25 @@
           "title": "Writing | Huseyin Ugur Yildiz",
           "path_id": 96360100,
           "event": false,
-          "count": 2
-        },
-        {
-          "path": "/publications",
-          "title": "Publications | Huseyin Ugur Yildiz",
-          "path_id": 80750273,
-          "event": false,
-          "count": 2
+          "count": 2,
+          "refs": [
+            {
+              "name": "huguryildiz.com/publications",
+              "count": 1
+            }
+          ]
         },
         {
           "path": "/writing/arxivisual-interactive-research-papers",
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing/forced-euler-blowup-lean-verification",
+          "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
+          "path_id": 106131609,
           "event": false,
           "count": 1
         },
@@ -294,6 +232,13 @@
           "path": "/service",
           "title": "Service | Huseyin Ugur Yildiz",
           "path_id": 80843167,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/publications",
+          "title": "Publications | Huseyin Ugur Yildiz",
+          "path_id": 80750273,
           "event": false,
           "count": 1
         },
@@ -325,16 +270,16 @@
         2,
         1,
         0,
-        1,
-        1,
-        1,
+        0,
         0,
         1,
+        0,
+        0,
         2,
         0,
         1,
         1,
-        5,
+        4,
         2,
         1,
         5,
@@ -344,28 +289,23 @@
       "countries_total": 3,
       "countries": [
         {
-          "code": "US",
-          "name": "United States",
+          "code": "TR",
+          "name": "Turkey",
           "count": 2
         },
         {
-          "code": "NL",
-          "name": "Netherlands",
+          "code": "CN",
+          "name": "China",
           "count": 1
         },
         {
-          "code": "NO",
-          "name": "Norway",
+          "code": "SG",
+          "name": "Singapore",
           "count": 1
         }
       ],
-      "referrers_total": 1,
-      "referrers": [
-        {
-          "name": "chatgpt.com",
-          "count": 2
-        }
-      ],
+      "referrers_total": 0,
+      "referrers": [],
       "browsers_total": 2,
       "browsers": [
         {
@@ -380,7 +320,7 @@
       "systems_total": 2,
       "systems": [
         {
-          "name": "macOS",
+          "name": "Windows",
           "count": 3
         },
         {
@@ -390,41 +330,31 @@
       ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 1,
+      "languages_total": 2,
       "languages": [
         {
           "name": "English",
-          "count": 4
+          "count": 2
+        },
+        {
+          "name": "Turkish",
+          "count": 2
         }
       ],
-      "regions_total": 4,
+      "regions_total": 2,
       "regions": [
         {
-          "name": "New York",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
+          "name": "Ankara",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "06",
           "count": 1
         },
         {
-          "name": "Oregon",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 1
-        },
-        {
-          "name": "Groningen",
-          "country": "Netherlands",
-          "country_code": "NL",
-          "code": null,
-          "count": 1
-        },
-        {
-          "name": "Oslo County",
-          "country": "Norway",
-          "country_code": "NO",
-          "code": null,
+          "name": "İstanbul",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "34",
           "count": 1
         }
       ],
@@ -432,17 +362,17 @@
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-08-20",
-      "end": "2026-09-18",
-      "pageviews": 134,
-      "pages_total": 20,
+      "start": "2026-08-21",
+      "end": "2026-09-19",
+      "pageviews": 127,
+      "pages_total": 19,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 52,
+          "count": 51,
           "refs": [
             {
               "name": "Google",
@@ -492,31 +422,6 @@
           ]
         },
         {
-          "path": "/students",
-          "title": "Students | Huseyin Ugur Yildiz",
-          "path_id": 80840367,
-          "event": false,
-          "count": 9,
-          "refs": [
-            {
-              "name": "huguryildiz.com",
-              "count": 3
-            },
-            {
-              "name": "huguryildiz.com/research",
-              "count": 1
-            },
-            {
-              "name": "huguryildiz.com/teaching",
-              "count": 1
-            },
-            {
-              "name": "huguryildiz.com/publications",
-              "count": 1
-            }
-          ]
-        },
-        {
           "path": "/teaching",
           "title": "Huseyin Ugur Yildiz",
           "path_id": 80750338,
@@ -546,6 +451,31 @@
           ]
         },
         {
+          "path": "/students",
+          "title": "Students | Huseyin Ugur Yildiz",
+          "path_id": 80840367,
+          "event": false,
+          "count": 8,
+          "refs": [
+            {
+              "name": "huguryildiz.com",
+              "count": 2
+            },
+            {
+              "name": "huguryildiz.com/research",
+              "count": 1
+            },
+            {
+              "name": "huguryildiz.com/teaching",
+              "count": 1
+            },
+            {
+              "name": "huguryildiz.com/publications",
+              "count": 1
+            }
+          ]
+        },
+        {
           "path": "/writing/forced-euler-blowup-lean-verification",
           "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
           "path_id": 106131609,
@@ -566,39 +496,39 @@
           "count": 7
         },
         {
+          "path": "/writing",
+          "title": "Writing | Huseyin Ugur Yildiz",
+          "path_id": 96360100,
+          "event": false,
+          "count": 5
+        },
+        {
           "path": "/service",
           "title": "Service | Huseyin Ugur Yildiz",
           "path_id": 80843167,
           "event": false,
-          "count": 6
+          "count": 5
         },
         {
           "path": "/cv",
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
-          "count": 6
+          "count": 5
         },
         {
           "path": "/writing/airport-gate-assignment-multiobjective",
           "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
           "path_id": 104130835,
           "event": false,
-          "count": 5
+          "count": 4
         },
         {
           "path": "/writing/local-first-latex-workflow",
           "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
           "path_id": 98713527,
           "event": false,
-          "count": 5
-        },
-        {
-          "path": "/writing",
-          "title": "Writing | Huseyin Ugur Yildiz",
-          "path_id": 96360100,
-          "event": false,
-          "count": 5
+          "count": 4
         },
         {
           "path": "/writing/can-llms-jump-scientific-discovery",
@@ -655,13 +585,6 @@
           "path_id": 96451161,
           "event": false,
           "count": 1
-        },
-        {
-          "path": "/writing/kairos-university-timetabling",
-          "title": "A university timetable can look clean on paper and still break in operation | Huseyin Ugur Yildiz",
-          "path_id": 96360102,
-          "event": false,
-          "count": 1
         }
       ],
       "events_total": 2,
@@ -684,7 +607,7 @@
       "hourly": [
         8,
         3,
-        4,
+        3,
         2,
         3,
         0,
@@ -696,8 +619,8 @@
         8,
         2,
         5,
-        10,
-        6,
+        8,
+        2,
         4,
         6,
         11,
@@ -707,7 +630,7 @@
         9,
         8
       ],
-      "countries_total": 10,
+      "countries_total": 9,
       "countries": [
         {
           "code": "TR",
@@ -737,11 +660,6 @@
         {
           "code": "IN",
           "name": "India",
-          "count": 1
-        },
-        {
-          "code": "KE",
-          "name": "Kenya",
           "count": 1
         },
         {
@@ -787,7 +705,7 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 29
+          "count": 28
         },
         {
           "name": "Safari",
@@ -806,7 +724,7 @@
         },
         {
           "name": "Windows",
-          "count": 14
+          "count": 13
         },
         {
           "name": "Android",
@@ -827,7 +745,7 @@
       "languages": [
         {
           "name": "English",
-          "count": 34
+          "count": 33
         },
         {
           "name": "Turkish",
@@ -945,9 +863,9 @@
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-06-21",
-      "end": "2026-09-18",
-      "pageviews": 505,
+      "start": "2026-06-22",
+      "end": "2026-09-19",
+      "pageviews": 503,
       "pages_total": 25,
       "pages": [
         {
@@ -955,7 +873,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 193,
+          "count": 191,
           "refs": [
             {
               "name": "Google",
@@ -963,7 +881,7 @@
             },
             {
               "name": "www.linkedin.com",
-              "count": 24
+              "count": 23
             },
             {
               "name": "com.linkedin.android",
@@ -1278,7 +1196,7 @@
         15,
         5,
         6,
-        12,
+        11,
         20,
         14,
         27,
@@ -1289,16 +1207,16 @@
         50,
         30,
         23,
-        25,
+        24,
         29,
         27
       ],
-      "countries_total": 25,
+      "countries_total": 24,
       "countries": [
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 105
+          "count": 104
         },
         {
           "code": "US",
@@ -1401,11 +1319,6 @@
           "count": 1
         },
         {
-          "code": "PK",
-          "name": "Pakistan",
-          "count": 1
-        },
-        {
           "code": "PL",
           "name": "Poland",
           "count": 1
@@ -1421,7 +1334,7 @@
           "count": 1
         }
       ],
-      "referrers_total": 11,
+      "referrers_total": 10,
       "referrers": [
         {
           "name": "Google",
@@ -1429,7 +1342,7 @@
         },
         {
           "name": "www.linkedin.com",
-          "count": 24
+          "count": 23
         },
         {
           "name": "com.linkedin.android",
@@ -1460,10 +1373,6 @@
           "count": 1
         },
         {
-          "name": "scholar.google.com",
-          "count": 1
-        },
-        {
           "name": "chatgpt.com",
           "count": 1
         }
@@ -1472,7 +1381,7 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 121
+          "count": 119
         },
         {
           "name": "Safari",
@@ -1491,7 +1400,7 @@
       "systems": [
         {
           "name": "Windows",
-          "count": 60
+          "count": 59
         },
         {
           "name": "iOS",
@@ -1503,7 +1412,7 @@
         },
         {
           "name": "Android",
-          "count": 24
+          "count": 23
         },
         {
           "name": "Linux",
@@ -1516,7 +1425,7 @@
       "languages": [
         {
           "name": "(unknown)",
-          "count": 94
+          "count": 92
         },
         {
           "name": "English",
@@ -1645,8 +1554,8 @@
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-09-19",
-      "end": "2026-09-18",
+      "start": "2025-09-20",
+      "end": "2026-09-19",
       "pageviews": 1153,
       "pages_total": 29,
       "pages": [
@@ -2428,7 +2337,7 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-09-18",
+      "end": "2026-09-19",
       "pageviews": 1153,
       "pages_total": 29,
       "pages": [
@@ -4111,6 +4020,10 @@
     },
     {
       "date": "2026-09-18",
+      "views": 0
+    },
+    {
+      "date": "2026-09-19",
       "views": 0
     }
   ],
@@ -22815,6 +22728,43 @@
       "systems": [],
       "sizes": [],
       "languages": []
+    },
+    "2026-09-19": {
+      "pageviews": 0,
+      "pages": [],
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries": [],
+      "referrers": [],
+      "browsers": [],
+      "systems": [],
+      "sizes": [],
+      "languages": []
     }
   },
   "page_series": [
@@ -23729,6 +23679,10 @@
         },
         {
           "date": "2026-09-19",
+          "views": 0
+        },
+        {
+          "date": "2026-09-20",
           "views": 0
         }
       ]
@@ -24645,6 +24599,10 @@
         {
           "date": "2026-09-19",
           "views": 0
+        },
+        {
+          "date": "2026-09-20",
+          "views": 0
         }
       ]
     },
@@ -25559,6 +25517,10 @@
         },
         {
           "date": "2026-09-19",
+          "views": 0
+        },
+        {
+          "date": "2026-09-20",
           "views": 0
         }
       ]
@@ -26475,6 +26437,10 @@
         {
           "date": "2026-09-19",
           "views": 0
+        },
+        {
+          "date": "2026-09-20",
+          "views": 0
         }
       ]
     },
@@ -27390,6 +27356,10 @@
         {
           "date": "2026-09-19",
           "views": 0
+        },
+        {
+          "date": "2026-09-20",
+          "views": 0
         }
       ]
     },
@@ -28301,15 +28271,15 @@
         {
           "date": "2026-09-19",
           "views": 0
+        },
+        {
+          "date": "2026-09-20",
+          "views": 0
         }
       ]
     }
   ],
-  "site": {
-    "timezone": "Europe/Istanbul",
-    "first_hit_at": "2026-02-05T12:24:02.263206Z",
-    "data_retention_days": 0
-  },
+  "site": {},
   "totals": {
     "pageviews": 1153,
     "visitors": null
