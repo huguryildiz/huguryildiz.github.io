@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-20T08:24:48Z",
+  "updated": "2026-09-21T08:43:58Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-09-20"
+    "end": "2026-09-21"
   },
   "window_order": [
     "today",
@@ -16,68 +16,43 @@
   "windows": {
     "today": {
       "label": "Today",
-      "start": "2026-09-20",
-      "end": "2026-09-20",
-      "pageviews": 0,
-      "pages_total": 0,
-      "pages": [],
-      "events_total": 0,
-      "events": [],
-      "hourly": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "countries_total": 0,
-      "countries": [],
-      "referrers_total": 0,
-      "referrers": [],
-      "browsers_total": 0,
-      "browsers": [],
-      "systems_total": 0,
-      "systems": [],
-      "sizes_total": 0,
-      "sizes": [],
-      "languages_total": 0,
-      "languages": [],
-      "regions_total": 0,
-      "regions": [],
-      "regions_unmatched": []
-    },
-    "yesterday": {
-      "label": "Yesterday",
-      "start": "2026-09-19",
-      "end": "2026-09-19",
-      "pageviews": 1,
-      "pages_total": 1,
+      "start": "2026-09-21",
+      "end": "2026-09-21",
+      "pageviews": 3,
+      "pages_total": 3,
       "pages": [
+        {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "Yandex",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/cv",
+          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
+          "path_id": 80749912,
+          "event": false,
+          "count": 1
+        },
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 1
+          "count": 1,
+          "refs": [
+            {
+              "name": "huguryildiz.com/writing/airport-gate-assignment-multiobjective",
+              "count": 1
+            }
+          ]
         }
       ],
       "events_total": 0,
@@ -87,15 +62,15 @@
         0,
         0,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
         1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
         0,
         0,
         0,
@@ -111,13 +86,18 @@
       "countries_total": 1,
       "countries": [
         {
-          "code": "US",
-          "name": "United States",
+          "code": "TR",
+          "name": "Turkey",
           "count": 1
         }
       ],
-      "referrers_total": 0,
-      "referrers": [],
+      "referrers_total": 1,
+      "referrers": [
+        {
+          "name": "Yandex",
+          "count": 1
+        }
+      ],
       "browsers_total": 1,
       "browsers": [
         {
@@ -144,10 +124,162 @@
       "regions_total": 1,
       "regions": [
         {
-          "name": "Virginia",
-          "country": "United States",
-          "country_code": "US",
+          "name": "Ankara",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "06",
+          "count": 1
+        }
+      ],
+      "regions_unmatched": []
+    },
+    "yesterday": {
+      "label": "Yesterday",
+      "start": "2026-09-20",
+      "end": "2026-09-20",
+      "pageviews": 5,
+      "pages_total": 3,
+      "pages": [
+        {
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
+          "event": false,
+          "count": 3
+        },
+        {
+          "path": "/writing/local-first-latex-workflow",
+          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+          "path_id": 98713527,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/publications",
+          "title": "Publications | Huseyin Ugur Yildiz",
+          "path_id": 80750273,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events_total": 0,
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries_total": 3,
+      "countries": [
+        {
+          "code": "KZ",
+          "name": "Kazakhstan",
+          "count": 1
+        },
+        {
+          "code": "RU",
+          "name": "Russia",
+          "count": 1
+        },
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 1
+        }
+      ],
+      "referrers_total": 0,
+      "referrers": [],
+      "browsers_total": 2,
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 2
+        },
+        {
+          "name": "Safari",
+          "count": 1
+        }
+      ],
+      "systems_total": 3,
+      "systems": [
+        {
+          "name": "Linux",
+          "count": 1
+        },
+        {
+          "name": "macOS",
+          "count": 1
+        },
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
+      "sizes_total": 0,
+      "sizes": [],
+      "languages_total": 3,
+      "languages": [
+        {
+          "name": "Kazakh",
+          "count": 1
+        },
+        {
+          "name": "Russian",
+          "count": 1
+        },
+        {
+          "name": "Turkish",
+          "count": 1
+        }
+      ],
+      "regions_total": 3,
+      "regions": [
+        {
+          "name": "Mangistauskaya Oblast'",
+          "country": "Kazakhstan",
+          "country_code": "KZ",
           "code": null,
+          "count": 1
+        },
+        {
+          "name": "Volgograd Oblast",
+          "country": "Russia",
+          "country_code": "RU",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "İstanbul",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "34",
           "count": 1
         }
       ],
@@ -155,50 +287,37 @@
     },
     "7d": {
       "label": "Last 7 days",
-      "start": "2026-09-14",
-      "end": "2026-09-20",
-      "pageviews": 20,
-      "pages_total": 11,
+      "start": "2026-09-15",
+      "end": "2026-09-21",
+      "pageviews": 18,
+      "pages_total": 9,
       "pages": [
-        {
-          "path": "/teaching",
-          "title": "Huseyin Ugur Yildiz",
-          "path_id": 80750338,
-          "event": false,
-          "count": 4,
-          "refs": [
-            {
-              "name": "huguryildiz.com",
-              "count": 1
-            },
-            {
-              "name": "huguryildiz.com/writing/arxivisual-interactive-research-papers",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/students",
-          "title": "Students | Huseyin Ugur Yildiz",
-          "path_id": 80840367,
-          "event": false,
-          "count": 3,
-          "refs": [
-            {
-              "name": "huguryildiz.com/teaching",
-              "count": 1
-            }
-          ]
-        },
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 3,
+          "count": 6,
           "refs": [
             {
               "name": "www.linkedin.com",
+              "count": 1
+            },
+            {
+              "name": "huguryildiz.com/writing/airport-gate-assignment-multiobjective",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/teaching",
+          "title": "Huseyin Ugur Yildiz",
+          "path_id": 80750338,
+          "event": false,
+          "count": 3,
+          "refs": [
+            {
+              "name": "huguryildiz.com",
               "count": 1
             }
           ]
@@ -212,36 +331,35 @@
           "refs": [
             {
               "name": "Google",
-              "count": 1
+              "count": 2
             }
           ]
         },
         {
-          "path": "/writing",
-          "title": "Writing | Huseyin Ugur Yildiz",
-          "path_id": 96360100,
+          "path": "/students",
+          "title": "Students | Huseyin Ugur Yildiz",
+          "path_id": 80840367,
           "event": false,
           "count": 2,
           "refs": [
             {
-              "name": "huguryildiz.com/publications",
+              "name": "huguryildiz.com/teaching",
               "count": 1
             }
           ]
         },
         {
-          "path": "/writing/arxivisual-interactive-research-papers",
-          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
-          "path_id": 106826525,
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
           "event": false,
-          "count": 1
-        },
-        {
-          "path": "/writing/forced-euler-blowup-lean-verification",
-          "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
-          "path_id": 106131609,
-          "event": false,
-          "count": 1
+          "count": 1,
+          "refs": [
+            {
+              "name": "Yandex",
+              "count": 1
+            }
+          ]
         },
         {
           "path": "/stats",
@@ -258,16 +376,16 @@
           "count": 1
         },
         {
-          "path": "/service",
-          "title": "Service | Huseyin Ugur Yildiz",
-          "path_id": 80843167,
+          "path": "/publications",
+          "title": "Publications | Huseyin Ugur Yildiz",
+          "path_id": 80750273,
           "event": false,
           "count": 1
         },
         {
-          "path": "/publications",
-          "title": "Publications | Huseyin Ugur Yildiz",
-          "path_id": 80750273,
+          "path": "/cv",
+          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
+          "path_id": 80749912,
           "event": false,
           "count": 1
         }
@@ -287,97 +405,139 @@
         0,
         1,
         0,
-        1,
-        0,
-        1,
-        1,
-        0,
+        2,
         0,
         0,
         1,
-        1,
         0,
         0,
-        0,
-        1,
-        1,
-        3,
         2,
         1,
+        1,
         5,
+        0,
+        0,
+        0,
+        0,
+        3,
+        1,
+        0,
+        0,
         0,
         1
       ],
       "countries_total": 4,
       "countries": [
         {
-          "code": "CN",
-          "name": "China",
-          "count": 1
-        },
-        {
-          "code": "FR",
-          "name": "France",
-          "count": 1
-        },
-        {
-          "code": "SG",
-          "name": "Singapore",
-          "count": 1
-        },
-        {
           "code": "TR",
           "name": "Turkey",
+          "count": 3
+        },
+        {
+          "code": "KZ",
+          "name": "Kazakhstan",
+          "count": 1
+        },
+        {
+          "code": "RU",
+          "name": "Russia",
+          "count": 1
+        },
+        {
+          "code": "US",
+          "name": "United States",
           "count": 1
         }
       ],
-      "referrers_total": 0,
-      "referrers": [],
-      "browsers_total": 1,
+      "referrers_total": 1,
+      "referrers": [
+        {
+          "name": "www.linkedin.com",
+          "count": 1
+        }
+      ],
+      "browsers_total": 2,
       "browsers": [
         {
           "name": "Chrome",
-          "count": 4
+          "count": 5
+        },
+        {
+          "name": "Safari",
+          "count": 1
         }
       ],
-      "systems_total": 1,
+      "systems_total": 3,
       "systems": [
         {
           "name": "Windows",
           "count": 4
+        },
+        {
+          "name": "Linux",
+          "count": 1
+        },
+        {
+          "name": "macOS",
+          "count": 1
         }
       ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 3,
+      "languages_total": 4,
       "languages": [
         {
           "name": "English",
           "count": 2
         },
         {
-          "name": "French",
+          "name": "Turkish",
+          "count": 2
+        },
+        {
+          "name": "Kazakh",
           "count": 1
         },
         {
-          "name": "Turkish",
+          "name": "Russian",
           "count": 1
         }
       ],
-      "regions_total": 2,
+      "regions_total": 5,
       "regions": [
-        {
-          "name": "Île-de-France",
-          "country": "France",
-          "country_code": "FR",
-          "code": null,
-          "count": 1
-        },
         {
           "name": "İstanbul",
           "country": "Turkey",
           "country_code": "TR",
           "code": "34",
+          "count": 2
+        },
+        {
+          "name": "Ankara",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "06",
+          "count": 1
+        },
+        {
+          "name": "Mangistauskaya Oblast'",
+          "country": "Kazakhstan",
+          "country_code": "KZ",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "Volgograd Oblast",
+          "country": "Russia",
+          "country_code": "RU",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "Virginia",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
           "count": 1
         }
       ],
@@ -385,9 +545,9 @@
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-08-22",
-      "end": "2026-09-20",
-      "pageviews": 127,
+      "start": "2026-08-23",
+      "end": "2026-09-21",
+      "pageviews": 132,
       "pages_total": 19,
       "pages": [
         {
@@ -395,7 +555,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 52,
+          "count": 55,
           "refs": [
             {
               "name": "Google",
@@ -424,7 +584,7 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 10,
+          "count": 9,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -436,10 +596,6 @@
             },
             {
               "name": "huguryildiz.com/cv",
-              "count": 1
-            },
-            {
-              "name": "huguryildiz.com/stats",
               "count": 1
             }
           ]
@@ -499,24 +655,49 @@
           ]
         },
         {
-          "path": "/writing/forced-euler-blowup-lean-verification",
-          "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
-          "path_id": 106131609,
+          "path": "/publications",
+          "title": "Publications | Huseyin Ugur Yildiz",
+          "path_id": 80750273,
           "event": false,
-          "count": 7,
+          "count": 8,
           "refs": [
             {
-              "name": "chatgpt.com",
+              "name": "huguryildiz.com",
+              "count": 4
+            },
+            {
+              "name": "huguryildiz.com/research",
               "count": 2
             }
           ]
         },
         {
-          "path": "/publications",
-          "title": "Publications | Huseyin Ugur Yildiz",
-          "path_id": 80750273,
+          "path": "/writing/forced-euler-blowup-lean-verification",
+          "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
+          "path_id": 106131609,
           "event": false,
           "count": 7
+        },
+        {
+          "path": "/cv",
+          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
+          "path_id": 80749912,
+          "event": false,
+          "count": 6
+        },
+        {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
+          "event": false,
+          "count": 5
+        },
+        {
+          "path": "/writing/local-first-latex-workflow",
+          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+          "path_id": 98713527,
+          "event": false,
+          "count": 5
         },
         {
           "path": "/writing",
@@ -533,37 +714,9 @@
           "count": 5
         },
         {
-          "path": "/cv",
-          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
-          "path_id": 80749912,
-          "event": false,
-          "count": 5
-        },
-        {
-          "path": "/writing/airport-gate-assignment-multiobjective",
-          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
-          "path_id": 104130835,
-          "event": false,
-          "count": 4
-        },
-        {
-          "path": "/writing/local-first-latex-workflow",
-          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
-          "path_id": 98713527,
-          "event": false,
-          "count": 4
-        },
-        {
           "path": "/writing/ieee-twc-submission-cap",
           "title": "An academic rate limiter: IEEE TWC now caps authors at 36 new manuscripts a year | Huseyin Ugur Yildiz",
           "path_id": 96633631,
-          "event": false,
-          "count": 2
-        },
-        {
-          "path": "/stats",
-          "title": "Site Stats | Huseyin Ugur Yildiz",
-          "path_id": 95945764,
           "event": false,
           "count": 2
         },
@@ -608,6 +761,13 @@
           "path_id": 96451161,
           "event": false,
           "count": 1
+        },
+        {
+          "path": "/stats",
+          "title": "Site Stats | Huseyin Ugur Yildiz",
+          "path_id": 95945764,
+          "event": false,
+          "count": 1
         }
       ],
       "events_total": 2,
@@ -632,17 +792,17 @@
         3,
         3,
         2,
-        2,
+        3,
         0,
         3,
         7,
         3,
         4,
-        2,
+        4,
         8,
         3,
+        10,
         5,
-        8,
         2,
         4,
         6,
@@ -653,12 +813,12 @@
         9,
         8
       ],
-      "countries_total": 9,
+      "countries_total": 10,
       "countries": [
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 31
+          "count": 32
         },
         {
           "code": "US",
@@ -669,6 +829,11 @@
           "code": "GB",
           "name": "United Kingdom",
           "count": 3
+        },
+        {
+          "code": "KZ",
+          "name": "Kazakhstan",
+          "count": 2
         },
         {
           "code": "DE",
@@ -686,11 +851,6 @@
           "count": 1
         },
         {
-          "code": "KZ",
-          "name": "Kazakhstan",
-          "count": 1
-        },
-        {
           "code": "NL",
           "name": "Netherlands",
           "count": 1
@@ -698,6 +858,11 @@
         {
           "code": "PL",
           "name": "Poland",
+          "count": 1
+        },
+        {
+          "code": "RU",
+          "name": "Russia",
           "count": 1
         }
       ],
@@ -728,7 +893,7 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 29
+          "count": 32
         },
         {
           "name": "Safari",
@@ -743,11 +908,11 @@
       "systems": [
         {
           "name": "iOS",
-          "count": 20
+          "count": 19
         },
         {
           "name": "Windows",
-          "count": 14
+          "count": 16
         },
         {
           "name": "Android",
@@ -755,16 +920,16 @@
         },
         {
           "name": "macOS",
-          "count": 4
+          "count": 5
         },
         {
           "name": "Linux",
-          "count": 3
+          "count": 4
         }
       ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 7,
+      "languages_total": 8,
       "languages": [
         {
           "name": "English",
@@ -772,10 +937,14 @@
         },
         {
           "name": "Turkish",
-          "count": 12
+          "count": 13
         },
         {
           "name": "(unknown)",
+          "count": 2
+        },
+        {
+          "name": "Russian",
           "count": 2
         },
         {
@@ -783,11 +952,11 @@
           "count": 1
         },
         {
-          "name": "Polish",
+          "name": "Kazakh",
           "count": 1
         },
         {
-          "name": "Russian",
+          "name": "Polish",
           "count": 1
         },
         {
@@ -795,28 +964,28 @@
           "count": 1
         }
       ],
-      "regions_total": 18,
+      "regions_total": 19,
       "regions": [
         {
           "name": "Ankara",
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 19
-        },
-        {
-          "name": "Antalya",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "07",
-          "count": 3
+          "count": 20
         },
         {
           "name": "İstanbul",
           "country": "Turkey",
           "country_code": "TR",
           "code": "34",
-          "count": 3
+          "count": 4
+        },
+        {
+          "name": "Antalya",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "07",
+          "count": 2
         },
         {
           "name": "İzmir",
@@ -886,9 +1055,9 @@
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-06-23",
-      "end": "2026-09-20",
-      "pageviews": 500,
+      "start": "2026-06-24",
+      "end": "2026-09-21",
+      "pageviews": 503,
       "pages_total": 25,
       "pages": [
         {
@@ -896,7 +1065,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 190,
+          "count": 191,
           "refs": [
             {
               "name": "Google",
@@ -912,7 +1081,7 @@
             },
             {
               "name": "avesis.tedu.edu.tr",
-              "count": 9
+              "count": 8
             },
             {
               "name": "bing.com",
@@ -933,7 +1102,7 @@
             },
             {
               "name": "huguryildiz.com",
-              "count": 10
+              "count": 9
             },
             {
               "name": "huguryildiz.com/service",
@@ -954,7 +1123,7 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 38,
+          "count": 39,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -1048,7 +1217,7 @@
           "title": "Service | Huseyin Ugur Yildiz",
           "path_id": 80843167,
           "event": false,
-          "count": 21
+          "count": 20
         },
         {
           "path": "/writing",
@@ -1072,6 +1241,13 @@
           "count": 7
         },
         {
+          "path": "/writing/local-first-latex-workflow",
+          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+          "path_id": 98713527,
+          "event": false,
+          "count": 7
+        },
+        {
           "path": "/stats",
           "title": "Site Stats | Huseyin Ugur Yildiz",
           "path_id": 95945764,
@@ -1079,9 +1255,9 @@
           "count": 7
         },
         {
-          "path": "/writing/local-first-latex-workflow",
-          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
-          "path_id": 98713527,
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
           "event": false,
           "count": 6
         },
@@ -1091,13 +1267,6 @@
           "path_id": 96633631,
           "event": false,
           "count": 6
-        },
-        {
-          "path": "/writing/airport-gate-assignment-multiobjective",
-          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
-          "path_id": 104130835,
-          "event": false,
-          "count": 5
         },
         {
           "path": "/writing/ai-assisted-proof-derivative-free-optimization",
@@ -1213,28 +1382,28 @@
         18,
         16,
         14,
-        21,
+        22,
         4,
         6,
         15,
         5,
         6,
-        11,
+        10,
         20,
         15,
-        27,
+        32,
         40,
         33,
-        29,
+        28,
         23,
         50,
-        30,
+        29,
         23,
         24,
         29,
         27
       ],
-      "countries_total": 24,
+      "countries_total": 23,
       "countries": [
         {
           "code": "TR",
@@ -1272,8 +1441,18 @@
           "count": 3
         },
         {
+          "code": "KZ",
+          "name": "Kazakhstan",
+          "count": 2
+        },
+        {
           "code": "NL",
           "name": "Netherlands",
+          "count": 2
+        },
+        {
+          "code": "RU",
+          "name": "Russia",
           "count": 2
         },
         {
@@ -1332,11 +1511,6 @@
           "count": 1
         },
         {
-          "code": "KZ",
-          "name": "Kazakhstan",
-          "count": 1
-        },
-        {
           "code": "NG",
           "name": "Nigeria",
           "count": 1
@@ -1344,16 +1518,6 @@
         {
           "code": "PL",
           "name": "Poland",
-          "count": 1
-        },
-        {
-          "code": "RU",
-          "name": "Russia",
-          "count": 1
-        },
-        {
-          "code": "TW",
-          "name": "Taiwan",
           "count": 1
         }
       ],
@@ -1373,7 +1537,7 @@
         },
         {
           "name": "avesis.tedu.edu.tr",
-          "count": 9
+          "count": 8
         },
         {
           "name": "bing.com",
@@ -1381,7 +1545,7 @@
         },
         {
           "name": "github.com",
-          "count": 3
+          "count": 2
         },
         {
           "name": "www.bing.com",
@@ -1408,7 +1572,7 @@
         },
         {
           "name": "Safari",
-          "count": 63
+          "count": 64
         },
         {
           "name": "Edge",
@@ -1423,7 +1587,7 @@
       "systems": [
         {
           "name": "Windows",
-          "count": 60
+          "count": 61
         },
         {
           "name": "iOS",
@@ -1431,7 +1595,7 @@
         },
         {
           "name": "macOS",
-          "count": 41
+          "count": 40
         },
         {
           "name": "Android",
@@ -1439,35 +1603,39 @@
         },
         {
           "name": "Linux",
-          "count": 12
+          "count": 13
         }
       ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 8,
+      "languages_total": 9,
       "languages": [
         {
           "name": "(unknown)",
-          "count": 90
+          "count": 87
         },
         {
           "name": "English",
-          "count": 70
+          "count": 71
         },
         {
           "name": "Turkish",
-          "count": 22
+          "count": 23
+        },
+        {
+          "name": "Russian",
+          "count": 3
         },
         {
           "name": "Chinese",
           "count": 3
         },
         {
-          "name": "Russian",
-          "count": 2
+          "name": "French",
+          "count": 1
         },
         {
-          "name": "French",
+          "name": "Kazakh",
           "count": 1
         },
         {
@@ -1486,7 +1654,7 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 32
+          "count": 33
         },
         {
           "name": "Colorado",
@@ -1500,7 +1668,7 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "34",
-          "count": 7
+          "count": 8
         },
         {
           "name": "Iowa",
@@ -1577,9 +1745,9 @@
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-09-21",
-      "end": "2026-09-20",
-      "pageviews": 1154,
+      "start": "2025-09-22",
+      "end": "2026-09-21",
+      "pageviews": 1162,
       "pages_total": 29,
       "pages": [
         {
@@ -1587,7 +1755,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 451,
+          "count": 455,
           "refs": [
             {
               "name": "Google",
@@ -1616,7 +1784,7 @@
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
-          "count": 145,
+          "count": 146,
           "refs": [
             {
               "name": "Google",
@@ -1645,7 +1813,7 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 135,
+          "count": 136,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -1770,6 +1938,13 @@
           "count": 7
         },
         {
+          "path": "/writing/local-first-latex-workflow",
+          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+          "path_id": 98713527,
+          "event": false,
+          "count": 7
+        },
+        {
           "path": "/stats",
           "title": "Site Stats | Huseyin Ugur Yildiz",
           "path_id": 95945764,
@@ -1777,9 +1952,9 @@
           "count": 7
         },
         {
-          "path": "/writing/local-first-latex-workflow",
-          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
-          "path_id": 98713527,
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
           "event": false,
           "count": 6
         },
@@ -1789,13 +1964,6 @@
           "path_id": 96633631,
           "event": false,
           "count": 6
-        },
-        {
-          "path": "/writing/airport-gate-assignment-multiobjective",
-          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
-          "path_id": 104130835,
-          "event": false,
-          "count": 5
         },
         {
           "path": "/writing/ai-assisted-proof-derivative-free-optimization",
@@ -1932,16 +2100,16 @@
         56,
         60,
         53,
-        33,
+        34,
         11,
         7,
         21,
         11,
         28,
-        27,
+        29,
         59,
         38,
-        68,
+        73,
         79,
         67,
         79,
@@ -1958,7 +2126,7 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 282
+          "count": 284
         },
         {
           "code": "US",
@@ -1986,6 +2154,11 @@
           "count": 9
         },
         {
+          "code": "RU",
+          "name": "Russia",
+          "count": 7
+        },
+        {
           "code": "DE",
           "name": "Germany",
           "count": 6
@@ -1996,9 +2169,9 @@
           "count": 6
         },
         {
-          "code": "RU",
-          "name": "Russia",
-          "count": 6
+          "code": "KZ",
+          "name": "Kazakhstan",
+          "count": 5
         },
         {
           "code": "DZ",
@@ -2008,11 +2181,6 @@
         {
           "code": "JP",
           "name": "Japan",
-          "count": 4
-        },
-        {
-          "code": "KZ",
-          "name": "Kazakhstan",
           "count": 4
         },
         {
@@ -2179,11 +2347,11 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 277
+          "count": 280
         },
         {
           "name": "Safari",
-          "count": 165
+          "count": 166
         },
         {
           "name": "Firefox",
@@ -2202,11 +2370,11 @@
         },
         {
           "name": "macOS",
-          "count": 129
+          "count": 130
         },
         {
           "name": "Windows",
-          "count": 115
+          "count": 117
         },
         {
           "name": "Android",
@@ -2214,12 +2382,12 @@
         },
         {
           "name": "Linux",
-          "count": 24
+          "count": 25
         }
       ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 8,
+      "languages_total": 9,
       "languages": [
         {
           "name": "(unknown)",
@@ -2227,22 +2395,26 @@
         },
         {
           "name": "English",
-          "count": 70
+          "count": 71
         },
         {
           "name": "Turkish",
-          "count": 22
+          "count": 23
+        },
+        {
+          "name": "Russian",
+          "count": 3
         },
         {
           "name": "Chinese",
           "count": 3
         },
         {
-          "name": "Russian",
-          "count": 2
+          "name": "French",
+          "count": 1
         },
         {
-          "name": "French",
+          "name": "Kazakh",
           "count": 1
         },
         {
@@ -2261,7 +2433,7 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 32
+          "count": 33
         },
         {
           "name": "Colorado",
@@ -2289,7 +2461,7 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "34",
-          "count": 7
+          "count": 8
         },
         {
           "name": "Oregon",
@@ -2360,8 +2532,8 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-09-20",
-      "pageviews": 1154,
+      "end": "2026-09-21",
+      "pageviews": 1162,
       "pages_total": 29,
       "pages": [
         {
@@ -2369,7 +2541,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 451,
+          "count": 455,
           "refs": [
             {
               "name": "Google",
@@ -2398,7 +2570,7 @@
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
-          "count": 145,
+          "count": 146,
           "refs": [
             {
               "name": "Google",
@@ -2427,7 +2599,7 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 135,
+          "count": 136,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -2552,6 +2724,13 @@
           "count": 7
         },
         {
+          "path": "/writing/local-first-latex-workflow",
+          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+          "path_id": 98713527,
+          "event": false,
+          "count": 7
+        },
+        {
           "path": "/stats",
           "title": "Site Stats | Huseyin Ugur Yildiz",
           "path_id": 95945764,
@@ -2559,9 +2738,9 @@
           "count": 7
         },
         {
-          "path": "/writing/local-first-latex-workflow",
-          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
-          "path_id": 98713527,
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
           "event": false,
           "count": 6
         },
@@ -2571,13 +2750,6 @@
           "path_id": 96633631,
           "event": false,
           "count": 6
-        },
-        {
-          "path": "/writing/airport-gate-assignment-multiobjective",
-          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
-          "path_id": 104130835,
-          "event": false,
-          "count": 5
         },
         {
           "path": "/writing/ai-assisted-proof-derivative-free-optimization",
@@ -2714,16 +2886,16 @@
         56,
         60,
         53,
-        33,
+        34,
         11,
         7,
         21,
         11,
         28,
-        27,
+        29,
         59,
         38,
-        68,
+        73,
         79,
         67,
         79,
@@ -2740,7 +2912,7 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 282
+          "count": 284
         },
         {
           "code": "US",
@@ -2768,6 +2940,11 @@
           "count": 9
         },
         {
+          "code": "RU",
+          "name": "Russia",
+          "count": 7
+        },
+        {
           "code": "DE",
           "name": "Germany",
           "count": 6
@@ -2778,9 +2955,9 @@
           "count": 6
         },
         {
-          "code": "RU",
-          "name": "Russia",
-          "count": 6
+          "code": "KZ",
+          "name": "Kazakhstan",
+          "count": 5
         },
         {
           "code": "DZ",
@@ -2790,11 +2967,6 @@
         {
           "code": "JP",
           "name": "Japan",
-          "count": 4
-        },
-        {
-          "code": "KZ",
-          "name": "Kazakhstan",
           "count": 4
         },
         {
@@ -2961,11 +3133,11 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 277
+          "count": 280
         },
         {
           "name": "Safari",
-          "count": 165
+          "count": 166
         },
         {
           "name": "Firefox",
@@ -2984,11 +3156,11 @@
         },
         {
           "name": "macOS",
-          "count": 129
+          "count": 130
         },
         {
           "name": "Windows",
-          "count": 115
+          "count": 117
         },
         {
           "name": "Android",
@@ -2996,12 +3168,12 @@
         },
         {
           "name": "Linux",
-          "count": 24
+          "count": 25
         }
       ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 8,
+      "languages_total": 9,
       "languages": [
         {
           "name": "(unknown)",
@@ -3009,22 +3181,26 @@
         },
         {
           "name": "English",
-          "count": 70
+          "count": 71
         },
         {
           "name": "Turkish",
-          "count": 22
+          "count": 23
+        },
+        {
+          "name": "Russian",
+          "count": 3
         },
         {
           "name": "Chinese",
           "count": 3
         },
         {
-          "name": "Russian",
-          "count": 2
+          "name": "French",
+          "count": 1
         },
         {
-          "name": "French",
+          "name": "Kazakh",
           "count": 1
         },
         {
@@ -3043,7 +3219,7 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 32
+          "count": 33
         },
         {
           "name": "Colorado",
@@ -3071,7 +3247,7 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "34",
-          "count": 7
+          "count": 8
         },
         {
           "name": "Oregon",
@@ -4051,7 +4227,11 @@
     },
     {
       "date": "2026-09-20",
-      "views": 0
+      "views": 5
+    },
+    {
+      "date": "2026-09-21",
+      "views": 3
     }
   ],
   "daily_breakdowns": {
@@ -22823,8 +23003,30 @@
       ]
     },
     "2026-09-20": {
-      "pageviews": 0,
-      "pages": [],
+      "pageviews": 5,
+      "pages": [
+        {
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
+          "event": false,
+          "count": 3
+        },
+        {
+          "path": "/writing/local-first-latex-workflow",
+          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+          "path_id": 98713527,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/publications",
+          "title": "Publications | Huseyin Ugur Yildiz",
+          "path_id": 80750273,
+          "event": false,
+          "count": 1
+        }
+      ],
       "events": [],
       "hourly": [
         0,
@@ -22840,6 +23042,116 @@
         0,
         0,
         0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries": [
+        {
+          "code": "KZ",
+          "name": "Kazakhstan",
+          "count": 1
+        },
+        {
+          "code": "RU",
+          "name": "Russia",
+          "count": 1
+        },
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 1
+        }
+      ],
+      "referrers": [],
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 2
+        },
+        {
+          "name": "Safari",
+          "count": 1
+        }
+      ],
+      "systems": [
+        {
+          "name": "Linux",
+          "count": 1
+        },
+        {
+          "name": "macOS",
+          "count": 1
+        },
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
+      "sizes": [],
+      "languages": [
+        {
+          "name": "Kazakh",
+          "count": 1
+        },
+        {
+          "name": "Russian",
+          "count": 1
+        },
+        {
+          "name": "Turkish",
+          "count": 1
+        }
+      ]
+    },
+    "2026-09-21": {
+      "pageviews": 3,
+      "pages": [
+        {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/cv",
+          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
+          "path_id": 80749912,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
         0,
         0,
         0,
@@ -22852,19 +23164,45 @@
         0,
         0
       ],
-      "countries": [],
-      "referrers": [],
-      "browsers": [],
-      "systems": [],
+      "countries": [
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 1
+        }
+      ],
+      "referrers": [
+        {
+          "name": "Yandex",
+          "count": 1
+        }
+      ],
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        }
+      ],
+      "systems": [
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
       "sizes": [],
-      "languages": []
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        }
+      ]
     }
   },
   "page_series": [
     {
       "path": "/",
       "title": "Home | Huseyin Ugur Yildiz",
-      "count": 451,
+      "count": 455,
       "stats": [
         {
           "date": "2026-02-05",
@@ -23776,10 +24114,14 @@
         },
         {
           "date": "2026-09-20",
-          "views": 0
+          "views": 3
         },
         {
           "date": "2026-09-21",
+          "views": 1
+        },
+        {
+          "date": "2026-09-22",
           "views": 0
         }
       ]
@@ -23787,7 +24129,7 @@
     {
       "path": "/cv",
       "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
-      "count": 145,
+      "count": 146,
       "stats": [
         {
           "date": "2026-02-05",
@@ -24703,6 +25045,10 @@
         },
         {
           "date": "2026-09-21",
+          "views": 1
+        },
+        {
+          "date": "2026-09-22",
           "views": 0
         }
       ]
@@ -24710,7 +25056,7 @@
     {
       "path": "/publications",
       "title": "Publications | Huseyin Ugur Yildiz",
-      "count": 135,
+      "count": 136,
       "stats": [
         {
           "date": "2026-02-05",
@@ -25622,10 +25968,14 @@
         },
         {
           "date": "2026-09-20",
-          "views": 0
+          "views": 1
         },
         {
           "date": "2026-09-21",
+          "views": 0
+        },
+        {
+          "date": "2026-09-22",
           "views": 0
         }
       ]
@@ -26550,6 +26900,10 @@
         {
           "date": "2026-09-21",
           "views": 0
+        },
+        {
+          "date": "2026-09-22",
+          "views": 0
         }
       ]
     },
@@ -27472,6 +27826,10 @@
         },
         {
           "date": "2026-09-21",
+          "views": 0
+        },
+        {
+          "date": "2026-09-22",
           "views": 0
         }
       ]
@@ -28392,13 +28750,17 @@
         {
           "date": "2026-09-21",
           "views": 0
+        },
+        {
+          "date": "2026-09-22",
+          "views": 0
         }
       ]
     }
   ],
   "site": {},
   "totals": {
-    "pageviews": 1154,
+    "pageviews": 1162,
     "visitors": null
   },
   "pages": [
@@ -28407,7 +28769,7 @@
       "title": "Home | Huseyin Ugur Yildiz",
       "path_id": 80749188,
       "event": false,
-      "count": 451,
+      "count": 455,
       "refs": [
         {
           "name": "Google",
@@ -28436,7 +28798,7 @@
       "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
       "path_id": 80749912,
       "event": false,
-      "count": 145,
+      "count": 146,
       "refs": [
         {
           "name": "Google",
@@ -28465,7 +28827,7 @@
       "title": "Publications | Huseyin Ugur Yildiz",
       "path_id": 80750273,
       "event": false,
-      "count": 135,
+      "count": 136,
       "refs": [
         {
           "name": "huguryildiz.com",
@@ -28590,6 +28952,13 @@
       "count": 7
     },
     {
+      "path": "/writing/local-first-latex-workflow",
+      "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+      "path_id": 98713527,
+      "event": false,
+      "count": 7
+    },
+    {
       "path": "/stats",
       "title": "Site Stats | Huseyin Ugur Yildiz",
       "path_id": 95945764,
@@ -28597,9 +28966,9 @@
       "count": 7
     },
     {
-      "path": "/writing/local-first-latex-workflow",
-      "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
-      "path_id": 98713527,
+      "path": "/writing/airport-gate-assignment-multiobjective",
+      "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+      "path_id": 104130835,
       "event": false,
       "count": 6
     },
@@ -28609,13 +28978,6 @@
       "path_id": 96633631,
       "event": false,
       "count": 6
-    },
-    {
-      "path": "/writing/airport-gate-assignment-multiobjective",
-      "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
-      "path_id": 104130835,
-      "event": false,
-      "count": 5
     },
     {
       "path": "/writing/ai-assisted-proof-derivative-free-optimization",
@@ -28720,7 +29082,7 @@
     {
       "code": "TR",
       "name": "Turkey",
-      "count": 282
+      "count": 284
     },
     {
       "code": "US",
@@ -28748,6 +29110,11 @@
       "count": 9
     },
     {
+      "code": "RU",
+      "name": "Russia",
+      "count": 7
+    },
+    {
       "code": "DE",
       "name": "Germany",
       "count": 6
@@ -28758,9 +29125,9 @@
       "count": 6
     },
     {
-      "code": "RU",
-      "name": "Russia",
-      "count": 6
+      "code": "KZ",
+      "name": "Kazakhstan",
+      "count": 5
     },
     {
       "code": "DZ",
@@ -28770,11 +29137,6 @@
     {
       "code": "JP",
       "name": "Japan",
-      "count": 4
-    },
-    {
-      "code": "KZ",
-      "name": "Kazakhstan",
       "count": 4
     },
     {
@@ -28939,11 +29301,11 @@
   "browsers": [
     {
       "name": "Chrome",
-      "count": 277
+      "count": 280
     },
     {
       "name": "Safari",
-      "count": 165
+      "count": 166
     },
     {
       "name": "Firefox",
@@ -28961,11 +29323,11 @@
     },
     {
       "name": "macOS",
-      "count": 129
+      "count": 130
     },
     {
       "name": "Windows",
-      "count": 115
+      "count": 117
     },
     {
       "name": "Android",
@@ -28973,7 +29335,7 @@
     },
     {
       "name": "Linux",
-      "count": 24
+      "count": 25
     }
   ],
   "sizes": []
