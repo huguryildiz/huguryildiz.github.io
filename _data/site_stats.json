@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-21T08:43:58Z",
+  "updated": "2026-09-22T08:22:42Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-09-21"
+    "end": "2026-09-22"
   },
   "window_order": [
     "today",
@@ -16,11 +16,104 @@
   "windows": {
     "today": {
       "label": "Today",
+      "start": "2026-09-22",
+      "end": "2026-09-22",
+      "pageviews": 1,
+      "pages_total": 1,
+      "pages": [
+        {
+          "path": "/service",
+          "title": "Service | Huseyin Ugur Yildiz",
+          "path_id": 80843167,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events_total": 0,
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries_total": 1,
+      "countries": [
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "count": 1
+        }
+      ],
+      "referrers_total": 0,
+      "referrers": [],
+      "browsers_total": 1,
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        }
+      ],
+      "systems_total": 1,
+      "systems": [
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
+      "sizes_total": 0,
+      "sizes": [],
+      "languages_total": 1,
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        }
+      ],
+      "regions_total": 0,
+      "regions": [],
+      "regions_unmatched": []
+    },
+    "yesterday": {
+      "label": "Yesterday",
       "start": "2026-09-21",
       "end": "2026-09-21",
-      "pageviews": 3,
-      "pages_total": 3,
+      "pageviews": 4,
+      "pages_total": 4,
       "pages": [
+        {
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 1
+            }
+          ]
+        },
         {
           "path": "/writing/airport-gate-assignment-multiobjective",
           "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
@@ -80,21 +173,21 @@
         0,
         0,
         0,
-        0,
+        1,
         0
       ],
       "countries_total": 1,
       "countries": [
         {
-          "code": "TR",
-          "name": "Turkey",
+          "code": "GB",
+          "name": "United Kingdom",
           "count": 1
         }
       ],
       "referrers_total": 1,
       "referrers": [
         {
-          "name": "Yandex",
+          "name": "Google",
           "count": 1
         }
       ],
@@ -108,7 +201,7 @@
       "systems_total": 1,
       "systems": [
         {
-          "name": "Windows",
+          "name": "Android",
           "count": 1
         }
       ],
@@ -124,162 +217,10 @@
       "regions_total": 1,
       "regions": [
         {
-          "name": "Ankara",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "06",
-          "count": 1
-        }
-      ],
-      "regions_unmatched": []
-    },
-    "yesterday": {
-      "label": "Yesterday",
-      "start": "2026-09-20",
-      "end": "2026-09-20",
-      "pageviews": 5,
-      "pages_total": 3,
-      "pages": [
-        {
-          "path": "/",
-          "title": "Home | Huseyin Ugur Yildiz",
-          "path_id": 80749188,
-          "event": false,
-          "count": 3
-        },
-        {
-          "path": "/writing/local-first-latex-workflow",
-          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
-          "path_id": 98713527,
-          "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/publications",
-          "title": "Publications | Huseyin Ugur Yildiz",
-          "path_id": 80750273,
-          "event": false,
-          "count": 1
-        }
-      ],
-      "events_total": 0,
-      "events": [],
-      "hourly": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        5,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "countries_total": 3,
-      "countries": [
-        {
-          "code": "KZ",
-          "name": "Kazakhstan",
-          "count": 1
-        },
-        {
-          "code": "RU",
-          "name": "Russia",
-          "count": 1
-        },
-        {
-          "code": "TR",
-          "name": "Turkey",
-          "count": 1
-        }
-      ],
-      "referrers_total": 0,
-      "referrers": [],
-      "browsers_total": 2,
-      "browsers": [
-        {
-          "name": "Chrome",
-          "count": 2
-        },
-        {
-          "name": "Safari",
-          "count": 1
-        }
-      ],
-      "systems_total": 3,
-      "systems": [
-        {
-          "name": "Linux",
-          "count": 1
-        },
-        {
-          "name": "macOS",
-          "count": 1
-        },
-        {
-          "name": "Windows",
-          "count": 1
-        }
-      ],
-      "sizes_total": 0,
-      "sizes": [],
-      "languages_total": 3,
-      "languages": [
-        {
-          "name": "Kazakh",
-          "count": 1
-        },
-        {
-          "name": "Russian",
-          "count": 1
-        },
-        {
-          "name": "Turkish",
-          "count": 1
-        }
-      ],
-      "regions_total": 3,
-      "regions": [
-        {
-          "name": "Mangistauskaya Oblast'",
-          "country": "Kazakhstan",
-          "country_code": "KZ",
+          "name": "England",
+          "country": "United Kingdom",
+          "country_code": "GB",
           "code": null,
-          "count": 1
-        },
-        {
-          "name": "Volgograd Oblast",
-          "country": "Russia",
-          "country_code": "RU",
-          "code": null,
-          "count": 1
-        },
-        {
-          "name": "İstanbul",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "34",
           "count": 1
         }
       ],
@@ -287,37 +228,20 @@
     },
     "7d": {
       "label": "Last 7 days",
-      "start": "2026-09-15",
-      "end": "2026-09-21",
-      "pageviews": 18,
-      "pages_total": 9,
+      "start": "2026-09-16",
+      "end": "2026-09-22",
+      "pageviews": 16,
+      "pages_total": 10,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 6,
+          "count": 5,
           "refs": [
-            {
-              "name": "www.linkedin.com",
-              "count": 1
-            },
             {
               "name": "huguryildiz.com/writing/airport-gate-assignment-multiobjective",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/teaching",
-          "title": "Huseyin Ugur Yildiz",
-          "path_id": 80750338,
-          "event": false,
-          "count": 3,
-          "refs": [
-            {
-              "name": "huguryildiz.com",
               "count": 1
             }
           ]
@@ -336,14 +260,21 @@
           ]
         },
         {
-          "path": "/students",
-          "title": "Students | Huseyin Ugur Yildiz",
-          "path_id": 80840367,
+          "path": "/teaching",
+          "title": "Huseyin Ugur Yildiz",
+          "path_id": 80750338,
           "event": false,
-          "count": 2,
+          "count": 2
+        },
+        {
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
+          "event": false,
+          "count": 1,
           "refs": [
             {
-              "name": "huguryildiz.com/teaching",
+              "name": "Google",
               "count": 1
             }
           ]
@@ -369,9 +300,16 @@
           "count": 1
         },
         {
-          "path": "/404.html",
-          "title": "Page Not Found Huseyin Ugur Yildiz",
-          "path_id": 80992097,
+          "path": "/service",
+          "title": "Service | Huseyin Ugur Yildiz",
+          "path_id": 80843167,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/students",
+          "title": "Students | Huseyin Ugur Yildiz",
+          "path_id": 80840367,
           "event": false,
           "count": 1
         },
@@ -390,16 +328,8 @@
           "count": 1
         }
       ],
-      "events_total": 1,
-      "events": [
-        {
-          "path": "cv-pdf",
-          "title": "CV (PDF), from the CV page",
-          "path_id": 96697209,
-          "event": true,
-          "count": 1
-        }
-      ],
+      "events_total": 0,
+      "events": [],
       "hourly": [
         0,
         0,
@@ -419,11 +349,11 @@
         0,
         0,
         0,
-        3,
+        0,
         1,
         0,
         0,
-        0,
+        1,
         1
       ],
       "countries_total": 4,
@@ -431,7 +361,7 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 3
+          "count": 2
         },
         {
           "code": "KZ",
@@ -449,18 +379,13 @@
           "count": 1
         }
       ],
-      "referrers_total": 1,
-      "referrers": [
-        {
-          "name": "www.linkedin.com",
-          "count": 1
-        }
-      ],
+      "referrers_total": 0,
+      "referrers": [],
       "browsers_total": 2,
       "browsers": [
         {
           "name": "Chrome",
-          "count": 5
+          "count": 4
         },
         {
           "name": "Safari",
@@ -471,7 +396,7 @@
       "systems": [
         {
           "name": "Windows",
-          "count": 4
+          "count": 3
         },
         {
           "name": "Linux",
@@ -491,32 +416,32 @@
           "count": 2
         },
         {
-          "name": "Turkish",
-          "count": 2
-        },
-        {
           "name": "Kazakh",
           "count": 1
         },
         {
           "name": "Russian",
           "count": 1
+        },
+        {
+          "name": "Turkish",
+          "count": 1
         }
       ],
       "regions_total": 5,
       "regions": [
         {
-          "name": "İstanbul",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "34",
-          "count": 2
-        },
-        {
           "name": "Ankara",
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
+          "count": 1
+        },
+        {
+          "name": "İstanbul",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "34",
           "count": 1
         },
         {
@@ -545,9 +470,9 @@
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-08-23",
-      "end": "2026-09-21",
-      "pageviews": 132,
+      "start": "2026-08-24",
+      "end": "2026-09-22",
+      "pageviews": 133,
       "pages_total": 19,
       "pages": [
         {
@@ -555,7 +480,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 55,
+          "count": 54,
           "refs": [
             {
               "name": "Google",
@@ -679,6 +604,13 @@
           "count": 7
         },
         {
+          "path": "/service",
+          "title": "Service | Huseyin Ugur Yildiz",
+          "path_id": 80843167,
+          "event": false,
+          "count": 6
+        },
+        {
           "path": "/cv",
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
@@ -707,11 +639,11 @@
           "count": 5
         },
         {
-          "path": "/service",
-          "title": "Service | Huseyin Ugur Yildiz",
-          "path_id": 80843167,
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
           "event": false,
-          "count": 5
+          "count": 2
         },
         {
           "path": "/writing/ieee-twc-submission-cap",
@@ -726,13 +658,6 @@
           "path_id": 80992097,
           "event": false,
           "count": 2
-        },
-        {
-          "path": "/writing/arxivisual-interactive-research-papers",
-          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
-          "path_id": 106826525,
-          "event": false,
-          "count": 1
         },
         {
           "path": "/writing/internet-of-algae-lab",
@@ -789,7 +714,7 @@
       ],
       "hourly": [
         8,
-        3,
+        2,
         3,
         2,
         3,
@@ -799,7 +724,7 @@
         3,
         4,
         4,
-        8,
+        9,
         3,
         10,
         5,
@@ -810,7 +735,7 @@
         4,
         9,
         13,
-        9,
+        10,
         8
       ],
       "countries_total": 10,
@@ -818,7 +743,7 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 32
+          "count": 31
         },
         {
           "code": "US",
@@ -897,7 +822,7 @@
         },
         {
           "name": "Safari",
-          "count": 22
+          "count": 21
         },
         {
           "name": "Firefox",
@@ -908,7 +833,7 @@
       "systems": [
         {
           "name": "iOS",
-          "count": 19
+          "count": 18
         },
         {
           "name": "Windows",
@@ -933,7 +858,7 @@
       "languages": [
         {
           "name": "English",
-          "count": 34
+          "count": 33
         },
         {
           "name": "Turkish",
@@ -981,13 +906,6 @@
           "count": 4
         },
         {
-          "name": "Antalya",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "07",
-          "count": 2
-        },
-        {
           "name": "İzmir",
           "country": "Turkey",
           "country_code": "TR",
@@ -1014,6 +932,13 @@
           "country_code": "GB",
           "code": null,
           "count": 2
+        },
+        {
+          "name": "Antalya",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "07",
+          "count": 1
         },
         {
           "name": "California",
@@ -1055,9 +980,9 @@
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-06-24",
-      "end": "2026-09-21",
-      "pageviews": 503,
+      "start": "2026-06-25",
+      "end": "2026-09-22",
+      "pageviews": 483,
       "pages_total": 25,
       "pages": [
         {
@@ -1065,15 +990,15 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 191,
+          "count": 181,
           "refs": [
             {
               "name": "Google",
-              "count": 28
+              "count": 27
             },
             {
               "name": "www.linkedin.com",
-              "count": 23
+              "count": 20
             },
             {
               "name": "com.linkedin.android",
@@ -1094,7 +1019,7 @@
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
-          "count": 84,
+          "count": 81,
           "refs": [
             {
               "name": "Google",
@@ -1102,7 +1027,7 @@
             },
             {
               "name": "huguryildiz.com",
-              "count": 9
+              "count": 6
             },
             {
               "name": "huguryildiz.com/service",
@@ -1123,48 +1048,19 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 39,
+          "count": 37,
           "refs": [
             {
               "name": "huguryildiz.com",
-              "count": 18
+              "count": 17
             },
             {
               "name": "huguryildiz.com/research",
               "count": 7
             },
             {
-              "name": "huguryildiz.com/cv",
-              "count": 2
-            },
-            {
               "name": "Google",
               "count": 1
-            },
-            {
-              "name": "huguryildiz.com/teaching",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/research",
-          "title": "Research | Huseyin Ugur Yildiz",
-          "path_id": 80750374,
-          "event": false,
-          "count": 37,
-          "refs": [
-            {
-              "name": "huguryildiz.com",
-              "count": 18
-            },
-            {
-              "name": "huguryildiz.com/publications",
-              "count": 8
-            },
-            {
-              "name": "huguryildiz.com/service",
-              "count": 2
             },
             {
               "name": "huguryildiz.com/teaching",
@@ -1177,19 +1073,48 @@
           ]
         },
         {
+          "path": "/research",
+          "title": "Research | Huseyin Ugur Yildiz",
+          "path_id": 80750374,
+          "event": false,
+          "count": 35,
+          "refs": [
+            {
+              "name": "huguryildiz.com",
+              "count": 17
+            },
+            {
+              "name": "huguryildiz.com/publications",
+              "count": 8
+            },
+            {
+              "name": "huguryildiz.com/teaching",
+              "count": 1
+            },
+            {
+              "name": "huguryildiz.com/students",
+              "count": 1
+            },
+            {
+              "name": "huguryildiz.com/service",
+              "count": 1
+            }
+          ]
+        },
+        {
           "path": "/students",
           "title": "Students | Huseyin Ugur Yildiz",
           "path_id": 80840367,
           "event": false,
-          "count": 27,
+          "count": 25,
           "refs": [
             {
               "name": "huguryildiz.com/teaching",
-              "count": 8
+              "count": 7
             },
             {
               "name": "huguryildiz.com",
-              "count": 6
+              "count": 5
             },
             {
               "name": "huguryildiz.com/service",
@@ -1210,14 +1135,14 @@
           "title": "Huseyin Ugur Yildiz",
           "path_id": 80750338,
           "event": false,
-          "count": 26
+          "count": 25
         },
         {
           "path": "/service",
           "title": "Service | Huseyin Ugur Yildiz",
           "path_id": 80843167,
           "event": false,
-          "count": 20
+          "count": 19
         },
         {
           "path": "/writing",
@@ -1290,6 +1215,13 @@
           "count": 3
         },
         {
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
+          "event": false,
+          "count": 2
+        },
+        {
           "path": "/writing/can-llms-jump-scientific-discovery",
           "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
           "path_id": 104195821,
@@ -1316,13 +1248,6 @@
           "path_id": 96462585,
           "event": false,
           "count": 2
-        },
-        {
-          "path": "/writing/arxivisual-interactive-research-papers",
-          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
-          "path_id": 106826525,
-          "event": false,
-          "count": 1
         },
         {
           "path": "/writing/internet-of-algae-lab",
@@ -1378,47 +1303,47 @@
         }
       ],
       "hourly": [
-        14,
-        18,
+        13,
+        17,
         16,
         14,
-        22,
+        20,
         4,
         6,
         15,
         5,
         6,
         10,
-        20,
+        21,
         15,
         32,
         40,
         33,
-        28,
-        23,
-        50,
+        26,
+        18,
+        40,
         29,
         23,
         24,
-        29,
-        27
+        30,
+        26
       ],
       "countries_total": 23,
       "countries": [
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 102
+          "count": 98
         },
         {
           "code": "US",
           "name": "United States",
-          "count": 40
+          "count": 39
         },
         {
           "code": "GB",
           "name": "United Kingdom",
-          "count": 11
+          "count": 8
         },
         {
           "code": "IN",
@@ -1438,7 +1363,7 @@
         {
           "code": "JP",
           "name": "Japan",
-          "count": 3
+          "count": 2
         },
         {
           "code": "KZ",
@@ -1458,11 +1383,6 @@
         {
           "code": "SA",
           "name": "Saudi Arabia",
-          "count": 2
-        },
-        {
-          "code": "SG",
-          "name": "Singapore",
           "count": 2
         },
         {
@@ -1519,17 +1439,22 @@
           "code": "PL",
           "name": "Poland",
           "count": 1
+        },
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "count": 1
         }
       ],
       "referrers_total": 10,
       "referrers": [
         {
           "name": "Google",
-          "count": 28
+          "count": 27
         },
         {
           "name": "www.linkedin.com",
-          "count": 23
+          "count": 20
         },
         {
           "name": "com.linkedin.android",
@@ -1568,11 +1493,11 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 119
+          "count": 112
         },
         {
           "name": "Safari",
-          "count": 64
+          "count": 61
         },
         {
           "name": "Edge",
@@ -1587,15 +1512,15 @@
       "systems": [
         {
           "name": "Windows",
-          "count": 61
+          "count": 57
         },
         {
           "name": "iOS",
-          "count": 54
+          "count": 53
         },
         {
           "name": "macOS",
-          "count": 40
+          "count": 35
         },
         {
           "name": "Android",
@@ -1612,7 +1537,7 @@
       "languages": [
         {
           "name": "(unknown)",
-          "count": 87
+          "count": 77
         },
         {
           "name": "English",
@@ -1671,17 +1596,17 @@
           "count": 8
         },
         {
-          "name": "Iowa",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 6
-        },
-        {
           "name": "Antalya",
           "country": "Turkey",
           "country_code": "TR",
           "code": "07",
+          "count": 5
+        },
+        {
+          "name": "Iowa",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
           "count": 5
         },
         {
@@ -1745,9 +1670,9 @@
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-09-22",
-      "end": "2026-09-21",
-      "pageviews": 1162,
+      "start": "2025-09-23",
+      "end": "2026-09-22",
+      "pageviews": 1164,
       "pages_total": 29,
       "pages": [
         {
@@ -1907,7 +1832,7 @@
           "title": "Service | Huseyin Ugur Yildiz",
           "path_id": 80843167,
           "event": false,
-          "count": 67
+          "count": 68
         },
         {
           "path": "/404.html",
@@ -1994,6 +1919,13 @@
           "count": 3
         },
         {
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
+          "event": false,
+          "count": 2
+        },
+        {
           "path": "/writing/can-llms-jump-scientific-discovery",
           "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
           "path_id": 104195821,
@@ -2034,13 +1966,6 @@
           "path_id": 80752603,
           "event": false,
           "count": 2
-        },
-        {
-          "path": "/writing/arxivisual-interactive-research-papers",
-          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
-          "path_id": 106826525,
-          "event": false,
-          "count": 1
         },
         {
           "path": "/writing/internet-of-algae-lab",
@@ -2107,7 +2032,7 @@
         11,
         28,
         29,
-        59,
+        60,
         38,
         73,
         79,
@@ -2118,7 +2043,7 @@
         55,
         45,
         44,
-        65,
+        66,
         72
       ],
       "countries_total": 32,
@@ -2532,8 +2457,8 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-09-21",
-      "pageviews": 1162,
+      "end": "2026-09-22",
+      "pageviews": 1164,
       "pages_total": 29,
       "pages": [
         {
@@ -2693,7 +2618,7 @@
           "title": "Service | Huseyin Ugur Yildiz",
           "path_id": 80843167,
           "event": false,
-          "count": 67
+          "count": 68
         },
         {
           "path": "/404.html",
@@ -2780,6 +2705,13 @@
           "count": 3
         },
         {
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
+          "event": false,
+          "count": 2
+        },
+        {
           "path": "/writing/can-llms-jump-scientific-discovery",
           "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
           "path_id": 104195821,
@@ -2820,13 +2752,6 @@
           "path_id": 80752603,
           "event": false,
           "count": 2
-        },
-        {
-          "path": "/writing/arxivisual-interactive-research-papers",
-          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
-          "path_id": 106826525,
-          "event": false,
-          "count": 1
         },
         {
           "path": "/writing/internet-of-algae-lab",
@@ -2893,7 +2818,7 @@
         11,
         28,
         29,
-        59,
+        60,
         38,
         73,
         79,
@@ -2904,7 +2829,7 @@
         55,
         45,
         44,
-        65,
+        66,
         72
       ],
       "countries_total": 32,
@@ -4231,7 +4156,11 @@
     },
     {
       "date": "2026-09-21",
-      "views": 3
+      "views": 4
+    },
+    {
+      "date": "2026-09-22",
+      "views": 1
     }
   ],
   "daily_breakdowns": {
@@ -23113,8 +23042,15 @@
       ]
     },
     "2026-09-21": {
-      "pageviews": 3,
+      "pageviews": 4,
       "pages": [
+        {
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
+          "event": false,
+          "count": 1
+        },
         {
           "path": "/writing/airport-gate-assignment-multiobjective",
           "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
@@ -23161,22 +23097,88 @@
         0,
         0,
         0,
-        0,
+        1,
         0
       ],
       "countries": [
         {
-          "code": "TR",
-          "name": "Turkey",
+          "code": "GB",
+          "name": "United Kingdom",
           "count": 1
         }
       ],
       "referrers": [
         {
-          "name": "Yandex",
+          "name": "Google",
           "count": 1
         }
       ],
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        }
+      ],
+      "systems": [
+        {
+          "name": "Android",
+          "count": 1
+        }
+      ],
+      "sizes": [],
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        }
+      ]
+    },
+    "2026-09-22": {
+      "pageviews": 1,
+      "pages": [
+        {
+          "path": "/service",
+          "title": "Service | Huseyin Ugur Yildiz",
+          "path_id": 80843167,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries": [
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "count": 1
+        }
+      ],
+      "referrers": [],
       "browsers": [
         {
           "name": "Chrome",
@@ -24123,6 +24125,10 @@
         {
           "date": "2026-09-22",
           "views": 0
+        },
+        {
+          "date": "2026-09-23",
+          "views": 0
         }
       ]
     },
@@ -25050,6 +25056,10 @@
         {
           "date": "2026-09-22",
           "views": 0
+        },
+        {
+          "date": "2026-09-23",
+          "views": 0
         }
       ]
     },
@@ -25977,6 +25987,10 @@
         {
           "date": "2026-09-22",
           "views": 0
+        },
+        {
+          "date": "2026-09-23",
+          "views": 0
         }
       ]
     },
@@ -26904,6 +26918,10 @@
         {
           "date": "2026-09-22",
           "views": 0
+        },
+        {
+          "date": "2026-09-23",
+          "views": 0
         }
       ]
     },
@@ -27830,6 +27848,10 @@
         },
         {
           "date": "2026-09-22",
+          "views": 0
+        },
+        {
+          "date": "2026-09-23",
           "views": 0
         }
       ]
@@ -28754,13 +28776,21 @@
         {
           "date": "2026-09-22",
           "views": 0
+        },
+        {
+          "date": "2026-09-23",
+          "views": 0
         }
       ]
     }
   ],
-  "site": {},
+  "site": {
+    "timezone": "Europe/Istanbul",
+    "first_hit_at": "2026-02-05T12:24:02.263206Z",
+    "data_retention_days": 0
+  },
   "totals": {
-    "pageviews": 1162,
+    "pageviews": 1164,
     "visitors": null
   },
   "pages": [
@@ -28921,7 +28951,7 @@
       "title": "Service | Huseyin Ugur Yildiz",
       "path_id": 80843167,
       "event": false,
-      "count": 67
+      "count": 68
     },
     {
       "path": "/404.html",
@@ -29008,6 +29038,13 @@
       "count": 3
     },
     {
+      "path": "/writing/arxivisual-interactive-research-papers",
+      "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+      "path_id": 106826525,
+      "event": false,
+      "count": 2
+    },
+    {
       "path": "/writing/can-llms-jump-scientific-discovery",
       "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
       "path_id": 104195821,
@@ -29048,13 +29085,6 @@
       "path_id": 80752603,
       "event": false,
       "count": 2
-    },
-    {
-      "path": "/writing/arxivisual-interactive-research-papers",
-      "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
-      "path_id": 106826525,
-      "event": false,
-      "count": 1
     },
     {
       "path": "/writing/internet-of-algae-lab",
