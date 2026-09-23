@@ -296,7 +296,7 @@ modified: 2026-09-09
     <li><img class="ico" src="/assets/images/icons/uwa-ray-bench-mark.png" alt="" width="22" height="22"><span class="n">UWA Ray Bench</span><span class="d">Benchmarking LLMs against a BELLHOP3D reference solver on underwater acoustic ray tracing.</span><a class="ext" href="https://uwa-ray-bench.vercel.app/" target="_blank" rel="noopener">uwa-ray-bench.vercel.app</a></li>
     <li><img class="ico" src="/assets/images/icons/ieee-acm-paper-writing.svg" alt="" width="22" height="22"><span class="n">IEEE / ACM Paper Writing Skills</span><span class="d">Evidence-aware drafting, rewriting, and auditing for engineering manuscripts.</span><a class="ext" href="https://ieee-acm-paper-writing.vercel.app" target="_blank" rel="noopener">ieee-acm-paper-writing.vercel.app</a></li>
   </ul>
-  <p class="more" style="margin-top:.7rem;"><a href="/research/">Research program &amp; software →</a></p>
+  <p class="more" style="margin-top:.7rem;"><a href="/software/">All software →</a></p>
   <h2 class="sec" id="home-news"><svg class="hicon" aria-hidden="true"><use href="#i-bell"/></svg>News</h2>
   <ul class="newslist">
     <li><time>Dec 2025</time><svg class="nicon" aria-hidden="true"><use href="#i-cap"/></svg><span><a href="https://www.linkedin.com/in/%C3%A7a%C4%9Fla-tantur-karag%C3%BCl-b834b0b5/" target="_blank" rel="noopener">Çağla Tantur Karagül<span class="sr-only"> (external)</span></a> successfully defended her Ph.D. dissertation at TOBB University of Economics and Technology.</span></li>

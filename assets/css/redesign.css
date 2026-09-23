@@ -1809,7 +1809,7 @@ footer.site a:hover .licon.spotify{color:var(--accent);}
 /* Keep semantic navigation available without scripting and with enlarged text. */
 .masthead{container-type:inline-size;}
 html:not([data-js]) #themeToggle,html:not([data-js]) #navToggle{display:none;}
-@container (max-width:64rem){
+@container (max-width:78rem){
   #navToggle{display:inline-flex; margin-left:auto;}
   nav.primary{display:none; position:absolute; left:0; right:0; top:100%; background:var(--bg);
     border-bottom:1px solid var(--hairline); max-height:calc(100svh - var(--masthead-height,4rem)); overflow-y:auto;}
