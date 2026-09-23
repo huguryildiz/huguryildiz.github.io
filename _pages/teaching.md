@@ -35,7 +35,7 @@ modified: 2026-09-01
         linear systems, Fourier analysis, and sampling theory.</p>
       <div class="links"><span class="tag">{{ course.terms_web }}</span>
         <a class="ext" href="https://www.tedu.edu.tr/ee-311" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-link"/></svg> Course catalog</a>
-        <a class="ext" href="https://github.com/huguryildiz/signals-and-systems" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-github"/></svg> GitHub repository</a></div>
+        <a class="ext" href="https://signals-and-systems-tedu.vercel.app/" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-globe"/></svg> Course website</a></div>
     </div>
   </article>
 
@@ -50,7 +50,7 @@ modified: 2026-09-01
         information theory concepts.</p>
       <div class="links"><span class="tag">{{ course.terms_web }}</span>
         <a class="ext" href="https://www.tedu.edu.tr/ee-413" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-link"/></svg> Course catalog</a>
-        <a class="ext" href="https://github.com/huguryildiz/digital-communications" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-github"/></svg> GitHub repository</a></div>
+        <a class="ext" href="https://digital-communications.vercel.app/" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-globe"/></svg> Course website</a></div>
     </div>
   </article>
 
