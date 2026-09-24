@@ -1263,15 +1263,22 @@ ol.publist{list-style:none; margin:0; padding:0;}
 .dotlist{margin:.2rem 0 0; padding-left:1.15rem;}
 .dotlist li{margin:.32rem 0;}
 .dotlist li::marker{color:var(--accent);}
+.teaching-philosophy-layout{
+  display:grid; grid-template-columns:minmax(0,1.25fr) minmax(320px,.75fr);
+  gap:clamp(1.5rem,4vw,3.25rem); align-items:stretch;
+}
+.teaching-philosophy-copy > :last-child{margin-bottom:0;}
 .teaching-philosophy-visual{
-  margin:0 0 1.45rem; overflow:hidden; border:1px solid var(--hairline);
-  border-radius:8px; background:var(--surface);
+  position:relative; min-height:380px; margin:0; overflow:hidden;
+  border:1px solid var(--hairline); border-radius:8px; background:var(--surface);
 }
 .teaching-philosophy-visual img{
-  width:100%; aspect-ratio:12/5; object-fit:cover; object-position:center 30%;
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  object-position:center;
 }
-@media (max-width:620px){
-  .teaching-philosophy-visual img{aspect-ratio:16/10;}
+@media (max-width:800px){
+  .teaching-philosophy-layout{grid-template-columns:1fr;}
+  .teaching-philosophy-visual{min-height:0; aspect-ratio:16/10;}
 }
 .collist{columns:2; column-gap:3.2rem;}
 .collist li{break-inside:avoid;}

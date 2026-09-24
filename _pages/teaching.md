@@ -134,22 +134,26 @@ modified: 2026-09-24
     <a class="ext" href="https://lms.tedu.edu.tr/" target="_blank" rel="noopener"><i class="ai ai-moodle" aria-hidden="true"></i> TEDU LMS</a>.</p>
 
   <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-bulb"/></svg>Teaching philosophy and pedagogical approach</h2>
-  <figure class="teaching-philosophy-visual">
-    <img src="/assets/images/teaching/active-learning.webp"
-      alt="Engineering students work through a technical problem together while an instructor discusses signal plots at the front of the classroom."
-      width="1400" height="700" loading="lazy" decoding="async">
-  </figure>
-  <p>My teaching philosophy integrates <b>theory, practice, and active learning</b> to foster
-    independent thinking and lifelong learning. I emphasize:</p>
-  <ul class="dotlist">
-    <li>Interactive classroom discussions that promote collaborative problem-solving</li>
-    <li>Two-stage collaborative quizzes combining group work with individual assessment</li>
-    <li>Use of modern computational tools (e.g., MATLAB, tablets) for live problem-solving and visualization</li>
-    <li>Connecting theoretical concepts to real-world engineering applications</li>
-    <li>Preparing students for both industry and research careers</li>
-  </ul>
-  <p style="margin-top:1em;">My goal is to create an engaging and supportive learning environment
-    that helps students develop strong analytical and problem-solving skills.</p>
+  <div class="teaching-philosophy-layout">
+    <div class="teaching-philosophy-copy">
+      <p>My teaching philosophy integrates <b>theory, practice, and active learning</b> to foster
+        independent thinking and lifelong learning. I emphasize:</p>
+      <ul class="dotlist">
+        <li>Interactive classroom discussions that promote collaborative problem-solving</li>
+        <li>Two-stage collaborative quizzes combining group work with individual assessment</li>
+        <li>Use of modern computational tools (e.g., MATLAB, tablets) for live problem-solving and visualization</li>
+        <li>Connecting theoretical concepts to real-world engineering applications</li>
+        <li>Preparing students for both industry and research careers</li>
+      </ul>
+      <p style="margin-top:1em;">My goal is to create an engaging and supportive learning environment
+        that helps students develop strong analytical and problem-solving skills.</p>
+    </div>
+    <figure class="teaching-philosophy-visual">
+      <img src="/assets/images/teaching/active-learning.webp"
+        alt="Engineering students work through a technical problem together while an instructor discusses signal plots at the front of the classroom."
+        width="1400" height="700" loading="lazy" decoding="async">
+    </figure>
+  </div>
 </div>
 
 <script>
