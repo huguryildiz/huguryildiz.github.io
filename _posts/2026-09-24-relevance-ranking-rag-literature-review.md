@@ -20,8 +20,3 @@ This comparison uses 594 papers on quantum networking. The ranking models score 
 The reported Jev results are 60 retrieved relevant papers, 61% precision, and a 0.915 ROC-AUC. The Gemini Embedding 2 baseline reaches 37 relevant papers, 38% precision, and a 0.778 ROC-AUC. A Gemini Embedding 2 plus logistic-regression classifier reaches 52 relevant papers, 53% precision, and a 0.885 ROC-AUC. Random order is the reference baseline with 13 relevant papers, 13% precision, and a 0.500 ROC-AUC.
 
 The visual also reports three runs with 589 of 594 decisions identical, and an estimated cost of $0.025 versus $0.041 per 1,000 papers. The answer key is model-made; two labelers disagreed on 17 of 100 cases, with κ = 0.47. The logistic-regression result is cross-validated on the same 594 papers, so the infographic describes 52 as a floor for that baseline.
-
-<figure class="post-figure">
-  <iframe class="post-embed" src="https://www.linkedin.com/embed/feed/update/urn:li:share:7507553785318125568" height="1174" width="504" frameborder="0" allowfullscreen title="Embedded LinkedIn post about relevance ranking in RAG-based literature review"></iframe>
-  <figcaption>The original LinkedIn post.</figcaption>
-</figure>
