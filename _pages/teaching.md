@@ -3,7 +3,7 @@ layout: academic
 title: "Courses & Teaching – Hüseyin Uğur Yıldız"
 description: "Courses taught at TED University by Hüseyin Uğur Yıldız — probability, signals and systems, communication systems, optimization for networks — and teaching philosophy."
 permalink: /teaching/
-modified: 2026-09-01
+modified: 2026-09-24
 ---
 
 <div class="shell">
@@ -134,6 +134,11 @@ modified: 2026-09-01
     <a class="ext" href="https://lms.tedu.edu.tr/" target="_blank" rel="noopener"><i class="ai ai-moodle" aria-hidden="true"></i> TEDU LMS</a>.</p>
 
   <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-bulb"/></svg>Teaching philosophy and pedagogical approach</h2>
+  <figure class="teaching-philosophy-visual">
+    <img src="/assets/images/teaching/active-learning.webp"
+      alt="Engineering students work through a technical problem together while an instructor discusses signal plots at the front of the classroom."
+      width="1400" height="700" loading="lazy" decoding="async">
+  </figure>
   <p>My teaching philosophy integrates <b>theory, practice, and active learning</b> to foster
     independent thinking and lifelong learning. I emphasize:</p>
   <ul class="dotlist">

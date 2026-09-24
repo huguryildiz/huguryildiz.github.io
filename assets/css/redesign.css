@@ -1263,6 +1263,16 @@ ol.publist{list-style:none; margin:0; padding:0;}
 .dotlist{margin:.2rem 0 0; padding-left:1.15rem;}
 .dotlist li{margin:.32rem 0;}
 .dotlist li::marker{color:var(--accent);}
+.teaching-philosophy-visual{
+  margin:0 0 1.45rem; overflow:hidden; border:1px solid var(--hairline);
+  border-radius:8px; background:var(--surface);
+}
+.teaching-philosophy-visual img{
+  width:100%; aspect-ratio:12/5; object-fit:cover; object-position:center 30%;
+}
+@media (max-width:620px){
+  .teaching-philosophy-visual img{aspect-ratio:16/10;}
+}
 .collist{columns:2; column-gap:3.2rem;}
 .collist li{break-inside:avoid;}
 @media (max-width:640px){ .collist{columns:1;} }
