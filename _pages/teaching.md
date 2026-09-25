@@ -89,7 +89,7 @@ modified: 2026-09-26
   </article>
 
   <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-book"/></svg>Course materials in development</h2>
-  <h3 class="sub">Undergraduate</h3>
+  <h3 class="sub">Graduate</h3>
 
   <article class="swproject">
     <video class="course-video" data-src="/assets/video/courses/hero-quantum-computing.mp4"
@@ -97,7 +97,7 @@ modified: 2026-09-26
       aria-hidden="true"></video>
     <div>
       <h3>Quantum Computing</h3>
-      <p>An undergraduate course covering quantum states, measurement, entanglement, gates,
+      <p>A graduate course covering quantum states, measurement, entanglement, gates,
         circuits, protocols, and quantum algorithms, with worked questions and browser-based
         laboratories.</p>
       <div class="links"><span class="tag">Not yet offered</span>
