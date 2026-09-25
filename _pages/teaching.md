@@ -1,9 +1,9 @@
 ---
 layout: academic
 title: "Courses & Teaching – Hüseyin Uğur Yıldız"
-description: "Courses taught at TED University by Hüseyin Uğur Yıldız — probability, signals and systems, communication systems, optimization for networks — and teaching philosophy."
+description: "Courses taught at TED University by Hüseyin Uğur Yıldız, independent course materials, and teaching philosophy."
 permalink: /teaching/
-modified: 2026-09-24
+modified: 2026-09-26
 ---
 
 <div class="shell">
@@ -85,6 +85,23 @@ modified: 2026-09-24
         applications.</p>
       <div class="links"><span class="tag">{{ course.terms_web }}</span>
         <a class="ext" href="https://www.tedu.edu.tr/ee-512" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-link"/></svg> Course catalog</a></div>
+    </div>
+  </article>
+
+  <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-book"/></svg>Course materials in development</h2>
+  <h3 class="sub">Undergraduate</h3>
+
+  <article class="swproject">
+    <video class="course-video" data-src="/assets/video/courses/hero-quantum-computing.mp4"
+      poster="/assets/images/courses/quantum-computing.webp" loop muted playsinline preload="metadata"
+      aria-hidden="true"></video>
+    <div>
+      <h3>Quantum Computing</h3>
+      <p>An undergraduate course covering quantum states, measurement, entanglement, gates,
+        circuits, protocols, and quantum algorithms, with worked questions and browser-based
+        laboratories.</p>
+      <div class="links"><span class="tag">Not yet offered</span>
+        <a class="ext" href="https://quantum-computing-tedu.vercel.app/" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-globe"/></svg> Course website</a></div>
     </div>
   </article>
 
