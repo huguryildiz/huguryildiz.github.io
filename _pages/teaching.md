@@ -1,9 +1,9 @@
 ---
 layout: academic
 title: "Courses & Teaching – Hüseyin Uğur Yıldız"
-description: "Courses taught at TED University by Hüseyin Uğur Yıldız — probability, signals and systems, communication systems, optimization for networks — and teaching philosophy."
+description: "Courses taught at TED University by Hüseyin Uğur Yıldız — probability, signals and systems, communication systems, optimization for networks, a quantum computing course in development — and teaching philosophy."
 permalink: /teaching/
-modified: 2026-09-24
+modified: 2026-09-25
 ---
 
 <div class="shell">
@@ -85,6 +85,27 @@ modified: 2026-09-24
         applications.</p>
       <div class="links"><span class="tag">{{ course.terms_web }}</span>
         <a class="ext" href="https://www.tedu.edu.tr/ee-512" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-link"/></svg> Course catalog</a></div>
+    </div>
+  </article>
+
+  <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-atom"/></svg>Course in development</h2>
+
+  <article class="swproject">
+    <img src="/assets/images/courses/quantum-computing.webp"
+      alt="Interference fringe of one qubit: the probability of outcome 0 plotted against the phase, with the measured counts from four hundred shots beneath it."
+      width="960" height="640" loading="lazy" decoding="async">
+    <div>
+      <h3>Quantum Computing</h3>
+      <p>A first course in quantum computing for engineering students with linear algebra and some
+        Python but no prior quantum mechanics. It covers quantum states and measurement, density
+        operators and entanglement, the Bloch sphere and the gate set, circuits and teleportation,
+        and the introductory algorithms through Grover search, phase estimation, and order finding.
+        The material is an offline interactive course with eleven laboratories and 120 worked
+        practice questions, accompanied by lecture notes. It is not yet part of the TED University
+        catalog.</p>
+      <div class="links"><span class="tag">In development</span>
+        <a class="ext" href="https://quantum-computing-course.vercel.app/" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-globe"/></svg> Course website</a>
+        <a class="ext" href="https://quantum-computing-course.vercel.app/notes" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-file"/></svg> Lecture notes (PDF)</a></div>
     </div>
   </article>
 
