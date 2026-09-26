@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-25T08:39:14Z",
+  "updated": "2026-09-26T08:26:18Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-09-25"
+    "end": "2026-09-26"
   },
   "window_order": [
     "today",
@@ -16,13 +16,48 @@
   "windows": {
     "today": {
       "label": "Today",
-      "start": "2026-09-25",
-      "end": "2026-09-25",
-      "pageviews": 0,
-      "pages_total": 0,
-      "pages": [],
-      "events_total": 0,
-      "events": [],
+      "start": "2026-09-26",
+      "end": "2026-09-26",
+      "pageviews": 2,
+      "pages_total": 2,
+      "pages": [
+        {
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/publications",
+          "title": "Publications | Huseyin Ugur Yildiz",
+          "path_id": 80750273,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "huguryildiz.com/writing/arxivisual-interactive-research-papers",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "events_total": 1,
+      "events": [
+        {
+          "path": "doi/tantur2025mitigating",
+          "title": "Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity",
+          "path_id": 108177093,
+          "event": true,
+          "count": 1
+        }
+      ],
       "hourly": [
         0,
         0,
@@ -31,7 +66,7 @@
         0,
         0,
         0,
-        0,
+        2,
         0,
         0,
         0,
@@ -49,51 +84,76 @@
         0,
         0
       ],
-      "countries_total": 0,
-      "countries": [],
-      "referrers_total": 0,
-      "referrers": [],
-      "browsers_total": 0,
-      "browsers": [],
-      "systems_total": 0,
-      "systems": [],
+      "countries_total": 1,
+      "countries": [
+        {
+          "code": "KR",
+          "name": "South Korea",
+          "count": 1
+        }
+      ],
+      "referrers_total": 1,
+      "referrers": [
+        {
+          "name": "Google",
+          "count": 1
+        }
+      ],
+      "browsers_total": 1,
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        }
+      ],
+      "systems_total": 1,
+      "systems": [
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 0,
-      "languages": [],
-      "regions_total": 0,
-      "regions": [],
+      "languages_total": 1,
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        }
+      ],
+      "regions_total": 1,
+      "regions": [
+        {
+          "name": "Busan",
+          "country": "South Korea",
+          "country_code": "KR",
+          "code": null,
+          "count": 1
+        }
+      ],
       "regions_unmatched": []
     },
     "yesterday": {
       "label": "Yesterday",
-      "start": "2026-09-24",
-      "end": "2026-09-24",
-      "pageviews": 6,
-      "pages_total": 2,
+      "start": "2026-09-25",
+      "end": "2026-09-25",
+      "pageviews": 2,
+      "pages_total": 1,
       "pages": [
         {
-          "path": "/writing/arxivisual-interactive-research-papers",
-          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
-          "path_id": 106826525,
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
           "event": false,
-          "count": 5,
+          "count": 2,
           "refs": [
             {
               "name": "Google",
-              "count": 4
-            }
-          ]
-        },
-        {
-          "path": "/teaching",
-          "title": "Huseyin Ugur Yildiz",
-          "path_id": 80750338,
-          "event": false,
-          "count": 1,
-          "refs": [
+              "count": 1
+            },
             {
-              "name": "Google",
+              "name": "bing.com",
               "count": 1
             }
           ]
@@ -108,11 +168,10 @@
         0,
         0,
         0,
-        1,
         0,
         0,
-        1,
-        1,
+        0,
+        0,
         0,
         0,
         2,
@@ -125,28 +184,14 @@
         0,
         0,
         0,
-        1
+        0,
+        0
       ],
-      "countries_total": 5,
+      "countries_total": 2,
       "countries": [
         {
-          "code": "AE",
-          "name": "United Arab Emirates",
-          "count": 1
-        },
-        {
-          "code": "AU",
-          "name": "Australia",
-          "count": 1
-        },
-        {
-          "code": "DE",
-          "name": "Germany",
-          "count": 1
-        },
-        {
-          "code": "IT",
-          "name": "Italy",
+          "code": "TH",
+          "name": "Thailand",
           "count": 1
         },
         {
@@ -155,32 +200,32 @@
           "count": 1
         }
       ],
-      "referrers_total": 1,
+      "referrers_total": 2,
       "referrers": [
         {
           "name": "Google",
-          "count": 4
+          "count": 1
+        },
+        {
+          "name": "bing.com",
+          "count": 1
         }
       ],
       "browsers_total": 2,
       "browsers": [
         {
           "name": "Chrome",
-          "count": 3
+          "count": 1
         },
         {
-          "name": "Safari",
-          "count": 2
+          "name": "Firefox",
+          "count": 1
         }
       ],
-      "systems_total": 2,
+      "systems_total": 1,
       "systems": [
         {
-          "name": "macOS",
-          "count": 3
-        },
-        {
-          "name": "Android",
+          "name": "Windows",
           "count": 2
         }
       ],
@@ -190,34 +235,20 @@
       "languages": [
         {
           "name": "English",
-          "count": 5
+          "count": 2
         }
       ],
-      "regions_total": 4,
+      "regions_total": 2,
       "regions": [
         {
-          "name": "Dubai",
-          "country": "United Arab Emirates",
-          "country_code": "AE",
+          "name": "Bangkok",
+          "country": "Thailand",
+          "country_code": "TH",
           "code": null,
           "count": 1
         },
         {
-          "name": "New South Wales",
-          "country": "Australia",
-          "country_code": "AU",
-          "code": null,
-          "count": 1
-        },
-        {
-          "name": "Land Berlin",
-          "country": "Germany",
-          "country_code": "DE",
-          "code": null,
-          "count": 1
-        },
-        {
-          "name": "Illinois",
+          "name": "Georgia",
           "country": "United States",
           "country_code": "US",
           "code": null,
@@ -228,9 +259,9 @@
     },
     "7d": {
       "label": "Last 7 days",
-      "start": "2026-09-19",
-      "end": "2026-09-25",
-      "pageviews": 28,
+      "start": "2026-09-20",
+      "end": "2026-09-26",
+      "pageviews": 31,
       "pages_total": 10,
       "pages": [
         {
@@ -238,11 +269,11 @@
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
           "event": false,
-          "count": 11,
+          "count": 12,
           "refs": [
             {
               "name": "Google",
-              "count": 10
+              "count": 11
             }
           ]
         },
@@ -251,8 +282,16 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 7,
+          "count": 8,
           "refs": [
+            {
+              "name": "Google",
+              "count": 1
+            },
+            {
+              "name": "bing.com",
+              "count": 1
+            },
             {
               "name": "www.linkedin.com",
               "count": 1
@@ -290,17 +329,24 @@
           ]
         },
         {
+          "path": "/publications",
+          "title": "Publications | Huseyin Ugur Yildiz",
+          "path_id": 80750273,
+          "event": false,
+          "count": 2,
+          "refs": [
+            {
+              "name": "huguryildiz.com/writing/arxivisual-interactive-research-papers",
+              "count": 1
+            }
+          ]
+        },
+        {
           "path": "/writing/forced-euler-blowup-lean-verification",
           "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
           "path_id": 106131609,
           "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "chatgpt.com",
-              "count": 1
-            }
-          ]
+          "count": 1
         },
         {
           "path": "/writing/airport-gate-assignment-multiobjective",
@@ -324,13 +370,6 @@
           "count": 1
         },
         {
-          "path": "/publications",
-          "title": "Publications | Huseyin Ugur Yildiz",
-          "path_id": 80750273,
-          "event": false,
-          "count": 1
-        },
-        {
           "path": "/cv",
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
@@ -338,8 +377,15 @@
           "count": 1
         }
       ],
-      "events_total": 1,
+      "events_total": 2,
       "events": [
+        {
+          "path": "doi/tantur2025mitigating",
+          "title": "Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity",
+          "path_id": 108177093,
+          "event": true,
+          "count": 1
+        },
         {
           "path": "cv-pdf",
           "title": "CV (PDF), from the CV page",
@@ -356,12 +402,12 @@
         3,
         0,
         1,
-        0,
+        2,
         0,
         1,
         3,
         2,
-        1,
+        2,
         8,
         0,
         0,
@@ -374,7 +420,7 @@
         1,
         4
       ],
-      "countries_total": 10,
+      "countries_total": 11,
       "countries": [
         {
           "code": "IT",
@@ -407,6 +453,11 @@
           "count": 1
         },
         {
+          "code": "KR",
+          "name": "South Korea",
+          "count": 1
+        },
+        {
           "code": "PE",
           "name": "Peru",
           "count": 1
@@ -431,14 +482,14 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 10
+          "count": 11
         }
       ],
       "browsers_total": 2,
       "browsers": [
         {
           "name": "Chrome",
-          "count": 7
+          "count": 8
         },
         {
           "name": "Safari",
@@ -456,11 +507,11 @@
           "count": 3
         },
         {
-          "name": "iOS",
-          "count": 2
+          "name": "Windows",
+          "count": 3
         },
         {
-          "name": "Windows",
+          "name": "iOS",
           "count": 2
         }
       ],
@@ -470,7 +521,7 @@
       "languages": [
         {
           "name": "English",
-          "count": 9
+          "count": 10
         },
         {
           "name": "Italian",
@@ -516,9 +567,9 @@
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-08-27",
-      "end": "2026-09-25",
-      "pageviews": 135,
+      "start": "2026-08-28",
+      "end": "2026-09-26",
+      "pageviews": 138,
       "pages_total": 19,
       "pages": [
         {
@@ -526,7 +577,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 48,
+          "count": 49,
           "refs": [
             {
               "name": "Google",
@@ -555,11 +606,11 @@
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
           "event": false,
-          "count": 12,
+          "count": 13,
           "refs": [
             {
               "name": "Google",
-              "count": 10
+              "count": 11
             },
             {
               "name": "huguryildiz.com/writing",
@@ -646,7 +697,7 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 7
+          "count": 8
         },
         {
           "path": "/writing/local-first-latex-workflow",
@@ -733,7 +784,7 @@
           "count": 1
         }
       ],
-      "events_total": 2,
+      "events_total": 3,
       "events": [
         {
           "path": "cv-pdf",
@@ -741,6 +792,13 @@
           "path_id": 96697209,
           "event": true,
           "count": 4
+        },
+        {
+          "path": "doi/tantur2025mitigating",
+          "title": "Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity",
+          "path_id": 108177093,
+          "event": true,
+          "count": 1
         },
         {
           "path": "thesis-pdf/msc-thesis",
@@ -758,12 +816,12 @@
         5,
         0,
         4,
-        3,
+        5,
         3,
         5,
         5,
         9,
-        3,
+        5,
         13,
         5,
         2,
@@ -771,12 +829,12 @@
         6,
         10,
         3,
-        10,
+        9,
         13,
         5,
         12
       ],
-      "countries_total": 9,
+      "countries_total": 10,
       "countries": [
         {
           "code": "TR",
@@ -822,9 +880,14 @@
           "code": "RU",
           "name": "Russia",
           "count": 1
+        },
+        {
+          "code": "TH",
+          "name": "Thailand",
+          "count": 1
         }
       ],
-      "referrers_total": 4,
+      "referrers_total": 5,
       "referrers": [
         {
           "name": "Google",
@@ -841,6 +904,10 @@
         {
           "name": "avesis.tedu.edu.tr",
           "count": 2
+        },
+        {
+          "name": "bing.com",
+          "count": 1
         }
       ],
       "browsers_total": 3,
@@ -855,14 +922,14 @@
         },
         {
           "name": "Firefox",
-          "count": 1
+          "count": 2
         }
       ],
       "systems_total": 5,
       "systems": [
         {
           "name": "Windows",
-          "count": 16
+          "count": 17
         },
         {
           "name": "iOS",
@@ -887,7 +954,7 @@
       "languages": [
         {
           "name": "English",
-          "count": 28
+          "count": 29
         },
         {
           "name": "Turkish",
@@ -966,7 +1033,7 @@
           "count": 1
         },
         {
-          "name": "Louisiana",
+          "name": "Georgia",
           "country": "United States",
           "country_code": "US",
           "code": null,
@@ -1005,9 +1072,9 @@
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-06-28",
-      "end": "2026-09-25",
-      "pageviews": 471,
+      "start": "2026-06-29",
+      "end": "2026-09-26",
+      "pageviews": 474,
       "pages_total": 25,
       "pages": [
         {
@@ -1015,11 +1082,11 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 167,
+          "count": 168,
           "refs": [
             {
               "name": "Google",
-              "count": 27
+              "count": 28
             },
             {
               "name": "www.linkedin.com",
@@ -1035,7 +1102,7 @@
             },
             {
               "name": "bing.com",
-              "count": 3
+              "count": 4
             }
           ]
         },
@@ -1069,6 +1136,35 @@
           ]
         },
         {
+          "path": "/publications",
+          "title": "Publications | Huseyin Ugur Yildiz",
+          "path_id": 80750273,
+          "event": false,
+          "count": 34,
+          "refs": [
+            {
+              "name": "huguryildiz.com",
+              "count": 15
+            },
+            {
+              "name": "huguryildiz.com/research",
+              "count": 7
+            },
+            {
+              "name": "huguryildiz.com/teaching",
+              "count": 1
+            },
+            {
+              "name": "huguryildiz.com/students",
+              "count": 1
+            },
+            {
+              "name": "huguryildiz.com/writing",
+              "count": 1
+            }
+          ]
+        },
+        {
           "path": "/research",
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
@@ -1093,35 +1189,6 @@
             },
             {
               "name": "huguryildiz.com/cv",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/publications",
-          "title": "Publications | Huseyin Ugur Yildiz",
-          "path_id": 80750273,
-          "event": false,
-          "count": 33,
-          "refs": [
-            {
-              "name": "huguryildiz.com",
-              "count": 15
-            },
-            {
-              "name": "huguryildiz.com/research",
-              "count": 7
-            },
-            {
-              "name": "huguryildiz.com/teaching",
-              "count": 1
-            },
-            {
-              "name": "huguryildiz.com/students",
-              "count": 1
-            },
-            {
-              "name": "huguryildiz.com/writing",
               "count": 1
             }
           ]
@@ -1170,18 +1237,18 @@
           "count": 17
         },
         {
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
+          "event": false,
+          "count": 13
+        },
+        {
           "path": "/writing",
           "title": "Writing | Huseyin Ugur Yildiz",
           "path_id": 96360100,
           "event": false,
           "count": 13
-        },
-        {
-          "path": "/writing/arxivisual-interactive-research-papers",
-          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
-          "path_id": 106826525,
-          "event": false,
-          "count": 12
         },
         {
           "path": "/404.html",
@@ -1296,7 +1363,7 @@
           "count": 1
         }
       ],
-      "events_total": 4,
+      "events_total": 5,
       "events": [
         {
           "path": "cv-pdf",
@@ -1304,6 +1371,13 @@
           "path_id": 96697209,
           "event": true,
           "count": 8
+        },
+        {
+          "path": "doi/tantur2025mitigating",
+          "title": "Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity",
+          "path_id": 108177093,
+          "event": true,
+          "count": 1
         },
         {
           "path": "thesis-pdf/msc-thesis",
@@ -1329,18 +1403,18 @@
       ],
       "hourly": [
         13,
-        18,
+        17,
         17,
         13,
         22,
         4,
         7,
-        14,
+        16,
         5,
         7,
         11,
         22,
-        15,
+        17,
         35,
         40,
         31,
@@ -1353,17 +1427,17 @@
         29,
         29
       ],
-      "countries_total": 22,
+      "countries_total": 23,
       "countries": [
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 94
+          "count": 93
         },
         {
           "code": "US",
           "name": "United States",
-          "count": 37
+          "count": 38
         },
         {
           "code": "DE",
@@ -1464,13 +1538,18 @@
           "code": "SG",
           "name": "Singapore",
           "count": 1
+        },
+        {
+          "code": "TH",
+          "name": "Thailand",
+          "count": 1
         }
       ],
       "referrers_total": 10,
       "referrers": [
         {
           "name": "Google",
-          "count": 27
+          "count": 28
         },
         {
           "name": "www.linkedin.com",
@@ -1486,7 +1565,7 @@
         },
         {
           "name": "bing.com",
-          "count": 3
+          "count": 4
         },
         {
           "name": "github.com",
@@ -1520,11 +1599,11 @@
           "count": 52
         },
         {
-          "name": "Edge",
-          "count": 4
+          "name": "Firefox",
+          "count": 5
         },
         {
-          "name": "Firefox",
+          "name": "Edge",
           "count": 4
         }
       ],
@@ -1532,7 +1611,7 @@
       "systems": [
         {
           "name": "Windows",
-          "count": 57
+          "count": 59
         },
         {
           "name": "iOS",
@@ -1540,7 +1619,7 @@
         },
         {
           "name": "macOS",
-          "count": 30
+          "count": 29
         },
         {
           "name": "Android",
@@ -1557,11 +1636,11 @@
       "languages": [
         {
           "name": "English",
-          "count": 72
+          "count": 74
         },
         {
           "name": "(unknown)",
-          "count": 61
+          "count": 60
         },
         {
           "name": "Turkish",
@@ -1592,7 +1671,7 @@
           "count": 1
         }
       ],
-      "regions_total": 23,
+      "regions_total": 24,
       "regions": [
         {
           "name": "Ankara",
@@ -1690,9 +1769,9 @@
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-09-26",
-      "end": "2026-09-25",
-      "pageviews": 1181,
+      "start": "2025-09-27",
+      "end": "2026-09-26",
+      "pageviews": 1185,
       "pages_total": 29,
       "pages": [
         {
@@ -1700,11 +1779,11 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 457,
+          "count": 459,
           "refs": [
             {
               "name": "Google",
-              "count": 58
+              "count": 59
             },
             {
               "name": "www.linkedin.com",
@@ -1758,7 +1837,7 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 136,
+          "count": 137,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -1869,18 +1948,18 @@
           "count": 14
         },
         {
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
+          "event": false,
+          "count": 13
+        },
+        {
           "path": "/writing",
           "title": "Writing | Huseyin Ugur Yildiz",
           "path_id": 96360100,
           "event": false,
           "count": 13
-        },
-        {
-          "path": "/writing/arxivisual-interactive-research-papers",
-          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
-          "path_id": 106826525,
-          "event": false,
-          "count": 12
         },
         {
           "path": "/writing/forced-euler-blowup-lean-verification",
@@ -2009,7 +2088,7 @@
           "count": 1
         }
       ],
-      "events_total": 4,
+      "events_total": 5,
       "events": [
         {
           "path": "cv-pdf",
@@ -2017,6 +2096,13 @@
           "path_id": 96697209,
           "event": true,
           "count": 8
+        },
+        {
+          "path": "doi/tantur2025mitigating",
+          "title": "Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity",
+          "path_id": 108177093,
+          "event": true,
+          "count": 1
         },
         {
           "path": "thesis-pdf/msc-thesis",
@@ -2048,12 +2134,12 @@
         36,
         11,
         8,
-        21,
+        23,
         11,
         29,
         30,
         61,
-        38,
+        40,
         76,
         79,
         67,
@@ -2066,7 +2152,7 @@
         66,
         76
       ],
-      "countries_total": 32,
+      "countries_total": 33,
       "countries": [
         {
           "code": "TR",
@@ -2076,7 +2162,7 @@
         {
           "code": "US",
           "name": "United States",
-          "count": 64
+          "count": 65
         },
         {
           "code": "GB",
@@ -2219,6 +2305,11 @@
           "count": 1
         },
         {
+          "code": "TH",
+          "name": "Thailand",
+          "count": 1
+        },
+        {
           "code": "TW",
           "name": "Taiwan",
           "count": 1
@@ -2233,7 +2324,7 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 58
+          "count": 59
         },
         {
           "name": "www.linkedin.com",
@@ -2249,7 +2340,7 @@
         },
         {
           "name": "bing.com",
-          "count": 3
+          "count": 4
         },
         {
           "name": "github.com",
@@ -2292,7 +2383,7 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 282
+          "count": 283
         },
         {
           "name": "Safari",
@@ -2300,7 +2391,7 @@
         },
         {
           "name": "Firefox",
-          "count": 5
+          "count": 6
         },
         {
           "name": "Edge",
@@ -2319,7 +2410,7 @@
         },
         {
           "name": "Windows",
-          "count": 118
+          "count": 120
         },
         {
           "name": "Android",
@@ -2340,7 +2431,7 @@
         },
         {
           "name": "English",
-          "count": 72
+          "count": 74
         },
         {
           "name": "Turkish",
@@ -2434,7 +2525,7 @@
           "country": "United States",
           "country_code": "US",
           "code": null,
-          "count": 3
+          "count": 4
         },
         {
           "name": "New York",
@@ -2477,8 +2568,8 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-09-25",
-      "pageviews": 1181,
+      "end": "2026-09-26",
+      "pageviews": 1185,
       "pages_total": 29,
       "pages": [
         {
@@ -2486,11 +2577,11 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 457,
+          "count": 459,
           "refs": [
             {
               "name": "Google",
-              "count": 58
+              "count": 59
             },
             {
               "name": "www.linkedin.com",
@@ -2544,7 +2635,7 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 136,
+          "count": 137,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -2655,18 +2746,18 @@
           "count": 14
         },
         {
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
+          "event": false,
+          "count": 13
+        },
+        {
           "path": "/writing",
           "title": "Writing | Huseyin Ugur Yildiz",
           "path_id": 96360100,
           "event": false,
           "count": 13
-        },
-        {
-          "path": "/writing/arxivisual-interactive-research-papers",
-          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
-          "path_id": 106826525,
-          "event": false,
-          "count": 12
         },
         {
           "path": "/writing/forced-euler-blowup-lean-verification",
@@ -2795,7 +2886,7 @@
           "count": 1
         }
       ],
-      "events_total": 4,
+      "events_total": 5,
       "events": [
         {
           "path": "cv-pdf",
@@ -2803,6 +2894,13 @@
           "path_id": 96697209,
           "event": true,
           "count": 8
+        },
+        {
+          "path": "doi/tantur2025mitigating",
+          "title": "Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity",
+          "path_id": 108177093,
+          "event": true,
+          "count": 1
         },
         {
           "path": "thesis-pdf/msc-thesis",
@@ -2834,12 +2932,12 @@
         36,
         11,
         8,
-        21,
+        23,
         11,
         29,
         30,
         61,
-        38,
+        40,
         76,
         79,
         67,
@@ -2852,7 +2950,7 @@
         66,
         76
       ],
-      "countries_total": 32,
+      "countries_total": 33,
       "countries": [
         {
           "code": "TR",
@@ -2862,7 +2960,7 @@
         {
           "code": "US",
           "name": "United States",
-          "count": 64
+          "count": 65
         },
         {
           "code": "GB",
@@ -3005,6 +3103,11 @@
           "count": 1
         },
         {
+          "code": "TH",
+          "name": "Thailand",
+          "count": 1
+        },
+        {
           "code": "TW",
           "name": "Taiwan",
           "count": 1
@@ -3019,7 +3122,7 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 58
+          "count": 59
         },
         {
           "name": "www.linkedin.com",
@@ -3035,7 +3138,7 @@
         },
         {
           "name": "bing.com",
-          "count": 3
+          "count": 4
         },
         {
           "name": "github.com",
@@ -3078,7 +3181,7 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 282
+          "count": 283
         },
         {
           "name": "Safari",
@@ -3086,7 +3189,7 @@
         },
         {
           "name": "Firefox",
-          "count": 5
+          "count": 6
         },
         {
           "name": "Edge",
@@ -3105,7 +3208,7 @@
         },
         {
           "name": "Windows",
-          "count": 118
+          "count": 120
         },
         {
           "name": "Android",
@@ -3126,7 +3229,7 @@
         },
         {
           "name": "English",
-          "count": 72
+          "count": 74
         },
         {
           "name": "Turkish",
@@ -3220,7 +3323,7 @@
           "country": "United States",
           "country_code": "US",
           "code": null,
-          "count": 3
+          "count": 4
         },
         {
           "name": "New York",
@@ -4192,7 +4295,11 @@
     },
     {
       "date": "2026-09-25",
-      "views": 0
+      "views": 2
+    },
+    {
+      "date": "2026-09-26",
+      "views": 2
     }
   ],
   "daily_breakdowns": {
@@ -23503,8 +23610,16 @@
       ]
     },
     "2026-09-25": {
-      "pageviews": 0,
-      "pages": [],
+      "pageviews": 2,
+      "pages": [
+        {
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
+          "event": false,
+          "count": 2
+        }
+      ],
       "events": [],
       "hourly": [
         0,
@@ -23515,6 +23630,105 @@
         0,
         0,
         0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries": [
+        {
+          "code": "TH",
+          "name": "Thailand",
+          "count": 1
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 1
+        }
+      ],
+      "referrers": [
+        {
+          "name": "Google",
+          "count": 1
+        },
+        {
+          "name": "bing.com",
+          "count": 1
+        }
+      ],
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        },
+        {
+          "name": "Firefox",
+          "count": 1
+        }
+      ],
+      "systems": [
+        {
+          "name": "Windows",
+          "count": 2
+        }
+      ],
+      "sizes": [],
+      "languages": [
+        {
+          "name": "English",
+          "count": 2
+        }
+      ]
+    },
+    "2026-09-26": {
+      "pageviews": 2,
+      "pages": [
+        {
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/publications",
+          "title": "Publications | Huseyin Ugur Yildiz",
+          "path_id": 80750273,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events": [
+        {
+          "path": "doi/tantur2025mitigating",
+          "title": "Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity",
+          "path_id": 108177093,
+          "event": true,
+          "count": 1
+        }
+      ],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
         0,
         0,
         0,
@@ -23532,19 +23746,45 @@
         0,
         0
       ],
-      "countries": [],
-      "referrers": [],
-      "browsers": [],
-      "systems": [],
+      "countries": [
+        {
+          "code": "KR",
+          "name": "South Korea",
+          "count": 1
+        }
+      ],
+      "referrers": [
+        {
+          "name": "Google",
+          "count": 1
+        }
+      ],
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        }
+      ],
+      "systems": [
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
       "sizes": [],
-      "languages": []
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        }
+      ]
     }
   },
   "page_series": [
     {
       "path": "/",
       "title": "Home | Huseyin Ugur Yildiz",
-      "count": 457,
+      "count": 459,
       "stats": [
         {
           "date": "2026-02-05",
@@ -24476,10 +24716,14 @@
         },
         {
           "date": "2026-09-25",
-          "views": 0
+          "views": 2
         },
         {
           "date": "2026-09-26",
+          "views": 0
+        },
+        {
+          "date": "2026-09-27",
           "views": 0
         }
       ]
@@ -25424,13 +25668,17 @@
         {
           "date": "2026-09-26",
           "views": 0
+        },
+        {
+          "date": "2026-09-27",
+          "views": 0
         }
       ]
     },
     {
       "path": "/publications",
       "title": "Publications | Huseyin Ugur Yildiz",
-      "count": 136,
+      "count": 137,
       "stats": [
         {
           "date": "2026-02-05",
@@ -26366,6 +26614,10 @@
         },
         {
           "date": "2026-09-26",
+          "views": 1
+        },
+        {
+          "date": "2026-09-27",
           "views": 0
         }
       ]
@@ -27310,6 +27562,10 @@
         {
           "date": "2026-09-26",
           "views": 0
+        },
+        {
+          "date": "2026-09-27",
+          "views": 0
         }
       ]
     },
@@ -28252,6 +28508,10 @@
         },
         {
           "date": "2026-09-26",
+          "views": 0
+        },
+        {
+          "date": "2026-09-27",
           "views": 0
         }
       ]
@@ -29192,13 +29452,21 @@
         {
           "date": "2026-09-26",
           "views": 0
+        },
+        {
+          "date": "2026-09-27",
+          "views": 0
         }
       ]
     }
   ],
-  "site": {},
+  "site": {
+    "timezone": "Europe/Istanbul",
+    "first_hit_at": "2026-02-05T12:24:02.263206Z",
+    "data_retention_days": 0
+  },
   "totals": {
-    "pageviews": 1181,
+    "pageviews": 1185,
     "visitors": null
   },
   "pages": [
@@ -29207,11 +29475,11 @@
       "title": "Home | Huseyin Ugur Yildiz",
       "path_id": 80749188,
       "event": false,
-      "count": 457,
+      "count": 459,
       "refs": [
         {
           "name": "Google",
-          "count": 58
+          "count": 59
         },
         {
           "name": "www.linkedin.com",
@@ -29265,7 +29533,7 @@
       "title": "Publications | Huseyin Ugur Yildiz",
       "path_id": 80750273,
       "event": false,
-      "count": 136,
+      "count": 137,
       "refs": [
         {
           "name": "huguryildiz.com",
@@ -29376,18 +29644,18 @@
       "count": 14
     },
     {
+      "path": "/writing/arxivisual-interactive-research-papers",
+      "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+      "path_id": 106826525,
+      "event": false,
+      "count": 13
+    },
+    {
       "path": "/writing",
       "title": "Writing | Huseyin Ugur Yildiz",
       "path_id": 96360100,
       "event": false,
       "count": 13
-    },
-    {
-      "path": "/writing/arxivisual-interactive-research-papers",
-      "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
-      "path_id": 106826525,
-      "event": false,
-      "count": 12
     },
     {
       "path": "/writing/forced-euler-blowup-lean-verification",
@@ -29525,7 +29793,7 @@
     {
       "code": "US",
       "name": "United States",
-      "count": 64
+      "count": 65
     },
     {
       "code": "GB",
@@ -29668,6 +29936,11 @@
       "count": 1
     },
     {
+      "code": "TH",
+      "name": "Thailand",
+      "count": 1
+    },
+    {
       "code": "TW",
       "name": "Taiwan",
       "count": 1
@@ -29681,7 +29954,7 @@
   "referrers": [
     {
       "name": "Google",
-      "count": 58
+      "count": 59
     },
     {
       "name": "www.linkedin.com",
@@ -29697,7 +29970,7 @@
     },
     {
       "name": "bing.com",
-      "count": 3
+      "count": 4
     },
     {
       "name": "github.com",
@@ -29739,7 +30012,7 @@
   "browsers": [
     {
       "name": "Chrome",
-      "count": 282
+      "count": 283
     },
     {
       "name": "Safari",
@@ -29747,7 +30020,7 @@
     },
     {
       "name": "Firefox",
-      "count": 5
+      "count": 6
     },
     {
       "name": "Edge",
@@ -29765,7 +30038,7 @@
     },
     {
       "name": "Windows",
-      "count": 118
+      "count": 120
     },
     {
       "name": "Android",
