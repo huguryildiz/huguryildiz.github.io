@@ -1,10 +1,10 @@
 {
-  "citations": 1064,
-  "citations_display": "1,064",
+  "citations": 1065,
+  "citations_display": "1,065",
   "h_index": 16,
   "i10_index": 24,
   "works": 45,
-  "updated_utc": "2026-09-21T06:56:36Z",
+  "updated_utc": "2026-09-28T07:28:56Z",
   "profile_url": "https://scholar.google.com/citations?user=nQwHS1gAAAAJ",
   "display_name": "Huseyin Ugur Yildiz",
   "citations_per_year": [
@@ -30,11 +30,11 @@
     },
     {
       "year": 2020,
-      "citations": 135
+      "citations": 134
     },
     {
       "year": 2021,
-      "citations": 137
+      "citations": 138
     },
     {
       "year": 2022,
@@ -54,7 +54,7 @@
     },
     {
       "year": 2026,
-      "citations": 49
+      "citations": 50
     }
   ]
 }
