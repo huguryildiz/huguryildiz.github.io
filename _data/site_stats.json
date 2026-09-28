@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-27T09:03:55Z",
+  "updated": "2026-09-28T09:31:52Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-09-27"
+    "end": "2026-09-28"
   },
   "window_order": [
     "today",
@@ -16,10 +16,90 @@
   "windows": {
     "today": {
       "label": "Today",
+      "start": "2026-09-28",
+      "end": "2026-09-28",
+      "pageviews": 1,
+      "pages_total": 1,
+      "pages": [
+        {
+          "path": "/cv",
+          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
+          "path_id": 80749912,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events_total": 0,
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries_total": 1,
+      "countries": [
+        {
+          "code": "HK",
+          "name": "Hong Kong",
+          "count": 1
+        }
+      ],
+      "referrers_total": 0,
+      "referrers": [],
+      "browsers_total": 1,
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        }
+      ],
+      "systems_total": 1,
+      "systems": [
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
+      "sizes_total": 0,
+      "sizes": [],
+      "languages_total": 1,
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        }
+      ],
+      "regions_total": 0,
+      "regions": [],
+      "regions_unmatched": []
+    },
+    "yesterday": {
+      "label": "Yesterday",
       "start": "2026-09-27",
       "end": "2026-09-27",
-      "pageviews": 4,
-      "pages_total": 3,
+      "pageviews": 5,
+      "pages_total": 4,
       "pages": [
         {
           "path": "/",
@@ -27,6 +107,19 @@
           "path_id": 80749188,
           "event": false,
           "count": 2,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/writing/local-first-latex-workflow",
+          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+          "path_id": 98713527,
+          "event": false,
+          "count": 1,
           "refs": [
             {
               "name": "Google",
@@ -85,7 +178,7 @@
         0,
         0,
         0,
-        0,
+        1,
         0,
         0
       ],
@@ -151,163 +244,23 @@
       ],
       "regions_unmatched": []
     },
-    "yesterday": {
-      "label": "Yesterday",
-      "start": "2026-09-26",
-      "end": "2026-09-26",
-      "pageviews": 6,
-      "pages_total": 4,
-      "pages": [
-        {
-          "path": "/publications",
-          "title": "Publications | Huseyin Ugur Yildiz",
-          "path_id": 80750273,
-          "event": false,
-          "count": 2,
-          "refs": [
-            {
-              "name": "huguryildiz.com/writing/arxivisual-interactive-research-papers",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/",
-          "title": "Home | Huseyin Ugur Yildiz",
-          "path_id": 80749188,
-          "event": false,
-          "count": 2,
-          "refs": [
-            {
-              "name": "www.linkedin.com",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/writing/arxivisual-interactive-research-papers",
-          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
-          "path_id": 106826525,
-          "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/research",
-          "title": "Research | Huseyin Ugur Yildiz",
-          "path_id": 80750374,
-          "event": false,
-          "count": 1
-        }
-      ],
-      "events_total": 1,
-      "events": [
-        {
-          "path": "doi/tantur2025mitigating",
-          "title": "Mitigating energy cost of connection reliability in UWSNs through non-uniform k-connectivity",
-          "path_id": 108177093,
-          "event": true,
-          "count": 1
-        }
-      ],
-      "hourly": [
-        0,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        2,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
-        1,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
-        0,
-        0
-      ],
-      "countries_total": 2,
-      "countries": [
-        {
-          "code": "KR",
-          "name": "South Korea",
-          "count": 1
-        },
-        {
-          "code": "SG",
-          "name": "Singapore",
-          "count": 1
-        }
-      ],
-      "referrers_total": 0,
-      "referrers": [],
-      "browsers_total": 1,
-      "browsers": [
-        {
-          "name": "Chrome",
-          "count": 2
-        }
-      ],
-      "systems_total": 1,
-      "systems": [
-        {
-          "name": "Windows",
-          "count": 2
-        }
-      ],
-      "sizes_total": 0,
-      "sizes": [],
-      "languages_total": 1,
-      "languages": [
-        {
-          "name": "English",
-          "count": 2
-        }
-      ],
-      "regions_total": 1,
-      "regions": [
-        {
-          "name": "Busan",
-          "country": "South Korea",
-          "country_code": "KR",
-          "code": null,
-          "count": 1
-        }
-      ],
-      "regions_unmatched": []
-    },
     "7d": {
       "label": "Last 7 days",
-      "start": "2026-09-21",
-      "end": "2026-09-27",
-      "pageviews": 34,
-      "pages_total": 11,
+      "start": "2026-09-22",
+      "end": "2026-09-28",
+      "pageviews": 32,
+      "pages_total": 10,
       "pages": [
         {
           "path": "/writing/arxivisual-interactive-research-papers",
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
           "event": false,
-          "count": 12,
+          "count": 11,
           "refs": [
             {
               "name": "Google",
-              "count": 11
+              "count": 10
             }
           ]
         },
@@ -316,7 +269,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 9,
+          "count": 8,
           "refs": [
             {
               "name": "Google",
@@ -328,10 +281,6 @@
             },
             {
               "name": "bing.com",
-              "count": 1
-            },
-            {
-              "name": "huguryildiz.com/writing/airport-gate-assignment-multiobjective",
               "count": 1
             }
           ]
@@ -367,29 +316,22 @@
           ]
         },
         {
-          "path": "/writing/forced-euler-blowup-lean-verification",
-          "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
-          "path_id": 106131609,
+          "path": "/writing/local-first-latex-workflow",
+          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+          "path_id": 98713527,
           "event": false,
-          "count": 1,
+          "count": 2,
           "refs": [
             {
-              "name": "chatgpt.com",
-              "count": 1
+              "name": "Google",
+              "count": 2
             }
           ]
         },
         {
-          "path": "/writing/airport-gate-assignment-multiobjective",
-          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
-          "path_id": 104130835,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/writing/local-first-latex-workflow",
-          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
-          "path_id": 98713527,
+          "path": "/writing/forced-euler-blowup-lean-verification",
+          "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
+          "path_id": 106131609,
           "event": false,
           "count": 1
         },
@@ -444,13 +386,13 @@
         2,
         1,
         0,
-        3,
-        0,
+        2,
+        1,
         1,
         2,
         1,
         1,
-        6,
+        4,
         2,
         3,
         3,
@@ -461,11 +403,11 @@
         0,
         1,
         1,
-        0,
         1,
+        0,
         4
       ],
-      "countries_total": 11,
+      "countries_total": 10,
       "countries": [
         {
           "code": "IT",
@@ -490,11 +432,6 @@
         {
           "code": "DE",
           "name": "Germany",
-          "count": 1
-        },
-        {
-          "code": "GB",
-          "name": "United Kingdom",
           "count": 1
         },
         {
@@ -527,14 +464,14 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 11
+          "count": 10
         }
       ],
       "browsers_total": 2,
       "browsers": [
         {
           "name": "Chrome",
-          "count": 8
+          "count": 7
         },
         {
           "name": "Safari",
@@ -545,7 +482,7 @@
       "systems": [
         {
           "name": "Android",
-          "count": 4
+          "count": 3
         },
         {
           "name": "macOS",
@@ -566,7 +503,7 @@
       "languages": [
         {
           "name": "English",
-          "count": 10
+          "count": 9
         },
         {
           "name": "Italian",
@@ -612,9 +549,9 @@
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-08-29",
-      "end": "2026-09-27",
-      "pageviews": 146,
+      "start": "2026-08-30",
+      "end": "2026-09-28",
+      "pageviews": 148,
       "pages_total": 19,
       "pages": [
         {
@@ -753,6 +690,13 @@
           "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
           "path_id": 98713527,
           "event": false,
+          "count": 7
+        },
+        {
+          "path": "/cv",
+          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
+          "path_id": 80749912,
+          "event": false,
           "count": 6
         },
         {
@@ -766,13 +710,6 @@
           "path": "/service",
           "title": "Service | Huseyin Ugur Yildiz",
           "path_id": 80843167,
-          "event": false,
-          "count": 5
-        },
-        {
-          "path": "/cv",
-          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
-          "path_id": 80749912,
           "event": false,
           "count": 5
         },
@@ -863,7 +800,7 @@
         4,
         2,
         5,
-        0,
+        1,
         4,
         5,
         4,
@@ -879,7 +816,7 @@
         10,
         4,
         9,
-        13,
+        14,
         5,
         12
       ],
@@ -1121,9 +1058,9 @@
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-06-30",
-      "end": "2026-09-27",
-      "pageviews": 481,
+      "start": "2026-07-01",
+      "end": "2026-09-28",
+      "pageviews": 482,
       "pages_total": 25,
       "pages": [
         {
@@ -1160,7 +1097,7 @@
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
-          "count": 78,
+          "count": 79,
           "refs": [
             {
               "name": "Google",
@@ -1300,23 +1237,23 @@
           "count": 13
         },
         {
+          "path": "/writing/local-first-latex-workflow",
+          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+          "path_id": 98713527,
+          "event": false,
+          "count": 9
+        },
+        {
           "path": "/404.html",
           "title": "Page Not Found Huseyin Ugur Yildiz",
           "path_id": 80992097,
           "event": false,
-          "count": 10
+          "count": 9
         },
         {
           "path": "/writing/forced-euler-blowup-lean-verification",
           "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
           "path_id": 106131609,
-          "event": false,
-          "count": 8
-        },
-        {
-          "path": "/writing/local-first-latex-workflow",
-          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
-          "path_id": 98713527,
           "event": false,
           "count": 8
         },
@@ -1456,7 +1393,7 @@
         17,
         13,
         22,
-        4,
+        5,
         7,
         16,
         6,
@@ -1472,8 +1409,8 @@
         31,
         30,
         24,
-        23,
-        29,
+        24,
+        28,
         29
       ],
       "countries_total": 23,
@@ -1818,9 +1755,9 @@
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-09-28",
-      "end": "2026-09-27",
-      "pageviews": 1193,
+      "start": "2025-09-29",
+      "end": "2026-09-28",
+      "pageviews": 1195,
       "pages_total": 29,
       "pages": [
         {
@@ -1857,7 +1794,7 @@
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
-          "count": 146,
+          "count": 147,
           "refs": [
             {
               "name": "Google",
@@ -2011,16 +1948,16 @@
           "count": 13
         },
         {
-          "path": "/writing/forced-euler-blowup-lean-verification",
-          "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
-          "path_id": 106131609,
-          "event": false,
-          "count": 8
-        },
-        {
           "path": "/writing/local-first-latex-workflow",
           "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
           "path_id": 98713527,
+          "event": false,
+          "count": 9
+        },
+        {
+          "path": "/writing/forced-euler-blowup-lean-verification",
+          "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
+          "path_id": 106131609,
           "event": false,
           "count": 8
         },
@@ -2181,7 +2118,7 @@
         61,
         53,
         36,
-        11,
+        12,
         8,
         23,
         12,
@@ -2197,7 +2134,7 @@
         87,
         56,
         46,
-        44,
+        45,
         66,
         76
       ],
@@ -2610,8 +2547,8 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-09-27",
-      "pageviews": 1193,
+      "end": "2026-09-28",
+      "pageviews": 1195,
       "pages_total": 29,
       "pages": [
         {
@@ -2648,7 +2585,7 @@
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
-          "count": 146,
+          "count": 147,
           "refs": [
             {
               "name": "Google",
@@ -2802,16 +2739,16 @@
           "count": 13
         },
         {
-          "path": "/writing/forced-euler-blowup-lean-verification",
-          "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
-          "path_id": 106131609,
-          "event": false,
-          "count": 8
-        },
-        {
           "path": "/writing/local-first-latex-workflow",
           "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
           "path_id": 98713527,
+          "event": false,
+          "count": 9
+        },
+        {
+          "path": "/writing/forced-euler-blowup-lean-verification",
+          "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
+          "path_id": 106131609,
           "event": false,
           "count": 8
         },
@@ -2972,7 +2909,7 @@
         61,
         53,
         36,
-        11,
+        12,
         8,
         23,
         12,
@@ -2988,7 +2925,7 @@
         87,
         56,
         46,
-        44,
+        45,
         66,
         76
       ],
@@ -4338,7 +4275,11 @@
     },
     {
       "date": "2026-09-27",
-      "views": 4
+      "views": 5
+    },
+    {
+      "date": "2026-09-28",
+      "views": 1
     }
   ],
   "daily_breakdowns": {
@@ -23833,7 +23774,7 @@
       ]
     },
     "2026-09-27": {
-      "pageviews": 4,
+      "pageviews": 5,
       "pages": [
         {
           "path": "/",
@@ -23841,6 +23782,13 @@
           "path_id": 80749188,
           "event": false,
           "count": 2
+        },
+        {
+          "path": "/writing/local-first-latex-workflow",
+          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+          "path_id": 98713527,
+          "event": false,
+          "count": 1
         },
         {
           "path": "/teaching",
@@ -23880,7 +23828,7 @@
         0,
         0,
         0,
-        0,
+        1,
         0,
         0
       ],
@@ -23925,6 +23873,72 @@
         },
         {
           "name": "Turkish",
+          "count": 1
+        }
+      ]
+    },
+    "2026-09-28": {
+      "pageviews": 1,
+      "pages": [
+        {
+          "path": "/cv",
+          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
+          "path_id": 80749912,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries": [
+        {
+          "code": "HK",
+          "name": "Hong Kong",
+          "count": 1
+        }
+      ],
+      "referrers": [],
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        }
+      ],
+      "systems": [
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
+      "sizes": [],
+      "languages": [
+        {
+          "name": "English",
           "count": 1
         }
       ]
@@ -24879,13 +24893,17 @@
         {
           "date": "2026-09-28",
           "views": 0
+        },
+        {
+          "date": "2026-09-29",
+          "views": 0
         }
       ]
     },
     {
       "path": "/cv",
       "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
-      "count": 146,
+      "count": 147,
       "stats": [
         {
           "date": "2026-02-05",
@@ -25829,6 +25847,10 @@
         },
         {
           "date": "2026-09-28",
+          "views": 1
+        },
+        {
+          "date": "2026-09-29",
           "views": 0
         }
       ]
@@ -26781,6 +26803,10 @@
         {
           "date": "2026-09-28",
           "views": 0
+        },
+        {
+          "date": "2026-09-29",
+          "views": 0
         }
       ]
     },
@@ -27732,6 +27758,10 @@
         {
           "date": "2026-09-28",
           "views": 0
+        },
+        {
+          "date": "2026-09-29",
+          "views": 0
         }
       ]
     },
@@ -28682,6 +28712,10 @@
         },
         {
           "date": "2026-09-28",
+          "views": 0
+        },
+        {
+          "date": "2026-09-29",
           "views": 0
         }
       ]
@@ -29630,13 +29664,17 @@
         {
           "date": "2026-09-28",
           "views": 0
+        },
+        {
+          "date": "2026-09-29",
+          "views": 0
         }
       ]
     }
   ],
   "site": {},
   "totals": {
-    "pageviews": 1193,
+    "pageviews": 1195,
     "visitors": null
   },
   "pages": [
@@ -29674,7 +29712,7 @@
       "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
       "path_id": 80749912,
       "event": false,
-      "count": 146,
+      "count": 147,
       "refs": [
         {
           "name": "Google",
@@ -29828,16 +29866,16 @@
       "count": 13
     },
     {
-      "path": "/writing/forced-euler-blowup-lean-verification",
-      "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
-      "path_id": 106131609,
-      "event": false,
-      "count": 8
-    },
-    {
       "path": "/writing/local-first-latex-workflow",
       "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
       "path_id": 98713527,
+      "event": false,
+      "count": 9
+    },
+    {
+      "path": "/writing/forced-euler-blowup-lean-verification",
+      "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
+      "path_id": 106131609,
       "event": false,
       "count": 8
     },
