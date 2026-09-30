@@ -3,7 +3,7 @@ layout: academic
 title: "Privacy & Terms – huguryildiz.com"
 description: "What limited information huguryildiz.com collects, how it is used, and how to opt out."
 permalink: /terms/
-modified: 2026-07-26
+modified: 2026-09-30
 ---
 
 <div class="shell">
@@ -22,6 +22,9 @@ modified: 2026-07-26
     <li><b>Google Analytics 4</b>, loaded directly without Google Tag Manager, which does use cookies. Its purpose is the longer-run traffic trend and the referral breakdown that GoatCounter reports more coarsely; nothing from it is republished here. Its event data is held by Google and expires on the retention period configured in the property, not indefinitely by this site. You can review the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Analytics Privacy Policy<span class="sr-only"> (external)</span></a> and opt out with Google's <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">browser add-on<span class="sr-only"> (external)</span></a>.</li>
   </ul>
   <p>You can block or clear cookies through your browser settings at any time; the site remains fully usable without them.</p>
+
+  <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-book"/></svg>Course sites</h2>
+  <p>The course sites <a href="https://signals-and-systems.huguryildiz.com/">Signals and Systems</a>, <a href="https://digital-communications.huguryildiz.com/">Digital Communications</a> and <a href="https://quantum-computing.huguryildiz.com/">Quantum Computing</a> are hosted on Vercel, whose servers keep standard request logs under the <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">Vercel Privacy Policy<span class="sr-only"> (external)</span></a>. Each cover page counts visits, and clicks on its course and document links, with a GoatCounter counter kept apart from this site's. It sets no cookies and stores no personal data, and nothing from it is published. Google Analytics is not used there. The courses and their notes make no analytics request at all: reading progress stays in your own browser and is never sent anywhere. The data controller and legal basis below apply to these sites too.</p>
 
   <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-flag"/></svg>KVKK and GDPR</h2>
   <p>Under Türkiye's Personal Data Protection Law No. 6698 (KVKK) and the EU General Data Protection Regulation (GDPR), the data controller for this site is Hüseyin Uğur Yıldız, TED University, Ankara. The processing described above is limited to aggregate audience measurement for an academic web presence and rests on legitimate interest (KVKK art. 5/2-f; GDPR art. 6(1)(f)); no special-category data is processed, no profile is built, and nothing is used for advertising or sold to anyone. Cookie-based measurement can be refused entirely through your browser without losing access to any part of the site.</p>
