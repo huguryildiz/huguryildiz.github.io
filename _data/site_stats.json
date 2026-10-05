@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-04T09:29:55Z",
+  "updated": "2026-10-05T10:10:44Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-10-04"
+    "end": "2026-10-05"
   },
   "window_order": [
     "today",
@@ -16,10 +16,97 @@
   "windows": {
     "today": {
       "label": "Today",
+      "start": "2026-10-05",
+      "end": "2026-10-05",
+      "pageviews": 2,
+      "pages_total": 2,
+      "pages": [
+        {
+          "path": "/research",
+          "title": "Research | Huseyin Ugur Yildiz",
+          "path_id": 80750374,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events_total": 0,
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries_total": 1,
+      "countries": [
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "count": 1
+        }
+      ],
+      "referrers_total": 0,
+      "referrers": [],
+      "browsers_total": 1,
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        }
+      ],
+      "systems_total": 1,
+      "systems": [
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
+      "sizes_total": 0,
+      "sizes": [],
+      "languages_total": 1,
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        }
+      ],
+      "regions_total": 0,
+      "regions": [],
+      "regions_unmatched": []
+    },
+    "yesterday": {
+      "label": "Yesterday",
       "start": "2026-10-04",
       "end": "2026-10-04",
-      "pageviews": 1,
-      "pages_total": 1,
+      "pageviews": 2,
+      "pages_total": 2,
       "pages": [
         {
           "path": "/writing/second-brain-for-ai-assisted-work",
@@ -30,6 +117,19 @@
           "refs": [
             {
               "name": "Google",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/writing/internet-of-algae-lab",
+          "title": "The Internet of Algae: modelling communication across four signaling channels | Huseyin Ugur Yildiz",
+          "path_id": 106190485,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "www.bing.com",
               "count": 1
             }
           ]
@@ -61,7 +161,7 @@
         0,
         0,
         0,
-        0
+        1
       ],
       "countries_total": 1,
       "countries": [
@@ -113,118 +213,19 @@
       ],
       "regions_unmatched": []
     },
-    "yesterday": {
-      "label": "Yesterday",
-      "start": "2026-10-03",
-      "end": "2026-10-03",
-      "pageviews": 1,
-      "pages_total": 1,
-      "pages": [
-        {
-          "path": "/",
-          "title": "Home | Huseyin Ugur Yildiz",
-          "path_id": 80749188,
-          "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "www.linkedin.com",
-              "count": 1
-            }
-          ]
-        }
-      ],
-      "events_total": 0,
-      "events": [],
-      "hourly": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "countries_total": 1,
-      "countries": [
-        {
-          "code": "TR",
-          "name": "Turkey",
-          "count": 1
-        }
-      ],
-      "referrers_total": 1,
-      "referrers": [
-        {
-          "name": "www.linkedin.com",
-          "count": 1
-        }
-      ],
-      "browsers_total": 1,
-      "browsers": [
-        {
-          "name": "Chrome",
-          "count": 1
-        }
-      ],
-      "systems_total": 1,
-      "systems": [
-        {
-          "name": "Android",
-          "count": 1
-        }
-      ],
-      "sizes_total": 0,
-      "sizes": [],
-      "languages_total": 1,
-      "languages": [
-        {
-          "name": "Turkish",
-          "count": 1
-        }
-      ],
-      "regions_total": 1,
-      "regions": [
-        {
-          "name": "Ankara",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "06",
-          "count": 1
-        }
-      ],
-      "regions_unmatched": []
-    },
     "7d": {
       "label": "Last 7 days",
-      "start": "2026-09-28",
-      "end": "2026-10-04",
+      "start": "2026-09-29",
+      "end": "2026-10-05",
       "pageviews": 35,
-      "pages_total": 11,
+      "pages_total": 10,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 13,
+          "count": 14,
           "refs": [
             {
               "name": "scholar.google.com",
@@ -292,22 +293,22 @@
           ]
         },
         {
-          "path": "/writing",
-          "title": "Writing | Huseyin Ugur Yildiz",
-          "path_id": 96360100,
+          "path": "/service",
+          "title": "Service | Huseyin Ugur Yildiz",
+          "path_id": 80843167,
           "event": false,
           "count": 2,
           "refs": [
             {
-              "name": "huguryildiz.com/software",
+              "name": "huguryildiz.com/students",
               "count": 1
             }
           ]
         },
         {
-          "path": "/service",
-          "title": "Service | Huseyin Ugur Yildiz",
-          "path_id": 80843167,
+          "path": "/research",
+          "title": "Research | Huseyin Ugur Yildiz",
+          "path_id": 80750374,
           "event": false,
           "count": 2
         },
@@ -319,9 +320,16 @@
           "count": 1
         },
         {
-          "path": "/writing/local-first-latex-workflow",
-          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
-          "path_id": 98713527,
+          "path": "/writing/internet-of-algae-lab",
+          "title": "The Internet of Algae: modelling communication across four signaling channels | Huseyin Ugur Yildiz",
+          "path_id": 106190485,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing",
+          "title": "Writing | Huseyin Ugur Yildiz",
+          "path_id": 96360100,
           "event": false,
           "count": 1
         },
@@ -329,20 +337,6 @@
           "path": "/404.html",
           "title": "Page Not Found Huseyin Ugur Yildiz",
           "path_id": 80992097,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/research",
-          "title": "Research | Huseyin Ugur Yildiz",
-          "path_id": 80750374,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/cv",
-          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
-          "path_id": 80749912,
           "event": false,
           "count": 1
         }
@@ -361,27 +355,27 @@
         0,
         0,
         0,
-        0,
+        1,
         3,
-        1,
         0,
         0,
-        1,
+        0,
+        2,
         0,
         4,
         1,
         1,
         7,
-        1,
+        0,
         2,
         0,
         3,
         4,
         0,
         1,
-        5,
+        4,
         0,
-        1
+        2
       ],
       "countries_total": 6,
       "countries": [
@@ -393,7 +387,7 @@
         {
           "code": "US",
           "name": "United States",
-          "count": 2
+          "count": 3
         },
         {
           "code": "DE",
@@ -435,7 +429,7 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 9
+          "count": 10
         },
         {
           "name": "Safari",
@@ -457,11 +451,11 @@
           "count": 3
         },
         {
-          "name": "iOS",
-          "count": 2
+          "name": "Linux",
+          "count": 3
         },
         {
-          "name": "Linux",
+          "name": "iOS",
           "count": 2
         },
         {
@@ -474,12 +468,12 @@
       "languages_total": 4,
       "languages": [
         {
-          "name": "Turkish",
+          "name": "English",
           "count": 6
         },
         {
-          "name": "English",
-          "count": 5
+          "name": "Turkish",
+          "count": 6
         },
         {
           "name": "Russian",
@@ -490,7 +484,7 @@
           "count": 1
         }
       ],
-      "regions_total": 8,
+      "regions_total": 9,
       "regions": [
         {
           "name": "Ankara",
@@ -535,6 +529,13 @@
           "count": 1
         },
         {
+          "name": "New York",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 1
+        },
+        {
           "name": "Land Berlin",
           "country": "Germany",
           "country_code": "DE",
@@ -553,9 +554,9 @@
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-09-05",
-      "end": "2026-10-04",
-      "pageviews": 143,
+      "start": "2026-09-06",
+      "end": "2026-10-05",
+      "pageviews": 142,
       "pages_total": 20,
       "pages": [
         {
@@ -563,15 +564,15 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 49,
+          "count": 48,
           "refs": [
-            {
-              "name": "www.linkedin.com",
-              "count": 9
-            },
             {
               "name": "Google",
               "count": 8
+            },
+            {
+              "name": "www.linkedin.com",
+              "count": 7
             },
             {
               "name": "scholar.google.com",
@@ -664,13 +665,6 @@
           ]
         },
         {
-          "path": "/writing/local-first-latex-workflow",
-          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
-          "path_id": 98713527,
-          "event": false,
-          "count": 7
-        },
-        {
           "path": "/publications",
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
@@ -678,11 +672,11 @@
           "count": 7
         },
         {
-          "path": "/writing/airport-gate-assignment-multiobjective",
-          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
-          "path_id": 104130835,
+          "path": "/writing/local-first-latex-workflow",
+          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+          "path_id": 98713527,
           "event": false,
-          "count": 5
+          "count": 6
         },
         {
           "path": "/writing",
@@ -702,6 +696,13 @@
           "path": "/research",
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
+          "event": false,
+          "count": 5
+        },
+        {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
           "event": false,
           "count": 4
         },
@@ -727,16 +728,16 @@
           "count": 2
         },
         {
-          "path": "/writing/second-brain-for-ai-assisted-work",
-          "title": "A second brain for AI-assisted work does not require Obsidian | Huseyin Ugur Yildiz",
-          "path_id": 109489555,
-          "event": false,
-          "count": 1
-        },
-        {
           "path": "/writing/internet-of-algae-lab",
           "title": "The Internet of Algae: modelling communication across four signaling channels | Huseyin Ugur Yildiz",
           "path_id": 106190485,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/writing/second-brain-for-ai-assisted-work",
+          "title": "A second brain for AI-assisted work does not require Obsidian | Huseyin Ugur Yildiz",
+          "path_id": 109489555,
           "event": false,
           "count": 1
         },
@@ -797,15 +798,15 @@
         0,
         3,
         3,
-        0,
+        1,
         8,
         1,
         4,
         5,
-        3,
+        4,
         4,
         12,
-        7,
+        6,
         7,
         18,
         4,
@@ -814,22 +815,22 @@
         5,
         10,
         4,
-        10,
-        12,
-        5,
-        11
+        9,
+        11,
+        4,
+        12
       ],
       "countries_total": 10,
       "countries": [
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 29
+          "count": 27
         },
         {
           "code": "US",
           "name": "United States",
-          "count": 9
+          "count": 10
         },
         {
           "code": "IN",
@@ -875,12 +876,12 @@
       "referrers_total": 6,
       "referrers": [
         {
-          "name": "www.linkedin.com",
-          "count": 9
-        },
-        {
           "name": "Google",
           "count": 8
+        },
+        {
+          "name": "www.linkedin.com",
+          "count": 7
         },
         {
           "name": "scholar.google.com",
@@ -903,11 +904,11 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 29
+          "count": 30
         },
         {
           "name": "Safari",
-          "count": 17
+          "count": 15
         },
         {
           "name": "Firefox",
@@ -922,7 +923,7 @@
         },
         {
           "name": "iOS",
-          "count": 14
+          "count": 12
         },
         {
           "name": "Android",
@@ -930,7 +931,7 @@
         },
         {
           "name": "Linux",
-          "count": 5
+          "count": 6
         },
         {
           "name": "macOS",
@@ -947,7 +948,7 @@
         },
         {
           "name": "Turkish",
-          "count": 15
+          "count": 14
         },
         {
           "name": "Russian",
@@ -973,7 +974,7 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 13
+          "count": 11
         },
         {
           "name": "İstanbul",
@@ -991,6 +992,13 @@
         },
         {
           "name": "Georgia",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 2
+        },
+        {
+          "name": "New York",
           "country": "United States",
           "country_code": "US",
           "code": null,
@@ -1032,13 +1040,6 @@
           "count": 1
         },
         {
-          "name": "New York",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 1
-        },
-        {
           "name": "North Carolina",
           "country": "United States",
           "country_code": "US",
@@ -1057,8 +1058,8 @@
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-07-07",
-      "end": "2026-10-04",
+      "start": "2026-07-08",
+      "end": "2026-10-05",
       "pageviews": 491,
       "pages_total": 27,
       "pages": [
@@ -1067,7 +1068,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 173,
+          "count": 172,
           "refs": [
             {
               "name": "Google",
@@ -1183,7 +1184,7 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 31,
+          "count": 32,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -1257,13 +1258,6 @@
           "count": 7
         },
         {
-          "path": "/404.html",
-          "title": "Page Not Found Huseyin Ugur Yildiz",
-          "path_id": 80992097,
-          "event": false,
-          "count": 7
-        },
-        {
           "path": "/writing/airport-gate-assignment-multiobjective",
           "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
           "path_id": 104130835,
@@ -1274,6 +1268,13 @@
           "path": "/writing/ieee-twc-submission-cap",
           "title": "An academic rate limiter: IEEE TWC now caps authors at 36 new manuscripts a year | Huseyin Ugur Yildiz",
           "path_id": 96633631,
+          "event": false,
+          "count": 6
+        },
+        {
+          "path": "/404.html",
+          "title": "Page Not Found Huseyin Ugur Yildiz",
+          "path_id": 80992097,
           "event": false,
           "count": 6
         },
@@ -1302,6 +1303,13 @@
           "path": "/software",
           "title": "Software – Hüseyin Uğur Yıldız | Huseyin Ugur Yildiz",
           "path_id": 109093284,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/writing/internet-of-algae-lab",
+          "title": "The Internet of Algae: modelling communication across four signaling channels | Huseyin Ugur Yildiz",
+          "path_id": 106190485,
           "event": false,
           "count": 2
         },
@@ -1337,13 +1345,6 @@
           "path": "/writing/second-brain-for-ai-assisted-work",
           "title": "A second brain for AI-assisted work does not require Obsidian | Huseyin Ugur Yildiz",
           "path_id": 109489555,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/writing/internet-of-algae-lab",
-          "title": "The Internet of Algae: modelling communication across four signaling channels | Huseyin Ugur Yildiz",
-          "path_id": 106190485,
           "event": false,
           "count": 1
         },
@@ -1405,16 +1406,16 @@
         16,
         17,
         12,
-        25,
+        24,
         3,
         7,
         16,
-        7,
+        8,
         6,
         17,
         19,
         19,
-        41,
+        40,
         38,
         33,
         18,
@@ -1424,19 +1425,19 @@
         24,
         28,
         28,
-        30
+        31
       ],
-      "countries_total": 23,
+      "countries_total": 22,
       "countries": [
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 97
+          "count": 96
         },
         {
           "code": "US",
           "name": "United States",
-          "count": 36
+          "count": 37
         },
         {
           "code": "DE",
@@ -1506,11 +1507,6 @@
         {
           "code": "KE",
           "name": "Kenya",
-          "count": 1
-        },
-        {
-          "code": "KR",
-          "name": "South Korea",
           "count": 1
         },
         {
@@ -1595,7 +1591,7 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 107
+          "count": 106
         },
         {
           "name": "Safari",
@@ -1614,23 +1610,23 @@
       "systems": [
         {
           "name": "Windows",
-          "count": 63
+          "count": 62
         },
         {
           "name": "iOS",
           "count": 49
         },
         {
-          "name": "macOS",
-          "count": 25
-        },
-        {
           "name": "Android",
           "count": 24
         },
         {
+          "name": "macOS",
+          "count": 24
+        },
+        {
           "name": "Linux",
-          "count": 12
+          "count": 13
         }
       ],
       "sizes_total": 0,
@@ -1639,11 +1635,11 @@
       "languages": [
         {
           "name": "English",
-          "count": 82
+          "count": 83
         },
         {
           "name": "(unknown)",
-          "count": 48
+          "count": 46
         },
         {
           "name": "Turkish",
@@ -1737,6 +1733,13 @@
           "count": 3
         },
         {
+          "name": "New York",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 3
+        },
+        {
           "name": "Karnataka",
           "country": "India",
           "country_code": "IN",
@@ -1745,13 +1748,6 @@
         },
         {
           "name": "Georgia",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 2
-        },
-        {
-          "name": "New York",
           "country": "United States",
           "country_code": "US",
           "code": null,
@@ -1783,9 +1779,9 @@
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-10-05",
-      "end": "2026-10-04",
-      "pageviews": 1229,
+      "start": "2025-10-06",
+      "end": "2026-10-05",
+      "pageviews": 1232,
       "pages_total": 31,
       "pages": [
         {
@@ -1793,7 +1789,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 476,
+          "count": 477,
           "refs": [
             {
               "name": "Google",
@@ -1880,7 +1876,7 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 102,
+          "count": 103,
           "refs": [
             {
               "name": "huguryildiz.com/publications",
@@ -2046,6 +2042,13 @@
           "count": 2
         },
         {
+          "path": "/writing/internet-of-algae-lab",
+          "title": "The Internet of Algae: modelling communication across four signaling channels | Huseyin Ugur Yildiz",
+          "path_id": 106190485,
+          "event": false,
+          "count": 2
+        },
+        {
           "path": "/writing/can-llms-jump-scientific-discovery",
           "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
           "path_id": 104195821,
@@ -2091,13 +2094,6 @@
           "path": "/writing/second-brain-for-ai-assisted-work",
           "title": "A second brain for AI-assisted work does not require Obsidian | Huseyin Ugur Yildiz",
           "path_id": 109489555,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/writing/internet-of-algae-lab",
-          "title": "The Internet of Algae: modelling communication across four signaling channels | Huseyin Ugur Yildiz",
-          "path_id": 106190485,
           "event": false,
           "count": 1
         },
@@ -2158,12 +2154,12 @@
         41,
         58,
         61,
-        53,
+        54,
         39,
         12,
         8,
         23,
-        13,
+        14,
         29,
         37,
         62,
@@ -2178,7 +2174,7 @@
         47,
         50,
         66,
-        77
+        78
       ],
       "countries_total": 34,
       "countries": [
@@ -2190,7 +2186,7 @@
         {
           "code": "US",
           "name": "United States",
-          "count": 68
+          "count": 69
         },
         {
           "code": "GB",
@@ -2416,7 +2412,7 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 294
+          "count": 295
         },
         {
           "name": "Safari",
@@ -2451,7 +2447,7 @@
         },
         {
           "name": "Linux",
-          "count": 28
+          "count": 29
         }
       ],
       "sizes_total": 0,
@@ -2464,7 +2460,7 @@
         },
         {
           "name": "English",
-          "count": 82
+          "count": 83
         },
         {
           "name": "Turkish",
@@ -2565,17 +2561,17 @@
           "count": 5
         },
         {
-          "name": "İzmir",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "35",
-          "count": 3
-        },
-        {
           "name": "New York",
           "country": "United States",
           "country_code": "US",
           "code": null,
+          "count": 4
+        },
+        {
+          "name": "İzmir",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "35",
           "count": 3
         },
         {
@@ -2605,8 +2601,8 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-10-04",
-      "pageviews": 1229,
+      "end": "2026-10-05",
+      "pageviews": 1232,
       "pages_total": 31,
       "pages": [
         {
@@ -2614,7 +2610,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 476,
+          "count": 477,
           "refs": [
             {
               "name": "Google",
@@ -2701,7 +2697,7 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 102,
+          "count": 103,
           "refs": [
             {
               "name": "huguryildiz.com/publications",
@@ -2867,6 +2863,13 @@
           "count": 2
         },
         {
+          "path": "/writing/internet-of-algae-lab",
+          "title": "The Internet of Algae: modelling communication across four signaling channels | Huseyin Ugur Yildiz",
+          "path_id": 106190485,
+          "event": false,
+          "count": 2
+        },
+        {
           "path": "/writing/can-llms-jump-scientific-discovery",
           "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
           "path_id": 104195821,
@@ -2912,13 +2915,6 @@
           "path": "/writing/second-brain-for-ai-assisted-work",
           "title": "A second brain for AI-assisted work does not require Obsidian | Huseyin Ugur Yildiz",
           "path_id": 109489555,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/writing/internet-of-algae-lab",
-          "title": "The Internet of Algae: modelling communication across four signaling channels | Huseyin Ugur Yildiz",
-          "path_id": 106190485,
           "event": false,
           "count": 1
         },
@@ -2979,12 +2975,12 @@
         41,
         58,
         61,
-        53,
+        54,
         39,
         12,
         8,
         23,
-        13,
+        14,
         29,
         37,
         62,
@@ -2999,7 +2995,7 @@
         47,
         50,
         66,
-        77
+        78
       ],
       "countries_total": 34,
       "countries": [
@@ -3011,7 +3007,7 @@
         {
           "code": "US",
           "name": "United States",
-          "count": 68
+          "count": 69
         },
         {
           "code": "GB",
@@ -3237,7 +3233,7 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 294
+          "count": 295
         },
         {
           "name": "Safari",
@@ -3272,7 +3268,7 @@
         },
         {
           "name": "Linux",
-          "count": 28
+          "count": 29
         }
       ],
       "sizes_total": 0,
@@ -3285,7 +3281,7 @@
         },
         {
           "name": "English",
-          "count": 82
+          "count": 83
         },
         {
           "name": "Turkish",
@@ -3386,17 +3382,17 @@
           "count": 5
         },
         {
-          "name": "İzmir",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "35",
-          "count": 3
-        },
-        {
           "name": "New York",
           "country": "United States",
           "country_code": "US",
           "code": null,
+          "count": 4
+        },
+        {
+          "name": "İzmir",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "35",
           "count": 3
         },
         {
@@ -4391,7 +4387,11 @@
     },
     {
       "date": "2026-10-04",
-      "views": 1
+      "views": 2
+    },
+    {
+      "date": "2026-10-05",
+      "views": 2
     }
   ],
   "daily_breakdowns": {
@@ -24582,12 +24582,19 @@
       ]
     },
     "2026-10-04": {
-      "pageviews": 1,
+      "pageviews": 2,
       "pages": [
         {
           "path": "/writing/second-brain-for-ai-assisted-work",
           "title": "A second brain for AI-assisted work does not require Obsidian | Huseyin Ugur Yildiz",
           "path_id": 109489555,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing/internet-of-algae-lab",
+          "title": "The Internet of Algae: modelling communication across four signaling channels | Huseyin Ugur Yildiz",
+          "path_id": 106190485,
           "event": false,
           "count": 1
         }
@@ -24617,7 +24624,7 @@
         0,
         0,
         0,
-        0
+        1
       ],
       "countries": [
         {
@@ -24651,13 +24658,86 @@
           "count": 1
         }
       ]
+    },
+    "2026-10-05": {
+      "pageviews": 2,
+      "pages": [
+        {
+          "path": "/research",
+          "title": "Research | Huseyin Ugur Yildiz",
+          "path_id": 80750374,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries": [
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "count": 1
+        }
+      ],
+      "referrers": [],
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        }
+      ],
+      "systems": [
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
+      "sizes": [],
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        }
+      ]
     }
   },
   "page_series": [
     {
       "path": "/",
       "title": "Home | Huseyin Ugur Yildiz",
-      "count": 476,
+      "count": 477,
       "stats": [
         {
           "date": "2026-02-05",
@@ -25629,6 +25709,10 @@
         },
         {
           "date": "2026-10-05",
+          "views": 1
+        },
+        {
+          "date": "2026-10-06",
           "views": 0
         }
       ]
@@ -26609,6 +26693,10 @@
         {
           "date": "2026-10-05",
           "views": 0
+        },
+        {
+          "date": "2026-10-06",
+          "views": 0
         }
       ]
     },
@@ -27588,13 +27676,17 @@
         {
           "date": "2026-10-05",
           "views": 0
+        },
+        {
+          "date": "2026-10-06",
+          "views": 0
         }
       ]
     },
     {
       "path": "/research",
       "title": "Research | Huseyin Ugur Yildiz",
-      "count": 102,
+      "count": 103,
       "stats": [
         {
           "date": "2026-02-05",
@@ -28566,6 +28658,10 @@
         },
         {
           "date": "2026-10-05",
+          "views": 1
+        },
+        {
+          "date": "2026-10-06",
           "views": 0
         }
       ]
@@ -29545,6 +29641,10 @@
         },
         {
           "date": "2026-10-05",
+          "views": 0
+        },
+        {
+          "date": "2026-10-06",
           "views": 0
         }
       ]
@@ -30521,13 +30621,17 @@
         {
           "date": "2026-10-05",
           "views": 0
+        },
+        {
+          "date": "2026-10-06",
+          "views": 0
         }
       ]
     }
   ],
   "site": {},
   "totals": {
-    "pageviews": 1229,
+    "pageviews": 1232,
     "visitors": null
   },
   "pages": [
@@ -30536,7 +30640,7 @@
       "title": "Home | Huseyin Ugur Yildiz",
       "path_id": 80749188,
       "event": false,
-      "count": 476,
+      "count": 477,
       "refs": [
         {
           "name": "Google",
@@ -30623,7 +30727,7 @@
       "title": "Research | Huseyin Ugur Yildiz",
       "path_id": 80750374,
       "event": false,
-      "count": 102,
+      "count": 103,
       "refs": [
         {
           "name": "huguryildiz.com/publications",
@@ -30789,6 +30893,13 @@
       "count": 2
     },
     {
+      "path": "/writing/internet-of-algae-lab",
+      "title": "The Internet of Algae: modelling communication across four signaling channels | Huseyin Ugur Yildiz",
+      "path_id": 106190485,
+      "event": false,
+      "count": 2
+    },
+    {
       "path": "/writing/can-llms-jump-scientific-discovery",
       "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
       "path_id": 104195821,
@@ -30838,13 +30949,6 @@
       "count": 1
     },
     {
-      "path": "/writing/internet-of-algae-lab",
-      "title": "The Internet of Algae: modelling communication across four signaling channels | Huseyin Ugur Yildiz",
-      "path_id": 106190485,
-      "event": false,
-      "count": 1
-    },
-    {
       "path": "/writing/claude-watermark-academic-misconduct",
       "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
       "path_id": 106047814,
@@ -30868,7 +30972,7 @@
     {
       "code": "US",
       "name": "United States",
-      "count": 68
+      "count": 69
     },
     {
       "code": "GB",
@@ -31092,7 +31196,7 @@
   "browsers": [
     {
       "name": "Chrome",
-      "count": 294
+      "count": 295
     },
     {
       "name": "Safari",
@@ -31126,7 +31230,7 @@
     },
     {
       "name": "Linux",
-      "count": 28
+      "count": 29
     }
   ],
   "sizes": []
