@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-05T10:10:44Z",
+  "updated": "2026-10-06T09:54:28Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-10-05"
+    "end": "2026-10-06"
   },
   "window_order": [
     "today",
@@ -16,38 +16,23 @@
   "windows": {
     "today": {
       "label": "Today",
-      "start": "2026-10-05",
-      "end": "2026-10-05",
-      "pageviews": 2,
-      "pages_total": 2,
-      "pages": [
-        {
-          "path": "/research",
-          "title": "Research | Huseyin Ugur Yildiz",
-          "path_id": 80750374,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/",
-          "title": "Home | Huseyin Ugur Yildiz",
-          "path_id": 80749188,
-          "event": false,
-          "count": 1
-        }
-      ],
+      "start": "2026-10-06",
+      "end": "2026-10-06",
+      "pageviews": 0,
+      "pages_total": 0,
+      "pages": [],
       "events_total": 0,
       "events": [],
       "hourly": [
         0,
         0,
         0,
-        1,
         0,
         0,
         0,
         0,
-        1,
+        0,
+        0,
         0,
         0,
         0,
@@ -64,84 +49,93 @@
         0,
         0
       ],
-      "countries_total": 1,
-      "countries": [
-        {
-          "code": "SG",
-          "name": "Singapore",
-          "count": 1
-        }
-      ],
+      "countries_total": 0,
+      "countries": [],
       "referrers_total": 0,
       "referrers": [],
-      "browsers_total": 1,
-      "browsers": [
-        {
-          "name": "Chrome",
-          "count": 1
-        }
-      ],
-      "systems_total": 1,
-      "systems": [
-        {
-          "name": "Windows",
-          "count": 1
-        }
-      ],
+      "browsers_total": 0,
+      "browsers": [],
+      "systems_total": 0,
+      "systems": [],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 1,
-      "languages": [
-        {
-          "name": "English",
-          "count": 1
-        }
-      ],
+      "languages_total": 0,
+      "languages": [],
       "regions_total": 0,
       "regions": [],
       "regions_unmatched": []
     },
     "yesterday": {
       "label": "Yesterday",
-      "start": "2026-10-04",
-      "end": "2026-10-04",
-      "pageviews": 2,
-      "pages_total": 2,
+      "start": "2026-10-05",
+      "end": "2026-10-05",
+      "pageviews": 7,
+      "pages_total": 4,
       "pages": [
         {
-          "path": "/writing/second-brain-for-ai-assisted-work",
-          "title": "A second brain for AI-assisted work does not require Obsidian | Huseyin Ugur Yildiz",
-          "path_id": 109489555,
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
           "event": false,
-          "count": 1,
+          "count": 4,
           "refs": [
             {
               "name": "Google",
+              "count": 1
+            },
+            {
+              "name": "avesis.tedu.edu.tr",
+              "count": 1
+            },
+            {
+              "name": "signals-and-systems.huguryildiz.com",
               "count": 1
             }
           ]
         },
         {
-          "path": "/writing/internet-of-algae-lab",
-          "title": "The Internet of Algae: modelling communication across four signaling channels | Huseyin Ugur Yildiz",
-          "path_id": 106190485,
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/research",
+          "title": "Research | Huseyin Ugur Yildiz",
+          "path_id": 80750374,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/teaching",
+          "title": "Huseyin Ugur Yildiz",
+          "path_id": 80750338,
           "event": false,
           "count": 1,
           "refs": [
             {
-              "name": "www.bing.com",
+              "name": "huguryildiz.com",
               "count": 1
             }
           ]
         }
       ],
-      "events_total": 0,
-      "events": [],
+      "events_total": 1,
+      "events": [
+        {
+          "path": "cv-pdf",
+          "title": "CV (PDF), from the CV page",
+          "path_id": 96697209,
+          "event": true,
+          "count": 1
+        }
+      ],
       "hourly": [
         0,
         0,
         0,
-        0,
+        1,
         0,
         0,
         0,
@@ -154,59 +148,98 @@
         0,
         0,
         0,
+        1,
         0,
         0,
         0,
+        1,
+        3,
         0,
-        0,
-        0,
-        0,
-        1
+        0
       ],
-      "countries_total": 1,
+      "countries_total": 2,
       "countries": [
         {
-          "code": "CL",
-          "name": "Chile",
-          "count": 1
+          "code": "TR",
+          "name": "Turkey",
+          "count": 2
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 2
         }
       ],
-      "referrers_total": 1,
+      "referrers_total": 2,
       "referrers": [
         {
           "name": "Google",
           "count": 1
-        }
-      ],
-      "browsers_total": 1,
-      "browsers": [
+        },
         {
-          "name": "Chrome",
+          "name": "avesis.tedu.edu.tr",
           "count": 1
         }
       ],
-      "systems_total": 1,
+      "browsers_total": 2,
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 2
+        },
+        {
+          "name": "Safari",
+          "count": 2
+        }
+      ],
+      "systems_total": 3,
       "systems": [
         {
-          "name": "Android",
+          "name": "iOS",
+          "count": 2
+        },
+        {
+          "name": "Linux",
+          "count": 1
+        },
+        {
+          "name": "macOS",
           "count": 1
         }
       ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 1,
+      "languages_total": 2,
       "languages": [
         {
           "name": "English",
+          "count": 3
+        },
+        {
+          "name": "Russian",
           "count": 1
         }
       ],
-      "regions_total": 1,
+      "regions_total": 3,
       "regions": [
         {
-          "name": "Santiago Metropolitan",
-          "country": "Chile",
-          "country_code": "CL",
+          "name": "Ankara",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "06",
+          "count": 2
+        },
+        {
+          "name": "Michigan",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "New York",
+          "country": "United States",
+          "country_code": "US",
           "code": null,
           "count": 1
         }
@@ -215,10 +248,10 @@
     },
     "7d": {
       "label": "Last 7 days",
-      "start": "2026-09-29",
-      "end": "2026-10-05",
-      "pageviews": 35,
-      "pages_total": 10,
+      "start": "2026-09-30",
+      "end": "2026-10-06",
+      "pageviews": 34,
+      "pages_total": 11,
       "pages": [
         {
           "path": "/",
@@ -237,10 +270,14 @@
             },
             {
               "name": "Google",
-              "count": 2
+              "count": 1
             },
             {
               "name": "huguryildiz.com/teaching",
+              "count": 1
+            },
+            {
+              "name": "avesis.tedu.edu.tr",
               "count": 1
             }
           ]
@@ -267,19 +304,6 @@
           ]
         },
         {
-          "path": "/students",
-          "title": "Students | Huseyin Ugur Yildiz",
-          "path_id": 80840367,
-          "event": false,
-          "count": 3,
-          "refs": [
-            {
-              "name": "huguryildiz.com/teaching",
-              "count": 2
-            }
-          ]
-        },
-        {
           "path": "/software",
           "title": "Software – Hüseyin Uğur Yıldız | Huseyin Ugur Yildiz",
           "path_id": 109093284,
@@ -293,14 +317,14 @@
           ]
         },
         {
-          "path": "/service",
-          "title": "Service | Huseyin Ugur Yildiz",
-          "path_id": 80843167,
+          "path": "/students",
+          "title": "Students | Huseyin Ugur Yildiz",
+          "path_id": 80840367,
           "event": false,
           "count": 2,
           "refs": [
             {
-              "name": "huguryildiz.com/students",
+              "name": "huguryildiz.com/teaching",
               "count": 1
             }
           ]
@@ -310,7 +334,13 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 2
+          "count": 2,
+          "refs": [
+            {
+              "name": "huguryildiz.com/teaching",
+              "count": 1
+            }
+          ]
         },
         {
           "path": "/writing/second-brain-for-ai-assisted-work",
@@ -327,6 +357,13 @@
           "count": 1
         },
         {
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
+          "event": false,
+          "count": 1
+        },
+        {
           "path": "/writing",
           "title": "Writing | Huseyin Ugur Yildiz",
           "path_id": 96360100,
@@ -339,6 +376,13 @@
           "path_id": 80992097,
           "event": false,
           "count": 1
+        },
+        {
+          "path": "/service",
+          "title": "Service | Huseyin Ugur Yildiz",
+          "path_id": 80843167,
+          "event": false,
+          "count": 1
         }
       ],
       "events_total": 1,
@@ -348,7 +392,7 @@
           "title": "CV (PDF), from the CV page",
           "path_id": 96697209,
           "event": true,
-          "count": 1
+          "count": 2
         }
       ],
       "hourly": [
@@ -368,14 +412,14 @@
         7,
         0,
         2,
-        0,
-        3,
-        4,
+        1,
+        2,
+        1,
         0,
         1,
-        4,
+        7,
         0,
-        2
+        1
       ],
       "countries_total": 6,
       "countries": [
@@ -410,7 +454,7 @@
           "count": 1
         }
       ],
-      "referrers_total": 3,
+      "referrers_total": 4,
       "referrers": [
         {
           "name": "scholar.google.com",
@@ -422,18 +466,22 @@
         },
         {
           "name": "Google",
-          "count": 2
+          "count": 1
+        },
+        {
+          "name": "avesis.tedu.edu.tr",
+          "count": 1
         }
       ],
       "browsers_total": 3,
       "browsers": [
         {
           "name": "Chrome",
-          "count": 10
+          "count": 9
         },
         {
           "name": "Safari",
-          "count": 3
+          "count": 4
         },
         {
           "name": "Firefox",
@@ -447,20 +495,20 @@
           "count": 5
         },
         {
-          "name": "Android",
+          "name": "iOS",
           "count": 3
+        },
+        {
+          "name": "Android",
+          "count": 2
         },
         {
           "name": "Linux",
-          "count": 3
-        },
-        {
-          "name": "iOS",
           "count": 2
         },
         {
           "name": "macOS",
-          "count": 1
+          "count": 2
         }
       ],
       "sizes_total": 0,
@@ -469,29 +517,29 @@
       "languages": [
         {
           "name": "English",
-          "count": 6
+          "count": 7
         },
         {
           "name": "Turkish",
-          "count": 6
+          "count": 4
         },
         {
           "name": "Russian",
-          "count": 1
+          "count": 2
         },
         {
           "name": "Swedish",
           "count": 1
         }
       ],
-      "regions_total": 9,
+      "regions_total": 8,
       "regions": [
         {
           "name": "Ankara",
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 2
+          "count": 3
         },
         {
           "name": "İstanbul",
@@ -501,13 +549,6 @@
           "count": 2
         },
         {
-          "name": "Antalya",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "07",
-          "count": 1
-        },
-        {
           "name": "Çorum",
           "country": "Turkey",
           "country_code": "TR",
@@ -515,14 +556,14 @@
           "count": 1
         },
         {
-          "name": "California",
+          "name": "Iowa",
           "country": "United States",
           "country_code": "US",
           "code": null,
           "count": 1
         },
         {
-          "name": "Iowa",
+          "name": "Michigan",
           "country": "United States",
           "country_code": "US",
           "code": null,
@@ -554,9 +595,9 @@
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-09-06",
-      "end": "2026-10-05",
-      "pageviews": 142,
+      "start": "2026-09-07",
+      "end": "2026-10-06",
+      "pageviews": 139,
       "pages_total": 20,
       "pages": [
         {
@@ -564,7 +605,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 48,
+          "count": 47,
           "refs": [
             {
               "name": "Google",
@@ -579,12 +620,12 @@
               "count": 4
             },
             {
-              "name": "com.linkedin.android",
-              "count": 2
+              "name": "avesis.tedu.edu.tr",
+              "count": 3
             },
             {
-              "name": "avesis.tedu.edu.tr",
-              "count": 2
+              "name": "bing.com",
+              "count": 1
             }
           ]
         },
@@ -593,7 +634,7 @@
           "title": "Huseyin Ugur Yildiz",
           "path_id": 80750338,
           "event": false,
-          "count": 15,
+          "count": 16,
           "refs": [
             {
               "name": "Google",
@@ -601,7 +642,7 @@
             },
             {
               "name": "huguryildiz.com",
-              "count": 4
+              "count": 5
             },
             {
               "name": "huguryildiz.com/writing",
@@ -635,7 +676,7 @@
           "title": "Students | Huseyin Ugur Yildiz",
           "path_id": 80840367,
           "event": false,
-          "count": 10,
+          "count": 9,
           "refs": [
             {
               "name": "huguryildiz.com/teaching",
@@ -643,10 +684,6 @@
             },
             {
               "name": "huguryildiz.com",
-              "count": 1
-            },
-            {
-              "name": "huguryildiz.com/research",
               "count": 1
             }
           ]
@@ -679,30 +716,30 @@
           "count": 6
         },
         {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
+          "event": false,
+          "count": 4
+        },
+        {
           "path": "/writing",
           "title": "Writing | Huseyin Ugur Yildiz",
           "path_id": 96360100,
           "event": false,
-          "count": 5
+          "count": 4
         },
         {
           "path": "/service",
           "title": "Service | Huseyin Ugur Yildiz",
           "path_id": 80843167,
           "event": false,
-          "count": 5
+          "count": 4
         },
         {
           "path": "/research",
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
-          "event": false,
-          "count": 5
-        },
-        {
-          "path": "/writing/airport-gate-assignment-multiobjective",
-          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
-          "path_id": 104130835,
           "event": false,
           "count": 4
         },
@@ -735,16 +772,16 @@
           "count": 2
         },
         {
-          "path": "/writing/second-brain-for-ai-assisted-work",
-          "title": "A second brain for AI-assisted work does not require Obsidian | Huseyin Ugur Yildiz",
-          "path_id": 109489555,
-          "event": false,
-          "count": 1
-        },
-        {
           "path": "/writing/claude-watermark-academic-misconduct",
           "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
           "path_id": 106047814,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/writing/second-brain-for-ai-assisted-work",
+          "title": "A second brain for AI-assisted work does not require Obsidian | Huseyin Ugur Yildiz",
+          "path_id": 109489555,
           "event": false,
           "count": 1
         },
@@ -804,19 +841,19 @@
         4,
         5,
         4,
-        4,
+        3,
         12,
         6,
-        7,
+        6,
         18,
-        4,
+        3,
         5,
-        2,
+        3,
         5,
         10,
         4,
-        9,
-        11,
+        5,
+        14,
         4,
         12
       ],
@@ -831,11 +868,6 @@
           "code": "US",
           "name": "United States",
           "count": 10
-        },
-        {
-          "code": "IN",
-          "name": "India",
-          "count": 2
         },
         {
           "code": "KZ",
@@ -863,6 +895,11 @@
           "count": 1
         },
         {
+          "code": "IN",
+          "name": "India",
+          "count": 1
+        },
+        {
           "code": "SE",
           "name": "Sweden",
           "count": 1
@@ -873,7 +910,7 @@
           "count": 1
         }
       ],
-      "referrers_total": 6,
+      "referrers_total": 5,
       "referrers": [
         {
           "name": "Google",
@@ -888,12 +925,8 @@
           "count": 4
         },
         {
-          "name": "com.linkedin.android",
-          "count": 2
-        },
-        {
           "name": "avesis.tedu.edu.tr",
-          "count": 2
+          "count": 3
         },
         {
           "name": "bing.com",
@@ -904,11 +937,11 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 30
+          "count": 27
         },
         {
           "name": "Safari",
-          "count": 15
+          "count": 17
         },
         {
           "name": "Firefox",
@@ -923,19 +956,19 @@
         },
         {
           "name": "iOS",
-          "count": 12
+          "count": 14
         },
         {
           "name": "Android",
-          "count": 11
+          "count": 8
         },
         {
           "name": "Linux",
-          "count": 6
+          "count": 5
         },
         {
           "name": "macOS",
-          "count": 3
+          "count": 4
         }
       ],
       "sizes_total": 0,
@@ -944,15 +977,15 @@
       "languages": [
         {
           "name": "English",
-          "count": 28
+          "count": 27
         },
         {
           "name": "Turkish",
-          "count": 14
+          "count": 13
         },
         {
           "name": "Russian",
-          "count": 3
+          "count": 4
         },
         {
           "name": "French",
@@ -967,14 +1000,14 @@
           "count": 1
         }
       ],
-      "regions_total": 18,
+      "regions_total": 19,
       "regions": [
         {
           "name": "Ankara",
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 11
+          "count": 12
         },
         {
           "name": "İstanbul",
@@ -984,21 +1017,7 @@
           "count": 6
         },
         {
-          "name": "İzmir",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "35",
-          "count": 2
-        },
-        {
           "name": "Georgia",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 2
-        },
-        {
-          "name": "New York",
           "country": "United States",
           "country_code": "US",
           "code": null,
@@ -1016,6 +1035,13 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "19",
+          "count": 1
+        },
+        {
+          "name": "İzmir",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "35",
           "count": 1
         },
         {
@@ -1040,14 +1066,21 @@
           "count": 1
         },
         {
-          "name": "North Carolina",
+          "name": "Michigan",
           "country": "United States",
           "country_code": "US",
           "code": null,
           "count": 1
         },
         {
-          "name": "Texas",
+          "name": "New York",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "North Carolina",
           "country": "United States",
           "country_code": "US",
           "code": null,
@@ -1058,9 +1091,9 @@
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-07-08",
-      "end": "2026-10-05",
-      "pageviews": 491,
+      "start": "2026-07-09",
+      "end": "2026-10-06",
+      "pageviews": 495,
       "pages_total": 27,
       "pages": [
         {
@@ -1068,11 +1101,11 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 172,
+          "count": 174,
           "refs": [
             {
               "name": "Google",
-              "count": 31
+              "count": 32
             },
             {
               "name": "www.linkedin.com",
@@ -1080,7 +1113,7 @@
             },
             {
               "name": "avesis.tedu.edu.tr",
-              "count": 8
+              "count": 9
             },
             {
               "name": "com.linkedin.android",
@@ -1126,7 +1159,7 @@
           "title": "Huseyin Ugur Yildiz",
           "path_id": 80750338,
           "event": false,
-          "count": 34,
+          "count": 35,
           "refs": [
             {
               "name": "Google",
@@ -1134,7 +1167,7 @@
             },
             {
               "name": "huguryildiz.com",
-              "count": 6
+              "count": 7
             },
             {
               "name": "huguryildiz.com/writing",
@@ -1314,6 +1347,13 @@
           "count": 2
         },
         {
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
+          "event": false,
+          "count": 2
+        },
+        {
           "path": "/writing/can-llms-jump-scientific-discovery",
           "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
           "path_id": 104195821,
@@ -1349,13 +1389,6 @@
           "count": 1
         },
         {
-          "path": "/writing/claude-watermark-academic-misconduct",
-          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
-          "path_id": 106047814,
-          "event": false,
-          "count": 1
-        },
-        {
           "path": "/writing/llm-simulations-numerical-fidelity",
           "title": "Visually convincing LLM simulations can conceal substantial differences in numerical fidelity | Huseyin Ugur Yildiz",
           "path_id": 102215395,
@@ -1370,7 +1403,7 @@
           "title": "CV (PDF), from the CV page",
           "path_id": 96697209,
           "event": true,
-          "count": 9
+          "count": 10
         },
         {
           "path": "doi/tantur2025mitigating",
@@ -1417,13 +1450,13 @@
         19,
         40,
         38,
-        33,
-        18,
+        32,
+        19,
         15,
         35,
         24,
-        24,
-        28,
+        25,
+        31,
         28,
         31
       ],
@@ -1432,12 +1465,12 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 96
+          "count": 97
         },
         {
           "code": "US",
           "name": "United States",
-          "count": 37
+          "count": 38
         },
         {
           "code": "DE",
@@ -1544,7 +1577,7 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 31
+          "count": 32
         },
         {
           "name": "www.linkedin.com",
@@ -1552,7 +1585,7 @@
         },
         {
           "name": "avesis.tedu.edu.tr",
-          "count": 8
+          "count": 9
         },
         {
           "name": "com.linkedin.android",
@@ -1595,7 +1628,7 @@
         },
         {
           "name": "Safari",
-          "count": 56
+          "count": 58
         },
         {
           "name": "Firefox",
@@ -1614,7 +1647,7 @@
         },
         {
           "name": "iOS",
-          "count": 49
+          "count": 51
         },
         {
           "name": "Android",
@@ -1635,11 +1668,11 @@
       "languages": [
         {
           "name": "English",
-          "count": 83
+          "count": 85
         },
         {
           "name": "(unknown)",
-          "count": 46
+          "count": 45
         },
         {
           "name": "Turkish",
@@ -1647,7 +1680,7 @@
         },
         {
           "name": "Russian",
-          "count": 4
+          "count": 5
         },
         {
           "name": "Chinese",
@@ -1681,7 +1714,7 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 36
+          "count": 38
         },
         {
           "name": "İstanbul",
@@ -1754,7 +1787,7 @@
           "count": 2
         },
         {
-          "name": "North Carolina",
+          "name": "Michigan",
           "country": "United States",
           "country_code": "US",
           "code": null,
@@ -1779,9 +1812,9 @@
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-10-06",
-      "end": "2026-10-05",
-      "pageviews": 1232,
+      "start": "2025-10-07",
+      "end": "2026-10-06",
+      "pageviews": 1237,
       "pages_total": 31,
       "pages": [
         {
@@ -1789,11 +1822,11 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 477,
+          "count": 480,
           "refs": [
             {
               "name": "Google",
-              "count": 62
+              "count": 63
             },
             {
               "name": "www.linkedin.com",
@@ -1805,7 +1838,7 @@
             },
             {
               "name": "avesis.tedu.edu.tr",
-              "count": 14
+              "count": 15
             },
             {
               "name": "huguryildiz.com/teaching",
@@ -1905,7 +1938,7 @@
           "title": "Huseyin Ugur Yildiz",
           "path_id": 80750338,
           "event": false,
-          "count": 88,
+          "count": 89,
           "refs": [
             {
               "name": "huguryildiz.com/students",
@@ -1913,7 +1946,7 @@
             },
             {
               "name": "huguryildiz.com",
-              "count": 17
+              "count": 18
             },
             {
               "name": "Google",
@@ -2049,6 +2082,13 @@
           "count": 2
         },
         {
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
+          "event": false,
+          "count": 2
+        },
+        {
           "path": "/writing/can-llms-jump-scientific-discovery",
           "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
           "path_id": 104195821,
@@ -2098,13 +2138,6 @@
           "count": 1
         },
         {
-          "path": "/writing/claude-watermark-academic-misconduct",
-          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
-          "path_id": 106047814,
-          "event": false,
-          "count": 1
-        },
-        {
           "path": "/writing/llm-simulations-numerical-fidelity",
           "title": "Visually convincing LLM simulations can conceal substantial differences in numerical fidelity | Huseyin Ugur Yildiz",
           "path_id": 102215395,
@@ -2119,7 +2152,7 @@
           "title": "CV (PDF), from the CV page",
           "path_id": 96697209,
           "event": true,
-          "count": 9
+          "count": 10
         },
         {
           "path": "doi/tantur2025mitigating",
@@ -2167,12 +2200,12 @@
         83,
         80,
         70,
-        80,
+        81,
         51,
         91,
         56,
-        47,
-        50,
+        48,
+        53,
         66,
         78
       ],
@@ -2181,12 +2214,12 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 295
+          "count": 297
         },
         {
           "code": "US",
           "name": "United States",
-          "count": 69
+          "count": 70
         },
         {
           "code": "GB",
@@ -2353,7 +2386,7 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 62
+          "count": 63
         },
         {
           "name": "www.linkedin.com",
@@ -2365,7 +2398,7 @@
         },
         {
           "name": "avesis.tedu.edu.tr",
-          "count": 14
+          "count": 15
         },
         {
           "name": "scholar.google.com",
@@ -2412,11 +2445,11 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 295
+          "count": 296
         },
         {
           "name": "Safari",
-          "count": 171
+          "count": 173
         },
         {
           "name": "Firefox",
@@ -2431,11 +2464,11 @@
       "systems": [
         {
           "name": "iOS",
-          "count": 153
+          "count": 155
         },
         {
           "name": "macOS",
-          "count": 131
+          "count": 132
         },
         {
           "name": "Windows",
@@ -2460,7 +2493,7 @@
         },
         {
           "name": "English",
-          "count": 83
+          "count": 85
         },
         {
           "name": "Turkish",
@@ -2468,7 +2501,7 @@
         },
         {
           "name": "Russian",
-          "count": 4
+          "count": 5
         },
         {
           "name": "Chinese",
@@ -2502,7 +2535,7 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 36
+          "count": 38
         },
         {
           "name": "Colorado",
@@ -2601,8 +2634,8 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-10-05",
-      "pageviews": 1232,
+      "end": "2026-10-06",
+      "pageviews": 1237,
       "pages_total": 31,
       "pages": [
         {
@@ -2610,11 +2643,11 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 477,
+          "count": 480,
           "refs": [
             {
               "name": "Google",
-              "count": 62
+              "count": 63
             },
             {
               "name": "www.linkedin.com",
@@ -2626,7 +2659,7 @@
             },
             {
               "name": "avesis.tedu.edu.tr",
-              "count": 14
+              "count": 15
             },
             {
               "name": "huguryildiz.com/teaching",
@@ -2726,7 +2759,7 @@
           "title": "Huseyin Ugur Yildiz",
           "path_id": 80750338,
           "event": false,
-          "count": 88,
+          "count": 89,
           "refs": [
             {
               "name": "huguryildiz.com/students",
@@ -2734,7 +2767,7 @@
             },
             {
               "name": "huguryildiz.com",
-              "count": 17
+              "count": 18
             },
             {
               "name": "Google",
@@ -2870,6 +2903,13 @@
           "count": 2
         },
         {
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
+          "event": false,
+          "count": 2
+        },
+        {
           "path": "/writing/can-llms-jump-scientific-discovery",
           "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
           "path_id": 104195821,
@@ -2919,13 +2959,6 @@
           "count": 1
         },
         {
-          "path": "/writing/claude-watermark-academic-misconduct",
-          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
-          "path_id": 106047814,
-          "event": false,
-          "count": 1
-        },
-        {
           "path": "/writing/llm-simulations-numerical-fidelity",
           "title": "Visually convincing LLM simulations can conceal substantial differences in numerical fidelity | Huseyin Ugur Yildiz",
           "path_id": 102215395,
@@ -2940,7 +2973,7 @@
           "title": "CV (PDF), from the CV page",
           "path_id": 96697209,
           "event": true,
-          "count": 9
+          "count": 10
         },
         {
           "path": "doi/tantur2025mitigating",
@@ -2988,12 +3021,12 @@
         83,
         80,
         70,
-        80,
+        81,
         51,
         91,
         56,
-        47,
-        50,
+        48,
+        53,
         66,
         78
       ],
@@ -3002,12 +3035,12 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 295
+          "count": 297
         },
         {
           "code": "US",
           "name": "United States",
-          "count": 69
+          "count": 70
         },
         {
           "code": "GB",
@@ -3174,7 +3207,7 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 62
+          "count": 63
         },
         {
           "name": "www.linkedin.com",
@@ -3186,7 +3219,7 @@
         },
         {
           "name": "avesis.tedu.edu.tr",
-          "count": 14
+          "count": 15
         },
         {
           "name": "scholar.google.com",
@@ -3233,11 +3266,11 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 295
+          "count": 296
         },
         {
           "name": "Safari",
-          "count": 171
+          "count": 173
         },
         {
           "name": "Firefox",
@@ -3252,11 +3285,11 @@
       "systems": [
         {
           "name": "iOS",
-          "count": 153
+          "count": 155
         },
         {
           "name": "macOS",
-          "count": 131
+          "count": 132
         },
         {
           "name": "Windows",
@@ -3281,7 +3314,7 @@
         },
         {
           "name": "English",
-          "count": 83
+          "count": 85
         },
         {
           "name": "Turkish",
@@ -3289,7 +3322,7 @@
         },
         {
           "name": "Russian",
-          "count": 4
+          "count": 5
         },
         {
           "name": "Chinese",
@@ -3323,7 +3356,7 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 36
+          "count": 38
         },
         {
           "name": "Colorado",
@@ -4391,7 +4424,11 @@
     },
     {
       "date": "2026-10-05",
-      "views": 2
+      "views": 7
+    },
+    {
+      "date": "2026-10-06",
+      "views": 0
     }
   ],
   "daily_breakdowns": {
@@ -24660,8 +24697,22 @@
       ]
     },
     "2026-10-05": {
-      "pageviews": 2,
+      "pageviews": 7,
       "pages": [
+        {
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
+          "event": false,
+          "count": 4
+        },
+        {
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
+          "event": false,
+          "count": 1
+        },
         {
           "path": "/research",
           "title": "Research | Huseyin Ugur Yildiz",
@@ -24670,14 +24721,22 @@
           "count": 1
         },
         {
-          "path": "/",
-          "title": "Home | Huseyin Ugur Yildiz",
-          "path_id": 80749188,
+          "path": "/teaching",
+          "title": "Huseyin Ugur Yildiz",
+          "path_id": 80750338,
           "event": false,
           "count": 1
         }
       ],
-      "events": [],
+      "events": [
+        {
+          "path": "cv-pdf",
+          "title": "CV (PDF), from the CV page",
+          "path_id": 96697209,
+          "event": true,
+          "count": 1
+        }
+      ],
       "hourly": [
         0,
         0,
@@ -24695,6 +24754,94 @@
         0,
         0,
         0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        3,
+        0,
+        0
+      ],
+      "countries": [
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 2
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 2
+        }
+      ],
+      "referrers": [
+        {
+          "name": "Google",
+          "count": 1
+        },
+        {
+          "name": "avesis.tedu.edu.tr",
+          "count": 1
+        }
+      ],
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 2
+        },
+        {
+          "name": "Safari",
+          "count": 2
+        }
+      ],
+      "systems": [
+        {
+          "name": "iOS",
+          "count": 2
+        },
+        {
+          "name": "Linux",
+          "count": 1
+        },
+        {
+          "name": "macOS",
+          "count": 1
+        }
+      ],
+      "sizes": [],
+      "languages": [
+        {
+          "name": "English",
+          "count": 3
+        },
+        {
+          "name": "Russian",
+          "count": 1
+        }
+      ]
+    },
+    "2026-10-06": {
+      "pageviews": 0,
+      "pages": [],
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0,
@@ -24704,40 +24851,19 @@
         0,
         0
       ],
-      "countries": [
-        {
-          "code": "SG",
-          "name": "Singapore",
-          "count": 1
-        }
-      ],
+      "countries": [],
       "referrers": [],
-      "browsers": [
-        {
-          "name": "Chrome",
-          "count": 1
-        }
-      ],
-      "systems": [
-        {
-          "name": "Windows",
-          "count": 1
-        }
-      ],
+      "browsers": [],
+      "systems": [],
       "sizes": [],
-      "languages": [
-        {
-          "name": "English",
-          "count": 1
-        }
-      ]
+      "languages": []
     }
   },
   "page_series": [
     {
       "path": "/",
       "title": "Home | Huseyin Ugur Yildiz",
-      "count": 477,
+      "count": 480,
       "stats": [
         {
           "date": "2026-02-05",
@@ -25709,10 +25835,14 @@
         },
         {
           "date": "2026-10-05",
-          "views": 1
+          "views": 4
         },
         {
           "date": "2026-10-06",
+          "views": 0
+        },
+        {
+          "date": "2026-10-07",
           "views": 0
         }
       ]
@@ -26697,6 +26827,10 @@
         {
           "date": "2026-10-06",
           "views": 0
+        },
+        {
+          "date": "2026-10-07",
+          "views": 0
         }
       ]
     },
@@ -27679,6 +27813,10 @@
         },
         {
           "date": "2026-10-06",
+          "views": 0
+        },
+        {
+          "date": "2026-10-07",
           "views": 0
         }
       ]
@@ -28663,13 +28801,17 @@
         {
           "date": "2026-10-06",
           "views": 0
+        },
+        {
+          "date": "2026-10-07",
+          "views": 0
         }
       ]
     },
     {
       "path": "/teaching",
       "title": "Huseyin Ugur Yildiz",
-      "count": 88,
+      "count": 89,
       "stats": [
         {
           "date": "2026-02-05",
@@ -29641,10 +29783,14 @@
         },
         {
           "date": "2026-10-05",
-          "views": 0
+          "views": 1
         },
         {
           "date": "2026-10-06",
+          "views": 0
+        },
+        {
+          "date": "2026-10-07",
           "views": 0
         }
       ]
@@ -30625,13 +30771,21 @@
         {
           "date": "2026-10-06",
           "views": 0
+        },
+        {
+          "date": "2026-10-07",
+          "views": 0
         }
       ]
     }
   ],
-  "site": {},
+  "site": {
+    "timezone": "Europe/Istanbul",
+    "first_hit_at": "2026-02-05T12:24:02.263206Z",
+    "data_retention_days": 0
+  },
   "totals": {
-    "pageviews": 1232,
+    "pageviews": 1237,
     "visitors": null
   },
   "pages": [
@@ -30640,11 +30794,11 @@
       "title": "Home | Huseyin Ugur Yildiz",
       "path_id": 80749188,
       "event": false,
-      "count": 477,
+      "count": 480,
       "refs": [
         {
           "name": "Google",
-          "count": 62
+          "count": 63
         },
         {
           "name": "www.linkedin.com",
@@ -30656,7 +30810,7 @@
         },
         {
           "name": "avesis.tedu.edu.tr",
-          "count": 14
+          "count": 15
         },
         {
           "name": "huguryildiz.com/teaching",
@@ -30756,7 +30910,7 @@
       "title": "Huseyin Ugur Yildiz",
       "path_id": 80750338,
       "event": false,
-      "count": 88,
+      "count": 89,
       "refs": [
         {
           "name": "huguryildiz.com/students",
@@ -30764,7 +30918,7 @@
         },
         {
           "name": "huguryildiz.com",
-          "count": 17
+          "count": 18
         },
         {
           "name": "Google",
@@ -30900,6 +31054,13 @@
       "count": 2
     },
     {
+      "path": "/writing/claude-watermark-academic-misconduct",
+      "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+      "path_id": 106047814,
+      "event": false,
+      "count": 2
+    },
+    {
       "path": "/writing/can-llms-jump-scientific-discovery",
       "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
       "path_id": 104195821,
@@ -30949,13 +31110,6 @@
       "count": 1
     },
     {
-      "path": "/writing/claude-watermark-academic-misconduct",
-      "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
-      "path_id": 106047814,
-      "event": false,
-      "count": 1
-    },
-    {
       "path": "/writing/llm-simulations-numerical-fidelity",
       "title": "Visually convincing LLM simulations can conceal substantial differences in numerical fidelity | Huseyin Ugur Yildiz",
       "path_id": 102215395,
@@ -30967,12 +31121,12 @@
     {
       "code": "TR",
       "name": "Turkey",
-      "count": 295
+      "count": 297
     },
     {
       "code": "US",
       "name": "United States",
-      "count": 69
+      "count": 70
     },
     {
       "code": "GB",
@@ -31138,7 +31292,7 @@
   "referrers": [
     {
       "name": "Google",
-      "count": 62
+      "count": 63
     },
     {
       "name": "www.linkedin.com",
@@ -31150,7 +31304,7 @@
     },
     {
       "name": "avesis.tedu.edu.tr",
-      "count": 14
+      "count": 15
     },
     {
       "name": "scholar.google.com",
@@ -31196,11 +31350,11 @@
   "browsers": [
     {
       "name": "Chrome",
-      "count": 295
+      "count": 296
     },
     {
       "name": "Safari",
-      "count": 171
+      "count": 173
     },
     {
       "name": "Firefox",
@@ -31214,11 +31368,11 @@
   "systems": [
     {
       "name": "iOS",
-      "count": 153
+      "count": 155
     },
     {
       "name": "macOS",
-      "count": 131
+      "count": 132
     },
     {
       "name": "Windows",
