@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-06T09:54:28Z",
+  "updated": "2026-10-07T10:01:25Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-10-06"
+    "end": "2026-10-07"
   },
   "window_order": [
     "today",
@@ -16,11 +16,158 @@
   "windows": {
     "today": {
       "label": "Today",
+      "start": "2026-10-07",
+      "end": "2026-10-07",
+      "pageviews": 1,
+      "pages_total": 1,
+      "pages": [
+        {
+          "path": "/cv",
+          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
+          "path_id": 80749912,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events_total": 0,
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries_total": 1,
+      "countries": [
+        {
+          "code": "HK",
+          "name": "Hong Kong",
+          "count": 1
+        }
+      ],
+      "referrers_total": 0,
+      "referrers": [],
+      "browsers_total": 1,
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        }
+      ],
+      "systems_total": 1,
+      "systems": [
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
+      "sizes_total": 0,
+      "sizes": [],
+      "languages_total": 1,
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        }
+      ],
+      "regions_total": 0,
+      "regions": [],
+      "regions_unmatched": []
+    },
+    "yesterday": {
+      "label": "Yesterday",
       "start": "2026-10-06",
       "end": "2026-10-06",
-      "pageviews": 0,
-      "pages_total": 0,
-      "pages": [],
+      "pageviews": 7,
+      "pages_total": 6,
+      "pages": [
+        {
+          "path": "/teaching",
+          "title": "Huseyin Ugur Yildiz",
+          "path_id": 80750338,
+          "event": false,
+          "count": 2,
+          "refs": [
+            {
+              "name": "huguryildiz.com",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "path": "/writing/ai-layoff-trap",
+          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
+          "path_id": 110093766,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/students",
+          "title": "Students | Huseyin Ugur Yildiz",
+          "path_id": 80840367,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "huguryildiz.com/teaching",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/research",
+          "title": "Research | Huseyin Ugur Yildiz",
+          "path_id": 80750374,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "huguryildiz.com/teaching",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/publications",
+          "title": "Publications | Huseyin Ugur Yildiz",
+          "path_id": 80750273,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
+          "event": false,
+          "count": 1
+        }
+      ],
       "events_total": 0,
       "events": [],
       "hourly": [
@@ -36,109 +183,7 @@
         0,
         0,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "countries_total": 0,
-      "countries": [],
-      "referrers_total": 0,
-      "referrers": [],
-      "browsers_total": 0,
-      "browsers": [],
-      "systems_total": 0,
-      "systems": [],
-      "sizes_total": 0,
-      "sizes": [],
-      "languages_total": 0,
-      "languages": [],
-      "regions_total": 0,
-      "regions": [],
-      "regions_unmatched": []
-    },
-    "yesterday": {
-      "label": "Yesterday",
-      "start": "2026-10-05",
-      "end": "2026-10-05",
-      "pageviews": 7,
-      "pages_total": 4,
-      "pages": [
-        {
-          "path": "/",
-          "title": "Home | Huseyin Ugur Yildiz",
-          "path_id": 80749188,
-          "event": false,
-          "count": 4,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 1
-            },
-            {
-              "name": "avesis.tedu.edu.tr",
-              "count": 1
-            },
-            {
-              "name": "signals-and-systems.huguryildiz.com",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/writing/claude-watermark-academic-misconduct",
-          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
-          "path_id": 106047814,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/research",
-          "title": "Research | Huseyin Ugur Yildiz",
-          "path_id": 80750374,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/teaching",
-          "title": "Huseyin Ugur Yildiz",
-          "path_id": 80750338,
-          "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "huguryildiz.com",
-              "count": 1
-            }
-          ]
-        }
-      ],
-      "events_total": 1,
-      "events": [
-        {
-          "path": "cv-pdf",
-          "title": "CV (PDF), from the CV page",
-          "path_id": 96697209,
-          "event": true,
-          "count": 1
-        }
-      ],
-      "hourly": [
-        0,
-        0,
-        0,
         1,
-        0,
-        0,
-        0,
         0,
         1,
         0,
@@ -147,63 +192,40 @@
         0,
         0,
         0,
+        4,
         0,
-        1,
-        0,
-        0,
-        0,
-        1,
-        3,
-        0,
-        0
+        1
       ],
       "countries_total": 2,
       "countries": [
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 2
+          "count": 1
         },
         {
           "code": "US",
           "name": "United States",
-          "count": 2
-        }
-      ],
-      "referrers_total": 2,
-      "referrers": [
-        {
-          "name": "Google",
-          "count": 1
-        },
-        {
-          "name": "avesis.tedu.edu.tr",
           "count": 1
         }
       ],
-      "browsers_total": 2,
+      "referrers_total": 0,
+      "referrers": [],
+      "browsers_total": 1,
       "browsers": [
         {
           "name": "Chrome",
           "count": 2
-        },
-        {
-          "name": "Safari",
-          "count": 2
         }
       ],
-      "systems_total": 3,
+      "systems_total": 2,
       "systems": [
         {
-          "name": "iOS",
-          "count": 2
-        },
-        {
-          "name": "Linux",
+          "name": "macOS",
           "count": 1
         },
         {
-          "name": "macOS",
+          "name": "Windows",
           "count": 1
         }
       ],
@@ -213,31 +235,17 @@
       "languages": [
         {
           "name": "English",
-          "count": 3
+          "count": 1
         },
         {
-          "name": "Russian",
+          "name": "Turkish",
           "count": 1
         }
       ],
-      "regions_total": 3,
+      "regions_total": 1,
       "regions": [
         {
-          "name": "Ankara",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "06",
-          "count": 2
-        },
-        {
           "name": "Michigan",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 1
-        },
-        {
-          "name": "New York",
           "country": "United States",
           "country_code": "US",
           "code": null,
@@ -248,17 +256,17 @@
     },
     "7d": {
       "label": "Last 7 days",
-      "start": "2026-09-30",
-      "end": "2026-10-06",
-      "pageviews": 34,
-      "pages_total": 11,
+      "start": "2026-10-01",
+      "end": "2026-10-07",
+      "pageviews": 41,
+      "pages_total": 13,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 14,
+          "count": 15,
           "refs": [
             {
               "name": "scholar.google.com",
@@ -269,15 +277,15 @@
               "count": 3
             },
             {
+              "name": "signals-and-systems.huguryildiz.com",
+              "count": 2
+            },
+            {
               "name": "Google",
               "count": 1
             },
             {
               "name": "huguryildiz.com/teaching",
-              "count": 1
-            },
-            {
-              "name": "avesis.tedu.edu.tr",
               "count": 1
             }
           ]
@@ -287,7 +295,7 @@
           "title": "Huseyin Ugur Yildiz",
           "path_id": 80750338,
           "event": false,
-          "count": 8,
+          "count": 10,
           "refs": [
             {
               "name": "Google",
@@ -295,11 +303,37 @@
             },
             {
               "name": "huguryildiz.com",
-              "count": 2
+              "count": 4
             },
             {
               "name": "huguryildiz.com/writing",
               "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/students",
+          "title": "Students | Huseyin Ugur Yildiz",
+          "path_id": 80840367,
+          "event": false,
+          "count": 3,
+          "refs": [
+            {
+              "name": "huguryildiz.com/teaching",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "path": "/research",
+          "title": "Research | Huseyin Ugur Yildiz",
+          "path_id": 80750374,
+          "event": false,
+          "count": 3,
+          "refs": [
+            {
+              "name": "huguryildiz.com/teaching",
+              "count": 2
             }
           ]
         },
@@ -317,30 +351,11 @@
           ]
         },
         {
-          "path": "/students",
-          "title": "Students | Huseyin Ugur Yildiz",
-          "path_id": 80840367,
+          "path": "/writing/ai-layoff-trap",
+          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
+          "path_id": 110093766,
           "event": false,
-          "count": 2,
-          "refs": [
-            {
-              "name": "huguryildiz.com/teaching",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/research",
-          "title": "Research | Huseyin Ugur Yildiz",
-          "path_id": 80750374,
-          "event": false,
-          "count": 2,
-          "refs": [
-            {
-              "name": "huguryildiz.com/teaching",
-              "count": 1
-            }
-          ]
+          "count": 1
         },
         {
           "path": "/writing/second-brain-for-ai-assisted-work",
@@ -371,16 +386,23 @@
           "count": 1
         },
         {
-          "path": "/404.html",
-          "title": "Page Not Found Huseyin Ugur Yildiz",
-          "path_id": 80992097,
+          "path": "/service",
+          "title": "Service | Huseyin Ugur Yildiz",
+          "path_id": 80843167,
           "event": false,
           "count": 1
         },
         {
-          "path": "/service",
-          "title": "Service | Huseyin Ugur Yildiz",
-          "path_id": 80843167,
+          "path": "/publications",
+          "title": "Publications | Huseyin Ugur Yildiz",
+          "path_id": 80750273,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/cv",
+          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
+          "path_id": 80749912,
           "event": false,
           "count": 1
         }
@@ -399,7 +421,7 @@
         0,
         0,
         0,
-        1,
+        2,
         3,
         0,
         0,
@@ -408,25 +430,25 @@
         0,
         4,
         1,
-        1,
+        2,
         7,
-        0,
+        1,
         2,
         1,
-        2,
+        1,
         1,
         0,
         1,
-        7,
+        11,
         0,
-        1
+        2
       ],
       "countries_total": 6,
       "countries": [
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 7
+          "count": 8
         },
         {
           "code": "US",
@@ -477,7 +499,7 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 9
+          "count": 10
         },
         {
           "name": "Safari",
@@ -492,7 +514,7 @@
       "systems": [
         {
           "name": "Windows",
-          "count": 5
+          "count": 6
         },
         {
           "name": "iOS",
@@ -521,7 +543,7 @@
         },
         {
           "name": "Turkish",
-          "count": 4
+          "count": 5
         },
         {
           "name": "Russian",
@@ -595,17 +617,17 @@
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-09-07",
-      "end": "2026-10-06",
-      "pageviews": 139,
-      "pages_total": 20,
+      "start": "2026-09-08",
+      "end": "2026-10-07",
+      "pageviews": 144,
+      "pages_total": 21,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 47,
+          "count": 45,
           "refs": [
             {
               "name": "Google",
@@ -620,8 +642,8 @@
               "count": 4
             },
             {
-              "name": "avesis.tedu.edu.tr",
-              "count": 3
+              "name": "signals-and-systems.huguryildiz.com",
+              "count": 2
             },
             {
               "name": "bing.com",
@@ -634,14 +656,14 @@
           "title": "Huseyin Ugur Yildiz",
           "path_id": 80750338,
           "event": false,
-          "count": 16,
+          "count": 18,
           "refs": [
             {
-              "name": "Google",
-              "count": 5
+              "name": "huguryildiz.com",
+              "count": 7
             },
             {
-              "name": "huguryildiz.com",
+              "name": "Google",
               "count": 5
             },
             {
@@ -676,11 +698,11 @@
           "title": "Students | Huseyin Ugur Yildiz",
           "path_id": 80840367,
           "event": false,
-          "count": 9,
+          "count": 10,
           "refs": [
             {
               "name": "huguryildiz.com/teaching",
-              "count": 3
+              "count": 4
             },
             {
               "name": "huguryildiz.com",
@@ -706,7 +728,7 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 7
+          "count": 8
         },
         {
           "path": "/writing/local-first-latex-workflow",
@@ -714,6 +736,20 @@
           "path_id": 98713527,
           "event": false,
           "count": 6
+        },
+        {
+          "path": "/research",
+          "title": "Research | Huseyin Ugur Yildiz",
+          "path_id": 80750374,
+          "event": false,
+          "count": 5
+        },
+        {
+          "path": "/cv",
+          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
+          "path_id": 80749912,
+          "event": false,
+          "count": 5
         },
         {
           "path": "/writing/airport-gate-assignment-multiobjective",
@@ -733,20 +769,6 @@
           "path": "/service",
           "title": "Service | Huseyin Ugur Yildiz",
           "path_id": 80843167,
-          "event": false,
-          "count": 4
-        },
-        {
-          "path": "/research",
-          "title": "Research | Huseyin Ugur Yildiz",
-          "path_id": 80750374,
-          "event": false,
-          "count": 4
-        },
-        {
-          "path": "/cv",
-          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
-          "path_id": 80749912,
           "event": false,
           "count": 4
         },
@@ -777,6 +799,13 @@
           "path_id": 106047814,
           "event": false,
           "count": 2
+        },
+        {
+          "path": "/writing/ai-layoff-trap",
+          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
+          "path_id": 110093766,
+          "event": false,
+          "count": 1
         },
         {
           "path": "/writing/second-brain-for-ai-assisted-work",
@@ -835,34 +864,34 @@
         0,
         3,
         3,
-        1,
+        2,
         8,
         1,
         4,
         5,
         4,
-        3,
-        12,
+        2,
+        11,
         6,
-        6,
-        18,
-        3,
+        7,
+        17,
+        4,
         5,
         3,
         5,
         10,
         4,
         5,
-        14,
+        18,
         4,
-        12
+        13
       ],
-      "countries_total": 10,
+      "countries_total": 9,
       "countries": [
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 27
+          "count": 26
         },
         {
           "code": "US",
@@ -887,11 +916,6 @@
         {
           "code": "FR",
           "name": "France",
-          "count": 1
-        },
-        {
-          "code": "GB",
-          "name": "United Kingdom",
           "count": 1
         },
         {
@@ -925,11 +949,11 @@
           "count": 4
         },
         {
-          "name": "avesis.tedu.edu.tr",
-          "count": 3
+          "name": "bing.com",
+          "count": 1
         },
         {
-          "name": "bing.com",
+          "name": "avesis.tedu.edu.tr",
           "count": 1
         }
       ],
@@ -937,11 +961,11 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 27
+          "count": 26
         },
         {
           "name": "Safari",
-          "count": 17
+          "count": 16
         },
         {
           "name": "Firefox",
@@ -952,7 +976,7 @@
       "systems": [
         {
           "name": "Windows",
-          "count": 16
+          "count": 17
         },
         {
           "name": "iOS",
@@ -960,7 +984,7 @@
         },
         {
           "name": "Android",
-          "count": 8
+          "count": 6
         },
         {
           "name": "Linux",
@@ -968,7 +992,7 @@
         },
         {
           "name": "macOS",
-          "count": 4
+          "count": 3
         }
       ],
       "sizes_total": 0,
@@ -977,11 +1001,11 @@
       "languages": [
         {
           "name": "English",
-          "count": 27
+          "count": 26
         },
         {
           "name": "Turkish",
-          "count": 13
+          "count": 12
         },
         {
           "name": "Russian",
@@ -1007,7 +1031,7 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 12
+          "count": 10
         },
         {
           "name": "İstanbul",
@@ -1091,10 +1115,10 @@
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-07-09",
-      "end": "2026-10-06",
-      "pageviews": 495,
-      "pages_total": 27,
+      "start": "2026-07-10",
+      "end": "2026-10-07",
+      "pageviews": 502,
+      "pages_total": 28,
       "pages": [
         {
           "path": "/",
@@ -1130,7 +1154,7 @@
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
-          "count": 78,
+          "count": 79,
           "refs": [
             {
               "name": "Google",
@@ -1159,15 +1183,15 @@
           "title": "Huseyin Ugur Yildiz",
           "path_id": 80750338,
           "event": false,
-          "count": 35,
+          "count": 37,
           "refs": [
+            {
+              "name": "huguryildiz.com",
+              "count": 9
+            },
             {
               "name": "Google",
               "count": 8
-            },
-            {
-              "name": "huguryildiz.com",
-              "count": 7
             },
             {
               "name": "huguryildiz.com/writing",
@@ -1188,7 +1212,7 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 34,
+          "count": 35,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -1217,7 +1241,7 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 32,
+          "count": 33,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -1229,7 +1253,7 @@
             },
             {
               "name": "huguryildiz.com/teaching",
-              "count": 2
+              "count": 3
             },
             {
               "name": "huguryildiz.com/service",
@@ -1246,7 +1270,7 @@
           "title": "Students | Huseyin Ugur Yildiz",
           "path_id": 80840367,
           "event": false,
-          "count": 26
+          "count": 27
         },
         {
           "path": "/service",
@@ -1382,6 +1406,13 @@
           "count": 2
         },
         {
+          "path": "/writing/ai-layoff-trap",
+          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
+          "path_id": 110093766,
+          "event": false,
+          "count": 1
+        },
+        {
           "path": "/writing/second-brain-for-ai-assisted-work",
           "title": "A second brain for AI-assisted work does not require Obsidian | Huseyin Ugur Yildiz",
           "path_id": 109489555,
@@ -1438,7 +1469,7 @@
         13,
         16,
         17,
-        12,
+        13,
         24,
         3,
         7,
@@ -1447,18 +1478,18 @@
         6,
         17,
         19,
-        19,
+        20,
         40,
-        38,
+        39,
         32,
         19,
         15,
         35,
         24,
-        25,
-        31,
+        24,
+        35,
         28,
-        31
+        32
       ],
       "countries_total": 22,
       "countries": [
@@ -1643,7 +1674,7 @@
       "systems": [
         {
           "name": "Windows",
-          "count": 62
+          "count": 63
         },
         {
           "name": "iOS",
@@ -1655,7 +1686,7 @@
         },
         {
           "name": "macOS",
-          "count": 24
+          "count": 23
         },
         {
           "name": "Linux",
@@ -1672,11 +1703,11 @@
         },
         {
           "name": "(unknown)",
-          "count": 45
+          "count": 44
         },
         {
           "name": "Turkish",
-          "count": 31
+          "count": 32
         },
         {
           "name": "Russian",
@@ -1812,17 +1843,17 @@
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-10-07",
-      "end": "2026-10-06",
-      "pageviews": 1237,
-      "pages_total": 31,
+      "start": "2025-10-08",
+      "end": "2026-10-07",
+      "pageviews": 1245,
+      "pages_total": 32,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 480,
+          "count": 481,
           "refs": [
             {
               "name": "Google",
@@ -1851,7 +1882,7 @@
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
-          "count": 147,
+          "count": 148,
           "refs": [
             {
               "name": "Google",
@@ -1880,7 +1911,7 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 139,
+          "count": 140,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -1909,7 +1940,7 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 103,
+          "count": 104,
           "refs": [
             {
               "name": "huguryildiz.com/publications",
@@ -1928,8 +1959,8 @@
               "count": 4
             },
             {
-              "name": "Google",
-              "count": 3
+              "name": "huguryildiz.com/teaching",
+              "count": 4
             }
           ]
         },
@@ -1938,7 +1969,7 @@
           "title": "Huseyin Ugur Yildiz",
           "path_id": 80750338,
           "event": false,
-          "count": 89,
+          "count": 91,
           "refs": [
             {
               "name": "huguryildiz.com/students",
@@ -1946,7 +1977,7 @@
             },
             {
               "name": "huguryildiz.com",
-              "count": 18
+              "count": 20
             },
             {
               "name": "Google",
@@ -1967,7 +1998,7 @@
           "title": "Students | Huseyin Ugur Yildiz",
           "path_id": 80840367,
           "event": false,
-          "count": 73
+          "count": 74
         },
         {
           "path": "/service",
@@ -2131,6 +2162,13 @@
           "count": 2
         },
         {
+          "path": "/writing/ai-layoff-trap",
+          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
+          "path_id": 110093766,
+          "event": false,
+          "count": 1
+        },
+        {
           "path": "/writing/second-brain-for-ai-assisted-work",
           "title": "A second brain for AI-assisted work does not require Obsidian | Huseyin Ugur Yildiz",
           "path_id": 109489555,
@@ -2187,7 +2225,7 @@
         41,
         58,
         61,
-        54,
+        55,
         39,
         12,
         8,
@@ -2196,25 +2234,25 @@
         29,
         37,
         62,
-        42,
+        43,
         83,
-        80,
+        81,
         70,
         81,
         51,
         91,
         56,
         48,
-        53,
+        57,
         66,
-        78
+        79
       ],
       "countries_total": 34,
       "countries": [
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 297
+          "count": 298
         },
         {
           "code": "US",
@@ -2445,7 +2483,7 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 296
+          "count": 297
         },
         {
           "name": "Safari",
@@ -2472,7 +2510,7 @@
         },
         {
           "name": "Windows",
-          "count": 126
+          "count": 127
         },
         {
           "name": "Android",
@@ -2497,7 +2535,7 @@
         },
         {
           "name": "Turkish",
-          "count": 31
+          "count": 32
         },
         {
           "name": "Russian",
@@ -2634,16 +2672,16 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-10-06",
-      "pageviews": 1237,
-      "pages_total": 31,
+      "end": "2026-10-07",
+      "pageviews": 1245,
+      "pages_total": 32,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 480,
+          "count": 481,
           "refs": [
             {
               "name": "Google",
@@ -2672,7 +2710,7 @@
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
-          "count": 147,
+          "count": 148,
           "refs": [
             {
               "name": "Google",
@@ -2701,7 +2739,7 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 139,
+          "count": 140,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -2730,7 +2768,7 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 103,
+          "count": 104,
           "refs": [
             {
               "name": "huguryildiz.com/publications",
@@ -2749,8 +2787,8 @@
               "count": 4
             },
             {
-              "name": "Google",
-              "count": 3
+              "name": "huguryildiz.com/teaching",
+              "count": 4
             }
           ]
         },
@@ -2759,7 +2797,7 @@
           "title": "Huseyin Ugur Yildiz",
           "path_id": 80750338,
           "event": false,
-          "count": 89,
+          "count": 91,
           "refs": [
             {
               "name": "huguryildiz.com/students",
@@ -2767,7 +2805,7 @@
             },
             {
               "name": "huguryildiz.com",
-              "count": 18
+              "count": 20
             },
             {
               "name": "Google",
@@ -2788,7 +2826,7 @@
           "title": "Students | Huseyin Ugur Yildiz",
           "path_id": 80840367,
           "event": false,
-          "count": 73
+          "count": 74
         },
         {
           "path": "/service",
@@ -2952,6 +2990,13 @@
           "count": 2
         },
         {
+          "path": "/writing/ai-layoff-trap",
+          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
+          "path_id": 110093766,
+          "event": false,
+          "count": 1
+        },
+        {
           "path": "/writing/second-brain-for-ai-assisted-work",
           "title": "A second brain for AI-assisted work does not require Obsidian | Huseyin Ugur Yildiz",
           "path_id": 109489555,
@@ -3008,7 +3053,7 @@
         41,
         58,
         61,
-        54,
+        55,
         39,
         12,
         8,
@@ -3017,25 +3062,25 @@
         29,
         37,
         62,
-        42,
+        43,
         83,
-        80,
+        81,
         70,
         81,
         51,
         91,
         56,
         48,
-        53,
+        57,
         66,
-        78
+        79
       ],
       "countries_total": 34,
       "countries": [
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 297
+          "count": 298
         },
         {
           "code": "US",
@@ -3266,7 +3311,7 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 296
+          "count": 297
         },
         {
           "name": "Safari",
@@ -3293,7 +3338,7 @@
         },
         {
           "name": "Windows",
-          "count": 126
+          "count": 127
         },
         {
           "name": "Android",
@@ -3318,7 +3363,7 @@
         },
         {
           "name": "Turkish",
-          "count": 31
+          "count": 32
         },
         {
           "name": "Russian",
@@ -4428,7 +4473,11 @@
     },
     {
       "date": "2026-10-06",
-      "views": 0
+      "views": 7
+    },
+    {
+      "date": "2026-10-07",
+      "views": 1
     }
   ],
   "daily_breakdowns": {
@@ -24822,14 +24871,136 @@
       ]
     },
     "2026-10-06": {
-      "pageviews": 0,
-      "pages": [],
+      "pageviews": 7,
+      "pages": [
+        {
+          "path": "/teaching",
+          "title": "Huseyin Ugur Yildiz",
+          "path_id": 80750338,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/writing/ai-layoff-trap",
+          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
+          "path_id": 110093766,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/students",
+          "title": "Students | Huseyin Ugur Yildiz",
+          "path_id": 80840367,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/research",
+          "title": "Research | Huseyin Ugur Yildiz",
+          "path_id": 80750374,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/publications",
+          "title": "Publications | Huseyin Ugur Yildiz",
+          "path_id": 80750273,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
+          "event": false,
+          "count": 1
+        }
+      ],
       "events": [],
       "hourly": [
         0,
         0,
         0,
         0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        1
+      ],
+      "countries": [
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 1
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 1
+        }
+      ],
+      "referrers": [],
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 2
+        }
+      ],
+      "systems": [
+        {
+          "name": "macOS",
+          "count": 1
+        },
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
+      "sizes": [],
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        },
+        {
+          "name": "Turkish",
+          "count": 1
+        }
+      ]
+    },
+    "2026-10-07": {
+      "pageviews": 1,
+      "pages": [
+        {
+          "path": "/cv",
+          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
+          "path_id": 80749912,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        1,
         0,
         0,
         0,
@@ -24851,19 +25022,40 @@
         0,
         0
       ],
-      "countries": [],
+      "countries": [
+        {
+          "code": "HK",
+          "name": "Hong Kong",
+          "count": 1
+        }
+      ],
       "referrers": [],
-      "browsers": [],
-      "systems": [],
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        }
+      ],
+      "systems": [
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
       "sizes": [],
-      "languages": []
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        }
+      ]
     }
   },
   "page_series": [
     {
       "path": "/",
       "title": "Home | Huseyin Ugur Yildiz",
-      "count": 480,
+      "count": 481,
       "stats": [
         {
           "date": "2026-02-05",
@@ -25839,10 +26031,14 @@
         },
         {
           "date": "2026-10-06",
-          "views": 0
+          "views": 1
         },
         {
           "date": "2026-10-07",
+          "views": 0
+        },
+        {
+          "date": "2026-10-08",
           "views": 0
         }
       ]
@@ -25850,7 +26046,7 @@
     {
       "path": "/cv",
       "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
-      "count": 147,
+      "count": 148,
       "stats": [
         {
           "date": "2026-02-05",
@@ -26830,6 +27026,10 @@
         },
         {
           "date": "2026-10-07",
+          "views": 1
+        },
+        {
+          "date": "2026-10-08",
           "views": 0
         }
       ]
@@ -26837,7 +27037,7 @@
     {
       "path": "/publications",
       "title": "Publications | Huseyin Ugur Yildiz",
-      "count": 139,
+      "count": 140,
       "stats": [
         {
           "date": "2026-02-05",
@@ -27813,10 +28013,14 @@
         },
         {
           "date": "2026-10-06",
-          "views": 0
+          "views": 1
         },
         {
           "date": "2026-10-07",
+          "views": 0
+        },
+        {
+          "date": "2026-10-08",
           "views": 0
         }
       ]
@@ -27824,7 +28028,7 @@
     {
       "path": "/research",
       "title": "Research | Huseyin Ugur Yildiz",
-      "count": 103,
+      "count": 104,
       "stats": [
         {
           "date": "2026-02-05",
@@ -28800,10 +29004,14 @@
         },
         {
           "date": "2026-10-06",
-          "views": 0
+          "views": 1
         },
         {
           "date": "2026-10-07",
+          "views": 0
+        },
+        {
+          "date": "2026-10-08",
           "views": 0
         }
       ]
@@ -28811,7 +29019,7 @@
     {
       "path": "/teaching",
       "title": "Huseyin Ugur Yildiz",
-      "count": 89,
+      "count": 91,
       "stats": [
         {
           "date": "2026-02-05",
@@ -29787,10 +29995,14 @@
         },
         {
           "date": "2026-10-06",
-          "views": 0
+          "views": 2
         },
         {
           "date": "2026-10-07",
+          "views": 0
+        },
+        {
+          "date": "2026-10-08",
           "views": 0
         }
       ]
@@ -29798,7 +30010,7 @@
     {
       "path": "/students",
       "title": "Students | Huseyin Ugur Yildiz",
-      "count": 73,
+      "count": 74,
       "stats": [
         {
           "date": "2026-02-06",
@@ -30770,22 +30982,22 @@
         },
         {
           "date": "2026-10-06",
-          "views": 0
+          "views": 1
         },
         {
           "date": "2026-10-07",
+          "views": 0
+        },
+        {
+          "date": "2026-10-08",
           "views": 0
         }
       ]
     }
   ],
-  "site": {
-    "timezone": "Europe/Istanbul",
-    "first_hit_at": "2026-02-05T12:24:02.263206Z",
-    "data_retention_days": 0
-  },
+  "site": {},
   "totals": {
-    "pageviews": 1237,
+    "pageviews": 1245,
     "visitors": null
   },
   "pages": [
@@ -30794,7 +31006,7 @@
       "title": "Home | Huseyin Ugur Yildiz",
       "path_id": 80749188,
       "event": false,
-      "count": 480,
+      "count": 481,
       "refs": [
         {
           "name": "Google",
@@ -30823,7 +31035,7 @@
       "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
       "path_id": 80749912,
       "event": false,
-      "count": 147,
+      "count": 148,
       "refs": [
         {
           "name": "Google",
@@ -30852,7 +31064,7 @@
       "title": "Publications | Huseyin Ugur Yildiz",
       "path_id": 80750273,
       "event": false,
-      "count": 139,
+      "count": 140,
       "refs": [
         {
           "name": "huguryildiz.com",
@@ -30881,7 +31093,7 @@
       "title": "Research | Huseyin Ugur Yildiz",
       "path_id": 80750374,
       "event": false,
-      "count": 103,
+      "count": 104,
       "refs": [
         {
           "name": "huguryildiz.com/publications",
@@ -30900,8 +31112,8 @@
           "count": 4
         },
         {
-          "name": "Google",
-          "count": 3
+          "name": "huguryildiz.com/teaching",
+          "count": 4
         }
       ]
     },
@@ -30910,7 +31122,7 @@
       "title": "Huseyin Ugur Yildiz",
       "path_id": 80750338,
       "event": false,
-      "count": 89,
+      "count": 91,
       "refs": [
         {
           "name": "huguryildiz.com/students",
@@ -30918,7 +31130,7 @@
         },
         {
           "name": "huguryildiz.com",
-          "count": 18
+          "count": 20
         },
         {
           "name": "Google",
@@ -30939,7 +31151,7 @@
       "title": "Students | Huseyin Ugur Yildiz",
       "path_id": 80840367,
       "event": false,
-      "count": 73
+      "count": 74
     },
     {
       "path": "/service",
@@ -31103,6 +31315,13 @@
       "count": 2
     },
     {
+      "path": "/writing/ai-layoff-trap",
+      "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
+      "path_id": 110093766,
+      "event": false,
+      "count": 1
+    },
+    {
       "path": "/writing/second-brain-for-ai-assisted-work",
       "title": "A second brain for AI-assisted work does not require Obsidian | Huseyin Ugur Yildiz",
       "path_id": 109489555,
@@ -31121,7 +31340,7 @@
     {
       "code": "TR",
       "name": "Turkey",
-      "count": 297
+      "count": 298
     },
     {
       "code": "US",
@@ -31350,7 +31569,7 @@
   "browsers": [
     {
       "name": "Chrome",
-      "count": 296
+      "count": 297
     },
     {
       "name": "Safari",
@@ -31376,7 +31595,7 @@
     },
     {
       "name": "Windows",
-      "count": 126
+      "count": 127
     },
     {
       "name": "Android",
