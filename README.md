@@ -79,6 +79,11 @@ reintroducing a theme.
 | `_config.yml` | Jekyll, metadata, SEO, and plugin configuration |
 | `PRODUCT.md` | Product, data-honesty, design, and accessibility contract for the ocean observatory simulation |
 
+## Writing entries
+
+Add dated records in `_posts/`. Keep new entries self-contained on this site: do not add
+LinkedIn embeds, LinkedIn URLs in front matter, or LinkedIn-specific calls to action.
+
 Generated output under `_site/` is not a source and should not be edited.
 
 What reaches the public site is decided by `exclude` in `_config.yml`, not by
