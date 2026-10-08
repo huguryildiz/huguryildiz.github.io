@@ -16,7 +16,3 @@ It discusses proposals for managing the review workload: submission fees or reci
   <img src="/assets/images/writing/iclr-submissions-english.png" alt="Chart of ICLR submission counts and acceptance rates from 2013 to 2027. The 2027 bar represents abstract registrations, not full-paper submissions." loading="lazy" width="1122" height="1402">
   <figcaption>English translation of the infographic attached to the LinkedIn post. The 2027 value is identified as an OpenReview submission-ID count, not a count of full-paper submissions.</figcaption>
 </figure>
-
-<div class="post-embed">
-  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7509637804734267392" height="1300" width="504" frameborder="0" allowfullscreen="" title="LinkedIn post on ICLR 2027 registrations and peer review" loading="lazy"></iframe>
-</div>
