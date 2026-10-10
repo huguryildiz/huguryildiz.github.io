@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-10T20:52:35Z",
+  "updated": "2026-10-10T21:21:50Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-10-10"
+    "end": "2026-10-11"
   },
   "window_order": [
     "today",
@@ -16,6 +16,57 @@
   "windows": {
     "today": {
       "label": "Today",
+      "start": "2026-10-11",
+      "end": "2026-10-11",
+      "pageviews": 0,
+      "pages_total": 0,
+      "pages": [],
+      "events_total": 0,
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries_total": 0,
+      "countries": [],
+      "referrers_total": 0,
+      "referrers": [],
+      "browsers_total": 0,
+      "browsers": [],
+      "systems_total": 0,
+      "systems": [],
+      "sizes_total": 0,
+      "sizes": [],
+      "languages_total": 0,
+      "languages": [],
+      "regions_total": 0,
+      "regions": [],
+      "regions_unmatched": []
+    },
+    "yesterday": {
+      "label": "Yesterday",
       "start": "2026-10-10",
       "end": "2026-10-10",
       "pageviews": 2,
@@ -120,185 +171,12 @@
       ],
       "regions_unmatched": []
     },
-    "yesterday": {
-      "label": "Yesterday",
-      "start": "2026-10-09",
-      "end": "2026-10-09",
-      "pageviews": 8,
-      "pages_total": 6,
-      "pages": [
-        {
-          "path": "/",
-          "title": "Home | Huseyin Ugur Yildiz",
-          "path_id": 80749188,
-          "event": false,
-          "count": 3
-        },
-        {
-          "path": "/writing/asd-ste100-controlled-english-for-llms",
-          "title": "Andrej Karpathy on LLMs and ASD-STE100 controlled English | Huseyin Ugur Yildiz",
-          "path_id": 110726689,
-          "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "duckduckgo.com",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/writing/can-llms-jump-scientific-discovery",
-          "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
-          "path_id": 104195821,
-          "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/writing/local-first-latex-workflow",
-          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
-          "path_id": 98713527,
-          "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/students",
-          "title": "Students | Huseyin Ugur Yildiz",
-          "path_id": 80840367,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/teaching",
-          "title": "Huseyin Ugur Yildiz",
-          "path_id": 80750338,
-          "event": false,
-          "count": 1
-        }
-      ],
-      "events_total": 0,
-      "events": [],
-      "hourly": [
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
-        2,
-        0,
-        0,
-        1,
-        0,
-        1,
-        1,
-        0,
-        0,
-        0,
-        0,
-        1
-      ],
-      "countries_total": 3,
-      "countries": [
-        {
-          "code": "GB",
-          "name": "United Kingdom",
-          "count": 1
-        },
-        {
-          "code": "JP",
-          "name": "Japan",
-          "count": 1
-        },
-        {
-          "code": "US",
-          "name": "United States",
-          "count": 1
-        }
-      ],
-      "referrers_total": 0,
-      "referrers": [],
-      "browsers_total": 1,
-      "browsers": [
-        {
-          "name": "Chrome",
-          "count": 3
-        }
-      ],
-      "systems_total": 3,
-      "systems": [
-        {
-          "name": "Linux",
-          "count": 1
-        },
-        {
-          "name": "macOS",
-          "count": 1
-        },
-        {
-          "name": "Windows",
-          "count": 1
-        }
-      ],
-      "sizes_total": 0,
-      "sizes": [],
-      "languages_total": 1,
-      "languages": [
-        {
-          "name": "English",
-          "count": 3
-        }
-      ],
-      "regions_total": 3,
-      "regions": [
-        {
-          "name": "England",
-          "country": "United Kingdom",
-          "country_code": "GB",
-          "code": null,
-          "count": 1
-        },
-        {
-          "name": "Tokyo",
-          "country": "Japan",
-          "country_code": "JP",
-          "code": null,
-          "count": 1
-        },
-        {
-          "name": "New York",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 1
-        }
-      ],
-      "regions_unmatched": []
-    },
     "7d": {
       "label": "Last 7 days",
-      "start": "2026-10-04",
-      "end": "2026-10-10",
-      "pageviews": 46,
-      "pages_total": 17,
+      "start": "2026-10-05",
+      "end": "2026-10-11",
+      "pageviews": 44,
+      "pages_total": 15,
       "pages": [
         {
           "path": "/",
@@ -414,20 +292,6 @@
           "count": 1
         },
         {
-          "path": "/writing/second-brain-for-ai-assisted-work",
-          "title": "A second brain for AI-assisted work does not require Obsidian | Huseyin Ugur Yildiz",
-          "path_id": 109489555,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/writing/internet-of-algae-lab",
-          "title": "The Internet of Algae: modelling communication across four signaling channels | Huseyin Ugur Yildiz",
-          "path_id": 106190485,
-          "event": false,
-          "count": 1
-        },
-        {
           "path": "/writing/claude-watermark-academic-misconduct",
           "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
           "path_id": 106047814,
@@ -489,7 +353,7 @@
         0,
         0,
         0,
-        3,
+        2,
         3,
         1,
         0,
@@ -504,7 +368,7 @@
         2,
         9,
         3,
-        4
+        3
       ],
       "countries_total": 4,
       "countries": [
@@ -662,9 +526,9 @@
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-09-11",
-      "end": "2026-10-10",
-      "pageviews": 152,
+      "start": "2026-09-12",
+      "end": "2026-10-11",
+      "pageviews": 148,
       "pages_total": 21,
       "pages": [
         {
@@ -672,11 +536,11 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 51,
+          "count": 48,
           "refs": [
             {
               "name": "Google",
-              "count": 8
+              "count": 7
             },
             {
               "name": "www.linkedin.com",
@@ -780,7 +644,7 @@
           "title": "What a Lean-verified forced Euler blow-up does — and does not — show | Huseyin Ugur Yildiz",
           "path_id": 106131609,
           "event": false,
-          "count": 6
+          "count": 5
         },
         {
           "path": "/writing",
@@ -910,18 +774,18 @@
         4,
         5,
         12,
-        5,
+        4,
         9,
         16,
         4,
-        11,
+        9,
         3,
         6,
         10,
         5,
         5,
         20,
-        5,
+        4,
         10
       ],
       "countries_total": 11,
@@ -929,7 +793,7 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 24
+          "count": 21
         },
         {
           "code": "US",
@@ -986,7 +850,7 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 8
+          "count": 7
         },
         {
           "name": "www.linkedin.com",
@@ -1013,30 +877,30 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 36
+          "count": 35
         },
         {
           "name": "Safari",
-          "count": 12
+          "count": 11
         },
         {
           "name": "Firefox",
-          "count": 3
+          "count": 2
         }
       ],
       "systems_total": 5,
       "systems": [
         {
           "name": "Windows",
-          "count": 23
+          "count": 22
         },
         {
           "name": "iOS",
-          "count": 9
+          "count": 8
         },
         {
           "name": "Android",
-          "count": 7
+          "count": 6
         },
         {
           "name": "Linux",
@@ -1053,7 +917,7 @@
       "languages": [
         {
           "name": "English",
-          "count": 29
+          "count": 26
         },
         {
           "name": "Turkish",
@@ -1083,14 +947,14 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 11
+          "count": 10
         },
         {
           "name": "İstanbul",
           "country": "Turkey",
           "country_code": "TR",
           "code": "34",
-          "count": 5
+          "count": 4
         },
         {
           "name": "Georgia",
@@ -1167,9 +1031,9 @@
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-07-13",
-      "end": "2026-10-10",
-      "pageviews": 517,
+      "start": "2026-07-14",
+      "end": "2026-10-11",
+      "pageviews": 514,
       "pages_total": 29,
       "pages": [
         {
@@ -1177,7 +1041,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 183,
+          "count": 180,
           "refs": [
             {
               "name": "Google",
@@ -1527,7 +1391,7 @@
       "hourly": [
         13,
         15,
-        17,
+        15,
         14,
         24,
         3,
@@ -1546,7 +1410,7 @@
         36,
         23,
         25,
-        37,
+        36,
         31,
         33
       ],
@@ -1560,7 +1424,7 @@
         {
           "code": "US",
           "name": "United States",
-          "count": 43
+          "count": 40
         },
         {
           "code": "GB",
@@ -1709,11 +1573,11 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 115
+          "count": 114
         },
         {
           "name": "Safari",
-          "count": 59
+          "count": 58
         },
         {
           "name": "Firefox",
@@ -1721,18 +1585,18 @@
         },
         {
           "name": "Edge",
-          "count": 3
+          "count": 2
         }
       ],
       "systems_total": 5,
       "systems": [
         {
           "name": "Windows",
-          "count": 68
+          "count": 66
         },
         {
           "name": "iOS",
-          "count": 51
+          "count": 50
         },
         {
           "name": "Android",
@@ -1757,7 +1621,7 @@
         },
         {
           "name": "(unknown)",
-          "count": 40
+          "count": 37
         },
         {
           "name": "Turkish",
@@ -1809,13 +1673,6 @@
           "count": 10
         },
         {
-          "name": "Colorado",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 7
-        },
-        {
           "name": "Antalya",
           "country": "Turkey",
           "country_code": "TR",
@@ -1823,11 +1680,11 @@
           "count": 6
         },
         {
-          "name": "Virginia",
+          "name": "Colorado",
           "country": "United States",
           "country_code": "US",
           "code": null,
-          "count": 5
+          "count": 6
         },
         {
           "name": "England",
@@ -1844,14 +1701,14 @@
           "count": 4
         },
         {
-          "name": "Iowa",
+          "name": "New York",
           "country": "United States",
           "country_code": "US",
           "code": null,
           "count": 4
         },
         {
-          "name": "New York",
+          "name": "Virginia",
           "country": "United States",
           "country_code": "US",
           "code": null,
@@ -1862,6 +1719,13 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "35",
+          "count": 3
+        },
+        {
+          "name": "Iowa",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
           "count": 3
         },
         {
@@ -1897,8 +1761,8 @@
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-10-11",
-      "end": "2026-10-10",
+      "start": "2025-10-12",
+      "end": "2026-10-11",
       "pageviews": 1274,
       "pages_total": 33,
       "pages": [
@@ -2733,7 +2597,7 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-10-10",
+      "end": "2026-10-11",
       "pageviews": 1274,
       "pages_total": 33,
       "pages": [
@@ -4558,6 +4422,10 @@
     {
       "date": "2026-10-10",
       "views": 2
+    },
+    {
+      "date": "2026-10-11",
+      "views": 0
     }
   ],
   "daily_breakdowns": {
@@ -25512,6 +25380,43 @@
           "count": 1
         }
       ]
+    },
+    "2026-10-11": {
+      "pageviews": 0,
+      "pages": [],
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries": [],
+      "referrers": [],
+      "browsers": [],
+      "systems": [],
+      "sizes": [],
+      "languages": []
     }
   },
   "page_series": [
@@ -26514,6 +26419,10 @@
         },
         {
           "date": "2026-10-11",
+          "views": 0
+        },
+        {
+          "date": "2026-10-12",
           "views": 0
         }
       ]
@@ -27518,6 +27427,10 @@
         {
           "date": "2026-10-11",
           "views": 0
+        },
+        {
+          "date": "2026-10-12",
+          "views": 0
         }
       ]
     },
@@ -28520,6 +28433,10 @@
         },
         {
           "date": "2026-10-11",
+          "views": 0
+        },
+        {
+          "date": "2026-10-12",
           "views": 0
         }
       ]
@@ -29524,6 +29441,10 @@
         {
           "date": "2026-10-11",
           "views": 0
+        },
+        {
+          "date": "2026-10-12",
+          "views": 0
         }
       ]
     },
@@ -30527,6 +30448,10 @@
         {
           "date": "2026-10-11",
           "views": 0
+        },
+        {
+          "date": "2026-10-12",
+          "views": 0
         }
       ]
     },
@@ -31526,6 +31451,10 @@
         {
           "date": "2026-10-11",
           "views": 0
+        },
+        {
+          "date": "2026-10-12",
+          "views": 0
         }
       ]
     },
@@ -31576,6 +31505,10 @@
         },
         {
           "date": "2026-10-11",
+          "views": 0
+        },
+        {
+          "date": "2026-10-12",
           "views": 0
         }
       ]
