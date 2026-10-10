@@ -82,7 +82,8 @@ reintroducing a theme.
 ## Writing entries
 
 Add dated records in `_posts/`. Keep new entries self-contained on this site: do not add
-LinkedIn embeds, LinkedIn URLs in front matter, or LinkedIn-specific calls to action.
+LinkedIn embeds. A `linkedin:` URL in front matter renders the "Discuss this post on
+LinkedIn" box at the end of the post.
 
 Generated output under `_site/` is not a source and should not be edited.
 

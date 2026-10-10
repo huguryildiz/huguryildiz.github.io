@@ -5,6 +5,7 @@ description: "A discussion of ICLR 2027 abstract registrations, peer-review capa
 excerpt: "The post examines the reported scale of ICLR 2027 abstract registrations and proposals for managing peer review, alongside concerns about their trade-offs."
 image: /assets/images/writing/iclr-submissions-english.png
 tags: [ICLR, Peer Review, Machine Learning, Research Assessment]
+linkedin: "https://www.linkedin.com/feed/update/urn:li:share:7509637804734267392/"
 ---
 
 The post reports more than 60,000 abstract registrations for ICLR 2027, a count it compares with submissions from 2013–2026. It notes that the 2027 figure represents abstract registrations rather than full-paper submissions, in part because authors awaiting NeurIPS decisions may also register with ICLR.

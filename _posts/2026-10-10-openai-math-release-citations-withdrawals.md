@@ -5,6 +5,7 @@ description: "A look at citation patterns in OpenAI's release of 722 AI-produced
 excerpt: "One day after OpenAI released 722 AI-produced mathematics manuscripts, three were withdrawn. The withdrawals show why a release of this size needs a record of which results each proof relies on."
 image: /assets/images/writing/openai-math-citation-network.webp
 tags: [Mathematics, AI-Assisted Research, Research Integrity, Formal Verification, Scholarly Publishing]
+linkedin: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7514707273718599680/"
 ---
 
 OpenAI released 722 AI-produced mathematics manuscripts on 6 October. The next day, three were withdrawn and 14 others revised.
