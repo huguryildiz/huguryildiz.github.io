@@ -61,7 +61,8 @@ page-view-only daily series:
   endpoint families share one interval. `GOATCOUNTER_SITE_TIMEZONE` can override the default,
   and collection aborts if it disagrees with the time zone reported by `/sites`.
 - **Per-page daily series** (`page_series`) is fetched once, for the all-time window only,
-  with `group=day`; leading zero-only history is removed before publication.
+  with `group=day`, for the nine primary-navigation pages in menu order (`SERIES_PAGES`);
+  leading zero-only history is removed before publication.
 - **Site metadata** (`site`) carries the time zone the hour-of-day panel is labelled with,
   plus GoatCounter's own `data_retention` setting. It comes from `/sites`, which — like
   `/stats/hits` and `offset` — rejects an unexpected query parameter with a 400, so it is

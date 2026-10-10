@@ -119,10 +119,10 @@ TR_PROVINCES = {
 TR_ALIASES = {"icel": "33", "afyon": "03", "urfa": "63", "kmaras": "46"}
 # How many of the busiest pages get their own referrer lookup (one request each).
 REF_PAGES = 5
-# How many pages get their own daily series stored (all-time window only).
-SERIES_PAGES = 6
-# Pages that always get a daily series, even when outside the busiest few.
-PINNED_SERIES = {"/software"}
+# Pages that get their own daily series stored (all-time window only): the primary
+# navigation, in menu order, so /stats/ shows one trend per menu entry.
+SERIES_PAGES = ["/", "/research", "/publications", "/software", "/writing",
+                "/teaching", "/students", "/service", "/cv"]
 # List endpoints that reject an `offset` parameter (see stats_list).
 NO_OFFSET = {"/stats/hits"}
 
@@ -356,9 +356,10 @@ def fetch_page_series(start, end):
         points = points[first:]
         out.append({"path": hit["path"], "title": (hit.get("title") or "").strip(),
                     "count": int(hit.get("count") or 0), "stats": points})
-    out.sort(key=lambda r: r["count"], reverse=True)
-    top = out[:SERIES_PAGES]
-    return top + [r for r in out[SERIES_PAGES:] if r["path"] in PINNED_SERIES]
+    order = {path: i for i, path in enumerate(SERIES_PAGES)}
+    out = [r for r in out if r["path"] in order]
+    out.sort(key=lambda r: order[r["path"]])
+    return out
 
 
 def daily_series_from_hits(hits):
