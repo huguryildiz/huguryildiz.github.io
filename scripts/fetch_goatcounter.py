@@ -121,6 +121,8 @@ TR_ALIASES = {"icel": "33", "afyon": "03", "urfa": "63", "kmaras": "46"}
 REF_PAGES = 5
 # How many pages get their own daily series stored (all-time window only).
 SERIES_PAGES = 6
+# Pages that always get a daily series, even when outside the busiest few.
+PINNED_SERIES = {"/software"}
 # List endpoints that reject an `offset` parameter (see stats_list).
 NO_OFFSET = {"/stats/hits"}
 
@@ -355,7 +357,8 @@ def fetch_page_series(start, end):
         out.append({"path": hit["path"], "title": (hit.get("title") or "").strip(),
                     "count": int(hit.get("count") or 0), "stats": points})
     out.sort(key=lambda r: r["count"], reverse=True)
-    return out[:SERIES_PAGES]
+    top = out[:SERIES_PAGES]
+    return top + [r for r in out[SERIES_PAGES:] if r["path"] in PINNED_SERIES]
 
 
 def daily_series_from_hits(hits):

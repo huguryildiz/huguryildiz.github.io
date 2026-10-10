@@ -590,7 +590,7 @@ permalink: /stats/
   /* ---- ranked bar lists --------------------------------------------------- */
   var PAGE_LABELS = { '/':'Home', '/cv':'Curriculum Vitae', '/publications':'Publications',
     '/research':'Research', '/service':'Service', '/teaching':'Teaching',
-    '/students':'Students', '/writing':'Writing', '/stats':'Site Reach' };
+    '/students':'Students', '/software':'Software', '/writing':'Writing', '/stats':'Site Reach' };
   var HIDDEN_PAGES = { '/404.html':1, '/stats':1, '/stats/':1 };
 
   function barList(host, rows, opts){
@@ -858,7 +858,7 @@ permalink: /stats/
       s.stats.forEach(function(p){ peak = Math.max(peak, Number(p.views) || 0); });
     });
 
-    var blocks = series.slice(0, 6).map(function(s){
+    var blocks = series.map(function(s){
       var wrap = el('article', 'reach-trail');
       var head = el('div', 'reach-trail-head');
       head.appendChild(el('h3', null, pageLabel(s)));
