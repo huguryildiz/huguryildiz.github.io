@@ -222,32 +222,19 @@ modified: 2026-09-09
 
   <h2 class="sec" id="home-focus"><svg class="hicon" aria-hidden="true"><use href="#i-target"/></svg>Current research program</h2>
   <div class="focusgrid">
-    <div>
-      <h3><svg class="ficon fi-net" aria-hidden="true"><use href="#i-network"/></svg>Network technologies &amp; systems</h3>
+    <p class="fgroup">Domains</p>
+    <div class="fcard fc-net">
+      <span class="fc-num" aria-hidden="true">01</span>
+      <h3><span class="fc-icon" aria-hidden="true"><svg class="ficon"><use href="#i-network"/></svg></span>Network technologies &amp; systems</h3>
       <ul class="chiprow">
         <li class="chip chip-net">Ad Hoc Networks</li><li class="chip chip-net">Wireless Sensor Networks</li>
         <li class="chip chip-net">Underwater Acoustic Sensor Networks</li><li class="chip chip-net">Internet of Things</li>
         <li class="chip chip-net">Drone Networks</li><li class="chip chip-net">Smart Grids</li>
       </ul>
     </div>
-    <div>
-      <h3><svg class="ficon fi-opt" aria-hidden="true"><use href="#i-optimize"/></svg>Optimization &amp; operations research</h3>
-      <ul class="chiprow">
-        <li class="chip chip-opt">Linear Programming</li><li class="chip chip-opt">Mixed-Integer Programming</li>
-        <li class="chip chip-opt">Constraint Programming</li><li class="chip chip-opt">Multi-Objective Optimization</li>
-        <li class="chip chip-opt">Network Flow Programming</li><li class="chip chip-opt">Meta-Heuristics (SA/GA)</li>
-      </ul>
-    </div>
-    <div>
-      <h3><svg class="ficon fi-ai" aria-hidden="true"><use href="#i-neural"/></svg>Artificial intelligence &amp; machine learning</h3>
-      <ul class="chiprow">
-        <li class="chip chip-ai">Machine Learning</li><li class="chip chip-ai">Deep Learning</li>
-        <li class="chip chip-ai">Reinforcement Learning</li><li class="chip chip-ai">Neural Networks</li>
-        <li class="chip chip-ai">Proximal Policy Optimization</li><li class="chip chip-ai">Graph Neural Networks</li>
-      </ul>
-    </div>
-    <div>
-      <h3><svg class="ficon fi-q" aria-hidden="true"><use href="#i-atom"/></svg>Quantum networking</h3>
+    <div class="fcard fc-q">
+      <span class="fc-num" aria-hidden="true">02</span>
+      <h3><span class="fc-icon" aria-hidden="true"><svg class="ficon"><use href="#i-atom"/></svg></span>Quantum networking</h3>
       <ul class="chiprow">
         <li class="chip chip-q">Underwater Quantum Networks</li>
         <li class="chip chip-q">Entanglement Distribution Scheduling</li>
@@ -257,14 +244,34 @@ modified: 2026-09-09
         <li class="chip chip-q">Delayed-Information Control</li>
       </ul>
     </div>
-    <div>
-      <h3><svg class="ficon fi-mol" aria-hidden="true"><use href="#i-molecule"/></svg>Molecular communications</h3>
+    <div class="fcard fc-mol">
+      <span class="fc-num" aria-hidden="true">03</span>
+      <h3><span class="fc-icon" aria-hidden="true"><svg class="ficon"><use href="#i-molecule"/></svg></span>Molecular communications</h3>
       <ul class="chiprow">
         <li class="chip chip-mol">Internet of Algae</li>
         <li class="chip chip-mol">Diffusion-Based Channels</li>
         <li class="chip chip-mol">Quorum Sensing</li>
         <li class="chip chip-mol">Molecular Type Division Multiplexing</li>
         <li class="chip chip-mol">Bioluminescent Optical Links</li>
+      </ul>
+    </div>
+    <p class="fgroup">Methods</p>
+    <div class="fcard fc-wide fc-opt">
+      <span class="fc-num" aria-hidden="true">04</span>
+      <h3><span class="fc-icon" aria-hidden="true"><svg class="ficon"><use href="#i-optimize"/></svg></span>Optimization &amp; operations research</h3>
+      <ul class="chiprow">
+        <li class="chip chip-opt">Linear Programming</li><li class="chip chip-opt">Mixed-Integer Programming</li>
+        <li class="chip chip-opt">Constraint Programming</li><li class="chip chip-opt">Multi-Objective Optimization</li>
+        <li class="chip chip-opt">Network Flow Programming</li><li class="chip chip-opt">Meta-Heuristics (SA/GA)</li>
+      </ul>
+    </div>
+    <div class="fcard fc-wide fc-ai">
+      <span class="fc-num" aria-hidden="true">05</span>
+      <h3><span class="fc-icon" aria-hidden="true"><svg class="ficon"><use href="#i-neural"/></svg></span>Artificial intelligence &amp; machine learning</h3>
+      <ul class="chiprow">
+        <li class="chip chip-ai">Machine Learning</li><li class="chip chip-ai">Deep Learning</li>
+        <li class="chip chip-ai">Reinforcement Learning</li><li class="chip chip-ai">Neural Networks</li>
+        <li class="chip chip-ai">Proximal Policy Optimization</li><li class="chip chip-ai">Graph Neural Networks</li>
       </ul>
     </div>
   </div>
