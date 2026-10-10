@@ -41,4 +41,7 @@ jobs:
           # otherwise the snapshot advances in the repository while the published report
           # keeps serving the previous day's series.
           git diff --cached --quiet || git commit -m "chore: update site stats"
+          # The fetch takes minutes; rebase onto anything pushed meanwhile so the push
+          # is not rejected as non-fast-forward. Only _data/site_stats.json changes here.
+          git pull --rebase origin master
           git push
