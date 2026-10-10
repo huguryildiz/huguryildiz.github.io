@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-10T09:35:25Z",
+  "updated": "2026-10-10T20:52:35Z",
   "range": {
     "start": "2026-02-05",
     "end": "2026-10-10"
@@ -18,9 +18,30 @@
       "label": "Today",
       "start": "2026-10-10",
       "end": "2026-10-10",
-      "pageviews": 0,
-      "pages_total": 0,
-      "pages": [],
+      "pageviews": 2,
+      "pages_total": 2,
+      "pages": [
+        {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "www.bing.com",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/research",
+          "title": "Research | Huseyin Ugur Yildiz",
+          "path_id": 80750374,
+          "event": false,
+          "count": 1
+        }
+      ],
       "events_total": 0,
       "events": [],
       "hourly": [
@@ -41,28 +62,62 @@
         0,
         0,
         0,
+        1,
         0,
-        0,
-        0,
+        1,
         0,
         0,
         0,
         0
       ],
-      "countries_total": 0,
-      "countries": [],
-      "referrers_total": 0,
-      "referrers": [],
-      "browsers_total": 0,
-      "browsers": [],
-      "systems_total": 0,
-      "systems": [],
+      "countries_total": 1,
+      "countries": [
+        {
+          "code": "NL",
+          "name": "Netherlands",
+          "count": 1
+        }
+      ],
+      "referrers_total": 1,
+      "referrers": [
+        {
+          "name": "www.bing.com",
+          "count": 1
+        }
+      ],
+      "browsers_total": 1,
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        }
+      ],
+      "systems_total": 1,
+      "systems": [
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 0,
-      "languages": [],
-      "regions_total": 0,
-      "regions": [],
+      "languages_total": 1,
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        }
+      ],
+      "regions_total": 1,
+      "regions": [
+        {
+          "name": "South Holland",
+          "country": "Netherlands",
+          "country_code": "NL",
+          "code": null,
+          "count": 1
+        }
+      ],
       "regions_unmatched": []
     },
     "yesterday": {
@@ -242,8 +297,8 @@
       "label": "Last 7 days",
       "start": "2026-10-04",
       "end": "2026-10-10",
-      "pageviews": 44,
-      "pages_total": 16,
+      "pageviews": 46,
+      "pages_total": 17,
       "pages": [
         {
           "path": "/",
@@ -318,22 +373,22 @@
           ]
         },
         {
-          "path": "/writing/can-llms-jump-scientific-discovery",
-          "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
-          "path_id": 104195821,
+          "path": "/research",
+          "title": "Research | Huseyin Ugur Yildiz",
+          "path_id": 80750374,
           "event": false,
-          "count": 2,
+          "count": 3,
           "refs": [
             {
-              "name": "Google",
-              "count": 2
+              "name": "huguryildiz.com/teaching",
+              "count": 1
             }
           ]
         },
         {
-          "path": "/research",
-          "title": "Research | Huseyin Ugur Yildiz",
-          "path_id": 80750374,
+          "path": "/writing/can-llms-jump-scientific-discovery",
+          "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
+          "path_id": 104195821,
           "event": false,
           "count": 2
         },
@@ -376,6 +431,13 @@
           "path": "/writing/claude-watermark-academic-misconduct",
           "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
           "path_id": 106047814,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
           "event": false,
           "count": 1
         },
@@ -436,9 +498,9 @@
         1,
         6,
         1,
+        2,
         1,
-        1,
-        1,
+        2,
         2,
         9,
         3,
@@ -602,7 +664,7 @@
       "label": "Last 30 days",
       "start": "2026-09-11",
       "end": "2026-10-10",
-      "pageviews": 150,
+      "pageviews": 152,
       "pages_total": 21,
       "pages": [
         {
@@ -735,18 +797,18 @@
           "count": 5
         },
         {
+          "path": "/research",
+          "title": "Research | Huseyin Ugur Yildiz",
+          "path_id": 80750374,
+          "event": false,
+          "count": 5
+        },
+        {
           "path": "/cv",
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
           "count": 5
-        },
-        {
-          "path": "/research",
-          "title": "Research | Huseyin Ugur Yildiz",
-          "path_id": 80750374,
-          "event": false,
-          "count": 4
         },
         {
           "path": "/404.html",
@@ -766,6 +828,13 @@
           "path": "/writing/can-llms-jump-scientific-discovery",
           "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
           "path_id": 104195821,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
           "event": false,
           "count": 2
         },
@@ -801,13 +870,6 @@
           "path": "/writing/claude-watermark-academic-misconduct",
           "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
           "path_id": 106047814,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/writing/airport-gate-assignment-multiobjective",
-          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
-          "path_id": 104130835,
           "event": false,
           "count": 1
         },
@@ -854,9 +916,9 @@
         4,
         11,
         3,
-        5,
+        6,
         10,
-        4,
+        5,
         5,
         20,
         5,
@@ -1107,7 +1169,7 @@
       "label": "Last 90 days",
       "start": "2026-07-13",
       "end": "2026-10-10",
-      "pageviews": 515,
+      "pageviews": 517,
       "pages_total": 29,
       "pages": [
         {
@@ -1202,7 +1264,7 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 32,
+          "count": 33,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -1298,18 +1360,18 @@
           "count": 8
         },
         {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
+          "event": false,
+          "count": 7
+        },
+        {
           "path": "/stats",
           "title": "Site Stats | Huseyin Ugur Yildiz",
           "path_id": 95945764,
           "event": false,
           "count": 7
-        },
-        {
-          "path": "/writing/airport-gate-assignment-multiobjective",
-          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
-          "path_id": 104130835,
-          "event": false,
-          "count": 6
         },
         {
           "path": "/writing/ieee-twc-submission-cap",
@@ -1480,9 +1542,9 @@
         33,
         38,
         19,
-        16,
+        17,
         36,
-        22,
+        23,
         25,
         37,
         31,
@@ -1837,7 +1899,7 @@
       "label": "Last 12 months",
       "start": "2025-10-11",
       "end": "2026-10-10",
-      "pageviews": 1272,
+      "pageviews": 1274,
       "pages_total": 33,
       "pages": [
         {
@@ -1932,7 +1994,7 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 104,
+          "count": 105,
           "refs": [
             {
               "name": "huguryildiz.com/publications",
@@ -2042,18 +2104,18 @@
           "count": 8
         },
         {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
+          "event": false,
+          "count": 7
+        },
+        {
           "path": "/stats",
           "title": "Site Stats | Huseyin Ugur Yildiz",
           "path_id": 95945764,
           "event": false,
           "count": 7
-        },
-        {
-          "path": "/writing/airport-gate-assignment-multiobjective",
-          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
-          "path_id": 104130835,
-          "event": false,
-          "count": 6
         },
         {
           "path": "/writing/ieee-twc-submission-cap",
@@ -2238,9 +2300,9 @@
         81,
         76,
         81,
-        52,
+        53,
         92,
-        57,
+        58,
         49,
         59,
         69,
@@ -2672,7 +2734,7 @@
       "label": "All time",
       "start": "2019-01-01",
       "end": "2026-10-10",
-      "pageviews": 1272,
+      "pageviews": 1274,
       "pages_total": 33,
       "pages": [
         {
@@ -2767,7 +2829,7 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 104,
+          "count": 105,
           "refs": [
             {
               "name": "huguryildiz.com/publications",
@@ -2877,18 +2939,18 @@
           "count": 8
         },
         {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
+          "event": false,
+          "count": 7
+        },
+        {
           "path": "/stats",
           "title": "Site Stats | Huseyin Ugur Yildiz",
           "path_id": 95945764,
           "event": false,
           "count": 7
-        },
-        {
-          "path": "/writing/airport-gate-assignment-multiobjective",
-          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
-          "path_id": 104130835,
-          "event": false,
-          "count": 6
         },
         {
           "path": "/writing/ieee-twc-submission-cap",
@@ -3073,9 +3135,9 @@
         81,
         76,
         81,
-        52,
+        53,
         92,
-        57,
+        58,
         49,
         59,
         69,
@@ -4495,7 +4557,7 @@
     },
     {
       "date": "2026-10-10",
-      "views": 0
+      "views": 2
     }
   ],
   "daily_breakdowns": {
@@ -25374,8 +25436,23 @@
       ]
     },
     "2026-10-10": {
-      "pageviews": 0,
-      "pages": [],
+      "pageviews": 2,
+      "pages": [
+        {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/research",
+          "title": "Research | Huseyin Ugur Yildiz",
+          "path_id": 80750374,
+          "event": false,
+          "count": 1
+        }
+      ],
       "events": [],
       "hourly": [
         0,
@@ -25395,20 +25472,46 @@
         0,
         0,
         0,
+        1,
         0,
-        0,
-        0,
+        1,
         0,
         0,
         0,
         0
       ],
-      "countries": [],
-      "referrers": [],
-      "browsers": [],
-      "systems": [],
+      "countries": [
+        {
+          "code": "NL",
+          "name": "Netherlands",
+          "count": 1
+        }
+      ],
+      "referrers": [
+        {
+          "name": "www.bing.com",
+          "count": 1
+        }
+      ],
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        }
+      ],
+      "systems": [
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
       "sizes": [],
-      "languages": []
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        }
+      ]
     }
   },
   "page_series": [
@@ -28424,7 +28527,7 @@
     {
       "path": "/research",
       "title": "Research | Huseyin Ugur Yildiz",
-      "count": 104,
+      "count": 105,
       "stats": [
         {
           "date": "2026-02-05",
@@ -29416,7 +29519,7 @@
         },
         {
           "date": "2026-10-10",
-          "views": 0
+          "views": 1
         },
         {
           "date": "2026-10-11",
@@ -31425,6 +31528,57 @@
           "views": 0
         }
       ]
+    },
+    {
+      "path": "/software",
+      "title": "Software – Hüseyin Uğur Yıldız | Huseyin Ugur Yildiz",
+      "count": 2,
+      "stats": [
+        {
+          "date": "2026-10-01",
+          "views": 2
+        },
+        {
+          "date": "2026-10-02",
+          "views": 0
+        },
+        {
+          "date": "2026-10-03",
+          "views": 0
+        },
+        {
+          "date": "2026-10-04",
+          "views": 0
+        },
+        {
+          "date": "2026-10-05",
+          "views": 0
+        },
+        {
+          "date": "2026-10-06",
+          "views": 0
+        },
+        {
+          "date": "2026-10-07",
+          "views": 0
+        },
+        {
+          "date": "2026-10-08",
+          "views": 0
+        },
+        {
+          "date": "2026-10-09",
+          "views": 0
+        },
+        {
+          "date": "2026-10-10",
+          "views": 0
+        },
+        {
+          "date": "2026-10-11",
+          "views": 0
+        }
+      ]
     }
   ],
   "site": {
@@ -31433,7 +31587,7 @@
     "data_retention_days": 0
   },
   "totals": {
-    "pageviews": 1272,
+    "pageviews": 1274,
     "visitors": null
   },
   "pages": [
@@ -31529,7 +31683,7 @@
       "title": "Research | Huseyin Ugur Yildiz",
       "path_id": 80750374,
       "event": false,
-      "count": 104,
+      "count": 105,
       "refs": [
         {
           "name": "huguryildiz.com/publications",
@@ -31639,18 +31793,18 @@
       "count": 8
     },
     {
+      "path": "/writing/airport-gate-assignment-multiobjective",
+      "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+      "path_id": 104130835,
+      "event": false,
+      "count": 7
+    },
+    {
       "path": "/stats",
       "title": "Site Stats | Huseyin Ugur Yildiz",
       "path_id": 95945764,
       "event": false,
       "count": 7
-    },
-    {
-      "path": "/writing/airport-gate-assignment-multiobjective",
-      "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
-      "path_id": 104130835,
-      "event": false,
-      "count": 6
     },
     {
       "path": "/writing/ieee-twc-submission-cap",
