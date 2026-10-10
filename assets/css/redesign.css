@@ -44,7 +44,7 @@
   /* External-link arrow as a masked SVG — U+2197 falls back to the emoji font on iOS */
   --ext-arrow:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6.5 17.5 17.5 6.5M9 6.5h8.5V15'/%3E%3C/svg%3E");
   --z-nav:30;
-  --cc-net:#28567E; --cc-opt:#A0451C; --cc-ai:#0F6E5D; --cc-q:#6C3FA4;
+  --cc-net:#28567E; --cc-opt:#A0451C; --cc-ai:#0F6E5D; --cc-q:#6C3FA4; --cc-mol:#9B2F5C;
   /* Journal-quartile keys. They are a scale, not four unrelated hues, so they belong
      with the other palette tokens rather than inline on .tag-q. */
   --q1:#17604A; --q2:#1F4E79; --q3:#8A5410; --q4:#5A6069;
@@ -62,7 +62,7 @@
     --accent:#E09A6A; --accent-strong:#EBB289;
     --accent-wash:rgba(224,154,106,.10);
     --focus:#E09A6A; --btn-ink:#101821;
-    --cc-net:#8FB8DC; --cc-opt:#E09A6A; --cc-ai:#72C6B4; --cc-q:#BFA0E8;
+    --cc-net:#8FB8DC; --cc-opt:#E09A6A; --cc-ai:#72C6B4; --cc-q:#BFA0E8; --cc-mol:#E79AB9;
     color-scheme:dark;
   }
 }
@@ -74,7 +74,7 @@
   --accent:#E09A6A; --accent-strong:#EBB289;
   --accent-wash:rgba(224,154,106,.10);
   --focus:#E09A6A; --btn-ink:#101821;
-  --cc-net:#8FB8DC; --cc-opt:#E09A6A; --cc-ai:#72C6B4; --cc-q:#BFA0E8;
+  --cc-net:#8FB8DC; --cc-opt:#E09A6A; --cc-ai:#72C6B4; --cc-q:#BFA0E8; --cc-mol:#E79AB9;
   color-scheme:dark;
 }
 :root[data-theme="light"]{
@@ -85,7 +85,7 @@
   --accent:#A0451C; --accent-strong:#7F3512;
   --accent-wash:rgba(160,69,28,.08);
   --focus:#A0451C; --btn-ink:#F6F2EA;
-  --cc-net:#28567E; --cc-opt:#A0451C; --cc-ai:#0F6E5D; --cc-q:#6C3FA4;
+  --cc-net:#28567E; --cc-opt:#A0451C; --cc-ai:#0F6E5D; --cc-q:#6C3FA4; --cc-mol:#9B2F5C;
   color-scheme:light;
 }
 
@@ -294,13 +294,13 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
   display:inline-block; border:1px solid var(--hairline-strong); border-radius:999px;
   padding:.17rem .72rem; font-size:.85rem; color:var(--ink-soft); line-height:1.45;
 }
-.chip-net,.chip-opt,.chip-ai,.chip-q{
+.chip-net,.chip-opt,.chip-ai,.chip-q,.chip-mol{
   color:var(--cc); font-weight:550;
   border-color:color-mix(in srgb, var(--cc) 42%, transparent);
   background:color-mix(in srgb, var(--cc) 9%, transparent);
 }
 .chip-net{--cc:var(--cc-net);} .chip-opt{--cc:var(--cc-opt);}
-.chip-ai{--cc:var(--cc-ai);} .chip-q{--cc:var(--cc-q);}
+.chip-ai{--cc:var(--cc-ai);} .chip-q{--cc:var(--cc-q);} .chip-mol{--cc:var(--cc-mol);}
 .chiprow{display:flex; flex-wrap:wrap; gap:.4rem; margin:.35rem 0 0; padding:0; list-style:none;}
 .hero-chips{margin-top:.85rem;}
 .chip:has(.clogo){display:inline-flex; align-items:center; gap:.42em; padding-left:.42rem;}
@@ -398,7 +398,7 @@ h3.sub{font-family:var(--sans); font-size:1rem; font-weight:650; color:var(--ink
   --ink:#E6E2D9; --ink-soft:#C0D0D8; --ink-faint:#93AAB5; --head:#EEF3F5;
   --hairline:rgba(196,220,232,.22); --hairline-strong:rgba(196,220,232,.38);
   --accent:#E09A6A; --accent-strong:#EBB289; --accent-wash:rgba(224,154,106,.12);
-  --cc-net:#8FB8DC; --cc-opt:#E09A6A; --cc-ai:#72C6B4; --cc-q:#BFA0E8;
+  --cc-net:#8FB8DC; --cc-opt:#E09A6A; --cc-ai:#72C6B4; --cc-q:#BFA0E8; --cc-mol:#E79AB9;
   --focus:#EBB289;
   position:relative; isolation:isolate; overflow:hidden;
   background:var(--obs-plate); color:var(--obs-ink);
@@ -706,7 +706,7 @@ html.obs-over .masthead :focus-visible{outline-color:#EBB289;}
   display:flex; align-items:center; gap:.45rem;}
 .ficon{width:1.05rem; height:1.05rem; flex:none;}
 .fi-net{color:var(--cc-net);} .fi-opt{color:var(--cc-opt);}
-.fi-ai{color:var(--cc-ai);} .fi-q{color:var(--cc-q);}
+.fi-ai{color:var(--cc-ai);} .fi-q{color:var(--cc-q);} .fi-mol{color:var(--cc-mol);}
 
 .homepub{border-bottom:1px solid var(--hairline); padding:1rem 0;}
 .homepub:last-of-type{border-bottom:0;}

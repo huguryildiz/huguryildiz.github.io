@@ -249,12 +249,22 @@ modified: 2026-09-09
     <div>
       <h3><svg class="ficon fi-q" aria-hidden="true"><use href="#i-atom"/></svg>Quantum networking</h3>
       <ul class="chiprow">
-        <li class="chip chip-q">General Quantum Networks</li>
-        <li class="chip chip-q">Entanglement Routing</li>
+        <li class="chip chip-q">Underwater Quantum Networks</li>
+        <li class="chip chip-q">Entanglement Distribution Scheduling</li>
         <li class="chip chip-q">Quantum-Pair Inventory</li>
         <li class="chip chip-q">Age of Entanglement (AoE)</li>
-        <li class="chip chip-q">Stochastic Control</li>
-        <li class="chip chip-q">Finite-Horizon MILP</li>
+        <li class="chip chip-q">Markov Decision Processes</li>
+        <li class="chip chip-q">Delayed-Information Control</li>
+      </ul>
+    </div>
+    <div>
+      <h3><svg class="ficon fi-mol" aria-hidden="true"><use href="#i-molecule"/></svg>Molecular communications</h3>
+      <ul class="chiprow">
+        <li class="chip chip-mol">Internet of Algae</li>
+        <li class="chip chip-mol">Diffusion-Based Channels</li>
+        <li class="chip chip-mol">Quorum Sensing</li>
+        <li class="chip chip-mol">Molecular Type Division Multiplexing</li>
+        <li class="chip chip-mol">Bioluminescent Optical Links</li>
       </ul>
     </div>
   </div>
