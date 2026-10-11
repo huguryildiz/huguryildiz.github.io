@@ -41,7 +41,10 @@
     var compact=wide.matches&&window.innerWidth/parseFloat(getComputedStyle(document.documentElement).fontSize)<64;
     obs.classList.toggle('obs-text-compact',compact);
     var fits=copy.offsetHeight+32<=window.innerHeight;
-    var portraitStory=!wide.matches&&portraitMode.matches;
+    /* A phone story pins copy, chapter rail and plaque in one screen; on a short
+       phone they would overlap, so the plate falls back to copy above the scene. */
+    var portraitStory=!wide.matches&&portraitMode.matches&&
+      copy.offsetHeight+plaque.offsetHeight+90<=window.innerHeight;
     enabled=(portraitStory||(wide.matches&&!compact&&fits))&&!motion.matches&&host.classList.contains('uw-ready');
     obs.classList.toggle('obs-story',enabled);
     start=obs.getBoundingClientRect().top+window.scrollY;
