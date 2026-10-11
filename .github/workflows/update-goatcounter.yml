@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      actions: write
 
     steps:
       - name: Checkout
@@ -45,3 +46,10 @@ jobs:
           # is not rejected as non-fast-forward. Only _data/site_stats.json changes here.
           git pull --rebase origin master
           git push
+
+      # A push made with GITHUB_TOKEN does not trigger other workflows, so the Pages
+      # deploy is dispatched explicitly; otherwise /stats/ keeps the previous snapshot.
+      - name: Deploy the new snapshot
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run jekyll.yml --ref master
