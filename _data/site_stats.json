@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-10T21:29:05Z",
+  "updated": "2026-10-11T09:48:52Z",
   "range": {
     "start": "2026-02-05",
     "end": "2026-10-11"
@@ -18,9 +18,36 @@
       "label": "Today",
       "start": "2026-10-11",
       "end": "2026-10-11",
-      "pageviews": 0,
-      "pages_total": 0,
-      "pages": [],
+      "pageviews": 3,
+      "pages_total": 2,
+      "pages": [
+        {
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
+          "event": false,
+          "count": 2,
+          "refs": [
+            {
+              "name": "huguryildiz.com/stats",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/stats",
+          "title": "Site Stats | Huseyin Ugur Yildiz",
+          "path_id": 95945764,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "huguryildiz.com",
+              "count": 1
+            }
+          ]
+        }
+      ],
       "events_total": 0,
       "events": [],
       "hourly": [
@@ -35,7 +62,7 @@
         0,
         0,
         0,
-        0,
+        3,
         0,
         0,
         0,
@@ -49,20 +76,49 @@
         0,
         0
       ],
-      "countries_total": 0,
-      "countries": [],
+      "countries_total": 1,
+      "countries": [
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 2
+        }
+      ],
       "referrers_total": 0,
       "referrers": [],
-      "browsers_total": 0,
-      "browsers": [],
-      "systems_total": 0,
-      "systems": [],
+      "browsers_total": 1,
+      "browsers": [
+        {
+          "name": "Safari",
+          "count": 2
+        }
+      ],
+      "systems_total": 1,
+      "systems": [
+        {
+          "name": "iOS",
+          "count": 2
+        }
+      ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 0,
-      "languages": [],
-      "regions_total": 0,
-      "regions": [],
+      "languages_total": 1,
+      "languages": [
+        {
+          "name": "English",
+          "count": 2
+        }
+      ],
+      "regions_total": 1,
+      "regions": [
+        {
+          "name": "Ankara",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "06",
+          "count": 2
+        }
+      ],
       "regions_unmatched": []
     },
     "yesterday": {
@@ -175,15 +231,15 @@
       "label": "Last 7 days",
       "start": "2026-10-05",
       "end": "2026-10-11",
-      "pageviews": 44,
-      "pages_total": 15,
+      "pageviews": 47,
+      "pages_total": 16,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 18,
+          "count": 20,
           "refs": [
             {
               "name": "Google",
@@ -313,6 +369,13 @@
           "count": 1
         },
         {
+          "path": "/stats",
+          "title": "Site Stats | Huseyin Ugur Yildiz",
+          "path_id": 95945764,
+          "event": false,
+          "count": 1
+        },
+        {
           "path": "/404.html",
           "title": "Page Not Found Huseyin Ugur Yildiz",
           "path_id": 80992097,
@@ -356,7 +419,7 @@
         2,
         3,
         1,
-        0,
+        3,
         4,
         0,
         1,
@@ -380,7 +443,7 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 6
+          "count": 8
         },
         {
           "code": "GB",
@@ -420,7 +483,7 @@
         },
         {
           "name": "Safari",
-          "count": 4
+          "count": 6
         }
       ],
       "systems_total": 5,
@@ -430,12 +493,12 @@
           "count": 8
         },
         {
-          "name": "macOS",
-          "count": 4
+          "name": "iOS",
+          "count": 5
         },
         {
-          "name": "iOS",
-          "count": 3
+          "name": "macOS",
+          "count": 4
         },
         {
           "name": "Linux",
@@ -452,7 +515,7 @@
       "languages": [
         {
           "name": "English",
-          "count": 13
+          "count": 15
         },
         {
           "name": "Turkish",
@@ -470,7 +533,7 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 5
+          "count": 7
         },
         {
           "name": "New York",
@@ -528,7 +591,7 @@
       "label": "Last 30 days",
       "start": "2026-09-12",
       "end": "2026-10-11",
-      "pageviews": 148,
+      "pageviews": 151,
       "pages_total": 21,
       "pages": [
         {
@@ -536,7 +599,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 48,
+          "count": 50,
           "refs": [
             {
               "name": "Google",
@@ -703,6 +766,13 @@
           "count": 2
         },
         {
+          "path": "/stats",
+          "title": "Site Stats | Huseyin Ugur Yildiz",
+          "path_id": 95945764,
+          "event": false,
+          "count": 2
+        },
+        {
           "path": "/writing/asd-ste100-controlled-english-for-llms",
           "title": "Andrej Karpathy on LLMs and ASD-STE100 controlled English | Huseyin Ugur Yildiz",
           "path_id": 110726689,
@@ -736,13 +806,6 @@
           "path_id": 106047814,
           "event": false,
           "count": 1
-        },
-        {
-          "path": "/stats",
-          "title": "Site Stats | Huseyin Ugur Yildiz",
-          "path_id": 95945764,
-          "event": false,
-          "count": 1
         }
       ],
       "events_total": 2,
@@ -774,7 +837,7 @@
         4,
         5,
         12,
-        4,
+        7,
         9,
         16,
         4,
@@ -793,7 +856,7 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 21
+          "count": 23
         },
         {
           "code": "US",
@@ -881,7 +944,7 @@
         },
         {
           "name": "Safari",
-          "count": 11
+          "count": 13
         },
         {
           "name": "Firefox",
@@ -896,7 +959,7 @@
         },
         {
           "name": "iOS",
-          "count": 8
+          "count": 10
         },
         {
           "name": "Android",
@@ -917,7 +980,7 @@
       "languages": [
         {
           "name": "English",
-          "count": 26
+          "count": 28
         },
         {
           "name": "Turkish",
@@ -947,7 +1010,7 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 10
+          "count": 12
         },
         {
           "name": "İstanbul",
@@ -1033,7 +1096,7 @@
       "label": "Last 90 days",
       "start": "2026-07-14",
       "end": "2026-10-11",
-      "pageviews": 514,
+      "pageviews": 517,
       "pages_total": 29,
       "pages": [
         {
@@ -1041,7 +1104,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 180,
+          "count": 182,
           "refs": [
             {
               "name": "Google",
@@ -1224,16 +1287,16 @@
           "count": 8
         },
         {
-          "path": "/writing/airport-gate-assignment-multiobjective",
-          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
-          "path_id": 104130835,
-          "event": false,
-          "count": 7
-        },
-        {
           "path": "/stats",
           "title": "Site Stats | Huseyin Ugur Yildiz",
           "path_id": 95945764,
+          "event": false,
+          "count": 8
+        },
+        {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
           "event": false,
           "count": 7
         },
@@ -1400,7 +1463,7 @@
         9,
         9,
         18,
-        19,
+        22,
         21,
         40,
         33,
@@ -1419,7 +1482,7 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 99
+          "count": 101
         },
         {
           "code": "US",
@@ -1577,7 +1640,7 @@
         },
         {
           "name": "Safari",
-          "count": 58
+          "count": 60
         },
         {
           "name": "Firefox",
@@ -1596,7 +1659,7 @@
         },
         {
           "name": "iOS",
-          "count": 50
+          "count": 52
         },
         {
           "name": "Android",
@@ -1617,7 +1680,7 @@
       "languages": [
         {
           "name": "English",
-          "count": 95
+          "count": 97
         },
         {
           "name": "(unknown)",
@@ -1663,7 +1726,7 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 41
+          "count": 43
         },
         {
           "name": "İstanbul",
@@ -1763,7 +1826,7 @@
       "label": "Last 12 months",
       "start": "2025-10-12",
       "end": "2026-10-11",
-      "pageviews": 1274,
+      "pageviews": 1277,
       "pages_total": 33,
       "pages": [
         {
@@ -1771,7 +1834,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 494,
+          "count": 496,
           "refs": [
             {
               "name": "Google",
@@ -1968,16 +2031,16 @@
           "count": 8
         },
         {
-          "path": "/writing/airport-gate-assignment-multiobjective",
-          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
-          "path_id": 104130835,
-          "event": false,
-          "count": 7
-        },
-        {
           "path": "/stats",
           "title": "Site Stats | Huseyin Ugur Yildiz",
           "path_id": 95945764,
+          "event": false,
+          "count": 8
+        },
+        {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
           "event": false,
           "count": 7
         },
@@ -2158,7 +2221,7 @@
         15,
         32,
         38,
-        62,
+        65,
         46,
         83,
         81,
@@ -2177,7 +2240,7 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 301
+          "count": 303
         },
         {
           "code": "US",
@@ -2412,7 +2475,7 @@
         },
         {
           "name": "Safari",
-          "count": 175
+          "count": 177
         },
         {
           "name": "Firefox",
@@ -2427,7 +2490,7 @@
       "systems": [
         {
           "name": "iOS",
-          "count": 156
+          "count": 158
         },
         {
           "name": "macOS",
@@ -2456,7 +2519,7 @@
         },
         {
           "name": "English",
-          "count": 95
+          "count": 97
         },
         {
           "name": "Turkish",
@@ -2498,7 +2561,7 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 41
+          "count": 43
         },
         {
           "name": "Colorado",
@@ -2598,7 +2661,7 @@
       "label": "All time",
       "start": "2019-01-01",
       "end": "2026-10-11",
-      "pageviews": 1274,
+      "pageviews": 1277,
       "pages_total": 33,
       "pages": [
         {
@@ -2606,7 +2669,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 494,
+          "count": 496,
           "refs": [
             {
               "name": "Google",
@@ -2803,16 +2866,16 @@
           "count": 8
         },
         {
-          "path": "/writing/airport-gate-assignment-multiobjective",
-          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
-          "path_id": 104130835,
-          "event": false,
-          "count": 7
-        },
-        {
           "path": "/stats",
           "title": "Site Stats | Huseyin Ugur Yildiz",
           "path_id": 95945764,
+          "event": false,
+          "count": 8
+        },
+        {
+          "path": "/writing/airport-gate-assignment-multiobjective",
+          "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+          "path_id": 104130835,
           "event": false,
           "count": 7
         },
@@ -2993,7 +3056,7 @@
         15,
         32,
         38,
-        62,
+        65,
         46,
         83,
         81,
@@ -3012,7 +3075,7 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 301
+          "count": 303
         },
         {
           "code": "US",
@@ -3247,7 +3310,7 @@
         },
         {
           "name": "Safari",
-          "count": 175
+          "count": 177
         },
         {
           "name": "Firefox",
@@ -3262,7 +3325,7 @@
       "systems": [
         {
           "name": "iOS",
-          "count": 156
+          "count": 158
         },
         {
           "name": "macOS",
@@ -3291,7 +3354,7 @@
         },
         {
           "name": "English",
-          "count": 95
+          "count": 97
         },
         {
           "name": "Turkish",
@@ -3333,7 +3396,7 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 41
+          "count": 43
         },
         {
           "name": "Colorado",
@@ -4425,7 +4488,7 @@
     },
     {
       "date": "2026-10-11",
-      "views": 0
+      "views": 3
     }
   ],
   "daily_breakdowns": {
@@ -25382,8 +25445,23 @@
       ]
     },
     "2026-10-11": {
-      "pageviews": 0,
-      "pages": [],
+      "pageviews": 3,
+      "pages": [
+        {
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/stats",
+          "title": "Site Stats | Huseyin Ugur Yildiz",
+          "path_id": 95945764,
+          "event": false,
+          "count": 1
+        }
+      ],
       "events": [],
       "hourly": [
         0,
@@ -25397,7 +25475,7 @@
         0,
         0,
         0,
-        0,
+        3,
         0,
         0,
         0,
@@ -25411,19 +25489,40 @@
         0,
         0
       ],
-      "countries": [],
+      "countries": [
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 2
+        }
+      ],
       "referrers": [],
-      "browsers": [],
-      "systems": [],
+      "browsers": [
+        {
+          "name": "Safari",
+          "count": 2
+        }
+      ],
+      "systems": [
+        {
+          "name": "iOS",
+          "count": 2
+        }
+      ],
       "sizes": [],
-      "languages": []
+      "languages": [
+        {
+          "name": "English",
+          "count": 2
+        }
+      ]
     }
   },
   "page_series": [
     {
       "path": "/",
       "title": "Home | Huseyin Ugur Yildiz",
-      "count": 494,
+      "count": 496,
       "stats": [
         {
           "date": "2026-02-05",
@@ -26419,7 +26518,7 @@
         },
         {
           "date": "2026-10-11",
-          "views": 0
+          "views": 2
         },
         {
           "date": "2026-10-12",
@@ -32854,7 +32953,7 @@
     "data_retention_days": 0
   },
   "totals": {
-    "pageviews": 1274,
+    "pageviews": 1277,
     "visitors": null
   },
   "pages": [
@@ -32863,7 +32962,7 @@
       "title": "Home | Huseyin Ugur Yildiz",
       "path_id": 80749188,
       "event": false,
-      "count": 494,
+      "count": 496,
       "refs": [
         {
           "name": "Google",
@@ -33060,16 +33159,16 @@
       "count": 8
     },
     {
-      "path": "/writing/airport-gate-assignment-multiobjective",
-      "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
-      "path_id": 104130835,
-      "event": false,
-      "count": 7
-    },
-    {
       "path": "/stats",
       "title": "Site Stats | Huseyin Ugur Yildiz",
       "path_id": 95945764,
+      "event": false,
+      "count": 8
+    },
+    {
+      "path": "/writing/airport-gate-assignment-multiobjective",
+      "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
+      "path_id": 104130835,
       "event": false,
       "count": 7
     },
@@ -33204,7 +33303,7 @@
     {
       "code": "TR",
       "name": "Turkey",
-      "count": 301
+      "count": 303
     },
     {
       "code": "US",
@@ -33437,7 +33536,7 @@
     },
     {
       "name": "Safari",
-      "count": 175
+      "count": 177
     },
     {
       "name": "Firefox",
@@ -33451,7 +33550,7 @@
   "systems": [
     {
       "name": "iOS",
-      "count": 156
+      "count": 158
     },
     {
       "name": "macOS",
