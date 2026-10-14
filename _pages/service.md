@@ -20,7 +20,7 @@ permalink: /service/
 
   <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-pen"/></svg>Editorial service</h2>
   <ul class="dotlist">
-    {% for e in site.data.cv.service.editorial %}<li><b>{{ e.role }}</b>, <i>{{ e.journal }}</i> ({{ e.publisher }}, {{ e.period }}) — {{ e.scope }}</li>
+    {% for e in site.data.cv.service.editorial %}<li><b>{{ e.role }}</b>, <i>{{ e.journal }}</i> ({{ e.publisher }}, {{ e.period }}){% if e.scope %} — {{ e.scope }}{% endif %}</li>
     {% endfor %}</ul>
 
   <h2 class="sec"><svg class="hicon" aria-hidden="true"><use href="#i-check"/></svg>Peer-review service</h2>

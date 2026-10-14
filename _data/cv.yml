@@ -288,6 +288,7 @@ research_areas:                             # main.tex Research Areas — yalnı
 # Aşağıdaki bölümler /service/ ve /teaching/ sayfalarını besler.
 service:
   editorial:
+    - { role: "Associate Editor", journal: "IEEE Internet of Things Journal", publisher: "IEEE", period: "Oct 2026 – present" }
     - { role: "Area Editor", journal: "Ad Hoc Networks", publisher: "Elsevier", period: "Sep 2026 – present", scope: "Wireless ad hoc, sensor, underwater acoustic, and UAV-assisted networks" }
   tpc:
     - "IEEE International Conference on Communications (ICC 2018–2022)"
