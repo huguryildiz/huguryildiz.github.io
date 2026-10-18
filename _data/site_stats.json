@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-17T07:38:08Z",
+  "updated": "2026-10-18T07:53:32Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-10-17"
+    "end": "2026-10-18"
   },
   "window_order": [
     "today",
@@ -16,8 +16,8 @@
   "windows": {
     "today": {
       "label": "Today",
-      "start": "2026-10-17",
-      "end": "2026-10-17",
+      "start": "2026-10-18",
+      "end": "2026-10-18",
       "pageviews": 0,
       "pages_total": 0,
       "pages": [],
@@ -67,265 +67,86 @@
     },
     "yesterday": {
       "label": "Yesterday",
-      "start": "2026-10-16",
-      "end": "2026-10-16",
-      "pageviews": 19,
-      "pages_total": 11,
+      "start": "2026-10-17",
+      "end": "2026-10-17",
+      "pageviews": 1,
+      "pages_total": 1,
       "pages": [
         {
           "path": "/writing/openai-math-release-citations-withdrawals",
           "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
           "path_id": 112277958,
           "event": false,
-          "count": 6,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 4
-            },
-            {
-              "name": "huguryildiz.com/writing",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/",
-          "title": "Home | Huseyin Ugur Yildiz",
-          "path_id": 80749188,
-          "event": false,
-          "count": 3,
-          "refs": [
-            {
-              "name": "digital-communications.huguryildiz.com",
-              "count": 1
-            },
-            {
-              "name": "research-graph.huguryildiz.com",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/writing/can-llms-jump-scientific-discovery",
-          "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
-          "path_id": 104195821,
-          "event": false,
-          "count": 2,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/writing/asd-ste100-controlled-english-for-llms",
-          "title": "Andrej Karpathy on LLMs and ASD-STE100 controlled English | Huseyin Ugur Yildiz",
-          "path_id": 110726689,
-          "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "huguryildiz.com/writing",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/software",
-          "title": "Software – Hüseyin Uğur Yıldız | Huseyin Ugur Yildiz",
-          "path_id": 109093284,
-          "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "huguryildiz.com/publications",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/writing/arxivisual-interactive-research-papers",
-          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
-          "path_id": 106826525,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/writing",
-          "title": "Writing | Huseyin Ugur Yildiz",
-          "path_id": 96360100,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/stats",
-          "title": "Site Stats | Huseyin Ugur Yildiz",
-          "path_id": 95945764,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/students",
-          "title": "Students | Huseyin Ugur Yildiz",
-          "path_id": 80840367,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/research",
-          "title": "Research | Huseyin Ugur Yildiz",
-          "path_id": 80750374,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/publications",
-          "title": "Publications | Huseyin Ugur Yildiz",
-          "path_id": 80750273,
-          "event": false,
           "count": 1
         }
       ],
-      "events_total": 1,
-      "events": [
-        {
-          "path": "cv-pdf",
-          "title": "CV (PDF), from the CV page",
-          "path_id": 96697209,
-          "event": true,
-          "count": 1
-        }
-      ],
+      "events_total": 0,
+      "events": [],
       "hourly": [
         0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         1,
         0,
         0,
         0,
-        1,
-        0,
-        0,
-        9,
         0,
         0,
         0,
         0,
-        0,
-        1,
-        0,
-        2,
-        0,
-        1,
-        1,
-        0,
-        1,
-        1,
-        1
+        0
       ],
-      "countries_total": 3,
+      "countries_total": 1,
       "countries": [
         {
           "code": "US",
           "name": "United States",
-          "count": 4
-        },
-        {
-          "code": "BR",
-          "name": "Brazil",
-          "count": 1
-        },
-        {
-          "code": "IE",
-          "name": "Ireland",
           "count": 1
         }
       ],
-      "referrers_total": 1,
-      "referrers": [
-        {
-          "name": "Google",
-          "count": 4
-        }
-      ],
-      "browsers_total": 2,
+      "referrers_total": 0,
+      "referrers": [],
+      "browsers_total": 1,
       "browsers": [
         {
-          "name": "Chrome",
-          "count": 4
-        },
-        {
           "name": "Safari",
-          "count": 2
+          "count": 1
         }
       ],
-      "systems_total": 3,
+      "systems_total": 1,
       "systems": [
         {
           "name": "iOS",
-          "count": 2
-        },
-        {
-          "name": "macOS",
-          "count": 2
-        },
-        {
-          "name": "Windows",
-          "count": 2
+          "count": 1
         }
       ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 3,
+      "languages_total": 1,
       "languages": [
         {
           "name": "English",
-          "count": 4
-        },
-        {
-          "name": "German",
-          "count": 1
-        },
-        {
-          "name": "Portuguese",
           "count": 1
         }
       ],
-      "regions_total": 5,
+      "regions_total": 1,
       "regions": [
-        {
-          "name": "California",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 1
-        },
         {
           "name": "Illinois",
           "country": "United States",
           "country_code": "US",
-          "code": null,
-          "count": 1
-        },
-        {
-          "name": "Pennsylvania",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 1
-        },
-        {
-          "name": "Texas",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 1
-        },
-        {
-          "name": "Leinster",
-          "country": "Ireland",
-          "country_code": "IE",
           "code": null,
           "count": 1
         }
@@ -334,9 +155,9 @@
     },
     "7d": {
       "label": "Last 7 days",
-      "start": "2026-10-11",
-      "end": "2026-10-17",
-      "pageviews": 52,
+      "start": "2026-10-12",
+      "end": "2026-10-18",
+      "pageviews": 45,
       "pages_total": 17,
       "pages": [
         {
@@ -344,18 +165,14 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 14,
+          "count": 10,
           "refs": [
-            {
-              "name": "www.linkedin.com",
-              "count": 2
-            },
             {
               "name": "scholar.google.com.tr",
               "count": 1
             },
             {
-              "name": "huguryildiz.com/stats",
+              "name": "www.linkedin.com",
               "count": 1
             },
             {
@@ -373,7 +190,7 @@
           "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
           "path_id": 112277958,
           "event": false,
-          "count": 6,
+          "count": 7,
           "refs": [
             {
               "name": "Google",
@@ -390,11 +207,11 @@
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
           "event": false,
-          "count": 6,
+          "count": 5,
           "refs": [
             {
               "name": "Google",
-              "count": 6
+              "count": 5
             }
           ]
         },
@@ -416,28 +233,17 @@
           ]
         },
         {
-          "path": "/publications",
-          "title": "Publications | Huseyin Ugur Yildiz",
-          "path_id": 80750273,
-          "event": false,
-          "count": 4,
-          "refs": [
-            {
-              "name": "huguryildiz.com",
-              "count": 2
-            },
-            {
-              "name": "huguryildiz.com/research",
-              "count": 1
-            }
-          ]
-        },
-        {
           "path": "/writing/asd-ste100-controlled-english-for-llms",
           "title": "Andrej Karpathy on LLMs and ASD-STE100 controlled English | Huseyin Ugur Yildiz",
           "path_id": 110726689,
           "event": false,
-          "count": 2
+          "count": 2,
+          "refs": [
+            {
+              "name": "huguryildiz.com/writing",
+              "count": 1
+            }
+          ]
         },
         {
           "path": "/writing/can-llms-jump-scientific-discovery",
@@ -454,16 +260,16 @@
           "count": 2
         },
         {
-          "path": "/stats",
-          "title": "Site Stats | Huseyin Ugur Yildiz",
-          "path_id": 95945764,
+          "path": "/students",
+          "title": "Students | Huseyin Ugur Yildiz",
+          "path_id": 80840367,
           "event": false,
           "count": 2
         },
         {
-          "path": "/students",
-          "title": "Students | Huseyin Ugur Yildiz",
-          "path_id": 80840367,
+          "path": "/publications",
+          "title": "Publications | Huseyin Ugur Yildiz",
+          "path_id": 80750273,
           "event": false,
           "count": 2
         },
@@ -485,6 +291,13 @@
           "path": "/writing/ieee-twc-submission-cap",
           "title": "An academic rate limiter: IEEE TWC now caps authors at 36 new manuscripts a year | Huseyin Ugur Yildiz",
           "path_id": 96633631,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/stats",
+          "title": "Site Stats | Huseyin Ugur Yildiz",
+          "path_id": 95945764,
           "event": false,
           "count": 1
         },
@@ -530,7 +343,7 @@
       "hourly": [
         1,
         3,
-        2,
+        1,
         0,
         0,
         2,
@@ -539,31 +352,31 @@
         9,
         1,
         0,
-        3,
+        0,
         2,
         1,
         1,
-        1,
+        2,
         5,
         0,
-        3,
+        2,
         1,
         5,
         3,
         3,
-        6
+        3
       ],
-      "countries_total": 5,
+      "countries_total": 4,
       "countries": [
-        {
-          "code": "TR",
-          "name": "Turkey",
-          "count": 5
-        },
         {
           "code": "US",
           "name": "United States",
-          "count": 5
+          "count": 4
+        },
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 3
         },
         {
           "code": "GB",
@@ -574,21 +387,16 @@
           "code": "FR",
           "name": "France",
           "count": 1
-        },
-        {
-          "code": "SG",
-          "name": "Singapore",
-          "count": 1
         }
       ],
       "referrers_total": 2,
       "referrers": [
         {
-          "name": "www.linkedin.com",
-          "count": 2
+          "name": "scholar.google.com.tr",
+          "count": 1
         },
         {
-          "name": "scholar.google.com.tr",
+          "name": "www.linkedin.com",
           "count": 1
         }
       ],
@@ -596,26 +404,26 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 9
+          "count": 8
         },
         {
           "name": "Safari",
-          "count": 5
+          "count": 2
         }
       ],
       "systems_total": 4,
       "systems": [
         {
+          "name": "macOS",
+          "count": 4
+        },
+        {
           "name": "Windows",
-          "count": 5
+          "count": 4
         },
         {
           "name": "iOS",
-          "count": 4
-        },
-        {
-          "name": "macOS",
-          "count": 4
+          "count": 1
         },
         {
           "name": "Linux",
@@ -628,11 +436,11 @@
       "languages": [
         {
           "name": "English",
-          "count": 10
+          "count": 7
         },
         {
           "name": "Turkish",
-          "count": 4
+          "count": 3
         }
       ],
       "regions_total": 5,
@@ -642,13 +450,6 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 4
-        },
-        {
-          "name": "Texas",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
           "count": 2
         },
         {
@@ -666,6 +467,13 @@
           "count": 1
         },
         {
+          "name": "Texas",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 1
+        },
+        {
           "name": "Île-de-France",
           "country": "France",
           "country_code": "FR",
@@ -677,9 +485,9 @@
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-09-18",
-      "end": "2026-10-17",
-      "pageviews": 173,
+      "start": "2026-09-19",
+      "end": "2026-10-18",
+      "pageviews": 174,
       "pages_total": 23,
       "pages": [
         {
@@ -803,7 +611,7 @@
           "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
           "path_id": 112277958,
           "event": false,
-          "count": 6
+          "count": 7
         },
         {
           "path": "/research",
@@ -951,7 +759,7 @@
         11,
         16,
         3,
-        10,
+        11,
         7,
         5,
         8,
@@ -1209,9 +1017,9 @@
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-07-20",
-      "end": "2026-10-17",
-      "pageviews": 513,
+      "start": "2026-07-21",
+      "end": "2026-10-18",
+      "pageviews": 508,
       "pages_total": 30,
       "pages": [
         {
@@ -1273,35 +1081,6 @@
           ]
         },
         {
-          "path": "/cv",
-          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
-          "path_id": 80749912,
-          "event": false,
-          "count": 40,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 20
-            },
-            {
-              "name": "huguryildiz.com",
-              "count": 6
-            },
-            {
-              "name": "huguryildiz.com/service",
-              "count": 5
-            },
-            {
-              "name": "huguryildiz.com/research",
-              "count": 1
-            },
-            {
-              "name": "huguryildiz.com/students",
-              "count": 1
-            }
-          ]
-        },
-        {
           "path": "/research",
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
@@ -1326,6 +1105,35 @@
             },
             {
               "name": "huguryildiz.com/cv",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/cv",
+          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
+          "path_id": 80749912,
+          "event": false,
+          "count": 34,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 14
+            },
+            {
+              "name": "huguryildiz.com",
+              "count": 6
+            },
+            {
+              "name": "huguryildiz.com/service",
+              "count": 5
+            },
+            {
+              "name": "huguryildiz.com/research",
+              "count": 1
+            },
+            {
+              "name": "huguryildiz.com/students",
               "count": 1
             }
           ]
@@ -1409,6 +1217,13 @@
           "count": 8
         },
         {
+          "path": "/writing/openai-math-release-citations-withdrawals",
+          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
+          "path_id": 112277958,
+          "event": false,
+          "count": 7
+        },
+        {
           "path": "/writing/airport-gate-assignment-multiobjective",
           "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
           "path_id": 104130835,
@@ -1428,13 +1243,6 @@
           "path_id": 80992097,
           "event": false,
           "count": 7
-        },
-        {
-          "path": "/writing/openai-math-release-citations-withdrawals",
-          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
-          "path_id": 112277958,
-          "event": false,
-          "count": 6
         },
         {
           "path": "/writing/can-llms-jump-scientific-discovery",
@@ -1576,20 +1384,20 @@
       "hourly": [
         12,
         16,
-        13,
+        12,
         14,
-        20,
+        19,
         4,
         6,
         16,
         18,
         9,
         17,
+        21,
         22,
-        23,
-        36,
-        28,
-        34,
+        35,
+        27,
+        35,
         22,
         16,
         32,
@@ -1931,9 +1739,9 @@
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-10-18",
-      "end": "2026-10-17",
-      "pageviews": 1326,
+      "start": "2025-10-19",
+      "end": "2026-10-18",
+      "pageviews": 1327,
       "pages_total": 34,
       "pages": [
         {
@@ -2145,6 +1953,13 @@
           "count": 8
         },
         {
+          "path": "/writing/openai-math-release-citations-withdrawals",
+          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
+          "path_id": 112277958,
+          "event": false,
+          "count": 7
+        },
+        {
           "path": "/writing/airport-gate-assignment-multiobjective",
           "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
           "path_id": 104130835,
@@ -2157,13 +1972,6 @@
           "path_id": 96633631,
           "event": false,
           "count": 7
-        },
-        {
-          "path": "/writing/openai-math-release-citations-withdrawals",
-          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
-          "path_id": 112277958,
-          "event": false,
-          "count": 6
         },
         {
           "path": "/writing/can-llms-jump-scientific-discovery",
@@ -2339,7 +2147,7 @@
         48,
         84,
         82,
-        77,
+        78,
         86,
         53,
         95,
@@ -2781,8 +2589,8 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-10-17",
-      "pageviews": 1326,
+      "end": "2026-10-18",
+      "pageviews": 1327,
       "pages_total": 34,
       "pages": [
         {
@@ -2994,6 +2802,13 @@
           "count": 8
         },
         {
+          "path": "/writing/openai-math-release-citations-withdrawals",
+          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
+          "path_id": 112277958,
+          "event": false,
+          "count": 7
+        },
+        {
           "path": "/writing/airport-gate-assignment-multiobjective",
           "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
           "path_id": 104130835,
@@ -3006,13 +2821,6 @@
           "path_id": 96633631,
           "event": false,
           "count": 7
-        },
-        {
-          "path": "/writing/openai-math-release-citations-withdrawals",
-          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
-          "path_id": 112277958,
-          "event": false,
-          "count": 6
         },
         {
           "path": "/writing/can-llms-jump-scientific-discovery",
@@ -3188,7 +2996,7 @@
         48,
         84,
         82,
-        77,
+        78,
         86,
         53,
         95,
@@ -4647,6 +4455,10 @@
     },
     {
       "date": "2026-10-17",
+      "views": 1
+    },
+    {
+      "date": "2026-10-18",
       "views": 0
     }
   ],
@@ -26246,6 +26058,72 @@
       ]
     },
     "2026-10-17": {
+      "pageviews": 1,
+      "pages": [
+        {
+          "path": "/writing/openai-math-release-citations-withdrawals",
+          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
+          "path_id": 112277958,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 1
+        }
+      ],
+      "referrers": [],
+      "browsers": [
+        {
+          "name": "Safari",
+          "count": 1
+        }
+      ],
+      "systems": [
+        {
+          "name": "iOS",
+          "count": 1
+        }
+      ],
+      "sizes": [],
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        }
+      ]
+    },
+    "2026-10-18": {
       "pageviews": 0,
       "pages": [],
       "events": [],
@@ -27312,6 +27190,10 @@
         {
           "date": "2026-10-18",
           "views": 0
+        },
+        {
+          "date": "2026-10-19",
+          "views": 0
         }
       ]
     },
@@ -28342,6 +28224,10 @@
         },
         {
           "date": "2026-10-18",
+          "views": 0
+        },
+        {
+          "date": "2026-10-19",
           "views": 0
         }
       ]
@@ -29374,6 +29260,10 @@
         {
           "date": "2026-10-18",
           "views": 0
+        },
+        {
+          "date": "2026-10-19",
+          "views": 0
         }
       ]
     },
@@ -29452,6 +29342,10 @@
         },
         {
           "date": "2026-10-18",
+          "views": 0
+        },
+        {
+          "date": "2026-10-19",
           "views": 0
         }
       ]
@@ -29807,6 +29701,10 @@
         },
         {
           "date": "2026-10-18",
+          "views": 0
+        },
+        {
+          "date": "2026-10-19",
           "views": 0
         }
       ]
@@ -30839,6 +30737,10 @@
         {
           "date": "2026-10-18",
           "views": 0
+        },
+        {
+          "date": "2026-10-19",
+          "views": 0
         }
       ]
     },
@@ -31866,6 +31768,10 @@
         {
           "date": "2026-10-18",
           "views": 0
+        },
+        {
+          "date": "2026-10-19",
+          "views": 0
         }
       ]
     },
@@ -32892,6 +32798,10 @@
         },
         {
           "date": "2026-10-18",
+          "views": 0
+        },
+        {
+          "date": "2026-10-19",
           "views": 0
         }
       ]
@@ -33924,17 +33834,17 @@
         {
           "date": "2026-10-18",
           "views": 0
+        },
+        {
+          "date": "2026-10-19",
+          "views": 0
         }
       ]
     }
   ],
-  "site": {
-    "timezone": "Europe/Istanbul",
-    "first_hit_at": "2026-02-05T12:24:02.263206Z",
-    "data_retention_days": 0
-  },
+  "site": {},
   "totals": {
-    "pageviews": 1326,
+    "pageviews": 1327,
     "visitors": null
   },
   "pages": [
@@ -34147,6 +34057,13 @@
       "count": 8
     },
     {
+      "path": "/writing/openai-math-release-citations-withdrawals",
+      "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
+      "path_id": 112277958,
+      "event": false,
+      "count": 7
+    },
+    {
       "path": "/writing/airport-gate-assignment-multiobjective",
       "title": "Airport gate assignment, revisited as a multi-objective mixed-integer program | Huseyin Ugur Yildiz",
       "path_id": 104130835,
@@ -34159,13 +34076,6 @@
       "path_id": 96633631,
       "event": false,
       "count": 7
-    },
-    {
-      "path": "/writing/openai-math-release-citations-withdrawals",
-      "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
-      "path_id": 112277958,
-      "event": false,
-      "count": 6
     },
     {
       "path": "/writing/can-llms-jump-scientific-discovery",
