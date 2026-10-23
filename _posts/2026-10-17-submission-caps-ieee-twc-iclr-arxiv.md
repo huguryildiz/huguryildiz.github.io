@@ -1,6 +1,6 @@
 ---
 title: "IEEE TWC, ICLR and arXiv now all cap submission volume"
-date: 2026-10-02
+date: 2026-10-17
 description: "IEEE TWC, ICLR 2027 and arXiv have each introduced per-person submission limits. The caps reduce reviewer and moderator load but count papers, not quality."
 excerpt: "IEEE TWC accepts at most 36 new manuscripts per author per year, ICLR 2027 limits authors to 20 submissions, and arXiv now allows each submitter two submissions a month. The caps count papers, not quality."
 image: /assets/images/writing/submission-caps-turnstile.webp
