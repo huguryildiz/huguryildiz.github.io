@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-24T07:59:27Z",
+  "updated": "2026-10-25T08:14:17Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-10-24"
+    "end": "2026-10-25"
   },
   "window_order": [
     "today",
@@ -16,11 +16,136 @@
   "windows": {
     "today": {
       "label": "Today",
+      "start": "2026-10-25",
+      "end": "2026-10-25",
+      "pageviews": 1,
+      "pages_total": 1,
+      "pages": [
+        {
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "events_total": 0,
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries_total": 1,
+      "countries": [
+        {
+          "code": "PL",
+          "name": "Poland",
+          "count": 1
+        }
+      ],
+      "referrers_total": 1,
+      "referrers": [
+        {
+          "name": "Google",
+          "count": 1
+        }
+      ],
+      "browsers_total": 1,
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        }
+      ],
+      "systems_total": 1,
+      "systems": [
+        {
+          "name": "Android",
+          "count": 1
+        }
+      ],
+      "sizes_total": 0,
+      "sizes": [],
+      "languages_total": 1,
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        }
+      ],
+      "regions_total": 1,
+      "regions": [
+        {
+          "name": "Mazovia",
+          "country": "Poland",
+          "country_code": "PL",
+          "code": null,
+          "count": 1
+        }
+      ],
+      "regions_unmatched": []
+    },
+    "yesterday": {
+      "label": "Yesterday",
       "start": "2026-10-24",
       "end": "2026-10-24",
-      "pageviews": 2,
-      "pages_total": 2,
+      "pageviews": 10,
+      "pages_total": 4,
       "pages": [
+        {
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
+          "event": false,
+          "count": 7,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 7
+            }
+          ]
+        },
+        {
+          "path": "/writing/openai-math-release-citations-withdrawals",
+          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
+          "path_id": 112277958,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 1
+            }
+          ]
+        },
         {
           "path": "/software",
           "title": "Software – Hüseyin Uğur Yıldız | Huseyin Ugur Yildiz",
@@ -40,10 +165,6 @@
       "events": [],
       "hourly": [
         0,
-        0,
-        0,
-        0,
-        0,
         1,
         0,
         0,
@@ -52,172 +173,57 @@
         0,
         0,
         0,
+        1,
         0,
         0,
+        1,
+        1,
+        1,
         0,
         0,
+        1,
         0,
-        0,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
         0,
         0
       ],
-      "countries_total": 1,
+      "countries_total": 7,
       "countries": [
         {
-          "code": "US",
-          "name": "United States",
-          "count": 1
-        }
-      ],
-      "referrers_total": 0,
-      "referrers": [],
-      "browsers_total": 1,
-      "browsers": [
-        {
-          "name": "Chrome",
-          "count": 1
-        }
-      ],
-      "systems_total": 1,
-      "systems": [
-        {
-          "name": "Linux",
-          "count": 1
-        }
-      ],
-      "sizes_total": 0,
-      "sizes": [],
-      "languages_total": 1,
-      "languages": [
-        {
-          "name": "English",
-          "count": 1
-        }
-      ],
-      "regions_total": 1,
-      "regions": [
-        {
-          "name": "New York",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 1
-        }
-      ],
-      "regions_unmatched": []
-    },
-    "yesterday": {
-      "label": "Yesterday",
-      "start": "2026-10-23",
-      "end": "2026-10-23",
-      "pageviews": 8,
-      "pages_total": 5,
-      "pages": [
-        {
-          "path": "/writing/openai-math-release-citations-withdrawals",
-          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
-          "path_id": 112277958,
-          "event": false,
-          "count": 2,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 2
-            }
-          ]
-        },
-        {
-          "path": "/teaching",
-          "title": "Huseyin Ugur Yildiz",
-          "path_id": 80750338,
-          "event": false,
-          "count": 2,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 1
-            },
-            {
-              "name": "huguryildiz.com./students",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/",
-          "title": "Home | Huseyin Ugur Yildiz",
-          "path_id": 80749188,
-          "event": false,
-          "count": 2
-        },
-        {
-          "path": "/writing/arxivisual-interactive-research-papers",
-          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
-          "path_id": 106826525,
-          "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/students",
-          "title": "Students | Huseyin Ugur Yildiz",
-          "path_id": 80840367,
-          "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "huguryildiz.com.",
-              "count": 1
-            }
-          ]
-        }
-      ],
-      "events_total": 0,
-      "events": [],
-      "hourly": [
-        0,
-        2,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        2,
-        0,
-        0,
-        0,
-        0,
-        3,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
-        0,
-        0
-      ],
-      "countries_total": 2,
-      "countries": [
-        {
-          "code": "FR",
-          "name": "France",
+          "code": "CO",
+          "name": "Colombia",
           "count": 1
         },
         {
-          "code": "GB",
-          "name": "United Kingdom",
+          "code": "DE",
+          "name": "Germany",
+          "count": 1
+        },
+        {
+          "code": "ES",
+          "name": "Spain",
+          "count": 1
+        },
+        {
+          "code": "HU",
+          "name": "Hungary",
+          "count": 1
+        },
+        {
+          "code": "LU",
+          "name": "Luxembourg",
+          "count": 1
+        },
+        {
+          "code": "MA",
+          "name": "Morocco",
+          "count": 1
+        },
+        {
+          "code": "TW",
+          "name": "Taiwan",
           "count": 1
         }
       ],
@@ -225,49 +231,83 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 2
+          "count": 7
         }
       ],
-      "browsers_total": 1,
+      "browsers_total": 2,
       "browsers": [
         {
           "name": "Chrome",
-          "count": 2
+          "count": 6
+        },
+        {
+          "name": "Safari",
+          "count": 1
         }
       ],
-      "systems_total": 1,
+      "systems_total": 4,
       "systems": [
+        {
+          "name": "Android",
+          "count": 2
+        },
+        {
+          "name": "macOS",
+          "count": 2
+        },
         {
           "name": "Windows",
           "count": 2
+        },
+        {
+          "name": "Linux",
+          "count": 1
         }
       ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 2,
+      "languages_total": 3,
       "languages": [
         {
           "name": "English",
+          "count": 5
+        },
+        {
+          "name": "Hungarian",
           "count": 1
         },
         {
-          "name": "French",
+          "name": "Spanish",
           "count": 1
         }
       ],
-      "regions_total": 2,
+      "regions_total": 4,
       "regions": [
         {
-          "name": "Hauts-de-France",
-          "country": "France",
-          "country_code": "FR",
+          "name": "Antioquia",
+          "country": "Colombia",
+          "country_code": "CO",
           "code": null,
           "count": 1
         },
         {
-          "name": "England",
-          "country": "United Kingdom",
-          "country_code": "GB",
+          "name": "Saxony",
+          "country": "Germany",
+          "country_code": "DE",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "Catalonia",
+          "country": "Spain",
+          "country_code": "ES",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "Budapest",
+          "country": "Hungary",
+          "country_code": "HU",
           "code": null,
           "count": 1
         }
@@ -276,11 +316,28 @@
     },
     "7d": {
       "label": "Last 7 days",
-      "start": "2026-10-18",
-      "end": "2026-10-24",
-      "pageviews": 61,
+      "start": "2026-10-19",
+      "end": "2026-10-25",
+      "pageviews": 67,
       "pages_total": 18,
       "pages": [
+        {
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
+          "event": false,
+          "count": 14,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 13
+            },
+            {
+              "name": "huguryildiz.com/writing",
+              "count": 1
+            }
+          ]
+        },
         {
           "path": "/writing/openai-math-release-citations-withdrawals",
           "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
@@ -315,23 +372,6 @@
             },
             {
               "name": "github.com/huguryildiz/digital-communications",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/writing/arxivisual-interactive-research-papers",
-          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
-          "path_id": 106826525,
-          "event": false,
-          "count": 6,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 5
-            },
-            {
-              "name": "huguryildiz.com/writing",
               "count": 1
             }
           ]
@@ -390,13 +430,6 @@
           "count": 3
         },
         {
-          "path": "/research",
-          "title": "Research | Huseyin Ugur Yildiz",
-          "path_id": 80750374,
-          "event": false,
-          "count": 3
-        },
-        {
           "path": "/writing/can-llms-jump-scientific-discovery",
           "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
           "path_id": 104195821,
@@ -418,16 +451,16 @@
           "count": 2
         },
         {
-          "path": "/publications",
-          "title": "Publications | Huseyin Ugur Yildiz",
-          "path_id": 80750273,
+          "path": "/research",
+          "title": "Research | Huseyin Ugur Yildiz",
+          "path_id": 80750374,
           "event": false,
           "count": 2
         },
         {
-          "path": "/cv",
-          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
-          "path_id": 80749912,
+          "path": "/publications",
+          "title": "Publications | Huseyin Ugur Yildiz",
+          "path_id": 80750273,
           "event": false,
           "count": 2
         },
@@ -472,6 +505,13 @@
           "path_id": 80843167,
           "event": false,
           "count": 1
+        },
+        {
+          "path": "/cv",
+          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
+          "path_id": 80749912,
+          "event": false,
+          "count": 1
         }
       ],
       "events_total": 1,
@@ -485,71 +525,96 @@
         }
       ],
       "hourly": [
-        3,
-        3,
-        1,
-        3,
         2,
-        2,
-        5,
-        0,
-        1,
-        2,
-        5,
-        1,
-        0,
-        0,
         4,
+        1,
+        3,
+        2,
+        2,
+        5,
+        0,
+        1,
+        2,
+        6,
+        1,
+        1,
+        1,
+        5,
         15,
         3,
         2,
         6,
         2,
-        0,
-        0,
+        1,
+        1,
         0,
         1
       ],
-      "countries_total": 8,
+      "countries_total": 13,
       "countries": [
         {
-          "code": "US",
-          "name": "United States",
-          "count": 4
-        },
-        {
-          "code": "GB",
-          "name": "United Kingdom",
+          "code": "DE",
+          "name": "Germany",
           "count": 2
         },
         {
-          "code": "FR",
-          "name": "France",
+          "code": "BR",
+          "name": "Brazil",
           "count": 1
         },
         {
-          "code": "GR",
-          "name": "Greece",
+          "code": "CO",
+          "name": "Colombia",
           "count": 1
         },
         {
-          "code": "IT",
-          "name": "Italy",
+          "code": "ES",
+          "name": "Spain",
           "count": 1
         },
         {
-          "code": "JP",
-          "name": "Japan",
+          "code": "HU",
+          "name": "Hungary",
           "count": 1
         },
         {
-          "code": "KZ",
-          "name": "Kazakhstan",
+          "code": "IR",
+          "name": "Iran",
           "count": 1
         },
         {
-          "code": "SE",
-          "name": "Sweden",
+          "code": "LU",
+          "name": "Luxembourg",
+          "count": 1
+        },
+        {
+          "code": "MA",
+          "name": "Morocco",
+          "count": 1
+        },
+        {
+          "code": "PL",
+          "name": "Poland",
+          "count": 1
+        },
+        {
+          "code": "SA",
+          "name": "Saudi Arabia",
+          "count": 1
+        },
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 1
+        },
+        {
+          "code": "TW",
+          "name": "Taiwan",
+          "count": 1
+        },
+        {
+          "code": "US",
+          "name": "United States",
           "count": 1
         }
       ],
@@ -557,21 +622,17 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 8
+          "count": 13
         }
       ],
-      "browsers_total": 3,
+      "browsers_total": 2,
       "browsers": [
         {
           "name": "Chrome",
-          "count": 5
+          "count": 13
         },
         {
           "name": "Safari",
-          "count": 3
-        },
-        {
-          "name": "Firefox",
           "count": 1
         }
       ],
@@ -579,15 +640,15 @@
       "systems": [
         {
           "name": "macOS",
+          "count": 6
+        },
+        {
+          "name": "Android",
           "count": 4
         },
         {
-          "name": "iOS",
-          "count": 2
-        },
-        {
           "name": "Windows",
-          "count": 2
+          "count": 3
         },
         {
           "name": "Linux",
@@ -600,69 +661,62 @@
       "languages": [
         {
           "name": "English",
-          "count": 9
+          "count": 11
         },
         {
-          "name": "French",
+          "name": "Hungarian",
           "count": 1
         },
         {
-          "name": "Italian",
+          "name": "Portuguese",
           "count": 1
         },
         {
-          "name": "Japanese",
+          "name": "Spanish",
           "count": 1
         }
       ],
-      "regions_total": 7,
+      "regions_total": 6,
       "regions": [
         {
-          "name": "England",
-          "country": "United Kingdom",
-          "country_code": "GB",
-          "code": null,
-          "count": 2
-        },
-        {
-          "name": "Iowa",
-          "country": "United States",
-          "country_code": "US",
+          "name": "Bavaria",
+          "country": "Germany",
+          "country_code": "DE",
           "code": null,
           "count": 1
         },
         {
-          "name": "Maryland",
-          "country": "United States",
-          "country_code": "US",
+          "name": "Saxony",
+          "country": "Germany",
+          "country_code": "DE",
           "code": null,
           "count": 1
         },
         {
-          "name": "New Jersey",
-          "country": "United States",
-          "country_code": "US",
+          "name": "Sao Paulo",
+          "country": "Brazil",
+          "country_code": "BR",
           "code": null,
           "count": 1
         },
         {
-          "name": "Hauts-de-France",
-          "country": "France",
-          "country_code": "FR",
+          "name": "Antioquia",
+          "country": "Colombia",
+          "country_code": "CO",
           "code": null,
           "count": 1
         },
         {
-          "name": "Attica",
-          "country": "Greece",
-          "country_code": "GR",
+          "name": "Catalonia",
+          "country": "Spain",
+          "country_code": "ES",
           "code": null,
           "count": 1
         },
         {
-          "name": "Liguria",
-          "country": "Italy",
-          "country_code": "IT",
+          "name": "Budapest",
+          "country": "Hungary",
+          "country_code": "HU",
           "code": null,
           "count": 1
         }
@@ -671,9 +725,9 @@
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-09-25",
-      "end": "2026-10-24",
-      "pageviews": 207,
+      "start": "2026-09-26",
+      "end": "2026-10-25",
+      "pageviews": 214,
       "pages_total": 24,
       "pages": [
         {
@@ -681,11 +735,11 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 63,
+          "count": 61,
           "refs": [
             {
               "name": "Google",
-              "count": 9
+              "count": 8
             },
             {
               "name": "www.linkedin.com",
@@ -696,12 +750,12 @@
               "count": 4
             },
             {
-              "name": "bing.com",
+              "name": "digital-communications.huguryildiz.com",
               "count": 3
             },
             {
-              "name": "digital-communications.huguryildiz.com",
-              "count": 3
+              "name": "bing.com",
+              "count": 2
             }
           ]
         },
@@ -735,15 +789,15 @@
           ]
         },
         {
-          "path": "/writing/openai-math-release-citations-withdrawals",
-          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
-          "path_id": 112277958,
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
           "event": false,
-          "count": 19,
+          "count": 21,
           "refs": [
             {
               "name": "Google",
-              "count": 12
+              "count": 20
             },
             {
               "name": "huguryildiz.com/writing",
@@ -752,15 +806,15 @@
           ]
         },
         {
-          "path": "/writing/arxivisual-interactive-research-papers",
-          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
-          "path_id": 106826525,
+          "path": "/writing/openai-math-release-citations-withdrawals",
+          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
+          "path_id": 112277958,
           "event": false,
-          "count": 13,
+          "count": 20,
           "refs": [
             {
               "name": "Google",
-              "count": 12
+              "count": 13
             },
             {
               "name": "huguryildiz.com/writing",
@@ -953,7 +1007,7 @@
       ],
       "hourly": [
         4,
-        8,
+        9,
         3,
         6,
         5,
@@ -962,22 +1016,22 @@
         2,
         14,
         6,
-        13,
+        14,
         5,
-        10,
+        9,
+        9,
         8,
-        7,
         26,
         9,
-        7,
-        14,
-        6,
         8,
-        18,
+        14,
+        7,
+        9,
+        19,
         6,
         12
       ],
-      "countries_total": 13,
+      "countries_total": 12,
       "countries": [
         {
           "code": "TR",
@@ -987,7 +1041,7 @@
         {
           "code": "US",
           "name": "United States",
-          "count": 20
+          "count": 19
         },
         {
           "code": "GB",
@@ -1038,18 +1092,13 @@
           "code": "SG",
           "name": "Singapore",
           "count": 1
-        },
-        {
-          "code": "TH",
-          "name": "Thailand",
-          "count": 1
         }
       ],
       "referrers_total": 7,
       "referrers": [
         {
           "name": "Google",
-          "count": 9
+          "count": 8
         },
         {
           "name": "www.linkedin.com",
@@ -1061,7 +1110,7 @@
         },
         {
           "name": "bing.com",
-          "count": 3
+          "count": 2
         },
         {
           "name": "github.com",
@@ -1080,7 +1129,7 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 43
+          "count": 42
         },
         {
           "name": "Safari",
@@ -1088,14 +1137,14 @@
         },
         {
           "name": "Firefox",
-          "count": 5
+          "count": 4
         }
       ],
       "systems_total": 5,
       "systems": [
         {
           "name": "Windows",
-          "count": 27
+          "count": 25
         },
         {
           "name": "iOS",
@@ -1120,7 +1169,7 @@
       "languages": [
         {
           "name": "English",
-          "count": 41
+          "count": 39
         },
         {
           "name": "Turkish",
@@ -1163,18 +1212,18 @@
           "count": 3
         },
         {
-          "name": "Georgia",
+          "name": "New York",
           "country": "United States",
           "country_code": "US",
           "code": null,
           "count": 3
         },
         {
-          "name": "New York",
+          "name": "Georgia",
           "country": "United States",
           "country_code": "US",
           "code": null,
-          "count": 3
+          "count": 2
         },
         {
           "name": "Texas",
@@ -1230,8 +1279,8 @@
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-07-27",
-      "end": "2026-10-24",
+      "start": "2026-07-28",
+      "end": "2026-10-25",
       "pageviews": 470,
       "pages_total": 30,
       "pages": [
@@ -1240,7 +1289,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 172,
+          "count": 169,
           "refs": [
             {
               "name": "Google",
@@ -1269,7 +1318,7 @@
           "title": "Huseyin Ugur Yildiz",
           "path_id": 80750338,
           "event": false,
-          "count": 40,
+          "count": 39,
           "refs": [
             {
               "name": "Google",
@@ -1294,15 +1343,32 @@
           ]
         },
         {
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
+          "event": false,
+          "count": 33,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 30
+            },
+            {
+              "name": "huguryildiz.com/writing",
+              "count": 2
+            }
+          ]
+        },
+        {
           "path": "/research",
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 28,
+          "count": 27,
           "refs": [
             {
               "name": "huguryildiz.com",
-              "count": 14
+              "count": 13
             },
             {
               "name": "huguryildiz.com/teaching",
@@ -1327,7 +1393,7 @@
           "title": "Students | Huseyin Ugur Yildiz",
           "path_id": 80840367,
           "event": false,
-          "count": 27,
+          "count": 26,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -1335,7 +1401,7 @@
             },
             {
               "name": "huguryildiz.com/teaching",
-              "count": 7
+              "count": 6
             },
             {
               "name": "huguryildiz.com/research",
@@ -1352,35 +1418,18 @@
           ]
         },
         {
-          "path": "/writing/arxivisual-interactive-research-papers",
-          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
-          "path_id": 106826525,
-          "event": false,
-          "count": 25,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 22
-            },
-            {
-              "name": "huguryildiz.com/writing",
-              "count": 2
-            }
-          ]
-        },
-        {
           "path": "/publications",
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 25
+          "count": 24
         },
         {
           "path": "/writing/openai-math-release-citations-withdrawals",
           "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
           "path_id": 112277958,
           "event": false,
-          "count": 19
+          "count": 20
         },
         {
           "path": "/writing/local-first-latex-workflow",
@@ -1390,18 +1439,18 @@
           "count": 16
         },
         {
-          "path": "/writing",
-          "title": "Writing | Huseyin Ugur Yildiz",
-          "path_id": 96360100,
-          "event": false,
-          "count": 16
-        },
-        {
           "path": "/cv",
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
           "count": 16
+        },
+        {
+          "path": "/writing",
+          "title": "Writing | Huseyin Ugur Yildiz",
+          "path_id": 96360100,
+          "event": false,
+          "count": 15
         },
         {
           "path": "/service",
@@ -1443,7 +1492,7 @@
           "title": "An academic rate limiter: IEEE TWC now caps authors at 36 new manuscripts a year | Huseyin Ugur Yildiz",
           "path_id": 96633631,
           "event": false,
-          "count": 7
+          "count": 6
         },
         {
           "path": "/stats",
@@ -1591,28 +1640,28 @@
       ],
       "hourly": [
         14,
-        15,
+        16,
         12,
         10,
         14,
         5,
         9,
-        14,
+        13,
         19,
         11,
-        20,
+        21,
         17,
         20,
-        24,
-        27,
+        25,
+        28,
         46,
         22,
-        17,
+        18,
         33,
-        11,
-        20,
-        35,
-        29,
+        12,
+        21,
+        36,
+        22,
         26
       ],
       "countries_total": 20,
@@ -1620,7 +1669,7 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 84
+          "count": 83
         },
         {
           "code": "US",
@@ -1630,7 +1679,7 @@
         {
           "code": "GB",
           "name": "United Kingdom",
-          "count": 8
+          "count": 7
         },
         {
           "code": "FR",
@@ -1640,7 +1689,7 @@
         {
           "code": "IN",
           "name": "India",
-          "count": 5
+          "count": 4
         },
         {
           "code": "DE",
@@ -1753,11 +1802,11 @@
           "count": 2
         },
         {
-          "name": "www.bing.com",
-          "count": 2
+          "name": "duckduckgo.com",
+          "count": 1
         },
         {
-          "name": "duckduckgo.com",
+          "name": "www.bing.com",
           "count": 1
         }
       ],
@@ -1765,11 +1814,11 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 110
+          "count": 108
         },
         {
           "name": "Safari",
-          "count": 52
+          "count": 51
         },
         {
           "name": "Firefox",
@@ -1784,11 +1833,11 @@
       "systems": [
         {
           "name": "Windows",
-          "count": 70
+          "count": 68
         },
         {
           "name": "iOS",
-          "count": 45
+          "count": 44
         },
         {
           "name": "Android",
@@ -1809,7 +1858,7 @@
       "languages": [
         {
           "name": "English",
-          "count": 110
+          "count": 107
         },
         {
           "name": "Turkish",
@@ -1869,17 +1918,17 @@
           "count": 11
         },
         {
-          "name": "England",
-          "country": "United Kingdom",
-          "country_code": "GB",
-          "code": null,
-          "count": 7
-        },
-        {
           "name": "Antalya",
           "country": "Turkey",
           "country_code": "TR",
           "code": "07",
+          "count": 6
+        },
+        {
+          "name": "England",
+          "country": "United Kingdom",
+          "country_code": "GB",
+          "code": null,
           "count": 6
         },
         {
@@ -1957,9 +2006,9 @@
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-10-25",
-      "end": "2026-10-24",
-      "pageviews": 1388,
+      "start": "2025-10-26",
+      "end": "2026-10-25",
+      "pageviews": 1397,
       "pages_total": 35,
       "pages": [
         {
@@ -2126,7 +2175,7 @@
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
           "event": false,
-          "count": 25
+          "count": 33
         },
         {
           "path": "/404.html",
@@ -2136,18 +2185,18 @@
           "count": 25
         },
         {
+          "path": "/writing/openai-math-release-citations-withdrawals",
+          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
+          "path_id": 112277958,
+          "event": false,
+          "count": 20
+        },
+        {
           "path": "/writing",
           "title": "Writing | Huseyin Ugur Yildiz",
           "path_id": 96360100,
           "event": false,
           "count": 20
-        },
-        {
-          "path": "/writing/openai-math-release-citations-withdrawals",
-          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
-          "path_id": 112277958,
-          "event": false,
-          "count": 19
         },
         {
           "path": "/writing/local-first-latex-workflow",
@@ -2365,7 +2414,7 @@
       ],
       "hourly": [
         45,
-        65,
+        66,
         64,
         59,
         41,
@@ -2374,18 +2423,18 @@
         23,
         25,
         35,
-        43,
+        44,
         66,
-        48,
-        84,
-        86,
+        49,
+        85,
+        87,
         93,
         89,
-        55,
+        56,
         101,
-        61,
-        54,
         62,
+        55,
+        63,
         72,
         88
       ],
@@ -2825,8 +2874,8 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-10-24",
-      "pageviews": 1388,
+      "end": "2026-10-25",
+      "pageviews": 1397,
       "pages_total": 35,
       "pages": [
         {
@@ -2993,7 +3042,7 @@
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
           "event": false,
-          "count": 25
+          "count": 33
         },
         {
           "path": "/404.html",
@@ -3003,18 +3052,18 @@
           "count": 25
         },
         {
+          "path": "/writing/openai-math-release-citations-withdrawals",
+          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
+          "path_id": 112277958,
+          "event": false,
+          "count": 20
+        },
+        {
           "path": "/writing",
           "title": "Writing | Huseyin Ugur Yildiz",
           "path_id": 96360100,
           "event": false,
           "count": 20
-        },
-        {
-          "path": "/writing/openai-math-release-citations-withdrawals",
-          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
-          "path_id": 112277958,
-          "event": false,
-          "count": 19
         },
         {
           "path": "/writing/local-first-latex-workflow",
@@ -3232,7 +3281,7 @@
       ],
       "hourly": [
         45,
-        65,
+        66,
         64,
         59,
         41,
@@ -3241,18 +3290,18 @@
         23,
         25,
         35,
-        43,
+        44,
         66,
-        48,
-        84,
-        86,
+        49,
+        85,
+        87,
         93,
         89,
-        55,
+        56,
         101,
-        61,
-        54,
         62,
+        55,
+        63,
         72,
         88
       ],
@@ -4737,7 +4786,11 @@
     },
     {
       "date": "2026-10-24",
-      "views": 2
+      "views": 10
+    },
+    {
+      "date": "2026-10-25",
+      "views": 1
     }
   ],
   "daily_breakdowns": {
@@ -27128,8 +27181,22 @@
       ]
     },
     "2026-10-24": {
-      "pageviews": 2,
+      "pageviews": 10,
       "pages": [
+        {
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
+          "event": false,
+          "count": 7
+        },
+        {
+          "path": "/writing/openai-math-release-citations-withdrawals",
+          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
+          "path_id": 112277958,
+          "event": false,
+          "count": 1
+        },
         {
           "path": "/software",
           "title": "Software – Hüseyin Uğur Yıldız | Huseyin Ugur Yildiz",
@@ -27148,16 +27215,141 @@
       "events": [],
       "hourly": [
         0,
-        0,
-        0,
-        0,
-        0,
         1,
         0,
         0,
         0,
         1,
         0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "countries": [
+        {
+          "code": "CO",
+          "name": "Colombia",
+          "count": 1
+        },
+        {
+          "code": "DE",
+          "name": "Germany",
+          "count": 1
+        },
+        {
+          "code": "ES",
+          "name": "Spain",
+          "count": 1
+        },
+        {
+          "code": "HU",
+          "name": "Hungary",
+          "count": 1
+        },
+        {
+          "code": "LU",
+          "name": "Luxembourg",
+          "count": 1
+        },
+        {
+          "code": "MA",
+          "name": "Morocco",
+          "count": 1
+        },
+        {
+          "code": "TW",
+          "name": "Taiwan",
+          "count": 1
+        }
+      ],
+      "referrers": [
+        {
+          "name": "Google",
+          "count": 7
+        }
+      ],
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 6
+        },
+        {
+          "name": "Safari",
+          "count": 1
+        }
+      ],
+      "systems": [
+        {
+          "name": "Android",
+          "count": 2
+        },
+        {
+          "name": "macOS",
+          "count": 2
+        },
+        {
+          "name": "Windows",
+          "count": 2
+        },
+        {
+          "name": "Linux",
+          "count": 1
+        }
+      ],
+      "sizes": [],
+      "languages": [
+        {
+          "name": "English",
+          "count": 5
+        },
+        {
+          "name": "Hungarian",
+          "count": 1
+        },
+        {
+          "name": "Spanish",
+          "count": 1
+        }
+      ]
+    },
+    "2026-10-25": {
+      "pageviews": 1,
+      "pages": [
+        {
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
         0,
         0,
         0,
@@ -27174,12 +27366,17 @@
       ],
       "countries": [
         {
-          "code": "US",
-          "name": "United States",
+          "code": "PL",
+          "name": "Poland",
           "count": 1
         }
       ],
-      "referrers": [],
+      "referrers": [
+        {
+          "name": "Google",
+          "count": 1
+        }
+      ],
       "browsers": [
         {
           "name": "Chrome",
@@ -27188,7 +27385,7 @@
       ],
       "systems": [
         {
-          "name": "Linux",
+          "name": "Android",
           "count": 1
         }
       ],
@@ -28258,6 +28455,10 @@
         {
           "date": "2026-10-25",
           "views": 0
+        },
+        {
+          "date": "2026-10-26",
+          "views": 0
         }
       ]
     },
@@ -29316,6 +29517,10 @@
         },
         {
           "date": "2026-10-25",
+          "views": 0
+        },
+        {
+          "date": "2026-10-26",
           "views": 0
         }
       ]
@@ -30376,6 +30581,10 @@
         {
           "date": "2026-10-25",
           "views": 0
+        },
+        {
+          "date": "2026-10-26",
+          "views": 0
         }
       ]
     },
@@ -30482,6 +30691,10 @@
         },
         {
           "date": "2026-10-25",
+          "views": 0
+        },
+        {
+          "date": "2026-10-26",
           "views": 0
         }
       ]
@@ -30865,6 +31078,10 @@
         },
         {
           "date": "2026-10-25",
+          "views": 0
+        },
+        {
+          "date": "2026-10-26",
           "views": 0
         }
       ]
@@ -31925,6 +32142,10 @@
         {
           "date": "2026-10-25",
           "views": 0
+        },
+        {
+          "date": "2026-10-26",
+          "views": 0
         }
       ]
     },
@@ -32980,6 +33201,10 @@
         {
           "date": "2026-10-25",
           "views": 0
+        },
+        {
+          "date": "2026-10-26",
+          "views": 0
         }
       ]
     },
@@ -34034,6 +34259,10 @@
         },
         {
           "date": "2026-10-25",
+          "views": 0
+        },
+        {
+          "date": "2026-10-26",
           "views": 0
         }
       ]
@@ -35094,17 +35323,17 @@
         {
           "date": "2026-10-25",
           "views": 0
+        },
+        {
+          "date": "2026-10-26",
+          "views": 0
         }
       ]
     }
   ],
-  "site": {
-    "timezone": "Europe/Istanbul",
-    "first_hit_at": "2026-02-05T12:24:02.263206Z",
-    "data_retention_days": 0
-  },
+  "site": {},
   "totals": {
-    "pageviews": 1388,
+    "pageviews": 1397,
     "visitors": null
   },
   "pages": [
@@ -35272,7 +35501,7 @@
       "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
       "path_id": 106826525,
       "event": false,
-      "count": 25
+      "count": 33
     },
     {
       "path": "/404.html",
@@ -35282,18 +35511,18 @@
       "count": 25
     },
     {
+      "path": "/writing/openai-math-release-citations-withdrawals",
+      "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
+      "path_id": 112277958,
+      "event": false,
+      "count": 20
+    },
+    {
       "path": "/writing",
       "title": "Writing | Huseyin Ugur Yildiz",
       "path_id": 96360100,
       "event": false,
       "count": 20
-    },
-    {
-      "path": "/writing/openai-math-release-citations-withdrawals",
-      "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
-      "path_id": 112277958,
-      "event": false,
-      "count": 19
     },
     {
       "path": "/writing/local-first-latex-workflow",
