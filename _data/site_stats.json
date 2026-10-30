@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-29T09:37:16Z",
+  "updated": "2026-10-30T09:45:40Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-10-29"
+    "end": "2026-10-30"
   },
   "window_order": [
     "today",
@@ -16,11 +16,123 @@
   "windows": {
     "today": {
       "label": "Today",
+      "start": "2026-10-30",
+      "end": "2026-10-30",
+      "pageviews": 1,
+      "pages_total": 1,
+      "pages": [
+        {
+          "path": "/writing/local-first-latex-workflow",
+          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+          "path_id": 98713527,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "events_total": 0,
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries_total": 1,
+      "countries": [
+        {
+          "code": "AE",
+          "name": "United Arab Emirates",
+          "count": 1
+        }
+      ],
+      "referrers_total": 1,
+      "referrers": [
+        {
+          "name": "Google",
+          "count": 1
+        }
+      ],
+      "browsers_total": 1,
+      "browsers": [
+        {
+          "name": "Safari",
+          "count": 1
+        }
+      ],
+      "systems_total": 1,
+      "systems": [
+        {
+          "name": "iOS",
+          "count": 1
+        }
+      ],
+      "sizes_total": 0,
+      "sizes": [],
+      "languages_total": 1,
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        }
+      ],
+      "regions_total": 1,
+      "regions": [
+        {
+          "name": "Abu Dhabi",
+          "country": "United Arab Emirates",
+          "country_code": "AE",
+          "code": null,
+          "count": 1
+        }
+      ],
+      "regions_unmatched": []
+    },
+    "yesterday": {
+      "label": "Yesterday",
       "start": "2026-10-29",
       "end": "2026-10-29",
-      "pageviews": 6,
+      "pageviews": 7,
       "pages_total": 6,
       "pages": [
+        {
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
+          "event": false,
+          "count": 2,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 1
+            }
+          ]
+        },
         {
           "path": "/writing/submission-caps-ieee-twc-iclr-arxiv",
           "title": "IEEE TWC, ICLR and arXiv now all cap submission volume | Huseyin Ugur Yildiz",
@@ -78,24 +190,19 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "huguryildiz.com",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/",
-          "title": "Home | Huseyin Ugur Yildiz",
-          "path_id": 80749188,
-          "event": false,
           "count": 1
         }
       ],
-      "events_total": 0,
-      "events": [],
+      "events_total": 1,
+      "events": [
+        {
+          "path": "cv-pdf",
+          "title": "CV (PDF), from the CV page",
+          "path_id": 96697209,
+          "event": true,
+          "count": 1
+        }
+      ],
       "hourly": [
         0,
         0,
@@ -115,18 +222,23 @@
         0,
         0,
         0,
-        0,
+        1,
         0,
         0,
         0,
         0,
         0
       ],
-      "countries_total": 1,
+      "countries_total": 2,
       "countries": [
         {
-          "code": "JP",
-          "name": "Japan",
+          "code": "TR",
+          "name": "Turkey",
+          "count": 1
+        },
+        {
+          "code": "US",
+          "name": "United States",
           "count": 1
         }
       ],
@@ -137,168 +249,21 @@
           "count": 1
         }
       ],
-      "browsers_total": 1,
+      "browsers_total": 2,
       "browsers": [
         {
           "name": "Chrome",
           "count": 1
-        }
-      ],
-      "systems_total": 1,
-      "systems": [
-        {
-          "name": "Windows",
-          "count": 1
-        }
-      ],
-      "sizes_total": 0,
-      "sizes": [],
-      "languages_total": 1,
-      "languages": [
-        {
-          "name": "English",
-          "count": 1
-        }
-      ],
-      "regions_total": 0,
-      "regions": [],
-      "regions_unmatched": []
-    },
-    "yesterday": {
-      "label": "Yesterday",
-      "start": "2026-10-28",
-      "end": "2026-10-28",
-      "pageviews": 9,
-      "pages_total": 7,
-      "pages": [
-        {
-          "path": "/writing/chatgpt-pro-research-workflow",
-          "title": "Where ChatGPT Pro reasoning fits in a research workflow | Huseyin Ugur Yildiz",
-          "path_id": 113231349,
-          "event": false,
-          "count": 2,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 2
-            }
-          ]
         },
-        {
-          "path": "/teaching",
-          "title": "Huseyin Ugur Yildiz",
-          "path_id": 80750338,
-          "event": false,
-          "count": 2,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/writing/iclr-2027-submission-volume-peer-review",
-          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
-          "path_id": 116031638,
-          "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/writing/openai-math-release-citations-withdrawals",
-          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
-          "path_id": 112277958,
-          "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/404.html",
-          "title": "Page Not Found Huseyin Ugur Yildiz",
-          "path_id": 80992097,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/students",
-          "title": "Students | Huseyin Ugur Yildiz",
-          "path_id": 80840367,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/",
-          "title": "Home | Huseyin Ugur Yildiz",
-          "path_id": 80749188,
-          "event": false,
-          "count": 1
-        }
-      ],
-      "events_total": 0,
-      "events": [],
-      "hourly": [
-        1,
-        1,
-        1,
-        0,
-        0,
-        0,
-        1,
-        0,
-        1,
-        0,
-        0,
-        1,
-        0,
-        0,
-        0,
-        1,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0
-      ],
-      "countries_total": 1,
-      "countries": [
-        {
-          "code": "US",
-          "name": "United States",
-          "count": 2
-        }
-      ],
-      "referrers_total": 1,
-      "referrers": [
-        {
-          "name": "Google",
-          "count": 2
-        }
-      ],
-      "browsers_total": 1,
-      "browsers": [
         {
           "name": "Safari",
-          "count": 2
+          "count": 1
         }
       ],
       "systems_total": 1,
       "systems": [
         {
-          "name": "iOS",
+          "name": "macOS",
           "count": 2
         }
       ],
@@ -314,32 +279,32 @@
       "regions_total": 1,
       "regions": [
         {
-          "name": "North Carolina",
+          "name": "Virginia",
           "country": "United States",
           "country_code": "US",
           "code": null,
-          "count": 2
+          "count": 1
         }
       ],
       "regions_unmatched": []
     },
     "7d": {
       "label": "Last 7 days",
-      "start": "2026-10-23",
-      "end": "2026-10-29",
-      "pageviews": 52,
-      "pages_total": 17,
+      "start": "2026-10-24",
+      "end": "2026-10-30",
+      "pageviews": 46,
+      "pages_total": 18,
       "pages": [
         {
           "path": "/writing/arxivisual-interactive-research-papers",
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
           "event": false,
-          "count": 14,
+          "count": 13,
           "refs": [
             {
               "name": "Google",
-              "count": 14
+              "count": 13
             }
           ]
         },
@@ -348,11 +313,11 @@
           "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
           "path_id": 112277958,
           "event": false,
-          "count": 7,
+          "count": 5,
           "refs": [
             {
               "name": "Google",
-              "count": 7
+              "count": 5
             }
           ]
         },
@@ -361,31 +326,18 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 6,
+          "count": 5,
           "refs": [
             {
               "name": "www.linkedin.com",
               "count": 2
             },
             {
-              "name": "signals-and-systems.huguryildiz.com",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/teaching",
-          "title": "Huseyin Ugur Yildiz",
-          "path_id": 80750338,
-          "event": false,
-          "count": 5,
-          "refs": [
-            {
               "name": "Google",
-              "count": 3
+              "count": 1
             },
             {
-              "name": "huguryildiz.com./students",
+              "name": "signals-and-systems.huguryildiz.com",
               "count": 1
             }
           ]
@@ -404,16 +356,29 @@
           ]
         },
         {
-          "path": "/students",
-          "title": "Students | Huseyin Ugur Yildiz",
-          "path_id": 80840367,
+          "path": "/teaching",
+          "title": "Huseyin Ugur Yildiz",
+          "path_id": 80750338,
           "event": false,
-          "count": 3
+          "count": 3,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 2
+            }
+          ]
         },
         {
           "path": "/writing/iclr-2027-submission-volume-peer-review",
           "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
           "path_id": 116031638,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/students",
+          "title": "Students | Huseyin Ugur Yildiz",
+          "path_id": 80840367,
           "event": false,
           "count": 2
         },
@@ -460,6 +425,13 @@
           "count": 1
         },
         {
+          "path": "/writing/local-first-latex-workflow",
+          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+          "path_id": 98713527,
+          "event": false,
+          "count": 1
+        },
+        {
           "path": "/writing",
           "title": "Writing | Huseyin Ugur Yildiz",
           "path_id": 96360100,
@@ -488,29 +460,37 @@
           "count": 1
         }
       ],
-      "events_total": 0,
-      "events": [],
+      "events_total": 1,
+      "events": [
+        {
+          "path": "cv-pdf",
+          "title": "CV (PDF), from the CV page",
+          "path_id": 96697209,
+          "event": true,
+          "count": 1
+        }
+      ],
       "hourly": [
         1,
-        5,
+        3,
         1,
         0,
         2,
         1,
         1,
-        1,
+        2,
         1,
         4,
-        6,
+        4,
         2,
         3,
         3,
         1,
-        5,
+        2,
         1,
         3,
-        1,
-        4,
+        2,
+        3,
         1,
         2,
         3,
@@ -521,7 +501,7 @@
         {
           "code": "DE",
           "name": "Germany",
-          "count": 3
+          "count": 2
         },
         {
           "code": "AU",
@@ -583,14 +563,14 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 14
+          "count": 13
         }
       ],
       "browsers_total": 3,
       "browsers": [
         {
           "name": "Chrome",
-          "count": 11
+          "count": 10
         },
         {
           "name": "Safari",
@@ -608,11 +588,11 @@
           "count": 5
         },
         {
-          "name": "macOS",
-          "count": 4
+          "name": "Android",
+          "count": 3
         },
         {
-          "name": "Android",
+          "name": "macOS",
           "count": 3
         },
         {
@@ -630,7 +610,7 @@
       "languages": [
         {
           "name": "English",
-          "count": 11
+          "count": 10
         },
         {
           "name": "Spanish",
@@ -641,15 +621,8 @@
           "count": 1
         }
       ],
-      "regions_total": 7,
+      "regions_total": 6,
       "regions": [
-        {
-          "name": "Bavaria",
-          "country": "Germany",
-          "country_code": "DE",
-          "code": null,
-          "count": 1
-        },
         {
           "name": "Hesse",
           "country": "Germany",
@@ -697,9 +670,9 @@
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-09-30",
-      "end": "2026-10-29",
-      "pageviews": 227,
+      "start": "2026-10-01",
+      "end": "2026-10-30",
+      "pageviews": 228,
       "pages_total": 27,
       "pages": [
         {
@@ -707,7 +680,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 58,
+          "count": 59,
           "refs": [
             {
               "name": "www.linkedin.com",
@@ -715,7 +688,7 @@
             },
             {
               "name": "Google",
-              "count": 5
+              "count": 6
             },
             {
               "name": "scholar.google.com",
@@ -841,6 +814,13 @@
           "count": 7
         },
         {
+          "path": "/writing/local-first-latex-workflow",
+          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+          "path_id": 98713527,
+          "event": false,
+          "count": 7
+        },
+        {
           "path": "/writing",
           "title": "Writing | Huseyin Ugur Yildiz",
           "path_id": 96360100,
@@ -855,25 +835,11 @@
           "count": 6
         },
         {
-          "path": "/writing/local-first-latex-workflow",
-          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
-          "path_id": 98713527,
-          "event": false,
-          "count": 6
-        },
-        {
           "path": "/cv",
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
           "count": 6
-        },
-        {
-          "path": "/404.html",
-          "title": "Page Not Found Huseyin Ugur Yildiz",
-          "path_id": 80992097,
-          "event": false,
-          "count": 5
         },
         {
           "path": "/service",
@@ -893,6 +859,13 @@
           "path": "/writing/asd-ste100-controlled-english-for-llms",
           "title": "Andrej Karpathy on LLMs and ASD-STE100 controlled English | Huseyin Ugur Yildiz",
           "path_id": 110726689,
+          "event": false,
+          "count": 4
+        },
+        {
+          "path": "/404.html",
+          "title": "Page Not Found Huseyin Ugur Yildiz",
+          "path_id": 80992097,
           "event": false,
           "count": 4
         },
@@ -981,7 +954,7 @@
           "title": "CV (PDF), from the CV page",
           "path_id": 96697209,
           "event": true,
-          "count": 4
+          "count": 5
         },
         {
           "path": "linkedin/writing/ai-second-brain-can-remember-everything-and-still-be-wrong/",
@@ -999,7 +972,7 @@
         7,
         4,
         6,
-        1,
+        2,
         14,
         9,
         14,
@@ -1009,8 +982,8 @@
         7,
         27,
         10,
-        9,
-        12,
+        8,
+        13,
         8,
         8,
         18,
@@ -1027,7 +1000,7 @@
         {
           "code": "US",
           "name": "United States",
-          "count": 18
+          "count": 19
         },
         {
           "code": "GB",
@@ -1088,7 +1061,7 @@
         },
         {
           "name": "Google",
-          "count": 5
+          "count": 6
         },
         {
           "name": "scholar.google.com",
@@ -1119,7 +1092,7 @@
         },
         {
           "name": "Safari",
-          "count": 12
+          "count": 13
         },
         {
           "name": "Firefox",
@@ -1134,7 +1107,7 @@
         },
         {
           "name": "macOS",
-          "count": 13
+          "count": 14
         },
         {
           "name": "iOS",
@@ -1155,7 +1128,7 @@
       "languages": [
         {
           "name": "English",
-          "count": 37
+          "count": 38
         },
         {
           "name": "Turkish",
@@ -1212,6 +1185,13 @@
           "count": 2
         },
         {
+          "name": "Virginia",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 2
+        },
+        {
           "name": "Latium",
           "country": "Italy",
           "country_code": "IT",
@@ -1252,22 +1232,15 @@
           "country_code": "US",
           "code": null,
           "count": 1
-        },
-        {
-          "name": "North Carolina",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 1
         }
       ],
       "regions_unmatched": []
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-08-01",
-      "end": "2026-10-29",
-      "pageviews": 485,
+      "start": "2026-08-02",
+      "end": "2026-10-30",
+      "pageviews": 476,
       "pages_total": 33,
       "pages": [
         {
@@ -1275,7 +1248,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 160,
+          "count": 159,
           "refs": [
             {
               "name": "Google",
@@ -1304,7 +1277,7 @@
           "title": "Huseyin Ugur Yildiz",
           "path_id": 80750338,
           "event": false,
-          "count": 42,
+          "count": 41,
           "refs": [
             {
               "name": "Google",
@@ -1323,7 +1296,7 @@
               "count": 1
             },
             {
-              "name": "huguryildiz.com/students",
+              "name": "huguryildiz.com/publications",
               "count": 1
             }
           ]
@@ -1350,7 +1323,7 @@
           "title": "Students | Huseyin Ugur Yildiz",
           "path_id": 80840367,
           "event": false,
-          "count": 28,
+          "count": 27,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -1365,11 +1338,11 @@
               "count": 2
             },
             {
-              "name": "huguryildiz.com/service",
+              "name": "huguryildiz.com/publications",
               "count": 1
             },
             {
-              "name": "huguryildiz.com/publications",
+              "name": "huguryildiz.com/software",
               "count": 1
             }
           ]
@@ -1379,22 +1352,22 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 28,
+          "count": 26,
           "refs": [
             {
               "name": "huguryildiz.com",
-              "count": 13
+              "count": 12
             },
             {
               "name": "huguryildiz.com/teaching",
               "count": 2
             },
             {
-              "name": "huguryildiz.com/publications",
-              "count": 2
+              "name": "huguryildiz.com/service",
+              "count": 1
             },
             {
-              "name": "huguryildiz.com/service",
+              "name": "huguryildiz.com/publications",
               "count": 1
             },
             {
@@ -1408,7 +1381,7 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 26
+          "count": 25
         },
         {
           "path": "/writing/openai-math-release-citations-withdrawals",
@@ -1422,28 +1395,28 @@
           "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
           "path_id": 98713527,
           "event": false,
-          "count": 16
+          "count": 17
         },
         {
           "path": "/writing",
           "title": "Writing | Huseyin Ugur Yildiz",
           "path_id": 96360100,
           "event": false,
-          "count": 16
+          "count": 15
         },
         {
           "path": "/cv",
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
-          "count": 16
+          "count": 15
         },
         {
           "path": "/service",
           "title": "Service | Huseyin Ugur Yildiz",
           "path_id": 80843167,
           "event": false,
-          "count": 14
+          "count": 13
         },
         {
           "path": "/writing/forced-euler-blowup-lean-verification",
@@ -1551,13 +1524,6 @@
           "count": 2
         },
         {
-          "path": "/terms",
-          "title": "Terms and Privacy Policy | Huseyin Ugur Yildiz",
-          "path_id": 96451161,
-          "event": false,
-          "count": 2
-        },
-        {
           "path": "/writing/submission-caps-ieee-twc-iclr-arxiv",
           "title": "IEEE TWC, ICLR and arXiv now all cap submission volume | Huseyin Ugur Yildiz",
           "path_id": 116297660,
@@ -1593,6 +1559,13 @@
           "count": 1
         },
         {
+          "path": "/terms",
+          "title": "Terms and Privacy Policy | Huseyin Ugur Yildiz",
+          "path_id": 96451161,
+          "event": false,
+          "count": 1
+        },
+        {
           "path": "/writing/kairos-university-timetabling",
           "title": "A university timetable can look clean on paper and still break in operation | Huseyin Ugur Yildiz",
           "path_id": 96360102,
@@ -1607,7 +1580,7 @@
           "title": "CV (PDF), from the CV page",
           "path_id": 96697209,
           "event": true,
-          "count": 10
+          "count": 11
         },
         {
           "path": "linkedin/writing/ai-second-brain-can-remember-everything-and-still-be-wrong/",
@@ -1653,19 +1626,19 @@
         13,
         5,
         10,
-        13,
+        14,
         19,
         14,
         23,
         19,
         22,
         26,
-        28,
+        19,
         47,
         20,
-        17,
-        33,
-        14,
+        16,
+        34,
+        13,
         20,
         37,
         23,
@@ -1676,22 +1649,17 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 81
+          "count": 80
         },
         {
           "code": "US",
           "name": "United States",
-          "count": 40
+          "count": 41
         },
         {
           "code": "GB",
           "name": "United Kingdom",
           "count": 7
-        },
-        {
-          "code": "FR",
-          "name": "France",
-          "count": 4
         },
         {
           "code": "IN",
@@ -1701,6 +1669,11 @@
         {
           "code": "DE",
           "name": "Germany",
+          "count": 3
+        },
+        {
+          "code": "FR",
+          "name": "France",
           "count": 3
         },
         {
@@ -1816,7 +1789,7 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 105
+          "count": 104
         },
         {
           "name": "Safari",
@@ -1835,15 +1808,15 @@
       "systems": [
         {
           "name": "Windows",
-          "count": 63
+          "count": 62
         },
         {
           "name": "iOS",
-          "count": 40
+          "count": 39
         },
         {
           "name": "macOS",
-          "count": 21
+          "count": 22
         },
         {
           "name": "Android",
@@ -1860,7 +1833,7 @@
       "languages": [
         {
           "name": "English",
-          "count": 102
+          "count": 101
         },
         {
           "name": "Turkish",
@@ -1903,14 +1876,14 @@
           "count": 1
         }
       ],
-      "regions_total": 25,
+      "regions_total": 27,
       "regions": [
         {
           "name": "Ankara",
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 45
+          "count": 44
         },
         {
           "name": "İstanbul",
@@ -1939,6 +1912,13 @@
           "country_code": "GB",
           "code": null,
           "count": 6
+        },
+        {
+          "name": "Virginia",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 4
         },
         {
           "name": "İzmir",
@@ -1983,13 +1963,6 @@
           "count": 3
         },
         {
-          "name": "Virginia",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 3
-        },
-        {
           "name": "Çorum",
           "country": "Turkey",
           "country_code": "TR",
@@ -2008,9 +1981,9 @@
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-10-30",
-      "end": "2026-10-29",
-      "pageviews": 1430,
+      "start": "2025-10-31",
+      "end": "2026-10-30",
+      "pageviews": 1432,
       "pages_total": 38,
       "pages": [
         {
@@ -2018,11 +1991,11 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 524,
+          "count": 525,
           "refs": [
             {
               "name": "Google",
-              "count": 67
+              "count": 68
             },
             {
               "name": "www.linkedin.com",
@@ -2205,7 +2178,7 @@
           "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
           "path_id": 98713527,
           "event": false,
-          "count": 16
+          "count": 17
         },
         {
           "path": "/experience",
@@ -2397,7 +2370,7 @@
           "title": "CV (PDF), from the CV page",
           "path_id": 96697209,
           "event": true,
-          "count": 12
+          "count": 13
         },
         {
           "path": "linkedin/writing/ai-second-brain-can-remember-everything-and-still-be-wrong/",
@@ -2443,7 +2416,7 @@
         43,
         16,
         14,
-        24,
+        25,
         26,
         38,
         47,
@@ -2454,7 +2427,7 @@
         95,
         90,
         58,
-        102,
+        103,
         64,
         55,
         64,
@@ -2471,7 +2444,7 @@
         {
           "code": "US",
           "name": "United States",
-          "count": 85
+          "count": 86
         },
         {
           "code": "GB",
@@ -2638,7 +2611,7 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 67
+          "count": 68
         },
         {
           "name": "www.linkedin.com",
@@ -2701,7 +2674,7 @@
         },
         {
           "name": "Safari",
-          "count": 181
+          "count": 182
         },
         {
           "name": "Firefox",
@@ -2724,7 +2697,7 @@
         },
         {
           "name": "macOS",
-          "count": 143
+          "count": 144
         },
         {
           "name": "Android",
@@ -2745,7 +2718,7 @@
         },
         {
           "name": "English",
-          "count": 115
+          "count": 116
         },
         {
           "name": "Turkish",
@@ -2829,6 +2802,13 @@
           "count": 7
         },
         {
+          "name": "Virginia",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 7
+        },
+        {
           "name": "England",
           "country": "United Kingdom",
           "country_code": "GB",
@@ -2851,13 +2831,6 @@
         },
         {
           "name": "Oregon",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 6
-        },
-        {
-          "name": "Virginia",
           "country": "United States",
           "country_code": "US",
           "code": null,
@@ -2897,8 +2870,8 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-10-29",
-      "pageviews": 1430,
+      "end": "2026-10-30",
+      "pageviews": 1432,
       "pages_total": 38,
       "pages": [
         {
@@ -2906,11 +2879,11 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 524,
+          "count": 525,
           "refs": [
             {
               "name": "Google",
-              "count": 67
+              "count": 68
             },
             {
               "name": "www.linkedin.com",
@@ -3093,7 +3066,7 @@
           "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
           "path_id": 98713527,
           "event": false,
-          "count": 16
+          "count": 17
         },
         {
           "path": "/experience",
@@ -3285,7 +3258,7 @@
           "title": "CV (PDF), from the CV page",
           "path_id": 96697209,
           "event": true,
-          "count": 12
+          "count": 13
         },
         {
           "path": "linkedin/writing/ai-second-brain-can-remember-everything-and-still-be-wrong/",
@@ -3331,7 +3304,7 @@
         43,
         16,
         14,
-        24,
+        25,
         26,
         38,
         47,
@@ -3342,7 +3315,7 @@
         95,
         90,
         58,
-        102,
+        103,
         64,
         55,
         64,
@@ -3359,7 +3332,7 @@
         {
           "code": "US",
           "name": "United States",
-          "count": 85
+          "count": 86
         },
         {
           "code": "GB",
@@ -3526,7 +3499,7 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 67
+          "count": 68
         },
         {
           "name": "www.linkedin.com",
@@ -3589,7 +3562,7 @@
         },
         {
           "name": "Safari",
-          "count": 181
+          "count": 182
         },
         {
           "name": "Firefox",
@@ -3612,7 +3585,7 @@
         },
         {
           "name": "macOS",
-          "count": 143
+          "count": 144
         },
         {
           "name": "Android",
@@ -3633,7 +3606,7 @@
         },
         {
           "name": "English",
-          "count": 115
+          "count": 116
         },
         {
           "name": "Turkish",
@@ -3717,6 +3690,13 @@
           "count": 7
         },
         {
+          "name": "Virginia",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 7
+        },
+        {
           "name": "England",
           "country": "United Kingdom",
           "country_code": "GB",
@@ -3739,13 +3719,6 @@
         },
         {
           "name": "Oregon",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 6
-        },
-        {
-          "name": "Virginia",
           "country": "United States",
           "country_code": "US",
           "code": null,
@@ -4850,7 +4823,11 @@
     },
     {
       "date": "2026-10-29",
-      "views": 6
+      "views": 7
+    },
+    {
+      "date": "2026-10-30",
+      "views": 1
     }
   ],
   "daily_breakdowns": {
@@ -27825,8 +27802,15 @@
       ]
     },
     "2026-10-29": {
-      "pageviews": 6,
+      "pageviews": 7,
       "pages": [
+        {
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
+          "event": false,
+          "count": 2
+        },
         {
           "path": "/writing/submission-caps-ieee-twc-iclr-arxiv",
           "title": "IEEE TWC, ICLR and arXiv now all cap submission volume | Huseyin Ugur Yildiz",
@@ -27861,16 +27845,17 @@
           "path_id": 80750273,
           "event": false,
           "count": 1
-        },
+        }
+      ],
+      "events": [
         {
-          "path": "/",
-          "title": "Home | Huseyin Ugur Yildiz",
-          "path_id": 80749188,
-          "event": false,
+          "path": "cv-pdf",
+          "title": "CV (PDF), from the CV page",
+          "path_id": 96697209,
+          "event": true,
           "count": 1
         }
       ],
-      "events": [],
       "hourly": [
         0,
         0,
@@ -27890,7 +27875,7 @@
         0,
         0,
         0,
-        0,
+        1,
         0,
         0,
         0,
@@ -27899,8 +27884,13 @@
       ],
       "countries": [
         {
-          "code": "JP",
-          "name": "Japan",
+          "code": "TR",
+          "name": "Turkey",
+          "count": 1
+        },
+        {
+          "code": "US",
+          "name": "United States",
           "count": 1
         }
       ],
@@ -27914,11 +27904,86 @@
         {
           "name": "Chrome",
           "count": 1
+        },
+        {
+          "name": "Safari",
+          "count": 1
         }
       ],
       "systems": [
         {
-          "name": "Windows",
+          "name": "macOS",
+          "count": 2
+        }
+      ],
+      "sizes": [],
+      "languages": [
+        {
+          "name": "English",
+          "count": 2
+        }
+      ]
+    },
+    "2026-10-30": {
+      "pageviews": 1,
+      "pages": [
+        {
+          "path": "/writing/local-first-latex-workflow",
+          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+          "path_id": 98713527,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries": [
+        {
+          "code": "AE",
+          "name": "United Arab Emirates",
+          "count": 1
+        }
+      ],
+      "referrers": [
+        {
+          "name": "Google",
+          "count": 1
+        }
+      ],
+      "browsers": [
+        {
+          "name": "Safari",
+          "count": 1
+        }
+      ],
+      "systems": [
+        {
+          "name": "iOS",
           "count": 1
         }
       ],
@@ -27935,7 +28000,7 @@
     {
       "path": "/",
       "title": "Home | Huseyin Ugur Yildiz",
-      "count": 524,
+      "count": 525,
       "stats": [
         {
           "date": "2026-02-05",
@@ -29003,10 +29068,14 @@
         },
         {
           "date": "2026-10-29",
-          "views": 1
+          "views": 2
         },
         {
           "date": "2026-10-30",
+          "views": 0
+        },
+        {
+          "date": "2026-10-31",
           "views": 0
         }
       ]
@@ -30087,6 +30156,10 @@
         {
           "date": "2026-10-30",
           "views": 0
+        },
+        {
+          "date": "2026-10-31",
+          "views": 0
         }
       ]
     },
@@ -31166,6 +31239,10 @@
         {
           "date": "2026-10-30",
           "views": 0
+        },
+        {
+          "date": "2026-10-31",
+          "views": 0
         }
       ]
     },
@@ -31292,6 +31369,10 @@
         },
         {
           "date": "2026-10-30",
+          "views": 0
+        },
+        {
+          "date": "2026-10-31",
           "views": 0
         }
       ]
@@ -31695,6 +31776,10 @@
         },
         {
           "date": "2026-10-30",
+          "views": 0
+        },
+        {
+          "date": "2026-10-31",
           "views": 0
         }
       ]
@@ -32775,6 +32860,10 @@
         {
           "date": "2026-10-30",
           "views": 0
+        },
+        {
+          "date": "2026-10-31",
+          "views": 0
         }
       ]
     },
@@ -33850,6 +33939,10 @@
         {
           "date": "2026-10-30",
           "views": 0
+        },
+        {
+          "date": "2026-10-31",
+          "views": 0
         }
       ]
     },
@@ -34924,6 +35017,10 @@
         },
         {
           "date": "2026-10-30",
+          "views": 0
+        },
+        {
+          "date": "2026-10-31",
           "views": 0
         }
       ]
@@ -36004,13 +36101,17 @@
         {
           "date": "2026-10-30",
           "views": 0
+        },
+        {
+          "date": "2026-10-31",
+          "views": 0
         }
       ]
     }
   ],
   "site": {},
   "totals": {
-    "pageviews": 1430,
+    "pageviews": 1432,
     "visitors": null
   },
   "pages": [
@@ -36019,11 +36120,11 @@
       "title": "Home | Huseyin Ugur Yildiz",
       "path_id": 80749188,
       "event": false,
-      "count": 524,
+      "count": 525,
       "refs": [
         {
           "name": "Google",
-          "count": 67
+          "count": 68
         },
         {
           "name": "www.linkedin.com",
@@ -36206,7 +36307,7 @@
       "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
       "path_id": 98713527,
       "event": false,
-      "count": 16
+      "count": 17
     },
     {
       "path": "/experience",
@@ -36400,7 +36501,7 @@
     {
       "code": "US",
       "name": "United States",
-      "count": 85
+      "count": 86
     },
     {
       "code": "GB",
@@ -36566,7 +36667,7 @@
   "referrers": [
     {
       "name": "Google",
-      "count": 67
+      "count": 68
     },
     {
       "name": "www.linkedin.com",
@@ -36628,7 +36729,7 @@
     },
     {
       "name": "Safari",
-      "count": 181
+      "count": 182
     },
     {
       "name": "Firefox",
@@ -36650,7 +36751,7 @@
     },
     {
       "name": "macOS",
-      "count": 143
+      "count": 144
     },
     {
       "name": "Android",
