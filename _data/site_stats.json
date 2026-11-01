@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-31T09:25:34Z",
+  "updated": "2026-11-01T10:15:17Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-10-31"
+    "end": "2026-11-01"
   },
   "window_order": [
     "today",
@@ -16,15 +16,41 @@
   "windows": {
     "today": {
       "label": "Today",
-      "start": "2026-10-31",
-      "end": "2026-10-31",
-      "pageviews": 1,
-      "pages_total": 1,
+      "start": "2026-11-01",
+      "end": "2026-11-01",
+      "pageviews": 3,
+      "pages_total": 3,
       "pages": [
         {
-          "path": "/publications",
-          "title": "Publications | Huseyin Ugur Yildiz",
-          "path_id": 80750273,
+          "path": "/writing/iclr-2027-submission-volume-peer-review",
+          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
+          "path_id": 116031638,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
           "event": false,
           "count": 1
         }
@@ -35,17 +61,17 @@
         0,
         0,
         0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        1,
+        1,
         0,
         0,
         0,
@@ -60,13 +86,18 @@
       "countries_total": 1,
       "countries": [
         {
-          "code": "SG",
-          "name": "Singapore",
+          "code": "SE",
+          "name": "Sweden",
           "count": 1
         }
       ],
-      "referrers_total": 0,
-      "referrers": [],
+      "referrers_total": 1,
+      "referrers": [
+        {
+          "name": "Google",
+          "count": 1
+        }
+      ],
       "browsers_total": 1,
       "browsers": [
         {
@@ -77,7 +108,7 @@
       "systems_total": 1,
       "systems": [
         {
-          "name": "Windows",
+          "name": "macOS",
           "count": 1
         }
       ],
@@ -90,51 +121,46 @@
           "count": 1
         }
       ],
-      "regions_total": 0,
-      "regions": [],
+      "regions_total": 1,
+      "regions": [
+        {
+          "name": "Halland County",
+          "country": "Sweden",
+          "country_code": "SE",
+          "code": null,
+          "count": 1
+        }
+      ],
       "regions_unmatched": []
     },
     "yesterday": {
       "label": "Yesterday",
-      "start": "2026-10-30",
-      "end": "2026-10-30",
-      "pageviews": 16,
-      "pages_total": 13,
+      "start": "2026-10-31",
+      "end": "2026-10-31",
+      "pageviews": 8,
+      "pages_total": 7,
       "pages": [
         {
-          "path": "/teaching",
-          "title": "Huseyin Ugur Yildiz",
-          "path_id": 80750338,
-          "event": false,
-          "count": 3,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 2
-            },
-            {
-              "name": "huguryildiz.com/writing",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/research",
-          "title": "Research | Huseyin Ugur Yildiz",
-          "path_id": 80750374,
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
           "event": false,
           "count": 2,
           "refs": [
             {
-              "name": "huguryildiz.com",
+              "name": "scholar.google.com.tr",
+              "count": 1
+            },
+            {
+              "name": "www.linkedin.com",
               "count": 1
             }
           ]
         },
         {
-          "path": "/writing/iclr-2027-submission-volume-peer-review",
-          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
-          "path_id": 116031638,
+          "path": "/writing/chatgpt-pro-research-workflow",
+          "title": "Where ChatGPT Pro reasoning fits in a research workflow | Huseyin Ugur Yildiz",
+          "path_id": 113231349,
           "event": false,
           "count": 1,
           "refs": [
@@ -158,24 +184,24 @@
           ]
         },
         {
-          "path": "/software",
-          "title": "Software – Hüseyin Uğur Yıldız | Huseyin Ugur Yildiz",
-          "path_id": 109093284,
+          "path": "/writing/ai-layoff-trap",
+          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
+          "path_id": 110093766,
           "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "huguryildiz.com/publications",
-              "count": 1
-            }
-          ]
+          "count": 1
         },
         {
           "path": "/writing/arxivisual-interactive-research-papers",
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
           "event": false,
-          "count": 1
+          "count": 1,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 1
+            }
+          ]
         },
         {
           "path": "/writing/local-first-latex-workflow",
@@ -185,59 +211,34 @@
           "count": 1
         },
         {
-          "path": "/writing",
-          "title": "Writing | Huseyin Ugur Yildiz",
-          "path_id": 96360100,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/service",
-          "title": "Service | Huseyin Ugur Yildiz",
-          "path_id": 80843167,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/students",
-          "title": "Students | Huseyin Ugur Yildiz",
-          "path_id": 80840367,
-          "event": false,
-          "count": 1
-        },
-        {
           "path": "/publications",
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
           "count": 1
-        },
+        }
+      ],
+      "events_total": 1,
+      "events": [
         {
-          "path": "/cv",
-          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
-          "path_id": 80749912,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/",
-          "title": "Home | Huseyin Ugur Yildiz",
-          "path_id": 80749188,
-          "event": false,
+          "path": "cv-pdf",
+          "title": "CV (PDF), from the CV page",
+          "path_id": 96697209,
+          "event": true,
           "count": 1
         }
       ],
-      "events_total": 0,
-      "events": [],
       "hourly": [
         0,
-        9,
-        0,
-        0,
-        0,
-        0,
+        1,
         0,
         1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0,
@@ -245,48 +246,50 @@
         0,
         1,
         2,
-        0,
-        0,
-        0,
-        0,
+        2,
         0,
         1,
-        1,
-        1,
+        0,
+        0,
+        0,
         0
       ],
       "countries_total": 2,
       "countries": [
         {
-          "code": "TR",
-          "name": "Turkey",
-          "count": 2
+          "code": "IE",
+          "name": "Ireland",
+          "count": 1
         },
         {
-          "code": "IL",
-          "name": "Israel",
+          "code": "PE",
+          "name": "Peru",
           "count": 1
         }
       ],
-      "referrers_total": 1,
+      "referrers_total": 2,
       "referrers": [
         {
-          "name": "Google",
-          "count": 2
+          "name": "scholar.google.com.tr",
+          "count": 1
+        },
+        {
+          "name": "www.linkedin.com",
+          "count": 1
         }
       ],
       "browsers_total": 1,
       "browsers": [
         {
-          "name": "Chrome",
-          "count": 3
+          "name": "Safari",
+          "count": 2
         }
       ],
       "systems_total": 1,
       "systems": [
         {
-          "name": "Windows",
-          "count": 3
+          "name": "iOS",
+          "count": 2
         }
       ],
       "sizes_total": 0,
@@ -294,27 +297,27 @@
       "languages_total": 2,
       "languages": [
         {
-          "name": "Turkish",
-          "count": 2
+          "name": "English",
+          "count": 1
         },
         {
-          "name": "English",
+          "name": "Turkish",
           "count": 1
         }
       ],
       "regions_total": 2,
       "regions": [
         {
-          "name": "Ankara",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "06",
-          "count": 2
+          "name": "Leinster",
+          "country": "Ireland",
+          "country_code": "IE",
+          "code": null,
+          "count": 1
         },
         {
-          "name": "Tel Aviv",
-          "country": "Israel",
-          "country_code": "IL",
+          "name": "Cusco",
+          "country": "Peru",
+          "country_code": "PE",
           "code": null,
           "count": 1
         }
@@ -323,24 +326,32 @@
     },
     "7d": {
       "label": "Last 7 days",
-      "start": "2026-10-25",
-      "end": "2026-10-31",
-      "pageviews": 52,
+      "start": "2026-10-26",
+      "end": "2026-11-01",
+      "pageviews": 54,
       "pages_total": 18,
       "pages": [
         {
-          "path": "/writing/arxivisual-interactive-research-papers",
-          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
-          "path_id": 106826525,
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
           "event": false,
-          "count": 7,
+          "count": 9,
           "refs": [
             {
-              "name": "Google",
-              "count": 6
+              "name": "www.linkedin.com",
+              "count": 3
             },
             {
-              "name": "www.bing.com",
+              "name": "signals-and-systems.huguryildiz.com",
+              "count": 2
+            },
+            {
+              "name": "Google",
+              "count": 1
+            },
+            {
+              "name": "scholar.google.com.tr",
               "count": 1
             }
           ]
@@ -363,27 +374,6 @@
           ]
         },
         {
-          "path": "/",
-          "title": "Home | Huseyin Ugur Yildiz",
-          "path_id": 80749188,
-          "event": false,
-          "count": 6,
-          "refs": [
-            {
-              "name": "www.linkedin.com",
-              "count": 2
-            },
-            {
-              "name": "signals-and-systems.huguryildiz.com",
-              "count": 2
-            },
-            {
-              "name": "Google",
-              "count": 1
-            }
-          ]
-        },
-        {
           "path": "/writing/openai-math-release-citations-withdrawals",
           "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
           "path_id": 112277958,
@@ -397,18 +387,18 @@
           ]
         },
         {
-          "path": "/publications",
-          "title": "Publications | Huseyin Ugur Yildiz",
-          "path_id": 80750273,
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
           "event": false,
-          "count": 4,
+          "count": 5,
           "refs": [
             {
-              "name": "huguryildiz.com",
-              "count": 1
+              "name": "Google",
+              "count": 4
             },
             {
-              "name": "huguryildiz.com/research",
+              "name": "www.bing.com",
               "count": 1
             }
           ]
@@ -418,7 +408,13 @@
           "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
           "path_id": 116031638,
           "event": false,
-          "count": 3
+          "count": 4,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 4
+            }
+          ]
         },
         {
           "path": "/writing/chatgpt-pro-research-workflow",
@@ -440,6 +436,20 @@
           "path_id": 80750374,
           "event": false,
           "count": 3
+        },
+        {
+          "path": "/publications",
+          "title": "Publications | Huseyin Ugur Yildiz",
+          "path_id": 80750273,
+          "event": false,
+          "count": 3
+        },
+        {
+          "path": "/writing/local-first-latex-workflow",
+          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+          "path_id": 98713527,
+          "event": false,
+          "count": 2
         },
         {
           "path": "/writing",
@@ -491,13 +501,6 @@
           "count": 1
         },
         {
-          "path": "/writing/local-first-latex-workflow",
-          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
-          "path_id": 98713527,
-          "event": false,
-          "count": 1
-        },
-        {
           "path": "/404.html",
           "title": "Page Not Found Huseyin Ugur Yildiz",
           "path_id": 80992097,
@@ -512,7 +515,7 @@
           "title": "CV (PDF), from the CV page",
           "path_id": 96697209,
           "event": true,
-          "count": 1
+          "count": 2
         }
       ],
       "hourly": [
@@ -526,37 +529,32 @@
         2,
         1,
         3,
+        3,
+        2,
+        2,
         4,
         2,
         2,
         3,
-        2,
-        2,
+        4,
         1,
         2,
-        2,
-        2,
         1,
-        2,
+        1,
         4,
         0
       ],
       "countries_total": 6,
       "countries": [
         {
-          "code": "IN",
-          "name": "India",
+          "code": "TR",
+          "name": "Turkey",
+          "count": 3
+        },
+        {
+          "code": "US",
+          "name": "United States",
           "count": 2
-        },
-        {
-          "code": "AU",
-          "name": "Australia",
-          "count": 1
-        },
-        {
-          "code": "DE",
-          "name": "Germany",
-          "count": 1
         },
         {
           "code": "GB",
@@ -564,58 +562,63 @@
           "count": 1
         },
         {
-          "code": "PL",
-          "name": "Poland",
+          "code": "IE",
+          "name": "Ireland",
           "count": 1
         },
         {
-          "code": "US",
-          "name": "United States",
+          "code": "IL",
+          "name": "Israel",
+          "count": 1
+        },
+        {
+          "code": "PE",
+          "name": "Peru",
           "count": 1
         }
       ],
-      "referrers_total": 2,
+      "referrers_total": 3,
       "referrers": [
         {
-          "name": "Google",
-          "count": 6
+          "name": "www.linkedin.com",
+          "count": 3
         },
         {
-          "name": "www.bing.com",
+          "name": "Google",
+          "count": 1
+        },
+        {
+          "name": "scholar.google.com.tr",
           "count": 1
         }
       ],
-      "browsers_total": 3,
+      "browsers_total": 2,
       "browsers": [
         {
           "name": "Chrome",
-          "count": 5
-        },
-        {
-          "name": "Firefox",
-          "count": 1
+          "count": 6
         },
         {
           "name": "Safari",
-          "count": 1
+          "count": 3
         }
       ],
       "systems_total": 4,
       "systems": [
         {
-          "name": "Windows",
-          "count": 3
-        },
-        {
           "name": "macOS",
-          "count": 2
-        },
-        {
-          "name": "Android",
-          "count": 1
+          "count": 4
         },
         {
           "name": "iOS",
+          "count": 2
+        },
+        {
+          "name": "Windows",
+          "count": 2
+        },
+        {
+          "name": "Linux",
           "count": 1
         }
       ],
@@ -628,37 +631,30 @@
           "count": 6
         },
         {
-          "name": "Spanish",
-          "count": 1
+          "name": "Turkish",
+          "count": 3
         }
       ],
       "regions_total": 6,
       "regions": [
         {
-          "name": "National Capital Territory of Delhi",
-          "country": "India",
-          "country_code": "IN",
+          "name": "İstanbul",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "34",
+          "count": 2
+        },
+        {
+          "name": "New York",
+          "country": "United States",
+          "country_code": "US",
           "code": null,
           "count": 1
         },
         {
-          "name": "Tamil Nadu",
-          "country": "India",
-          "country_code": "IN",
-          "code": null,
-          "count": 1
-        },
-        {
-          "name": "Victoria",
-          "country": "Australia",
-          "country_code": "AU",
-          "code": null,
-          "count": 1
-        },
-        {
-          "name": "Hesse",
-          "country": "Germany",
-          "country_code": "DE",
+          "name": "Virginia",
+          "country": "United States",
+          "country_code": "US",
           "code": null,
           "count": 1
         },
@@ -670,9 +666,16 @@
           "count": 1
         },
         {
-          "name": "Mazovia",
-          "country": "Poland",
-          "country_code": "PL",
+          "name": "Leinster",
+          "country": "Ireland",
+          "country_code": "IE",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "Tel Aviv",
+          "country": "Israel",
+          "country_code": "IL",
           "code": null,
           "count": 1
         }
@@ -681,9 +684,9 @@
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-10-02",
-      "end": "2026-10-31",
-      "pageviews": 222,
+      "start": "2026-10-03",
+      "end": "2026-11-01",
+      "pageviews": 231,
       "pages_total": 27,
       "pages": [
         {
@@ -691,7 +694,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 51,
+          "count": 54,
           "refs": [
             {
               "name": "Google",
@@ -699,19 +702,19 @@
             },
             {
               "name": "www.linkedin.com",
-              "count": 5
+              "count": 6
             },
             {
               "name": "signals-and-systems.huguryildiz.com",
               "count": 4
             },
             {
-              "name": "digital-communications.huguryildiz.com",
+              "name": "scholar.google.com.tr",
               "count": 3
             },
             {
-              "name": "bing.com",
-              "count": 2
+              "name": "digital-communications.huguryildiz.com",
+              "count": 3
             }
           ]
         },
@@ -720,11 +723,11 @@
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
           "event": false,
-          "count": 26,
+          "count": 28,
           "refs": [
             {
               "name": "Google",
-              "count": 24
+              "count": 26
             },
             {
               "name": "www.bing.com",
@@ -741,11 +744,11 @@
           "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
           "path_id": 112277958,
           "event": false,
-          "count": 25,
+          "count": 26,
           "refs": [
             {
               "name": "Google",
-              "count": 18
+              "count": 19
             },
             {
               "name": "huguryildiz.com/writing",
@@ -758,11 +761,11 @@
           "title": "Huseyin Ugur Yildiz",
           "path_id": 80750338,
           "event": false,
-          "count": 21,
+          "count": 20,
           "refs": [
             {
               "name": "Google",
-              "count": 10
+              "count": 9
             },
             {
               "name": "huguryildiz.com",
@@ -826,7 +829,7 @@
           "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
           "path_id": 98713527,
           "event": false,
-          "count": 7
+          "count": 8
         },
         {
           "path": "/writing",
@@ -857,6 +860,13 @@
           "count": 6
         },
         {
+          "path": "/writing/chatgpt-pro-research-workflow",
+          "title": "Where ChatGPT Pro reasoning fits in a research workflow | Huseyin Ugur Yildiz",
+          "path_id": 113231349,
+          "event": false,
+          "count": 5
+        },
+        {
           "path": "/service",
           "title": "Service | Huseyin Ugur Yildiz",
           "path_id": 80843167,
@@ -864,9 +874,9 @@
           "count": 5
         },
         {
-          "path": "/writing/chatgpt-pro-research-workflow",
-          "title": "Where ChatGPT Pro reasoning fits in a research workflow | Huseyin Ugur Yildiz",
-          "path_id": 113231349,
+          "path": "/writing/iclr-2027-submission-volume-peer-review",
+          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
+          "path_id": 116031638,
           "event": false,
           "count": 4
         },
@@ -885,18 +895,11 @@
           "count": 4
         },
         {
-          "path": "/writing/iclr-2027-submission-volume-peer-review",
-          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
-          "path_id": 116031638,
-          "event": false,
-          "count": 3
-        },
-        {
           "path": "/writing/ai-layoff-trap",
           "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
           "path_id": 110093766,
           "event": false,
-          "count": 2
+          "count": 3
         },
         {
           "path": "/writing/second-brain-for-ai-assisted-work",
@@ -969,7 +972,7 @@
           "title": "CV (PDF), from the CV page",
           "path_id": 96697209,
           "event": true,
-          "count": 4
+          "count": 5
         },
         {
           "path": "linkedin/writing/ai-second-brain-can-remember-everything-and-still-be-wrong/",
@@ -981,7 +984,7 @@
       ],
       "hourly": [
         5,
-        19,
+        20,
         4,
         7,
         4,
@@ -992,20 +995,20 @@
         9,
         10,
         7,
-        9,
-        5,
-        9,
-        25,
         10,
-        7,
+        6,
+        9,
+        26,
+        12,
+        9,
         13,
-        8,
+        9,
         9,
         15,
         10,
         11
       ],
-      "countries_total": 11,
+      "countries_total": 13,
       "countries": [
         {
           "code": "TR",
@@ -1020,7 +1023,7 @@
         {
           "code": "GB",
           "name": "United Kingdom",
-          "count": 4
+          "count": 5
         },
         {
           "code": "IT",
@@ -1043,6 +1046,11 @@
           "count": 1
         },
         {
+          "code": "IE",
+          "name": "Ireland",
+          "count": 1
+        },
+        {
           "code": "IL",
           "name": "Israel",
           "count": 1
@@ -1050,6 +1058,11 @@
         {
           "code": "JP",
           "name": "Japan",
+          "count": 1
+        },
+        {
+          "code": "PE",
+          "name": "Peru",
           "count": 1
         },
         {
@@ -1071,7 +1084,11 @@
         },
         {
           "name": "www.linkedin.com",
-          "count": 5
+          "count": 6
+        },
+        {
+          "name": "scholar.google.com.tr",
+          "count": 3
         },
         {
           "name": "bing.com",
@@ -1079,10 +1096,6 @@
         },
         {
           "name": "github.com",
-          "count": 2
-        },
-        {
-          "name": "scholar.google.com.tr",
           "count": 2
         },
         {
@@ -1094,11 +1107,11 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 37
+          "count": 38
         },
         {
           "name": "Safari",
-          "count": 11
+          "count": 13
         },
         {
           "name": "Firefox",
@@ -1117,11 +1130,11 @@
         },
         {
           "name": "iOS",
-          "count": 8
+          "count": 10
         },
         {
           "name": "Linux",
-          "count": 7
+          "count": 8
         },
         {
           "name": "Android",
@@ -1134,11 +1147,11 @@
       "languages": [
         {
           "name": "English",
-          "count": 35
+          "count": 37
         },
         {
           "name": "Turkish",
-          "count": 13
+          "count": 14
         },
         {
           "name": "Italian",
@@ -1159,16 +1172,16 @@
           "count": 14
         },
         {
-          "name": "New York",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 4
-        },
-        {
           "name": "England",
           "country": "United Kingdom",
           "country_code": "GB",
+          "code": null,
+          "count": 5
+        },
+        {
+          "name": "New York",
+          "country": "United States",
+          "country_code": "US",
           "code": null,
           "count": 4
         },
@@ -1240,9 +1253,9 @@
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-08-03",
-      "end": "2026-10-31",
-      "pageviews": 491,
+      "start": "2026-08-04",
+      "end": "2026-11-01",
+      "pageviews": 498,
       "pages_total": 33,
       "pages": [
         {
@@ -1250,7 +1263,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 160,
+          "count": 161,
           "refs": [
             {
               "name": "Google",
@@ -1258,11 +1271,11 @@
             },
             {
               "name": "www.linkedin.com",
-              "count": 19
+              "count": 20
             },
             {
               "name": "avesis.tedu.edu.tr",
-              "count": 9
+              "count": 8
             },
             {
               "name": "com.linkedin.android",
@@ -1308,11 +1321,11 @@
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
           "event": false,
-          "count": 39,
+          "count": 41,
           "refs": [
             {
               "name": "Google",
-              "count": 35
+              "count": 37
             },
             {
               "name": "huguryildiz.com/writing",
@@ -1358,7 +1371,7 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 28,
+          "count": 27,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -1394,14 +1407,14 @@
           "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
           "path_id": 112277958,
           "event": false,
-          "count": 25
+          "count": 26
         },
         {
           "path": "/writing/local-first-latex-workflow",
           "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
           "path_id": 98713527,
           "event": false,
-          "count": 16
+          "count": 17
         },
         {
           "path": "/writing",
@@ -1467,6 +1480,13 @@
           "count": 6
         },
         {
+          "path": "/writing/chatgpt-pro-research-workflow",
+          "title": "Where ChatGPT Pro reasoning fits in a research workflow | Huseyin Ugur Yildiz",
+          "path_id": 113231349,
+          "event": false,
+          "count": 5
+        },
+        {
           "path": "/stats",
           "title": "Site Stats | Huseyin Ugur Yildiz",
           "path_id": 95945764,
@@ -1474,9 +1494,9 @@
           "count": 5
         },
         {
-          "path": "/writing/chatgpt-pro-research-workflow",
-          "title": "Where ChatGPT Pro reasoning fits in a research workflow | Huseyin Ugur Yildiz",
-          "path_id": 113231349,
+          "path": "/writing/iclr-2027-submission-volume-peer-review",
+          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
+          "path_id": 116031638,
           "event": false,
           "count": 4
         },
@@ -1488,9 +1508,9 @@
           "count": 4
         },
         {
-          "path": "/writing/iclr-2027-submission-volume-peer-review",
-          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
-          "path_id": 116031638,
+          "path": "/writing/ai-layoff-trap",
+          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
+          "path_id": 110093766,
           "event": false,
           "count": 3
         },
@@ -1500,13 +1520,6 @@
           "path_id": 99994300,
           "event": false,
           "count": 3
-        },
-        {
-          "path": "/writing/ai-layoff-trap",
-          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
-          "path_id": 110093766,
-          "event": false,
-          "count": 2
         },
         {
           "path": "/writing/second-brain-for-ai-assisted-work",
@@ -1586,7 +1599,7 @@
           "title": "CV (PDF), from the CV page",
           "path_id": 96697209,
           "event": true,
-          "count": 11
+          "count": 12
         },
         {
           "path": "linkedin/writing/ai-second-brain-can-remember-everything-and-still-be-wrong/",
@@ -1626,7 +1639,7 @@
       ],
       "hourly": [
         15,
-        27,
+        28,
         13,
         11,
         13,
@@ -1637,25 +1650,25 @@
         14,
         23,
         19,
-        22,
-        27,
+        23,
+        28,
         21,
         47,
-        20,
-        16,
+        22,
+        18,
         34,
-        13,
+        14,
         21,
         38,
-        24,
+        23,
         26
       ],
-      "countries_total": 20,
+      "countries_total": 22,
       "countries": [
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 80
+          "count": 79
         },
         {
           "code": "US",
@@ -1665,7 +1678,7 @@
         {
           "code": "GB",
           "name": "United Kingdom",
-          "count": 7
+          "count": 8
         },
         {
           "code": "IN",
@@ -1680,11 +1693,6 @@
         {
           "code": "FR",
           "name": "France",
-          "count": 3
-        },
-        {
-          "code": "RU",
-          "name": "Russia",
           "count": 3
         },
         {
@@ -1705,6 +1713,11 @@
         {
           "code": "NL",
           "name": "Netherlands",
+          "count": 2
+        },
+        {
+          "code": "RU",
+          "name": "Russia",
           "count": 2
         },
         {
@@ -1733,6 +1746,11 @@
           "count": 1
         },
         {
+          "code": "IE",
+          "name": "Ireland",
+          "count": 1
+        },
+        {
           "code": "IL",
           "name": "Israel",
           "count": 1
@@ -1740,6 +1758,11 @@
         {
           "code": "KE",
           "name": "Kenya",
+          "count": 1
+        },
+        {
+          "code": "PE",
+          "name": "Peru",
           "count": 1
         },
         {
@@ -1761,11 +1784,11 @@
         },
         {
           "name": "www.linkedin.com",
-          "count": 19
+          "count": 20
         },
         {
           "name": "avesis.tedu.edu.tr",
-          "count": 9
+          "count": 8
         },
         {
           "name": "com.linkedin.android",
@@ -1780,11 +1803,11 @@
           "count": 3
         },
         {
-          "name": "github.com",
-          "count": 2
+          "name": "scholar.google.com.tr",
+          "count": 3
         },
         {
-          "name": "scholar.google.com.tr",
+          "name": "github.com",
           "count": 2
         },
         {
@@ -1804,11 +1827,11 @@
         },
         {
           "name": "Safari",
-          "count": 47
+          "count": 49
         },
         {
           "name": "Firefox",
-          "count": 7
+          "count": 6
         },
         {
           "name": "Edge",
@@ -1819,11 +1842,11 @@
       "systems": [
         {
           "name": "Windows",
-          "count": 63
+          "count": 62
         },
         {
           "name": "iOS",
-          "count": 39
+          "count": 41
         },
         {
           "name": "macOS",
@@ -1844,18 +1867,18 @@
       "languages": [
         {
           "name": "English",
-          "count": 102
+          "count": 104
         },
         {
           "name": "Turkish",
           "count": 40
         },
         {
-          "name": "Russian",
-          "count": 5
+          "name": "(unknown)",
+          "count": 4
         },
         {
-          "name": "(unknown)",
+          "name": "Russian",
           "count": 4
         },
         {
@@ -1887,7 +1910,7 @@
           "count": 1
         }
       ],
-      "regions_total": 27,
+      "regions_total": 26,
       "regions": [
         {
           "name": "Ankara",
@@ -1904,6 +1927,13 @@
           "count": 12
         },
         {
+          "name": "England",
+          "country": "United Kingdom",
+          "country_code": "GB",
+          "code": null,
+          "count": 7
+        },
+        {
           "name": "Antalya",
           "country": "Turkey",
           "country_code": "TR",
@@ -1914,13 +1944,6 @@
           "name": "New York",
           "country": "United States",
           "country_code": "US",
-          "code": null,
-          "count": 6
-        },
-        {
-          "name": "England",
-          "country": "United Kingdom",
-          "country_code": "GB",
           "code": null,
           "count": 6
         },
@@ -1979,22 +2002,15 @@
           "country_code": "TR",
           "code": "19",
           "count": 1
-        },
-        {
-          "name": "Mersin",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "33",
-          "count": 1
         }
       ],
       "regions_unmatched": []
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-11-01",
-      "end": "2026-10-31",
-      "pageviews": 1448,
+      "start": "2025-11-02",
+      "end": "2026-11-01",
+      "pageviews": 1458,
       "pages_total": 38,
       "pages": [
         {
@@ -2002,7 +2018,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 526,
+          "count": 529,
           "refs": [
             {
               "name": "Google",
@@ -2010,7 +2026,7 @@
             },
             {
               "name": "www.linkedin.com",
-              "count": 48
+              "count": 49
             },
             {
               "name": "avesis.tedu.edu.tr",
@@ -2161,7 +2177,14 @@
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
           "event": false,
-          "count": 39
+          "count": 41
+        },
+        {
+          "path": "/writing/openai-math-release-citations-withdrawals",
+          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
+          "path_id": 112277958,
+          "event": false,
+          "count": 26
         },
         {
           "path": "/404.html",
@@ -2169,13 +2192,6 @@
           "path_id": 80992097,
           "event": false,
           "count": 26
-        },
-        {
-          "path": "/writing/openai-math-release-citations-withdrawals",
-          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
-          "path_id": 112277958,
-          "event": false,
-          "count": 25
         },
         {
           "path": "/writing",
@@ -2189,7 +2205,7 @@
           "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
           "path_id": 98713527,
           "event": false,
-          "count": 17
+          "count": 18
         },
         {
           "path": "/experience",
@@ -2245,6 +2261,13 @@
           "title": "Where ChatGPT Pro reasoning fits in a research workflow | Huseyin Ugur Yildiz",
           "path_id": 113231349,
           "event": false,
+          "count": 5
+        },
+        {
+          "path": "/writing/iclr-2027-submission-volume-peer-review",
+          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
+          "path_id": 116031638,
+          "event": false,
           "count": 4
         },
         {
@@ -2276,9 +2299,9 @@
           "count": 4
         },
         {
-          "path": "/writing/iclr-2027-submission-volume-peer-review",
-          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
-          "path_id": 116031638,
+          "path": "/writing/ai-layoff-trap",
+          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
+          "path_id": 110093766,
           "event": false,
           "count": 3
         },
@@ -2295,13 +2318,6 @@
           "path_id": 96360102,
           "event": false,
           "count": 3
-        },
-        {
-          "path": "/writing/ai-layoff-trap",
-          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
-          "path_id": 110093766,
-          "event": false,
-          "count": 2
         },
         {
           "path": "/writing/second-brain-for-ai-assisted-work",
@@ -2381,7 +2397,7 @@
           "title": "CV (PDF), from the CV page",
           "path_id": 96697209,
           "event": true,
-          "count": 13
+          "count": 14
         },
         {
           "path": "linkedin/writing/ai-second-brain-can-remember-everything-and-still-be-wrong/",
@@ -2421,7 +2437,7 @@
       ],
       "hourly": [
         46,
-        77,
+        78,
         65,
         60,
         43,
@@ -2431,21 +2447,21 @@
         26,
         38,
         47,
-        68,
-        51,
-        88,
+        69,
+        52,
         89,
-        95,
-        90,
-        58,
+        89,
+        96,
+        92,
+        60,
         103,
-        64,
+        65,
         56,
         65,
         76,
         88
       ],
-      "countries_total": 34,
+      "countries_total": 36,
       "countries": [
         {
           "code": "TR",
@@ -2460,7 +2476,7 @@
         {
           "code": "GB",
           "name": "United Kingdom",
-          "count": 20
+          "count": 21
         },
         {
           "code": "NL",
@@ -2568,6 +2584,11 @@
           "count": 1
         },
         {
+          "code": "IE",
+          "name": "Ireland",
+          "count": 1
+        },
+        {
           "code": "KE",
           "name": "Kenya",
           "count": 1
@@ -2580,6 +2601,11 @@
         {
           "code": "NG",
           "name": "Nigeria",
+          "count": 1
+        },
+        {
+          "code": "PE",
+          "name": "Peru",
           "count": 1
         },
         {
@@ -2626,7 +2652,7 @@
         },
         {
           "name": "www.linkedin.com",
-          "count": 48
+          "count": 49
         },
         {
           "name": "avesis.tedu.edu.tr",
@@ -2650,7 +2676,7 @@
         },
         {
           "name": "scholar.google.com.tr",
-          "count": 3
+          "count": 4
         },
         {
           "name": "www.bing.com",
@@ -2681,11 +2707,11 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 330
+          "count": 331
         },
         {
           "name": "Safari",
-          "count": 182
+          "count": 184
         },
         {
           "name": "Firefox",
@@ -2700,7 +2726,7 @@
       "systems": [
         {
           "name": "iOS",
-          "count": 161
+          "count": 163
         },
         {
           "name": "Windows",
@@ -2716,7 +2742,7 @@
         },
         {
           "name": "Linux",
-          "count": 35
+          "count": 36
         }
       ],
       "sizes_total": 0,
@@ -2729,11 +2755,11 @@
         },
         {
           "name": "English",
-          "count": 117
+          "count": 119
         },
         {
           "name": "Turkish",
-          "count": 43
+          "count": 44
         },
         {
           "name": "Russian",
@@ -2806,6 +2832,13 @@
           "count": 10
         },
         {
+          "name": "England",
+          "country": "United Kingdom",
+          "country_code": "GB",
+          "code": null,
+          "count": 8
+        },
+        {
           "name": "New York",
           "country": "United States",
           "country_code": "US",
@@ -2816,13 +2849,6 @@
           "name": "Virginia",
           "country": "United States",
           "country_code": "US",
-          "code": null,
-          "count": 7
-        },
-        {
-          "name": "England",
-          "country": "United Kingdom",
-          "country_code": "GB",
           "code": null,
           "count": 7
         },
@@ -2881,8 +2907,8 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-10-31",
-      "pageviews": 1448,
+      "end": "2026-11-01",
+      "pageviews": 1458,
       "pages_total": 38,
       "pages": [
         {
@@ -2890,7 +2916,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 526,
+          "count": 529,
           "refs": [
             {
               "name": "Google",
@@ -2898,7 +2924,7 @@
             },
             {
               "name": "www.linkedin.com",
-              "count": 48
+              "count": 49
             },
             {
               "name": "avesis.tedu.edu.tr",
@@ -3049,7 +3075,14 @@
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
           "event": false,
-          "count": 39
+          "count": 41
+        },
+        {
+          "path": "/writing/openai-math-release-citations-withdrawals",
+          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
+          "path_id": 112277958,
+          "event": false,
+          "count": 26
         },
         {
           "path": "/404.html",
@@ -3057,13 +3090,6 @@
           "path_id": 80992097,
           "event": false,
           "count": 26
-        },
-        {
-          "path": "/writing/openai-math-release-citations-withdrawals",
-          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
-          "path_id": 112277958,
-          "event": false,
-          "count": 25
         },
         {
           "path": "/writing",
@@ -3077,7 +3103,7 @@
           "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
           "path_id": 98713527,
           "event": false,
-          "count": 17
+          "count": 18
         },
         {
           "path": "/experience",
@@ -3133,6 +3159,13 @@
           "title": "Where ChatGPT Pro reasoning fits in a research workflow | Huseyin Ugur Yildiz",
           "path_id": 113231349,
           "event": false,
+          "count": 5
+        },
+        {
+          "path": "/writing/iclr-2027-submission-volume-peer-review",
+          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
+          "path_id": 116031638,
+          "event": false,
           "count": 4
         },
         {
@@ -3164,9 +3197,9 @@
           "count": 4
         },
         {
-          "path": "/writing/iclr-2027-submission-volume-peer-review",
-          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
-          "path_id": 116031638,
+          "path": "/writing/ai-layoff-trap",
+          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
+          "path_id": 110093766,
           "event": false,
           "count": 3
         },
@@ -3183,13 +3216,6 @@
           "path_id": 96360102,
           "event": false,
           "count": 3
-        },
-        {
-          "path": "/writing/ai-layoff-trap",
-          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
-          "path_id": 110093766,
-          "event": false,
-          "count": 2
         },
         {
           "path": "/writing/second-brain-for-ai-assisted-work",
@@ -3269,7 +3295,7 @@
           "title": "CV (PDF), from the CV page",
           "path_id": 96697209,
           "event": true,
-          "count": 13
+          "count": 14
         },
         {
           "path": "linkedin/writing/ai-second-brain-can-remember-everything-and-still-be-wrong/",
@@ -3309,7 +3335,7 @@
       ],
       "hourly": [
         46,
-        77,
+        78,
         65,
         60,
         43,
@@ -3319,21 +3345,21 @@
         26,
         38,
         47,
-        68,
-        51,
-        88,
+        69,
+        52,
         89,
-        95,
-        90,
-        58,
+        89,
+        96,
+        92,
+        60,
         103,
-        64,
+        65,
         56,
         65,
         76,
         88
       ],
-      "countries_total": 34,
+      "countries_total": 36,
       "countries": [
         {
           "code": "TR",
@@ -3348,7 +3374,7 @@
         {
           "code": "GB",
           "name": "United Kingdom",
-          "count": 20
+          "count": 21
         },
         {
           "code": "NL",
@@ -3456,6 +3482,11 @@
           "count": 1
         },
         {
+          "code": "IE",
+          "name": "Ireland",
+          "count": 1
+        },
+        {
           "code": "KE",
           "name": "Kenya",
           "count": 1
@@ -3468,6 +3499,11 @@
         {
           "code": "NG",
           "name": "Nigeria",
+          "count": 1
+        },
+        {
+          "code": "PE",
+          "name": "Peru",
           "count": 1
         },
         {
@@ -3514,7 +3550,7 @@
         },
         {
           "name": "www.linkedin.com",
-          "count": 48
+          "count": 49
         },
         {
           "name": "avesis.tedu.edu.tr",
@@ -3538,7 +3574,7 @@
         },
         {
           "name": "scholar.google.com.tr",
-          "count": 3
+          "count": 4
         },
         {
           "name": "www.bing.com",
@@ -3569,11 +3605,11 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 330
+          "count": 331
         },
         {
           "name": "Safari",
-          "count": 182
+          "count": 184
         },
         {
           "name": "Firefox",
@@ -3588,7 +3624,7 @@
       "systems": [
         {
           "name": "iOS",
-          "count": 161
+          "count": 163
         },
         {
           "name": "Windows",
@@ -3604,7 +3640,7 @@
         },
         {
           "name": "Linux",
-          "count": 35
+          "count": 36
         }
       ],
       "sizes_total": 0,
@@ -3617,11 +3653,11 @@
         },
         {
           "name": "English",
-          "count": 117
+          "count": 119
         },
         {
           "name": "Turkish",
-          "count": 43
+          "count": 44
         },
         {
           "name": "Russian",
@@ -3694,6 +3730,13 @@
           "count": 10
         },
         {
+          "name": "England",
+          "country": "United Kingdom",
+          "country_code": "GB",
+          "code": null,
+          "count": 8
+        },
+        {
           "name": "New York",
           "country": "United States",
           "country_code": "US",
@@ -3704,13 +3747,6 @@
           "name": "Virginia",
           "country": "United States",
           "country_code": "US",
-          "code": null,
-          "count": 7
-        },
-        {
-          "name": "England",
-          "country": "United Kingdom",
-          "country_code": "GB",
           "code": null,
           "count": 7
         },
@@ -4842,7 +4878,11 @@
     },
     {
       "date": "2026-10-31",
-      "views": 1
+      "views": 8
+    },
+    {
+      "date": "2026-11-01",
+      "views": 3
     }
   ],
   "daily_breakdowns": {
@@ -28104,8 +28144,50 @@
       ]
     },
     "2026-10-31": {
-      "pageviews": 1,
+      "pageviews": 8,
       "pages": [
+        {
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/writing/chatgpt-pro-research-workflow",
+          "title": "Where ChatGPT Pro reasoning fits in a research workflow | Huseyin Ugur Yildiz",
+          "path_id": 113231349,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing/openai-math-release-citations-withdrawals",
+          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
+          "path_id": 112277958,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing/ai-layoff-trap",
+          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
+          "path_id": 110093766,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing/local-first-latex-workflow",
+          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+          "path_id": 98713527,
+          "event": false,
+          "count": 1
+        },
         {
           "path": "/publications",
           "title": "Publications | Huseyin Ugur Yildiz",
@@ -28114,10 +28196,18 @@
           "count": 1
         }
       ],
-      "events": [],
+      "events": [
+        {
+          "path": "cv-pdf",
+          "title": "CV (PDF), from the CV page",
+          "path_id": 96697209,
+          "event": true,
+          "count": 1
+        }
+      ],
       "hourly": [
         0,
-        0,
+        1,
         0,
         1,
         0,
@@ -28131,6 +28221,104 @@
         0,
         0,
         0,
+        1,
+        2,
+        2,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries": [
+        {
+          "code": "IE",
+          "name": "Ireland",
+          "count": 1
+        },
+        {
+          "code": "PE",
+          "name": "Peru",
+          "count": 1
+        }
+      ],
+      "referrers": [
+        {
+          "name": "scholar.google.com.tr",
+          "count": 1
+        },
+        {
+          "name": "www.linkedin.com",
+          "count": 1
+        }
+      ],
+      "browsers": [
+        {
+          "name": "Safari",
+          "count": 2
+        }
+      ],
+      "systems": [
+        {
+          "name": "iOS",
+          "count": 2
+        }
+      ],
+      "sizes": [],
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        },
+        {
+          "name": "Turkish",
+          "count": 1
+        }
+      ]
+    },
+    "2026-11-01": {
+      "pageviews": 3,
+      "pages": [
+        {
+          "path": "/writing/iclr-2027-submission-volume-peer-review",
+          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
+          "path_id": 116031638,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
         0,
         0,
         0,
@@ -28143,12 +28331,17 @@
       ],
       "countries": [
         {
-          "code": "SG",
-          "name": "Singapore",
+          "code": "SE",
+          "name": "Sweden",
           "count": 1
         }
       ],
-      "referrers": [],
+      "referrers": [
+        {
+          "name": "Google",
+          "count": 1
+        }
+      ],
       "browsers": [
         {
           "name": "Chrome",
@@ -28157,7 +28350,7 @@
       ],
       "systems": [
         {
-          "name": "Windows",
+          "name": "macOS",
           "count": 1
         }
       ],
@@ -28174,7 +28367,7 @@
     {
       "path": "/",
       "title": "Home | Huseyin Ugur Yildiz",
-      "count": 526,
+      "count": 529,
       "stats": [
         {
           "date": "2026-02-05",
@@ -29250,10 +29443,14 @@
         },
         {
           "date": "2026-10-31",
-          "views": 1
+          "views": 3
         },
         {
           "date": "2026-11-01",
+          "views": 1
+        },
+        {
+          "date": "2026-11-02",
           "views": 0
         }
       ]
@@ -30342,6 +30539,10 @@
         {
           "date": "2026-11-01",
           "views": 0
+        },
+        {
+          "date": "2026-11-02",
+          "views": 0
         }
       ]
     },
@@ -31429,6 +31630,10 @@
         {
           "date": "2026-11-01",
           "views": 0
+        },
+        {
+          "date": "2026-11-02",
+          "views": 0
         }
       ]
     },
@@ -31563,6 +31768,10 @@
         },
         {
           "date": "2026-11-01",
+          "views": 0
+        },
+        {
+          "date": "2026-11-02",
           "views": 0
         }
       ]
@@ -31974,6 +32183,10 @@
         },
         {
           "date": "2026-11-01",
+          "views": 0
+        },
+        {
+          "date": "2026-11-02",
           "views": 0
         }
       ]
@@ -33062,6 +33275,10 @@
         {
           "date": "2026-11-01",
           "views": 0
+        },
+        {
+          "date": "2026-11-02",
+          "views": 0
         }
       ]
     },
@@ -34145,6 +34362,10 @@
         {
           "date": "2026-11-01",
           "views": 0
+        },
+        {
+          "date": "2026-11-02",
+          "views": 0
         }
       ]
     },
@@ -35227,6 +35448,10 @@
         },
         {
           "date": "2026-11-01",
+          "views": 0
+        },
+        {
+          "date": "2026-11-02",
           "views": 0
         }
       ]
@@ -36315,17 +36540,17 @@
         {
           "date": "2026-11-01",
           "views": 0
+        },
+        {
+          "date": "2026-11-02",
+          "views": 0
         }
       ]
     }
   ],
-  "site": {
-    "timezone": "Europe/Istanbul",
-    "first_hit_at": "2026-02-05T12:24:02.263206Z",
-    "data_retention_days": 0
-  },
+  "site": {},
   "totals": {
-    "pageviews": 1448,
+    "pageviews": 1458,
     "visitors": null
   },
   "pages": [
@@ -36334,7 +36559,7 @@
       "title": "Home | Huseyin Ugur Yildiz",
       "path_id": 80749188,
       "event": false,
-      "count": 526,
+      "count": 529,
       "refs": [
         {
           "name": "Google",
@@ -36342,7 +36567,7 @@
         },
         {
           "name": "www.linkedin.com",
-          "count": 48
+          "count": 49
         },
         {
           "name": "avesis.tedu.edu.tr",
@@ -36493,7 +36718,14 @@
       "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
       "path_id": 106826525,
       "event": false,
-      "count": 39
+      "count": 41
+    },
+    {
+      "path": "/writing/openai-math-release-citations-withdrawals",
+      "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
+      "path_id": 112277958,
+      "event": false,
+      "count": 26
     },
     {
       "path": "/404.html",
@@ -36501,13 +36733,6 @@
       "path_id": 80992097,
       "event": false,
       "count": 26
-    },
-    {
-      "path": "/writing/openai-math-release-citations-withdrawals",
-      "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
-      "path_id": 112277958,
-      "event": false,
-      "count": 25
     },
     {
       "path": "/writing",
@@ -36521,7 +36746,7 @@
       "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
       "path_id": 98713527,
       "event": false,
-      "count": 17
+      "count": 18
     },
     {
       "path": "/experience",
@@ -36577,6 +36802,13 @@
       "title": "Where ChatGPT Pro reasoning fits in a research workflow | Huseyin Ugur Yildiz",
       "path_id": 113231349,
       "event": false,
+      "count": 5
+    },
+    {
+      "path": "/writing/iclr-2027-submission-volume-peer-review",
+      "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
+      "path_id": 116031638,
+      "event": false,
       "count": 4
     },
     {
@@ -36608,9 +36840,9 @@
       "count": 4
     },
     {
-      "path": "/writing/iclr-2027-submission-volume-peer-review",
-      "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
-      "path_id": 116031638,
+      "path": "/writing/ai-layoff-trap",
+      "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
+      "path_id": 110093766,
       "event": false,
       "count": 3
     },
@@ -36627,13 +36859,6 @@
       "path_id": 96360102,
       "event": false,
       "count": 3
-    },
-    {
-      "path": "/writing/ai-layoff-trap",
-      "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
-      "path_id": 110093766,
-      "event": false,
-      "count": 2
     },
     {
       "path": "/writing/second-brain-for-ai-assisted-work",
@@ -36720,7 +36945,7 @@
     {
       "code": "GB",
       "name": "United Kingdom",
-      "count": 20
+      "count": 21
     },
     {
       "code": "NL",
@@ -36828,6 +37053,11 @@
       "count": 1
     },
     {
+      "code": "IE",
+      "name": "Ireland",
+      "count": 1
+    },
+    {
       "code": "KE",
       "name": "Kenya",
       "count": 1
@@ -36840,6 +37070,11 @@
     {
       "code": "NG",
       "name": "Nigeria",
+      "count": 1
+    },
+    {
+      "code": "PE",
+      "name": "Peru",
       "count": 1
     },
     {
@@ -36885,7 +37120,7 @@
     },
     {
       "name": "www.linkedin.com",
-      "count": 48
+      "count": 49
     },
     {
       "name": "avesis.tedu.edu.tr",
@@ -36909,7 +37144,7 @@
     },
     {
       "name": "scholar.google.com.tr",
-      "count": 3
+      "count": 4
     },
     {
       "name": "www.bing.com",
@@ -36939,11 +37174,11 @@
   "browsers": [
     {
       "name": "Chrome",
-      "count": 330
+      "count": 331
     },
     {
       "name": "Safari",
-      "count": 182
+      "count": 184
     },
     {
       "name": "Firefox",
@@ -36957,7 +37192,7 @@
   "systems": [
     {
       "name": "iOS",
-      "count": 161
+      "count": 163
     },
     {
       "name": "Windows",
@@ -36973,7 +37208,7 @@
     },
     {
       "name": "Linux",
-      "count": 35
+      "count": 36
     }
   ],
   "sizes": []
