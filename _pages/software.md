@@ -1,7 +1,7 @@
 ---
 layout: academic
 title: "Software – Hüseyin Uğur Yıldız"
-description: "Research software by Hüseyin Uğur Yıldız: Internet of Algae Lab, research-graph, VERA, KAIROS, UWA Ray Bench, and IEEE / ACM Paper Writing Skills, plus code and learning resources."
+description: "Research software by Hüseyin Uğur Yıldız: Internet of Algae Lab, research-graph, VERA, KAIROS, UWA Ray Bench, paper-lector, and IEEE / ACM Paper Writing Skills, plus code and learning resources."
 permalink: /software/
 ---
 
@@ -81,6 +81,21 @@ permalink: /software/
       <div class="links">
         <a class="ext" href="https://uwa-ray-bench.vercel.app/" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-globe"/></svg> uwa-ray-bench.vercel.app</a>
         <a class="ext" href="https://github.com/huguryildiz/uwa-ray-bench" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-github"/></svg> GitHub repository</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="swproject">
+    <img src="/assets/images/software/paper-lector-social-preview.webp" alt="paper-lector GitHub social preview" width="1280" height="640" loading="lazy" decoding="async">
+    <div>
+      <h3>paper-lector — Literature triage skill for Claude Code and Codex</h3>
+      <p>An agent skill for research ideas: find topics, try to refute a claim against prior work,
+        test what a result shows, and write related work. It searches OpenAlex, fetches open-access
+        PDFs, and ranks your own PDFs against frozen research questions into a reading order with
+        page ranges. It gives scoped verdicts, never a novelty score, and writes no answer on the
+        papers' behalf.</p>
+      <div class="links">
+        <a class="ext" href="https://github.com/huguryildiz/paper-lector" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-github"/></svg> GitHub repository</a>
       </div>
     </div>
   </article>
