@@ -1,7 +1,7 @@
 ---
 layout: academic
 title: "Software – Hüseyin Uğur Yıldız"
-description: "Research software by Hüseyin Uğur Yıldız: Internet of Algae Lab, research-graph, VERA, KAIROS, UWA Ray Bench, DEIXIS, paper-lector, and IEEE / ACM Paper Writing Skills, plus code and learning resources."
+description: "Research software by Hüseyin Uğur Yıldız: DEIXIS, IEEE / ACM Paper Writing Skills, Internet of Algae Lab, KAIROS, paper-lector, research-graph, UWA Ray Bench, and VERA, plus code and learning resources."
 permalink: /software/
 ---
 
@@ -9,6 +9,35 @@ permalink: /software/
   <header class="pagehead">
     <h1 id="software-h1">Software</h1>
   </header>
+
+  <article class="swproject">
+    <img src="/assets/images/software/deixis-social-preview.webp" alt="DEIXIS GitHub social preview" width="1280" height="640" loading="lazy" decoding="async">
+    <div>
+      <h3>DEIXIS — Local research workspace</h3>
+      <p>A desktop app for macOS, Windows, and Linux that answers questions from the scientific
+        literature. It searches OpenAlex and Semantic Scholar, screens what it finds, reads the full
+        texts it can get, and writes an answer in which every citation opens the exact source
+        passage. If a citation cannot be located in the text, the answer stays an unverified draft.
+        The app and the library stay on your computer.</p>
+      <div class="links">
+        <a class="ext" href="https://deixis.huguryildiz.com" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-globe"/></svg> deixis.huguryildiz.com</a>
+        <a class="ext" href="https://github.com/huguryildiz/DEIXIS" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-github"/></svg> GitHub repository</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="swproject">
+    <img src="/assets/images/ieee-acm-paper-writing.webp" alt="IEEE / ACM Paper Writing Skills GitHub social preview" width="1280" height="640" loading="lazy" decoding="async">
+    <div>
+      <h3>IEEE / ACM Paper Writing Skills</h3>
+      <p>An evidence-aware manuscript workflow for drafting, rewriting, humanizing, and auditing
+        engineering papers while preserving claims, citations, notation, scope, and uncertainty.</p>
+      <div class="links">
+        <a class="ext" href="https://ieee-acm-paper-writing.vercel.app" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-globe"/></svg> ieee-acm-paper-writing.vercel.app</a>
+        <a class="ext" href="https://github.com/huguryildiz/ieee-acm-paper-writing" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-github"/></svg> GitHub repository</a>
+      </div>
+    </div>
+  </article>
 
   <article class="swproject">
     <img src="/assets/images/software/internet-of-algae-lab-social-preview.webp" alt="Internet of Algae Lab GitHub social preview" width="1280" height="640" loading="lazy" decoding="async">
@@ -19,36 +48,6 @@ permalink: /software/
       <div class="links">
         <a class="ext" href="https://internet-of-algae-lab.vercel.app" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-globe"/></svg> internet-of-algae-lab.vercel.app</a>
         <a class="ext" href="https://github.com/huguryildiz/internet-of-algae-lab" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-github"/></svg> GitHub repository</a>
-      </div>
-    </div>
-  </article>
-
-  <article class="swproject">
-    <img src="/assets/images/software/research-graph-social-preview.webp" alt="research-graph GitHub social preview" width="1280" height="640" loading="lazy" decoding="async">
-    <div>
-      <h3>research-graph — Agentic research workflow verification</h3>
-      <p>A public-beta, contract-gated verification layer for multi-agent research workflows. It
-        validates versioned artifacts against JSON Schema, checks SHA-256 provenance and staleness,
-        enforces revision budgets, and records reviewer–producer separation. It does not determine
-        scientific correctness or provide autonomous orchestration.</p>
-      <div class="links">
-        <a class="ext" href="https://research-graph.huguryildiz.com/" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-globe"/></svg> research-graph.huguryildiz.com</a>
-        <a class="ext" href="https://github.com/huguryildiz/research-graph" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-github"/></svg> GitHub repository</a>
-      </div>
-    </div>
-  </article>
-
-  <article class="swproject">
-    <img src="/assets/images/software/vera-social-preview.webp" alt="VERA GitHub social preview" width="1280" height="640" loading="lazy" decoding="async">
-    <div>
-      <h3>VERA — Visual Evaluation, Reporting &amp; Analytics</h3>
-      <p>A modern platform for academic juries, capstone evaluations, and accreditation workflows.
-        Jurors enter through a QR code, score projects against a configurable rubric, and
-        administrators access real-time rankings and accreditation-ready reports the moment scoring
-        closes.</p>
-      <div class="links">
-        <a class="ext" href="https://vera-eval.app" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-globe"/></svg> vera-eval.app</a>
-        <a class="ext" href="https://github.com/huguryildiz/VERA" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-github"/></svg> GitHub repository</a>
       </div>
     </div>
   </article>
@@ -70,6 +69,36 @@ permalink: /software/
   </article>
 
   <article class="swproject">
+    <img src="/assets/images/software/paper-lector-social-preview.webp" alt="paper-lector GitHub social preview" width="1280" height="640" loading="lazy" decoding="async">
+    <div>
+      <h3>paper-lector — Literature triage skill for Claude Code and Codex</h3>
+      <p>An agent skill for research ideas: find topics, try to refute a claim against prior work,
+        test what a result shows, and write related work. It searches OpenAlex, fetches open-access
+        PDFs, and ranks your own PDFs against frozen research questions into a reading order with
+        page ranges. It gives scoped verdicts, never a novelty score, and writes no answer on the
+        papers' behalf.</p>
+      <div class="links">
+        <a class="ext" href="https://github.com/huguryildiz/paper-lector" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-github"/></svg> GitHub repository</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="swproject">
+    <img src="/assets/images/software/research-graph-social-preview.webp" alt="research-graph GitHub social preview" width="1280" height="640" loading="lazy" decoding="async">
+    <div>
+      <h3>research-graph — Agentic research workflow verification</h3>
+      <p>A public-beta, contract-gated verification layer for multi-agent research workflows. It
+        validates versioned artifacts against JSON Schema, checks SHA-256 provenance and staleness,
+        enforces revision budgets, and records reviewer–producer separation. It does not determine
+        scientific correctness or provide autonomous orchestration.</p>
+      <div class="links">
+        <a class="ext" href="https://research-graph.huguryildiz.com/" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-globe"/></svg> research-graph.huguryildiz.com</a>
+        <a class="ext" href="https://github.com/huguryildiz/research-graph" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-github"/></svg> GitHub repository</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="swproject">
     <img src="/assets/images/uwa-ray-bench-1280x640.webp" alt="Underwater Acoustic Ray Bench GitHub social preview" width="1280" height="640" loading="lazy" decoding="async">
     <div>
       <h3>Underwater Acoustic Ray Bench</h3>
@@ -86,45 +115,16 @@ permalink: /software/
   </article>
 
   <article class="swproject">
-    <img src="/assets/images/software/deixis-social-preview.webp" alt="DEIXIS GitHub social preview" width="1280" height="640" loading="lazy" decoding="async">
+    <img src="/assets/images/software/vera-social-preview.webp" alt="VERA GitHub social preview" width="1280" height="640" loading="lazy" decoding="async">
     <div>
-      <h3>DEIXIS — Local research workspace</h3>
-      <p>A desktop app for macOS, Windows, and Linux that answers questions from the scientific
-        literature. It searches OpenAlex and Semantic Scholar, screens what it finds, reads the full
-        texts it can get, and writes an answer in which every citation opens the exact source
-        passage. If a citation cannot be located in the text, the answer stays an unverified draft.
-        The app and the library stay on your computer.</p>
+      <h3>VERA — Visual Evaluation, Reporting &amp; Analytics</h3>
+      <p>A modern platform for academic juries, capstone evaluations, and accreditation workflows.
+        Jurors enter through a QR code, score projects against a configurable rubric, and
+        administrators access real-time rankings and accreditation-ready reports the moment scoring
+        closes.</p>
       <div class="links">
-        <a class="ext" href="https://deixis.huguryildiz.com" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-globe"/></svg> deixis.huguryildiz.com</a>
-        <a class="ext" href="https://github.com/huguryildiz/DEIXIS" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-github"/></svg> GitHub repository</a>
-      </div>
-    </div>
-  </article>
-
-  <article class="swproject">
-    <img src="/assets/images/software/paper-lector-social-preview.webp" alt="paper-lector GitHub social preview" width="1280" height="640" loading="lazy" decoding="async">
-    <div>
-      <h3>paper-lector — Literature triage skill for Claude Code and Codex</h3>
-      <p>An agent skill for research ideas: find topics, try to refute a claim against prior work,
-        test what a result shows, and write related work. It searches OpenAlex, fetches open-access
-        PDFs, and ranks your own PDFs against frozen research questions into a reading order with
-        page ranges. It gives scoped verdicts, never a novelty score, and writes no answer on the
-        papers' behalf.</p>
-      <div class="links">
-        <a class="ext" href="https://github.com/huguryildiz/paper-lector" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-github"/></svg> GitHub repository</a>
-      </div>
-    </div>
-  </article>
-
-  <article class="swproject">
-    <img src="/assets/images/ieee-acm-paper-writing.webp" alt="IEEE / ACM Paper Writing Skills GitHub social preview" width="1280" height="640" loading="lazy" decoding="async">
-    <div>
-      <h3>IEEE / ACM Paper Writing Skills</h3>
-      <p>An evidence-aware manuscript workflow for drafting, rewriting, humanizing, and auditing
-        engineering papers while preserving claims, citations, notation, scope, and uncertainty.</p>
-      <div class="links">
-        <a class="ext" href="https://ieee-acm-paper-writing.vercel.app" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-globe"/></svg> ieee-acm-paper-writing.vercel.app</a>
-        <a class="ext" href="https://github.com/huguryildiz/ieee-acm-paper-writing" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-github"/></svg> GitHub repository</a>
+        <a class="ext" href="https://vera-eval.app" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-globe"/></svg> vera-eval.app</a>
+        <a class="ext" href="https://github.com/huguryildiz/VERA" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-github"/></svg> GitHub repository</a>
       </div>
     </div>
   </article>
