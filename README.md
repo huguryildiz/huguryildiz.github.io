@@ -6,9 +6,9 @@
 
 **Academic Website**
 
-Publications, research, teaching, supervision, service, and a web + PDF curriculum vitae.
+Publications, research, software, writing, teaching, supervision, service, and a web + PDF curriculum vitae.
 
-[![Jekyll](https://img.shields.io/badge/Jekyll-4.x-12314E?style=flat-square&logo=jekyll&logoColor=white)](https://jekyllrb.com) [![Ruby](https://img.shields.io/badge/Ruby-3.3-12314E?style=flat-square&logo=ruby&logoColor=white)](https://www.ruby-lang.org) [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-12314E?style=flat-square&logo=githubpages&logoColor=white)](https://pages.github.com) [![LaTeX](https://img.shields.io/badge/LaTeX-CV%20PDF-12314E?style=flat-square&logo=latex&logoColor=white)](cv-latex/) [![GoatCounter](https://img.shields.io/badge/GoatCounter-analytics-12314E?style=flat-square&logo=googleanalytics&logoColor=white)](https://huguryildiz.com/stats/)
+[![Jekyll](https://img.shields.io/badge/Jekyll-3.10%20(github--pages)-12314E?style=flat-square&logo=jekyll&logoColor=white)](https://jekyllrb.com) [![Ruby](https://img.shields.io/badge/Ruby-3.3-12314E?style=flat-square&logo=ruby&logoColor=white)](https://www.ruby-lang.org) [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-12314E?style=flat-square&logo=githubpages&logoColor=white)](https://pages.github.com) [![LaTeX](https://img.shields.io/badge/LaTeX-CV%20PDF-12314E?style=flat-square&logo=latex&logoColor=white)](cv-latex/) [![GoatCounter](https://img.shields.io/badge/GoatCounter-analytics-12314E?style=flat-square&logo=googleanalytics&logoColor=white)](https://huguryildiz.com/stats/)
 
 [![huguryildiz.com](https://img.shields.io/badge/huguryildiz.com-LIVE-E09A6A?style=flat-square&labelColor=2b2b2b&logo=googlechrome&logoColor=white)](https://huguryildiz.com) [![Deploy Jekyll site to Pages](https://github.com/huguryildiz/huguryildiz.github.io/actions/workflows/jekyll.yml/badge.svg)](https://github.com/huguryildiz/huguryildiz.github.io/actions/workflows/jekyll.yml)
 
@@ -18,9 +18,10 @@ Publications, research, teaching, supervision, service, and a web + PDF curricul
 
 Source code and scholarly content for [huguryildiz.com](https://huguryildiz.com),
 the academic website of Hüseyin Uğur Yıldız. The site presents publications,
-research projects, teaching, graduate supervision, professional service, and a
-web and PDF curriculum vitae. It also preserves research notes and
-announcements and publishes an aggregated, privacy-conscious site-reach report.
+the research program, research software, teaching, graduate supervision,
+professional service, and a web and PDF curriculum vitae. It also keeps a
+writing section for notes and announcements and publishes an aggregated,
+privacy-conscious site-reach report.
 
 The website is generated with Jekyll and deployed to GitHub Pages from the
 `master` branch. It uses no theme: every page renders through a single custom
@@ -31,28 +32,27 @@ academic interface.
 | Section | Content |
 | --- | --- |
 | [Home](https://huguryildiz.com/) | Academic profile, research focus, news, and an interactive ocean observatory simulation |
+| [Research](https://huguryildiz.com/research/) | Research program, interactive research map, and key research topics |
 | [Publications](https://huguryildiz.com/publications/) | Publication catalogue with type, year, and quartile filters; DOI and local full-text links |
-| [Research](https://huguryildiz.com/research/) | Research program, interactive topic map, software, and learning resources |
+| [Software](https://huguryildiz.com/software/) | Research software projects in alphabetical order, plus code and learning resources |
 | [Writing](https://huguryildiz.com/writing/) | Notes, announcements, and longer pieces retained as part of the scholarly record |
-| [CV](https://huguryildiz.com/cv/) | Web curriculum vitae and the downloadable PDF version |
 | [Teaching](https://huguryildiz.com/teaching/) | Undergraduate and graduate courses |
 | [Students](https://huguryildiz.com/students/) | Graduate supervision and information for prospective students |
-| [Service](https://huguryildiz.com/service/) | Reviewing, committee, chairing, institutional, and invited-talk activities |
+| [Service](https://huguryildiz.com/service/) | Editorial, reviewing, committee, chairing, institutional, and invited-talk activities |
+| [CV](https://huguryildiz.com/cv/) | Web curriculum vitae and the downloadable PDF version |
 | [Site Reach](https://huguryildiz.com/stats/) | Aggregated GoatCounter page-view, content, geographic, referral, and reading-environment summaries, selectable by date range, with explicit data limitations |
 
 ## Rendering architecture
 
-The repository has one presentation path. Every page uses it.
+The repository has one presentation path. Every page uses it, in the order of the top navigation above.
 
 | Path | Pages | Rendering chain |
 | --- | --- | --- |
-| Academic interface | All of them — home, publications, research, writing, posts, CV, teaching, students, service, site reach, terms, and 404 | Page → `_layouts/academic.html` → `_layouts/compress.html` → `assets/css/redesign.css`; posts first pass through `_layouts/post.html` |
+| Academic interface | All of them — the eight sections above, writing posts, site reach, terms, and 404 | Page → `_layouts/academic.html` → `_layouts/compress.html` → `assets/css/redesign.css`; posts first pass through `_layouts/post.html` |
 
 The primary navigation is defined directly in `_layouts/academic.html`; there is
-no navigation data file. The Minimal Mistakes remote theme and its local
-overrides were removed — no `_sass/`, no `main.scss`/`custom.css`, no
-`default.html`/`single.html`. Extend `assets/css/redesign.css` rather than
-reintroducing a theme.
+no navigation data file. The Stats and Terms links sit in the footer. The site
+uses no theme: extend `assets/css/redesign.css` instead of adding one.
 
 ## Repository map
 
@@ -64,26 +64,34 @@ reintroducing a theme.
 | `_layouts/academic.html` | Primary navigation, page shell, footer, theme control, and shared interactions |
 | `_layouts/post.html` | Writing-entry metadata, reading time, tags, and optional source link |
 | `_includes/_shared/` | Shared fragments: favicon markup and animation, direct GA4, GoatCounter |
+| `_includes/icons.html` | SVG icon symbols used across all pages |
 | `_includes/hero-uwsn.html` | Interactive ocean observatory simulation and underwater acoustic-network scenario |
-| `_includes/research-map.html` | Interactive research map rendered from `_data/research_map.yml` |
+| `_includes/research-map.html` | Interactive research map rendered from `_data/research_map.yml` and `_data/research_relations.yml` |
 | `assets/css/redesign.css` | All site styles |
 | `_data/cv.yml` | CV data — the source for `_pages/cv.md`, `_pages/service.md`, `_pages/teaching.md`, and the downloadable PDF |
 | `_data/publications.yml` | Publication records — the source for `_pages/publications.md` and the downloadable PDF |
+| `_data/research_map.yml`, `_data/research_relations.yml` | Research-map topics with their publication mapping, and the curated links between topics |
 | `_data/scholar_metrics.json` | Google Scholar metrics snapshot; rendered by `index.md` and `_pages/cv.md` |
 | `_data/openalex_metrics.json` | OpenAlex metrics snapshot; dormant fallback, not rendered |
 | `_data/site_stats.json` | Sanitized GoatCounter snapshot rendered by `_pages/stats.md` |
+| `cv-latex/cv.tex.j2` | LaTeX template for the PDF CV, filled by `scripts/render_cv_tex.py` |
 | `files/` | CV, theses, papers, and other downloadable scholarly documents |
-| `assets/images/` | Portraits, research graphics, course images, project images, and favicons |
+| `assets/images/` | The only image location: portraits, research graphics, course images, software previews, and favicons |
 | `assets/video/courses/`, `assets/video/topics/` | Course and research-topic media |
-| `scripts/` | Google Scholar, OpenAlex, and GoatCounter retrieval plus optional CV-conversion utilities; excluded from the build (see `scripts/README.md`) |
+| `scripts/` | Metrics retrieval (Google Scholar, GoatCounter, OpenAlex), the CV PDF renderer, and dormant utilities; excluded from the build (see `scripts/README.md`) |
 | `_config.yml` | Jekyll, metadata, SEO, and plugin configuration |
 | `PRODUCT.md` | Product, data-honesty, design, and accessibility contract for the ocean observatory simulation |
+| `DESIGN.md` | Visual design tokens and principles for the whole site |
+| `AGENTS.md`, `CLAUDE.md` | Working rules for coding agents |
+| `design-artifacts/` | Design prompts, review screenshots, and banner images; excluded from the build |
 
 ## Writing entries
 
 Add dated records in `_posts/`. Keep new entries self-contained on this site: do not add
 LinkedIn embeds. A `linkedin:` URL in front matter renders the "Discuss this post on
 LinkedIn" box at the end of the post.
+
+## What gets published
 
 Generated output under `_site/` is not a source and should not be edited.
 
@@ -108,9 +116,13 @@ site at <http://localhost:4000>. Source changes are watched automatically.
 
 ### Native Ruby
 
-With a compatible Ruby installation and Bundler:
+Use Homebrew's keg-only Ruby 3.3. The macOS system Ruby (2.6) is too old, and
+Homebrew's default Ruby (4.x) makes Bundler fall back to an old `github-pages`
+release that fails to build. Gems install into `vendor/bundle`:
 
 ```bash
+export PATH=/opt/homebrew/opt/ruby@3.3/bin:$PATH
+bundle config set --local path vendor/bundle
 bundle install
 bundle exec jekyll serve
 ```
@@ -139,6 +151,9 @@ source of truth: `_data/cv.yml` and `_data/publications.yml`.
   DOI links, and local PDF paths when adding a record.
 - Research-map content belongs in `_data/research_map.yml`; its labels and
   counts must remain consistent with `_includes/research-map.html`.
+- Software projects are hand-written entries in `_pages/software.md`, kept in
+  alphabetical order. Each has a preview image under `assets/images/software/`;
+  update the page `description` when a project is added or removed.
 - The writing index is `_pages/writing.md`; dated entries live in `_posts/`.
   Post URLs follow `/writing/:title/`, as configured in `_config.yml`.
 - Do not infer or hand-edit bibliometric values without a source. The citation
@@ -151,7 +166,8 @@ source of truth: `_data/cv.yml` and `_data/publications.yml`.
 
   Google Scholar has no public API, so the script reads the profile through
   SerpApi's Google Scholar Author endpoint. The key is a secret: never print it,
-  embed it in browser code, or commit it. To refresh the OpenAlex snapshot, run:
+  embed it in browser code, or commit it. The OpenAlex snapshot is a dormant
+  fallback that no page renders; refresh it only when needed:
 
   ```bash
   OPENALEX_AUTHOR_ID=A5085505896 python3 scripts/fetch_openalex.py
@@ -165,9 +181,10 @@ source of truth: `_data/cv.yml` and `_data/publications.yml`.
   data. The public report does not infer visitors, sessions, bounce rate, or
   other measures unavailable from the source API.
 
-The CV conversion scripts are optional maintenance utilities, not an active
-site-generation pipeline. Use `scripts/update_cv_json.sh` only when JSON Resume
-output is explicitly needed, and review the generated data before retaining it.
+The JSON Resume conversion (`scripts/update_cv_json.sh`,
+`scripts/cv_markdown_to_json.py`) is a dormant utility, not part of the CV
+pipeline. Use it only when JSON Resume output is explicitly needed, and review
+the generated data before keeping it.
 
 ## Validation
 
@@ -182,7 +199,7 @@ There is no automated test suite. Before publishing a change:
 7. Confirm that affected internal links and local assets resolve.
 
 Changes to shared layouts, navigation, CSS, or theme behavior should be checked
-on every academic page — which is now every page on the site.
+on every page.
 
 ## Deployment and metrics
 
