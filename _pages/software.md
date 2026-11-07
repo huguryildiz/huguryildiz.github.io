@@ -1,7 +1,7 @@
 ---
 layout: academic
 title: "Software – Hüseyin Uğur Yıldız"
-description: "Research software by Hüseyin Uğur Yıldız: Internet of Algae Lab, research-graph, VERA, KAIROS, UWA Ray Bench, paper-lector, and IEEE / ACM Paper Writing Skills, plus code and learning resources."
+description: "Research software by Hüseyin Uğur Yıldız: Internet of Algae Lab, research-graph, VERA, KAIROS, UWA Ray Bench, DEIXIS, paper-lector, and IEEE / ACM Paper Writing Skills, plus code and learning resources."
 permalink: /software/
 ---
 
@@ -81,6 +81,22 @@ permalink: /software/
       <div class="links">
         <a class="ext" href="https://uwa-ray-bench.vercel.app/" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-globe"/></svg> uwa-ray-bench.vercel.app</a>
         <a class="ext" href="https://github.com/huguryildiz/uwa-ray-bench" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-github"/></svg> GitHub repository</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="swproject">
+    <img src="/assets/images/software/deixis-social-preview.webp" alt="DEIXIS GitHub social preview" width="1280" height="640" loading="lazy" decoding="async">
+    <div>
+      <h3>DEIXIS — Local research workspace</h3>
+      <p>A desktop app for macOS, Windows, and Linux that answers questions from the scientific
+        literature. It searches OpenAlex and Semantic Scholar, screens what it finds, reads the full
+        texts it can get, and writes an answer in which every citation opens the exact source
+        passage. If a citation cannot be located in the text, the answer stays an unverified draft.
+        The app and the library stay on your computer.</p>
+      <div class="links">
+        <a class="ext" href="https://deixis.huguryildiz.com" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-globe"/></svg> deixis.huguryildiz.com</a>
+        <a class="ext" href="https://github.com/huguryildiz/DEIXIS" target="_blank" rel="noopener"><svg class="licon" aria-hidden="true"><use href="#i-github"/></svg> GitHub repository</a>
       </div>
     </div>
   </article>
