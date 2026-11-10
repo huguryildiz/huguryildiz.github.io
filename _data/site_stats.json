@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-09T11:05:33Z",
+  "updated": "2026-11-10T10:53:49Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-11-09"
+    "end": "2026-11-10"
   },
   "window_order": [
     "today",
@@ -16,6 +16,154 @@
   "windows": {
     "today": {
       "label": "Today",
+      "start": "2026-11-10",
+      "end": "2026-11-10",
+      "pageviews": 5,
+      "pages_total": 4,
+      "pages": [
+        {
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
+          "event": false,
+          "count": 2,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 1
+            },
+            {
+              "name": "www.linkedin.com",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/research",
+          "title": "Research | Huseyin Ugur Yildiz",
+          "path_id": 80750374,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events_total": 0,
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries_total": 1,
+      "countries": [
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 2
+        }
+      ],
+      "referrers_total": 2,
+      "referrers": [
+        {
+          "name": "Google",
+          "count": 1
+        },
+        {
+          "name": "www.linkedin.com",
+          "count": 1
+        }
+      ],
+      "browsers_total": 1,
+      "browsers": [
+        {
+          "name": "Safari",
+          "count": 2
+        }
+      ],
+      "systems_total": 2,
+      "systems": [
+        {
+          "name": "iOS",
+          "count": 1
+        },
+        {
+          "name": "macOS",
+          "count": 1
+        }
+      ],
+      "sizes_total": 0,
+      "sizes": [],
+      "languages_total": 2,
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        },
+        {
+          "name": "Turkish",
+          "count": 1
+        }
+      ],
+      "regions_total": 1,
+      "regions": [
+        {
+          "name": "Ankara",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "06",
+          "count": 2
+        }
+      ],
+      "regions_unmatched": []
+    },
+    "yesterday": {
+      "label": "Yesterday",
       "start": "2026-11-09",
       "end": "2026-11-09",
       "pageviews": 3,
@@ -127,235 +275,11 @@
       ],
       "regions_unmatched": []
     },
-    "yesterday": {
-      "label": "Yesterday",
-      "start": "2026-11-08",
-      "end": "2026-11-08",
-      "pageviews": 15,
-      "pages_total": 8,
-      "pages": [
-        {
-          "path": "/",
-          "title": "Home | Huseyin Ugur Yildiz",
-          "path_id": 80749188,
-          "event": false,
-          "count": 6,
-          "refs": [
-            {
-              "name": "www.linkedin.com",
-              "count": 2
-            },
-            {
-              "name": "Google",
-              "count": 1
-            },
-            {
-              "name": "bing.com",
-              "count": 1
-            },
-            {
-              "name": "scholar.google.com",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/writing/iclr-2027-submission-volume-peer-review",
-          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
-          "path_id": 116031638,
-          "event": false,
-          "count": 2,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 2
-            }
-          ]
-        },
-        {
-          "path": "/writing/chatgpt-pro-research-workflow",
-          "title": "Where ChatGPT Pro reasoning fits in a research workflow | Huseyin Ugur Yildiz",
-          "path_id": 113231349,
-          "event": false,
-          "count": 2,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 2
-            }
-          ]
-        },
-        {
-          "path": "/software",
-          "title": "Software – Hüseyin Uğur Yıldız | Huseyin Ugur Yildiz",
-          "path_id": 109093284,
-          "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "huguryildiz.com/students",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/writing/arxivisual-interactive-research-papers",
-          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
-          "path_id": 106826525,
-          "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/students",
-          "title": "Students | Huseyin Ugur Yildiz",
-          "path_id": 80840367,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/publications",
-          "title": "Publications | Huseyin Ugur Yildiz",
-          "path_id": 80750273,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/cv",
-          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
-          "path_id": 80749912,
-          "event": false,
-          "count": 1
-        }
-      ],
-      "events_total": 0,
-      "events": [],
-      "hourly": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
-        0,
-        1,
-        5,
-        2,
-        2,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
-        0,
-        0,
-        2,
-        1
-      ],
-      "countries_total": 2,
-      "countries": [
-        {
-          "code": "TR",
-          "name": "Turkey",
-          "count": 3
-        },
-        {
-          "code": "US",
-          "name": "United States",
-          "count": 3
-        }
-      ],
-      "referrers_total": 4,
-      "referrers": [
-        {
-          "name": "www.linkedin.com",
-          "count": 2
-        },
-        {
-          "name": "Google",
-          "count": 1
-        },
-        {
-          "name": "bing.com",
-          "count": 1
-        },
-        {
-          "name": "scholar.google.com",
-          "count": 1
-        }
-      ],
-      "browsers_total": 2,
-      "browsers": [
-        {
-          "name": "Chrome",
-          "count": 3
-        },
-        {
-          "name": "Safari",
-          "count": 3
-        }
-      ],
-      "systems_total": 3,
-      "systems": [
-        {
-          "name": "iOS",
-          "count": 2
-        },
-        {
-          "name": "macOS",
-          "count": 2
-        },
-        {
-          "name": "Windows",
-          "count": 2
-        }
-      ],
-      "sizes_total": 0,
-      "sizes": [],
-      "languages_total": 2,
-      "languages": [
-        {
-          "name": "English",
-          "count": 5
-        },
-        {
-          "name": "Turkish",
-          "count": 1
-        }
-      ],
-      "regions_total": 2,
-      "regions": [
-        {
-          "name": "İstanbul",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "34",
-          "count": 2
-        },
-        {
-          "name": "Georgia",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 2
-        }
-      ],
-      "regions_unmatched": []
-    },
     "7d": {
       "label": "Last 7 days",
-      "start": "2026-11-03",
-      "end": "2026-11-09",
-      "pageviews": 93,
+      "start": "2026-11-04",
+      "end": "2026-11-10",
+      "pageviews": 91,
       "pages_total": 19,
       "pages": [
         {
@@ -376,15 +300,15 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 17,
+          "count": 16,
           "refs": [
             {
               "name": "Google",
-              "count": 4
+              "count": 5
             },
             {
               "name": "www.linkedin.com",
-              "count": 3
+              "count": 4
             },
             {
               "name": "bing.com",
@@ -405,11 +329,11 @@
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
           "event": false,
-          "count": 10,
+          "count": 9,
           "refs": [
             {
               "name": "Google",
-              "count": 9
+              "count": 8
             }
           ]
         },
@@ -431,21 +355,28 @@
           ]
         },
         {
-          "path": "/cv",
-          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
-          "path_id": 80749912,
+          "path": "/research",
+          "title": "Research | Huseyin Ugur Yildiz",
+          "path_id": 80750374,
           "event": false,
           "count": 5,
           "refs": [
             {
-              "name": "huguryildiz.com/writing",
-              "count": 1
+              "name": "huguryildiz.com",
+              "count": 2
             },
             {
-              "name": "huguryildiz.com/software",
+              "name": "huguryildiz.com/students",
               "count": 1
             }
           ]
+        },
+        {
+          "path": "/cv",
+          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
+          "path_id": 80749912,
+          "event": false,
+          "count": 5
         },
         {
           "path": "/writing/chatgpt-pro-research-workflow",
@@ -476,25 +407,11 @@
           "count": 4
         },
         {
-          "path": "/research",
-          "title": "Research | Huseyin Ugur Yildiz",
-          "path_id": 80750374,
-          "event": false,
-          "count": 4
-        },
-        {
           "path": "/software",
           "title": "Software – Hüseyin Uğur Yıldız | Huseyin Ugur Yildiz",
           "path_id": 109093284,
           "event": false,
           "count": 3
-        },
-        {
-          "path": "/writing/local-first-latex-workflow",
-          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
-          "path_id": 98713527,
-          "event": false,
-          "count": 2
         },
         {
           "path": "/writing/ieee-twc-submission-cap",
@@ -518,6 +435,13 @@
           "count": 1
         },
         {
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
+          "event": false,
+          "count": 1
+        },
+        {
           "path": "/writing/can-llms-jump-scientific-discovery",
           "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
           "path_id": 104195821,
@@ -532,9 +456,9 @@
           "count": 1
         },
         {
-          "path": "/service",
-          "title": "Service | Huseyin Ugur Yildiz",
-          "path_id": 80843167,
+          "path": "/writing/local-first-latex-workflow",
+          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+          "path_id": 98713527,
           "event": false,
           "count": 1
         },
@@ -560,19 +484,19 @@
         3,
         2,
         3,
-        4,
+        1,
         0,
         9,
         0,
         1,
-        4,
-        1,
+        6,
+        2,
         7,
-        8,
+        9,
         3,
         3,
         2,
-        3,
+        2,
         12,
         6,
         1,
@@ -580,7 +504,7 @@
         4,
         2,
         2,
-        5
+        3
       ],
       "countries_total": 10,
       "countries": [
@@ -789,21 +713,21 @@
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-10-11",
-      "end": "2026-11-09",
-      "pageviews": 292,
-      "pages_total": 26,
+      "start": "2026-10-12",
+      "end": "2026-11-10",
+      "pageviews": 289,
+      "pages_total": 27,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 53,
+          "count": 51,
           "refs": [
             {
               "name": "Google",
-              "count": 8
+              "count": 9
             },
             {
               "name": "www.linkedin.com",
@@ -912,7 +836,7 @@
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
           "event": false,
-          "count": 18
+          "count": 16
         },
         {
           "path": "/students",
@@ -933,7 +857,7 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 11
+          "count": 12
         },
         {
           "path": "/cv",
@@ -999,13 +923,6 @@
           "count": 3
         },
         {
-          "path": "/stats",
-          "title": "Site Stats | Huseyin Ugur Yildiz",
-          "path_id": 95945764,
-          "event": false,
-          "count": 3
-        },
-        {
           "path": "/404.html",
           "title": "Page Not Found Huseyin Ugur Yildiz",
           "path_id": 80992097,
@@ -1016,6 +933,13 @@
           "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
           "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
           "path_id": 99994300,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/stats",
+          "title": "Site Stats | Huseyin Ugur Yildiz",
+          "path_id": 95945764,
           "event": false,
           "count": 2
         },
@@ -1048,6 +972,13 @@
           "count": 1
         },
         {
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
+          "event": false,
+          "count": 1
+        },
+        {
           "path": "/terms",
           "title": "Terms and Privacy Policy | Huseyin Ugur Yildiz",
           "path_id": 96451161,
@@ -1075,28 +1006,28 @@
       "hourly": [
         8,
         24,
-        7,
+        6,
         8,
         5,
         13,
         6,
         3,
-        15,
-        7,
-        16,
-        15,
+        17,
+        8,
+        17,
+        13,
         9,
         12,
         10,
         23,
         23,
         13,
-        12,
+        11,
         23,
         11,
         8,
         9,
-        12
+        9
       ],
       "countries_total": 14,
       "countries": [
@@ -1108,16 +1039,16 @@
         {
           "code": "US",
           "name": "United States",
-          "count": 13
-        },
-        {
-          "code": "SG",
-          "name": "Singapore",
-          "count": 4
+          "count": 12
         },
         {
           "code": "GB",
           "name": "United Kingdom",
+          "count": 3
+        },
+        {
+          "code": "SG",
+          "name": "Singapore",
           "count": 3
         },
         {
@@ -1175,7 +1106,7 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 8
+          "count": 9
         },
         {
           "name": "www.linkedin.com",
@@ -1202,11 +1133,11 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 28
+          "count": 27
         },
         {
           "name": "Safari",
-          "count": 18
+          "count": 17
         },
         {
           "name": "Firefox",
@@ -1217,15 +1148,15 @@
       "systems": [
         {
           "name": "Windows",
-          "count": 17
+          "count": 16
         },
         {
           "name": "macOS",
-          "count": 14
+          "count": 15
         },
         {
           "name": "iOS",
-          "count": 12
+          "count": 10
         },
         {
           "name": "Linux",
@@ -1246,7 +1177,7 @@
       "languages": [
         {
           "name": "English",
-          "count": 36
+          "count": 34
         },
         {
           "name": "Turkish",
@@ -1295,13 +1226,6 @@
           "count": 2
         },
         {
-          "name": "Texas",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 2
-        },
-        {
           "name": "Latium",
           "country": "Italy",
           "country_code": "IT",
@@ -1323,6 +1247,13 @@
           "count": 1
         },
         {
+          "name": "Texas",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 1
+        },
+        {
           "name": "Virginia",
           "country": "United States",
           "country_code": "US",
@@ -1334,21 +1265,21 @@
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-08-12",
-      "end": "2026-11-09",
-      "pageviews": 568,
-      "pages_total": 33,
+      "start": "2026-08-13",
+      "end": "2026-11-10",
+      "pageviews": 566,
+      "pages_total": 32,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 159,
+          "count": 160,
           "refs": [
             {
               "name": "Google",
-              "count": 26
+              "count": 27
             },
             {
               "name": "www.linkedin.com",
@@ -1373,11 +1304,11 @@
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
           "event": false,
-          "count": 51,
+          "count": 52,
           "refs": [
             {
               "name": "Google",
-              "count": 46
+              "count": 47
             },
             {
               "name": "huguryildiz.com/writing",
@@ -1394,7 +1325,7 @@
           "title": "Huseyin Ugur Yildiz",
           "path_id": 80750338,
           "event": false,
-          "count": 44,
+          "count": 43,
           "refs": [
             {
               "name": "Google",
@@ -1406,7 +1337,7 @@
             },
             {
               "name": "huguryildiz.com/writing",
-              "count": 5
+              "count": 4
             },
             {
               "name": "huguryildiz.com/research",
@@ -1414,35 +1345,6 @@
             },
             {
               "name": "huguryildiz.com/students",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/publications",
-          "title": "Publications | Huseyin Ugur Yildiz",
-          "path_id": 80750273,
-          "event": false,
-          "count": 33,
-          "refs": [
-            {
-              "name": "huguryildiz.com",
-              "count": 11
-            },
-            {
-              "name": "huguryildiz.com/research",
-              "count": 6
-            },
-            {
-              "name": "huguryildiz.com/writing/arxivisual-interactive-research-papers",
-              "count": 2
-            },
-            {
-              "name": "huguryildiz.com/writing",
-              "count": 1
-            },
-            {
-              "name": "huguryildiz.com/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
               "count": 1
             }
           ]
@@ -1469,18 +1371,47 @@
           ]
         },
         {
+          "path": "/publications",
+          "title": "Publications | Huseyin Ugur Yildiz",
+          "path_id": 80750273,
+          "event": false,
+          "count": 32,
+          "refs": [
+            {
+              "name": "huguryildiz.com",
+              "count": 10
+            },
+            {
+              "name": "huguryildiz.com/research",
+              "count": 6
+            },
+            {
+              "name": "huguryildiz.com/writing/arxivisual-interactive-research-papers",
+              "count": 2
+            },
+            {
+              "name": "huguryildiz.com/writing",
+              "count": 1
+            },
+            {
+              "name": "huguryildiz.com/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
+              "count": 1
+            }
+          ]
+        },
+        {
           "path": "/students",
           "title": "Students | Huseyin Ugur Yildiz",
           "path_id": 80840367,
           "event": false,
-          "count": 31
+          "count": 30
         },
         {
           "path": "/research",
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 27
+          "count": 28
         },
         {
           "path": "/writing/iclr-2027-submission-volume-peer-review",
@@ -1497,18 +1428,18 @@
           "count": 22
         },
         {
-          "path": "/writing",
-          "title": "Writing | Huseyin Ugur Yildiz",
-          "path_id": 96360100,
-          "event": false,
-          "count": 21
-        },
-        {
           "path": "/cv",
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
           "count": 21
+        },
+        {
+          "path": "/writing",
+          "title": "Writing | Huseyin Ugur Yildiz",
+          "path_id": 96360100,
+          "event": false,
+          "count": 20
         },
         {
           "path": "/service",
@@ -1564,7 +1495,7 @@
           "title": "An academic rate limiter: IEEE TWC now caps authors at 36 new manuscripts a year | Huseyin Ugur Yildiz",
           "path_id": 96633631,
           "event": false,
-          "count": 6
+          "count": 5
         },
         {
           "path": "/stats",
@@ -1588,6 +1519,13 @@
           "count": 4
         },
         {
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
+          "event": false,
+          "count": 3
+        },
+        {
           "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
           "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
           "path_id": 99994300,
@@ -1605,13 +1543,6 @@
           "path": "/writing/internet-of-algae-lab",
           "title": "The Internet of Algae: modelling communication across four signaling channels | Huseyin Ugur Yildiz",
           "path_id": 106190485,
-          "event": false,
-          "count": 2
-        },
-        {
-          "path": "/writing/claude-watermark-academic-misconduct",
-          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
-          "path_id": 106047814,
           "event": false,
           "count": 2
         },
@@ -1640,13 +1571,6 @@
           "path": "/writing/google-antigravity-science-program",
           "title": "Selected for the Google Antigravity science program | Huseyin Ugur Yildiz",
           "path_id": 115424872,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/writing/llm-simulations-numerical-fidelity",
-          "title": "Visually convincing LLM simulations can conceal substantial differences in numerical fidelity | Huseyin Ugur Yildiz",
-          "path_id": 102215395,
           "event": false,
           "count": 1
         },
@@ -1712,14 +1636,14 @@
         14,
         10,
         13,
-        23,
-        15,
-        29,
-        26,
+        25,
+        16,
+        30,
+        27,
         20,
         34,
         22,
-        48,
+        41,
         30,
         24,
         29,
@@ -1734,7 +1658,7 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 77
+          "count": 79
         },
         {
           "code": "US",
@@ -1749,7 +1673,7 @@
         {
           "code": "SG",
           "name": "Singapore",
-          "count": 5
+          "count": 4
         },
         {
           "code": "DE",
@@ -1846,7 +1770,7 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 26
+          "count": 27
         },
         {
           "name": "www.linkedin.com",
@@ -1885,11 +1809,11 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 96
+          "count": 95
         },
         {
           "name": "Safari",
-          "count": 52
+          "count": 54
         },
         {
           "name": "Firefox",
@@ -1904,15 +1828,15 @@
       "systems": [
         {
           "name": "Windows",
-          "count": 56
+          "count": 55
         },
         {
           "name": "iOS",
-          "count": 41
+          "count": 42
         },
         {
           "name": "macOS",
-          "count": 26
+          "count": 27
         },
         {
           "name": "Android",
@@ -1933,11 +1857,11 @@
       "languages": [
         {
           "name": "English",
-          "count": 103
+          "count": 104
         },
         {
           "name": "Turkish",
-          "count": 41
+          "count": 42
         },
         {
           "name": "Russian",
@@ -1949,10 +1873,6 @@
         },
         {
           "name": "Italian",
-          "count": 2
-        },
-        {
-          "name": "Chinese",
           "count": 2
         },
         {
@@ -1970,6 +1890,10 @@
         {
           "name": "Swedish",
           "count": 1
+        },
+        {
+          "name": "Chinese",
+          "count": 1
         }
       ],
       "regions_total": 23,
@@ -1979,7 +1903,7 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 43
+          "count": 45
         },
         {
           "name": "İstanbul",
@@ -2070,9 +1994,9 @@
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-11-10",
-      "end": "2026-11-09",
-      "pageviews": 1566,
+      "start": "2025-11-11",
+      "end": "2026-11-10",
+      "pageviews": 1571,
       "pages_total": 39,
       "pages": [
         {
@@ -2080,15 +2004,15 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 547,
+          "count": 549,
           "refs": [
             {
               "name": "Google",
-              "count": 72
+              "count": 73
             },
             {
               "name": "www.linkedin.com",
-              "count": 52
+              "count": 53
             },
             {
               "name": "avesis.tedu.edu.tr",
@@ -2167,7 +2091,7 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 116,
+          "count": 117,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -2239,7 +2163,7 @@
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
           "event": false,
-          "count": 51
+          "count": 52
         },
         {
           "path": "/writing/openai-math-release-citations-withdrawals",
@@ -2375,6 +2299,13 @@
           "count": 4
         },
         {
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
+          "event": false,
+          "count": 3
+        },
+        {
           "path": "/writing/kairos-university-timetabling",
           "title": "A university timetable can look clean on paper and still break in operation | Huseyin Ugur Yildiz",
           "path_id": 96360102,
@@ -2392,13 +2323,6 @@
           "path": "/writing/internet-of-algae-lab",
           "title": "The Internet of Algae: modelling communication across four signaling channels | Huseyin Ugur Yildiz",
           "path_id": 106190485,
-          "event": false,
-          "count": 2
-        },
-        {
-          "path": "/writing/claude-watermark-academic-misconduct",
-          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
-          "path_id": 106047814,
           "event": false,
           "count": 2
         },
@@ -2513,10 +2437,10 @@
         25,
         14,
         26,
-        30,
-        39,
-        54,
-        77,
+        32,
+        40,
+        55,
+        78,
         55,
         95,
         91,
@@ -2535,7 +2459,7 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 323
+          "count": 325
         },
         {
           "code": "US",
@@ -2722,11 +2646,11 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 72
+          "count": 73
         },
         {
           "name": "www.linkedin.com",
-          "count": 52
+          "count": 53
         },
         {
           "name": "avesis.tedu.edu.tr",
@@ -2785,7 +2709,7 @@
         },
         {
           "name": "Safari",
-          "count": 193
+          "count": 195
         },
         {
           "name": "Firefox",
@@ -2800,7 +2724,7 @@
       "systems": [
         {
           "name": "iOS",
-          "count": 168
+          "count": 169
         },
         {
           "name": "Windows",
@@ -2808,7 +2732,7 @@
         },
         {
           "name": "macOS",
-          "count": 149
+          "count": 150
         },
         {
           "name": "Android",
@@ -2833,11 +2757,11 @@
         },
         {
           "name": "English",
-          "count": 131
+          "count": 132
         },
         {
           "name": "Turkish",
-          "count": 50
+          "count": 51
         },
         {
           "name": "Russian",
@@ -2879,7 +2803,7 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 54
+          "count": 56
         },
         {
           "name": "İstanbul",
@@ -2985,8 +2909,8 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-11-09",
-      "pageviews": 1566,
+      "end": "2026-11-10",
+      "pageviews": 1571,
       "pages_total": 39,
       "pages": [
         {
@@ -2994,15 +2918,15 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 547,
+          "count": 549,
           "refs": [
             {
               "name": "Google",
-              "count": 72
+              "count": 73
             },
             {
               "name": "www.linkedin.com",
-              "count": 52
+              "count": 53
             },
             {
               "name": "avesis.tedu.edu.tr",
@@ -3081,7 +3005,7 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 116,
+          "count": 117,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -3153,7 +3077,7 @@
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
           "event": false,
-          "count": 51
+          "count": 52
         },
         {
           "path": "/writing/openai-math-release-citations-withdrawals",
@@ -3289,6 +3213,13 @@
           "count": 4
         },
         {
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
+          "event": false,
+          "count": 3
+        },
+        {
           "path": "/writing/kairos-university-timetabling",
           "title": "A university timetable can look clean on paper and still break in operation | Huseyin Ugur Yildiz",
           "path_id": 96360102,
@@ -3306,13 +3237,6 @@
           "path": "/writing/internet-of-algae-lab",
           "title": "The Internet of Algae: modelling communication across four signaling channels | Huseyin Ugur Yildiz",
           "path_id": 106190485,
-          "event": false,
-          "count": 2
-        },
-        {
-          "path": "/writing/claude-watermark-academic-misconduct",
-          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
-          "path_id": 106047814,
           "event": false,
           "count": 2
         },
@@ -3427,10 +3351,10 @@
         25,
         14,
         26,
-        30,
-        39,
-        54,
-        77,
+        32,
+        40,
+        55,
+        78,
         55,
         95,
         91,
@@ -3449,7 +3373,7 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 323
+          "count": 325
         },
         {
           "code": "US",
@@ -3636,11 +3560,11 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 72
+          "count": 73
         },
         {
           "name": "www.linkedin.com",
-          "count": 52
+          "count": 53
         },
         {
           "name": "avesis.tedu.edu.tr",
@@ -3699,7 +3623,7 @@
         },
         {
           "name": "Safari",
-          "count": 193
+          "count": 195
         },
         {
           "name": "Firefox",
@@ -3714,7 +3638,7 @@
       "systems": [
         {
           "name": "iOS",
-          "count": 168
+          "count": 169
         },
         {
           "name": "Windows",
@@ -3722,7 +3646,7 @@
         },
         {
           "name": "macOS",
-          "count": 149
+          "count": 150
         },
         {
           "name": "Android",
@@ -3747,11 +3671,11 @@
         },
         {
           "name": "English",
-          "count": 131
+          "count": 132
         },
         {
           "name": "Turkish",
-          "count": 50
+          "count": 51
         },
         {
           "name": "Russian",
@@ -3793,7 +3717,7 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 54
+          "count": 56
         },
         {
           "name": "İstanbul",
@@ -5009,6 +4933,10 @@
     {
       "date": "2026-11-09",
       "views": 3
+    },
+    {
+      "date": "2026-11-10",
+      "views": 5
     }
   ],
   "daily_breakdowns": {
@@ -29649,13 +29577,117 @@
           "count": 1
         }
       ]
+    },
+    "2026-11-10": {
+      "pageviews": 5,
+      "pages": [
+        {
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/research",
+          "title": "Research | Huseyin Ugur Yildiz",
+          "path_id": 80750374,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries": [
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 2
+        }
+      ],
+      "referrers": [
+        {
+          "name": "Google",
+          "count": 1
+        },
+        {
+          "name": "www.linkedin.com",
+          "count": 1
+        }
+      ],
+      "browsers": [
+        {
+          "name": "Safari",
+          "count": 2
+        }
+      ],
+      "systems": [
+        {
+          "name": "iOS",
+          "count": 1
+        },
+        {
+          "name": "macOS",
+          "count": 1
+        }
+      ],
+      "sizes": [],
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        },
+        {
+          "name": "Turkish",
+          "count": 1
+        }
+      ]
     }
   },
   "page_series": [
     {
       "path": "/",
       "title": "Home | Huseyin Ugur Yildiz",
-      "count": 547,
+      "count": 549,
       "stats": [
         {
           "date": "2026-02-05",
@@ -30771,6 +30803,10 @@
         },
         {
           "date": "2026-11-10",
+          "views": 2
+        },
+        {
+          "date": "2026-11-11",
           "views": 0
         }
       ]
@@ -30778,7 +30814,7 @@
     {
       "path": "/research",
       "title": "Research | Huseyin Ugur Yildiz",
-      "count": 116,
+      "count": 117,
       "stats": [
         {
           "date": "2026-02-05",
@@ -31894,6 +31930,10 @@
         },
         {
           "date": "2026-11-10",
+          "views": 1
+        },
+        {
+          "date": "2026-11-11",
           "views": 0
         }
       ]
@@ -33018,6 +33058,10 @@
         {
           "date": "2026-11-10",
           "views": 0
+        },
+        {
+          "date": "2026-11-11",
+          "views": 0
         }
       ]
     },
@@ -33188,6 +33232,10 @@
         },
         {
           "date": "2026-11-10",
+          "views": 0
+        },
+        {
+          "date": "2026-11-11",
           "views": 0
         }
       ]
@@ -33635,6 +33683,10 @@
         },
         {
           "date": "2026-11-10",
+          "views": 0
+        },
+        {
+          "date": "2026-11-11",
           "views": 0
         }
       ]
@@ -34759,6 +34811,10 @@
         {
           "date": "2026-11-10",
           "views": 0
+        },
+        {
+          "date": "2026-11-11",
+          "views": 0
         }
       ]
     },
@@ -35878,6 +35934,10 @@
         {
           "date": "2026-11-10",
           "views": 0
+        },
+        {
+          "date": "2026-11-11",
+          "views": 0
         }
       ]
     },
@@ -36996,6 +37056,10 @@
         },
         {
           "date": "2026-11-10",
+          "views": 0
+        },
+        {
+          "date": "2026-11-11",
           "views": 0
         }
       ]
@@ -38120,13 +38184,21 @@
         {
           "date": "2026-11-10",
           "views": 0
+        },
+        {
+          "date": "2026-11-11",
+          "views": 0
         }
       ]
     }
   ],
-  "site": {},
+  "site": {
+    "timezone": "Europe/Istanbul",
+    "first_hit_at": "2026-02-05T12:24:02.263206Z",
+    "data_retention_days": 0
+  },
   "totals": {
-    "pageviews": 1566,
+    "pageviews": 1571,
     "visitors": null
   },
   "pages": [
@@ -38135,15 +38207,15 @@
       "title": "Home | Huseyin Ugur Yildiz",
       "path_id": 80749188,
       "event": false,
-      "count": 547,
+      "count": 549,
       "refs": [
         {
           "name": "Google",
-          "count": 72
+          "count": 73
         },
         {
           "name": "www.linkedin.com",
-          "count": 52
+          "count": 53
         },
         {
           "name": "avesis.tedu.edu.tr",
@@ -38222,7 +38294,7 @@
       "title": "Research | Huseyin Ugur Yildiz",
       "path_id": 80750374,
       "event": false,
-      "count": 116,
+      "count": 117,
       "refs": [
         {
           "name": "huguryildiz.com",
@@ -38294,7 +38366,7 @@
       "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
       "path_id": 106826525,
       "event": false,
-      "count": 51
+      "count": 52
     },
     {
       "path": "/writing/openai-math-release-citations-withdrawals",
@@ -38430,6 +38502,13 @@
       "count": 4
     },
     {
+      "path": "/writing/claude-watermark-academic-misconduct",
+      "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+      "path_id": 106047814,
+      "event": false,
+      "count": 3
+    },
+    {
       "path": "/writing/kairos-university-timetabling",
       "title": "A university timetable can look clean on paper and still break in operation | Huseyin Ugur Yildiz",
       "path_id": 96360102,
@@ -38447,13 +38526,6 @@
       "path": "/writing/internet-of-algae-lab",
       "title": "The Internet of Algae: modelling communication across four signaling channels | Huseyin Ugur Yildiz",
       "path_id": 106190485,
-      "event": false,
-      "count": 2
-    },
-    {
-      "path": "/writing/claude-watermark-academic-misconduct",
-      "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
-      "path_id": 106047814,
       "event": false,
       "count": 2
     },
@@ -38518,7 +38590,7 @@
     {
       "code": "TR",
       "name": "Turkey",
-      "count": 323
+      "count": 325
     },
     {
       "code": "US",
@@ -38704,11 +38776,11 @@
   "referrers": [
     {
       "name": "Google",
-      "count": 72
+      "count": 73
     },
     {
       "name": "www.linkedin.com",
-      "count": 52
+      "count": 53
     },
     {
       "name": "avesis.tedu.edu.tr",
@@ -38766,7 +38838,7 @@
     },
     {
       "name": "Safari",
-      "count": 193
+      "count": 195
     },
     {
       "name": "Firefox",
@@ -38780,7 +38852,7 @@
   "systems": [
     {
       "name": "iOS",
-      "count": 168
+      "count": 169
     },
     {
       "name": "Windows",
@@ -38788,7 +38860,7 @@
     },
     {
       "name": "macOS",
-      "count": 149
+      "count": 150
     },
     {
       "name": "Android",
