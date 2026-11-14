@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-13T10:42:36Z",
+  "updated": "2026-11-14T09:56:52Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-11-13"
+    "end": "2026-11-14"
   },
   "window_order": [
     "today",
@@ -16,11 +16,19 @@
   "windows": {
     "today": {
       "label": "Today",
-      "start": "2026-11-13",
-      "end": "2026-11-13",
-      "pageviews": 0,
-      "pages_total": 0,
-      "pages": [],
+      "start": "2026-11-14",
+      "end": "2026-11-14",
+      "pageviews": 1,
+      "pages_total": 1,
+      "pages": [
+        {
+          "path": "/research",
+          "title": "Research | Huseyin Ugur Yildiz",
+          "path_id": 80750374,
+          "event": false,
+          "count": 1
+        }
+      ],
       "events_total": 0,
       "events": [],
       "hourly": [
@@ -33,7 +41,7 @@
         0,
         0,
         0,
-        0,
+        1,
         0,
         0,
         0,
@@ -49,46 +57,54 @@
         0,
         0
       ],
-      "countries_total": 0,
-      "countries": [],
+      "countries_total": 1,
+      "countries": [
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "count": 1
+        }
+      ],
       "referrers_total": 0,
       "referrers": [],
-      "browsers_total": 0,
-      "browsers": [],
-      "systems_total": 0,
-      "systems": [],
+      "browsers_total": 1,
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        }
+      ],
+      "systems_total": 1,
+      "systems": [
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 0,
-      "languages": [],
+      "languages_total": 1,
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        }
+      ],
       "regions_total": 0,
       "regions": [],
       "regions_unmatched": []
     },
     "yesterday": {
       "label": "Yesterday",
-      "start": "2026-11-12",
-      "end": "2026-11-12",
-      "pageviews": 4,
-      "pages_total": 3,
+      "start": "2026-11-13",
+      "end": "2026-11-13",
+      "pageviews": 2,
+      "pages_total": 2,
       "pages": [
         {
-          "path": "/writing/iclr-2027-submission-volume-peer-review",
-          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
-          "path_id": 116031638,
-          "event": false,
-          "count": 2,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 2
-            }
-          ]
-        },
-        {
-          "path": "/writing/claude-watermark-academic-misconduct",
-          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
-          "path_id": 106047814,
+          "path": "/writing/ai-layoff-trap",
+          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
+          "path_id": 110093766,
           "event": false,
           "count": 1,
           "refs": [
@@ -99,9 +115,9 @@
           ]
         },
         {
-          "path": "/writing/local-first-latex-workflow",
-          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
-          "path_id": 98713527,
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
           "event": false,
           "count": 1,
           "refs": [
@@ -117,59 +133,55 @@
       "hourly": [
         0,
         0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
         1,
         0,
         0,
         0,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1
+        0
       ],
       "countries_total": 1,
       "countries": [
         {
-          "code": "US",
-          "name": "United States",
-          "count": 2
+          "code": "AU",
+          "name": "Australia",
+          "count": 1
         }
       ],
       "referrers_total": 1,
       "referrers": [
         {
           "name": "Google",
-          "count": 2
+          "count": 1
         }
       ],
       "browsers_total": 1,
       "browsers": [
         {
           "name": "Chrome",
-          "count": 2
+          "count": 1
         }
       ],
-      "systems_total": 2,
+      "systems_total": 1,
       "systems": [
         {
-          "name": "Linux",
-          "count": 1
-        },
-        {
-          "name": "Windows",
+          "name": "Android",
           "count": 1
         }
       ],
@@ -179,22 +191,15 @@
       "languages": [
         {
           "name": "English",
-          "count": 2
+          "count": 1
         }
       ],
-      "regions_total": 2,
+      "regions_total": 1,
       "regions": [
         {
-          "name": "New York",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 1
-        },
-        {
-          "name": "Pennsylvania",
-          "country": "United States",
-          "country_code": "US",
+          "name": "Western Australia",
+          "country": "Australia",
+          "country_code": "AU",
           "code": null,
           "count": 1
         }
@@ -203,28 +208,24 @@
     },
     "7d": {
       "label": "Last 7 days",
-      "start": "2026-11-07",
-      "end": "2026-11-13",
-      "pageviews": 57,
-      "pages_total": 18,
+      "start": "2026-11-08",
+      "end": "2026-11-14",
+      "pageviews": 44,
+      "pages_total": 17,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 14,
+          "count": 12,
           "refs": [
             {
               "name": "www.linkedin.com",
-              "count": 4
+              "count": 3
             },
             {
               "name": "Google",
-              "count": 2
-            },
-            {
-              "name": "huguryildiz.com/writing/arxivisual-interactive-research-papers",
               "count": 2
             },
             {
@@ -234,19 +235,10 @@
             {
               "name": "localhost:8501",
               "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/writing/iclr-2027-submission-volume-peer-review",
-          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
-          "path_id": 116031638,
-          "event": false,
-          "count": 7,
-          "refs": [
+            },
             {
-              "name": "Google",
-              "count": 6
+              "name": "scholar.google.com",
+              "count": 1
             }
           ]
         },
@@ -255,11 +247,24 @@
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
           "event": false,
-          "count": 7,
+          "count": 5,
           "refs": [
             {
               "name": "Google",
-              "count": 7
+              "count": 5
+            }
+          ]
+        },
+        {
+          "path": "/writing/iclr-2027-submission-volume-peer-review",
+          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
+          "path_id": 116031638,
+          "event": false,
+          "count": 4,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 4
             }
           ]
         },
@@ -268,31 +273,10 @@
           "title": "Students | Huseyin Ugur Yildiz",
           "path_id": 80840367,
           "event": false,
-          "count": 5,
+          "count": 3,
           "refs": [
             {
               "name": "huguryildiz.com",
-              "count": 2
-            },
-            {
-              "name": "huguryildiz.com/publications",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/publications",
-          "title": "Publications | Huseyin Ugur Yildiz",
-          "path_id": 80750273,
-          "event": false,
-          "count": 4,
-          "refs": [
-            {
-              "name": "huguryildiz.com",
-              "count": 1
-            },
-            {
-              "name": "huguryildiz.com/research",
               "count": 1
             }
           ]
@@ -302,7 +286,13 @@
           "title": "Where ChatGPT Pro reasoning fits in a research workflow | Huseyin Ugur Yildiz",
           "path_id": 113231349,
           "event": false,
-          "count": 2
+          "count": 2,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 2
+            }
+          ]
         },
         {
           "path": "/writing/claude-watermark-academic-misconduct",
@@ -347,16 +337,9 @@
           "count": 2
         },
         {
-          "path": "/writing/context-management-long-running-agentic-coding-sessions",
-          "title": "Context management in long-running agentic coding sessions | Huseyin Ugur Yildiz",
-          "path_id": 119722240,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/writing/openai-math-release-citations-withdrawals",
-          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
-          "path_id": 112277958,
+          "path": "/writing/ai-layoff-trap",
+          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
+          "path_id": 110093766,
           "event": false,
           "count": 1
         },
@@ -387,40 +370,39 @@
           "path_id": 80992097,
           "event": false,
           "count": 1
-        }
-      ],
-      "events_total": 1,
-      "events": [
+        },
         {
-          "path": "cv-pdf",
-          "title": "CV (PDF), from the CV page",
-          "path_id": 96697209,
-          "event": true,
+          "path": "/publications",
+          "title": "Publications | Huseyin Ugur Yildiz",
+          "path_id": 80750273,
+          "event": false,
           "count": 1
         }
       ],
+      "events_total": 0,
+      "events": [],
       "hourly": [
-        1,
-        1,
-        6,
+        0,
+        0,
+        5,
+        0,
+        0,
+        3,
         1,
         0,
+        3,
+        3,
         8,
-        1,
-        0,
-        4,
+        3,
         2,
-        8,
-        3,
-        3,
-        1,
+        0,
         3,
         4,
         1,
         1,
-        0,
         1,
-        3,
+        1,
+        0,
         0,
         2,
         3
@@ -430,7 +412,7 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 7
+          "count": 6
         },
         {
           "code": "US",
@@ -438,13 +420,13 @@
           "count": 4
         },
         {
-          "code": "IN",
-          "name": "India",
-          "count": 2
-        },
-        {
           "code": "ES",
           "name": "Spain",
+          "count": 1
+        },
+        {
+          "code": "IN",
+          "name": "India",
           "count": 1
         }
       ],
@@ -452,7 +434,7 @@
       "referrers": [
         {
           "name": "www.linkedin.com",
-          "count": 4
+          "count": 3
         },
         {
           "name": "Google",
@@ -478,12 +460,12 @@
       "browsers_total": 3,
       "browsers": [
         {
-          "name": "Safari",
-          "count": 7
-        },
-        {
           "name": "Chrome",
           "count": 6
+        },
+        {
+          "name": "Safari",
+          "count": 5
         },
         {
           "name": "Firefox",
@@ -494,11 +476,11 @@
       "systems": [
         {
           "name": "iOS",
-          "count": 4
+          "count": 3
         },
         {
           "name": "macOS",
-          "count": 4
+          "count": 3
         },
         {
           "name": "Windows",
@@ -519,11 +501,11 @@
       "languages": [
         {
           "name": "English",
-          "count": 9
+          "count": 8
         },
         {
           "name": "Turkish",
-          "count": 4
+          "count": 3
         },
         {
           "name": "Spanish",
@@ -533,18 +515,18 @@
       "regions_total": 6,
       "regions": [
         {
-          "name": "Ankara",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "06",
-          "count": 3
-        },
-        {
           "name": "İstanbul",
           "country": "Turkey",
           "country_code": "TR",
           "code": "34",
           "count": 3
+        },
+        {
+          "name": "Ankara",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "06",
+          "count": 2
         },
         {
           "name": "Georgia",
@@ -561,16 +543,16 @@
           "count": 1
         },
         {
-          "name": "Karnataka",
-          "country": "India",
-          "country_code": "IN",
+          "name": "Madrid",
+          "country": "Spain",
+          "country_code": "ES",
           "code": null,
           "count": 1
         },
         {
-          "name": "Madrid",
-          "country": "Spain",
-          "country_code": "ES",
+          "name": "Karnataka",
+          "country": "India",
+          "country_code": "IN",
           "code": null,
           "count": 1
         }
@@ -579,9 +561,9 @@
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-10-15",
-      "end": "2026-11-13",
-      "pageviews": 284,
+      "start": "2026-10-16",
+      "end": "2026-11-14",
+      "pageviews": 285,
       "pages_total": 27,
       "pages": [
         {
@@ -618,11 +600,11 @@
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
           "event": false,
-          "count": 36,
+          "count": 37,
           "refs": [
             {
               "name": "Google",
-              "count": 33
+              "count": 34
             },
             {
               "name": "www.bing.com",
@@ -673,7 +655,7 @@
           "title": "Huseyin Ugur Yildiz",
           "path_id": 80750338,
           "event": false,
-          "count": 17,
+          "count": 16,
           "refs": [
             {
               "name": "Google",
@@ -698,13 +680,6 @@
           ]
         },
         {
-          "path": "/students",
-          "title": "Students | Huseyin Ugur Yildiz",
-          "path_id": 80840367,
-          "event": false,
-          "count": 15
-        },
-        {
           "path": "/publications",
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
@@ -712,11 +687,18 @@
           "count": 15
         },
         {
+          "path": "/students",
+          "title": "Students | Huseyin Ugur Yildiz",
+          "path_id": 80840367,
+          "event": false,
+          "count": 14
+        },
+        {
           "path": "/research",
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 12
+          "count": 13
         },
         {
           "path": "/writing/local-first-latex-workflow",
@@ -761,18 +743,18 @@
           "count": 6
         },
         {
+          "path": "/writing/ai-layoff-trap",
+          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
+          "path_id": 110093766,
+          "event": false,
+          "count": 4
+        },
+        {
           "path": "/service",
           "title": "Service | Huseyin Ugur Yildiz",
           "path_id": 80843167,
           "event": false,
           "count": 4
-        },
-        {
-          "path": "/writing/ai-layoff-trap",
-          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
-          "path_id": 110093766,
-          "event": false,
-          "count": 3
         },
         {
           "path": "/404.html",
@@ -871,7 +853,7 @@
       ],
       "hourly": [
         7,
-        23,
+        22,
         10,
         8,
         5,
@@ -879,16 +861,16 @@
         7,
         3,
         17,
-        7,
+        8,
         19,
         13,
         7,
         11,
         12,
-        25,
-        22,
+        26,
+        21,
         13,
-        10,
+        11,
         24,
         6,
         6,
@@ -1150,9 +1132,9 @@
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-08-16",
-      "end": "2026-11-13",
-      "pageviews": 579,
+      "start": "2026-08-17",
+      "end": "2026-11-14",
+      "pageviews": 582,
       "pages_total": 32,
       "pages": [
         {
@@ -1189,11 +1171,11 @@
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
           "event": false,
-          "count": 54,
+          "count": 55,
           "refs": [
             {
               "name": "Google",
-              "count": 49
+              "count": 50
             },
             {
               "name": "huguryildiz.com/writing",
@@ -1296,7 +1278,7 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 28
+          "count": 29
         },
         {
           "path": "/writing/iclr-2027-submission-volume-peer-review",
@@ -1376,6 +1358,13 @@
           "count": 7
         },
         {
+          "path": "/writing/ai-layoff-trap",
+          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
+          "path_id": 110093766,
+          "event": false,
+          "count": 5
+        },
+        {
           "path": "/writing/ieee-twc-submission-cap",
           "title": "An academic rate limiter: IEEE TWC now caps authors at 36 new manuscripts a year | Huseyin Ugur Yildiz",
           "path_id": 96633631,
@@ -1393,13 +1382,6 @@
           "path": "/writing/asd-ste100-controlled-english-for-llms",
           "title": "Andrej Karpathy on LLMs and ASD-STE100 controlled English | Huseyin Ugur Yildiz",
           "path_id": 110726689,
-          "event": false,
-          "count": 4
-        },
-        {
-          "path": "/writing/ai-layoff-trap",
-          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
-          "path_id": 110093766,
           "event": false,
           "count": 4
         },
@@ -1522,16 +1504,16 @@
         11,
         12,
         24,
-        16,
+        17,
         32,
         27,
         20,
         34,
         24,
-        44,
+        45,
         31,
         24,
-        28,
+        29,
         31,
         24,
         36,
@@ -1887,9 +1869,9 @@
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-11-14",
-      "end": "2026-11-13",
-      "pageviews": 1589,
+      "start": "2025-11-15",
+      "end": "2026-11-14",
+      "pageviews": 1592,
       "pages_total": 39,
       "pages": [
         {
@@ -1984,7 +1966,7 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 117,
+          "count": 118,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -2056,7 +2038,7 @@
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
           "event": false,
-          "count": 54
+          "count": 55
         },
         {
           "path": "/writing/openai-math-release-citations-withdrawals",
@@ -2150,6 +2132,13 @@
           "count": 7
         },
         {
+          "path": "/writing/ai-layoff-trap",
+          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
+          "path_id": 110093766,
+          "event": false,
+          "count": 5
+        },
+        {
           "path": "/terms",
           "title": "Terms and Privacy Policy | Huseyin Ugur Yildiz",
           "path_id": 96451161,
@@ -2160,13 +2149,6 @@
           "path": "/writing/asd-ste100-controlled-english-for-llms",
           "title": "Andrej Karpathy on LLMs and ASD-STE100 controlled English | Huseyin Ugur Yildiz",
           "path_id": 110726689,
-          "event": false,
-          "count": 4
-        },
-        {
-          "path": "/writing/ai-layoff-trap",
-          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
-          "path_id": 110093766,
           "event": false,
           "count": 4
         },
@@ -2331,16 +2313,16 @@
         15,
         26,
         32,
-        40,
+        41,
         57,
         78,
         55,
         95,
         93,
-        102,
+        103,
         105,
         66,
-        104,
+        105,
         82,
         60,
         67,
@@ -2815,8 +2797,8 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-11-13",
-      "pageviews": 1589,
+      "end": "2026-11-14",
+      "pageviews": 1592,
       "pages_total": 39,
       "pages": [
         {
@@ -2911,7 +2893,7 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 117,
+          "count": 118,
           "refs": [
             {
               "name": "huguryildiz.com",
@@ -2983,7 +2965,7 @@
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
           "event": false,
-          "count": 54
+          "count": 55
         },
         {
           "path": "/writing/openai-math-release-citations-withdrawals",
@@ -3077,6 +3059,13 @@
           "count": 7
         },
         {
+          "path": "/writing/ai-layoff-trap",
+          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
+          "path_id": 110093766,
+          "event": false,
+          "count": 5
+        },
+        {
           "path": "/terms",
           "title": "Terms and Privacy Policy | Huseyin Ugur Yildiz",
           "path_id": 96451161,
@@ -3087,13 +3076,6 @@
           "path": "/writing/asd-ste100-controlled-english-for-llms",
           "title": "Andrej Karpathy on LLMs and ASD-STE100 controlled English | Huseyin Ugur Yildiz",
           "path_id": 110726689,
-          "event": false,
-          "count": 4
-        },
-        {
-          "path": "/writing/ai-layoff-trap",
-          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
-          "path_id": 110093766,
           "event": false,
           "count": 4
         },
@@ -3258,16 +3240,16 @@
         15,
         26,
         32,
-        40,
+        41,
         57,
         78,
         55,
         95,
         93,
-        102,
+        103,
         105,
         66,
-        104,
+        105,
         82,
         60,
         67,
@@ -4867,7 +4849,11 @@
     },
     {
       "date": "2026-11-13",
-      "views": 0
+      "views": 2
+    },
+    {
+      "date": "2026-11-14",
+      "views": 1
     }
   ],
   "daily_breakdowns": {
@@ -29866,8 +29852,23 @@
       ]
     },
     "2026-11-13": {
-      "pageviews": 0,
-      "pages": [],
+      "pageviews": 2,
+      "pages": [
+        {
+          "path": "/writing/ai-layoff-trap",
+          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
+          "path_id": 110093766,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
+          "event": false,
+          "count": 1
+        }
+      ],
       "events": [],
       "hourly": [
         0,
@@ -29885,6 +29886,77 @@
         0,
         0,
         0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries": [
+        {
+          "code": "AU",
+          "name": "Australia",
+          "count": 1
+        }
+      ],
+      "referrers": [
+        {
+          "name": "Google",
+          "count": 1
+        }
+      ],
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        }
+      ],
+      "systems": [
+        {
+          "name": "Android",
+          "count": 1
+        }
+      ],
+      "sizes": [],
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        }
+      ]
+    },
+    "2026-11-14": {
+      "pageviews": 1,
+      "pages": [
+        {
+          "path": "/research",
+          "title": "Research | Huseyin Ugur Yildiz",
+          "path_id": 80750374,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0,
@@ -29895,12 +29967,33 @@
         0,
         0
       ],
-      "countries": [],
+      "countries": [
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "count": 1
+        }
+      ],
       "referrers": [],
-      "browsers": [],
-      "systems": [],
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        }
+      ],
+      "systems": [
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
       "sizes": [],
-      "languages": []
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        }
+      ]
     }
   },
   "page_series": [
@@ -31040,13 +31133,17 @@
         {
           "date": "2026-11-14",
           "views": 0
+        },
+        {
+          "date": "2026-11-15",
+          "views": 0
         }
       ]
     },
     {
       "path": "/research",
       "title": "Research | Huseyin Ugur Yildiz",
-      "count": 117,
+      "count": 118,
       "stats": [
         {
           "date": "2026-02-05",
@@ -32178,6 +32275,10 @@
         },
         {
           "date": "2026-11-14",
+          "views": 1
+        },
+        {
+          "date": "2026-11-15",
           "views": 0
         }
       ]
@@ -33318,6 +33419,10 @@
         {
           "date": "2026-11-14",
           "views": 0
+        },
+        {
+          "date": "2026-11-15",
+          "views": 0
         }
       ]
     },
@@ -33504,6 +33609,10 @@
         },
         {
           "date": "2026-11-14",
+          "views": 0
+        },
+        {
+          "date": "2026-11-15",
           "views": 0
         }
       ]
@@ -33967,6 +34076,10 @@
         },
         {
           "date": "2026-11-14",
+          "views": 0
+        },
+        {
+          "date": "2026-11-15",
           "views": 0
         }
       ]
@@ -35107,6 +35220,10 @@
         {
           "date": "2026-11-14",
           "views": 0
+        },
+        {
+          "date": "2026-11-15",
+          "views": 0
         }
       ]
     },
@@ -36242,6 +36359,10 @@
         {
           "date": "2026-11-14",
           "views": 0
+        },
+        {
+          "date": "2026-11-15",
+          "views": 0
         }
       ]
     },
@@ -37376,6 +37497,10 @@
         },
         {
           "date": "2026-11-14",
+          "views": 0
+        },
+        {
+          "date": "2026-11-15",
           "views": 0
         }
       ]
@@ -38516,17 +38641,17 @@
         {
           "date": "2026-11-14",
           "views": 0
+        },
+        {
+          "date": "2026-11-15",
+          "views": 0
         }
       ]
     }
   ],
-  "site": {
-    "timezone": "Europe/Istanbul",
-    "first_hit_at": "2026-02-05T12:24:02.263206Z",
-    "data_retention_days": 0
-  },
+  "site": {},
   "totals": {
-    "pageviews": 1589,
+    "pageviews": 1592,
     "visitors": null
   },
   "pages": [
@@ -38622,7 +38747,7 @@
       "title": "Research | Huseyin Ugur Yildiz",
       "path_id": 80750374,
       "event": false,
-      "count": 117,
+      "count": 118,
       "refs": [
         {
           "name": "huguryildiz.com",
@@ -38694,7 +38819,7 @@
       "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
       "path_id": 106826525,
       "event": false,
-      "count": 54
+      "count": 55
     },
     {
       "path": "/writing/openai-math-release-citations-withdrawals",
@@ -38788,6 +38913,13 @@
       "count": 7
     },
     {
+      "path": "/writing/ai-layoff-trap",
+      "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
+      "path_id": 110093766,
+      "event": false,
+      "count": 5
+    },
+    {
       "path": "/terms",
       "title": "Terms and Privacy Policy | Huseyin Ugur Yildiz",
       "path_id": 96451161,
@@ -38798,13 +38930,6 @@
       "path": "/writing/asd-ste100-controlled-english-for-llms",
       "title": "Andrej Karpathy on LLMs and ASD-STE100 controlled English | Huseyin Ugur Yildiz",
       "path_id": 110726689,
-      "event": false,
-      "count": 4
-    },
-    {
-      "path": "/writing/ai-layoff-trap",
-      "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
-      "path_id": 110093766,
       "event": false,
       "count": 4
     },
