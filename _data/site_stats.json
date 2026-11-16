@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-15T10:32:25Z",
+  "updated": "2026-11-16T10:48:27Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-11-15"
+    "end": "2026-11-16"
   },
   "window_order": [
     "today",
@@ -16,11 +16,155 @@
   "windows": {
     "today": {
       "label": "Today",
+      "start": "2026-11-16",
+      "end": "2026-11-16",
+      "pageviews": 5,
+      "pages_total": 4,
+      "pages": [
+        {
+          "path": "/writing/iclr-2027-submission-volume-peer-review",
+          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
+          "path_id": 116031638,
+          "event": false,
+          "count": 2,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/writing/google-antigravity-science-program",
+          "title": "Selected for the Google Antigravity science program | Huseyin Ugur Yildiz",
+          "path_id": 115424872,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing/openai-math-release-citations-withdrawals",
+          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
+          "path_id": 112277958,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/cv",
+          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
+          "path_id": 80749912,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events_total": 0,
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        2,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries_total": 1,
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 2
+        }
+      ],
+      "referrers_total": 1,
+      "referrers": [
+        {
+          "name": "Google",
+          "count": 1
+        }
+      ],
+      "browsers_total": 1,
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 2
+        }
+      ],
+      "systems_total": 2,
+      "systems": [
+        {
+          "name": "Linux",
+          "count": 1
+        },
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
+      "sizes_total": 0,
+      "sizes": [],
+      "languages_total": 1,
+      "languages": [
+        {
+          "name": "English",
+          "count": 2
+        }
+      ],
+      "regions_total": 2,
+      "regions": [
+        {
+          "name": "Arizona",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "Oregon",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 1
+        }
+      ],
+      "regions_unmatched": []
+    },
+    "yesterday": {
+      "label": "Yesterday",
       "start": "2026-11-15",
       "end": "2026-11-15",
-      "pageviews": 12,
-      "pages_total": 11,
+      "pageviews": 14,
+      "pages_total": 12,
       "pages": [
+        {
+          "path": "/writing/iclr-2027-submission-volume-peer-review",
+          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
+          "path_id": 116031638,
+          "event": false,
+          "count": 2,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 2
+            }
+          ]
+        },
         {
           "path": "/publications",
           "title": "Publications | Huseyin Ugur Yildiz",
@@ -104,7 +248,7 @@
       "hourly": [
         0,
         0,
-        0,
+        1,
         0,
         10,
         0,
@@ -116,7 +260,7 @@
         1,
         0,
         0,
-        0,
+        1,
         0,
         0,
         0,
@@ -127,182 +271,19 @@
         0,
         0
       ],
-      "countries_total": 2,
+      "countries_total": 1,
       "countries": [
-        {
-          "code": "TR",
-          "name": "Turkey",
-          "count": 1
-        },
         {
           "code": "US",
           "name": "United States",
-          "count": 1
-        }
-      ],
-      "referrers_total": 0,
-      "referrers": [],
-      "browsers_total": 1,
-      "browsers": [
-        {
-          "name": "Chrome",
           "count": 2
         }
       ],
-      "systems_total": 2,
-      "systems": [
-        {
-          "name": "macOS",
-          "count": 1
-        },
-        {
-          "name": "Windows",
-          "count": 1
-        }
-      ],
-      "sizes_total": 0,
-      "sizes": [],
-      "languages_total": 1,
-      "languages": [
-        {
-          "name": "English",
-          "count": 2
-        }
-      ],
-      "regions_total": 2,
-      "regions": [
-        {
-          "name": "Ankara",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "06",
-          "count": 1
-        },
-        {
-          "name": "California",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 1
-        }
-      ],
-      "regions_unmatched": []
-    },
-    "yesterday": {
-      "label": "Yesterday",
-      "start": "2026-11-14",
-      "end": "2026-11-14",
-      "pageviews": 6,
-      "pages_total": 5,
-      "pages": [
-        {
-          "path": "/writing/arxivisual-interactive-research-papers",
-          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
-          "path_id": 106826525,
-          "event": false,
-          "count": 2,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 1
-            },
-            {
-              "name": "www.bing.com",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/writing/formalizing-fermats-last-theorem",
-          "title": "Fermat’s Last Theorem, formalized and checked by Lean | Huseyin Ugur Yildiz",
-          "path_id": 122458352,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/writing/submission-caps-ieee-twc-iclr-arxiv",
-          "title": "IEEE TWC, ICLR and arXiv now all cap submission volume | Huseyin Ugur Yildiz",
-          "path_id": 116297660,
-          "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/writing/ieee-twc-submission-cap",
-          "title": "An academic rate limiter: IEEE TWC now caps authors at 36 new manuscripts a year | Huseyin Ugur Yildiz",
-          "path_id": 96633631,
-          "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "huguryildiz.com/writing/submission-caps-ieee-twc-iclr-arxiv",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/research",
-          "title": "Research | Huseyin Ugur Yildiz",
-          "path_id": 80750374,
-          "event": false,
-          "count": 1
-        }
-      ],
-      "events_total": 0,
-      "events": [],
-      "hourly": [
-        0,
-        1,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
-        0,
-        0,
-        2,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0
-      ],
-      "countries_total": 2,
-      "countries": [
-        {
-          "code": "PL",
-          "name": "Poland",
-          "count": 1
-        },
-        {
-          "code": "US",
-          "name": "United States",
-          "count": 1
-        }
-      ],
-      "referrers_total": 2,
+      "referrers_total": 1,
       "referrers": [
         {
           "name": "Google",
-          "count": 1
-        },
-        {
-          "name": "www.bing.com",
-          "count": 1
+          "count": 2
         }
       ],
       "browsers_total": 2,
@@ -319,38 +300,27 @@
       "systems_total": 2,
       "systems": [
         {
-          "name": "iOS",
+          "name": "Linux",
           "count": 1
         },
         {
-          "name": "Windows",
+          "name": "macOS",
           "count": 1
         }
       ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 2,
+      "languages_total": 1,
       "languages": [
         {
           "name": "English",
-          "count": 1
-        },
-        {
-          "name": "Polish",
-          "count": 1
+          "count": 2
         }
       ],
-      "regions_total": 2,
+      "regions_total": 1,
       "regions": [
         {
-          "name": "Mazovia",
-          "country": "Poland",
-          "country_code": "PL",
-          "code": null,
-          "count": 1
-        },
-        {
-          "name": "Washington",
+          "name": "California",
           "country": "United States",
           "country_code": "US",
           "code": null,
@@ -361,10 +331,10 @@
     },
     "7d": {
       "label": "Last 7 days",
-      "start": "2026-11-09",
-      "end": "2026-11-15",
-      "pageviews": 46,
-      "pages_total": 22,
+      "start": "2026-11-10",
+      "end": "2026-11-16",
+      "pageviews": 50,
+      "pages_total": 24,
       "pages": [
         {
           "path": "/",
@@ -392,6 +362,19 @@
             {
               "name": "huguryildiz.com/writing/arxivisual-interactive-research-papers",
               "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/writing/iclr-2027-submission-volume-peer-review",
+          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
+          "path_id": 116031638,
+          "event": false,
+          "count": 6,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 5
             }
           ]
         },
@@ -431,20 +414,7 @@
           "title": "Huseyin Ugur Yildiz",
           "path_id": 80750338,
           "event": false,
-          "count": 3,
-          "refs": [
-            {
-              "name": "www.bing.com",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/writing/iclr-2027-submission-volume-peer-review",
-          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
-          "path_id": 116031638,
-          "event": false,
-          "count": 2
+          "count": 3
         },
         {
           "path": "/writing/claude-watermark-academic-misconduct",
@@ -454,23 +424,9 @@
           "count": 2
         },
         {
-          "path": "/writing/can-llms-jump-scientific-discovery",
-          "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
-          "path_id": 104195821,
-          "event": false,
-          "count": 2
-        },
-        {
           "path": "/writing/local-first-latex-workflow",
           "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
           "path_id": 98713527,
-          "event": false,
-          "count": 2
-        },
-        {
-          "path": "/writing",
-          "title": "Writing | Huseyin Ugur Yildiz",
-          "path_id": 96360100,
           "event": false,
           "count": 2
         },
@@ -503,6 +459,20 @@
           "count": 1
         },
         {
+          "path": "/writing/google-antigravity-science-program",
+          "title": "Selected for the Google Antigravity science program | Huseyin Ugur Yildiz",
+          "path_id": 115424872,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing/openai-math-release-citations-withdrawals",
+          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
+          "path_id": 112277958,
+          "event": false,
+          "count": 1
+        },
+        {
           "path": "/writing/ai-layoff-trap",
           "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
           "path_id": 110093766,
@@ -531,9 +501,23 @@
           "count": 1
         },
         {
+          "path": "/writing/can-llms-jump-scientific-discovery",
+          "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
+          "path_id": 104195821,
+          "event": false,
+          "count": 1
+        },
+        {
           "path": "/writing/ieee-twc-submission-cap",
           "title": "An academic rate limiter: IEEE TWC now caps authors at 36 new manuscripts a year | Huseyin Ugur Yildiz",
           "path_id": 96633631,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing",
+          "title": "Writing | Huseyin Ugur Yildiz",
+          "path_id": 96360100,
           "event": false,
           "count": 1
         },
@@ -564,16 +548,16 @@
       "hourly": [
         0,
         1,
-        6,
+        7,
         0,
-        10,
-        2,
+        11,
+        1,
         1,
         1,
         3,
-        2,
+        4,
         3,
-        2,
+        3,
         0,
         0,
         5,
@@ -726,9 +710,9 @@
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-10-17",
-      "end": "2026-11-15",
-      "pageviews": 283,
+      "start": "2026-10-18",
+      "end": "2026-11-16",
+      "pageviews": 289,
       "pages_total": 29,
       "pages": [
         {
@@ -786,11 +770,11 @@
           "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
           "path_id": 116031638,
           "event": false,
-          "count": 27,
+          "count": 31,
           "refs": [
             {
               "name": "Google",
-              "count": 25
+              "count": 28
             }
           ]
         },
@@ -866,6 +850,13 @@
           "count": 13
         },
         {
+          "path": "/cv",
+          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
+          "path_id": 80749912,
+          "event": false,
+          "count": 12
+        },
+        {
           "path": "/writing/local-first-latex-workflow",
           "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
           "path_id": 98713527,
@@ -876,13 +867,6 @@
           "path": "/writing",
           "title": "Writing | Huseyin Ugur Yildiz",
           "path_id": 96360100,
-          "event": false,
-          "count": 11
-        },
-        {
-          "path": "/cv",
-          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
-          "path_id": 80749912,
           "event": false,
           "count": 11
         },
@@ -943,6 +927,13 @@
           "count": 2
         },
         {
+          "path": "/writing/google-antigravity-science-program",
+          "title": "Selected for the Google Antigravity science program | Huseyin Ugur Yildiz",
+          "path_id": 115424872,
+          "event": false,
+          "count": 2
+        },
+        {
           "path": "/writing/second-brain-for-ai-assisted-work",
           "title": "A second brain for AI-assisted work does not require Obsidian | Huseyin Ugur Yildiz",
           "path_id": 109489555,
@@ -981,13 +972,6 @@
           "path": "/writing/context-management-long-running-agentic-coding-sessions",
           "title": "Context management in long-running agentic coding sessions | Huseyin Ugur Yildiz",
           "path_id": 119722240,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/writing/google-antigravity-science-program",
-          "title": "Selected for the Google Antigravity science program | Huseyin Ugur Yildiz",
-          "path_id": 115424872,
           "event": false,
           "count": 1
         },
@@ -1033,20 +1017,20 @@
       "hourly": [
         7,
         22,
-        11,
+        12,
         8,
-        15,
+        16,
         12,
         7,
         4,
-        8,
-        8,
+        9,
+        10,
         19,
-        14,
+        15,
         7,
         11,
-        13,
-        26,
+        14,
+        25,
         19,
         13,
         10,
@@ -1297,17 +1281,17 @@
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-08-18",
-      "end": "2026-11-15",
-      "pageviews": 599,
-      "pages_total": 33,
+      "start": "2026-08-19",
+      "end": "2026-11-16",
+      "pageviews": 597,
+      "pages_total": 32,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 160,
+          "count": 156,
           "refs": [
             {
               "name": "Google",
@@ -1315,14 +1299,14 @@
             },
             {
               "name": "www.linkedin.com",
-              "count": 20
-            },
-            {
-              "name": "avesis.tedu.edu.tr",
-              "count": 7
+              "count": 19
             },
             {
               "name": "scholar.google.com",
+              "count": 5
+            },
+            {
+              "name": "avesis.tedu.edu.tr",
               "count": 5
             },
             {
@@ -1382,30 +1366,22 @@
           ]
         },
         {
-          "path": "/publications",
-          "title": "Publications | Huseyin Ugur Yildiz",
-          "path_id": 80750273,
+          "path": "/writing/openai-math-release-citations-withdrawals",
+          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
+          "path_id": 112277958,
           "event": false,
-          "count": 34,
+          "count": 33,
           "refs": [
             {
-              "name": "huguryildiz.com",
-              "count": 10
-            },
-            {
-              "name": "huguryildiz.com/research",
-              "count": 6
-            },
-            {
-              "name": "huguryildiz.com/writing/arxivisual-interactive-research-papers",
-              "count": 2
+              "name": "Google",
+              "count": 22
             },
             {
               "name": "huguryildiz.com/writing",
-              "count": 1
+              "count": 2
             },
             {
-              "name": "huguryildiz.com/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
+              "name": "postcutoff.com",
               "count": 1
             }
           ]
@@ -1440,25 +1416,25 @@
           ]
         },
         {
-          "path": "/writing/openai-math-release-citations-withdrawals",
-          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
-          "path_id": 112277958,
+          "path": "/publications",
+          "title": "Publications | Huseyin Ugur Yildiz",
+          "path_id": 80750273,
           "event": false,
           "count": 32
-        },
-        {
-          "path": "/research",
-          "title": "Research | Huseyin Ugur Yildiz",
-          "path_id": 80750374,
-          "event": false,
-          "count": 30
         },
         {
           "path": "/writing/iclr-2027-submission-volume-peer-review",
           "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
           "path_id": 116031638,
           "event": false,
-          "count": 27
+          "count": 31
+        },
+        {
+          "path": "/research",
+          "title": "Research | Huseyin Ugur Yildiz",
+          "path_id": 80750374,
+          "event": false,
+          "count": 29
         },
         {
           "path": "/writing/local-first-latex-workflow",
@@ -1472,7 +1448,7 @@
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
-          "count": 22
+          "count": 23
         },
         {
           "path": "/writing",
@@ -1580,16 +1556,23 @@
           "count": 3
         },
         {
-          "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
-          "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
-          "path_id": 99994300,
-          "event": false,
-          "count": 3
-        },
-        {
           "path": "/writing/submission-caps-ieee-twc-iclr-arxiv",
           "title": "IEEE TWC, ICLR and arXiv now all cap submission volume | Huseyin Ugur Yildiz",
           "path_id": 116297660,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/writing/google-antigravity-science-program",
+          "title": "Selected for the Google Antigravity science program | Huseyin Ugur Yildiz",
+          "path_id": 115424872,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/writing/ai-second-brain-can-remember-everything-and-still-be-wrong",
+          "title": "An AI second brain can remember everything and still be wrong | Huseyin Ugur Yildiz",
+          "path_id": 99994300,
           "event": false,
           "count": 2
         },
@@ -1615,20 +1598,6 @@
           "count": 1
         },
         {
-          "path": "/writing/google-antigravity-science-program",
-          "title": "Selected for the Google Antigravity science program | Huseyin Ugur Yildiz",
-          "path_id": 115424872,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/writing/cuopt-gpu-multidimensional-knapsack",
-          "title": "A 30,000-variable knapsack, solved on a GPU in ten seconds | Huseyin Ugur Yildiz",
-          "path_id": 96462585,
-          "event": false,
-          "count": 1
-        },
-        {
           "path": "/writing/kairos-university-timetabling",
           "title": "A university timetable can look clean on paper and still break in operation | Huseyin Ugur Yildiz",
           "path_id": 96360102,
@@ -1636,7 +1605,7 @@
           "count": 1
         }
       ],
-      "events_total": 5,
+      "events_total": 4,
       "events": [
         {
           "path": "cv-pdf",
@@ -1665,33 +1634,26 @@
           "path_id": 106140872,
           "event": true,
           "count": 1
-        },
-        {
-          "path": "doi/gultekin2023exploring",
-          "title": "Exploring the tradeoff between energy dissipation, delay, and the number of backbones for broadcasting in wireless sensor networks through goal programming",
-          "path_id": 103890124,
-          "event": true,
-          "count": 1
         }
       ],
       "hourly": [
-        17,
-        33,
-        18,
+        16,
+        31,
+        19,
         13,
-        24,
+        25,
         15,
         11,
         13,
-        24,
-        17,
+        25,
+        19,
         32,
-        28,
+        29,
         20,
-        34,
-        26,
-        45,
-        31,
+        32,
+        27,
+        42,
+        30,
         24,
         29,
         31,
@@ -1705,7 +1667,7 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 80
+          "count": 76
         },
         {
           "code": "US",
@@ -1821,14 +1783,14 @@
         },
         {
           "name": "www.linkedin.com",
-          "count": 20
-        },
-        {
-          "name": "avesis.tedu.edu.tr",
-          "count": 7
+          "count": 19
         },
         {
           "name": "scholar.google.com",
+          "count": 5
+        },
+        {
+          "name": "avesis.tedu.edu.tr",
           "count": 5
         },
         {
@@ -1864,11 +1826,11 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 95
+          "count": 93
         },
         {
           "name": "Safari",
-          "count": 54
+          "count": 52
         },
         {
           "name": "Firefox",
@@ -1879,15 +1841,15 @@
       "systems": [
         {
           "name": "Windows",
-          "count": 53
+          "count": 52
         },
         {
           "name": "iOS",
-          "count": 42
+          "count": 40
         },
         {
           "name": "macOS",
-          "count": 27
+          "count": 26
         },
         {
           "name": "Android",
@@ -1908,7 +1870,7 @@
       "languages": [
         {
           "name": "English",
-          "count": 104
+          "count": 100
         },
         {
           "name": "Turkish",
@@ -1958,7 +1920,7 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 46
+          "count": 44
         },
         {
           "name": "İstanbul",
@@ -1975,13 +1937,6 @@
           "count": 7
         },
         {
-          "name": "Antalya",
-          "country": "Turkey",
-          "country_code": "TR",
-          "code": "07",
-          "count": 6
-        },
-        {
           "name": "New York",
           "country": "United States",
           "country_code": "US",
@@ -1994,6 +1949,13 @@
           "country_code": "US",
           "code": null,
           "count": 5
+        },
+        {
+          "name": "Antalya",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "07",
+          "count": 4
         },
         {
           "name": "İzmir",
@@ -2049,9 +2011,9 @@
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-11-16",
-      "end": "2026-11-15",
-      "pageviews": 1609,
+      "start": "2025-11-17",
+      "end": "2026-11-16",
+      "pageviews": 1616,
       "pages_total": 40,
       "pages": [
         {
@@ -2088,7 +2050,7 @@
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
-          "count": 161,
+          "count": 162,
           "refs": [
             {
               "name": "Google",
@@ -2225,7 +2187,14 @@
           "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
           "path_id": 112277958,
           "event": false,
-          "count": 32
+          "count": 33
+        },
+        {
+          "path": "/writing/iclr-2027-submission-volume-peer-review",
+          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
+          "path_id": 116031638,
+          "event": false,
+          "count": 31
         },
         {
           "path": "/writing",
@@ -2233,13 +2202,6 @@
           "path_id": 96360100,
           "event": false,
           "count": 29
-        },
-        {
-          "path": "/writing/iclr-2027-submission-volume-peer-review",
-          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
-          "path_id": 116031638,
-          "event": false,
-          "count": 27
         },
         {
           "path": "/404.html",
@@ -2389,6 +2351,13 @@
           "count": 2
         },
         {
+          "path": "/writing/google-antigravity-science-program",
+          "title": "Selected for the Google Antigravity science program | Huseyin Ugur Yildiz",
+          "path_id": 115424872,
+          "event": false,
+          "count": 2
+        },
+        {
           "path": "/writing/vera-jury-evaluation-platform",
           "title": "The hardest part of running a jury isn’t the jury | Huseyin Ugur Yildiz",
           "path_id": 96462588,
@@ -2427,13 +2396,6 @@
           "path": "/writing/context-management-long-running-agentic-coding-sessions",
           "title": "Context management in long-running agentic coding sessions | Huseyin Ugur Yildiz",
           "path_id": 119722240,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/writing/google-antigravity-science-program",
-          "title": "Selected for the Google Antigravity science program | Huseyin Ugur Yildiz",
-          "path_id": 115424872,
           "event": false,
           "count": 1
         },
@@ -2493,19 +2455,19 @@
       "hourly": [
         49,
         84,
-        74,
+        75,
         64,
-        54,
+        55,
         26,
         15,
         27,
-        32,
-        41,
+        33,
+        43,
         57,
-        79,
+        80,
         55,
         95,
-        95,
+        96,
         103,
         105,
         66,
@@ -2984,8 +2946,8 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-11-15",
-      "pageviews": 1609,
+      "end": "2026-11-16",
+      "pageviews": 1616,
       "pages_total": 40,
       "pages": [
         {
@@ -3022,7 +2984,7 @@
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
-          "count": 161,
+          "count": 162,
           "refs": [
             {
               "name": "Google",
@@ -3159,7 +3121,14 @@
           "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
           "path_id": 112277958,
           "event": false,
-          "count": 32
+          "count": 33
+        },
+        {
+          "path": "/writing/iclr-2027-submission-volume-peer-review",
+          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
+          "path_id": 116031638,
+          "event": false,
+          "count": 31
         },
         {
           "path": "/writing",
@@ -3167,13 +3136,6 @@
           "path_id": 96360100,
           "event": false,
           "count": 29
-        },
-        {
-          "path": "/writing/iclr-2027-submission-volume-peer-review",
-          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
-          "path_id": 116031638,
-          "event": false,
-          "count": 27
         },
         {
           "path": "/404.html",
@@ -3323,6 +3285,13 @@
           "count": 2
         },
         {
+          "path": "/writing/google-antigravity-science-program",
+          "title": "Selected for the Google Antigravity science program | Huseyin Ugur Yildiz",
+          "path_id": 115424872,
+          "event": false,
+          "count": 2
+        },
+        {
           "path": "/writing/vera-jury-evaluation-platform",
           "title": "The hardest part of running a jury isn’t the jury | Huseyin Ugur Yildiz",
           "path_id": 96462588,
@@ -3361,13 +3330,6 @@
           "path": "/writing/context-management-long-running-agentic-coding-sessions",
           "title": "Context management in long-running agentic coding sessions | Huseyin Ugur Yildiz",
           "path_id": 119722240,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/writing/google-antigravity-science-program",
-          "title": "Selected for the Google Antigravity science program | Huseyin Ugur Yildiz",
-          "path_id": 115424872,
           "event": false,
           "count": 1
         },
@@ -3427,19 +3389,19 @@
       "hourly": [
         49,
         84,
-        74,
+        75,
         64,
-        54,
+        55,
         26,
         15,
         27,
-        32,
-        41,
+        33,
+        43,
         57,
-        79,
+        80,
         55,
         95,
-        95,
+        96,
         103,
         105,
         66,
@@ -5051,7 +5013,11 @@
     },
     {
       "date": "2026-11-15",
-      "views": 12
+      "views": 14
+    },
+    {
+      "date": "2026-11-16",
+      "views": 5
     }
   ],
   "daily_breakdowns": {
@@ -30248,8 +30214,15 @@
       ]
     },
     "2026-11-15": {
-      "pageviews": 12,
+      "pageviews": 14,
       "pages": [
+        {
+          "path": "/writing/iclr-2027-submission-volume-peer-review",
+          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
+          "path_id": 116031638,
+          "event": false,
+          "count": 2
+        },
         {
           "path": "/publications",
           "title": "Publications | Huseyin Ugur Yildiz",
@@ -30332,7 +30305,7 @@
       "hourly": [
         0,
         0,
-        0,
+        1,
         0,
         10,
         0,
@@ -30340,6 +30313,106 @@
         1,
         0,
         0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries": [
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 2
+        }
+      ],
+      "referrers": [
+        {
+          "name": "Google",
+          "count": 2
+        }
+      ],
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        },
+        {
+          "name": "Safari",
+          "count": 1
+        }
+      ],
+      "systems": [
+        {
+          "name": "Linux",
+          "count": 1
+        },
+        {
+          "name": "macOS",
+          "count": 1
+        }
+      ],
+      "sizes": [],
+      "languages": [
+        {
+          "name": "English",
+          "count": 2
+        }
+      ]
+    },
+    "2026-11-16": {
+      "pageviews": 5,
+      "pages": [
+        {
+          "path": "/writing/iclr-2027-submission-volume-peer-review",
+          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
+          "path_id": 116031638,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/writing/google-antigravity-science-program",
+          "title": "Selected for the Google Antigravity science program | Huseyin Ugur Yildiz",
+          "path_id": 115424872,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing/openai-math-release-citations-withdrawals",
+          "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
+          "path_id": 112277958,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/cv",
+          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
+          "path_id": 80749912,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        2,
         0,
         1,
         0,
@@ -30357,17 +30430,17 @@
       ],
       "countries": [
         {
-          "code": "TR",
-          "name": "Turkey",
-          "count": 1
-        },
-        {
           "code": "US",
           "name": "United States",
+          "count": 2
+        }
+      ],
+      "referrers": [
+        {
+          "name": "Google",
           "count": 1
         }
       ],
-      "referrers": [],
       "browsers": [
         {
           "name": "Chrome",
@@ -30376,7 +30449,7 @@
       ],
       "systems": [
         {
-          "name": "macOS",
+          "name": "Linux",
           "count": 1
         },
         {
@@ -31538,6 +31611,10 @@
         {
           "date": "2026-11-16",
           "views": 0
+        },
+        {
+          "date": "2026-11-17",
+          "views": 0
         }
       ]
     },
@@ -32684,6 +32761,10 @@
         },
         {
           "date": "2026-11-16",
+          "views": 0
+        },
+        {
+          "date": "2026-11-17",
           "views": 0
         }
       ]
@@ -33832,6 +33913,10 @@
         {
           "date": "2026-11-16",
           "views": 0
+        },
+        {
+          "date": "2026-11-17",
+          "views": 0
         }
       ]
     },
@@ -34026,6 +34111,10 @@
         },
         {
           "date": "2026-11-16",
+          "views": 0
+        },
+        {
+          "date": "2026-11-17",
           "views": 0
         }
       ]
@@ -34497,6 +34586,10 @@
         },
         {
           "date": "2026-11-16",
+          "views": 0
+        },
+        {
+          "date": "2026-11-17",
           "views": 0
         }
       ]
@@ -35644,6 +35737,10 @@
         },
         {
           "date": "2026-11-16",
+          "views": 0
+        },
+        {
+          "date": "2026-11-17",
           "views": 0
         }
       ]
@@ -36788,6 +36885,10 @@
         {
           "date": "2026-11-16",
           "views": 0
+        },
+        {
+          "date": "2026-11-17",
+          "views": 0
         }
       ]
     },
@@ -37931,13 +38032,17 @@
         {
           "date": "2026-11-16",
           "views": 0
+        },
+        {
+          "date": "2026-11-17",
+          "views": 0
         }
       ]
     },
     {
       "path": "/cv",
       "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
-      "count": 161,
+      "count": 162,
       "stats": [
         {
           "date": "2026-02-05",
@@ -39077,6 +39182,10 @@
         },
         {
           "date": "2026-11-16",
+          "views": 1
+        },
+        {
+          "date": "2026-11-17",
           "views": 0
         }
       ]
@@ -39084,7 +39193,7 @@
   ],
   "site": {},
   "totals": {
-    "pageviews": 1609,
+    "pageviews": 1616,
     "visitors": null
   },
   "pages": [
@@ -39122,7 +39231,7 @@
       "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
       "path_id": 80749912,
       "event": false,
-      "count": 161,
+      "count": 162,
       "refs": [
         {
           "name": "Google",
@@ -39259,7 +39368,14 @@
       "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
       "path_id": 112277958,
       "event": false,
-      "count": 32
+      "count": 33
+    },
+    {
+      "path": "/writing/iclr-2027-submission-volume-peer-review",
+      "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
+      "path_id": 116031638,
+      "event": false,
+      "count": 31
     },
     {
       "path": "/writing",
@@ -39267,13 +39383,6 @@
       "path_id": 96360100,
       "event": false,
       "count": 29
-    },
-    {
-      "path": "/writing/iclr-2027-submission-volume-peer-review",
-      "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
-      "path_id": 116031638,
-      "event": false,
-      "count": 27
     },
     {
       "path": "/404.html",
@@ -39423,6 +39532,13 @@
       "count": 2
     },
     {
+      "path": "/writing/google-antigravity-science-program",
+      "title": "Selected for the Google Antigravity science program | Huseyin Ugur Yildiz",
+      "path_id": 115424872,
+      "event": false,
+      "count": 2
+    },
+    {
       "path": "/writing/vera-jury-evaluation-platform",
       "title": "The hardest part of running a jury isn’t the jury | Huseyin Ugur Yildiz",
       "path_id": 96462588,
@@ -39461,13 +39577,6 @@
       "path": "/writing/context-management-long-running-agentic-coding-sessions",
       "title": "Context management in long-running agentic coding sessions | Huseyin Ugur Yildiz",
       "path_id": 119722240,
-      "event": false,
-      "count": 1
-    },
-    {
-      "path": "/writing/google-antigravity-science-program",
-      "title": "Selected for the Google Antigravity science program | Huseyin Ugur Yildiz",
-      "path_id": 115424872,
       "event": false,
       "count": 1
     },
