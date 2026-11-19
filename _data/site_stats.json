@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-18T11:20:30Z",
+  "updated": "2026-11-19T11:18:39Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-11-18"
+    "end": "2026-11-19"
   },
   "window_order": [
     "today",
@@ -16,11 +16,149 @@
   "windows": {
     "today": {
       "label": "Today",
+      "start": "2026-11-19",
+      "end": "2026-11-19",
+      "pageviews": 3,
+      "pages_total": 2,
+      "pages": [
+        {
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
+          "event": false,
+          "count": 2,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "path": "/writing/iclr-2027-submission-volume-peer-review",
+          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
+          "path_id": 116031638,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "events_total": 0,
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries_total": 2,
+      "countries": [
+        {
+          "code": "AU",
+          "name": "Australia",
+          "count": 1
+        },
+        {
+          "code": "SG",
+          "name": "Singapore",
+          "count": 1
+        }
+      ],
+      "referrers_total": 1,
+      "referrers": [
+        {
+          "name": "Google",
+          "count": 2
+        }
+      ],
+      "browsers_total": 1,
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 2
+        }
+      ],
+      "systems_total": 2,
+      "systems": [
+        {
+          "name": "macOS",
+          "count": 1
+        },
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
+      "sizes_total": 0,
+      "sizes": [],
+      "languages_total": 1,
+      "languages": [
+        {
+          "name": "English",
+          "count": 2
+        }
+      ],
+      "regions_total": 1,
+      "regions": [
+        {
+          "name": "New South Wales",
+          "country": "Australia",
+          "country_code": "AU",
+          "code": null,
+          "count": 1
+        }
+      ],
+      "regions_unmatched": []
+    },
+    "yesterday": {
+      "label": "Yesterday",
       "start": "2026-11-18",
       "end": "2026-11-18",
-      "pageviews": 11,
-      "pages_total": 10,
+      "pageviews": 15,
+      "pages_total": 13,
       "pages": [
+        {
+          "path": "/teaching",
+          "title": "Huseyin Ugur Yildiz",
+          "path_id": 80750338,
+          "event": false,
+          "count": 2,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 1
+            },
+            {
+              "name": "huguryildiz.com/writing",
+              "count": 1
+            }
+          ]
+        },
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
@@ -30,6 +168,19 @@
           "refs": [
             {
               "name": "scholar.google.co.za",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/writing/iclr-2027-submission-volume-peer-review",
+          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
+          "path_id": 116031638,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "Google",
               "count": 1
             }
           ]
@@ -48,17 +199,31 @@
           ]
         },
         {
-          "path": "/writing",
-          "title": "Writing | Huseyin Ugur Yildiz",
-          "path_id": 96360100,
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
           "event": false,
           "count": 1,
           "refs": [
             {
-              "name": "huguryildiz.com/software",
+              "name": "Google",
               "count": 1
             }
           ]
+        },
+        {
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing",
+          "title": "Writing | Huseyin Ugur Yildiz",
+          "path_id": 96360100,
+          "event": false,
+          "count": 1
         },
         {
           "path": "/404.html",
@@ -72,13 +237,7 @@
           "title": "Service | Huseyin Ugur Yildiz",
           "path_id": 80843167,
           "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "huguryildiz.com/students",
-              "count": 1
-            }
-          ]
+          "count": 1
         },
         {
           "path": "/students",
@@ -91,13 +250,6 @@
           "path": "/research",
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/teaching",
-          "title": "Huseyin Ugur Yildiz",
-          "path_id": 80750338,
           "event": false,
           "count": 1
         },
@@ -133,10 +285,10 @@
         0,
         0,
         0,
+        2,
         1,
-        0,
-        0,
-        0,
+        1,
+        1,
         0,
         0,
         0,
@@ -147,8 +299,8 @@
       "countries_total": 2,
       "countries": [
         {
-          "code": "IN",
-          "name": "India",
+          "code": "TR",
+          "name": "Turkey",
           "count": 1
         },
         {
@@ -160,7 +312,7 @@
       "referrers_total": 1,
       "referrers": [
         {
-          "name": "scholar.google.co.za",
+          "name": "Google",
           "count": 1
         }
       ],
@@ -171,29 +323,37 @@
           "count": 2
         }
       ],
-      "systems_total": 1,
+      "systems_total": 2,
       "systems": [
         {
+          "name": "Android",
+          "count": 1
+        },
+        {
           "name": "Windows",
-          "count": 2
+          "count": 1
         }
       ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 1,
+      "languages_total": 2,
       "languages": [
         {
           "name": "English",
-          "count": 2
+          "count": 1
+        },
+        {
+          "name": "Turkish",
+          "count": 1
         }
       ],
       "regions_total": 2,
       "regions": [
         {
-          "name": "Telangana",
-          "country": "India",
-          "country_code": "IN",
-          "code": null,
+          "name": "Ankara",
+          "country": "Turkey",
+          "country_code": "TR",
+          "code": "06",
           "count": 1
         },
         {
@@ -206,197 +366,12 @@
       ],
       "regions_unmatched": []
     },
-    "yesterday": {
-      "label": "Yesterday",
-      "start": "2026-11-17",
-      "end": "2026-11-17",
-      "pageviews": 10,
-      "pages_total": 5,
-      "pages": [
-        {
-          "path": "/writing/iclr-2027-submission-volume-peer-review",
-          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
-          "path_id": 116031638,
-          "event": false,
-          "count": 6,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 3
-            }
-          ]
-        },
-        {
-          "path": "/writing/arxivisual-interactive-research-papers",
-          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
-          "path_id": 106826525,
-          "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/writing/claude-watermark-academic-misconduct",
-          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
-          "path_id": 106047814,
-          "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/writing",
-          "title": "Writing | Huseyin Ugur Yildiz",
-          "path_id": 96360100,
-          "event": false,
-          "count": 1
-        },
-        {
-          "path": "/service",
-          "title": "Service | Huseyin Ugur Yildiz",
-          "path_id": 80843167,
-          "event": false,
-          "count": 1
-        }
-      ],
-      "events_total": 0,
-      "events": [],
-      "hourly": [
-        1,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
-        0,
-        1,
-        2,
-        2,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
-        0,
-        0,
-        2,
-        0,
-        0
-      ],
-      "countries_total": 3,
-      "countries": [
-        {
-          "code": "US",
-          "name": "United States",
-          "count": 4
-        },
-        {
-          "code": "KR",
-          "name": "South Korea",
-          "count": 1
-        },
-        {
-          "code": "NL",
-          "name": "Netherlands",
-          "count": 1
-        }
-      ],
-      "referrers_total": 1,
-      "referrers": [
-        {
-          "name": "Google",
-          "count": 3
-        }
-      ],
-      "browsers_total": 1,
-      "browsers": [
-        {
-          "name": "Chrome",
-          "count": 6
-        }
-      ],
-      "systems_total": 2,
-      "systems": [
-        {
-          "name": "macOS",
-          "count": 5
-        },
-        {
-          "name": "Linux",
-          "count": 1
-        }
-      ],
-      "sizes_total": 0,
-      "sizes": [],
-      "languages_total": 2,
-      "languages": [
-        {
-          "name": "English",
-          "count": 5
-        },
-        {
-          "name": "Korean",
-          "count": 1
-        }
-      ],
-      "regions_total": 5,
-      "regions": [
-        {
-          "name": "California",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 2
-        },
-        {
-          "name": "Oregon",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 1
-        },
-        {
-          "name": "South Carolina",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 1
-        },
-        {
-          "name": "Gyeonggi-do",
-          "country": "South Korea",
-          "country_code": "KR",
-          "code": null,
-          "count": 1
-        },
-        {
-          "name": "Groningen",
-          "country": "Netherlands",
-          "country_code": "NL",
-          "code": null,
-          "count": 1
-        }
-      ],
-      "regions_unmatched": []
-    },
     "7d": {
       "label": "Last 7 days",
-      "start": "2026-11-12",
-      "end": "2026-11-18",
-      "pageviews": 56,
-      "pages_total": 24,
+      "start": "2026-11-13",
+      "end": "2026-11-19",
+      "pageviews": 59,
+      "pages_total": 23,
       "pages": [
         {
           "path": "/writing/iclr-2027-submission-volume-peer-review",
@@ -416,11 +391,11 @@
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
           "event": false,
-          "count": 4,
+          "count": 7,
           "refs": [
             {
               "name": "Google",
-              "count": 3
+              "count": 6
             },
             {
               "name": "www.bing.com",
@@ -490,6 +465,13 @@
           "count": 3
         },
         {
+          "path": "/teaching",
+          "title": "Huseyin Ugur Yildiz",
+          "path_id": 80750338,
+          "event": false,
+          "count": 3
+        },
+        {
           "path": "/publications",
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
@@ -514,13 +496,6 @@
           "path": "/students",
           "title": "Students | Huseyin Ugur Yildiz",
           "path_id": 80840367,
-          "event": false,
-          "count": 2
-        },
-        {
-          "path": "/teaching",
-          "title": "Huseyin Ugur Yildiz",
-          "path_id": 80750338,
           "event": false,
           "count": 2
         },
@@ -581,13 +556,6 @@
           "count": 1
         },
         {
-          "path": "/writing/local-first-latex-workflow",
-          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
-          "path_id": 98713527,
-          "event": false,
-          "count": 1
-        },
-        {
           "path": "/writing/ieee-twc-submission-cap",
           "title": "An academic rate limiter: IEEE TWC now caps authors at 36 new manuscripts a year | Huseyin Ugur Yildiz",
           "path_id": 96633631,
@@ -614,35 +582,45 @@
       "hourly": [
         3,
         1,
-        3,
+        2,
         1,
         11,
         8,
         2,
-        1,
+        3,
         1,
         4,
         2,
         4,
         0,
-        0,
-        4,
+        1,
+        5,
         2,
         2,
-        0,
+        1,
         1,
         0,
         2,
         2,
         1,
-        1
+        0
       ],
-      "countries_total": 3,
+      "countries_total": 5,
       "countries": [
         {
           "code": "US",
           "name": "United States",
-          "count": 10
+          "count": 8
+        },
+        {
+          "code": "GB",
+          "name": "United Kingdom",
+          "count": 1
+        },
+        {
+          "code": "IT",
+          "name": "Italy",
+          "count": 1
         },
         {
           "code": "KR",
@@ -666,14 +644,14 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 11
+          "count": 10
         },
         {
           "name": "Safari",
-          "count": 1
+          "count": 2
         }
       ],
-      "systems_total": 3,
+      "systems_total": 4,
       "systems": [
         {
           "name": "macOS",
@@ -681,20 +659,28 @@
         },
         {
           "name": "Linux",
-          "count": 4
+          "count": 3
         },
         {
           "name": "Windows",
           "count": 2
+        },
+        {
+          "name": "iOS",
+          "count": 1
         }
       ],
       "sizes_total": 0,
       "sizes": [],
-      "languages_total": 2,
+      "languages_total": 3,
       "languages": [
         {
           "name": "English",
-          "count": 11
+          "count": 10
+        },
+        {
+          "name": "Italian",
+          "count": 1
         },
         {
           "name": "Korean",
@@ -725,23 +711,23 @@
           "count": 1
         },
         {
-          "name": "New York",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 1
-        },
-        {
-          "name": "Pennsylvania",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 1
-        },
-        {
           "name": "South Carolina",
           "country": "United States",
           "country_code": "US",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "England",
+          "country": "United Kingdom",
+          "country_code": "GB",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "Friuli Venezia Giulia",
+          "country": "Italy",
+          "country_code": "IT",
           "code": null,
           "count": 1
         },
@@ -764,9 +750,9 @@
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-10-20",
-      "end": "2026-11-18",
-      "pageviews": 288,
+      "start": "2026-10-21",
+      "end": "2026-11-19",
+      "pageviews": 286,
       "pages_total": 28,
       "pages": [
         {
@@ -774,7 +760,7 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 45,
+          "count": 42,
           "refs": [
             {
               "name": "Google",
@@ -789,12 +775,12 @@
               "count": 3
             },
             {
-              "name": "scholar.google.com.tr",
+              "name": "huguryildiz.com/writing/arxivisual-interactive-research-papers",
               "count": 2
             },
             {
-              "name": "huguryildiz.com/writing/arxivisual-interactive-research-papers",
-              "count": 2
+              "name": "bing.com",
+              "count": 1
             }
           ]
         },
@@ -803,11 +789,11 @@
           "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
           "path_id": 116031638,
           "event": false,
-          "count": 37,
+          "count": 39,
           "refs": [
             {
               "name": "Google",
-              "count": 31
+              "count": 33
             }
           ]
         },
@@ -816,11 +802,11 @@
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
           "event": false,
-          "count": 37,
+          "count": 39,
           "refs": [
             {
               "name": "Google",
-              "count": 34
+              "count": 36
             },
             {
               "name": "www.bing.com",
@@ -833,11 +819,11 @@
           "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
           "path_id": 112277958,
           "event": false,
-          "count": 21,
+          "count": 20,
           "refs": [
             {
               "name": "Google",
-              "count": 17
+              "count": 16
             },
             {
               "name": "huguryildiz.com/writing",
@@ -897,7 +883,7 @@
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
-          "count": 13
+          "count": 12
         },
         {
           "path": "/cv",
@@ -914,13 +900,6 @@
           "count": 11
         },
         {
-          "path": "/writing/chatgpt-pro-research-workflow",
-          "title": "Where ChatGPT Pro reasoning fits in a research workflow | Huseyin Ugur Yildiz",
-          "path_id": 113231349,
-          "event": false,
-          "count": 10
-        },
-        {
           "path": "/writing/local-first-latex-workflow",
           "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
           "path_id": 98713527,
@@ -928,11 +907,18 @@
           "count": 10
         },
         {
+          "path": "/writing/chatgpt-pro-research-workflow",
+          "title": "Where ChatGPT Pro reasoning fits in a research workflow | Huseyin Ugur Yildiz",
+          "path_id": 113231349,
+          "event": false,
+          "count": 9
+        },
+        {
           "path": "/software",
           "title": "Software – Hüseyin Uğur Yıldız | Huseyin Ugur Yildiz",
           "path_id": 109093284,
           "event": false,
-          "count": 8
+          "count": 7
         },
         {
           "path": "/service",
@@ -949,6 +935,13 @@
           "count": 4
         },
         {
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
+          "event": false,
+          "count": 4
+        },
+        {
           "path": "/writing/can-llms-jump-scientific-discovery",
           "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
           "path_id": 104195821,
@@ -961,13 +954,6 @@
           "path_id": 80992097,
           "event": false,
           "count": 4
-        },
-        {
-          "path": "/writing/claude-watermark-academic-misconduct",
-          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
-          "path_id": 106047814,
-          "event": false,
-          "count": 3
         },
         {
           "path": "/writing/ieee-twc-submission-cap",
@@ -1058,17 +1044,17 @@
         15,
         20,
         5,
-        4,
-        9,
-        11,
-        21,
-        17,
-        7,
-        11,
-        14,
+        6,
+        8,
+        10,
+        18,
         16,
-        20,
+        7,
         12,
+        14,
+        15,
+        21,
+        13,
         6,
         22,
         8,
@@ -1076,17 +1062,17 @@
         7,
         7
       ],
-      "countries_total": 12,
+      "countries_total": 11,
       "countries": [
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 19
+          "count": 18
         },
         {
           "code": "US",
           "name": "United States",
-          "count": 10
+          "count": 9
         },
         {
           "code": "IN",
@@ -1132,11 +1118,6 @@
           "code": "PE",
           "name": "Peru",
           "count": 1
-        },
-        {
-          "code": "SE",
-          "name": "Sweden",
-          "count": 1
         }
       ],
       "referrers_total": 9,
@@ -1148,10 +1129,6 @@
         {
           "name": "www.linkedin.com",
           "count": 7
-        },
-        {
-          "name": "scholar.google.com.tr",
-          "count": 2
         },
         {
           "name": "bing.com",
@@ -1170,6 +1147,10 @@
           "count": 1
         },
         {
+          "name": "scholar.google.com.tr",
+          "count": 1
+        },
+        {
           "name": "www.bing.com",
           "count": 1
         },
@@ -1182,7 +1163,7 @@
       "browsers": [
         {
           "name": "Chrome",
-          "count": 23
+          "count": 20
         },
         {
           "name": "Safari",
@@ -1196,12 +1177,12 @@
       "systems_total": 6,
       "systems": [
         {
-          "name": "Windows",
-          "count": 13
-        },
-        {
           "name": "macOS",
           "count": 12
+        },
+        {
+          "name": "Windows",
+          "count": 10
         },
         {
           "name": "iOS",
@@ -1226,11 +1207,11 @@
       "languages": [
         {
           "name": "English",
-          "count": 29
+          "count": 27
         },
         {
           "name": "Turkish",
-          "count": 13
+          "count": 12
         },
         {
           "name": "Italian",
@@ -1255,14 +1236,14 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "34",
-          "count": 6
+          "count": 5
         },
         {
           "name": "Georgia",
           "country": "United States",
           "country_code": "US",
           "code": null,
-          "count": 3
+          "count": 2
         },
         {
           "name": "New York",
@@ -1325,9 +1306,9 @@
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-08-21",
-      "end": "2026-11-18",
-      "pageviews": 615,
+      "start": "2026-08-22",
+      "end": "2026-11-19",
+      "pageviews": 621,
       "pages_total": 31,
       "pages": [
         {
@@ -1364,11 +1345,11 @@
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
           "event": false,
-          "count": 58,
+          "count": 61,
           "refs": [
             {
               "name": "Google",
-              "count": 52
+              "count": 55
             },
             {
               "name": "www.bing.com",
@@ -1385,11 +1366,11 @@
           "title": "Huseyin Ugur Yildiz",
           "path_id": 80750338,
           "event": false,
-          "count": 47,
+          "count": 48,
           "refs": [
             {
               "name": "Google",
-              "count": 16
+              "count": 17
             },
             {
               "name": "huguryildiz.com",
@@ -1414,11 +1395,11 @@
           "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
           "path_id": 116031638,
           "event": false,
-          "count": 37,
+          "count": 39,
           "refs": [
             {
               "name": "Google",
-              "count": 31
+              "count": 33
             }
           ]
         },
@@ -1500,16 +1481,16 @@
           "count": 13
         },
         {
-          "path": "/writing/can-llms-jump-scientific-discovery",
-          "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
-          "path_id": 104195821,
-          "event": false,
-          "count": 11
-        },
-        {
           "path": "/writing/chatgpt-pro-research-workflow",
           "title": "Where ChatGPT Pro reasoning fits in a research workflow | Huseyin Ugur Yildiz",
           "path_id": 113231349,
+          "event": false,
+          "count": 10
+        },
+        {
+          "path": "/writing/can-llms-jump-scientific-discovery",
+          "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
+          "path_id": 104195821,
           "event": false,
           "count": 10
         },
@@ -1526,6 +1507,13 @@
           "path_id": 106131609,
           "event": false,
           "count": 8
+        },
+        {
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
+          "event": false,
+          "count": 6
         },
         {
           "path": "/writing/airport-gate-assignment-multiobjective",
@@ -1552,13 +1540,6 @@
           "path": "/writing/ai-layoff-trap",
           "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
           "path_id": 110093766,
-          "event": false,
-          "count": 5
-        },
-        {
-          "path": "/writing/claude-watermark-academic-misconduct",
-          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
-          "path_id": 106047814,
           "event": false,
           "count": 5
         },
@@ -1662,20 +1643,20 @@
         31,
         18,
         14,
-        25,
+        24,
         23,
         13,
-        13,
+        15,
         25,
         20,
         34,
         31,
         20,
+        33,
+        27,
+        39,
         32,
-        26,
-        38,
-        31,
-        24,
+        25,
         29,
         31,
         26,
@@ -2031,9 +2012,9 @@
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-11-19",
-      "end": "2026-11-18",
-      "pageviews": 1641,
+      "start": "2025-11-20",
+      "end": "2026-11-19",
+      "pageviews": 1648,
       "pages_total": 40,
       "pages": [
         {
@@ -2157,7 +2138,7 @@
           "title": "Huseyin Ugur Yildiz",
           "path_id": 80750338,
           "event": false,
-          "count": 115,
+          "count": 116,
           "refs": [
             {
               "name": "huguryildiz.com/students",
@@ -2169,7 +2150,7 @@
             },
             {
               "name": "Google",
-              "count": 18
+              "count": 19
             },
             {
               "name": "huguryildiz.com/writing",
@@ -2200,14 +2181,14 @@
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
           "event": false,
-          "count": 58
+          "count": 61
         },
         {
           "path": "/writing/iclr-2027-submission-volume-peer-review",
           "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
           "path_id": 116031638,
           "event": false,
-          "count": 37
+          "count": 39
         },
         {
           "path": "/writing/openai-math-release-citations-withdrawals",
@@ -2294,16 +2275,16 @@
           "count": 7
         },
         {
-          "path": "/writing/ai-layoff-trap",
-          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
-          "path_id": 110093766,
-          "event": false,
-          "count": 5
-        },
-        {
           "path": "/writing/claude-watermark-academic-misconduct",
           "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
           "path_id": 106047814,
+          "event": false,
+          "count": 6
+        },
+        {
+          "path": "/writing/ai-layoff-trap",
+          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
+          "path_id": 110093766,
           "event": false,
           "count": 5
         },
@@ -2480,17 +2461,17 @@
         55,
         34,
         17,
-        27,
+        29,
         33,
         44,
         59,
         82,
         55,
-        95,
-        97,
-        103,
-        106,
-        66,
+        96,
+        98,
+        104,
+        107,
+        67,
         105,
         82,
         62,
@@ -2970,8 +2951,8 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-11-18",
-      "pageviews": 1641,
+      "end": "2026-11-19",
+      "pageviews": 1648,
       "pages_total": 40,
       "pages": [
         {
@@ -3095,7 +3076,7 @@
           "title": "Huseyin Ugur Yildiz",
           "path_id": 80750338,
           "event": false,
-          "count": 115,
+          "count": 116,
           "refs": [
             {
               "name": "huguryildiz.com/students",
@@ -3107,7 +3088,7 @@
             },
             {
               "name": "Google",
-              "count": 18
+              "count": 19
             },
             {
               "name": "huguryildiz.com/writing",
@@ -3138,14 +3119,14 @@
           "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
           "path_id": 106826525,
           "event": false,
-          "count": 58
+          "count": 61
         },
         {
           "path": "/writing/iclr-2027-submission-volume-peer-review",
           "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
           "path_id": 116031638,
           "event": false,
-          "count": 37
+          "count": 39
         },
         {
           "path": "/writing/openai-math-release-citations-withdrawals",
@@ -3232,16 +3213,16 @@
           "count": 7
         },
         {
-          "path": "/writing/ai-layoff-trap",
-          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
-          "path_id": 110093766,
-          "event": false,
-          "count": 5
-        },
-        {
           "path": "/writing/claude-watermark-academic-misconduct",
           "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
           "path_id": 106047814,
+          "event": false,
+          "count": 6
+        },
+        {
+          "path": "/writing/ai-layoff-trap",
+          "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
+          "path_id": 110093766,
           "event": false,
           "count": 5
         },
@@ -3418,17 +3399,17 @@
         55,
         34,
         17,
-        27,
+        29,
         33,
         44,
         59,
         82,
         55,
-        95,
-        97,
-        103,
-        106,
-        66,
+        96,
+        98,
+        104,
+        107,
+        67,
         105,
         82,
         62,
@@ -5053,7 +5034,11 @@
     },
     {
       "date": "2026-11-18",
-      "views": 11
+      "views": 15
+    },
+    {
+      "date": "2026-11-19",
+      "views": 3
     }
   ],
   "daily_breakdowns": {
@@ -30640,8 +30625,15 @@
       ]
     },
     "2026-11-18": {
-      "pageviews": 11,
+      "pageviews": 15,
       "pages": [
+        {
+          "path": "/teaching",
+          "title": "Huseyin Ugur Yildiz",
+          "path_id": 80750338,
+          "event": false,
+          "count": 2
+        },
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
@@ -30650,9 +30642,30 @@
           "count": 2
         },
         {
+          "path": "/writing/iclr-2027-submission-volume-peer-review",
+          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
+          "path_id": 116031638,
+          "event": false,
+          "count": 1
+        },
+        {
           "path": "/software",
           "title": "Software – Hüseyin Uğur Yıldız | Huseyin Ugur Yildiz",
           "path_id": 109093284,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
           "event": false,
           "count": 1
         },
@@ -30692,13 +30705,6 @@
           "count": 1
         },
         {
-          "path": "/teaching",
-          "title": "Huseyin Ugur Yildiz",
-          "path_id": 80750338,
-          "event": false,
-          "count": 1
-        },
-        {
           "path": "/publications",
           "title": "Publications | Huseyin Ugur Yildiz",
           "path_id": 80750273,
@@ -30729,7 +30735,98 @@
         0,
         0,
         0,
+        2,
         1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries": [
+        {
+          "code": "TR",
+          "name": "Turkey",
+          "count": 1
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 1
+        }
+      ],
+      "referrers": [
+        {
+          "name": "Google",
+          "count": 1
+        }
+      ],
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 2
+        }
+      ],
+      "systems": [
+        {
+          "name": "Android",
+          "count": 1
+        },
+        {
+          "name": "Windows",
+          "count": 1
+        }
+      ],
+      "sizes": [],
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        },
+        {
+          "name": "Turkish",
+          "count": 1
+        }
+      ]
+    },
+    "2026-11-19": {
+      "pageviews": 3,
+      "pages": [
+        {
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/writing/iclr-2027-submission-volume-peer-review",
+          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
+          "path_id": 116031638,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
         0,
         0,
         0,
@@ -30742,20 +30839,20 @@
       ],
       "countries": [
         {
-          "code": "IN",
-          "name": "India",
+          "code": "AU",
+          "name": "Australia",
           "count": 1
         },
         {
-          "code": "US",
-          "name": "United States",
+          "code": "SG",
+          "name": "Singapore",
           "count": 1
         }
       ],
       "referrers": [
         {
-          "name": "scholar.google.co.za",
-          "count": 1
+          "name": "Google",
+          "count": 2
         }
       ],
       "browsers": [
@@ -30766,8 +30863,12 @@
       ],
       "systems": [
         {
+          "name": "macOS",
+          "count": 1
+        },
+        {
           "name": "Windows",
-          "count": 2
+          "count": 1
         }
       ],
       "sizes": [],
@@ -31936,6 +32037,10 @@
         {
           "date": "2026-11-19",
           "views": 0
+        },
+        {
+          "date": "2026-11-20",
+          "views": 0
         }
       ]
     },
@@ -33094,6 +33199,10 @@
         },
         {
           "date": "2026-11-19",
+          "views": 0
+        },
+        {
+          "date": "2026-11-20",
           "views": 0
         }
       ]
@@ -34254,6 +34363,10 @@
         {
           "date": "2026-11-19",
           "views": 0
+        },
+        {
+          "date": "2026-11-20",
+          "views": 0
         }
       ]
     },
@@ -34460,6 +34573,10 @@
         },
         {
           "date": "2026-11-19",
+          "views": 0
+        },
+        {
+          "date": "2026-11-20",
           "views": 0
         }
       ]
@@ -34944,13 +35061,17 @@
         {
           "date": "2026-11-19",
           "views": 0
+        },
+        {
+          "date": "2026-11-20",
+          "views": 0
         }
       ]
     },
     {
       "path": "/teaching",
       "title": "Huseyin Ugur Yildiz",
-      "count": 115,
+      "count": 116,
       "stats": [
         {
           "date": "2026-02-05",
@@ -36098,10 +36219,14 @@
         },
         {
           "date": "2026-11-18",
-          "views": 1
+          "views": 2
         },
         {
           "date": "2026-11-19",
+          "views": 0
+        },
+        {
+          "date": "2026-11-20",
           "views": 0
         }
       ]
@@ -37258,6 +37383,10 @@
         {
           "date": "2026-11-19",
           "views": 0
+        },
+        {
+          "date": "2026-11-20",
+          "views": 0
         }
       ]
     },
@@ -38412,6 +38541,10 @@
         },
         {
           "date": "2026-11-19",
+          "views": 0
+        },
+        {
+          "date": "2026-11-20",
           "views": 0
         }
       ]
@@ -39572,17 +39705,17 @@
         {
           "date": "2026-11-19",
           "views": 0
+        },
+        {
+          "date": "2026-11-20",
+          "views": 0
         }
       ]
     }
   ],
-  "site": {
-    "timezone": "Europe/Istanbul",
-    "first_hit_at": "2026-02-05T12:24:02.263206Z",
-    "data_retention_days": 0
-  },
+  "site": {},
   "totals": {
-    "pageviews": 1641,
+    "pageviews": 1648,
     "visitors": null
   },
   "pages": [
@@ -39707,7 +39840,7 @@
       "title": "Huseyin Ugur Yildiz",
       "path_id": 80750338,
       "event": false,
-      "count": 115,
+      "count": 116,
       "refs": [
         {
           "name": "huguryildiz.com/students",
@@ -39719,7 +39852,7 @@
         },
         {
           "name": "Google",
-          "count": 18
+          "count": 19
         },
         {
           "name": "huguryildiz.com/writing",
@@ -39750,14 +39883,14 @@
       "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
       "path_id": 106826525,
       "event": false,
-      "count": 58
+      "count": 61
     },
     {
       "path": "/writing/iclr-2027-submission-volume-peer-review",
       "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
       "path_id": 116031638,
       "event": false,
-      "count": 37
+      "count": 39
     },
     {
       "path": "/writing/openai-math-release-citations-withdrawals",
@@ -39844,16 +39977,16 @@
       "count": 7
     },
     {
-      "path": "/writing/ai-layoff-trap",
-      "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
-      "path_id": 110093766,
-      "event": false,
-      "count": 5
-    },
-    {
       "path": "/writing/claude-watermark-academic-misconduct",
       "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
       "path_id": 106047814,
+      "event": false,
+      "count": 6
+    },
+    {
+      "path": "/writing/ai-layoff-trap",
+      "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
+      "path_id": 110093766,
       "event": false,
       "count": 5
     },
