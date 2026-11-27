@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-26T12:02:25Z",
+  "updated": "2026-11-27T11:54:30Z",
   "range": {
     "start": "2026-02-05",
-    "end": "2026-11-26"
+    "end": "2026-11-27"
   },
   "window_order": [
     "today",
@@ -16,17 +16,161 @@
   "windows": {
     "today": {
       "label": "Today",
+      "start": "2026-11-27",
+      "end": "2026-11-27",
+      "pageviews": 1,
+      "pages_total": 1,
+      "pages": [
+        {
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "events_total": 0,
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "countries_total": 1,
+      "countries": [
+        {
+          "code": "AU",
+          "name": "Australia",
+          "count": 1
+        }
+      ],
+      "referrers_total": 1,
+      "referrers": [
+        {
+          "name": "Google",
+          "count": 1
+        }
+      ],
+      "browsers_total": 1,
+      "browsers": [
+        {
+          "name": "Safari",
+          "count": 1
+        }
+      ],
+      "systems_total": 1,
+      "systems": [
+        {
+          "name": "iOS",
+          "count": 1
+        }
+      ],
+      "sizes_total": 0,
+      "sizes": [],
+      "languages_total": 1,
+      "languages": [
+        {
+          "name": "English",
+          "count": 1
+        }
+      ],
+      "regions_total": 1,
+      "regions": [
+        {
+          "name": "New South Wales",
+          "country": "Australia",
+          "country_code": "AU",
+          "code": null,
+          "count": 1
+        }
+      ],
+      "regions_unmatched": []
+    },
+    "yesterday": {
+      "label": "Yesterday",
       "start": "2026-11-26",
       "end": "2026-11-26",
-      "pageviews": 2,
-      "pages_total": 2,
+      "pageviews": 8,
+      "pages_total": 5,
       "pages": [
+        {
+          "path": "/writing/iclr-2027-submission-volume-peer-review",
+          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
+          "path_id": 116031638,
+          "event": false,
+          "count": 2,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 2
+            }
+          ]
+        },
         {
           "path": "/writing",
           "title": "Writing | Huseyin Ugur Yildiz",
           "path_id": 96360100,
           "event": false,
-          "count": 1
+          "count": 2,
+          "refs": [
+            {
+              "name": "huguryildiz.com",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
+          "event": false,
+          "count": 2,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "path": "/writing/riemann-hypothesis-two-unverified-claims",
+          "title": "Two claimed proofs of the Riemann Hypothesis, neither verified | Huseyin Ugur Yildiz",
+          "path_id": 127715865,
+          "event": false,
+          "count": 1,
+          "refs": [
+            {
+              "name": "huguryildiz.com/writing",
+              "count": 1
+            }
+          ]
         },
         {
           "path": "/service",
@@ -54,128 +198,22 @@
         0,
         0,
         0,
+        1,
         0,
         0,
+        1,
+        1,
         0,
         0,
-        0,
-        0,
-        0,
-        0,
+        3,
         0
-      ],
-      "countries_total": 1,
-      "countries": [
-        {
-          "code": "SG",
-          "name": "Singapore",
-          "count": 1
-        }
-      ],
-      "referrers_total": 0,
-      "referrers": [],
-      "browsers_total": 1,
-      "browsers": [
-        {
-          "name": "Chrome",
-          "count": 1
-        }
-      ],
-      "systems_total": 1,
-      "systems": [
-        {
-          "name": "Windows",
-          "count": 1
-        }
-      ],
-      "sizes_total": 0,
-      "sizes": [],
-      "languages_total": 1,
-      "languages": [
-        {
-          "name": "English",
-          "count": 1
-        }
-      ],
-      "regions_total": 0,
-      "regions": [],
-      "regions_unmatched": []
-    },
-    "yesterday": {
-      "label": "Yesterday",
-      "start": "2026-11-25",
-      "end": "2026-11-25",
-      "pageviews": 5,
-      "pages_total": 3,
-      "pages": [
-        {
-          "path": "/writing/local-first-latex-workflow",
-          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
-          "path_id": 98713527,
-          "event": false,
-          "count": 3,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/writing/iclr-2027-submission-volume-peer-review",
-          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
-          "path_id": 116031638,
-          "event": false,
-          "count": 1,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "path": "/cv",
-          "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
-          "path_id": 80749912,
-          "event": false,
-          "count": 1
-        }
-      ],
-      "events_total": 0,
-      "events": [],
-      "hourly": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
-        1,
-        2
       ],
       "countries_total": 2,
       "countries": [
         {
-          "code": "NL",
-          "name": "Netherlands",
-          "count": 2
+          "code": "DE",
+          "name": "Germany",
+          "count": 1
         },
         {
           "code": "US",
@@ -187,24 +225,28 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 1
+          "count": 2
         }
       ],
-      "browsers_total": 1,
+      "browsers_total": 2,
       "browsers": [
         {
           "name": "Chrome",
-          "count": 3
+          "count": 1
+        },
+        {
+          "name": "Safari",
+          "count": 1
         }
       ],
       "systems_total": 2,
       "systems": [
         {
-          "name": "macOS",
-          "count": 2
+          "name": "Linux",
+          "count": 1
         },
         {
-          "name": "Windows",
+          "name": "macOS",
           "count": 1
         }
       ],
@@ -214,27 +256,20 @@
       "languages": [
         {
           "name": "English",
-          "count": 3
+          "count": 2
         }
       ],
-      "regions_total": 3,
+      "regions_total": 2,
       "regions": [
         {
-          "name": "Groningen",
-          "country": "Netherlands",
-          "country_code": "NL",
+          "name": "Brandenburg",
+          "country": "Germany",
+          "country_code": "DE",
           "code": null,
           "count": 1
         },
         {
-          "name": "North Brabant",
-          "country": "Netherlands",
-          "country_code": "NL",
-          "code": null,
-          "count": 1
-        },
-        {
-          "name": "Oregon",
+          "name": "Illinois",
           "country": "United States",
           "country_code": "US",
           "code": null,
@@ -245,10 +280,10 @@
     },
     "7d": {
       "label": "Last 7 days",
-      "start": "2026-11-20",
-      "end": "2026-11-26",
-      "pageviews": 58,
-      "pages_total": 18,
+      "start": "2026-11-21",
+      "end": "2026-11-27",
+      "pageviews": 59,
+      "pages_total": 19,
       "pages": [
         {
           "path": "/writing/iclr-2027-submission-volume-peer-review",
@@ -264,32 +299,19 @@
           ]
         },
         {
-          "path": "/writing/arxivisual-interactive-research-papers",
-          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
-          "path_id": 106826525,
-          "event": false,
-          "count": 7,
-          "refs": [
-            {
-              "name": "Google",
-              "count": 5
-            }
-          ]
-        },
-        {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 7,
+          "count": 9,
           "refs": [
             {
-              "name": "www.linkedin.com",
+              "name": "Google",
               "count": 2
             },
             {
-              "name": "Google",
-              "count": 1
+              "name": "www.linkedin.com",
+              "count": 2
             },
             {
               "name": "signals-and-systems.huguryildiz.com",
@@ -298,11 +320,11 @@
           ]
         },
         {
-          "path": "/writing/local-first-latex-workflow",
-          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
-          "path_id": 98713527,
+          "path": "/writing/arxivisual-interactive-research-papers",
+          "title": "arXivisual: interactive visual explanations for research papers | Huseyin Ugur Yildiz",
+          "path_id": 106826525,
           "event": false,
-          "count": 6,
+          "count": 5,
           "refs": [
             {
               "name": "Google",
@@ -315,11 +337,24 @@
           "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
           "path_id": 106047814,
           "event": false,
-          "count": 4,
+          "count": 5,
           "refs": [
             {
               "name": "Google",
-              "count": 3
+              "count": 4
+            }
+          ]
+        },
+        {
+          "path": "/writing/local-first-latex-workflow",
+          "title": "Still uploading your .tex files to Overleaf’s servers? | Huseyin Ugur Yildiz",
+          "path_id": 98713527,
+          "event": false,
+          "count": 5,
+          "refs": [
+            {
+              "name": "Google",
+              "count": 2
             }
           ]
         },
@@ -331,18 +366,18 @@
           "count": 4
         },
         {
+          "path": "/writing",
+          "title": "Writing | Huseyin Ugur Yildiz",
+          "path_id": 96360100,
+          "event": false,
+          "count": 3
+        },
+        {
           "path": "/research",
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
           "event": false,
           "count": 3
-        },
-        {
-          "path": "/writing/chatgpt-pro-research-workflow",
-          "title": "Where ChatGPT Pro reasoning fits in a research workflow | Huseyin Ugur Yildiz",
-          "path_id": 113231349,
-          "event": false,
-          "count": 2
         },
         {
           "path": "/writing/openai-math-release-citations-withdrawals",
@@ -355,13 +390,6 @@
           "path": "/writing/can-llms-jump-scientific-discovery",
           "title": "Can LLMs really not jump, or are we defining the jump incorrectly? | Huseyin Ugur Yildiz",
           "path_id": 104195821,
-          "event": false,
-          "count": 2
-        },
-        {
-          "path": "/writing",
-          "title": "Writing | Huseyin Ugur Yildiz",
-          "path_id": 96360100,
           "event": false,
           "count": 2
         },
@@ -385,6 +413,20 @@
           "path_id": 80749912,
           "event": false,
           "count": 2
+        },
+        {
+          "path": "/writing/riemann-hypothesis-two-unverified-claims",
+          "title": "Two claimed proofs of the Riemann Hypothesis, neither verified | Huseyin Ugur Yildiz",
+          "path_id": 127715865,
+          "event": false,
+          "count": 1
+        },
+        {
+          "path": "/writing/chatgpt-pro-research-workflow",
+          "title": "Where ChatGPT Pro reasoning fits in a research workflow | Huseyin Ugur Yildiz",
+          "path_id": 113231349,
+          "event": false,
+          "count": 1
         },
         {
           "path": "/software",
@@ -423,9 +465,9 @@
         1,
         1,
         12,
-        2,
         1,
-        2,
+        0,
+        3,
         2,
         1,
         3,
@@ -433,27 +475,32 @@
         1,
         1,
         1,
-        2,
         3,
+        3,
+        3,
+        2,
         4,
-        2,
-        4,
         3,
-        2,
-        3,
+        1,
+        6,
         4
       ],
-      "countries_total": 6,
+      "countries_total": 7,
       "countries": [
-        {
-          "code": "KR",
-          "name": "South Korea",
-          "count": 3
-        },
         {
           "code": "CZ",
           "name": "Czechia",
           "count": 2
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 2
+        },
+        {
+          "code": "DE",
+          "name": "Germany",
+          "count": 1
         },
         {
           "code": "FR",
@@ -466,13 +513,13 @@
           "count": 1
         },
         {
-          "code": "SG",
-          "name": "Singapore",
+          "code": "KR",
+          "name": "South Korea",
           "count": 1
         },
         {
-          "code": "US",
-          "name": "United States",
+          "code": "SG",
+          "name": "Singapore",
           "count": 1
         }
       ],
@@ -497,19 +544,19 @@
       "systems_total": 4,
       "systems": [
         {
-          "name": "Windows",
-          "count": 4
-        },
-        {
-          "name": "iOS",
-          "count": 2
-        },
-        {
           "name": "Linux",
-          "count": 2
+          "count": 3
+        },
+        {
+          "name": "Windows",
+          "count": 3
         },
         {
           "name": "macOS",
+          "count": 2
+        },
+        {
+          "name": "iOS",
           "count": 1
         }
       ],
@@ -519,11 +566,11 @@
       "languages": [
         {
           "name": "English",
-          "count": 4
+          "count": 6
         },
         {
           "name": "Korean",
-          "count": 3
+          "count": 1
         },
         {
           "name": "Portuguese",
@@ -534,15 +581,8 @@
           "count": 1
         }
       ],
-      "regions_total": 4,
+      "regions_total": 5,
       "regions": [
-        {
-          "name": "Gyeonggi-do",
-          "country": "South Korea",
-          "country_code": "KR",
-          "code": null,
-          "count": 2
-        },
         {
           "name": "Hlavni mesto Praha",
           "country": "Czechia",
@@ -551,9 +591,23 @@
           "count": 2
         },
         {
-          "name": "Seoul",
-          "country": "South Korea",
-          "country_code": "KR",
+          "name": "Georgia",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "Illinois",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 1
+        },
+        {
+          "name": "Brandenburg",
+          "country": "Germany",
+          "country_code": "DE",
           "code": null,
           "count": 1
         },
@@ -569,21 +623,21 @@
     },
     "30d": {
       "label": "Last 30 days",
-      "start": "2026-10-28",
-      "end": "2026-11-26",
-      "pageviews": 299,
-      "pages_total": 30,
+      "start": "2026-10-29",
+      "end": "2026-11-27",
+      "pageviews": 297,
+      "pages_total": 31,
       "pages": [
         {
           "path": "/writing/iclr-2027-submission-volume-peer-review",
           "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
           "path_id": 116031638,
           "event": false,
-          "count": 49,
+          "count": 50,
           "refs": [
             {
               "name": "Google",
-              "count": 42
+              "count": 43
             }
           ]
         },
@@ -592,15 +646,15 @@
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 44,
+          "count": 45,
           "refs": [
             {
               "name": "Google",
-              "count": 8
+              "count": 9
             },
             {
               "name": "www.linkedin.com",
-              "count": 8
+              "count": 7
             },
             {
               "name": "signals-and-systems.huguryildiz.com",
@@ -676,13 +730,6 @@
           ]
         },
         {
-          "path": "/teaching",
-          "title": "Huseyin Ugur Yildiz",
-          "path_id": 80750338,
-          "event": false,
-          "count": 15
-        },
-        {
           "path": "/research",
           "title": "Research | Huseyin Ugur Yildiz",
           "path_id": 80750374,
@@ -690,9 +737,16 @@
           "count": 14
         },
         {
-          "path": "/students",
-          "title": "Students | Huseyin Ugur Yildiz",
-          "path_id": 80840367,
+          "path": "/writing",
+          "title": "Writing | Huseyin Ugur Yildiz",
+          "path_id": 96360100,
+          "event": false,
+          "count": 13
+        },
+        {
+          "path": "/teaching",
+          "title": "Huseyin Ugur Yildiz",
+          "path_id": 80750338,
           "event": false,
           "count": 13
         },
@@ -704,30 +758,30 @@
           "count": 13
         },
         {
+          "path": "/students",
+          "title": "Students | Huseyin Ugur Yildiz",
+          "path_id": 80840367,
+          "event": false,
+          "count": 12
+        },
+        {
           "path": "/writing/openai-math-release-citations-withdrawals",
           "title": "OpenAI’s 722 mathematics manuscripts: citations, withdrawals, and proof dependencies | Huseyin Ugur Yildiz",
           "path_id": 112277958,
           "event": false,
-          "count": 12
-        },
-        {
-          "path": "/writing",
-          "title": "Writing | Huseyin Ugur Yildiz",
-          "path_id": 96360100,
-          "event": false,
-          "count": 12
-        },
-        {
-          "path": "/writing/chatgpt-pro-research-workflow",
-          "title": "Where ChatGPT Pro reasoning fits in a research workflow | Huseyin Ugur Yildiz",
-          "path_id": 113231349,
-          "event": false,
-          "count": 10
+          "count": 11
         },
         {
           "path": "/writing/claude-watermark-academic-misconduct",
           "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
           "path_id": 106047814,
+          "event": false,
+          "count": 9
+        },
+        {
+          "path": "/writing/chatgpt-pro-research-workflow",
+          "title": "Where ChatGPT Pro reasoning fits in a research workflow | Huseyin Ugur Yildiz",
+          "path_id": 113231349,
           "event": false,
           "count": 8
         },
@@ -753,13 +807,6 @@
           "count": 6
         },
         {
-          "path": "/404.html",
-          "title": "Page Not Found Huseyin Ugur Yildiz",
-          "path_id": 80992097,
-          "event": false,
-          "count": 4
-        },
-        {
           "path": "/writing/ai-layoff-trap",
           "title": "The AI Layoff Trap | Huseyin Ugur Yildiz",
           "path_id": 110093766,
@@ -770,6 +817,13 @@
           "path": "/writing/ieee-twc-submission-cap",
           "title": "An academic rate limiter: IEEE TWC now caps authors at 36 new manuscripts a year | Huseyin Ugur Yildiz",
           "path_id": 96633631,
+          "event": false,
+          "count": 3
+        },
+        {
+          "path": "/404.html",
+          "title": "Page Not Found Huseyin Ugur Yildiz",
+          "path_id": 80992097,
           "event": false,
           "count": 3
         },
@@ -786,6 +840,13 @@
           "path_id": 95945764,
           "event": false,
           "count": 2
+        },
+        {
+          "path": "/writing/riemann-hypothesis-two-unverified-claims",
+          "title": "Two claimed proofs of the Riemann Hypothesis, neither verified | Huseyin Ugur Yildiz",
+          "path_id": 127715865,
+          "event": false,
+          "count": 1
         },
         {
           "path": "/writing/research-graph-provenance",
@@ -862,29 +923,29 @@
         }
       ],
       "hourly": [
-        9,
-        17,
-        12,
+        8,
+        16,
+        11,
         7,
         25,
         20,
-        5,
-        7,
-        10,
+        4,
+        8,
+        9,
         10,
         16,
-        16,
+        15,
         6,
         10,
         15,
         12,
-        21,
+        20,
         13,
-        9,
-        22,
+        10,
+        23,
         10,
         8,
-        8,
+        10,
         11
       ],
       "countries_total": 16,
@@ -892,21 +953,21 @@
         {
           "code": "US",
           "name": "United States",
-          "count": 18
+          "count": 19
         },
         {
           "code": "KR",
           "name": "South Korea",
-          "count": 12
-        },
-        {
-          "code": "CZ",
-          "name": "Czechia",
-          "count": 2
+          "count": 11
         },
         {
           "code": "DE",
           "name": "Germany",
+          "count": 3
+        },
+        {
+          "code": "CZ",
+          "name": "Czechia",
           "count": 2
         },
         {
@@ -974,7 +1035,7 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 42
+          "count": 43
         }
       ],
       "browsers_total": 3,
@@ -985,7 +1046,7 @@
         },
         {
           "name": "Safari",
-          "count": 8
+          "count": 9
         },
         {
           "name": "Firefox",
@@ -996,15 +1057,15 @@
       "systems": [
         {
           "name": "macOS",
-          "count": 15
+          "count": 16
         },
         {
           "name": "Windows",
-          "count": 15
+          "count": 14
         },
         {
           "name": "Linux",
-          "count": 11
+          "count": 12
         },
         {
           "name": "iOS",
@@ -1021,11 +1082,11 @@
       "languages": [
         {
           "name": "English",
-          "count": 32
+          "count": 34
         },
         {
           "name": "Korean",
-          "count": 11
+          "count": 10
         },
         {
           "name": "Chinese",
@@ -1048,7 +1109,7 @@
           "count": 1
         }
       ],
-      "regions_total": 19,
+      "regions_total": 20,
       "regions": [
         {
           "name": "California",
@@ -1062,7 +1123,7 @@
           "country": "South Korea",
           "country_code": "KR",
           "code": null,
-          "count": 4
+          "count": 3
         },
         {
           "name": "Seoul",
@@ -1070,6 +1131,13 @@
           "country_code": "KR",
           "code": null,
           "count": 3
+        },
+        {
+          "name": "Illinois",
+          "country": "United States",
+          "country_code": "US",
+          "code": null,
+          "count": 2
         },
         {
           "name": "New York",
@@ -1107,13 +1175,6 @@
           "count": 1
         },
         {
-          "name": "Illinois",
-          "country": "United States",
-          "country_code": "US",
-          "code": null,
-          "count": 1
-        },
-        {
           "name": "Iowa",
           "country": "United States",
           "country_code": "US",
@@ -1139,21 +1200,21 @@
     },
     "90d": {
       "label": "Last 90 days",
-      "start": "2026-08-29",
-      "end": "2026-11-26",
-      "pageviews": 667,
-      "pages_total": 33,
+      "start": "2026-08-30",
+      "end": "2026-11-27",
+      "pageviews": 674,
+      "pages_total": 34,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 156,
+          "count": 158,
           "refs": [
             {
               "name": "Google",
-              "count": 26
+              "count": 27
             },
             {
               "name": "www.linkedin.com",
@@ -1199,11 +1260,11 @@
           "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
           "path_id": 116031638,
           "event": false,
-          "count": 49,
+          "count": 51,
           "refs": [
             {
               "name": "Google",
-              "count": 42
+              "count": 44
             }
           ]
         },
@@ -1294,18 +1355,18 @@
           "count": 29
         },
         {
+          "path": "/writing",
+          "title": "Writing | Huseyin Ugur Yildiz",
+          "path_id": 96360100,
+          "event": false,
+          "count": 25
+        },
+        {
           "path": "/cv",
           "title": "Curriculum Vitae | Huseyin Ugur Yildiz",
           "path_id": 80749912,
           "event": false,
           "count": 25
-        },
-        {
-          "path": "/writing",
-          "title": "Writing | Huseyin Ugur Yildiz",
-          "path_id": 96360100,
-          "event": false,
-          "count": 24
         },
         {
           "path": "/service",
@@ -1340,7 +1401,7 @@
           "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
           "path_id": 106047814,
           "event": false,
-          "count": 10
+          "count": 11
         },
         {
           "path": "/404.html",
@@ -1434,6 +1495,13 @@
           "count": 2
         },
         {
+          "path": "/writing/riemann-hypothesis-two-unverified-claims",
+          "title": "Two claimed proofs of the Riemann Hypothesis, neither verified | Huseyin Ugur Yildiz",
+          "path_id": 127715865,
+          "event": false,
+          "count": 1
+        },
+        {
           "path": "/writing/research-graph-provenance",
           "title": "Tracing AI-assisted research with research-graph | Huseyin Ugur Yildiz",
           "path_id": 124108342,
@@ -1501,7 +1569,7 @@
         36,
         25,
         14,
-        13,
+        14,
         27,
         21,
         37,
@@ -1509,14 +1577,14 @@
         21,
         34,
         28,
-        41,
+        42,
         35,
         29,
-        34,
-        34,
+        35,
+        35,
         28,
         41,
-        21,
+        24,
         35
       ],
       "countries_total": 21,
@@ -1524,7 +1592,7 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 71
+          "count": 73
         },
         {
           "code": "US",
@@ -1631,7 +1699,7 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 26
+          "count": 27
         },
         {
           "name": "www.linkedin.com",
@@ -1682,7 +1750,7 @@
         },
         {
           "name": "Safari",
-          "count": 47
+          "count": 49
         },
         {
           "name": "Firefox",
@@ -1697,7 +1765,7 @@
         },
         {
           "name": "iOS",
-          "count": 34
+          "count": 36
         },
         {
           "name": "macOS",
@@ -1722,11 +1790,11 @@
       "languages": [
         {
           "name": "English",
-          "count": 98
+          "count": 99
         },
         {
           "name": "Turkish",
-          "count": 41
+          "count": 42
         },
         {
           "name": "Italian",
@@ -1772,7 +1840,7 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 43
+          "count": 44
         },
         {
           "name": "İstanbul",
@@ -1870,21 +1938,21 @@
     },
     "12m": {
       "label": "Last 12 months",
-      "start": "2025-11-27",
-      "end": "2026-11-26",
-      "pageviews": 1714,
-      "pages_total": 41,
+      "start": "2025-11-28",
+      "end": "2026-11-27",
+      "pageviews": 1721,
+      "pages_total": 42,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 566,
+          "count": 568,
           "refs": [
             {
               "name": "Google",
-              "count": 75
+              "count": 76
             },
             {
               "name": "www.linkedin.com",
@@ -2046,7 +2114,7 @@
           "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
           "path_id": 116031638,
           "event": false,
-          "count": 49
+          "count": 51
         },
         {
           "path": "/writing/openai-math-release-citations-withdrawals",
@@ -2060,7 +2128,7 @@
           "title": "Writing | Huseyin Ugur Yildiz",
           "path_id": 96360100,
           "event": false,
-          "count": 33
+          "count": 34
         },
         {
           "path": "/writing/local-first-latex-workflow",
@@ -2105,18 +2173,18 @@
           "count": 12
         },
         {
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
+          "event": false,
+          "count": 11
+        },
+        {
           "path": "/stats",
           "title": "Site Stats | Huseyin Ugur Yildiz",
           "path_id": 95945764,
           "event": false,
           "count": 11
-        },
-        {
-          "path": "/writing/claude-watermark-academic-misconduct",
-          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
-          "path_id": 106047814,
-          "event": false,
-          "count": 10
         },
         {
           "path": "/writing/ieee-twc-submission-cap",
@@ -2245,6 +2313,13 @@
           "count": 2
         },
         {
+          "path": "/writing/riemann-hypothesis-two-unverified-claims",
+          "title": "Two claimed proofs of the Riemann Hypothesis, neither verified | Huseyin Ugur Yildiz",
+          "path_id": 127715865,
+          "event": false,
+          "count": 1
+        },
+        {
           "path": "/writing/research-graph-provenance",
           "title": "Tracing AI-assisted research with research-graph | Huseyin Ugur Yildiz",
           "path_id": 124108342,
@@ -2326,7 +2401,7 @@
         67,
         36,
         18,
-        31,
+        32,
         35,
         45,
         62,
@@ -2334,14 +2409,14 @@
         56,
         97,
         102,
-        106,
+        107,
         110,
         71,
-        111,
-        86,
+        112,
+        87,
         65,
         72,
-        82,
+        85,
         99
       ],
       "countries_total": 39,
@@ -2349,7 +2424,7 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 327
+          "count": 329
         },
         {
           "code": "US",
@@ -2546,7 +2621,7 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 75
+          "count": 76
         },
         {
           "name": "www.linkedin.com",
@@ -2617,7 +2692,7 @@
         },
         {
           "name": "Safari",
-          "count": 196
+          "count": 198
         },
         {
           "name": "Firefox",
@@ -2632,7 +2707,7 @@
       "systems": [
         {
           "name": "iOS",
-          "count": 169
+          "count": 171
         },
         {
           "name": "Windows",
@@ -2665,11 +2740,11 @@
         },
         {
           "name": "English",
-          "count": 143
+          "count": 144
         },
         {
           "name": "Turkish",
-          "count": 52
+          "count": 53
         },
         {
           "name": "Russian",
@@ -2715,7 +2790,7 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 57
+          "count": 58
         },
         {
           "name": "İstanbul",
@@ -2821,20 +2896,20 @@
     "all": {
       "label": "All time",
       "start": "2019-01-01",
-      "end": "2026-11-26",
-      "pageviews": 1714,
-      "pages_total": 41,
+      "end": "2026-11-27",
+      "pageviews": 1721,
+      "pages_total": 42,
       "pages": [
         {
           "path": "/",
           "title": "Home | Huseyin Ugur Yildiz",
           "path_id": 80749188,
           "event": false,
-          "count": 566,
+          "count": 568,
           "refs": [
             {
               "name": "Google",
-              "count": 75
+              "count": 76
             },
             {
               "name": "www.linkedin.com",
@@ -2996,7 +3071,7 @@
           "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
           "path_id": 116031638,
           "event": false,
-          "count": 49
+          "count": 51
         },
         {
           "path": "/writing/openai-math-release-citations-withdrawals",
@@ -3010,7 +3085,7 @@
           "title": "Writing | Huseyin Ugur Yildiz",
           "path_id": 96360100,
           "event": false,
-          "count": 33
+          "count": 34
         },
         {
           "path": "/writing/local-first-latex-workflow",
@@ -3055,18 +3130,18 @@
           "count": 12
         },
         {
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
+          "event": false,
+          "count": 11
+        },
+        {
           "path": "/stats",
           "title": "Site Stats | Huseyin Ugur Yildiz",
           "path_id": 95945764,
           "event": false,
           "count": 11
-        },
-        {
-          "path": "/writing/claude-watermark-academic-misconduct",
-          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
-          "path_id": 106047814,
-          "event": false,
-          "count": 10
         },
         {
           "path": "/writing/ieee-twc-submission-cap",
@@ -3195,6 +3270,13 @@
           "count": 2
         },
         {
+          "path": "/writing/riemann-hypothesis-two-unverified-claims",
+          "title": "Two claimed proofs of the Riemann Hypothesis, neither verified | Huseyin Ugur Yildiz",
+          "path_id": 127715865,
+          "event": false,
+          "count": 1
+        },
+        {
           "path": "/writing/research-graph-provenance",
           "title": "Tracing AI-assisted research with research-graph | Huseyin Ugur Yildiz",
           "path_id": 124108342,
@@ -3276,7 +3358,7 @@
         67,
         36,
         18,
-        31,
+        32,
         35,
         45,
         62,
@@ -3284,14 +3366,14 @@
         56,
         97,
         102,
-        106,
+        107,
         110,
         71,
-        111,
-        86,
+        112,
+        87,
         65,
         72,
-        82,
+        85,
         99
       ],
       "countries_total": 39,
@@ -3299,7 +3381,7 @@
         {
           "code": "TR",
           "name": "Turkey",
-          "count": 327
+          "count": 329
         },
         {
           "code": "US",
@@ -3496,7 +3578,7 @@
       "referrers": [
         {
           "name": "Google",
-          "count": 75
+          "count": 76
         },
         {
           "name": "www.linkedin.com",
@@ -3567,7 +3649,7 @@
         },
         {
           "name": "Safari",
-          "count": 196
+          "count": 198
         },
         {
           "name": "Firefox",
@@ -3582,7 +3664,7 @@
       "systems": [
         {
           "name": "iOS",
-          "count": 169
+          "count": 171
         },
         {
           "name": "Windows",
@@ -3615,11 +3697,11 @@
         },
         {
           "name": "English",
-          "count": 143
+          "count": 144
         },
         {
           "name": "Turkish",
-          "count": 52
+          "count": 53
         },
         {
           "name": "Russian",
@@ -3665,7 +3747,7 @@
           "country": "Turkey",
           "country_code": "TR",
           "code": "06",
-          "count": 57
+          "count": 58
         },
         {
           "name": "İstanbul",
@@ -4948,7 +5030,11 @@
     },
     {
       "date": "2026-11-26",
-      "views": 2
+      "views": 8
+    },
+    {
+      "date": "2026-11-27",
+      "views": 1
     }
   ],
   "daily_breakdowns": {
@@ -31561,12 +31647,33 @@
       ]
     },
     "2026-11-26": {
-      "pageviews": 2,
+      "pageviews": 8,
       "pages": [
+        {
+          "path": "/writing/iclr-2027-submission-volume-peer-review",
+          "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
+          "path_id": 116031638,
+          "event": false,
+          "count": 2
+        },
         {
           "path": "/writing",
           "title": "Writing | Huseyin Ugur Yildiz",
           "path_id": 96360100,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/",
+          "title": "Home | Huseyin Ugur Yildiz",
+          "path_id": 80749188,
+          "event": false,
+          "count": 2
+        },
+        {
+          "path": "/writing/riemann-hypothesis-two-unverified-claims",
+          "title": "Two claimed proofs of the Riemann Hypothesis, neither verified | Huseyin Ugur Yildiz",
+          "path_id": 127715865,
           "event": false,
           "count": 1
         },
@@ -31595,6 +31702,90 @@
         0,
         0,
         0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        3,
+        0
+      ],
+      "countries": [
+        {
+          "code": "DE",
+          "name": "Germany",
+          "count": 1
+        },
+        {
+          "code": "US",
+          "name": "United States",
+          "count": 1
+        }
+      ],
+      "referrers": [
+        {
+          "name": "Google",
+          "count": 2
+        }
+      ],
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        },
+        {
+          "name": "Safari",
+          "count": 1
+        }
+      ],
+      "systems": [
+        {
+          "name": "Linux",
+          "count": 1
+        },
+        {
+          "name": "macOS",
+          "count": 1
+        }
+      ],
+      "sizes": [],
+      "languages": [
+        {
+          "name": "English",
+          "count": 2
+        }
+      ]
+    },
+    "2026-11-27": {
+      "pageviews": 1,
+      "pages": [
+        {
+          "path": "/writing/claude-watermark-academic-misconduct",
+          "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+          "path_id": 106047814,
+          "event": false,
+          "count": 1
+        }
+      ],
+      "events": [],
+      "hourly": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0,
@@ -31607,21 +31798,26 @@
       ],
       "countries": [
         {
-          "code": "SG",
-          "name": "Singapore",
+          "code": "AU",
+          "name": "Australia",
           "count": 1
         }
       ],
-      "referrers": [],
+      "referrers": [
+        {
+          "name": "Google",
+          "count": 1
+        }
+      ],
       "browsers": [
         {
-          "name": "Chrome",
+          "name": "Safari",
           "count": 1
         }
       ],
       "systems": [
         {
-          "name": "Windows",
+          "name": "iOS",
           "count": 1
         }
       ],
@@ -31638,7 +31834,7 @@
     {
       "path": "/",
       "title": "Home | Huseyin Ugur Yildiz",
-      "count": 566,
+      "count": 568,
       "stats": [
         {
           "date": "2026-02-05",
@@ -32818,10 +33014,14 @@
         },
         {
           "date": "2026-11-26",
-          "views": 0
+          "views": 2
         },
         {
           "date": "2026-11-27",
+          "views": 0
+        },
+        {
+          "date": "2026-11-28",
           "views": 0
         }
       ]
@@ -34014,6 +34214,10 @@
         {
           "date": "2026-11-27",
           "views": 0
+        },
+        {
+          "date": "2026-11-28",
+          "views": 0
         }
       ]
     },
@@ -35205,6 +35409,10 @@
         {
           "date": "2026-11-27",
           "views": 0
+        },
+        {
+          "date": "2026-11-28",
+          "views": 0
         }
       ]
     },
@@ -35444,13 +35652,17 @@
         {
           "date": "2026-11-27",
           "views": 0
+        },
+        {
+          "date": "2026-11-28",
+          "views": 0
         }
       ]
     },
     {
       "path": "/writing",
       "title": "Writing | Huseyin Ugur Yildiz",
-      "count": 33,
+      "count": 34,
       "stats": [
         {
           "date": "2026-07-24",
@@ -35954,10 +36166,14 @@
         },
         {
           "date": "2026-11-26",
-          "views": 1
+          "views": 2
         },
         {
           "date": "2026-11-27",
+          "views": 0
+        },
+        {
+          "date": "2026-11-28",
           "views": 0
         }
       ]
@@ -37150,6 +37366,10 @@
         {
           "date": "2026-11-27",
           "views": 0
+        },
+        {
+          "date": "2026-11-28",
+          "views": 0
         }
       ]
     },
@@ -38337,6 +38557,10 @@
         {
           "date": "2026-11-27",
           "views": 0
+        },
+        {
+          "date": "2026-11-28",
+          "views": 0
         }
       ]
     },
@@ -39523,6 +39747,10 @@
         },
         {
           "date": "2026-11-27",
+          "views": 0
+        },
+        {
+          "date": "2026-11-28",
           "views": 0
         }
       ]
@@ -40715,13 +40943,21 @@
         {
           "date": "2026-11-27",
           "views": 0
+        },
+        {
+          "date": "2026-11-28",
+          "views": 0
         }
       ]
     }
   ],
-  "site": {},
+  "site": {
+    "timezone": "Europe/Istanbul",
+    "first_hit_at": "2026-02-05T12:24:02.263206Z",
+    "data_retention_days": 0
+  },
   "totals": {
-    "pageviews": 1714,
+    "pageviews": 1721,
     "visitors": null
   },
   "pages": [
@@ -40730,11 +40966,11 @@
       "title": "Home | Huseyin Ugur Yildiz",
       "path_id": 80749188,
       "event": false,
-      "count": 566,
+      "count": 568,
       "refs": [
         {
           "name": "Google",
-          "count": 75
+          "count": 76
         },
         {
           "name": "www.linkedin.com",
@@ -40896,7 +41132,7 @@
       "title": "ICLR 2027 registrations and the peer-review workload | Huseyin Ugur Yildiz",
       "path_id": 116031638,
       "event": false,
-      "count": 49
+      "count": 51
     },
     {
       "path": "/writing/openai-math-release-citations-withdrawals",
@@ -40910,7 +41146,7 @@
       "title": "Writing | Huseyin Ugur Yildiz",
       "path_id": 96360100,
       "event": false,
-      "count": 33
+      "count": 34
     },
     {
       "path": "/writing/local-first-latex-workflow",
@@ -40955,18 +41191,18 @@
       "count": 12
     },
     {
+      "path": "/writing/claude-watermark-academic-misconduct",
+      "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
+      "path_id": 106047814,
+      "event": false,
+      "count": 11
+    },
+    {
       "path": "/stats",
       "title": "Site Stats | Huseyin Ugur Yildiz",
       "path_id": 95945764,
       "event": false,
       "count": 11
-    },
-    {
-      "path": "/writing/claude-watermark-academic-misconduct",
-      "title": "Would you fail a student based on a Claude watermark alone? | Huseyin Ugur Yildiz",
-      "path_id": 106047814,
-      "event": false,
-      "count": 10
     },
     {
       "path": "/writing/ieee-twc-submission-cap",
@@ -41095,6 +41331,13 @@
       "count": 2
     },
     {
+      "path": "/writing/riemann-hypothesis-two-unverified-claims",
+      "title": "Two claimed proofs of the Riemann Hypothesis, neither verified | Huseyin Ugur Yildiz",
+      "path_id": 127715865,
+      "event": false,
+      "count": 1
+    },
+    {
       "path": "/writing/research-graph-provenance",
       "title": "Tracing AI-assisted research with research-graph | Huseyin Ugur Yildiz",
       "path_id": 124108342,
@@ -41127,7 +41370,7 @@
     {
       "code": "TR",
       "name": "Turkey",
-      "count": 327
+      "count": 329
     },
     {
       "code": "US",
@@ -41323,7 +41566,7 @@
   "referrers": [
     {
       "name": "Google",
-      "count": 75
+      "count": 76
     },
     {
       "name": "www.linkedin.com",
@@ -41393,7 +41636,7 @@
     },
     {
       "name": "Safari",
-      "count": 196
+      "count": 198
     },
     {
       "name": "Firefox",
@@ -41407,7 +41650,7 @@
   "systems": [
     {
       "name": "iOS",
-      "count": 169
+      "count": 171
     },
     {
       "name": "Windows",
